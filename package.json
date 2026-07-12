@@ -1,0 +1,30 @@
+{
+  "name": "admission-test-breaker",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "tmua:inventory": "tsx src/content/tmua/cli.ts inventory",
+    "tmua:sync-official": "tsx src/content/tmua/cli.ts sync-official",
+    "tmua:build": "tsx src/content/tmua/cli.ts build",
+    "verify:tmua-files": "tsx src/content/tmua/cli.ts verify-files",
+    "verify:tmua-taxonomy": "tsx src/content/tmua/cli.ts verify-taxonomy",
+    "verify:tmua-corpus": "tsx src/content/tmua/cli.ts verify-corpus"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
+  }
+}

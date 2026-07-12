@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "parentId", "level", "specificationRefs", "prerequisites", "aliases"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z0-9._-]+$" },
+      "name": { "type": "string", "minLength": 1 },
+      "parentId": { "type": ["string", "null"] },
+      "level": { "enum": ["CORE", "SUPPORT", "EXTENSION"] },
+      "specificationRefs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+      "prerequisites": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+      "aliases": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+    },
+    "additionalProperties": false
+  }
+}
