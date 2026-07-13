@@ -74,7 +74,7 @@ export function TmuaHubPage({ services }: TmuaHubPageProps) {
       <section className="tmua-hub-hero page-shell">
         <div>
           <p className="eyebrow">ADMISSION TEST / TMUA</p>
-          <h1>TMUA 备考中心</h1>
+          <h1><span>TMUA</span>{" "}<span>备考中心</span></h1>
           <p>
             从第一次看题，到诊断、系统训练、完整模考和历年真题复盘，在同一个地方建立你的准备证据。
           </p>

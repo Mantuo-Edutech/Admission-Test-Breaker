@@ -129,6 +129,9 @@ describe("Mantou multi-exam homepage", () => {
     const router = createAppRouter(["/"], services(new TrackingStore()));
     render(<RouterProvider router={router} />);
 
+    document.documentElement.scrollTop = 640;
+    document.body.scrollTop = 640;
+
     await user.click(
       await screen.findByRole("link", { name: /TMUA.*现已开放/u }),
     );
@@ -136,5 +139,7 @@ describe("Mantou multi-exam homepage", () => {
     expect(
       await screen.findByRole("heading", { name: "TMUA 备考中心" }),
     ).toBeInTheDocument();
+    expect(document.documentElement.scrollTop).toBe(0);
+    expect(document.body.scrollTop).toBe(0);
   });
 });

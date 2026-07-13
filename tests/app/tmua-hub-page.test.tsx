@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { RouterProvider } from "react-router-dom";
 import { describe, expect, it } from "vitest";
@@ -124,6 +124,9 @@ describe("TMUA exam space", () => {
     const router = createAppRouter(["/exams/tmua"], services(store));
     render(<RouterProvider router={router} />);
 
+    document.documentElement.scrollTop = 920;
+    document.body.scrollTop = 920;
+
     await user.click(
       await screen.findByRole("button", {
         name: "开始 2023 Paper 1 完整练习",
@@ -135,6 +138,10 @@ describe("TMUA exam space", () => {
       status: "active",
     });
     expect(router.state.location.pathname).toBe("/practice/tmua-2023-paper-1");
+    await waitFor(() => {
+      expect(document.documentElement.scrollTop).toBe(0);
+      expect(document.body.scrollTop).toBe(0);
+    });
   });
 
   it("detects and resumes an active session with visible progress", async () => {

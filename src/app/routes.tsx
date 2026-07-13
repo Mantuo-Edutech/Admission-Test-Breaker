@@ -1,5 +1,10 @@
-import { lazy, Suspense } from "react";
-import { createBrowserRouter, createMemoryRouter } from "react-router-dom";
+import { lazy, Suspense, useLayoutEffect } from "react";
+import type { ReactNode } from "react";
+import {
+  createBrowserRouter,
+  createMemoryRouter,
+  useLocation,
+} from "react-router-dom";
 import type { AppServices } from "./dependencies.js";
 import { createDefaultAppServices } from "./dependencies.js";
 import { LandingPage } from "../features/practice/pages/LandingPage.js";
@@ -29,19 +34,35 @@ function RouteLoading() {
   );
 }
 
+function RouteFrame({ children }: { children: ReactNode }) {
+  const { pathname } = useLocation();
+
+  useLayoutEffect(() => {
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [pathname]);
+
+  return children;
+}
+
 export function createAppRouter(
   initialEntries?: string[],
   injectedServices?: AppServices,
 ) {
   const services = injectedServices ?? createDefaultAppServices();
   const routes = [
-    { path: "/", element: <LandingPage /> },
+    {
+      path: "/",
+      element: <RouteFrame><LandingPage /></RouteFrame>,
+    },
     {
       path: "/exams/tmua",
       element: (
-        <Suspense fallback={<RouteLoading />}>
-          <TmuaHubPage services={services} />
-        </Suspense>
+        <RouteFrame>
+          <Suspense fallback={<RouteLoading />}>
+            <TmuaHubPage services={services} />
+          </Suspense>
+        </RouteFrame>
       ),
     },
     ...EXAM_CATALOG.filter(
@@ -49,25 +70,31 @@ export function createAppRouter(
     ).map((exam) => ({
       path: exam.href,
       element: (
-        <Suspense fallback={<RouteLoading />}>
-          <ExamStatusPage exam={exam} />
-        </Suspense>
+        <RouteFrame>
+          <Suspense fallback={<RouteLoading />}>
+            <ExamStatusPage exam={exam} />
+          </Suspense>
+        </RouteFrame>
       ),
     })),
     {
       path: "/practice/tmua-2023-paper-1",
       element: (
-        <Suspense fallback={<RouteLoading />}>
-          <PracticePage services={services} />
-        </Suspense>
+        <RouteFrame>
+          <Suspense fallback={<RouteLoading />}>
+            <PracticePage services={services} />
+          </Suspense>
+        </RouteFrame>
       ),
     },
     {
       path: "/results/:sessionId",
       element: (
-        <Suspense fallback={<RouteLoading />}>
-          <ResultsPage services={services} />
-        </Suspense>
+        <RouteFrame>
+          <Suspense fallback={<RouteLoading />}>
+            <ResultsPage services={services} />
+          </Suspense>
+        </RouteFrame>
       ),
     },
   ];
