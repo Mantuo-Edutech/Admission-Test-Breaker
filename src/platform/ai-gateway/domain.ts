@@ -1,4 +1,4 @@
-import type { ActorRef } from "../learner-space/domain.js";
+import type { ActorRef } from "../learning-space/domain.js";
 import {
   asAIRunId,
   asGrantId,
@@ -109,6 +109,16 @@ function validateId(
 }
 
 function validateRequester(actor: ActorRef): AIJobValidationIssue[] {
+  if (actor.kind === "guest") {
+    return [
+      issue(
+        "invalid_requester",
+        "requestedBy",
+        "A Guest actor cannot request a server AI job",
+      ),
+    ];
+  }
+
   try {
     if ("userId" in actor) {
       asUserId(actor.userId);

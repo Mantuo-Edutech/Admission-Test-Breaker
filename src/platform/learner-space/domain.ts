@@ -6,10 +6,6 @@ import {
   type UserId,
 } from "../shared/ids.js";
 
-export type ActorRef =
-  | { kind: "student" | "teacher" | "parent"; userId: UserId }
-  | { kind: "agent" | "system"; actorId: string };
-
 export interface LearnerSpace {
   id: LearnerSpaceId;
   ownerUserId: UserId;

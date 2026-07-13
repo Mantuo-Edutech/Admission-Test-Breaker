@@ -1,11 +1,11 @@
-import type { ActorRef } from "../learner-space/domain.js";
+import type { ActorRef } from "../learning-space/domain.js";
 import {
-  asLearnerSpaceId,
+  asLearningSpaceId,
   asLearningEventId,
   asPracticeSessionId,
   asUserId,
   assertCanonicalUtcTimestamp,
-  type LearnerSpaceId,
+  type LearningSpaceId,
   type LearningEventId,
   type PracticeSessionId,
 } from "../shared/ids.js";
@@ -16,7 +16,7 @@ export interface LearningEvent<
 > {
   id: LearningEventId;
   schemaVersion: 1;
-  learnerSpaceId: LearnerSpaceId;
+  learningSpaceId: LearningSpaceId;
   sessionId: PracticeSessionId;
   sequence: number;
   type: TType;
@@ -30,7 +30,7 @@ export interface LearningEventDraft<
   TPayload extends object,
 > {
   id: LearningEventId;
-  learnerSpaceId: LearnerSpaceId;
+  learningSpaceId: LearningSpaceId;
   sessionId: PracticeSessionId;
   type: TType;
   actor: ActorRef;
@@ -192,7 +192,7 @@ function normalizeDraft(
   draft: PracticeLearningEventDraft,
 ): PracticeLearningEventDraft {
   asLearningEventId(draft.id);
-  asLearnerSpaceId(draft.learnerSpaceId);
+  asLearningSpaceId(draft.learningSpaceId);
   asPracticeSessionId(draft.sessionId);
   assertActor(draft.actor);
   assertCanonicalUtcTimestamp(draft.occurredAt, "Event occurredAt");
@@ -237,7 +237,7 @@ function eventMatchesDraft(
 ): boolean {
   return (
     event.id === draft.id &&
-    event.learnerSpaceId === draft.learnerSpaceId &&
+    event.learningSpaceId === draft.learningSpaceId &&
     event.sessionId === draft.sessionId &&
     event.type === draft.type &&
     event.occurredAt === draft.occurredAt &&
@@ -264,10 +264,10 @@ export function appendLearningEvent(
   const first = currentEvents[0];
   if (
     first !== undefined &&
-    (first.learnerSpaceId !== draft.learnerSpaceId ||
+    (first.learningSpaceId !== draft.learningSpaceId ||
       first.sessionId !== draft.sessionId)
   ) {
-    throw new Error("Learning events must belong to the same learner space and session");
+    throw new Error("Learning events must belong to the same learning space and session");
   }
 
   currentEvents.forEach((event, index) => {

@@ -1,10 +1,10 @@
-import type { ActorRef } from "../../../platform/learner-space/domain.js";
+import type { ActorRef } from "../../../platform/learning-space/domain.js";
 import {
   appendLearningEvent,
   type PracticeLearningEvent,
 } from "../../../platform/learning-events/domain.js";
 import type {
-  LearnerSpaceId,
+  LearningSpaceId,
   LearningEventId,
   PracticeSessionId,
 } from "../../../platform/shared/ids.js";
@@ -13,9 +13,9 @@ export const TMUA_2023_P1_DURATION_MS = 75 * 60 * 1_000;
 export const TMUA_2023_P1_QUESTION_COUNT = 20;
 
 export interface PracticeSession {
-  schemaVersion: 1;
+  schemaVersion: 2;
   id: PracticeSessionId;
-  learnerSpaceId: LearnerSpaceId;
+  learningSpaceId: LearningSpaceId;
   startedBy: ActorRef;
   paperId: "tmua-2023-p1";
   status: "active" | "submitted" | "expired";
@@ -32,7 +32,7 @@ export interface PracticeSession {
 
 export interface CreatePracticeSessionInput {
   id: PracticeSessionId;
-  learnerSpaceId: LearnerSpaceId;
+  learningSpaceId: LearningSpaceId;
   actor: ActorRef;
   startedAt: string;
   eventId: LearningEventId;
@@ -61,7 +61,7 @@ export function createPracticeSession(
 
   const appended = appendLearningEvent([], {
     id: input.eventId,
-    learnerSpaceId: input.learnerSpaceId,
+    learningSpaceId: input.learningSpaceId,
     sessionId: input.id,
     type: "session_started",
     actor: input.actor,
@@ -70,9 +70,9 @@ export function createPracticeSession(
   });
 
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     id: input.id,
-    learnerSpaceId: input.learnerSpaceId,
+    learningSpaceId: input.learningSpaceId,
     startedBy: input.actor,
     paperId: "tmua-2023-p1",
     status: "active",

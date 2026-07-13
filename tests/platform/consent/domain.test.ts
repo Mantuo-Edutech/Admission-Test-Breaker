@@ -133,6 +133,21 @@ describe("granular learner grants", () => {
     });
   });
 
+  it("denies a Guest actor even when a matching learner grant is supplied", () => {
+    const actor = { kind: "guest", actorId: "guest_browser-one" } as const;
+
+    expect(
+      decideAccess(
+        { ...baseRequest, actor },
+        [{ ...baseGrant, subject: actor }],
+      ),
+    ).toEqual({
+      allowed: false,
+      basis: "denied",
+      reason: "no_matching_grant",
+    });
+  });
+
   it("lets a learner-space grant cover resources inside that learner space", () => {
     const grant: Grant = {
       ...baseGrant,

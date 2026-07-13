@@ -110,7 +110,7 @@ function recordActiveQuestionTime(
 
   return appendEvent(withoutActiveSegment, {
     id: eventId,
-    learnerSpaceId: session.learnerSpaceId,
+    learningSpaceId: session.learningSpaceId,
     sessionId: session.id,
     type: "question_time_recorded",
     actor: session.startedBy,
@@ -136,7 +136,7 @@ function answerQuestion(
   if (existingAnswer === undefined) {
     return appendEvent(nextSession, {
       id: action.eventId,
-      learnerSpaceId: session.learnerSpaceId,
+      learningSpaceId: session.learningSpaceId,
       sessionId: session.id,
       type: "answer_selected",
       actor: session.startedBy,
@@ -147,7 +147,7 @@ function answerQuestion(
 
   return appendEvent(nextSession, {
     id: action.eventId,
-    learnerSpaceId: session.learnerSpaceId,
+    learningSpaceId: session.learningSpaceId,
     sessionId: session.id,
     type: "answer_changed",
     actor: session.startedBy,
@@ -171,7 +171,7 @@ function toggleMark(
 
   return appendEvent({ ...session, markedQuestionIds }, {
     id: action.eventId,
-    learnerSpaceId: session.learnerSpaceId,
+    learningSpaceId: session.learningSpaceId,
     sessionId: session.id,
     type: isMarked ? "question_unmarked" : "question_marked",
     actor: session.startedBy,
@@ -199,7 +199,7 @@ function viewQuestion(
     },
     {
       id: action.eventId,
-      learnerSpaceId: session.learnerSpaceId,
+      learningSpaceId: session.learningSpaceId,
       sessionId: session.id,
       type: "question_viewed",
       actor: session.startedBy,
@@ -220,7 +220,7 @@ function pauseSession(
   const timed = recordActiveQuestionTime(session, action.timeEventId, action.at);
   return appendEvent(timed, {
     id: action.eventId,
-    learnerSpaceId: session.learnerSpaceId,
+    learningSpaceId: session.learningSpaceId,
     sessionId: session.id,
     type: "session_paused",
     actor: session.startedBy,
@@ -244,7 +244,7 @@ function resumeSession(
   };
   return appendEvent(resumed, {
     id: action.eventId,
-    learnerSpaceId: session.learnerSpaceId,
+    learningSpaceId: session.learningSpaceId,
     sessionId: session.id,
     type: "session_resumed",
     actor: session.startedBy,
@@ -259,7 +259,7 @@ function openSubmission(
 ): PracticeSession {
   return appendEvent(session, {
     id: action.eventId,
-    learnerSpaceId: session.learnerSpaceId,
+    learningSpaceId: session.learningSpaceId,
     sessionId: session.id,
     type: "submission_opened",
     actor: session.startedBy,
@@ -281,7 +281,7 @@ function finalize(
     { ...timed, status, submittedAt: action.at },
     {
       id: action.eventId,
-      learnerSpaceId: session.learnerSpaceId,
+      learningSpaceId: session.learningSpaceId,
       sessionId: session.id,
       type: action.type === "submit" ? "session_submitted" : "session_expired",
       actor: session.startedBy,

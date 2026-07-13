@@ -35,7 +35,7 @@ class PracticeStore implements PracticeSessionStore {
 function activeSession() {
   return createPracticeSession({
     id: "ses_practice-test",
-    learnerSpaceId: "lsp_local-demo",
+    learningSpaceId: "lsp_local-demo",
     actor: { kind: "student", userId: "usr_local-demo" },
     startedAt: "2026-07-13T09:00:00.000Z",
     eventId: "evt_practice-started",

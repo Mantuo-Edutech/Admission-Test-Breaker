@@ -1,11 +1,11 @@
-import type { ActorRef } from "../../../platform/learner-space/domain.js";
+import type { ActorRef } from "../../../platform/learning-space/domain.js";
 import {
   appendLearningEvent,
   type PracticeLearningEvent,
   type PracticeLearningEventDraft,
 } from "../../../platform/learning-events/domain.js";
 import {
-  asLearnerSpaceId,
+  asLearningSpaceId,
   asPracticeSessionId,
   asUserId,
   assertCanonicalUtcTimestamp,
@@ -26,7 +26,7 @@ const corruptKeyPrefix = "tmua:practice:corrupt:";
 const sessionFields = new Set([
   "schemaVersion",
   "id",
-  "learnerSpaceId",
+  "learningSpaceId",
   "startedBy",
   "paperId",
   "status",
@@ -44,7 +44,7 @@ const sessionFields = new Set([
 const eventFields = new Set([
   "id",
   "schemaVersion",
-  "learnerSpaceId",
+  "learningSpaceId",
   "sessionId",
   "sequence",
   "type",
@@ -85,6 +85,11 @@ function assertNonEmptyString(value: unknown, label: string): asserts value is s
 
 function assertActor(value: unknown): ActorRef {
   assertRecord(value, "startedBy");
+  if (value.kind === "guest") {
+    assertNonEmptyString(value.actorId, "startedBy.actorId");
+    return { kind: "guest", actorId: value.actorId };
+  }
+
   if (
     value.kind === "student" ||
     value.kind === "teacher" ||
@@ -166,7 +171,7 @@ function parseTiming(value: unknown): Record<string, number> {
 
 function parseEvents(
   value: unknown,
-  learnerSpaceId: PracticeSession["learnerSpaceId"],
+  learningSpaceId: PracticeSession["learningSpaceId"],
   sessionId: PracticeSession["id"],
 ): readonly PracticeLearningEvent[] {
   if (!Array.isArray(value) || value.length === 0) {
@@ -181,7 +186,7 @@ function parseEvents(
       throw new Error(`events.${index} has an invalid version or sequence`);
     }
     if (
-      candidate.learnerSpaceId !== learnerSpaceId ||
+      candidate.learningSpaceId !== learningSpaceId ||
       candidate.sessionId !== sessionId
     ) {
       throw new Error(`events.${index} crosses the session tenant boundary`);
@@ -189,7 +194,7 @@ function parseEvents(
 
     const draft = {
       id: candidate.id,
-      learnerSpaceId: candidate.learnerSpaceId,
+      learningSpaceId: candidate.learningSpaceId,
       sessionId: candidate.sessionId,
       type: candidate.type,
       actor: candidate.actor,
@@ -204,15 +209,15 @@ function parseEvents(
 
 function parseSession(value: unknown): PracticeSession {
   assertRecord(value, "Practice session");
-  if (value.schemaVersion !== 1) {
+  if (value.schemaVersion !== 2) {
     throw new UnsupportedSessionError("Practice session schema is unsupported");
   }
   assertExactFields(value, sessionFields, "Practice session");
 
   assertNonEmptyString(value.id, "Practice session ID");
-  assertNonEmptyString(value.learnerSpaceId, "Learner space ID");
+  assertNonEmptyString(value.learningSpaceId, "Learning space ID");
   const id = asPracticeSessionId(value.id);
-  const learnerSpaceId = asLearnerSpaceId(value.learnerSpaceId);
+  const learningSpaceId = asLearningSpaceId(value.learningSpaceId);
   const startedBy = assertActor(value.startedBy);
 
   if (value.paperId !== "tmua-2023-p1") {
@@ -252,7 +257,7 @@ function parseSession(value: unknown): PracticeSession {
     assertCanonicalUtcTimestamp(value.submittedAt, "submittedAt");
   }
 
-  const events = parseEvents(value.events, learnerSpaceId, id);
+  const events = parseEvents(value.events, learningSpaceId, id);
   const firstEvent = events[0];
   if (
     firstEvent?.type !== "session_started" ||
@@ -277,9 +282,9 @@ function parseSession(value: unknown): PracticeSession {
   }
 
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     id,
-    learnerSpaceId,
+    learningSpaceId,
     startedBy,
     paperId: "tmua-2023-p1",
     status: value.status,

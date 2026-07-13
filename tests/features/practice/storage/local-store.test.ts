@@ -63,15 +63,15 @@ class ThrowingStorage implements Storage {
 function activeSession() {
   return createPracticeSession({
     id: "ses_storage-one",
-    learnerSpaceId: "lsp_local-demo",
-    actor: { kind: "student", userId: "usr_local-demo" },
+    learningSpaceId: "gsp_browser-one",
+    actor: { kind: "guest", actorId: "guest_browser-one" },
     startedAt: "2026-07-13T00:00:00.000Z",
     eventId: "evt_storage-started",
   });
 }
 
 describe("local practice session store", () => {
-  it("round-trips a valid learner-owned session", async () => {
+  it("round-trips a valid local Guest session", async () => {
     const storage = new MemoryStorage();
     const store = new LocalPracticeSessionStore(storage);
 
@@ -148,11 +148,16 @@ describe("local practice session store", () => {
     ).toBe(true);
   });
 
-  it("rejects and quarantines an unsupported schema version", async () => {
+  it("rejects and quarantines a schema-v1 session instead of claiming it", async () => {
     const storage = new MemoryStorage();
+    const legacy = JSON.stringify({
+      schemaVersion: 1,
+      learnerSpaceId: "lsp_legacy-one",
+      startedBy: { kind: "student", userId: "usr_legacy-one" },
+    });
     storage.setItem(
       PRACTICE_SESSION_STORAGE_KEY,
-      JSON.stringify({ ...activeSession(), schemaVersion: 2 }),
+      legacy,
     );
     const store = new LocalPracticeSessionStore(storage);
 
@@ -160,6 +165,12 @@ describe("local practice session store", () => {
       session: null,
       issue: "unsupported",
     });
+    expect(storage.getItem(PRACTICE_SESSION_STORAGE_KEY)).toBeNull();
+    expect(
+      [...Array.from({ length: storage.length }, (_, index) => storage.key(index))]
+        .filter((key): key is string => key !== null)
+        .map((key) => storage.getItem(key)),
+    ).toContain(legacy);
   });
 
   it("rejects an event that crosses the session tenant boundary", async () => {
@@ -172,7 +183,7 @@ describe("local practice session store", () => {
         events: [
           {
             ...session.events[0],
-            learnerSpaceId: "lsp_intruder",
+            learningSpaceId: "lsp_intruder",
           },
         ],
       }),

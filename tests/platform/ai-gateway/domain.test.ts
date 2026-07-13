@@ -82,6 +82,21 @@ describe("provider-neutral AI job contract", () => {
     );
   });
 
+  it("rejects a Guest requester even when a grant ID is supplied", () => {
+    expect(
+      validateAIJob({
+        ...validJob,
+        requestedBy: { kind: "guest", actorId: "guest_browser-one" },
+        grantId: "grt_guest-not-allowed",
+      }),
+    ).toContainEqual(
+      expect.objectContaining({
+        code: "invalid_requester",
+        path: "requestedBy",
+      }),
+    );
+  });
+
   it("rejects raw prompts, provider choices, and secrets in the public job", () => {
     const unsafeJob = {
       ...validJob,

@@ -5,22 +5,22 @@ import { createPracticeSession } from "../../../../src/features/practice/domain/
 function createStartedSession() {
   return createPracticeSession({
     id: "ses_reference-one",
-    learnerSpaceId: "lsp_local-demo",
-    actor: { kind: "student", userId: "usr_local-demo" },
+    learningSpaceId: "gsp_browser-one",
+    actor: { kind: "guest", actorId: "guest_browser-one" },
     startedAt: "2026-07-13T00:00:00.000Z",
     eventId: "evt_started-one",
   });
 }
 
 describe("practice session domain", () => {
-  it("starts a learner-owned 75-minute session with one ledger event", () => {
+  it("starts a Guest-owned schema-v2 75-minute session with one ledger event", () => {
     const session = createStartedSession();
 
     expect(session).toMatchObject({
-      schemaVersion: 1,
+      schemaVersion: 2,
       id: "ses_reference-one",
-      learnerSpaceId: "lsp_local-demo",
-      startedBy: { kind: "student", userId: "usr_local-demo" },
+      learningSpaceId: "gsp_browser-one",
+      startedBy: { kind: "guest", actorId: "guest_browser-one" },
       paperId: "tmua-2023-p1",
       status: "active",
       startedAt: "2026-07-13T00:00:00.000Z",
@@ -34,7 +34,7 @@ describe("practice session domain", () => {
     expect(session.events).toHaveLength(1);
     expect(session.events[0]).toMatchObject({
       id: "evt_started-one",
-      learnerSpaceId: "lsp_local-demo",
+      learningSpaceId: "gsp_browser-one",
       sessionId: "ses_reference-one",
       sequence: 1,
       type: "session_started",

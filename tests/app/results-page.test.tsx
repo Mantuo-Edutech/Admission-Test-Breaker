@@ -36,7 +36,7 @@ class ResultStore implements PracticeSessionStore {
 function submittedSession() {
   const active = createPracticeSession({
     id: "ses_result-page",
-    learnerSpaceId: "lsp_local-demo",
+    learningSpaceId: "lsp_local-demo",
     actor: { kind: "student", userId: "usr_local-demo" },
     startedAt: "2026-07-13T09:00:00.000Z",
     eventId: "evt_result-started",
@@ -112,7 +112,7 @@ describe("evidence-only results page", () => {
   it("does not expose an active or mismatched result session", async () => {
     const active = createPracticeSession({
       id: "ses_still-active",
-      learnerSpaceId: "lsp_local-demo",
+      learningSpaceId: "lsp_local-demo",
       actor: { kind: "student", userId: "usr_local-demo" },
       startedAt: "2026-07-13T09:00:00.000Z",
       eventId: "evt_still-active",

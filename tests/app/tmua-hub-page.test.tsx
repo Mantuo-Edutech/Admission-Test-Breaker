@@ -51,7 +51,7 @@ function activeSession(): PracticeSession {
   return {
     ...createPracticeSession({
       id: "ses_resume-test",
-      learnerSpaceId: "lsp_local-demo",
+      learningSpaceId: "lsp_local-demo",
       actor: { kind: "student", userId: "usr_local-demo" },
       startedAt: "2026-07-13T08:30:00.000Z",
       eventId: "evt_resume-started",
@@ -134,7 +134,7 @@ describe("TMUA exam space", () => {
     );
     expect(store.saved).toMatchObject({
       id: "ses_tmua-hub-test",
-      learnerSpaceId: "lsp_local-demo",
+      learningSpaceId: "lsp_local-demo",
       status: "active",
     });
     expect(router.state.location.pathname).toBe("/practice/tmua-2023-paper-1");

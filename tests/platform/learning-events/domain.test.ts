@@ -6,7 +6,7 @@ import {
 
 const startedDraft: PracticeLearningEventDraft = {
   id: "evt_session-started",
-  learnerSpaceId: "lsp_student-one",
+  learningSpaceId: "lsp_student-one",
   sessionId: "ses_tmua-one",
   type: "session_started",
   actor: { kind: "student", userId: "usr_student-one" },
@@ -19,7 +19,7 @@ const startedDraft: PracticeLearningEventDraft = {
 
 const selectedDraft: PracticeLearningEventDraft = {
   id: "evt_answer-one",
-  learnerSpaceId: "lsp_student-one",
+  learningSpaceId: "lsp_student-one",
   sessionId: "ses_tmua-one",
   type: "answer_selected",
   actor: { kind: "student", userId: "usr_student-one" },
@@ -47,8 +47,8 @@ const boundaryCases: Array<{
   draft: PracticeLearningEventDraft;
 }> = [
   {
-    label: "learner space",
-    draft: { ...selectedDraft, learnerSpaceId: "lsp_student-two" },
+    label: "learning space",
+    draft: { ...selectedDraft, learningSpaceId: "lsp_student-two" },
   },
   {
     label: "session",
@@ -65,6 +65,21 @@ describe("learning event ledger", () => {
     expect(first.event).toMatchObject({ schemaVersion: 1, sequence: 1 });
     expect(second.event).toMatchObject({ schemaVersion: 1, sequence: 2 });
     expect(second.events).toHaveLength(2);
+  });
+
+  it("accepts a local Guest actor in its Guest learning space", () => {
+    const result = appendLearningEvent([], {
+      ...startedDraft,
+      id: "evt_guest-session-started",
+      learningSpaceId: "gsp_browser-one",
+      sessionId: "ses_guest-one",
+      actor: { kind: "guest", actorId: "guest_browser-one" },
+    });
+
+    expect(result.event).toMatchObject({
+      learningSpaceId: "gsp_browser-one",
+      actor: { kind: "guest", actorId: "guest_browser-one" },
+    });
   });
 
   it("is idempotent when the same event ID carries the same event", () => {
@@ -92,7 +107,7 @@ describe("learning event ledger", () => {
   it.each(boundaryCases)("rejects an event from a different $label", ({ draft }) => {
     const first = appendLearningEvent([], startedDraft);
     expect(() => appendLearningEvent(first.events, draft)).toThrow(
-      /same learner space and session/,
+      /same learning space and session/,
     );
   });
 

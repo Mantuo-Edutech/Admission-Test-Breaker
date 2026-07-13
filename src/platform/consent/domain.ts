@@ -1,8 +1,8 @@
 import {
   isLearnerSpaceOwner,
-  type ActorRef,
   type LearnerSpace,
 } from "../learner-space/domain.js";
+import type { ActorRef } from "../learning-space/domain.js";
 import type {
   GrantId,
   LearnerSpaceId,
@@ -114,6 +114,10 @@ export function decideAccess(
   request: AccessRequest,
   grants: readonly Grant[],
 ): AccessDecision {
+  if (request.actor.kind === "guest") {
+    return denial("no_matching_grant");
+  }
+
   if (
     request.actor.kind === "student" &&
     isLearnerSpaceOwner(request.learnerSpace, request.actor.userId)

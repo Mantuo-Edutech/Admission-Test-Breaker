@@ -1,5 +1,7 @@
 export type UserId = `usr_${string}`;
 export type LearnerSpaceId = `lsp_${string}`;
+export type GuestSpaceId = `gsp_${string}`;
+export type LearningSpaceId = LearnerSpaceId | GuestSpaceId;
 export type GrantId = `grt_${string}`;
 export type PracticeSessionId = `ses_${string}`;
 export type LearningEventId = `evt_${string}`;
@@ -24,6 +26,15 @@ export function asUserId(value: string): UserId {
 
 export function asLearnerSpaceId(value: string): LearnerSpaceId {
   return asPrefixedId(value, "lsp_", "Learner space ID");
+}
+
+export function asGuestSpaceId(value: string): GuestSpaceId {
+  return asPrefixedId(value, "gsp_", "Guest space ID");
+}
+
+export function asLearningSpaceId(value: string): LearningSpaceId {
+  if (value.startsWith("lsp_")) return asLearnerSpaceId(value);
+  return asGuestSpaceId(value);
 }
 
 export function asGrantId(value: string): GrantId {

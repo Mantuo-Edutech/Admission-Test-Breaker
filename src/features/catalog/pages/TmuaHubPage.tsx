@@ -50,7 +50,7 @@ export function TmuaHubPage({ services }: TmuaHubPageProps) {
     setStarting(true);
     const session = createPracticeSession({
       id: services.ids.sessionId(),
-      learnerSpaceId: LOCAL_DEMO_LEARNER_SPACE_ID,
+      learningSpaceId: LOCAL_DEMO_LEARNER_SPACE_ID,
       actor: LOCAL_DEMO_STUDENT,
       startedAt: services.now().toISOString(),
       eventId: services.ids.eventId(),
