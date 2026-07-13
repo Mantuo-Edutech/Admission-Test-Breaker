@@ -26,6 +26,18 @@ const sourceFixture = {
   },
 };
 
+const unsafeSourcePaths = [
+  "",
+  "../escape.pdf",
+  "/private/a.pdf",
+  "C:\\private.pdf",
+  "Tmua\\paper.pdf",
+] as const;
+
+const unsafeSourcePathCases = (["canonicalPath", "duplicatePaths"] as const).flatMap(
+  (property) => unsafeSourcePaths.map((path) => [property, path] as const),
+);
+
 describe("TMUA JSON Schemas", () => {
   it.each(schemaFiles)("compiles %s.schema.json", async (name) => {
     const text = await readFile(`content/tmua/schemas/${name}.schema.json`, "utf8");
@@ -35,16 +47,30 @@ describe("TMUA JSON Schemas", () => {
     expect(() => ajv.compile(schema)).not.toThrow();
   });
 
-  it.each(["", "../escape.pdf", "/private/a.pdf", "C:\\private.pdf", "Tmua\\paper.pdf"])(
-    "rejects unsafe canonical path %j",
-    async (canonicalPath) => {
+  it("accepts the valid source fixture", async () => {
+    const schema = JSON.parse(
+      await readFile("content/tmua/schemas/source.schema.json", "utf8"),
+    );
+    const ajv = new Ajv2020({ allErrors: true });
+    addFormats(ajv);
+    const validate = ajv.compile(schema);
+    expect(validate(sourceFixture)).toBe(true);
+  });
+
+  it.each(unsafeSourcePathCases)(
+    "rejects unsafe %s value %j",
+    async (property, path) => {
       const schema = JSON.parse(
         await readFile("content/tmua/schemas/source.schema.json", "utf8"),
       );
       const ajv = new Ajv2020({ allErrors: true });
       addFormats(ajv);
       const validate = ajv.compile(schema);
-      expect(validate({ ...sourceFixture, canonicalPath })).toBe(false);
+      const source =
+        property === "canonicalPath"
+          ? { ...sourceFixture, canonicalPath: path }
+          : { ...sourceFixture, duplicatePaths: [path] };
+      expect(validate(source)).toBe(false);
     },
   );
 });
