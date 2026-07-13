@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { practiceSessionReducer } from "../../../../src/features/practice/domain/reducer.js";
 import { createPracticeSession } from "../../../../src/features/practice/domain/session.js";
 import {
   LocalPracticeSessionStore,
@@ -79,6 +80,42 @@ describe("local practice session store", () => {
     });
     await expect(store.loadCurrent()).resolves.toEqual({
       session: activeSession(),
+      issue: null,
+    });
+  });
+
+  it("round-trips a paused session with no active timing segment", async () => {
+    const storage = new MemoryStorage();
+    const store = new LocalPracticeSessionStore(storage);
+    const paused = practiceSessionReducer(activeSession(), {
+      type: "pause",
+      eventId: "evt_storage-paused",
+      timeEventId: "evt_storage-time-before-pause",
+      at: "2026-07-13T00:05:00.000Z",
+      reason: "visibility_hidden",
+    });
+
+    await expect(store.save(paused)).resolves.toEqual({ persisted: true });
+    await expect(store.loadCurrent()).resolves.toEqual({
+      session: paused,
+      issue: null,
+    });
+  });
+
+  it("round-trips a finalized session with no active timing segment", async () => {
+    const storage = new MemoryStorage();
+    const store = new LocalPracticeSessionStore(storage);
+    const submitted = practiceSessionReducer(activeSession(), {
+      type: "submit",
+      eventId: "evt_storage-submitted",
+      timeEventId: "evt_storage-time-before-submit",
+      at: "2026-07-13T00:10:00.000Z",
+      reason: "student",
+    });
+
+    await expect(store.save(submitted)).resolves.toEqual({ persisted: true });
+    await expect(store.loadCurrent()).resolves.toEqual({
+      session: submitted,
       issue: null,
     });
   });

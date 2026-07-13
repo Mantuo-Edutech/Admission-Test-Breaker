@@ -212,6 +212,47 @@ describe("practice session domain", () => {
     });
   });
 
+  it("caps non-monotonic active segments at the remaining whole-paper budget", () => {
+    const viewedSecond = practiceSessionReducer(createStartedSession(), {
+      type: "view",
+      eventId: "evt_view-second-late",
+      timeEventId: "evt_time-first-hour",
+      questionNumber: 2,
+      at: "2026-07-13T01:00:00.000Z",
+    });
+    const viewedThirdAfterClockRollback = practiceSessionReducer(viewedSecond, {
+      type: "view",
+      eventId: "evt_view-third-clock-rollback",
+      timeEventId: "evt_time-clock-rollback",
+      questionNumber: 3,
+      at: "2026-07-13T00:30:00.000Z",
+    });
+    const expired = practiceSessionReducer(viewedThirdAfterClockRollback, {
+      type: "expire",
+      eventId: "evt_expired-after-clock-rollback",
+      timeEventId: "evt_time-after-clock-rollback",
+      at: "2026-07-13T02:00:00.000Z",
+    });
+
+    expect(
+      Object.values(expired.timingByQuestionMs).reduce(
+        (total, activeMs) => total + activeMs,
+        0,
+      ),
+    ).toBe(75 * 60_000);
+    expect(expired.timingByQuestionMs).toMatchObject({
+      "tmua-2023-p1-q01": 60 * 60_000,
+      "tmua-2023-p1-q03": 15 * 60_000,
+    });
+    expect(expired.events.at(-2)).toMatchObject({
+      type: "question_time_recorded",
+      payload: {
+        questionId: "tmua-2023-p1-q03",
+        activeMs: 15 * 60_000,
+      },
+    });
+  });
+
   it("excludes a hidden-page interval from active question time", () => {
     const paused = practiceSessionReducer(createStartedSession(), {
       type: "pause",

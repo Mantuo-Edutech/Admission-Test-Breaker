@@ -228,10 +228,13 @@ function parseSession(value: unknown): PracticeSession {
 
   assertNonEmptyString(value.startedAt, "startedAt");
   assertNonEmptyString(value.deadlineAt, "deadlineAt");
-  assertNonEmptyString(value.activeQuestionEnteredAt, "activeQuestionEnteredAt");
   assertCanonicalUtcTimestamp(value.startedAt, "startedAt");
   assertCanonicalUtcTimestamp(value.deadlineAt, "deadlineAt");
-  assertCanonicalUtcTimestamp(value.activeQuestionEnteredAt, "activeQuestionEnteredAt");
+  const activeQuestionEnteredAt = value.activeQuestionEnteredAt;
+  if (activeQuestionEnteredAt !== null) {
+    assertNonEmptyString(activeQuestionEnteredAt, "activeQuestionEnteredAt");
+    assertCanonicalUtcTimestamp(activeQuestionEnteredAt, "activeQuestionEnteredAt");
+  }
 
   if (
     !Number.isInteger(value.currentQuestion) ||
@@ -289,7 +292,7 @@ function parseSession(value: unknown): PracticeSession {
     answers: parseAnswers(value.answers),
     markedQuestionIds: parseMarkedQuestions(value.markedQuestionIds),
     timingByQuestionMs: parseTiming(value.timingByQuestionMs),
-    activeQuestionEnteredAt: value.activeQuestionEnteredAt,
+    activeQuestionEnteredAt,
     events,
   };
 }

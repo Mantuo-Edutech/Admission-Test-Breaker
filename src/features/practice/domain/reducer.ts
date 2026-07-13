@@ -81,7 +81,19 @@ function recordActiveQuestionTime(
   const questionId = questionIdForNumber(session.currentQuestion);
   const segmentStart = Date.parse(session.activeQuestionEnteredAt);
   const segmentEnd = Math.min(Date.parse(at), Date.parse(session.deadlineAt));
-  const activeMs = Math.max(0, segmentEnd - segmentStart);
+  const paperBudgetMs = Math.max(
+    0,
+    Date.parse(session.deadlineAt) - Date.parse(session.startedAt),
+  );
+  const recordedActiveMs = Object.values(session.timingByQuestionMs).reduce(
+    (total, questionActiveMs) => total + questionActiveMs,
+    0,
+  );
+  const remainingPaperBudgetMs = Math.max(0, paperBudgetMs - recordedActiveMs);
+  const activeMs = Math.min(
+    Math.max(0, segmentEnd - segmentStart),
+    remainingPaperBudgetMs,
+  );
   const accumulated = session.timingByQuestionMs[questionId] ?? 0;
   const withoutActiveSegment = {
     ...session,
