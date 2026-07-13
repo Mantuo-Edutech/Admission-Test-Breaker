@@ -26,7 +26,7 @@
 ### Phase 1 — TMUA Reference Journey
 
 **旅程：** 学生进入 Learner Space → 开始 TMUA 2023 Paper 1 → 作答/标记/恢复 → 提交 → 查看基于本次证据的结果。
-**成果：** 20 道已核验题、75 分钟会话、学习事件、版本化本地仓储、结果投影、学院插画风响应式界面、数据边界提示。
+**成果：** 20 道已核验题、75 分钟会话、学习事件、版本化本地仓储、结果投影、暖纸招生简章风响应式界面、数据边界提示。
 **边界：** 首次可体验版本允许本地存储，但领域事件必须携带 Learner Space；不得宣称已实现生产多租户。
 **发布门：** V0、V1、V2-local、V3、V4-responsive/accessibility。
 
@@ -38,6 +38,8 @@
 **成果：** 满托统一品牌、四考试入口、TMUA 考试空间、18 套/360 题完整资料档案、本地 Guest Space、13 道经验证原创题、免费基础报告、UAT-UK 2027 TMUA 专业要求注册表。
 **边界：** 首版不输出官方 1–9 分、百分位、录取概率或精确训练小时；Guest Space 只在当前设备，不能用于生产匿名追踪。
 **发布门：** 品牌/文案契约、原创题发布门、Guest 恢复、诊断结果诚实性、申请年度/来源验证、响应式与无障碍。
+
+**当前状态：** Slice A/B 已于 2026-07-13 交付：多考试首页、TMUA 考试中心、96 路径/46 canonical source manifest、18 套试卷/360 道题目档案和诚实资料馆已完成。Slice C/D（5 题体验、Guest Space、8 题诊断、免费报告与 2027 专业注册表）仍待实施。当前只有 2023 Paper 1 的 20 题达到 verified/published 并可在线练习。
 
 ### Phase 2 — 私密账户与授权协作
 
@@ -91,7 +93,7 @@
 | G0 Package | Node/pnpm/脚本和锁文件契约 | `pnpm test -- tests/package-contract.test.ts` | P0 |
 | G1 Types | 严格 TypeScript | `pnpm typecheck` | P0 |
 | G2 Unit | 领域 reducer、授权、事件、投影、计时 | `pnpm test -- tests/features tests/platform` | P0 |
-| G3 Content | schema、题数、答案、来源和 revision | `pnpm test -- tests/content tests/features/practice/content` | P0 |
+| G3 Content | schema、题数、答案、来源和 revision | `pnpm verify:tmua-corpus` + content tests | P0 |
 | G4 Architecture | 禁止依赖、模块公开 API、私密/公开域隔离 | `pnpm verify:architecture` | P0 |
 | G5 Integration | 存储、RLS、AI provider、Webhook/MCP 合约 | 分阶段加入 `pnpm test:integration` | P0 |
 | G6 Journey | 开始、恢复、提交、结果、授权闭环 | 分阶段加入 `pnpm test:e2e` | P0 |
@@ -107,14 +109,14 @@
 | 工作流 | 状态 | 证据 | 尚欠 |
 | --- | --- | --- | --- |
 | 母产品契约 | 已建立并进入自动执行 | 产品宪章、系统架构、路线图、`pnpm verify:architecture` | 后续模块加入时持续扩展禁止依赖规则 |
-| TMUA 原始资料 | 已盘点本地 96 PDFs / 46 个唯一内容 | `docs/superpowers/specs/2026-07-12-tmua-content-corpus-design.md` | 全量 canonical manifest 与贡献发布流 |
-| Content tooling | typed schema 基础已完成 | `src/content/tmua/`、schema tests | CLI 实现与全量 corpus build |
+| TMUA 原始资料 | Slice A 已交付：96 路径 / 46 canonical sources / 18 papers / 360 shells | `content/tmua/`、`docs/content/TMUA_CORPUS_REPORT.md`、`pnpm verify:tmua-corpus` | 其余 340 道题的结构化、逐题核验与发布 |
+| Content tooling | inventory、官方补充、build 与独立 corpus gate 已完成 | `src/content/tmua/`、schemas、CLI tests | 贡献审核、许可治理和内容发布后台 |
 | Reference content | TMUA 2023 Paper 1 共 20 题已人工核验 | `src/features/practice/content/tmua-2023-p1.ts` | 后续解释和更多试卷 |
-| Reference Journey Web | 本地预览闭环已完成 | 品牌首页、完整 20 题、提交、结果；手机/iPad/桌面实测 | 生产身份与服务端持久化后再公开收集真实数据 |
+| Reference Journey Web | 本地预览闭环与多考试前门已完成 | 四考试首页、TMUA 中心、完整 20 题、提交、结果；四组视口与 a11y 契约 | 生产身份与服务端持久化后再公开收集真实数据 |
 | Learner Space / Events | 核心领域契约已接入练习 | 稳定 ID、所有权、追加式事件、顺序、幂等、本地恢复和结果投影 | PostgreSQL 账本、RLS 与后台投影 |
 | Consent / Grants | 纯策略契约已实现 | 精确 scope、资源、有效期、撤销和 actor 测试 | 持久化、授权界面与访问审计 |
 | Benchmark / AI / Integrations | AI Job 核心契约已实现 | 投影引用、预算、委托授权和禁止 secret 校验 | Provider 适配器、Benchmark 与外部集成 |
-| 品牌与信任阶梯 | 设计已批准，等待书面复核 | `docs/superpowers/specs/2026-07-13-admission-test-trust-ladder-design.md` | 首页、原创题、Guest Space、诊断与院校注册表实现 |
+| 品牌与信任阶梯 | 设计已批准、实施中；Slice A/B 已交付 | 多考试首页、TMUA 资料馆、路由/文案/响应式/a11y 测试 | Slice C/D：原创体验、Guest Space、诊断、免费报告与院校注册表 |
 
 ## 6. 既有局部方案的归属
 
@@ -125,8 +127,8 @@
 
 ## 7. 接下来三个可验证增量
 
-1. **Trust Ladder Slice：** 重构多考试首页，实现 TMUA 5 题游客体验、8 题初步诊断、免费基础报告和 2027 专业要求注册表。
-2. **Private Account Slice：** 接入身份、PostgreSQL、RLS、Guest 数据接管与跨租户负面测试，把本地记录迁移到生产私密空间。
-3. **Content Commons Pipeline：** 恢复全量 TMUA canonical manifest、past papers、原创题发布门和贡献审核发布流。
+1. **Slice C — 5 题体验：** 先完成 Paper 1 应用与 Paper 2 推理蓝图、唯一答案验证、解答/干扰项审核和独立人工复核，再发布版本化 Guest Space 体验。
+2. **Slice D — 诊断与申请定位：** 实现 8 题固定诊断、免费证据报告和带申请年度/官方来源的 2027 TMUA 专业注册表。
+3. **Private Account Slice：** 接入身份、PostgreSQL、RLS、Guest 数据接管与跨租户负面测试，把本地记录迁移到生产私密空间。
 
 Benchmark、付费 AI 解读和外部 Agent 接入继续依赖真实、合规、经授权的数据基础，不会越过以上生产门提前伪装上线。
