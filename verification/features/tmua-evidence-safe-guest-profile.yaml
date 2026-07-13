@@ -1,0 +1,92 @@
+schemaVersion: 1
+feature:
+  id: tmua-evidence-safe-guest-profile
+  title: TMUA evidence-safe Guest preparation foundation
+  status: verified
+  verifiedAt: 2026-07-14
+  userOutcome: >-
+    A student can enter the TMUA space without an account, describe an exact
+    CAIE or Pearson IAL starting point, keep that profile inside the current
+    local Guest Space, and begin or resume a timed 2023 Paper 1 session with
+    honest storage and evidence boundaries.
+
+run:
+  packageScript: verify
+
+claims:
+  - id: evidence-safe-timing
+    status: verified
+    statement: >-
+      Active-page time and the 75-minute paper limit are kept separately;
+      background time is not presented as thinking time and clock rollback
+      cannot extend the paper.
+    artifacts:
+      - src/features/practice/domain/session.ts
+      - src/features/practice/pages/PracticePage.tsx
+      - tests/features/practice/domain/session.test.ts
+      - tests/app/practice-page.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+
+  - id: local-guest-ownership
+    status: verified
+    statement: >-
+      Practice sessions and preparation profiles are owned by a stable local
+      Guest Space and records from another Guest Space are not resumed.
+    artifacts:
+      - src/platform/learning-space/domain.ts
+      - src/features/guest-space/storage/local-store.ts
+      - src/features/practice/storage/local-store.ts
+      - tests/app/tmua-hub-page.test.tsx
+    automatedChecks:
+      - verify:architecture
+      - test
+
+  - id: exact-preparation-profile
+    status: verified
+    statement: >-
+      Entry cycle, curriculum system, qualification, qualification-scoped
+      modules and prior practice experience are stored without inventing
+      knowledge coverage or readiness scores.
+    artifacts:
+      - src/features/preparation-profile/catalog.ts
+      - src/features/preparation-profile/domain.ts
+      - src/features/preparation-profile/storage/local-store.ts
+      - src/features/preparation-profile/components/ProfilePanel.tsx
+      - tests/features/preparation-profile/domain.test.ts
+      - tests/features/preparation-profile/storage/local-store.test.ts
+      - tests/features/preparation-profile/components/profile-panel.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+
+  - id: responsive-progressive-interface
+    status: verified
+    statement: >-
+      The profile is optional, AI is absent from the first interaction, and
+      the editorial layout adapts across desktop, tablet and phone widths.
+    artifacts:
+      - src/styles/practice.css
+      - tests/app/front-door-accessibility.test.tsx
+      - tests/app/front-door-css-contract.test.ts
+    automatedChecks:
+      - test
+      - build
+
+boundaries:
+  - This is local browser persistence, not production server storage.
+  - Guest Space isolation is not a claim of production multi-tenant RLS.
+  - Course coverage and practical readiness remain unknown until reviewed mappings and learner evidence exist.
+  - Only TMUA 2023 Paper 1 currently has 20 published online questions.
+  - No benchmark, admissions probability, paid interpretation or AI recommendation is produced by this feature.
+
+manualChecks:
+  - id: responsive-viewport-review
+    status: passed
+    checkedAt: 2026-07-14
+    evidence: Browser-rendered profile layout with no horizontal content overflow.
+    viewports:
+      - 1440x900
+      - 768x1024
+      - 390x844

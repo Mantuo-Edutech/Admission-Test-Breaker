@@ -14,6 +14,12 @@ interface ArchitectureViolation extends ImportReference {
 
 const sourceRoot = path.resolve("src");
 const fixturePath = path.join(sourceRoot, "platform", "__architecture-fixture__.ts");
+const profileFixturePath = path.join(
+  sourceRoot,
+  "features",
+  "preparation-profile",
+  "__domain-architecture-fixture__.ts",
+);
 
 async function sourceFiles(directory: string): Promise<string[]> {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -145,6 +151,28 @@ function evaluate(reference: ImportReference): ArchitectureViolation[] {
     }
   }
 
+  const isPreparationProfileDomain =
+    relativeFile === "src/features/preparation-profile/domain.ts" ||
+    relativeFile === "src/features/preparation-profile/catalog.ts" ||
+    relativeFile.endsWith(
+      "src/features/preparation-profile/__domain-architecture-fixture__.ts",
+    );
+  if (isPreparationProfileDomain) {
+    const importsFrameworkOrAdapter =
+      packageIs(reference.specifier, "react") ||
+      packageIs(reference.specifier, "react-dom") ||
+      packageIs(reference.specifier, "react-router") ||
+      packageIs(reference.specifier, "react-router-dom") ||
+      /\/src\/features\/preparation-profile\/(components|storage)\//.test(target);
+
+    if (importsFrameworkOrAdapter) {
+      violations.push({
+        ...reference,
+        rule: "preparation profile domain must not depend on UI or storage adapters",
+      });
+    }
+  }
+
   return violations;
 }
 
@@ -154,6 +182,7 @@ async function architectureViolations(): Promise<ArchitectureViolation[]> {
 
 afterEach(async () => {
   await rm(fixturePath, { force: true });
+  await rm(profileFixturePath, { force: true });
 });
 
 describe("module architecture boundaries", () => {
@@ -173,6 +202,20 @@ describe("module architecture boundaries", () => {
     expect(await architectureViolations()).toEqual([]);
   });
 
+  it("reports a preparation-profile domain dependency on React", async () => {
+    await writeFile(
+      profileFixturePath,
+      'import React from "react";\nexport { React };\n',
+    );
+
+    expect(await architectureViolations()).toContainEqual(
+      expect.objectContaining({
+        specifier: "react",
+        rule: "preparation profile domain must not depend on UI or storage adapters",
+      }),
+    );
+  });
+
   it("exposes standalone architecture and complete verification commands", async () => {
     const packageJson = JSON.parse(await readFile("package.json", "utf8")) as {
       scripts?: Record<string, string>;
@@ -181,8 +224,11 @@ describe("module architecture boundaries", () => {
     expect(packageJson.scripts?.["verify:architecture"]).toBe(
       "vitest run tests/architecture/module-boundaries.test.ts",
     );
+    expect(packageJson.scripts?.["verify:features"]).toBe(
+      "vitest run tests/architecture/feature-manifests.test.ts",
+    );
     expect(packageJson.scripts?.verify).toBe(
-      "pnpm verify:architecture && pnpm verify:tmua-corpus && pnpm test && pnpm typecheck && pnpm build",
+      "pnpm verify:architecture && pnpm verify:features && pnpm verify:tmua-corpus && pnpm test && pnpm typecheck && pnpm build",
     );
   });
 });

@@ -1,7 +1,7 @@
 # 总路线图与验证矩阵
 
 **状态：** 生效
-**日期：** 2026-07-13
+**日期：** 2026-07-14
 **目标：** 让每次开发同时回答“离完整产品更近了吗”和“如何独立证明它没有偏离架构”。
 
 ## 1. 发布原则
@@ -39,7 +39,7 @@
 **边界：** 首版不输出官方 1–9 分、百分位、录取概率或精确训练小时；Guest Space 只在当前设备，不能用于生产匿名追踪。
 **发布门：** 品牌/文案契约、原创题发布门、Guest 恢复、诊断结果诚实性、申请年度/来源验证、响应式与无障碍。
 
-**当前状态：** Slice A/B 已于 2026-07-13 交付：多考试首页、TMUA 考试中心、96 路径/46 canonical source manifest、18 套试卷/360 道题目档案和诚实资料馆已完成。原 Slice C/D 已在 2026-07-14 的完整准备系统设计中合并扩展为“TMUA 完整纵向闭环”：加入渐进式准备档案、知识图谱、准确课程映射、5 题体验、8 题诊断、免费报告和专业注册表；该增量仍待实施。当前只有 2023 Paper 1 的 20 题达到 verified/published 并可在线练习。
+**当前状态：** Slice A/B 已于 2026-07-13 交付：多考试首页、TMUA 考试中心、96 路径/46 canonical source manifest、18 套试卷/360 道题目档案和诚实资料馆已完成。2026-07-14 又完成证据安全计时、本地 Guest Space 隔离、CAIE/Pearson 精确准备档案及其桌面/iPad/手机界面。知识图谱与审核课程映射、5 题体验、8 题诊断、免费报告和专业注册表仍待实施。当前只有 2023 Paper 1 的 20 题达到 verified/published 并可在线练习。
 
 ### Phase 2 — 私密账户与授权协作
 
@@ -95,6 +95,7 @@
 | G2 Unit | 领域 reducer、授权、事件、投影、计时 | `pnpm test -- tests/features tests/platform` | P0 |
 | G3 Content | schema、题数、答案、来源和 revision | `pnpm verify:tmua-corpus` + content tests | P0 |
 | G4 Architecture | 禁止依赖、模块公开 API、私密/公开域隔离 | `pnpm verify:architecture` | P0 |
+| G4b Feature claims | 机器可读用户结果、证据路径、命令与限制 | `pnpm verify:features` | P0 |
 | G5 Integration | 存储、RLS、AI provider、Webhook/MCP 合约 | 分阶段加入 `pnpm test:integration` | P0 |
 | G6 Journey | 开始、恢复、提交、结果、授权闭环 | 分阶段加入 `pnpm test:e2e` | P0 |
 | G7 UI Quality | 无障碍、手机/iPad/桌面、reduced motion | 组件测试 + Playwright 视口矩阵 + 人工截图评审 | P1；关键动作 P0 |
@@ -116,7 +117,7 @@
 | Learner Space / Events | 核心领域契约已接入练习 | 稳定 ID、所有权、追加式事件、顺序、幂等、本地恢复和结果投影 | PostgreSQL 账本、RLS 与后台投影 |
 | Consent / Grants | 纯策略契约已实现 | 精确 scope、资源、有效期、撤销和 actor 测试 | 持久化、授权界面与访问审计 |
 | Benchmark / AI / Integrations | AI Job 核心契约已实现 | 投影引用、预算、委托授权和禁止 secret 校验 | Provider 适配器、Benchmark 与外部集成 |
-| 品牌与完整准备旅程 | Slice A/B 已交付；2026-07-14 纵向闭环设计等待书面审阅 | 多考试首页、TMUA 资料馆、路由/文案/响应式/a11y 测试 | 渐进档案、知识图谱、课程映射、原创体验、诊断、免费报告与院校注册表 |
+| 品牌与完整准备旅程 | Slice A/B 与证据安全准备档案基础已交付 | 多考试首页、TMUA 资料馆、精确课程/模块档案、本地 Guest 隔离、响应式/a11y 测试、功能清单门禁 | 审核知识图谱和课程映射、原创体验、诊断、复习资料、免费报告与院校注册表 |
 
 ## 6. 既有局部方案的归属
 
