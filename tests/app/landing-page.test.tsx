@@ -1,42 +1,31 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { RouterProvider } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 import type { AppServices } from "../../src/app/dependencies.js";
 import { createAppRouter } from "../../src/app/routes.js";
-import { createPracticeSession } from "../../src/features/practice/domain/session.js";
-import type { PracticeSession } from "../../src/features/practice/domain/session.js";
 import type {
   PracticeSessionStore,
   SessionLoadResult,
   SessionSaveResult,
 } from "../../src/features/practice/storage/store.js";
+import type { PracticeSession } from "../../src/features/practice/domain/session.js";
 
-class FakeSessionStore implements PracticeSessionStore {
-  saved: PracticeSession | null = null;
-
-  constructor(
-    private readonly loaded: SessionLoadResult = {
-      session: null,
-      issue: null,
-    },
-    private readonly saveResult: SessionSaveResult = { persisted: true },
-  ) {}
+class TrackingStore implements PracticeSessionStore {
+  loadCalls = 0;
+  saveCalls = 0;
 
   async loadCurrent(): Promise<SessionLoadResult> {
-    return this.saved === null
-      ? this.loaded
-      : { session: this.saved, issue: null };
+    this.loadCalls += 1;
+    return { session: null, issue: null };
   }
 
-  async save(session: PracticeSession): Promise<SessionSaveResult> {
-    this.saved = session;
-    return this.saveResult;
+  async save(_session: PracticeSession): Promise<SessionSaveResult> {
+    this.saveCalls += 1;
+    return { persisted: true };
   }
 
-  async clearCurrent(): Promise<void> {
-    this.saved = null;
-  }
+  async clearCurrent(): Promise<void> {}
 }
 
 function services(store: PracticeSessionStore): AppServices {
@@ -50,119 +39,99 @@ function services(store: PracticeSessionStore): AppServices {
   };
 }
 
-function activeSession(): PracticeSession {
-  return {
-    ...createPracticeSession({
-      id: "ses_resume-test",
-      learnerSpaceId: "lsp_local-demo",
-      actor: { kind: "student", userId: "usr_local-demo" },
-      startedAt: "2026-07-13T08:30:00.000Z",
-      eventId: "evt_resume-started",
-    }),
-    answers: { "tmua-2023-p1-q01": "F" },
-  };
-}
-
-describe("TMUA Reference Journey landing page", () => {
-  it("shows the complete paper facts and honest local-data boundary", async () => {
-    const router = createAppRouter(
-      ["/"],
-      services(new FakeSessionStore()),
-    );
+describe("Mantou multi-exam homepage", () => {
+  it("states the brand promise and complete product meaning first", async () => {
+    const router = createAppRouter(["/"], services(new TrackingStore()));
     render(<RouterProvider router={router} />);
 
     expect(
-      await screen.findByRole("heading", { name: "把焦虑，拆成每一道题。" }),
+      await screen.findByRole("heading", {
+        level: 1,
+        name: "不再为升学考试而焦虑",
+      }),
     ).toBeInTheDocument();
-    expect(screen.getByText("20 道题")).toBeInTheDocument();
-    expect(screen.getByText("75 分钟")).toBeInTheDocument();
-    expect(screen.getByText("不可使用计算器")).toBeInTheDocument();
-    expect(screen.getByText(/当前设备保存/)).toBeInTheDocument();
-    expect(screen.getAllByText(/由满托发起/)).not.toHaveLength(0);
-  });
-
-  it("starts a learner-owned session and navigates into the paper", async () => {
-    const user = userEvent.setup();
-    const store = new FakeSessionStore();
-    const router = createAppRouter(["/"], services(store));
-    render(<RouterProvider router={router} />);
-
-    await user.click(
-      await screen.findByRole("button", { name: "开始完整模考" }),
-    );
-
-    expect(router.state.location.pathname).toBe(
-      "/practice/tmua-2023-paper-1",
-    );
-    expect(store.saved).toMatchObject({
-      id: "ses_landing-test",
-      learnerSpaceId: "lsp_local-demo",
-      status: "active",
-    });
-  });
-
-  it("offers a separate resume action with answered progress", async () => {
-    const user = userEvent.setup();
-    const store = new FakeSessionStore({
-      session: activeSession(),
-      issue: null,
-    });
-    const router = createAppRouter(["/"], services(store));
-    render(<RouterProvider router={router} />);
-
-    expect(await screen.findByText("已完成 1 / 20")).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "继续上次练习" }));
-    expect(router.state.location.pathname).toBe(
-      "/practice/tmua-2023-paper-1",
-    );
-  });
-
-  it("does not show resume when no active session exists", async () => {
-    const router = createAppRouter(
-      ["/"],
-      services(new FakeSessionStore()),
-    );
-    render(<RouterProvider router={router} />);
-
-    await screen.findByRole("button", { name: "开始完整模考" });
+    expect(screen.getByText("满托考试练习场")).toBeInTheDocument();
+    expect(screen.getByText("Admission Test Breaker")).toBeInTheDocument();
     expect(
-      screen.queryByRole("button", { name: "继续上次练习" }),
-    ).not.toBeInTheDocument();
+      screen.getByText(
+        "从了解考试、诊断水平，到系统训练、模考复盘和准备进度判断，都在这里完成。",
+      ),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "你正在准备哪一项考试？" }),
+    ).toBeInTheDocument();
   });
 
-  it("surfaces corrupt recovery data calmly", async () => {
-    const router = createAppRouter(
-      ["/"],
-      services(
-        new FakeSessionStore({ session: null, issue: "corrupt" }),
-      ),
-    );
+  it("shows four direct exam entries with honest status text", async () => {
+    const router = createAppRouter(["/"], services(new TrackingStore()));
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("status")).toHaveTextContent(
-      "上次练习记录无法安全恢复",
-    );
+    await screen.findByRole("heading", { name: "不再为升学考试而焦虑" });
+    for (const [name, href] of [
+      ["TMUA", "/exams/tmua"],
+      ["ESAT", "/exams/esat"],
+      ["TARA", "/exams/tara"],
+      ["UCAT", "/exams/ucat"],
+    ] as const) {
+      expect(screen.getByRole("link", { name: new RegExp(name, "u") })).toHaveAttribute(
+        "href",
+        href,
+      );
+    }
+    expect(screen.getByText("现已开放")).toBeInTheDocument();
+    expect(screen.getAllByText("资料馆建设中")).toHaveLength(3);
   });
 
-  it("continues in memory when browser persistence is unavailable", async () => {
+  it("presents the common preparation path in order", async () => {
+    const router = createAppRouter(["/"], services(new TrackingStore()));
+    render(<RouterProvider router={router} />);
+
+    const path = await screen.findByRole("list", { name: "完整备考路径" });
+    expect(
+      within(path).getAllByRole("listitem").map((item) => item.textContent),
+    ).toEqual([
+      "了解考试",
+      "完成诊断",
+      "系统训练",
+      "模考复盘",
+      "判断准备进度",
+    ]);
+  });
+
+  it("removes the old abstract and single-paper homepage copy", async () => {
+    const router = createAppRouter(["/"], services(new TrackingStore()));
+    render(<RouterProvider router={router} />);
+    await screen.findByRole("heading", { name: "不再为升学考试而焦虑" });
+
+    for (const oldCopy of [
+      "把焦虑，拆成每一道题。",
+      "知识不是围墙",
+      "内容有出处",
+      "结论保持诚实",
+      "练习保持开放 · 深度解读与专业服务由你选择",
+    ]) {
+      expect(screen.queryByText(new RegExp(oldCopy, "u"))).not.toBeInTheDocument();
+    }
+  });
+
+  it("does not read or create a private practice session on the public homepage", async () => {
+    const store = new TrackingStore();
+    const router = createAppRouter(["/"], services(store));
+    render(<RouterProvider router={router} />);
+    await screen.findByRole("heading", { name: "不再为升学考试而焦虑" });
+
+    expect(store.loadCalls).toBe(0);
+    expect(store.saveCalls).toBe(0);
+  });
+
+  it("routes the open TMUA entry to its own exam space", async () => {
     const user = userEvent.setup();
-    const router = createAppRouter(
-      ["/"],
-      services(
-        new FakeSessionStore(
-          { session: null, issue: null },
-          { persisted: false },
-        ),
-      ),
-    );
+    const router = createAppRouter(["/"], services(new TrackingStore()));
     render(<RouterProvider router={router} />);
 
     await user.click(
-      await screen.findByRole("button", { name: "开始完整模考" }),
+      await screen.findByRole("link", { name: /TMUA.*现已开放/u }),
     );
-
-    expect(router.state.location.state).toEqual({
-      recoveryWarning: true,
-    });
+    expect(router.state.location.pathname).toBe("/exams/tmua");
   });
 });

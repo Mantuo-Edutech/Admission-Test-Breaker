@@ -31,7 +31,7 @@ export function createAppRouter(
 ) {
   const services = injectedServices ?? createDefaultAppServices();
   const routes = [
-    { path: "/", element: <LandingPage services={services} /> },
+    { path: "/", element: <LandingPage /> },
     ...EXAM_CATALOG.filter(
       (exam) => exam.availability === "building",
     ).map((exam) => ({

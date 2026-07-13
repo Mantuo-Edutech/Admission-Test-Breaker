@@ -1,166 +1,79 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import {
-  ArrowRight,
-  BookOpenCheck,
-  Clock3,
-  LockKeyhole,
-  ShieldCheck,
-} from "lucide-react";
-import type { AppServices } from "../../../app/dependencies.js";
-import {
-  LOCAL_DEMO_LEARNER_SPACE_ID,
-  LOCAL_DEMO_STUDENT,
-} from "../../../app/local-demo.js";
-import { createPracticeSession } from "../domain/session.js";
-import type { PracticeSession } from "../domain/session.js";
-import { AcademicIllustration } from "../components/AcademicIllustration.js";
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { EXAM_CATALOG } from "../../catalog/exams.js";
 import { BrandMark } from "../components/BrandMark.js";
 
-interface LandingPageProps {
-  services: AppServices;
-}
+const PREPARATION_PATH = [
+  "了解考试",
+  "完成诊断",
+  "系统训练",
+  "模考复盘",
+  "判断准备进度",
+] as const;
 
-export function LandingPage({ services }: LandingPageProps) {
-  const navigate = useNavigate();
-  const [recoverable, setRecoverable] = useState<PracticeSession | null>(null);
-  const [loadIssue, setLoadIssue] = useState<"corrupt" | "unsupported" | null>(
-    null,
-  );
-  const [loading, setLoading] = useState(true);
-  const [starting, setStarting] = useState(false);
-
-  useEffect(() => {
-    let active = true;
-    void services.store.loadCurrent().then((result) => {
-      if (!active) return;
-      setLoadIssue(result.issue);
-      setRecoverable(result.session?.status === "active" ? result.session : null);
-      setLoading(false);
-    });
-    return () => {
-      active = false;
-    };
-  }, [services.store]);
-
-  async function startSession() {
-    setStarting(true);
-    const startedAt = services.now().toISOString();
-    const session = createPracticeSession({
-      id: services.ids.sessionId(),
-      learnerSpaceId: LOCAL_DEMO_LEARNER_SPACE_ID,
-      actor: LOCAL_DEMO_STUDENT,
-      startedAt,
-      eventId: services.ids.eventId(),
-    });
-    const result = await services.store.save(session);
-    navigate("/practice/tmua-2023-paper-1", {
-      state: result.persisted ? undefined : { recoveryWarning: true },
-    });
-  }
-
-  function resumeSession() {
-    navigate("/practice/tmua-2023-paper-1");
-  }
-
+export function LandingPage() {
   return (
     <main className="landing-page">
       <header className="site-header page-shell">
         <BrandMark />
-        <div className="site-header__status">
-          <span className="status-dot" aria-hidden="true" />
-          开放练习 · Beta
-        </div>
+        <p className="site-header__descriptor">英国大学入学考试</p>
       </header>
 
-      <section className="landing-hero page-shell">
-        <div className="landing-hero__copy">
-          <p className="eyebrow">TMUA 2023 · PAPER 1</p>
-          <h1>把焦虑，拆成每一道题。</h1>
-          <p className="landing-hero__lead">
-            一份完整、经人工核验的真实练习。先安静地做完，再用属于你的数据理解节奏、错误和下一步。
+      <section className="front-door-hero">
+        <div className="front-door-hero__inner page-shell">
+          <p className="front-door-hero__edition">
+            UK UNIVERSITY ADMISSION TESTS · 2027 ENTRY
           </p>
-
-          <ul className="paper-facts" aria-label="试卷信息">
-            <li><BookOpenCheck aria-hidden="true" />20 道题</li>
-            <li><Clock3 aria-hidden="true" />75 分钟</li>
-            <li><ShieldCheck aria-hidden="true" />不可使用计算器</li>
-          </ul>
-
-          {loadIssue !== null && (
-            <div className="calm-notice" role="status">
-              上次练习记录无法安全恢复。旧记录已被隔离，你可以放心开始一次新练习。
-            </div>
-          )}
-
-          <div className="landing-actions">
-            <button
-              className="button button--primary"
-              type="button"
-              onClick={() => void startSession()}
-              disabled={starting || loading}
-            >
-              {starting ? "正在准备试卷…" : "开始完整模考"}
-              <ArrowRight aria-hidden="true" />
-            </button>
-
-            {recoverable !== null && (
-              <div className="resume-card">
-                <div>
-                  <span>上次练习</span>
-                  <strong>
-                    已完成 {Object.keys(recoverable.answers).length} / 20
-                  </strong>
-                </div>
-                <button
-                  className="button button--secondary"
-                  type="button"
-                  onClick={resumeSession}
-                >
-                  继续上次练习
-                </button>
-              </div>
-            )}
-          </div>
-
-          <p className="local-data-note">
-            <LockKeyhole aria-hidden="true" />
-            当前体验的数据仅在当前设备保存；生产级私密账户与逐项授权将在下一阶段接入。
-          </p>
-        </div>
-
-        <div className="landing-hero__visual">
-          <div className="illustration-frame">
-            <span className="illustration-index">REF. 01 / PRACTICE COMMONS</span>
-            <AcademicIllustration />
-          </div>
-          <p className="illustration-caption">
-            知识不是围墙。它应当是一间任何人都能推门进入的书房。
+          <h1>不再为升学考试而焦虑</h1>
+          <p className="front-door-hero__lead">
+            从了解考试、诊断水平，到系统训练、模考复盘和准备进度判断，都在这里完成。
           </p>
         </div>
       </section>
 
-      <section className="trust-ledger page-shell" aria-label="项目承诺">
-        <article>
-          <span>01</span>
-          <h2>内容有出处</h2>
-          <p>20 道题逐页核验，答案和来源版本可追溯。</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h2>学习数据归你</h2>
-          <p>只记录有学习意义的动作；未来由学生逐项授权老师、家长或 Agent。</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h2>结论保持诚实</h2>
-          <p>样本不足就明确说不足，不伪造百分位和准备度。</p>
-        </article>
+      <section className="exam-selector page-shell" aria-labelledby="exam-selector-title">
+        <header className="section-heading">
+          <p>01 / CHOOSE YOUR EXAM</p>
+          <h2 id="exam-selector-title">你正在准备哪一项考试？</h2>
+          <span>先进入对应考试空间，再决定从了解、诊断或练习开始。</span>
+        </header>
+
+        <div className="exam-entry-grid">
+          {EXAM_CATALOG.map((exam, index) => (
+            <Link
+              className={`exam-entry exam-entry--${exam.availability}`}
+              key={exam.id}
+              to={exam.href}
+            >
+              <span className="exam-entry__index">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3>{exam.name}</h3>
+              <p>{exam.purpose}</p>
+              <span className="exam-entry__status">{exam.statusLabel}</span>
+              <ArrowUpRight aria-hidden="true" />
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="preparation-path page-shell" aria-labelledby="path-title">
+        <header className="section-heading section-heading--compact">
+          <p>02 / ONE COMPLETE PATH</p>
+          <h2 id="path-title">一条完整的备考路径</h2>
+        </header>
+        <ol aria-label="完整备考路径">
+          {PREPARATION_PATH.map((step, index) => (
+            <li key={step} data-step={String(index + 1).padStart(2, "0")}>
+              {step}
+            </li>
+          ))}
+        </ol>
       </section>
 
       <footer className="landing-footer page-shell">
-        <p><strong>由满托发起</strong>，与学习者共同建设。</p>
-        <p>练习保持开放 · 深度解读与专业服务由你选择</p>
+        <p><strong>由满托发起</strong> · Admission Test Breaker</p>
+        <p>面向 TMUA、ESAT、TARA 与 UCAT 的完整备考空间</p>
       </footer>
     </main>
   );

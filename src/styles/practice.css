@@ -380,6 +380,339 @@
   }
 }
 
+/* Multi-exam front door */
+.landing-page {
+  min-height: 100vh;
+  overflow: clip;
+  background: var(--color-paper);
+}
+
+.site-header {
+  min-height: 6rem;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.brand-mark__image {
+  border-radius: 0;
+}
+
+.brand-mark__copy strong {
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+.brand-mark__copy small {
+  color: var(--color-purple);
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-header__descriptor {
+  margin: 0;
+  color: var(--color-slate);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.front-door-hero {
+  background: var(--color-purple);
+  color: #fffdf8;
+}
+
+.front-door-hero__inner {
+  min-height: clamp(27rem, 55vw, 40rem);
+  padding-block: clamp(4rem, 9vw, 8.5rem) clamp(4.5rem, 9vw, 8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.front-door-hero__edition {
+  margin: 0 0 clamp(3.5rem, 7vw, 7rem);
+  color: rgba(255, 253, 248, 0.74);
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+}
+
+.front-door-hero h1 {
+  max-width: 8.6em;
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(3.4rem, 8.2vw, 7.2rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 1.02;
+}
+
+.front-door-hero__lead {
+  max-width: 48rem;
+  margin: clamp(2rem, 4vw, 3.75rem) 0 0 auto;
+  padding-left: clamp(0rem, 7vw, 7rem);
+  color: rgba(255, 253, 248, 0.88);
+  font-size: clamp(1rem, 1.7vw, 1.22rem);
+  line-height: 1.9;
+}
+
+.exam-selector,
+.preparation-path {
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.34fr) minmax(18rem, 1fr) minmax(16rem, 0.65fr);
+  align-items: end;
+  gap: clamp(1rem, 3vw, 3rem);
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.section-heading > p {
+  margin: 0;
+  color: var(--color-purple);
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.16;
+}
+
+.section-heading > span {
+  color: var(--color-slate);
+  font-size: 0.86rem;
+  line-height: 1.75;
+}
+
+.exam-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-block: 1px solid var(--color-line);
+}
+
+.exam-entry {
+  position: relative;
+  min-height: 20rem;
+  padding: clamp(1.5rem, 3vw, 2.4rem);
+  display: flex;
+  flex-direction: column;
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.exam-entry + .exam-entry {
+  border-left: 1px solid var(--color-line);
+}
+
+.exam-entry:hover,
+.exam-entry:focus-visible {
+  background: var(--color-purple);
+  color: #fffdf8;
+}
+
+.exam-entry__index {
+  color: var(--color-purple);
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+}
+
+.exam-entry h3 {
+  margin: 3.25rem 0 0;
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.exam-entry p {
+  max-width: 13rem;
+  margin: 0.75rem 0 2rem;
+  color: var(--color-slate);
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+
+.exam-entry__status {
+  margin-top: auto;
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.exam-entry > svg {
+  position: absolute;
+  right: clamp(1.5rem, 3vw, 2.4rem);
+  bottom: clamp(1.5rem, 3vw, 2.4rem);
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.exam-entry:hover :is(.exam-entry__index, p),
+.exam-entry:focus-visible :is(.exam-entry__index, p) {
+  color: rgba(255, 253, 248, 0.76);
+}
+
+.exam-entry--building .exam-entry__status {
+  color: var(--color-slate);
+}
+
+.exam-entry--building:hover .exam-entry__status,
+.exam-entry--building:focus-visible .exam-entry__status {
+  color: rgba(255, 253, 248, 0.8);
+}
+
+.preparation-path {
+  border-top: 1px solid var(--color-line);
+}
+
+.section-heading--compact {
+  grid-template-columns: minmax(8rem, 0.34fr) minmax(18rem, 1.65fr);
+}
+
+.preparation-path ol {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-block: 1px solid var(--color-line);
+  list-style: none;
+}
+
+.preparation-path li {
+  min-height: 8.5rem;
+  padding: 1.5rem;
+  display: grid;
+  align-content: space-between;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+}
+
+.preparation-path li + li {
+  border-left: 1px solid var(--color-line);
+}
+
+.preparation-path li::before {
+  content: attr(data-step);
+  color: var(--color-purple);
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.66rem;
+}
+
+.landing-footer {
+  padding-block: 2rem 3rem;
+  border-top: 1px solid var(--color-line);
+}
+
+@media (max-width: 55rem) {
+  .section-heading {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .section-heading > span {
+    grid-column: 2;
+  }
+
+  .exam-entry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .exam-entry {
+    min-height: 17rem;
+  }
+
+  .exam-entry:nth-child(3) {
+    border-left: 0;
+  }
+
+  .exam-entry:nth-child(n + 3) {
+    border-top: 1px solid var(--color-line);
+  }
+
+  .preparation-path ol {
+    grid-template-columns: repeat(5, minmax(8rem, 1fr));
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 35rem) {
+  .site-header__descriptor {
+    display: none;
+  }
+
+  .front-door-hero__inner {
+    min-height: 32rem;
+  }
+
+  .front-door-hero__edition {
+    max-width: 21rem;
+    line-height: 1.7;
+  }
+
+  .front-door-hero h1 {
+    max-width: 7em;
+    font-size: clamp(3.1rem, 16vw, 4.8rem);
+  }
+
+  .front-door-hero__lead {
+    padding-left: 0;
+  }
+
+  .section-heading,
+  .section-heading--compact {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading > span {
+    grid-column: auto;
+  }
+
+  .exam-entry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exam-entry {
+    min-height: 14.5rem;
+  }
+
+  .exam-entry + .exam-entry {
+    border-top: 1px solid var(--color-line);
+    border-left: 0;
+  }
+
+  .exam-entry h3 {
+    margin-top: 2rem;
+  }
+
+  .preparation-path ol {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .preparation-path li {
+    min-height: 4.5rem;
+    grid-template-columns: 2.5rem 1fr;
+    align-content: center;
+    align-items: center;
+  }
+
+  .preparation-path li + li {
+    border-top: 1px solid var(--color-line);
+    border-left: 0;
+  }
+}
+
 /* Exam experience */
 .practice-page {
   min-height: 100vh;

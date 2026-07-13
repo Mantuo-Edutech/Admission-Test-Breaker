@@ -4,10 +4,10 @@ import { describe, expect, it } from "vitest";
 import { createAppRouter } from "../../src/app/routes.js";
 
 describe("application shell", () => {
-  it("opens on the TMUA experience landing route", async () => {
+  it("opens on the Mantou multi-exam front door", async () => {
     render(<RouterProvider router={createAppRouter(["/"])} />);
     expect(
-      await screen.findByRole("heading", { name: "把焦虑，拆成每一道题。" }),
+      await screen.findByRole("heading", { name: "不再为升学考试而焦虑" }),
     ).toBeInTheDocument();
   });
 });

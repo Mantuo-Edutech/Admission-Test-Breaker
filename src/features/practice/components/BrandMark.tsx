@@ -13,8 +13,8 @@ export function BrandMark({ compact = false }: BrandMarkProps) {
         height="44"
       />
       <span className="brand-mark__copy">
-        <strong>Admission Test Breaker</strong>
-        {!compact && <small>由满托发起的开放练习场</small>}
+        <strong>满托考试练习场</strong>
+        {!compact && <small>Admission Test Breaker</small>}
       </span>
     </div>
   );
