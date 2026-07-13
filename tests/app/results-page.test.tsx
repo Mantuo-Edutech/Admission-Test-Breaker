@@ -84,10 +84,12 @@ describe("evidence-only results page", () => {
     expect(screen.getByText("5%")).toBeInTheDocument();
     expect(screen.getByText("正确 1")).toBeInTheDocument();
     expect(screen.getByText("未作答 19")).toBeInTheDocument();
+    expect(screen.getByText("活跃页内用时")).toBeInTheDocument();
     expect(screen.getByText(/样本积累中/)).toBeInTheDocument();
     expect(screen.getByLabelText("你的答案 F")).toBeInTheDocument();
     expect(screen.getAllByLabelText("正确答案 F")).not.toHaveLength(0);
     expect(screen.queryByText(/预测分数/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/AI 深度解读/)).not.toBeInTheDocument();
   });
 
   it("clears the local session before starting again", async () => {

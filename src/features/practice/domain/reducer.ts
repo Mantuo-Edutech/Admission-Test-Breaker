@@ -27,6 +27,19 @@ export type PracticeSessionAction =
       at: string;
     }
   | {
+      type: "pause";
+      eventId: LearningEventId;
+      timeEventId: LearningEventId;
+      at: string;
+      reason: "visibility_hidden" | "pagehide";
+    }
+  | {
+      type: "resume";
+      eventId: LearningEventId;
+      at: string;
+      reason: "visibility_visible";
+    }
+  | {
       type: "open-submission";
       eventId: LearningEventId;
       at: string;
@@ -61,31 +74,37 @@ function recordActiveQuestionTime(
   eventId: LearningEventId,
   at: string,
 ): PracticeSession {
-  const questionId = questionIdForNumber(session.currentQuestion);
-  const activeMs = Math.max(
-    0,
-    Date.parse(at) - Date.parse(session.activeQuestionEnteredAt),
-  );
-  const accumulated = session.timingByQuestionMs[questionId] ?? 0;
+  if (session.activeQuestionEnteredAt === null) {
+    return session;
+  }
 
-  return appendEvent(
-    {
-      ...session,
-      timingByQuestionMs: {
-        ...session.timingByQuestionMs,
-        [questionId]: accumulated + activeMs,
-      },
+  const questionId = questionIdForNumber(session.currentQuestion);
+  const segmentStart = Date.parse(session.activeQuestionEnteredAt);
+  const segmentEnd = Math.min(Date.parse(at), Date.parse(session.deadlineAt));
+  const activeMs = Math.max(0, segmentEnd - segmentStart);
+  const accumulated = session.timingByQuestionMs[questionId] ?? 0;
+  const withoutActiveSegment = {
+    ...session,
+    activeQuestionEnteredAt: null,
+    timingByQuestionMs: {
+      ...session.timingByQuestionMs,
+      [questionId]: accumulated + activeMs,
     },
-    {
-      id: eventId,
-      learnerSpaceId: session.learnerSpaceId,
-      sessionId: session.id,
-      type: "question_time_recorded",
-      actor: session.startedBy,
-      occurredAt: at,
-      payload: { questionId, activeMs },
-    },
-  );
+  };
+
+  if (activeMs === 0) {
+    return withoutActiveSegment;
+  }
+
+  return appendEvent(withoutActiveSegment, {
+    id: eventId,
+    learnerSpaceId: session.learnerSpaceId,
+    sessionId: session.id,
+    type: "question_time_recorded",
+    actor: session.startedBy,
+    occurredAt: at,
+    payload: { questionId, activeMs },
+  });
 }
 
 function answerQuestion(
@@ -178,6 +197,50 @@ function viewQuestion(
   );
 }
 
+function pauseSession(
+  session: PracticeSession,
+  action: Extract<PracticeSessionAction, { type: "pause" }>,
+): PracticeSession {
+  if (session.activeQuestionEnteredAt === null) {
+    return session;
+  }
+
+  const timed = recordActiveQuestionTime(session, action.timeEventId, action.at);
+  return appendEvent(timed, {
+    id: action.eventId,
+    learnerSpaceId: session.learnerSpaceId,
+    sessionId: session.id,
+    type: "session_paused",
+    actor: session.startedBy,
+    occurredAt: action.at,
+    payload: { reason: action.reason },
+  });
+}
+
+function resumeSession(
+  session: PracticeSession,
+  action: Extract<PracticeSessionAction, { type: "resume" }>,
+): PracticeSession {
+  if (session.activeQuestionEnteredAt !== null) {
+    return session;
+  }
+
+  const resumed = {
+    ...session,
+    activeQuestionEnteredAt:
+      Date.parse(action.at) < Date.parse(session.deadlineAt) ? action.at : null,
+  };
+  return appendEvent(resumed, {
+    id: action.eventId,
+    learnerSpaceId: session.learnerSpaceId,
+    sessionId: session.id,
+    type: "session_resumed",
+    actor: session.startedBy,
+    occurredAt: action.at,
+    payload: { reason: action.reason },
+  });
+}
+
 function openSubmission(
   session: PracticeSession,
   action: Extract<PracticeSessionAction, { type: "open-submission" }>,
@@ -231,6 +294,10 @@ export function practiceSessionReducer(
       return toggleMark(session, action);
     case "view":
       return viewQuestion(session, action);
+    case "pause":
+      return pauseSession(session, action);
+    case "resume":
+      return resumeSession(session, action);
     case "open-submission":
       return openSubmission(session, action);
     case "submit":

@@ -42,12 +42,20 @@ type QuestionPayload = { questionId: string };
 type AnswerSelectedPayload = QuestionPayload & { answer: string };
 type AnswerChangedPayload = QuestionPayload & { from: string; to: string };
 type SessionStartedPayload = { paperId: string; deadlineAt: string };
+type SessionPausePayload = {
+  reason: "visibility_hidden" | "pagehide";
+};
+type SessionResumePayload = {
+  reason: "visibility_visible";
+};
 type SubmissionPayload = { answeredCount: number };
 type SubmissionOpenedPayload = { unansweredCount: number };
 type QuestionTimePayload = QuestionPayload & { activeMs: number };
 
 export type PracticeLearningEvent =
   | LearningEvent<"session_started", SessionStartedPayload>
+  | LearningEvent<"session_paused", SessionPausePayload>
+  | LearningEvent<"session_resumed", SessionResumePayload>
   | LearningEvent<"question_viewed", QuestionPayload>
   | LearningEvent<"answer_selected", AnswerSelectedPayload>
   | LearningEvent<"answer_changed", AnswerChangedPayload>
@@ -60,6 +68,8 @@ export type PracticeLearningEvent =
 
 export type PracticeLearningEventDraft =
   | LearningEventDraft<"session_started", SessionStartedPayload>
+  | LearningEventDraft<"session_paused", SessionPausePayload>
+  | LearningEventDraft<"session_resumed", SessionResumePayload>
   | LearningEventDraft<"question_viewed", QuestionPayload>
   | LearningEventDraft<"answer_selected", AnswerSelectedPayload>
   | LearningEventDraft<"answer_changed", AnswerChangedPayload>
@@ -116,6 +126,21 @@ function assertPurposefulPayload(event: PracticeLearningEventDraft): void {
       assertExactPayloadKeys(event.payload, ["paperId", "deadlineAt"]);
       assertNonEmptyString(event.payload.paperId, "paperId");
       assertCanonicalUtcTimestamp(event.payload.deadlineAt, "deadlineAt");
+      return;
+    case "session_paused":
+      assertExactPayloadKeys(event.payload, ["reason"]);
+      if (
+        event.payload.reason !== "visibility_hidden" &&
+        event.payload.reason !== "pagehide"
+      ) {
+        throw new Error("session_paused reason is invalid");
+      }
+      return;
+    case "session_resumed":
+      assertExactPayloadKeys(event.payload, ["reason"]);
+      if (event.payload.reason !== "visibility_visible") {
+        throw new Error("session_resumed reason is invalid");
+      }
       return;
     case "question_viewed":
     case "question_marked":

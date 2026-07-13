@@ -27,6 +27,21 @@ const selectedDraft: PracticeLearningEventDraft = {
   payload: { questionId: "tmua-2023-p1-q01", answer: "F" },
 };
 
+const lifecycleDrafts: PracticeLearningEventDraft[] = [
+  {
+    ...selectedDraft,
+    id: "evt_paused",
+    type: "session_paused",
+    payload: { reason: "visibility_hidden" },
+  },
+  {
+    ...selectedDraft,
+    id: "evt_resumed",
+    type: "session_resumed",
+    payload: { reason: "visibility_visible" },
+  },
+];
+
 const boundaryCases: Array<{
   label: string;
   draft: PracticeLearningEventDraft;
@@ -113,4 +128,23 @@ describe("learning event ledger", () => {
       } as PracticeLearningEventDraft),
     ).toThrow(/unexpected payload field/);
   });
+
+  it.each(lifecycleDrafts)("accepts an exact $type payload", (draft) => {
+    expect(appendLearningEvent([], draft).event).toMatchObject({
+      type: draft.type,
+      payload: draft.payload,
+    });
+  });
+
+  it.each(lifecycleDrafts)(
+    "rejects arbitrary fields in a $type payload",
+    (draft) => {
+      expect(() =>
+        appendLearningEvent([], {
+          ...draft,
+          payload: { ...draft.payload, hiddenDurationMs: 1 },
+        } as unknown as PracticeLearningEventDraft),
+      ).toThrow(/unexpected payload field/);
+    },
+  );
 });

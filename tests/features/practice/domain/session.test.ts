@@ -197,6 +197,48 @@ describe("practice session domain", () => {
     expect(expired.events.at(-1)?.type).toBe("session_expired");
   });
 
+  it("caps active question time at the paper deadline when expiry is detected late", () => {
+    const expired = practiceSessionReducer(createStartedSession(), {
+      type: "expire",
+      eventId: "evt_expired-late",
+      timeEventId: "evt_time-late",
+      at: "2026-07-13T02:00:00.000Z",
+    });
+
+    expect(expired.timingByQuestionMs["tmua-2023-p1-q01"]).toBe(75 * 60_000);
+    expect(expired.events.at(-2)).toMatchObject({
+      type: "question_time_recorded",
+      payload: { questionId: "tmua-2023-p1-q01", activeMs: 75 * 60_000 },
+    });
+  });
+
+  it("excludes a hidden-page interval from active question time", () => {
+    const paused = practiceSessionReducer(createStartedSession(), {
+      type: "pause",
+      eventId: "evt_paused",
+      timeEventId: "evt_time-before-pause",
+      at: "2026-07-13T00:05:00.000Z",
+      reason: "visibility_hidden",
+    });
+    const resumed = practiceSessionReducer(paused, {
+      type: "resume",
+      eventId: "evt_resumed",
+      at: "2026-07-13T00:15:00.000Z",
+      reason: "visibility_visible",
+    });
+    const submitted = practiceSessionReducer(resumed, {
+      type: "submit",
+      eventId: "evt_submit-after-resume",
+      timeEventId: "evt_time-after-resume",
+      at: "2026-07-13T00:20:00.000Z",
+      reason: "student",
+    });
+
+    expect(submitted.timingByQuestionMs["tmua-2023-p1-q01"]).toBe(10 * 60_000);
+    expect(submitted.events.map((event) => event.type)).toContain("session_paused");
+    expect(submitted.events.map((event) => event.type)).toContain("session_resumed");
+  });
+
   it("ignores answer, mark, and navigation actions after finalization", () => {
     const submitted = practiceSessionReducer(createStartedSession(), {
       type: "submit",

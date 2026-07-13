@@ -26,7 +26,7 @@ export interface PracticeSession {
   answers: Record<string, string>;
   markedQuestionIds: string[];
   timingByQuestionMs: Record<string, number>;
-  activeQuestionEnteredAt: string;
+  activeQuestionEnteredAt: string | null;
   events: readonly PracticeLearningEvent[];
 }
 

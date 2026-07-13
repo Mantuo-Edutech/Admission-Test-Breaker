@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { RouterProvider } from "react-router-dom";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import type { AppServices } from "../../src/app/dependencies.js";
 import { createAppRouter } from "../../src/app/routes.js";
 import { createPracticeSession } from "../../src/features/practice/domain/session.js";
@@ -54,7 +54,34 @@ function appServices(store: PracticeSessionStore): AppServices {
   };
 }
 
+afterEach(() => vi.restoreAllMocks());
+
 describe("responsive TMUA practice page", () => {
+  it("pauses timing while the page is hidden and resumes when visible", async () => {
+    const store = new PracticeStore(activeSession());
+    const visibility = vi.spyOn(document, "visibilityState", "get");
+    const router = createAppRouter(
+      ["/practice/tmua-2023-paper-1"],
+      appServices(store),
+    );
+    render(<RouterProvider router={router} />);
+    await screen.findByRole("heading", { name: "第 1 题" });
+
+    visibility.mockReturnValue("hidden");
+    document.dispatchEvent(new Event("visibilitychange"));
+    await waitFor(() => {
+      expect(store.saves.at(-1)?.activeQuestionEnteredAt).toBeNull();
+      expect(store.saves.at(-1)?.events.at(-1)?.type).toBe("session_paused");
+    });
+
+    visibility.mockReturnValue("visible");
+    document.dispatchEvent(new Event("visibilitychange"));
+    await waitFor(() => {
+      expect(store.saves.at(-1)?.activeQuestionEnteredAt).not.toBeNull();
+      expect(store.saves.at(-1)?.events.at(-1)?.type).toBe("session_resumed");
+    });
+  });
+
   it("answers, marks, and navigates without revealing the answer", async () => {
     const user = userEvent.setup();
     const store = new PracticeStore(activeSession());

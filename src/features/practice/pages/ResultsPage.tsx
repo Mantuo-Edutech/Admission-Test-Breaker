@@ -3,7 +3,6 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   ArrowLeft,
   BarChart3,
-  BrainCircuit,
   Clock3,
   DatabaseZap,
   RefreshCw,
@@ -113,9 +112,6 @@ export function ResultsPage({ services }: ResultsPageProps) {
 
   const { results, eventCount } = state;
   const attemptedCount = results.correctCount + results.incorrectCount;
-  const longestNumbers = results.longestQuestionIds.map(
-    (id) => TMUA_2023_P1.questions.find((question) => question.id === id)?.number,
-  ).filter((number): number is number => number !== undefined);
   const attemptedTopics = results.topics
     .filter((topic) => topic.attemptedCount > 0)
     .sort((left, right) => right.activeMs - left.activeMs)
@@ -148,7 +144,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
           <article><span>正确</span><strong>正确 {results.correctCount}</strong></article>
           <article><span>错误</span><strong>错误 {results.incorrectCount}</strong></article>
           <article><span>未作答</span><strong>未作答 {results.unansweredCount}</strong></article>
-          <article><span>记录用时</span><strong>{formatDuration(results.totalActiveMs)}</strong></article>
+          <article><span>活跃页内用时</span><strong>{formatDuration(results.totalActiveMs)}</strong></article>
         </section>
 
         <section className="result-insights page-shell">
@@ -156,11 +152,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
             <Clock3 aria-hidden="true" />
             <p>节奏证据</p>
             <h2>{attemptedCount > 0 ? `完成 ${attemptedCount} 道作答` : "本次尚未作答"}</h2>
-            <span>
-              {longestNumbers.length > 0
-                ? `记录用时较长：第 ${longestNumbers.join("、")} 题`
-                : "完成更多题目后，这里会显示用时信号。"}
-            </span>
+            <span>仅统计页面可见且练习处于活动状态的时间</span>
           </article>
           <article className="insight-card">
             <BarChart3 aria-hidden="true" />
@@ -202,16 +194,6 @@ export function ResultsPage({ services }: ResultsPageProps) {
               />
             ))}
           </div>
-        </section>
-
-        <section className="future-interpretation page-shell">
-          <BrainCircuit aria-hidden="true" />
-          <div>
-            <p className="eyebrow">DEEP INTERPRETATION · PLANNED</p>
-            <h2>AI 深度解读将使用你授权的结构化证据</h2>
-            <p>未来可以选择模型、预算与数据范围；解读可收费，但基础练习和你的原始记录不会被锁住。</p>
-          </div>
-          <span>尚未开放</span>
         </section>
 
         <section className="result-actions page-shell">

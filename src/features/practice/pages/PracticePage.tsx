@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Bookmark, ChevronLeft, ChevronRight } from "lucide-react";
 import type { AppServices } from "../../../app/dependencies.js";
@@ -82,19 +82,65 @@ export function PracticePage({ services }: PracticePageProps) {
     });
   }, [navigate, remainingMs, services, session]);
 
-  function updateSession(
-    transform: (current: PracticeSession) => PracticeSession,
-  ) {
-    setLoadState((current) => {
-      if (current.kind !== "ready") return current;
-      const next = transform(current.session);
-      if (next === current.session) return current;
-      void services.store.save(next).then((result) => {
-        if (!result.persisted) setPersistenceWarning(true);
+  const updateSession = useCallback(
+    (transform: (current: PracticeSession) => PracticeSession) => {
+      setLoadState((current) => {
+        if (current.kind !== "ready") return current;
+        const next = transform(current.session);
+        if (next === current.session) return current;
+        void services.store.save(next).then((result) => {
+          if (!result.persisted) setPersistenceWarning(true);
+        });
+        return { kind: "ready", session: next };
       });
-      return { kind: "ready", session: next };
-    });
-  }
+    },
+    [services.store],
+  );
+
+  useEffect(() => {
+    function pause(reason: "visibility_hidden" | "pagehide") {
+      updateSession((current) =>
+        practiceSessionReducer(current, {
+          type: "pause",
+          eventId: services.ids.eventId(),
+          timeEventId: services.ids.eventId(),
+          at: services.now().toISOString(),
+          reason,
+        }),
+      );
+    }
+
+    function resume() {
+      updateSession((current) =>
+        practiceSessionReducer(current, {
+          type: "resume",
+          eventId: services.ids.eventId(),
+          at: services.now().toISOString(),
+          reason: "visibility_visible",
+        }),
+      );
+    }
+
+    function onVisibilityChange() {
+      if (document.visibilityState === "hidden") {
+        pause("visibility_hidden");
+      } else {
+        resume();
+      }
+    }
+
+    function onPageHide() {
+      pause("pagehide");
+    }
+
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    globalThis.addEventListener("pagehide", onPageHide);
+    onVisibilityChange();
+    return () => {
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      globalThis.removeEventListener("pagehide", onPageHide);
+    };
+  }, [services.ids, services.now, session?.id, updateSession]);
 
   function selectAnswer(answer: string) {
     if (session === null) return;
