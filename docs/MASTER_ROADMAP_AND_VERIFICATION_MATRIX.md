@@ -80,7 +80,7 @@
 | G1 Types | 严格 TypeScript | `pnpm typecheck` | P0 |
 | G2 Unit | 领域 reducer、授权、事件、投影、计时 | `pnpm test -- tests/features tests/platform` | P0 |
 | G3 Content | schema、题数、答案、来源和 revision | `pnpm test -- tests/content tests/features/practice/content` | P0 |
-| G4 Architecture | 禁止依赖、模块公开 API、私密/公开域隔离 | `pnpm test -- tests/architecture` | P0 |
+| G4 Architecture | 禁止依赖、模块公开 API、私密/公开域隔离 | `pnpm verify:architecture` | P0 |
 | G5 Integration | 存储、RLS、AI provider、Webhook/MCP 合约 | 分阶段加入 `pnpm test:integration` | P0 |
 | G6 Journey | 开始、恢复、提交、结果、授权闭环 | 分阶段加入 `pnpm test:e2e` | P0 |
 | G7 UI Quality | 无障碍、手机/iPad/桌面、reduced motion | 组件测试 + Playwright 视口矩阵 + 人工截图评审 | P1；关键动作 P0 |
@@ -94,14 +94,14 @@
 
 | 工作流 | 状态 | 证据 | 尚欠 |
 | --- | --- | --- | --- |
-| 母产品契约 | 本文档提交后建立 | 产品宪章、系统架构、路线图 | 自动化架构门与领域契约 |
+| 母产品契约 | 已建立并进入自动执行 | 产品宪章、系统架构、路线图、`pnpm verify:architecture` | 后续模块加入时持续扩展禁止依赖规则 |
 | TMUA 原始资料 | 已盘点本地 96 PDFs / 46 个唯一内容 | `docs/superpowers/specs/2026-07-12-tmua-content-corpus-design.md` | 全量 canonical manifest 与贡献发布流 |
 | Content tooling | typed schema 基础已完成 | `src/content/tmua/`、schema tests | CLI 实现与全量 corpus build |
 | Reference content | TMUA 2023 Paper 1 共 20 题已人工核验 | `src/features/practice/content/tmua-2023-p1.ts` | 后续解释和更多试卷 |
 | Web runtime | React/Vite 与入口占位已完成 | app shell test、build | 品牌界面、会话、存储、结果 |
-| Learner Space / Events | 未实现 | 架构契约已定义 | 类型、验证、领域行为和适配器 |
-| Consent / Grants | 未实现 | Scope 架构已定义 | 决策器、持久化、界面与审计 |
-| Benchmark / AI / Integrations | 未实现 | 仅有架构边界 | 依赖前序真实数据和授权能力 |
+| Learner Space / Events | 核心领域契约已实现 | 稳定 ID、所有权、追加式事件、顺序与幂等测试 | Practice Session 接入和持久化适配器 |
+| Consent / Grants | 纯策略契约已实现 | 精确 scope、资源、有效期、撤销和 actor 测试 | 持久化、授权界面与访问审计 |
+| Benchmark / AI / Integrations | AI Job 核心契约已实现 | 投影引用、预算、委托授权和禁止 secret 校验 | Provider 适配器、Benchmark 与外部集成 |
 
 ## 6. 既有局部方案的归属
 

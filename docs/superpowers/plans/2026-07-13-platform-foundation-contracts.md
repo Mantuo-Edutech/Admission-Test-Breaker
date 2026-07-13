@@ -66,7 +66,7 @@ createLearnerSpace(input): LearnerSpace;
 ```
 
 - [ ] Write tests that accept canonical prefixed IDs and UTC timestamps, reject blank/unprefixed IDs, reject an archived initial space, and expose an explicit owner check.
-- [ ] Run `pnpm test -- tests/platform/learner-space/domain.test.ts` and observe module-not-found failure.
+- [ ] Run `pnpm exec vitest run tests/platform/learner-space/domain.test.ts` and observe module-not-found failure.
 - [ ] Implement non-empty prefixed ID assertion helpers, `createLearnerSpace`, and `isLearnerSpaceOwner` without external libraries.
 - [ ] Rerun the focused test, `pnpm typecheck`, and all existing tests.
 - [ ] Commit: `feat: add learner space domain contract`.
@@ -186,7 +186,7 @@ validateAIJob(job): readonly AIJobValidationIssue[];
 - [ ] Write an import scanner that recursively reads `.ts/.tsx`, resolves relative specifiers to repository paths, and reports `file → forbidden import` violations.
 - [ ] Add a temporary forbidden fixture inside the test lifecycle, run the scanner, assert that it reports the violation, and remove the fixture in `finally`; also assert the actual source tree is clean.
 - [ ] Add scripts `verify:architecture` and `verify` where `verify` runs architecture, all tests, typecheck, and build.
-- [ ] Run `pnpm test -- tests/architecture/module-boundaries.test.ts`, `pnpm verify`, and `git diff --check`.
+- [ ] Run `pnpm exec vitest run tests/architecture/module-boundaries.test.ts`, `pnpm verify`, and `git diff --check`.
 - [ ] Update the roadmap gate from “target” to the exact working command and record the new status baseline.
 - [ ] Commit: `test: enforce platform architecture boundaries`.
 
