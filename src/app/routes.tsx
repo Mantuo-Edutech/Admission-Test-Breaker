@@ -3,12 +3,17 @@ import { createBrowserRouter, createMemoryRouter } from "react-router-dom";
 import type { AppServices } from "./dependencies.js";
 import { createDefaultAppServices } from "./dependencies.js";
 import { LandingPage } from "../features/practice/pages/LandingPage.js";
+import { EXAM_CATALOG } from "../features/catalog/exams.js";
 
 const PracticePage = lazy(async () => ({
   default: (await import("../features/practice/pages/PracticePage.js")).PracticePage,
 }));
 const ResultsPage = lazy(async () => ({
   default: (await import("../features/practice/pages/ResultsPage.js")).ResultsPage,
+}));
+const ExamStatusPage = lazy(async () => ({
+  default: (await import("../features/catalog/pages/ExamStatusPage.js"))
+    .ExamStatusPage,
 }));
 
 function RouteLoading() {
@@ -27,6 +32,16 @@ export function createAppRouter(
   const services = injectedServices ?? createDefaultAppServices();
   const routes = [
     { path: "/", element: <LandingPage services={services} /> },
+    ...EXAM_CATALOG.filter(
+      (exam) => exam.availability === "building",
+    ).map((exam) => ({
+      path: exam.href,
+      element: (
+        <Suspense fallback={<RouteLoading />}>
+          <ExamStatusPage exam={exam} />
+        </Suspense>
+      ),
+    })),
     {
       path: "/practice/tmua-2023-paper-1",
       element: (
