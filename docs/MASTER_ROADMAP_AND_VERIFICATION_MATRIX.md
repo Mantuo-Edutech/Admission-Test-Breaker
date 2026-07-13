@@ -32,6 +32,13 @@
 
 **当前状态：** 本地预览闭环已于 2026-07-13 实现；生产发布仍受 Phase 2 身份、RLS、授权和安全门约束。
 
+### Phase 1B — 多考试首页与 TMUA 信任阶梯
+
+**旅程：** 学生在首屏识别 TMUA/ESAT/TARA/UCAT → 无登录完成 5 题原创体验 → 完成 8 题初步诊断 → 免费理解自身证据 → 再选择目标专业。
+**成果：** 满托统一品牌、四考试入口、TMUA 考试空间、18 套/360 题完整资料档案、本地 Guest Space、13 道经验证原创题、免费基础报告、UAT-UK 2027 TMUA 专业要求注册表。
+**边界：** 首版不输出官方 1–9 分、百分位、录取概率或精确训练小时；Guest Space 只在当前设备，不能用于生产匿名追踪。
+**发布门：** 品牌/文案契约、原创题发布门、Guest 恢复、诊断结果诚实性、申请年度/来源验证、响应式与无障碍。
+
 ### Phase 2 — 私密账户与授权协作
 
 **旅程：** 学生注册/登录 → 数据跨设备保存 → 分别授权老师查看、批注、制定计划或布置练习 → 查看审计并撤销。
@@ -61,6 +68,9 @@
 | 产品目标 | 主模块 | 首个可见成果 | 独立验证证据 | 阶段 |
 | --- | --- | --- | --- | --- |
 | 迅速体验好用 | Practice + Web | 首页一键进入真实 20 题 | 首题时间、E2E、响应式截图 | 1 |
+| 第一次访问先建立安全感 | Web + Practice + Admissions Registry | 四考试入口、5 题体验、免费诊断 | 首屏识别、Guest Journey、无虚假分数 | 1B |
+| 查清院校和专业要求 | Admissions Registry | 2027 TMUA 官方专业清单 | 来源、申请年度、revision 和过期测试 | 1B–5 |
+| 不浪费真题完成诊断 | Content Commons + Practice | 原创体验题和诊断题 | 蓝图、答案、独立审核和发布状态 | 1B–3 |
 | 记录所有有意义动作 | Event Ledger | 作答/修改/停留/标记/提交事件 | reducer/event schema/恢复测试 | 0–1 |
 | 学生数据高度私密 | Learner Space + Consent | 明确归属，本地版数据提示 | 数据边界测试；后续 RLS 跨租户测试 | 1–2 |
 | 老师/家长分别授权 | Consent & Grants | Scope 模型和授权界面 | 权限组合与撤销测试 | 0–2 |
@@ -104,6 +114,7 @@
 | Learner Space / Events | 核心领域契约已接入练习 | 稳定 ID、所有权、追加式事件、顺序、幂等、本地恢复和结果投影 | PostgreSQL 账本、RLS 与后台投影 |
 | Consent / Grants | 纯策略契约已实现 | 精确 scope、资源、有效期、撤销和 actor 测试 | 持久化、授权界面与访问审计 |
 | Benchmark / AI / Integrations | AI Job 核心契约已实现 | 投影引用、预算、委托授权和禁止 secret 校验 | Provider 适配器、Benchmark 与外部集成 |
+| 品牌与信任阶梯 | 设计已批准，等待书面复核 | `docs/superpowers/specs/2026-07-13-admission-test-trust-ladder-design.md` | 首页、原创题、Guest Space、诊断与院校注册表实现 |
 
 ## 6. 既有局部方案的归属
 
@@ -114,8 +125,8 @@
 
 ## 7. 接下来三个可验证增量
 
-1. **Private Account Slice：** 接入身份、PostgreSQL、RLS 与跨租户负面测试，把本地 Learner Space 迁移到生产私密空间。
-2. **Authorized Collaboration：** 实现学生逐项授权界面、老师/家长协作视图、撤销和访问审计。
-3. **Content Commons Pipeline：** 恢复全量 TMUA canonical manifest、past papers 和贡献审核发布流。
+1. **Trust Ladder Slice：** 重构多考试首页，实现 TMUA 5 题游客体验、8 题初步诊断、免费基础报告和 2027 专业要求注册表。
+2. **Private Account Slice：** 接入身份、PostgreSQL、RLS、Guest 数据接管与跨租户负面测试，把本地记录迁移到生产私密空间。
+3. **Content Commons Pipeline：** 恢复全量 TMUA canonical manifest、past papers、原创题发布门和贡献审核发布流。
 
 Benchmark、付费 AI 解读和外部 Agent 接入继续依赖真实、合规、经授权的数据基础，不会越过以上生产门提前伪装上线。

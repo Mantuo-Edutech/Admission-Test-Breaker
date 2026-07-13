@@ -16,6 +16,7 @@ flowchart LR
   Client["响应式 Web 客户端\n手机 / iPad / 电脑"]
   API["应用 API / BFF"]
   Content["Content Commons\n题目与版本"]
+  Admissions["Admissions Registry\n考试、院校与专业要求"]
   Learner["Learner Space\n身份与私密空间"]
   Practice["Practice Engine\n会话与作答"]
   Ledger["Learning Event Ledger\n不可变学习事件"]
@@ -28,6 +29,7 @@ flowchart LR
 
   Client --> API
   API --> Content
+  API --> Admissions
   API --> Learner
   API --> Practice
   Practice --> Ledger
@@ -63,6 +65,7 @@ flowchart LR
 | --- | --- | --- |
 | Identity & Learner Space | 登录身份、学生私密空间、成员关系、数据归属 | 具体练习逻辑、第三方授权 |
 | Content Commons | 题目/试卷版本、来源、许可、审核、贡献工作流 | 学生作答与个体统计 |
+| Admissions Registry | 按申请年度维护考试、院校、专业、必需模块、来源和历史参考 | 预测个人录取结果、用旧年度覆盖当前要求 |
 | Practice Engine | 创建和完成练习会话、答案状态、计时、提交幂等性 | 长期分析、AI 解释 |
 | Learning Event Ledger | 追加目的明确、带版本的学习事件 | 修改历史事实、直接渲染报告 |
 | Projection Engine | 从事件生成会话结果、错题、频率、技能和时间投影 | 伪造缺失事件、替代原始账本 |
@@ -81,6 +84,9 @@ flowchart LR
 | `LearnerSpace` | 学生 | `ownerUserId`，一个学生可有一个或多个空间 |
 | `Grant` | 学生创建并可撤销 | 受权主体、scope、资源范围、起止时间、状态 |
 | `ContentRevision` | Content Commons | 内容 ID、revision、来源、审核状态、许可 |
+| `ItemBlueprint` | Content Commons | 考试规格、目标技能、难度、生成方式和发布门 |
+| `CourseRequirementRevision` | Admissions Registry | 申请年度、院校/专业、考试要求、官方来源和核验时间 |
+| `OfficialHistoricalReference` | Admissions Registry | 指标定义、申请人群、历史年度、来源和限制说明 |
 | `PracticeSession` | Learner Space | 试卷 revision、状态、开始/截止/提交时间 |
 | `LearningEvent` | Learner Space | 单调序号、schema version、actor、发生时间、payload |
 | `ProjectionSnapshot` | Learner Space | 投影类型、算法版本、截止事件序号 |
@@ -105,7 +111,7 @@ interface LearningEvent<TType extends string, TPayload> {
   sessionId: string;
   sequence: number;
   type: TType;
-  actor: { kind: "student" | "teacher" | "parent" | "agent" | "system"; id: string };
+  actor: { kind: "guest" | "student" | "teacher" | "parent" | "agent" | "system"; id: string };
   occurredAt: string;
   payload: TPayload;
 }
@@ -116,6 +122,7 @@ interface LearningEvent<TType extends string, TPayload> {
 ### 6.2 规则
 
 - 账本追加，不原地覆盖；纠正通过新事件表达。
+- `guest` 只用于明确的本地 Guest Space；它不授予 Learner Space 权限，也不能被服务端当作匿名账户。
 - 同一会话序号连续，事件 ID 幂等，重复请求不能产生双重提交。
 - 客户端时间仅作为观测；服务端接收时间和会话截止规则共同参与可信判断。
 - 事件 payload 禁止任意自由文本和无关设备指纹；新增字段需要 schema 版本。
@@ -168,6 +175,16 @@ Benchmark 采用版本化快照而不是实时扫描原始作答：
 ```
 
 首批 cohort 至少区分考试、paper、内容 revision、完成模式、时间窗和备考阶段。低于发布阈值只返回 `insufficient_sample`，不返回占位百分位。训练时间估计必须表达区间和假设。
+
+Benchmark 输出必须区分：原始会话事实、平台 cohort 参考、经校准的模拟准备度、院校官方历史参考。Admissions Registry 的历史数据可以与学生结果并列展示，但不能被 Benchmark Engine 改写成录取概率。未经 anchor、固定 form、完成条件和统计校准的短诊断不得映射为官方 1–9 分。
+
+## 9.1 游客空间与账户接管
+
+首次 5 题体验和初步诊断允许使用本地 `GuestSpace`。它拥有随机 ID、版本化事件和明确的本地边界，但不是已认证的 `LearnerSpace`，也不在服务端形成可跨设备追踪的匿名画像。
+
+学生创建账户时，应用通过显式确认将选定 guest sessions 幂等迁移到学生 Learner Space。迁移成功后 guest source 标记为已接管，不能被第二个账户重复接管；迁移失败不能删除本地来源数据。生产跨设备存储仍必须先通过身份、RLS 和跨租户负面测试。
+
+当前代码契约尚未接受 `guest` actor；Phase 1B 必须在同一变更中更新领域类型、迁移行为和架构测试。在该切片完成前，文档中的 `guest` 是已批准的目标契约，不是已上线能力。
 
 ## 10. AI Gateway
 
