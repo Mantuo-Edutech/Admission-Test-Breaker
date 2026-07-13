@@ -4,7 +4,7 @@
 
 **Goal:** Build a polished, responsive, locally runnable student experience for the complete verified 20-question TMUA 2023 Paper 1, with a 75-minute session, recovery, submission, and honest results.
 
-**Architecture:** Add a React/Vite single-page experience on top of the existing strict TypeScript repository. Keep reviewed question content, framework-free session domain logic, browser storage, and React pages behind explicit interfaces so future authentication and server persistence can replace adapters without rewriting the experience.
+**Architecture:** Add a React/Vite single-page experience on top of the existing strict TypeScript repository. Keep reviewed question content, framework-free session domain logic, browser storage, and React pages behind explicit interfaces. The session consumes the platform Learner Space and Learning Event contracts, so future authentication and PostgreSQL/RLS persistence can replace adapters without rewriting the experience.
 
 **Tech Stack:** Node 22, pnpm 10.14, TypeScript 5.9, Vite, React, React Router, Radix Dialog, KaTeX, Lucide, Vitest, Testing Library, jsdom, custom CSS.
 
@@ -20,6 +20,7 @@
 - Do not show answers or explanations before deliberate submission or timer expiry.
 - Do not fabricate a percentile, TMUA score prediction, readiness estimate, benchmark, or AI interpretation.
 - First-version persistence is device-local and must be labeled as such.
+- The local document still carries canonical `LearnerSpaceId`, `PracticeSessionId`, `ActorRef`, and `PracticeLearningEvent[]`; local storage is not presented as production multi-tenant isolation.
 - Remaining time is derived from the persisted deadline, not a decrementing counter.
 - Finalization must be idempotent.
 - Phone, iPad portrait/landscape, and desktop retain full answering, marking, navigation, and submission behavior.
@@ -126,7 +127,7 @@ it.each(["", "../escape.pdf", "/private/a.pdf", "C:\\private.pdf", "Tmua\\paper.
 
 - [ ] **Step 2: Run the schema test and verify the unsafe paths fail the test**
 
-Run: `pnpm test -- tests/content/tmua/schema.test.ts`
+Run: `pnpm exec vitest run tests/content/tmua/schema.test.ts`
 
 Expected: FAIL because the current `^(?!/)` pattern accepts empty, parent-traversal, drive-letter, and backslash paths.
 
@@ -190,7 +191,7 @@ describe("application shell", () => {
 
 - [ ] **Step 6: Run the app-shell test and verify it fails**
 
-Run: `pnpm test -- tests/app/app-shell.test.tsx`
+Run: `pnpm exec vitest run tests/app/app-shell.test.tsx`
 
 Expected: FAIL because the app router and landing route do not exist.
 
@@ -268,7 +269,7 @@ Add to `tsconfig.json`:
 Run:
 
 ```bash
-pnpm test -- tests/content/tmua/schema.test.ts tests/app/app-shell.test.tsx
+pnpm exec vitest run tests/content/tmua/schema.test.ts tests/app/app-shell.test.tsx
 pnpm typecheck
 pnpm build
 ```
@@ -329,7 +330,7 @@ describe("TMUA 2023 Paper 1 reviewed content", () => {
 
 - [ ] **Step 2: Run the content test and verify it fails**
 
-Run: `pnpm test -- tests/features/practice/content/paper.test.ts`
+Run: `pnpm exec vitest run tests/features/practice/content/paper.test.ts`
 
 Expected: FAIL because the content modules do not exist.
 
@@ -486,7 +487,7 @@ Create `docs/content/TMUA_2023_P1_CONTENT_VERIFICATION.md` with a 20-row table c
 Run:
 
 ```bash
-pnpm test -- tests/features/practice/content/paper.test.ts
+pnpm exec vitest run tests/features/practice/content/paper.test.ts
 pnpm test
 pnpm typecheck
 ```
@@ -517,8 +518,8 @@ git commit -m "feat: add verified TMUA 2023 Paper 1"
 - Create: `tests/features/practice/storage/local-store.test.ts`
 
 **Interfaces:**
-- Consumes: `PracticePaper`, `PracticeQuestion`.
-- Produces: `PracticeSession`, `PracticeEvent`, `practiceSessionReducer`, `createPracticeSession`, `remainingTimeMs`, `calculateResults`, `PracticeSessionStore`, `LocalPracticeSessionStore`.
+- Consumes: `PracticePaper`, `PracticeQuestion`, `LearnerSpaceId`, `PracticeSessionId`, `ActorRef`, `PracticeLearningEvent`, `appendLearningEvent`.
+- Produces: `PracticeSession`, `practiceSessionReducer`, `createPracticeSession`, `remainingTimeMs`, `calculateResults`, `PracticeSessionStore`, `LocalPracticeSessionStore`.
 
 - [ ] **Step 1: Write failing reducer behavior tests**
 
@@ -526,9 +527,9 @@ Create `tests/features/practice/domain/session.test.ts` covering start, answer s
 
 ```ts
 it("records an answer change without losing the original event", () => {
-  const started = createPracticeSession("session-1", "2026-07-13T00:00:00.000Z");
-  const first = practiceSessionReducer(started, { type: "answer", questionId: "tmua-2023-p1-q01", answer: "A", at: "2026-07-13T00:01:00.000Z" });
-  const changed = practiceSessionReducer(first, { type: "answer", questionId: "tmua-2023-p1-q01", answer: "F", at: "2026-07-13T00:02:00.000Z" });
+  const started = createPracticeSession({ id: "ses_reference-one", learnerSpaceId: "lsp_local-demo", actor: { kind: "student", userId: "usr_local-demo" }, startedAt: "2026-07-13T00:00:00.000Z", eventId: "evt_started-one" });
+  const first = practiceSessionReducer(started, { type: "answer", eventId: "evt_answer-one", questionId: "tmua-2023-p1-q01", answer: "A", at: "2026-07-13T00:01:00.000Z" });
+  const changed = practiceSessionReducer(first, { type: "answer", eventId: "evt_answer-two", questionId: "tmua-2023-p1-q01", answer: "F", at: "2026-07-13T00:02:00.000Z" });
   expect(changed.answers["tmua-2023-p1-q01"]).toBe("F");
   expect(changed.events.map((event) => event.type)).toEqual([
     "session_started", "answer_selected", "answer_changed",
@@ -536,39 +537,28 @@ it("records an answer change without losing the original event", () => {
 });
 
 it("finalizes only once", () => {
-  const started = createPracticeSession("session-1", "2026-07-13T00:00:00.000Z");
-  const submitted = practiceSessionReducer(started, { type: "submit", at: "2026-07-13T00:10:00.000Z", reason: "student" });
-  expect(practiceSessionReducer(submitted, { type: "submit", at: "2026-07-13T00:11:00.000Z", reason: "student" })).toEqual(submitted);
+  const started = createPracticeSession({ id: "ses_reference-one", learnerSpaceId: "lsp_local-demo", actor: { kind: "student", userId: "usr_local-demo" }, startedAt: "2026-07-13T00:00:00.000Z", eventId: "evt_started-one" });
+  const submitted = practiceSessionReducer(started, { type: "submit", eventId: "evt_submit-one", at: "2026-07-13T00:10:00.000Z", reason: "student" });
+  expect(practiceSessionReducer(submitted, { type: "submit", eventId: "evt_submit-two", at: "2026-07-13T00:11:00.000Z", reason: "student" })).toEqual(submitted);
 });
 ```
 
 - [ ] **Step 2: Run reducer tests and verify they fail**
 
-Run: `pnpm test -- tests/features/practice/domain/session.test.ts`
+Run: `pnpm exec vitest run tests/features/practice/domain/session.test.ts`
 
 Expected: FAIL because session domain modules do not exist.
 
 - [ ] **Step 3: Define session and event contracts**
 
-Create `src/features/practice/domain/session.ts` with:
+Create `src/features/practice/domain/session.ts` with imports from `src/platform` and this feature contract:
 
 ```ts
-export type PracticeEventType =
-  | "session_started" | "question_viewed" | "answer_selected" | "answer_changed"
-  | "question_marked" | "question_unmarked" | "submission_opened"
-  | "session_submitted" | "session_expired";
-
-export interface PracticeEvent {
-  type: PracticeEventType;
-  at: string;
-  elapsedMs: number;
-  questionId?: string;
-  answer?: string;
-}
-
 export interface PracticeSession {
   schemaVersion: 1;
-  id: string;
+  id: PracticeSessionId;
+  learnerSpaceId: LearnerSpaceId;
+  startedBy: ActorRef;
   paperId: "tmua-2023-p1";
   status: "active" | "submitted" | "expired";
   startedAt: string;
@@ -579,15 +569,15 @@ export interface PracticeSession {
   markedQuestionIds: string[];
   timingByQuestionMs: Record<string, number>;
   activeQuestionEnteredAt: string;
-  events: PracticeEvent[];
+  events: PracticeLearningEvent[];
 }
 ```
 
-`createPracticeSession` sets `deadlineAt` to exactly 75 minutes after `startedAt`, current question to 1, empty answers/marks/timing, and a single `session_started` event.
+`createPracticeSession` accepts `{ id, learnerSpaceId, actor, startedAt, eventId }`, sets `deadlineAt` to exactly 75 minutes after `startedAt`, current question to 1, empty answers/marks/timing, and uses `appendLearningEvent` to create a single `session_started` event.
 
 - [ ] **Step 4: Implement the pure reducer minimally**
 
-Create `src/features/practice/domain/reducer.ts` with discriminated actions for `view`, `answer`, `toggle-mark`, `open-submission`, `submit`, and `expire`. Calculate elapsed event time from `startedAt`; accumulate the prior active question's timing on `view`, `submit`, and `expire`; never mutate input state; ignore answer/mark/navigation actions after finalization.
+Create `src/features/practice/domain/reducer.ts` with discriminated actions for `view`, `answer`, `toggle-mark`, `open-submission`, `submit`, and `expire`. Every event-producing action receives a stable `eventId`; view/finalization actions also receive a `timeEventId` when accumulated active time is emitted. Use `appendLearningEvent` for every event, accumulate the prior active question's timing on `view`, `submit`, and `expire`, never mutate input state, and ignore answer/mark/navigation actions after finalization.
 
 - [ ] **Step 5: Write and implement deadline-derived timer tests**
 
@@ -638,16 +628,15 @@ export interface PracticeSessionStore {
 }
 ```
 
-Create `local-store.ts` using injected `Storage`, key `tmua:practice:current:v1`, an in-memory current-session fallback, strict structural validation for `schemaVersion`, `paperId`, status, dates, answers, marks, timing, and events, and corruption quarantine before returning an issue result. `loadCurrent().session` may be active or finalized; the landing page offers resume only for `status: "active"`, while the result route accepts only a matching finalized session. `save` updates memory first, attempts browser storage, and returns `{ persisted: false }` rather than destroying the usable in-memory session when storage fails.
+Create `local-store.ts` using injected `Storage`, key `tmua:practice:current:v1`, an in-memory current-session fallback, strict structural validation for `schemaVersion`, `learnerSpaceId`, `id`, `startedBy`, `paperId`, status, dates, answers, marks, timing, and platform learning events, and corruption quarantine before returning an issue result. Validate that every event belongs to the document's learner space/session and has a consecutive sequence. `loadCurrent().session` may be active or finalized; the landing page offers resume only for `status: "active"`, while the result route accepts only a matching finalized session. `save` updates memory first, attempts browser storage, and returns `{ persisted: false }` rather than destroying the usable in-memory session when storage fails.
 
 - [ ] **Step 9: Run domain and storage gates**
 
 Run:
 
 ```bash
-pnpm test -- tests/features/practice/domain tests/features/practice/storage
-pnpm test
-pnpm typecheck
+pnpm exec vitest run tests/features/practice/domain tests/features/practice/storage
+pnpm verify
 ```
 
 Expected: all commands PASS.
@@ -694,7 +683,7 @@ Create `tests/app/landing-page.test.tsx` with an injected in-memory store and ro
 
 - [ ] **Step 2: Run the landing test and verify it fails**
 
-Run: `pnpm test -- tests/app/landing-page.test.tsx`
+Run: `pnpm exec vitest run tests/app/landing-page.test.tsx`
 
 Expected: FAIL because the landing page does not exist.
 
@@ -731,7 +720,7 @@ Import KaTeX CSS, `tokens.css`, `global.css`, and `practice.css` from `main.tsx`
 Run:
 
 ```bash
-pnpm test -- tests/app/app-shell.test.tsx tests/app/landing-page.test.tsx
+pnpm exec vitest run tests/app/app-shell.test.tsx tests/app/landing-page.test.tsx
 pnpm test
 pnpm typecheck
 pnpm build
@@ -781,7 +770,7 @@ Create `question-card.test.tsx` proving:
 
 - [ ] **Step 2: Run the question-card test and verify it fails**
 
-Run: `pnpm test -- tests/features/practice/components/question-card.test.tsx`
+Run: `pnpm exec vitest run tests/features/practice/components/question-card.test.tsx`
 
 Expected: FAIL because content renderer and question components do not exist.
 
@@ -824,7 +813,7 @@ Desktop layout uses persistent question rail. CSS at tablet portrait/mobile coll
 Run:
 
 ```bash
-pnpm test -- tests/features/practice/components tests/app/practice-page.test.tsx
+pnpm exec vitest run tests/features/practice/components tests/app/practice-page.test.tsx
 pnpm test
 pnpm typecheck
 pnpm build
@@ -871,7 +860,7 @@ Test that the Radix dialog:
 
 - [ ] **Step 2: Run the submission test and verify it fails**
 
-Run: `pnpm test -- tests/features/practice/components/submit-dialog.test.tsx`
+Run: `pnpm exec vitest run tests/features/practice/components/submit-dialog.test.tsx`
 
 Expected: FAIL because the dialog does not exist.
 
@@ -911,7 +900,7 @@ Desktop uses a score editorial panel beside timing highlights and a readable res
 Run:
 
 ```bash
-pnpm test -- tests/features/practice/components/submit-dialog.test.tsx tests/app/results-page.test.tsx tests/app/practice-page.test.tsx
+pnpm exec vitest run tests/features/practice/components/submit-dialog.test.tsx tests/app/results-page.test.tsx tests/app/practice-page.test.tsx
 pnpm test
 pnpm typecheck
 pnpm build

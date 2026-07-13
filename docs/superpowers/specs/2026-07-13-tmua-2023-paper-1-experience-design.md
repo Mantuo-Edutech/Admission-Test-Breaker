@@ -1,6 +1,6 @@
 # TMUA 2023 Paper 1 Complete Mock Experience Design
 
-**Status:** Approved design, pending written-spec review
+**Status:** Approved design, aligned with the product charter and system architecture
 
 **Date:** 2026-07-13
 
@@ -67,7 +67,7 @@ The raw PDFs remain immutable and uncommitted. The runnable question data is a r
 - other TMUA papers or other admission tests;
 - public deployment and production analytics.
 
-Excluded features must not be represented as working. The interface may describe future capabilities only when clearly marked as unavailable or “sample accumulating.”
+Excluded features are outside this Reference Journey slice, not outside the full product. They must not be represented as working in this local experience. The interface may describe future capabilities only when clearly marked as unavailable or “sample accumulating.”
 
 ## 4. Technical Approach
 
@@ -83,7 +83,7 @@ The existing TypeScript and pnpm repository remains the foundation. The experien
 
 The product does not adopt a prebuilt dashboard theme. Mature primitives provide keyboard and accessibility behavior, while layout, typography, color, illustration, and exam interaction remain product-specific.
 
-The initial application is client-side because authentication and server persistence are outside this slice. Storage is hidden behind a `PracticeSessionStore` interface so a later database adapter can replace local storage without changing page components or domain logic.
+The initial application is client-side because authentication and server persistence are outside this slice. Storage is hidden behind a `PracticeSessionStore` interface so a later database adapter can replace local storage without changing page components or domain logic. The stored document still uses the platform `LearnerSpaceId`, `PracticeSessionId`, `ActorRef`, and `PracticeLearningEvent` contracts; local storage is an adapter for a learner-owned event document, not a substitute for production tenant isolation.
 
 ## 5. Module Boundaries
 
@@ -221,7 +221,9 @@ The browser stores one versioned session document:
 ```ts
 interface PracticeSession {
   schemaVersion: 1;
-  id: string;
+  id: PracticeSessionId;
+  learnerSpaceId: LearnerSpaceId;
+  startedBy: ActorRef;
   paperId: "tmua-2023-p1";
   status: "active" | "submitted" | "expired";
   startedAt: string;
@@ -231,9 +233,11 @@ interface PracticeSession {
   answers: Record<string, string>;
   markedQuestionIds: string[];
   timingByQuestionMs: Record<string, number>;
-  events: PracticeEvent[];
+  events: PracticeLearningEvent[];
 }
 ```
+
+`PracticeLearningEvent` is imported from the platform event ledger contract. Every event carries its own stable ID, schema version, learner space, session, actor, occurrence time, and consecutive session sequence. The feature reducer may create event drafts, but it cannot define a parallel feature-local event format.
 
 The first event set records only purposeful learning behavior:
 
@@ -246,8 +250,9 @@ The first event set records only purposeful learning behavior:
 - `submission_opened`;
 - `session_submitted`;
 - `session_expired`.
+- `question_time_recorded`.
 
-Events contain the session ID, question ID where applicable, event time, and elapsed session time. They do not collect device fingerprinting, free-form keystrokes, browsing history, or unrelated behavioral surveillance.
+Events contain the learner space, session ID, actor, question ID where applicable, event time, and typed purposeful payload. They do not collect device fingerprinting, free-form keystrokes, browsing history, or unrelated behavioral surveillance.
 
 ## 10. Timer, Autosave, and Recovery
 
@@ -297,6 +302,7 @@ Development follows test-driven implementation.
 - timing accumulation when question focus changes;
 - result calculation for correct, incorrect, and unanswered questions;
 - serialization, migration rejection, and recovery.
+- platform event sequence, idempotency, actor attribution, and learner-space isolation.
 
 ### Component tests
 
@@ -310,9 +316,7 @@ Development follows test-driven implementation.
 
 ```text
 pnpm install --frozen-lockfile
-pnpm test
-pnpm typecheck
-pnpm build
+pnpm verify
 ```
 
 The final review also checks the landing, session, submission, and result screens at representative mobile, tablet, and desktop widths. All 20 questions are compared with rendered source pages, with special attention to formulae, radicals, inequalities, diagrams, and option labels.
@@ -330,7 +334,7 @@ The slice is complete when:
 7. no fabricated benchmark or AI interpretation is shown;
 8. tests, strict typechecking, and the production build pass;
 9. the existing raw TMUA PDFs remain unchanged;
-10. the implementation remains separable from future authentication and server persistence.
+10. the implementation uses platform learner/event contracts while remaining separable from future authentication and server persistence.
 
 ## 15. Follow-on Work
 
@@ -338,7 +342,7 @@ After this slice is validated, the same interfaces can support:
 
 - additional TMUA papers;
 - authenticated cloud sessions;
-- student-owned event storage;
+- authenticated PostgreSQL/RLS storage for the existing student-owned event contract;
 - granular teacher, parent, and agent grants;
 - cohort-qualified benchmark snapshots;
 - AI interpretation through a configurable gateway;
