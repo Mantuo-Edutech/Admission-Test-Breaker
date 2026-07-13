@@ -14,7 +14,7 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "verify:architecture": "vitest run tests/architecture/module-boundaries.test.ts",
-    "verify": "pnpm verify:architecture && pnpm test && pnpm typecheck && pnpm build",
+    "verify": "pnpm verify:architecture && pnpm verify:tmua-corpus && pnpm test && pnpm typecheck && pnpm build",
     "tmua:inventory": "tsx src/content/tmua/cli.ts inventory",
     "tmua:sync-official": "tsx src/content/tmua/cli.ts sync-official",
     "tmua:build": "tsx src/content/tmua/cli.ts build",

@@ -707,9 +707,9 @@ Do not add `verify:tmua-files` to `pnpm verify`, because CI does not possess the
 
 ```bash
 export TMUA_RAW_DIR="/Users/mr616/Documents/Admission-Test Breaker/Tmua"
-pnpm run tmua:sync-official -- --audit-at 2026-07-13T00:00:00.000Z
-pnpm run tmua:build -- --audit-at 2026-07-13T00:00:00.000Z
-pnpm run verify:tmua-files -- --audit-at 2026-07-13T00:00:00.000Z
+pnpm run tmua:sync-official --audit-at 2026-07-13T00:00:00.000Z
+pnpm run tmua:build --audit-at 2026-07-13T00:00:00.000Z
+pnpm run verify:tmua-files --audit-at 2026-07-13T00:00:00.000Z
 pnpm verify:tmua-taxonomy
 pnpm verify:tmua-corpus
 ```

@@ -182,7 +182,7 @@ describe("module architecture boundaries", () => {
       "vitest run tests/architecture/module-boundaries.test.ts",
     );
     expect(packageJson.scripts?.verify).toBe(
-      "pnpm verify:architecture && pnpm test && pnpm typecheck && pnpm build",
+      "pnpm verify:architecture && pnpm verify:tmua-corpus && pnpm test && pnpm typecheck && pnpm build",
     );
   });
 });

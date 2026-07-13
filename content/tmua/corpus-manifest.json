@@ -1,0 +1,1241 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-13T00:00:00.000Z",
+  "baseline": {
+    "pdfCount": 96,
+    "uniqueContentCount": 46,
+    "auditedAt": "2026-07-12"
+  },
+  "sources": [
+    {
+      "id": "tmua-official-2017-answer-key",
+      "canonicalPath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer key/tmua-2017(1).pdf"
+      ],
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "fileSize": 689646,
+      "metadata": {
+        "pages": 3,
+        "title": "Test of Mathematics for University Admission 2017 answer keys",
+        "creator": "PScript5.dll Version 5.2.2",
+        "producer": "Acrobat Distiller 11.0 (Windows)",
+        "creationDate": "Mon Jun  5 22:42:41 2017 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "answer_key",
+      "edition": "2017",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2017-paper-1",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-1-2017(1).pdf"
+      ],
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "fileSize": 801288,
+      "metadata": {
+        "pages": 24,
+        "title": "ISO 15930 - Electronic document file format for prepress digital data exchange (PDF/X)",
+        "creator": "Microsoft® Word 2010",
+        "producer": "Acrobat Distiller 11.0 (Windows)",
+        "creationDate": "Wed Jul 19 23:23:36 2017 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2017",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2017-paper-1-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-1-2017(1).pdf"
+      ],
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "fileSize": 1298143,
+      "metadata": {
+        "pages": 26,
+        "title": "Test of Mathematics for University Admission 2017 – Paper 1 worked answers",
+        "creator": "LaTeX with hyperref package",
+        "producer": "pdfTeX-1.40.17",
+        "creationDate": "Thu Mar  7 23:22:41 2019 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "2017",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2017-paper-2",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-2-2017(1).pdf"
+      ],
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "fileSize": 891115,
+      "metadata": {
+        "pages": 24,
+        "title": "ISO 15930 - Electronic document file format for prepress digital data exchange (PDF/X)",
+        "creator": "TeX",
+        "producer": "Acrobat Distiller 11.0 (Windows)",
+        "creationDate": "Thu Jul 27 21:40:59 2017 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2017",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2017-paper-2-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-2-2017(1).pdf"
+      ],
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "fileSize": 1341112,
+      "metadata": {
+        "pages": 25,
+        "title": "Test of Mathematics for University Admission 2017 – Paper 2 worked answers",
+        "creator": "LaTeX with hyperref package",
+        "producer": "pdfTeX-1.40.17",
+        "creationDate": "Wed Apr 17 19:46:26 2019 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "2017",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2018-answer-key",
+      "canonicalPath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer key/tmua-2018(1).pdf"
+      ],
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "fileSize": 109015,
+      "metadata": {
+        "pages": 3,
+        "title": "Test of Mathematics for University Admission 2018 papers answer keys",
+        "creator": "Acrobat PDFMaker 11 for Word",
+        "producer": "Adobe PDF Library 11.0",
+        "creationDate": "Wed Feb 20 01:45:11 2019 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "answer_key",
+      "edition": "2018",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2018-paper-1",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-1-2018(1).pdf"
+      ],
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "fileSize": 267881,
+      "metadata": {
+        "pages": 24,
+        "title": "Test of Mathematics for University Admission 2018 – Paper 1",
+        "creator": "TeX",
+        "producer": "Acrobat Distiller 11.0 (Windows)",
+        "creationDate": "Thu Aug 16 20:01:29 2018 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2018",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2018-paper-1-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-1-2018(1).pdf"
+      ],
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "fileSize": 1355458,
+      "metadata": {
+        "pages": 25,
+        "title": "Test of Mathematics for University Admission 2018 – Paper 1 worked answers",
+        "creator": "LaTeX with hyperref package",
+        "producer": "pdfTeX-1.40.17",
+        "creationDate": "Wed Apr 17 20:35:40 2019 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "2018",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2018-paper-2",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-2-2018(1).pdf"
+      ],
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "fileSize": 213999,
+      "metadata": {
+        "pages": 24,
+        "title": "Test of Mathematics for University Admission 2018 – Paper 2",
+        "creator": "TeX",
+        "producer": "Acrobat Distiller 11.0 (Windows)",
+        "creationDate": "Thu Aug 16 20:03:33 2018 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2018",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2018-paper-2-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-2-2018(1).pdf"
+      ],
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "fileSize": 288986,
+      "metadata": {
+        "pages": 24,
+        "creator": "LaTeX with hyperref package",
+        "producer": "pdfTeX-1.40.17",
+        "creationDate": "Wed Apr 17 21:43:29 2019 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "2018",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2019-answer-key",
+      "canonicalPath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer key/tmua-2019(1).pdf"
+      ],
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "fileSize": 144457,
+      "metadata": {
+        "pages": 3,
+        "title": "Test of Mathematics for University Admission 2019 papers answer keys",
+        "creator": "Acrobat PDFMaker 20 for Word",
+        "producer": "Adobe PDF Library 20.6.74",
+        "creationDate": "Mon Mar 23 22:54:50 2020 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "answer_key",
+      "edition": "2019",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2019-paper-1",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-1-2019(1).pdf"
+      ],
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "fileSize": 244158,
+      "metadata": {
+        "pages": 24,
+        "title": "Test of Mathematics for University Admission 2019 – Paper 1",
+        "creator": "TeX",
+        "producer": "Acrobat Distiller 18.0 (Windows)",
+        "creationDate": "Fri Aug 16 20:29:42 2019 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2019",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2019-paper-1-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-1-2019(1).pdf"
+      ],
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "fileSize": 270272,
+      "metadata": {
+        "pages": 23,
+        "title": "Test of Mathematics for University Admission 2019 – Paper 1 worked answers",
+        "creator": "LaTeX with hyperref",
+        "producer": "pdfTeX-1.40.20",
+        "creationDate": "Tue May 26 23:41:42 2020 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "2019",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2019-paper-2",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-2-2019(1).pdf"
+      ],
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "fileSize": 736397,
+      "metadata": {
+        "pages": 24,
+        "title": "Test of Mathematics for University Admission 2019 – Paper 2",
+        "creator": "TeX",
+        "producer": "Acrobat Distiller 18.0 (Windows)",
+        "creationDate": "Tue Aug 20 18:14:43 2019 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2019",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2019-paper-2-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-2-2019(1).pdf"
+      ],
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "fileSize": 259487,
+      "metadata": {
+        "pages": 25,
+        "title": "Test of Mathematics for University Admission 2019 – Paper 2 worked answers",
+        "creator": "LaTeX with hyperref",
+        "producer": "pdfTeX-1.40.20",
+        "creationDate": "Tue May 26 23:42:44 2020 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "2019",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2020-answer-key",
+      "canonicalPath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer key/tmua-2020(1).pdf"
+      ],
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "fileSize": 208578,
+      "metadata": {
+        "pages": 2,
+        "title": "Test of Mathematics for University Admission 2020 answer keys and score conversion",
+        "author": "Cambridge Assessment Admissions Testing",
+        "creator": "Acrobat PDFMaker 21 for Word",
+        "producer": "Adobe PDF Library 21.1.177",
+        "creationDate": "Wed Apr  7 23:06:23 2021 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "answer_key",
+      "edition": "2020",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2020-paper-1",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-1-2020(1).pdf"
+      ],
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "fileSize": 255999,
+      "metadata": {
+        "pages": 24,
+        "title": "Test of Mathematics for University Admission 2020 – Paper 1",
+        "author": "Cambridge Assessment Admissions Testing",
+        "creator": "TeX",
+        "producer": "Acrobat Distiller 11.0 (Windows)",
+        "creationDate": "Fri Aug 21 23:28:24 2020 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2020",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2020-paper-1-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-1-2020(1).pdf"
+      ],
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "fileSize": 1064542,
+      "metadata": {
+        "pages": 23,
+        "title": "Test of Mathematics for University Admission 2020 – Paper 1 worked answers",
+        "author": "Cambridge Assessment Admissions Testing",
+        "creator": "LaTeX with hyperref",
+        "producer": "MiKTeX pdfTeX-1.40.21",
+        "creationDate": "Wed Aug  4 22:42:10 2021 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "2020",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2020-paper-2",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-2-2020(1).pdf"
+      ],
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "fileSize": 277195,
+      "metadata": {
+        "pages": 24,
+        "title": "Test of Mathematics for University Admission 2020 – Paper 2",
+        "author": "Cambridge Assessment Admissions Testing",
+        "creator": "TeX",
+        "producer": "Acrobat Distiller 11.0 (Windows)",
+        "creationDate": "Fri Aug 21 23:24:45 2020 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2020",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2020-paper-2-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-2-2020(1).pdf"
+      ],
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "fileSize": 1047394,
+      "metadata": {
+        "pages": 25,
+        "title": "Test of Mathematics for University Admission 2020 – Paper 2 worked answers",
+        "author": "Cambridge Assessment Admissions Testing",
+        "creator": "LaTeX with hyperref",
+        "producer": "MiKTeX pdfTeX-1.40.21",
+        "creationDate": "Wed Aug  4 22:44:40 2021 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "2020",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2021-answer-key",
+      "canonicalPath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer key/tmua-2021(1).pdf"
+      ],
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "fileSize": 137293,
+      "metadata": {
+        "pages": 2,
+        "title": "Test of Mathematics for University Admission 2020 answer keys and score conversion",
+        "author": "admissionstesting@cambridgeassessment.org.uk",
+        "creator": "Microsoft® Word for Microsoft 365",
+        "producer": "Microsoft® Word for Microsoft 365",
+        "creationDate": "Mon Mar  7 19:38:56 2022 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "answer_key",
+      "edition": "2021",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2021-paper-1",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-1-2021(1).pdf"
+      ],
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "fileSize": 263335,
+      "metadata": {
+        "pages": 24,
+        "title": "Test of Mathematics for University Admission 2021 – Paper 1",
+        "author": "Cambridge Assessment Admissions Testing",
+        "creator": "TeX",
+        "producer": "Acrobat Distiller 19.0 (Windows)",
+        "creationDate": "Wed Aug  4 21:08:09 2021 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2021",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2021-paper-1-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-1-2021(1).pdf"
+      ],
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "fileSize": 946809,
+      "metadata": {
+        "pages": 25,
+        "creator": "LaTeX with hyperref",
+        "producer": "pdfTeX-1.40.23",
+        "creationDate": "Thu Mar 31 12:21:52 2022 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "2021",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2021-paper-2",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-2-2021(1).pdf"
+      ],
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "fileSize": 221455,
+      "metadata": {
+        "pages": 24,
+        "title": "TMUA paper 2 2021 post proofing.pdf",
+        "author": "wyatth",
+        "creator": "TeX",
+        "producer": "Acrobat Distiller 19.0 (Windows)",
+        "creationDate": "Wed Aug  4 20:57:26 2021 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2021",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2021-paper-2-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-2-2021(1).pdf"
+      ],
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "fileSize": 941644,
+      "metadata": {
+        "pages": 27,
+        "creator": "LaTeX with hyperref",
+        "producer": "pdfTeX-1.40.23",
+        "creationDate": "Thu Mar 31 12:49:45 2022 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "2021",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2022-answer-key",
+      "canonicalPath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer key/tmua-2022(1).pdf",
+        "Tmua/2016-2023 answer/tmua-2022.pdf",
+        "Tmua/2016-2023 answer/tmua-2022(1).pdf"
+      ],
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "fileSize": 80779,
+      "metadata": {
+        "pages": 2,
+        "title": "Test of Mathematics for University Admission 2020 answer keys and score conversion",
+        "author": "Cambridge Assessment Admissions Testing",
+        "creator": "Microsoft® Word for Microsoft 365",
+        "producer": "Microsoft® Word for Microsoft 365",
+        "creationDate": "Mon Jun 26 20:29:07 2023 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "answer_key",
+      "edition": "2022",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2022-paper-1",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-2022-paper-1(1).pdf"
+      ],
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "fileSize": 247117,
+      "metadata": {
+        "pages": 24,
+        "title": "Microsoft Word - ATSCOMB1122TMUA122.32420973.doc",
+        "author": "esolpdfserverprd",
+        "creator": "PScript5.dll Version 5.2.2",
+        "producer": "Acrobat Distiller 19.0 (Windows)",
+        "creationDate": "Tue Jul  5 18:32:25 2022 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2022",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2022-paper-2",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-2022-paper-2(1).pdf"
+      ],
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "fileSize": 252422,
+      "metadata": {
+        "pages": 24,
+        "title": "Microsoft Word - ATSCOMB1122TMUA222.33931921.doc",
+        "author": "esolpdfserverprd",
+        "creator": "PScript5.dll Version 5.2.2",
+        "producer": "Acrobat Distiller 19.0 (Windows)",
+        "creationDate": "Tue Jul  5 19:08:19 2022 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2022",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2023-answer-key",
+      "canonicalPath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer key/tmua-2023(1).pdf",
+        "Tmua/2016-2023 answer/tmua-2023.pdf",
+        "Tmua/2016-2023 answer/tmua-2023(1).pdf"
+      ],
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "fileSize": 30226,
+      "metadata": {
+        "pages": 1
+      },
+      "provenance": "official_source",
+      "documentType": "answer_key",
+      "edition": "2023",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2023-paper-1",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-1-2023.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-1-2023(1).pdf"
+      ],
+      "sha256": "f58ef309507217a660d5e863e0c68dbbf5260cc1e580d8afc835280137565157",
+      "fileSize": 477957,
+      "metadata": {
+        "pages": 24,
+        "title": "Microsoft Word - ATSSTEMTMUA23P123.4090734125.doc",
+        "author": "esolpdfserverprd",
+        "creator": "PScript5.dll Version 5.2.2",
+        "producer": "Acrobat Distiller 6.0 (Windows)",
+        "creationDate": "Fri Aug  4 17:40:23 2023 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2023",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-2023-paper-2",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-2-2023(1).pdf"
+      ],
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "fileSize": 315414,
+      "metadata": {
+        "pages": 24,
+        "title": "Microsoft Word - ATSSTEMTMUAPAPER223.4083869894.doc",
+        "author": "esolpdfserverprd",
+        "creator": "PScript5.dll Version 5.2.2",
+        "producer": "Acrobat Distiller 6.0 (Windows)",
+        "creationDate": "Fri Aug  4 15:45:58 2023 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "2023",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-enhanced-test-specification",
+      "canonicalPath": "Tmua/tmua-notes-on-logic-and-proof-enhanced-test-specification-.pdf",
+      "duplicatePaths": [
+        "Tmua/tmua-notes-on-logic-and-proof-enhanced-test-specification-(1).pdf"
+      ],
+      "sha256": "f75340f0a227fdf01859ab3d9c1d182095f13aef3bc97b0b0b44ca8aa8d8fd57",
+      "fileSize": 4780802,
+      "metadata": {
+        "pages": 67,
+        "title": "TMUA notes on Logic and Proof (enhanced test specification) 2022",
+        "author": "Cambridge Assessment Admissions Testing",
+        "creator": "Acrobat PDFMaker 20 for Word",
+        "producer": "Adobe PDF Library 20.9.95",
+        "creationDate": "Tue May 26 22:25:22 2020 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "content_specification",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-practice-2016-answer-key",
+      "canonicalPath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer key/tmua-practice(2016)(1).pdf"
+      ],
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "fileSize": 380716,
+      "metadata": {
+        "pages": 3,
+        "title": "Test of Mathematics for University Admission practice papers answer keys",
+        "creator": "PScript5.dll Version 5.2.2",
+        "producer": "Acrobat Distiller 11.0 (Windows)",
+        "creationDate": "Tue Apr 11 17:01:03 2017 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "answer_key",
+      "edition": "practice-2016",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-practice-2016-paper-1",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-1-practice(2016)(1).pdf"
+      ],
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "fileSize": 291491,
+      "metadata": {
+        "pages": 16,
+        "title": "Test of Mathematics for University Admission practice paper – Paper 1",
+        "creator": "Microsoft® Word 2010",
+        "producer": "Acrobat Distiller 15.0 (Windows)",
+        "creationDate": "Mon Aug 22 18:08:41 2016 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "practice-2016",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-1-practice(2016)(1).pdf"
+      ],
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "fileSize": 1302224,
+      "metadata": {
+        "pages": 25,
+        "title": "Test of Mathematics for University Admission practice paper – Paper 1 worked answers",
+        "creator": "LaTeX with hyperref",
+        "producer": "LuaTeX-1.10.0",
+        "creationDate": "Thu Jul 25 15:24:42 2019 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "practice-2016",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-practice-2016-paper-2",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-2-practice(2016)(1).pdf"
+      ],
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "fileSize": 335932,
+      "metadata": {
+        "pages": 20,
+        "title": "Test of Mathematics for University Admission practice paper – Paper 2",
+        "creator": "Microsoft® Word 2010",
+        "producer": "Acrobat Distiller 15.0 (Windows)",
+        "creationDate": "Wed Aug 24 16:11:55 2016 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "practice-2016",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-2-practice(2016)(1).pdf"
+      ],
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "fileSize": 1253568,
+      "metadata": {
+        "pages": 26,
+        "title": "Test of Mathematics for University Admission practice paper – Paper 2 worked answers",
+        "creator": "LaTeX with hyperref",
+        "producer": "LuaTeX-1.10.0",
+        "creationDate": "Thu Jul 25 15:23:24 2019 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "practice-2016",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-specimen-answer-key",
+      "canonicalPath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer key/tmua-specimen(1).pdf"
+      ],
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "fileSize": 285331,
+      "metadata": {
+        "pages": 1,
+        "title": "Test of Mathematics for University Admission specimen papers answer keys",
+        "creator": "PScript5.dll Version 5.2.2",
+        "producer": "Acrobat Distiller 11.0 (Windows)",
+        "creationDate": "Mon Jun  5 22:42:41 2017 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "answer_key",
+      "edition": "specimen",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-specimen-paper-1",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-1-specimen(1).pdf"
+      ],
+      "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+      "fileSize": 121889,
+      "metadata": {
+        "pages": 16,
+        "title": "Test of Mathematics for University Admission specimen paper – Paper 1",
+        "creator": "PScript5.dll Version 5.2.2",
+        "producer": "Acrobat Distiller 11.0 (Windows)",
+        "creationDate": "Tue Jun  6 20:14:51 2017 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "specimen",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-specimen-paper-1-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-1-specimen(1).pdf"
+      ],
+      "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+      "fileSize": 774919,
+      "metadata": {
+        "pages": 24,
+        "title": "Test of Mathematics for University Admission specimen paper – Paper 1 worked answers",
+        "author": "Cambridge Assessment Admissions Testing",
+        "creator": "LaTeX with hyperref",
+        "producer": "LuaTeX-1.10.0",
+        "creationDate": "Thu Jul 25 15:21:50 2019 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "specimen",
+      "paper": 1,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-specimen-paper-2",
+      "canonicalPath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023paper/tmua-paper-2-specimen(1).pdf"
+      ],
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "fileSize": 812125,
+      "metadata": {
+        "pages": 19,
+        "title": "Test of Mathematics for University Admission specimen paper – Paper 2",
+        "creator": "PScript5.dll Version 5.2.2",
+        "producer": "Acrobat Distiller 11.0 (Windows)",
+        "creationDate": "Mon Jun  5 23:26:44 2017 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "question_paper",
+      "edition": "specimen",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-official-specimen-paper-2-worked-solutions",
+      "canonicalPath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2023 answer/tmua-paper-2-specimen(1).pdf"
+      ],
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "fileSize": 1224648,
+      "metadata": {
+        "pages": 25,
+        "title": "Test of Mathematics for University Admission specimen paper – Paper 2 worked answers",
+        "creator": "LaTeX with hyperref",
+        "producer": "LuaTeX-1.10.0",
+        "creationDate": "Thu Jul 25 15:19:23 2019 CST"
+      },
+      "provenance": "official_source",
+      "documentType": "worked_solutions",
+      "edition": "specimen",
+      "paper": 2,
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-original-answer-key-compilation-2016-2021-v1",
+      "canonicalPath": "Tmua/2016-2021 answer key 集锦.pdf",
+      "duplicatePaths": [
+        "Tmua/2016-2021 answer key 集锦(1).pdf"
+      ],
+      "sha256": "91d842adba8488a5243328d892c507281af04e0e80553125ecddf07840edbc50",
+      "fileSize": 1305567,
+      "metadata": {
+        "pages": 20,
+        "creator": "Adobe Acrobat Pro DC 19.8.20074",
+        "producer": "Adobe Acrobat Pro DC 19.8.20074",
+        "creationDate": "Fri Jun 20 22:24:49 2025 CST"
+      },
+      "provenance": "original_compilation",
+      "documentType": "answer_map",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-original-student-textbook-v1",
+      "canonicalPath": "Tmua/student textbook.pdf",
+      "duplicatePaths": [
+        "Tmua/student textbook(1).pdf"
+      ],
+      "sha256": "11f184668d6611b47e1292f6aa89d467ab7587cf6fc0c6b79488d2331aec1921",
+      "fileSize": 9543420,
+      "metadata": {
+        "pages": 158,
+        "creator": "Aspose Ltd.",
+        "producer": "Aspose.PDF for .NET 21.5.0",
+        "creationDate": "Fri Jun 24 13:44:36 2022 CST"
+      },
+      "provenance": "original_teaching",
+      "documentType": "teaching_textbook",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-original-topic-workbook-answer-map-v1",
+      "canonicalPath": "Tmua/student workbook/tmua workbook answers.pdf",
+      "duplicatePaths": [
+        "Tmua/student workbook/tmua workbook answers(1).pdf"
+      ],
+      "sha256": "341d10db402096b2f48a938de1cb823bc73ca31aaec899e3eed481f20eecfa47",
+      "fileSize": 1165702,
+      "metadata": {
+        "pages": 3,
+        "producer": "iOS Version 18.5 (Build 22F76) Quartz PDFContext",
+        "creationDate": "Sun Jun 22 11:06:10 2025 CST"
+      },
+      "provenance": "original_compilation",
+      "documentType": "answer_map",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    },
+    {
+      "id": "tmua-original-topic-workbook-v1",
+      "canonicalPath": "Tmua/student workbook/student workbook.pdf",
+      "duplicatePaths": [
+        "Tmua/student workbook/student workbook(1).pdf"
+      ],
+      "sha256": "7065de13f5db2e2ad00231b07fc4fd0236bbff21d272e8eb5e890f96d57324d5",
+      "fileSize": 3050077,
+      "metadata": {
+        "pages": 272,
+        "creator": "Aspose Ltd.",
+        "producer": "Aspose.PDF for .NET 21.5.0",
+        "creationDate": "Fri Jun 24 13:44:36 2022 CST"
+      },
+      "provenance": "original_compilation",
+      "documentType": "topic_workbook",
+      "reviewStatus": "needs_review",
+      "audit": {
+        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedBy": "tmua-corpus-cli",
+        "schemaVersion": 1,
+        "changeReason": "tmua:build"
+      }
+    }
+  ]
+}

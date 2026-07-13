@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "exam": "TMUA",
+  "auditedAt": "2026-07-13T00:00:00.000Z",
+  "importedPdfPathCount": 96,
+  "canonicalSourceCount": 46,
+  "officialSupplementCount": 4,
+  "paperCount": 18,
+  "questionShellCount": 360,
+  "publishedQuestionCount": 20,
+  "editions": [
+    {
+      "id": "specimen",
+      "label": "Early specimen",
+      "papers": [
+        {
+          "paper": 1,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        },
+        {
+          "paper": 2,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        }
+      ]
+    },
+    {
+      "id": "practice-2016",
+      "label": "2016 Practice",
+      "papers": [
+        {
+          "paper": 1,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        },
+        {
+          "paper": 2,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        }
+      ]
+    },
+    {
+      "id": "2017",
+      "label": "2017",
+      "papers": [
+        {
+          "paper": 1,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        },
+        {
+          "paper": 2,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        }
+      ]
+    },
+    {
+      "id": "2018",
+      "label": "2018",
+      "papers": [
+        {
+          "paper": 1,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        },
+        {
+          "paper": 2,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        }
+      ]
+    },
+    {
+      "id": "2019",
+      "label": "2019",
+      "papers": [
+        {
+          "paper": 1,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        },
+        {
+          "paper": 2,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        }
+      ]
+    },
+    {
+      "id": "2020",
+      "label": "2020",
+      "papers": [
+        {
+          "paper": 1,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        },
+        {
+          "paper": 2,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        }
+      ]
+    },
+    {
+      "id": "2021",
+      "label": "2021",
+      "papers": [
+        {
+          "paper": 1,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        },
+        {
+          "paper": 2,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        }
+      ]
+    },
+    {
+      "id": "2022",
+      "label": "2022",
+      "papers": [
+        {
+          "paper": 1,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        },
+        {
+          "paper": 2,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        }
+      ]
+    },
+    {
+      "id": "2023",
+      "label": "2023",
+      "papers": [
+        {
+          "paper": 1,
+          "contentStage": "published",
+          "onlineQuestionCount": 20
+        },
+        {
+          "paper": 2,
+          "contentStage": "indexed",
+          "onlineQuestionCount": 0
+        }
+      ]
+    }
+  ]
+}
