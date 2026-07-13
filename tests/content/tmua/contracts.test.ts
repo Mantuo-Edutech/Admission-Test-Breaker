@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
-import Ajv2020 from "ajv/dist/2020.js";
-import addFormats from "ajv-formats";
+import Ajv2020Module from "ajv/dist/2020.js";
+import addFormatsModule from "ajv-formats";
 import { describe, expect, it } from "vitest";
 
 const audit = {
@@ -9,6 +9,13 @@ const audit = {
   schemaVersion: 1,
   changeReason: "contract test",
 } as const;
+
+const Ajv2020 = Ajv2020Module.default;
+const addFormats = addFormatsModule.default;
+
+function validationMessage(errors: unknown): string {
+  return JSON.stringify(errors ?? []);
+}
 
 async function validator(name: string) {
   const schema = JSON.parse(
@@ -105,16 +112,21 @@ function publicSummary() {
 describe("TMUA corpus contracts", () => {
   it("allows a linked official resource without local file fields", async () => {
     const validate = await validator("official-resource");
-    expect(validate(linkedOfficialResource()), validate.errors ?? []).toBe(true);
+    expect(
+      validate(linkedOfficialResource()),
+      validationMessage(validate.errors),
+    ).toBe(true);
   });
 
   it("requires local path, digest and retrieval time when downloaded", async () => {
     const validate = await validator("official-resource");
     const record = { ...linkedOfficialResource(), availability: "downloaded" };
     expect(validate(record)).toBe(false);
-    expect(validate.errors?.map((error) => error.instancePath)).toEqual(
-      expect.arrayContaining(["", "", ""]),
-    );
+    expect(
+      validate.errors?.map(
+        (error: { instancePath: string }) => error.instancePath,
+      ),
+    ).toEqual(expect.arrayContaining(["", "", ""]));
   });
 
   it("rejects unsafe persisted official paths", async () => {
@@ -137,13 +149,18 @@ describe("TMUA corpus contracts", () => {
 
   it("bounds the number of online questions per paper", async () => {
     const validate = await validator("paper");
-    expect(validate(paperRecord()), validate.errors ?? []).toBe(true);
+    expect(validate(paperRecord()), validationMessage(validate.errors)).toBe(
+      true,
+    );
     expect(validate({ ...paperRecord(), onlineQuestionCount: 21 })).toBe(false);
   });
 
   it("keeps an index question as a shell instead of extracted content", async () => {
     const validate = await validator("question");
-    expect(validate(questionRecord()), validate.errors ?? []).toBe(true);
+    expect(
+      validate(questionRecord()),
+      validationMessage(validate.errors),
+    ).toBe(true);
     expect(validate({ ...questionRecord(), prompt: "unreviewed text" })).toBe(
       false,
     );
@@ -153,7 +170,10 @@ describe("TMUA corpus contracts", () => {
 
   it("rejects a public summary with more published items than shells", async () => {
     const validate = await validator("public-summary");
-    expect(validate(publicSummary()), validate.errors ?? []).toBe(true);
+    expect(
+      validate(publicSummary()),
+      validationMessage(validate.errors),
+    ).toBe(true);
     expect(
       validate({
         ...publicSummary(),
