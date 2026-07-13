@@ -28,6 +28,17 @@ export type ReviewStatus =
 
 export type SyllabusLevel = "CORE" | "SUPPORT" | "EXTENSION";
 
+export const contentStages = [
+  "discovered",
+  "indexed",
+  "extracted",
+  "verified",
+  "published",
+] as const;
+export type ContentStage = (typeof contentStages)[number];
+
+export type OfficialAvailability = "linked" | "downloaded";
+
 export interface AuditStamp {
   generatedAt: string;
   generatedBy: "tmua-corpus-cli";
@@ -68,6 +79,21 @@ export interface CorpusManifest {
   sources: SourceRecord[];
 }
 
+export interface OfficialResourceRecord {
+  id: string;
+  edition: string;
+  paper: 1 | 2;
+  documentType: "worked_solutions";
+  officialUrl: string;
+  expectedPages: number;
+  availability: OfficialAvailability;
+  localPath?: string;
+  sha256?: string;
+  retrievedAt?: string;
+  reviewStatus: ReviewStatus;
+  audit: AuditStamp;
+}
+
 export interface PaperRecord {
   id: string;
   edition: string;
@@ -78,6 +104,8 @@ export interface PaperRecord {
   answerSourceId: string;
   workedSolutionSourceId: string;
   completeness: "complete" | "incomplete";
+  contentStage: ContentStage;
+  onlineQuestionCount: number;
   audit: AuditStamp;
 }
 
@@ -87,12 +115,42 @@ export interface QuestionRecord {
   edition: string;
   paper: 1 | 2;
   questionNumber: number;
+  sourceType: "past_paper";
+  questionSourceId: string;
+  answerSourceId: string;
+  workedSolutionSourceId: string;
+  prompt: null;
+  options: [];
+  correctAnswer: null;
+  onlineContentId?: string;
   knowledgeTags: string[];
   skillTags: string[];
   errorTypes: string[];
   syllabusLevel: SyllabusLevel;
+  contentStage: ContentStage;
   reviewStatus: ReviewStatus;
   audit: AuditStamp;
+}
+
+export interface TmuaPublicSummary {
+  schemaVersion: 1;
+  exam: "TMUA";
+  auditedAt: string;
+  importedPdfPathCount: number;
+  canonicalSourceCount: number;
+  officialSupplementCount: number;
+  paperCount: number;
+  questionShellCount: number;
+  publishedQuestionCount: number;
+  editions: Array<{
+    id: string;
+    label: string;
+    papers: Array<{
+      paper: 1 | 2;
+      contentStage: ContentStage;
+      onlineQuestionCount: number;
+    }>;
+  }>;
 }
 
 export interface TaxonomyNode {

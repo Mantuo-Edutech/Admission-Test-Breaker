@@ -6,7 +6,14 @@ import { describe, expect, it } from "vitest";
 const Ajv2020 = Ajv2020Module.default;
 const addFormats = addFormatsModule.default;
 
-const schemaFiles = ["source", "paper", "question", "taxonomy"] as const;
+const schemaFiles = [
+  "source",
+  "official-resource",
+  "paper",
+  "question",
+  "public-summary",
+  "taxonomy",
+] as const;
 
 const sourceFixture = {
   id: "tmua-official-2023-paper-1",

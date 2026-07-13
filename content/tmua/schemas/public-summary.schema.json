@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "exam", "auditedAt", "importedPdfPathCount", "canonicalSourceCount", "officialSupplementCount", "paperCount", "questionShellCount", "publishedQuestionCount", "editions"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "exam": { "const": "TMUA" },
+    "auditedAt": { "type": "string", "format": "date-time" },
+    "importedPdfPathCount": { "const": 96 },
+    "canonicalSourceCount": { "const": 46 },
+    "officialSupplementCount": { "const": 4 },
+    "paperCount": { "const": 18 },
+    "questionShellCount": { "const": 360 },
+    "publishedQuestionCount": { "type": "integer", "minimum": 0, "maximum": 360 },
+    "editions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "papers"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "label": { "type": "string", "minLength": 1 },
+          "papers": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "required": ["paper", "contentStage", "onlineQuestionCount"],
+              "properties": {
+                "paper": { "enum": [1, 2] },
+                "contentStage": { "enum": ["discovered", "indexed", "extracted", "verified", "published"] },
+                "onlineQuestionCount": { "type": "integer", "minimum": 0, "maximum": 20 }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
