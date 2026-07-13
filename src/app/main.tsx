@@ -1,6 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App.js";
+import "katex/dist/katex.min.css";
+import "../styles/tokens.css";
+import "../styles/global.css";
+import "../styles/practice.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

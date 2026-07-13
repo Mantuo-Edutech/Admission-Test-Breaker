@@ -1,12 +1,30 @@
 import { createBrowserRouter, createMemoryRouter } from "react-router-dom";
+import type { AppServices } from "./dependencies.js";
+import { createDefaultAppServices } from "./dependencies.js";
+import { LandingPage } from "../features/practice/pages/LandingPage.js";
 
-function LandingPlaceholder() {
-  return <h1>把焦虑，拆成每一道题。</h1>;
+function PracticePlaceholder() {
+  return <main><h1>TMUA 2023 · Paper 1</h1></main>;
 }
 
-const routes = [{ path: "/", element: <LandingPlaceholder /> }];
+function ResultsPlaceholder() {
+  return <main><h1>练习结果</h1></main>;
+}
 
-export function createAppRouter(initialEntries?: string[]) {
+export function createAppRouter(
+  initialEntries?: string[],
+  injectedServices?: AppServices,
+) {
+  const services = injectedServices ?? createDefaultAppServices();
+  const routes = [
+    { path: "/", element: <LandingPage services={services} /> },
+    {
+      path: "/practice/tmua-2023-paper-1",
+      element: <PracticePlaceholder />,
+    },
+    { path: "/results/:sessionId", element: <ResultsPlaceholder /> },
+  ];
+
   return initialEntries
     ? createMemoryRouter(routes, { initialEntries })
     : createBrowserRouter(routes);
