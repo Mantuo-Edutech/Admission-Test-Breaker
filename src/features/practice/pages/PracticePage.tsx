@@ -183,7 +183,7 @@ export function PracticePage({ services }: PracticePageProps) {
         <p className="eyebrow">SESSION NOT FOUND</p>
         <h1>这里没有可继续的练习</h1>
         <p>练习可能已被清除，或者只保存在另一台设备上。</p>
-        <Link className="button button--primary" to="/">返回练习首页</Link>
+        <Link className="button button--primary" to="/exams/tmua">返回练习首页</Link>
       </main>
     );
   }

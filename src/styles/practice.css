@@ -713,6 +713,357 @@
   }
 }
 
+/* TMUA exam space */
+.tmua-hub-page {
+  min-height: 100vh;
+  background: var(--color-paper);
+}
+
+.tmua-hub-page__back {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-ink);
+  font-size: 0.78rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.tmua-hub-page__back svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.tmua-hub-hero {
+  padding-block: clamp(4rem, 8vw, 7.5rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
+  align-items: end;
+  gap: clamp(2rem, 7vw, 7rem);
+}
+
+.tmua-hub-hero h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(3.6rem, 8vw, 7rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.tmua-hub-hero > div > p:last-child {
+  max-width: 42rem;
+  margin: 2rem 0 0;
+  color: var(--color-slate);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.tmua-hub-hero dl {
+  margin: 0;
+  border-block: 1px solid var(--color-line);
+}
+
+.tmua-hub-hero dl div {
+  min-height: 5.5rem;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: minmax(6rem, 0.65fr) 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tmua-hub-hero dl div + div {
+  border-top: 1px solid var(--color-line);
+}
+
+.tmua-hub-hero dt {
+  color: var(--color-slate);
+  font-size: 0.73rem;
+  letter-spacing: 0.08em;
+}
+
+.tmua-hub-hero dd {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+}
+
+.tmua-journey {
+  padding-block: clamp(4rem, 8vw, 7rem);
+  border-top: 1px solid var(--color-line);
+}
+
+.tmua-journey > .calm-notice {
+  max-width: none;
+  margin: 0 0 1.5rem;
+}
+
+.tmua-journey__list {
+  margin: 0;
+  padding: 1px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--color-line);
+  list-style: none;
+}
+
+.tmua-journey__list > li {
+  min-height: 18rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--color-paper);
+}
+
+.tmua-journey__list > li > span {
+  color: var(--color-purple);
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.tmua-journey__list h3 {
+  max-width: 23rem;
+  margin: 2.25rem 0 0.7rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.45rem, 2.8vw, 2.1rem);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.tmua-journey__list > li > p {
+  max-width: 30rem;
+  margin: 0;
+  color: var(--color-slate);
+  font-size: 0.84rem;
+  line-height: 1.75;
+}
+
+.tmua-journey__list > li > strong,
+.tmua-journey__list > li > a {
+  min-height: 2.75rem;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-purple);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+}
+
+.tmua-journey__practice {
+  grid-column: 1 / -1;
+  min-height: 20rem !important;
+  background: var(--color-lavender) !important;
+}
+
+.tmua-journey__practice > p {
+  margin-top: 0.45rem !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-ink) !important;
+}
+
+.tmua-journey__practice > p svg {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-purple);
+}
+
+.tmua-journey__practice > .button,
+.tmua-journey__resume {
+  margin-top: 2rem;
+}
+
+.tmua-journey__resume {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.tmua-journey__resume p {
+  margin: 0;
+  font-weight: 750;
+}
+
+.tmua-archive {
+  padding-block: clamp(4rem, 8vw, 7rem);
+  border-top: 1px solid var(--color-line);
+  scroll-margin-top: 1rem;
+}
+
+.tmua-archive__table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  border-block: 1px solid var(--color-line);
+}
+
+.tmua-archive table {
+  width: 100%;
+  min-width: 47rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tmua-archive :is(th, td) {
+  height: 4.4rem;
+  border-bottom: 1px solid var(--color-line);
+  padding: 0.8rem 1rem;
+  font-size: 0.78rem;
+  vertical-align: middle;
+}
+
+.tmua-archive thead th {
+  height: 3.4rem;
+  color: var(--color-slate);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tmua-archive tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.tmua-archive tbody th[scope="rowgroup"] {
+  width: 22%;
+  border-right: 1px solid var(--color-line);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+}
+
+.tmua-archive tbody th[scope="row"] {
+  width: 15%;
+  font-weight: 700;
+}
+
+.archive-stage {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+}
+
+.archive-stage::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border: 1px solid currentColor;
+  background: transparent;
+}
+
+.archive-stage--published {
+  color: var(--color-success);
+}
+
+.archive-stage--published::before {
+  background: currentColor;
+}
+
+.tmua-archive td a {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-purple);
+  font-weight: 750;
+}
+
+.tmua-archive td > span:not(.archive-stage) {
+  color: var(--color-slate);
+}
+
+.tmua-archive__note {
+  margin: 1.25rem 0 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: var(--color-slate);
+  font-size: 0.77rem;
+  line-height: 1.65;
+}
+
+.tmua-archive__note svg {
+  width: 1rem;
+  min-width: 1rem;
+  margin-top: 0.12rem;
+  color: var(--color-purple);
+}
+
+@media (max-width: 55rem) {
+  .tmua-hub-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .tmua-hub-hero dl {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tmua-hub-hero dl div {
+    grid-template-columns: 1fr;
+  }
+
+  .tmua-hub-hero dl div + div {
+    border-top: 0;
+    border-left: 1px solid var(--color-line);
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 35rem) {
+  .tmua-hub-page__back {
+    font-size: 0;
+  }
+
+  .tmua-hub-page__back svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .tmua-hub-hero dl {
+    grid-template-columns: 1fr;
+  }
+
+  .tmua-hub-hero dl div {
+    grid-template-columns: 6rem 1fr;
+  }
+
+  .tmua-hub-hero dl div + div {
+    border-top: 1px solid var(--color-line);
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .tmua-journey__list {
+    grid-template-columns: 1fr;
+  }
+
+  .tmua-journey__practice {
+    grid-column: auto;
+  }
+
+  .tmua-journey__list > li {
+    min-height: 16rem;
+  }
+
+  .tmua-journey__resume {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .tmua-journey__practice > .button,
+  .tmua-journey__resume .button {
+    width: 100%;
+  }
+}
+
 /* Exam experience */
 .practice-page {
   min-height: 100vh;

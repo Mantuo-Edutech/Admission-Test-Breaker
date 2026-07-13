@@ -133,5 +133,8 @@ describe("Mantou multi-exam homepage", () => {
       await screen.findByRole("link", { name: /TMUA.*现已开放/u }),
     );
     expect(router.state.location.pathname).toBe("/exams/tmua");
+    expect(
+      await screen.findByRole("heading", { name: "TMUA 备考中心" }),
+    ).toBeInTheDocument();
   });
 });

@@ -117,7 +117,7 @@ describe("responsive TMUA practice page", () => {
     ).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "返回练习首页" })).toHaveAttribute(
       "href",
-      "/",
+      "/exams/tmua",
     );
   });
 });

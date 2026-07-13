@@ -15,6 +15,10 @@ const ExamStatusPage = lazy(async () => ({
   default: (await import("../features/catalog/pages/ExamStatusPage.js"))
     .ExamStatusPage,
 }));
+const TmuaHubPage = lazy(async () => ({
+  default: (await import("../features/catalog/pages/TmuaHubPage.js"))
+    .TmuaHubPage,
+}));
 
 function RouteLoading() {
   return (
@@ -32,6 +36,14 @@ export function createAppRouter(
   const services = injectedServices ?? createDefaultAppServices();
   const routes = [
     { path: "/", element: <LandingPage /> },
+    {
+      path: "/exams/tmua",
+      element: (
+        <Suspense fallback={<RouteLoading />}>
+          <TmuaHubPage services={services} />
+        </Suspense>
+      ),
+    },
     ...EXAM_CATALOG.filter(
       (exam) => exam.availability === "building",
     ).map((exam) => ({
