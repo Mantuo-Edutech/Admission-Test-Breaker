@@ -7,8 +7,8 @@ function finalizedSession() {
   return {
     ...createPracticeSession({
       id: "ses_results-one",
-      learningSpaceId: "lsp_local-demo",
-      actor: { kind: "student", userId: "usr_local-demo" },
+      learningSpaceId: "lsp_student-results",
+      actor: { kind: "student", userId: "usr_student-results" },
       startedAt: "2026-07-13T00:00:00.000Z",
       eventId: "evt_results-started",
     }),
@@ -89,8 +89,8 @@ describe("deterministic practice results", () => {
   it("refuses to reveal a result while the session remains active", () => {
     const active = createPracticeSession({
       id: "ses_active-one",
-      learningSpaceId: "lsp_local-demo",
-      actor: { kind: "student", userId: "usr_local-demo" },
+      learningSpaceId: "lsp_student-results",
+      actor: { kind: "student", userId: "usr_student-results" },
       startedAt: "2026-07-13T00:00:00.000Z",
       eventId: "evt_active-started",
     });

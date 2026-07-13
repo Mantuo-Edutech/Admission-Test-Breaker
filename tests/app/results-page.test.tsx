@@ -12,6 +12,10 @@ import type {
   SessionLoadResult,
   SessionSaveResult,
 } from "../../src/features/practice/storage/store.js";
+import {
+  FIXED_GUEST_SPACE,
+  FIXED_GUEST_SPACE_STORE,
+} from "../support/fixed-guest-space-store.js";
 
 class ResultStore implements PracticeSessionStore {
   cleared = false;
@@ -36,8 +40,8 @@ class ResultStore implements PracticeSessionStore {
 function submittedSession() {
   const active = createPracticeSession({
     id: "ses_result-page",
-    learningSpaceId: "lsp_local-demo",
-    actor: { kind: "student", userId: "usr_local-demo" },
+    learningSpaceId: FIXED_GUEST_SPACE.id,
+    actor: { kind: "guest", actorId: FIXED_GUEST_SPACE.ownerActorId },
     startedAt: "2026-07-13T09:00:00.000Z",
     eventId: "evt_result-started",
   });
@@ -60,6 +64,7 @@ function submittedSession() {
 function services(store: PracticeSessionStore): AppServices {
   return {
     store,
+    guestSpaceStore: FIXED_GUEST_SPACE_STORE,
     now: () => new Date("2026-07-13T09:10:00.000Z"),
     ids: {
       sessionId: () => "ses_unused",
@@ -112,8 +117,8 @@ describe("evidence-only results page", () => {
   it("does not expose an active or mismatched result session", async () => {
     const active = createPracticeSession({
       id: "ses_still-active",
-      learningSpaceId: "lsp_local-demo",
-      actor: { kind: "student", userId: "usr_local-demo" },
+      learningSpaceId: FIXED_GUEST_SPACE.id,
+      actor: { kind: "guest", actorId: FIXED_GUEST_SPACE.ownerActorId },
       startedAt: "2026-07-13T09:00:00.000Z",
       eventId: "evt_still-active",
     });

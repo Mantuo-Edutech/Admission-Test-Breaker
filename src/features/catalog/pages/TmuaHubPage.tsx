@@ -2,10 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight, BookOpenCheck, Clock3, LibraryBig } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import type { AppServices } from "../../../app/dependencies.js";
-import {
-  LOCAL_DEMO_LEARNER_SPACE_ID,
-  LOCAL_DEMO_STUDENT,
-} from "../../../app/local-demo.js";
+import { isGuestSpaceOwner } from "../../../platform/learning-space/domain.js";
 import { BrandMark } from "../../practice/components/BrandMark.js";
 import { createPracticeSession } from "../../practice/domain/session.js";
 import type { PracticeSession } from "../../practice/domain/session.js";
@@ -35,23 +32,36 @@ export function TmuaHubPage({ services }: TmuaHubPageProps) {
 
   useEffect(() => {
     let active = true;
-    void services.store.loadCurrent().then((result) => {
+    void Promise.all([
+      services.guestSpaceStore.loadOrCreate(),
+      services.store.loadCurrent(),
+    ]).then(([guestSpace, result]) => {
       if (!active) return;
-      setLoadIssue(result.issue);
-      setRecoverable(result.session?.status === "active" ? result.session : null);
+      const belongsToGuest =
+        result.session?.learningSpaceId === guestSpace.id &&
+        isGuestSpaceOwner(guestSpace, result.session.startedBy);
+      setLoadIssue(
+        result.issue ?? (result.session !== null && !belongsToGuest ? "unsupported" : null),
+      );
+      setRecoverable(
+        result.session?.status === "active" && belongsToGuest
+          ? result.session
+          : null,
+      );
       setLoading(false);
     });
     return () => {
       active = false;
     };
-  }, [services.store]);
+  }, [services.guestSpaceStore, services.store]);
 
   async function startSession() {
     setStarting(true);
+    const guestSpace = await services.guestSpaceStore.loadOrCreate();
     const session = createPracticeSession({
       id: services.ids.sessionId(),
-      learningSpaceId: LOCAL_DEMO_LEARNER_SPACE_ID,
-      actor: LOCAL_DEMO_STUDENT,
+      learningSpaceId: guestSpace.id,
+      actor: { kind: "guest", actorId: guestSpace.ownerActorId },
       startedAt: services.now().toISOString(),
       eventId: services.ids.eventId(),
     });

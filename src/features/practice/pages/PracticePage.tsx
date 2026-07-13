@@ -308,7 +308,7 @@ export function PracticePage({ services }: PracticePageProps) {
             <span><i className="legend-answered" />已作答</span>
             <span><i className="legend-marked" />已标记</span>
           </div>
-          <p className="exam-sidebar__privacy">学习事件正在记录到你的本地 Learner Space。</p>
+          <p className="exam-sidebar__privacy">学习事件正在记录到这台设备的本地学习空间。</p>
         </aside>
       </main>
 

@@ -11,6 +11,10 @@ import type {
   SessionLoadResult,
   SessionSaveResult,
 } from "../../src/features/practice/storage/store.js";
+import {
+  FIXED_GUEST_SPACE,
+  FIXED_GUEST_SPACE_STORE,
+} from "../support/fixed-guest-space-store.js";
 
 class PracticeStore implements PracticeSessionStore {
   saves: PracticeSession[] = [];
@@ -35,8 +39,8 @@ class PracticeStore implements PracticeSessionStore {
 function activeSession() {
   return createPracticeSession({
     id: "ses_practice-test",
-    learningSpaceId: "lsp_local-demo",
-    actor: { kind: "student", userId: "usr_local-demo" },
+    learningSpaceId: FIXED_GUEST_SPACE.id,
+    actor: { kind: "guest", actorId: FIXED_GUEST_SPACE.ownerActorId },
     startedAt: "2026-07-13T09:00:00.000Z",
     eventId: "evt_practice-started",
   });
@@ -46,6 +50,7 @@ function appServices(store: PracticeSessionStore): AppServices {
   let eventNumber = 0;
   return {
     store,
+    guestSpaceStore: FIXED_GUEST_SPACE_STORE,
     now: () => new Date("2026-07-13T09:05:00.000Z"),
     ids: {
       sessionId: () => "ses_unused",

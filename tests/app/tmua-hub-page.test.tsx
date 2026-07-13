@@ -11,6 +11,10 @@ import type {
   SessionLoadResult,
   SessionSaveResult,
 } from "../../src/features/practice/storage/store.js";
+import {
+  FIXED_GUEST_SPACE,
+  FIXED_GUEST_SPACE_STORE,
+} from "../support/fixed-guest-space-store.js";
 
 class HubSessionStore implements PracticeSessionStore {
   saved: PracticeSession | null = null;
@@ -39,6 +43,7 @@ class HubSessionStore implements PracticeSessionStore {
 function services(store: PracticeSessionStore): AppServices {
   return {
     store,
+    guestSpaceStore: FIXED_GUEST_SPACE_STORE,
     now: () => new Date("2026-07-13T09:00:00.000Z"),
     ids: {
       sessionId: () => "ses_tmua-hub-test",
@@ -51,8 +56,8 @@ function activeSession(): PracticeSession {
   return {
     ...createPracticeSession({
       id: "ses_resume-test",
-      learningSpaceId: "lsp_local-demo",
-      actor: { kind: "student", userId: "usr_local-demo" },
+      learningSpaceId: FIXED_GUEST_SPACE.id,
+      actor: { kind: "guest", actorId: FIXED_GUEST_SPACE.ownerActorId },
       startedAt: "2026-07-13T08:30:00.000Z",
       eventId: "evt_resume-started",
     }),
@@ -118,7 +123,7 @@ describe("TMUA exam space", () => {
     expect(within(table).getByText("2016 Practice")).toBeInTheDocument();
   });
 
-  it("starts a learner-owned session before entering the full paper", async () => {
+  it("starts a Guest-owned session before entering the full paper", async () => {
     const user = userEvent.setup();
     const store = new HubSessionStore();
     const router = createAppRouter(["/exams/tmua"], services(store));
@@ -134,7 +139,8 @@ describe("TMUA exam space", () => {
     );
     expect(store.saved).toMatchObject({
       id: "ses_tmua-hub-test",
-      learningSpaceId: "lsp_local-demo",
+      learningSpaceId: "gsp_tmua-hub-test",
+      startedBy: { kind: "guest", actorId: "guest_tmua-hub-test" },
       status: "active",
     });
     expect(router.state.location.pathname).toBe("/practice/tmua-2023-paper-1");
@@ -153,6 +159,29 @@ describe("TMUA exam space", () => {
     expect(await screen.findByText("已完成 1 / 20")).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "继续 2023 Paper 1" }));
     expect(router.state.location.pathname).toBe("/practice/tmua-2023-paper-1");
+  });
+
+  it("does not resume a session owned by a different local Guest Space", async () => {
+    const foreignSession = createPracticeSession({
+      id: "ses_foreign-guest",
+      learningSpaceId: "gsp_foreign-guest",
+      actor: { kind: "guest", actorId: "guest_foreign-guest" },
+      startedAt: "2026-07-13T08:30:00.000Z",
+      eventId: "evt_foreign-started",
+    });
+    const store = new HubSessionStore({ session: foreignSession, issue: null });
+    const router = createAppRouter(["/exams/tmua"], services(store));
+    render(<RouterProvider router={router} />);
+
+    expect(await screen.findByRole("status")).toHaveTextContent(
+      "上次练习记录无法安全恢复",
+    );
+    expect(
+      screen.queryByRole("button", { name: "继续 2023 Paper 1" }),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: "开始 2023 Paper 1 完整练习" }),
+    ).toBeInTheDocument();
   });
 
   it("shows corrupt data calmly and can continue when persistence is unavailable", async () => {
