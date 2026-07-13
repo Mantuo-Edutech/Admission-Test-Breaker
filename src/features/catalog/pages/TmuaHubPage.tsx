@@ -3,6 +3,9 @@ import { ArrowLeft, ArrowRight, BookOpenCheck, Clock3, LibraryBig } from "lucide
 import { Link, useNavigate } from "react-router-dom";
 import type { AppServices } from "../../../app/dependencies.js";
 import { isGuestSpaceOwner } from "../../../platform/learning-space/domain.js";
+import type { GuestSpace } from "../../../platform/learning-space/domain.js";
+import { ProfilePanel } from "../../preparation-profile/components/ProfilePanel.js";
+import type { PreparationProfile } from "../../preparation-profile/domain.js";
 import { BrandMark } from "../../practice/components/BrandMark.js";
 import { createPracticeSession } from "../../practice/domain/session.js";
 import type { PracticeSession } from "../../practice/domain/session.js";
@@ -27,19 +30,27 @@ export function TmuaHubPage({ services }: TmuaHubPageProps) {
   const navigate = useNavigate();
   const [recoverable, setRecoverable] = useState<PracticeSession | null>(null);
   const [loadIssue, setLoadIssue] = useState<"corrupt" | "unsupported" | null>(null);
+  const [guestSpace, setGuestSpace] = useState<GuestSpace | null>(null);
+  const [profile, setProfile] = useState<PreparationProfile | null>(null);
+  const [profileIssue, setProfileIssue] = useState<"corrupt" | "unsupported" | null>(null);
+  const [profilePersistenceWarning, setProfilePersistenceWarning] = useState(false);
   const [loading, setLoading] = useState(true);
   const [starting, setStarting] = useState(false);
 
   useEffect(() => {
     let active = true;
-    void Promise.all([
-      services.guestSpaceStore.loadOrCreate(),
-      services.store.loadCurrent(),
-    ]).then(([guestSpace, result]) => {
+    void services.guestSpaceStore.loadOrCreate().then(async (loadedGuestSpace) => {
+      const [result, loadedProfile] = await Promise.all([
+        services.store.loadCurrent(),
+        services.profileStore.load(loadedGuestSpace.id),
+      ]);
       if (!active) return;
       const belongsToGuest =
-        result.session?.learningSpaceId === guestSpace.id &&
-        isGuestSpaceOwner(guestSpace, result.session.startedBy);
+        result.session?.learningSpaceId === loadedGuestSpace.id &&
+        isGuestSpaceOwner(loadedGuestSpace, result.session.startedBy);
+      setGuestSpace(loadedGuestSpace);
+      setProfile(loadedProfile.profile);
+      setProfileIssue(loadedProfile.issue);
       setLoadIssue(
         result.issue ?? (result.session !== null && !belongsToGuest ? "unsupported" : null),
       );
@@ -53,7 +64,14 @@ export function TmuaHubPage({ services }: TmuaHubPageProps) {
     return () => {
       active = false;
     };
-  }, [services.guestSpaceStore, services.store]);
+  }, [services.guestSpaceStore, services.profileStore, services.store]);
+
+  async function saveProfile(nextProfile: PreparationProfile) {
+    const result = await services.profileStore.save(nextProfile);
+    setProfile(nextProfile);
+    setProfilePersistenceWarning(!result.persisted);
+    return result;
+  }
 
   async function startSession() {
     setStarting(true);
@@ -96,7 +114,32 @@ export function TmuaHubPage({ services }: TmuaHubPageProps) {
         </dl>
       </section>
 
-      <section className="tmua-journey page-shell" aria-labelledby="tmua-journey-title">
+      {guestSpace !== null && (
+        <div className="page-shell tmua-profile-wrap">
+          {profileIssue !== null && (
+            <div className="calm-notice" role="status">
+              之前的准备档案无法安全恢复。它已被隔离，你可以重新建立一份档案。
+            </div>
+          )}
+          {profilePersistenceWarning && (
+            <div className="calm-notice" role="status">
+              档案已保留在当前页面，但浏览器未能把它写入本地存储。
+            </div>
+          )}
+          <ProfilePanel
+            guestSpaceId={guestSpace.id}
+            profile={profile}
+            now={services.now}
+            onSave={saveProfile}
+          />
+        </div>
+      )}
+
+      <section
+        className="tmua-journey page-shell"
+        id="tmua-content"
+        aria-labelledby="tmua-journey-title"
+      >
         <header className="section-heading section-heading--compact">
           <p>01 / START WHERE YOU ARE</p>
           <h2 id="tmua-journey-title">从你现在最需要的一步开始</h2>
@@ -126,6 +169,9 @@ export function TmuaHubPage({ services }: TmuaHubPageProps) {
             <h3>2023 Paper 1 完整练习</h3>
             <p><BookOpenCheck aria-hidden="true" />20 道题</p>
             <p><Clock3 aria-hidden="true" />75 分钟 · 不可使用计算器</p>
+            <p className="tmua-journey__local-boundary">
+              练习记录当前保存在这台设备。清除浏览器数据可能会丢失记录。
+            </p>
             {recoverable === null ? (
               <button
                 className="button button--primary"

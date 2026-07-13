@@ -11,6 +11,7 @@ import type {
 } from "../../src/features/practice/storage/store.js";
 import type { PracticeSession } from "../../src/features/practice/domain/session.js";
 import { FIXED_GUEST_SPACE_STORE } from "../support/fixed-guest-space-store.js";
+import { EMPTY_PREPARATION_PROFILE_STORE } from "../support/empty-preparation-profile-store.js";
 
 class TrackingStore implements PracticeSessionStore {
   loadCalls = 0;
@@ -33,6 +34,7 @@ function services(store: PracticeSessionStore): AppServices {
   return {
     store,
     guestSpaceStore: FIXED_GUEST_SPACE_STORE,
+    profileStore: EMPTY_PREPARATION_PROFILE_STORE,
     now: () => new Date("2026-07-13T09:00:00.000Z"),
     ids: {
       sessionId: () => "ses_landing-test",

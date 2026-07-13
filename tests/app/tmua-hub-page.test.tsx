@@ -6,6 +6,12 @@ import type { AppServices } from "../../src/app/dependencies.js";
 import { createAppRouter } from "../../src/app/routes.js";
 import { createPracticeSession } from "../../src/features/practice/domain/session.js";
 import type { PracticeSession } from "../../src/features/practice/domain/session.js";
+import type { GuestSpaceId } from "../../src/platform/shared/ids.js";
+import type { PreparationProfile } from "../../src/features/preparation-profile/domain.js";
+import type {
+  PreparationProfileLoadResult,
+  PreparationProfileStore,
+} from "../../src/features/preparation-profile/storage/store.js";
 import type {
   PracticeSessionStore,
   SessionLoadResult,
@@ -15,6 +21,7 @@ import {
   FIXED_GUEST_SPACE,
   FIXED_GUEST_SPACE_STORE,
 } from "../support/fixed-guest-space-store.js";
+import { EMPTY_PREPARATION_PROFILE_STORE } from "../support/empty-preparation-profile-store.js";
 
 class HubSessionStore implements PracticeSessionStore {
   saved: PracticeSession | null = null;
@@ -40,10 +47,31 @@ class HubSessionStore implements PracticeSessionStore {
   }
 }
 
-function services(store: PracticeSessionStore): AppServices {
+class HubProfileStore implements PreparationProfileStore {
+  saved: PreparationProfile | null = null;
+
+  async load(_guestSpaceId: GuestSpaceId): Promise<PreparationProfileLoadResult> {
+    return { profile: this.saved, issue: null };
+  }
+
+  async save(profile: PreparationProfile): Promise<{ persisted: boolean }> {
+    this.saved = profile;
+    return { persisted: true };
+  }
+
+  async clear(_guestSpaceId: GuestSpaceId): Promise<void> {
+    this.saved = null;
+  }
+}
+
+function services(
+  store: PracticeSessionStore,
+  profileStore: PreparationProfileStore = EMPTY_PREPARATION_PROFILE_STORE,
+): AppServices {
   return {
     store,
     guestSpaceStore: FIXED_GUEST_SPACE_STORE,
+    profileStore,
     now: () => new Date("2026-07-13T09:00:00.000Z"),
     ids: {
       sessionId: () => "ses_tmua-hub-test",
@@ -76,6 +104,9 @@ describe("TMUA exam space", () => {
     expect(
       await screen.findByRole("heading", { level: 1, name: "TMUA 备考中心" }),
     ).toBeInTheDocument();
+    expect(
+      await screen.findByRole("heading", { name: "先建立你的 TMUA 准备档案" }),
+    ).toBeInTheDocument();
     const journey = screen.getByRole("list", { name: "TMUA 完整备考路径" });
     const steps = within(journey).getAllByRole("listitem");
     expect(steps.map((step) => step.querySelector("h3")?.textContent)).toEqual([
@@ -89,6 +120,9 @@ describe("TMUA exam space", () => {
     expect(within(steps[1]!).getByText("即将开放")).toBeInTheDocument();
     expect(within(steps[4]!).getByText("申请要求整理中")).toBeInTheDocument();
     expect(
+      within(steps[2]!).getByText(/练习记录当前保存在这台设备/u),
+    ).toBeInTheDocument();
+    expect(
       within(steps[0]!).queryByRole("link"),
     ).not.toBeInTheDocument();
     expect(
@@ -98,6 +132,35 @@ describe("TMUA exam space", () => {
       "href",
       "#past-papers",
     );
+  });
+
+  it("saves the preparation profile inside the current Guest Space", async () => {
+    const user = userEvent.setup();
+    const profileStore = new HubProfileStore();
+    const router = createAppRouter(
+      ["/exams/tmua"],
+      services(new HubSessionStore(), profileStore),
+    );
+    render(<RouterProvider router={router} />);
+
+    await screen.findByRole("heading", { name: "先建立你的 TMUA 准备档案" });
+    await user.click(screen.getByRole("radio", { name: /CAIE/u }));
+    await user.click(screen.getByRole("checkbox", { name: /Mathematics \(9709\)/u }));
+    const modules = screen.getByLabelText(/Mathematics \(9709\) 模块/u);
+    await user.click(within(modules).getByRole("checkbox", { name: /Pure Mathematics 1/u }));
+    await user.click(screen.getByRole("radio", { name: /做过少量题/u }));
+    await user.click(screen.getByRole("button", { name: "保存准备档案" }));
+
+    expect(profileStore.saved).toMatchObject({
+      guestSpaceId: "gsp_tmua-hub-test",
+      curriculumSystem: "caie",
+      selections: [
+        { qualificationId: "caie-9709-2026-2027", unitIds: ["p1"] },
+      ],
+    });
+    expect(
+      await screen.findByRole("heading", { name: "你的 TMUA 准备档案" }),
+    ).toBeInTheDocument();
   });
 
   it("renders all verified archive facts and only links published content", async () => {

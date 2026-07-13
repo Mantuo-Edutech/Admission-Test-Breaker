@@ -4,6 +4,8 @@ import type {
 } from "../platform/shared/ids.js";
 import { LocalGuestSpaceStore } from "../features/guest-space/storage/local-store.js";
 import type { GuestSpaceStore } from "../features/guest-space/storage/store.js";
+import { LocalPreparationProfileStore } from "../features/preparation-profile/storage/local-store.js";
+import type { PreparationProfileStore } from "../features/preparation-profile/storage/store.js";
 import { LocalPracticeSessionStore } from "../features/practice/storage/local-store.js";
 import type { PracticeSessionStore } from "../features/practice/storage/store.js";
 
@@ -15,6 +17,7 @@ export interface AppIdFactory {
 export interface AppServices {
   store: PracticeSessionStore;
   guestSpaceStore: GuestSpaceStore;
+  profileStore: PreparationProfileStore;
   now(): Date;
   ids: AppIdFactory;
 }
@@ -35,6 +38,7 @@ export function createDefaultAppServices(): AppServices {
       now,
       randomSuffix,
     ),
+    profileStore: new LocalPreparationProfileStore(globalThis.localStorage, now),
     now,
     ids: {
       sessionId: () => `ses_${randomSuffix()}`,

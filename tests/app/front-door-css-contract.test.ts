@@ -48,4 +48,22 @@ describe("responsive editorial front-door CSS", () => {
       /\.tmua-hub-hero h1 > span\s*\{[^}]*display:\s*block/su,
     );
   });
+
+  it("keeps the preparation profile readable from desktop to phone", async () => {
+    const css = await readFile("src/styles/practice.css", "utf8");
+
+    expect(css).toMatch(
+      /\.profile-panel\s*\{[^}]*grid-template-columns:\s*4\.25rem\s+minmax\(16rem,\s*0\.7fr\)\s+minmax\(0,\s*1\.3fr\)/su,
+    );
+    expect(css).toMatch(
+      /@media \(max-width: 55rem\)[\s\S]*?\.profile-panel,[\s\S]*?grid-template-columns:\s*3\.5rem\s+minmax\(0,\s*1fr\)/u,
+    );
+    expect(css).toMatch(
+      /@media \(max-width: 35rem\)[\s\S]*?\.profile-panel,[\s\S]*?grid-template-columns:\s*1fr/u,
+    );
+    expect(css).toMatch(
+      /\.profile-choice,[\s\S]*?\.profile-unit\s*\{[^}]*min-height:\s*2\.75rem/su,
+    );
+    expect(css).not.toMatch(/\.profile-[^{]*\{[^}]*linear-gradient/su);
+  });
 });

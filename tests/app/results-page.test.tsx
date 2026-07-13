@@ -16,6 +16,7 @@ import {
   FIXED_GUEST_SPACE,
   FIXED_GUEST_SPACE_STORE,
 } from "../support/fixed-guest-space-store.js";
+import { EMPTY_PREPARATION_PROFILE_STORE } from "../support/empty-preparation-profile-store.js";
 
 class ResultStore implements PracticeSessionStore {
   cleared = false;
@@ -65,6 +66,7 @@ function services(store: PracticeSessionStore): AppServices {
   return {
     store,
     guestSpaceStore: FIXED_GUEST_SPACE_STORE,
+    profileStore: EMPTY_PREPARATION_PROFILE_STORE,
     now: () => new Date("2026-07-13T09:10:00.000Z"),
     ids: {
       sessionId: () => "ses_unused",

@@ -10,6 +10,7 @@ import type {
   SessionSaveResult,
 } from "../../src/features/practice/storage/store.js";
 import { FIXED_GUEST_SPACE_STORE } from "../support/fixed-guest-space-store.js";
+import { EMPTY_PREPARATION_PROFILE_STORE } from "../support/empty-preparation-profile-store.js";
 
 class EmptyStore implements PracticeSessionStore {
   async loadCurrent(): Promise<SessionLoadResult> {
@@ -26,6 +27,7 @@ class EmptyStore implements PracticeSessionStore {
 const services: AppServices = {
   store: new EmptyStore(),
   guestSpaceStore: FIXED_GUEST_SPACE_STORE,
+  profileStore: EMPTY_PREPARATION_PROFILE_STORE,
   now: () => new Date("2026-07-13T09:00:00.000Z"),
   ids: {
     sessionId: () => "ses_accessibility",
