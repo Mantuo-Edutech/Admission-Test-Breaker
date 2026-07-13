@@ -1,0 +1,84 @@
+- id: knowledge-gap
+  name: 知识缺口
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA error taxonomy v1]
+  prerequisites: []
+  aliases: []
+- id: invalid-inference
+  name: 无效推理
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA error taxonomy v1]
+  prerequisites: []
+  aliases: []
+- id: condition-omitted
+  name: 遗漏条件
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA error taxonomy v1]
+  prerequisites: []
+  aliases: []
+- id: sign-inequality-reversal
+  name: 符号或不等号反转
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA error taxonomy v1]
+  prerequisites: []
+  aliases: []
+- id: algebraic-manipulation
+  name: 代数运算错误
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA error taxonomy v1]
+  prerequisites: []
+  aliases: []
+- id: diagram-misread
+  name: 图像误读
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA error taxonomy v1]
+  prerequisites: []
+  aliases: []
+- id: calculation-slip
+  name: 计算失误
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA error taxonomy v1]
+  prerequisites: []
+  aliases: []
+- id: premature-approximation
+  name: 过早近似
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA error taxonomy v1]
+  prerequisites: []
+  aliases: []
+- id: distractor-attraction
+  name: 被干扰项吸引
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA error taxonomy v1]
+  prerequisites: []
+  aliases: []
+- id: time-pressure-guess
+  name: 时间压力下猜测
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA error taxonomy v1]
+  prerequisites: []
+  aliases: []
+- id: answer-transfer-error
+  name: 答案转录错误
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA error taxonomy v1]
+  prerequisites: []
+  aliases: []
+- id: insufficient-evidence
+  name: 证据不足
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA error taxonomy v1]
+  prerequisites: []
+  aliases: [unresolved]

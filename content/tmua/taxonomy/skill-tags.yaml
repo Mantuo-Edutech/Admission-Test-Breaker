@@ -1,0 +1,210 @@
+- id: algebraic-transformation
+  name: 代数变形
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA skill framework v1]
+  prerequisites: []
+  aliases: []
+- id: representation-switching
+  name: 表征转换
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA skill framework v1]
+  prerequisites: []
+  aliases: []
+- id: diagram-interpretation
+  name: 图像解读
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA skill framework v1]
+  prerequisites: []
+  aliases: []
+- id: condition-checking
+  name: 条件检查
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA skill framework v1]
+  prerequisites: []
+  aliases: []
+- id: counterexample-construction
+  name: 构造反例
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA skill framework v1]
+  prerequisites: []
+  aliases: []
+- id: necessary-sufficient-reasoning
+  name: 充分与必要推理
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA skill framework v1]
+  prerequisites: []
+  aliases: []
+- id: proof-sequencing
+  name: 证明步骤排序
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA skill framework v1]
+  prerequisites: []
+  aliases: []
+- id: approximation-estimation
+  name: 近似与估算
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA skill framework v1]
+  prerequisites: []
+  aliases: []
+- id: option-elimination
+  name: 选项排除
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA skill framework v1]
+  prerequisites: []
+  aliases: []
+- id: multi-step-planning
+  name: 多步骤规划
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA skill framework v1]
+  prerequisites: []
+  aliases: []
+- id: time-sensitive-calculation
+  name: 限时计算
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA skill framework v1]
+  prerequisites: []
+  aliases: []
+- id: error-detection
+  name: 错误识别
+  parentId: null
+  level: CORE
+  specificationRefs: [Mantou TMUA skill framework v1]
+  prerequisites: []
+  aliases: []
+- id: simultaneous-equations
+  name: 联立方程
+  parentId: algebraic-transformation
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: discriminant-inequalities
+  name: 判别式与不等式
+  parentId: condition-checking
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: definite-integral-additivity
+  name: 定积分可加性
+  parentId: representation-switching
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: infinite-series
+  name: 无穷级数判断
+  parentId: condition-checking
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: area-constraints
+  name: 面积约束建模
+  parentId: multi-step-planning
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: coefficient-divisibility
+  name: 系数整除判断
+  parentId: condition-checking
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: exponential-substitution
+  name: 指数换元
+  parentId: representation-switching
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: ambiguous-sine-rule
+  name: 正弦定理多解判断
+  parentId: condition-checking
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: trigonometric-solution-counting
+  name: 三角方程解的计数
+  parentId: condition-checking
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: trapezium-rule-error
+  name: 梯形法误差判断
+  parentId: error-detection
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: maximum-distance-between-circles
+  name: 圆间最大距离
+  parentId: multi-step-planning
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: stationary-points-and-roots
+  name: 驻点与根的联合分析
+  parentId: multi-step-planning
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: range-analysis
+  name: 值域分析
+  parentId: condition-checking
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: perpendicular-gradients
+  name: 垂直斜率转换
+  parentId: representation-switching
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: alternating-annular-areas
+  name: 交替圆环面积
+  parentId: multi-step-planning
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: geometric-series-convergence
+  name: 几何级数收敛判断
+  parentId: condition-checking
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: integrating-absolute-values
+  name: 绝对值函数积分
+  parentId: condition-checking
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: range-of-composite-expression
+  name: 复合表达式值域
+  parentId: representation-switching
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []

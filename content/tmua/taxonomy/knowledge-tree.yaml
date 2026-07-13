@@ -1,0 +1,196 @@
+- id: algebra-and-functions
+  name: 代数与函数
+  parentId: null
+  level: CORE
+  specificationRefs: [TMUA content specification]
+  prerequisites: []
+  aliases: [algebra, functions]
+- id: sequences-and-series
+  name: 数列与级数
+  parentId: null
+  level: CORE
+  specificationRefs: [TMUA content specification]
+  prerequisites: []
+  aliases: [sequences, series]
+- id: coordinate-geometry
+  name: 坐标几何
+  parentId: null
+  level: CORE
+  specificationRefs: [TMUA content specification]
+  prerequisites: []
+  aliases: [coordinate geometry]
+- id: trigonometry
+  name: 三角函数
+  parentId: null
+  level: CORE
+  specificationRefs: [TMUA content specification]
+  prerequisites: []
+  aliases: [trig]
+- id: exponentials-and-logarithms
+  name: 指数与对数
+  parentId: null
+  level: CORE
+  specificationRefs: [TMUA content specification]
+  prerequisites: []
+  aliases: [exponentials, logarithms]
+- id: differentiation
+  name: 微分
+  parentId: null
+  level: CORE
+  specificationRefs: [TMUA content specification]
+  prerequisites: []
+  aliases: [derivatives]
+- id: integration
+  name: 积分
+  parentId: null
+  level: CORE
+  specificationRefs: [TMUA content specification]
+  prerequisites: []
+  aliases: [integrals]
+- id: graphs-of-functions
+  name: 函数图像
+  parentId: null
+  level: CORE
+  specificationRefs: [TMUA content specification]
+  prerequisites: []
+  aliases: [function graphs]
+- id: mathematical-logic
+  name: 数学逻辑
+  parentId: null
+  level: CORE
+  specificationRefs: [TMUA logic and proof specification]
+  prerequisites: []
+  aliases: [logic]
+- id: mathematical-proof
+  name: 数学证明
+  parentId: null
+  level: CORE
+  specificationRefs: [TMUA logic and proof specification]
+  prerequisites: []
+  aliases: [proof]
+- id: errors-in-proof
+  name: 证明中的错误
+  parentId: null
+  level: CORE
+  specificationRefs: [TMUA logic and proof specification]
+  prerequisites: []
+  aliases: [proof errors]
+- id: gcse-supporting-knowledge
+  name: GCSE 支撑知识
+  parentId: null
+  level: SUPPORT
+  specificationRefs: [TMUA Part 2 supporting knowledge]
+  prerequisites: []
+  aliases: [supporting knowledge]
+- id: quadratics
+  name: 二次函数与方程
+  parentId: algebra-and-functions
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: sequences-series
+  name: 数列与级数综合
+  parentId: sequences-and-series
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: geometry-optimization
+  name: 几何最优化
+  parentId: coordinate-geometry
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: binomial-expansion
+  name: 二项式展开
+  parentId: algebra-and-functions
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: exponentials-logarithms
+  name: 指数与对数综合
+  parentId: exponentials-and-logarithms
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: trigonometry-geometry
+  name: 三角与几何综合
+  parentId: trigonometry
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: trigonometric-equations
+  name: 三角方程
+  parentId: trigonometry
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: numerical-integration
+  name: 数值积分
+  parentId: integration
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: function-transformations
+  name: 函数变换
+  parentId: graphs-of-functions
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: coordinate-geometry-circles
+  name: 圆的坐标几何
+  parentId: coordinate-geometry
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: cubic-functions
+  name: 三次函数
+  parentId: algebra-and-functions
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: exponentials-range
+  name: 指数函数值域
+  parentId: exponentials-and-logarithms
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: circle-sequences
+  name: 圆与数列综合
+  parentId: sequences-and-series
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: geometric-series-probability
+  name: 几何级数与概率
+  parentId: sequences-and-series
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: differential-equations
+  name: 微分方程
+  parentId: differentiation
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
+- id: function-range
+  name: 函数值域
+  parentId: graphs-of-functions
+  level: CORE
+  specificationRefs: [TMUA 2023 Paper 1 verified content]
+  prerequisites: []
+  aliases: []
