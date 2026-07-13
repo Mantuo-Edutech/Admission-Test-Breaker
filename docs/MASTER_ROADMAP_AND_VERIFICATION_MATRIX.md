@@ -30,6 +30,8 @@
 **边界：** 首次可体验版本允许本地存储，但领域事件必须携带 Learner Space；不得宣称已实现生产多租户。
 **发布门：** V0、V1、V2-local、V3、V4-responsive/accessibility。
 
+**当前状态：** 本地预览闭环已于 2026-07-13 实现；生产发布仍受 Phase 2 身份、RLS、授权和安全门约束。
+
 ### Phase 2 — 私密账户与授权协作
 
 **旅程：** 学生注册/登录 → 数据跨设备保存 → 分别授权老师查看、批注、制定计划或布置练习 → 查看审计并撤销。
@@ -98,8 +100,8 @@
 | TMUA 原始资料 | 已盘点本地 96 PDFs / 46 个唯一内容 | `docs/superpowers/specs/2026-07-12-tmua-content-corpus-design.md` | 全量 canonical manifest 与贡献发布流 |
 | Content tooling | typed schema 基础已完成 | `src/content/tmua/`、schema tests | CLI 实现与全量 corpus build |
 | Reference content | TMUA 2023 Paper 1 共 20 题已人工核验 | `src/features/practice/content/tmua-2023-p1.ts` | 后续解释和更多试卷 |
-| Web runtime | React/Vite 与入口占位已完成 | app shell test、build | 品牌界面、会话、存储、结果 |
-| Learner Space / Events | 核心领域契约已实现 | 稳定 ID、所有权、追加式事件、顺序与幂等测试 | Practice Session 接入和持久化适配器 |
+| Reference Journey Web | 本地预览闭环已完成 | 品牌首页、完整 20 题、提交、结果；手机/iPad/桌面实测 | 生产身份与服务端持久化后再公开收集真实数据 |
+| Learner Space / Events | 核心领域契约已接入练习 | 稳定 ID、所有权、追加式事件、顺序、幂等、本地恢复和结果投影 | PostgreSQL 账本、RLS 与后台投影 |
 | Consent / Grants | 纯策略契约已实现 | 精确 scope、资源、有效期、撤销和 actor 测试 | 持久化、授权界面与访问审计 |
 | Benchmark / AI / Integrations | AI Job 核心契约已实现 | 投影引用、预算、委托授权和禁止 secret 校验 | Provider 适配器、Benchmark 与外部集成 |
 
@@ -112,8 +114,8 @@
 
 ## 7. 接下来三个可验证增量
 
-1. **Platform Contracts：** 建立 Learner Space、Grant、Learning Event、AI Job 类型与架构依赖测试。
-2. **Practice Domain：** 用真实 20 题实现会话 reducer、deadline 计时、事件追加、幂等提交和结果投影。
-3. **Reference UI：** 完成满托配色的暖学院风首页、练习页、结果页和手机/iPad/桌面适配。
+1. **Private Account Slice：** 接入身份、PostgreSQL、RLS 与跨租户负面测试，把本地 Learner Space 迁移到生产私密空间。
+2. **Authorized Collaboration：** 实现学生逐项授权界面、老师/家长协作视图、撤销和访问审计。
+3. **Content Commons Pipeline：** 恢复全量 TMUA canonical manifest、past papers 和贡献审核发布流。
 
-完成以上三个增量后，用户第一次能够体验完整界面和真实题目；同时产生的数据已经能无损迁移到后续服务端账本，而不是一次性 Demo 状态。
+Benchmark、付费 AI 解读和外部 Agent 接入继续依赖真实、合规、经授权的数据基础，不会越过以上生产门提前伪装上线。

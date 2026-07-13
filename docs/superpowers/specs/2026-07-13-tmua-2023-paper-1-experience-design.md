@@ -1,6 +1,6 @@
 # TMUA 2023 Paper 1 Complete Mock Experience Design
 
-**Status:** Approved design, aligned with the product charter and system architecture
+**Status:** Implemented as a local Reference Journey; production privacy gates remain
 
 **Date:** 2026-07-13
 

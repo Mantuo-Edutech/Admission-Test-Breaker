@@ -8,6 +8,8 @@
 
 **Tech Stack:** Node 22, pnpm 10.14, TypeScript 5.9, Vite, React, React Router, Radix Dialog, KaTeX, Lucide, Vitest, Testing Library, jsdom, custom CSS.
 
+**Progress (2026-07-13):** Tasks 1–6 are implemented and verified in the local Reference Journey. Task 7 release evidence is recorded in `docs/content/TMUA_2023_P1_EXPERIENCE_VERIFICATION.md`; production authentication, server persistence, delegated grants, real Benchmark, and AI execution remain explicitly outside this local release.
+
 ## Global Constraints
 
 - Use the complete `TMUA 2023 Paper 1`: exactly 20 questions and a 75-minute duration.
