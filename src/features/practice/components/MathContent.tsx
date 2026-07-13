@@ -1,0 +1,76 @@
+import katex from "katex";
+import type {
+  InlineRun,
+  QuestionBlock,
+} from "../content/types.js";
+
+function renderMath(tex: string, displayMode: boolean): string {
+  try {
+    return katex.renderToString(tex, {
+      displayMode,
+      throwOnError: false,
+      strict: "warn",
+      trust: false,
+      output: "htmlAndMathml",
+    });
+  } catch {
+    return "";
+  }
+}
+
+function InlineContent({ run }: { run: InlineRun }) {
+  if (run.kind === "text") {
+    return <>{run.value}</>;
+  }
+
+  const html = renderMath(run.tex, false);
+  return html.length > 0 ? (
+    <span
+      className="math-inline"
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  ) : (
+    <code className="math-fallback">{run.tex}</code>
+  );
+}
+
+function BlockContent({ block }: { block: QuestionBlock }) {
+  if (block.kind === "paragraph") {
+    return (
+      <p>
+        {block.runs.map((run, index) => (
+          <InlineContent key={index} run={run} />
+        ))}
+      </p>
+    );
+  }
+
+  if (block.kind === "display-math") {
+    const html = renderMath(block.tex, true);
+    return html.length > 0 ? (
+      <div
+        className="math-display"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    ) : (
+      <pre className="math-fallback">{block.tex}</pre>
+    );
+  }
+
+  return (
+    <figure className="question-figure">
+      <img src={block.src} alt={block.alt} />
+      {block.caption !== undefined && <figcaption>{block.caption}</figcaption>}
+    </figure>
+  );
+}
+
+export function MathContent({ blocks }: { blocks: readonly QuestionBlock[] }) {
+  return (
+    <div className="math-content">
+      {blocks.map((block, index) => (
+        <BlockContent key={index} block={block} />
+      ))}
+    </div>
+  );
+}
