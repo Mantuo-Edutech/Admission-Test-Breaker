@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q06",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 6,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "6   Given that\n\n                                log 2 20\n                               ³log 5 x dx ൌ log 2 M\n                                  2\n\n\n    what is the value of M ?\n\n    A   4\n\n    B   15\n\n    C   16\n\n    D   20\n\n    E   25\n\n    F   100\n\n    G 10 000\n\n\n\n\n                                             8"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Given that\n\n                                log 2 20\n                               ³log 5 x dx ൌ log 2 M\n                                  2\n\n\n    what is the value of M ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "4"
+    },
+    {
+      "label": "B",
+      "rawText": "15"
+    },
+    {
+      "label": "C",
+      "rawText": "16"
+    },
+    {
+      "label": "D",
+      "rawText": "20"
+    },
+    {
+      "label": "E",
+      "rawText": "25"
+    },
+    {
+      "label": "F",
+      "rawText": "100"
+    },
+    {
+      "label": "G",
+      "rawText": "10 000"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We calculate the integral and use the laws of logarithms; we obtain\n                         Z log2 20\n                                              \u0002 1 2 \u0003log2 20\n                                     x dx =     2 x log 5\n                                                        2\n                          log2 5\n                                         = 12 (log2 20)2 − 12 (log2 5)2\n                                         = 12 (log2 20)2 − (log2 5)2\n                                                                       \u0001\n\n                                         = 21 (log2 4 + log2 5)2 − (log2 5)2\n                                                                               \u0001\n\n                                         = 21 (2 + log2 5)2 − (log2 5)2\n                                                                        \u0001\n\n                                         = 12 4 + 4 log2 5 + (log2 5)2 − (log2 5)2\n                                                                                     \u0001\n\n                                         = 12 (4 + 4 log2 5)\n                                         = 2 + 2 log2 5\n                                         = log2 4 + log2 25\n                                         = log2 100\n\nso the answer is option F.\n\n\n\n\nVersion 1.0, July 2023                                                                   Page 8"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

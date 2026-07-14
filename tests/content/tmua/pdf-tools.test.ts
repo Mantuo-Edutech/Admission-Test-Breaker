@@ -4,6 +4,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import {
+  extractPdfPages,
   inspectPdf,
   parsePdfInfo,
   type PdfToolDependencies,
@@ -100,5 +101,18 @@ describe("PDF inspection", () => {
     await expect(
       inspectPdf(fixture.path, "Tmua/fixture.pdf", dependencies),
     ).rejects.toThrow(/Poppler.*pdfinfo/i);
+  });
+});
+
+describe("PDF page extraction", () => {
+  it("preserves layout text and physical page numbers", async () => {
+    const dependencies: PdfToolDependencies = {
+      execFile: async () => ({ stdout: "Page one  \r\n\fPage two\r\n\f" }),
+    };
+
+    await expect(extractPdfPages("/tmp/source.pdf", dependencies)).resolves.toEqual([
+      { page: 1, layoutText: "Page one" },
+      { page: 2, layoutText: "Page two" },
+    ]);
   });
 });

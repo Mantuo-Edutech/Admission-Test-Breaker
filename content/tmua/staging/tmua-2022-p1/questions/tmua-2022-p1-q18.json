@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "18   It is given that\n\n                                           f (x) ൌ x 2(x – 1)2 (x – 2)\n\n                                           g (x) ൌ – p (x – q)2 (x – r)2\n\n     where p, q and r are positive and q < r\n\n     Find the set of values of q and r that guarantees the greatest number of distinct real solutions of\n     the equation f (x) ൌ g (x) for all p.\n\n     A   q < 1 and r < 1\n\n     B   q < 1 and 1 < r < 2\n\n     C   q < 1 and r > 2\n\n     D   1 < q < 2 and 1 < r < 2\n\n     E   1 < q < 2 and r > 2\n\n     F   q > 2 and r > 2\n\n\n\n\n                                                   20"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "It is given that\n\n                                           f (x) ൌ x 2(x – 1)2 (x – 2)\n\n                                           g (x) ൌ – p (x – q)2 (x – r)2\n\n     where p, q and r are positive and q < r\n\n     Find the set of values of q and r that guarantees the greatest number of distinct real solutions of\n     the equation f (x) ൌ g (x) for all p."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "q < 1 and r < 1"
+    },
+    {
+      "label": "B",
+      "rawText": "q < 1 and 1 < r < 2"
+    },
+    {
+      "label": "C",
+      "rawText": "q < 1 and r > 2"
+    },
+    {
+      "label": "D",
+      "rawText": "1 < q < 2 and 1 < r < 2"
+    },
+    {
+      "label": "E",
+      "rawText": "1 < q < 2 and r > 2"
+    },
+    {
+      "label": "F",
+      "rawText": "q > 2 and r > 2"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The equation f(x) = g(x) is a polynomial equation with degree 5, so has at most 5 distinct real\nsolutions; we wish there to be 5 such solutions for all values of p.\nWe would have fewer than 5 distinct real solutions if we either have a square factor of the form\n(x − a)2 for some a, or if the graph of y = f(x) − g(x) has fewer than four turning (stationary)\npoints, or if this graph has a minimum point above the x-axis or a maximum point below it, for\nthen it would not cross the x-axis 5 times.\nLet us write\n                   h(x) = f(x) − g(x) = x2 (x − 1)2 (x − 2) + p(x − q)2 (x − r)2\n\nWe can try expanding and differentiating this, but that looks horrible. Let us think about the\nabove description, though, remembering that there need to be 5 distinct real solutions for all\nvalues of p.\nThe graph of y = f(x) = x2 (x − 1)2 (x − 2) intersects the x-axis at x = 0 (where it is tangent to\nthe axis, because it is a double root), x = 1 (likewise) and x = 2, and it is positive when x > 2\nand negative or zero when x < 2, so the graph looks like this:\n\n\n\n\n                                               1    2\n\n\nThe graph of y = g(x) = −p(x − q)2 (x − r)2 has two points of intersection with the x-axis, one\nat x = q and one at x = r, and at both of these points, the graph is tangent to the axis. (In\nthe case q = r, there is just one point of tangency.) The graph is entirely below or touching the\nx-axis as we are given that p > 0. It looks like this:\n\n\n\n\n                                           q        r\n\n\nIf r > 2, then the graph of y = g(x) will entirely miss one of the “valleys” of y = f(x) if p is\nlarge, as it will if r < 1; in this case, there would be at most three points of intersection for\n\n\nVersion 1.0, July 2023                                                                    Page 21\n\f\nTest of Mathematics for University Admission, 2022 Paper 1 Solutions\n\n\nlarge p. So we must have 1 < r < 2. If 1 < q < r, then it will miss the left valley for large\nenough p, so we must have 0 < q < 1 and 1 < r < 2. In this case, the graph of y = g(x) must\nintersect both valleys twice as g(1) < 0:\n\n\n\n\nThis sketch shows four points of intersection, and we are looking for five. But the graph of\ny = f(x) tends to −∞ as x tends to −∞ far faster that y = g(x), regardless of the value of p,\nas y = f(x) is a quintic but y = g(x) is only a quartic. So there will always be another point of\nintersection with x < 0.\nHence the correct answer is option B.\n\nNote that there is actually a small simplification in the above argument. We showed that we\ncannot have 1 < q < r and deduced that we must have 0 < q < 1. But what about the possibility\nq = 1? In that case, there would be a double root at x = 1, and so there would not be five distinct\nroots, hence we cannot have q = 1. But what about r? We showed that we cannot have r > 2 or\nr < 1. If r = 1, we have the same problem, but what about r = 2 and 0 < q < 1? In this case,\nit is still true that the equation has five distinct real solutions for all positive p, as x = 2 is only\na single root of f(x) = 0. So the full set is actually q < 1 and 1 < r ≤ 2.\n\n\n\n\nVersion 1.0, July 2023                                                                         Page 22"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        21,
+        22
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

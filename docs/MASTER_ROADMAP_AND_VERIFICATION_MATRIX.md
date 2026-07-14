@@ -94,6 +94,7 @@
 | G1 Types | 严格 TypeScript | `pnpm typecheck` | P0 |
 | G2 Unit | 领域 reducer、授权、事件、投影、计时 | `pnpm test -- tests/features tests/platform` | P0 |
 | G3 Content | schema、题数、答案、来源和 revision | `pnpm verify:tmua-corpus` + content tests | P0 |
+| G3b Extraction | PDF 页级证据、题目 bundle、答案/解析关联、非发布边界 | `pnpm verify:tmua-extractions` | P0 |
 | G4 Architecture | 禁止依赖、模块公开 API、私密/公开域隔离 | `pnpm verify:architecture` | P0 |
 | G4b Feature claims | 机器可读用户结果、证据路径、命令与限制 | `pnpm verify:features` | P0 |
 | G5 Integration | 存储、RLS、AI provider、Webhook/MCP 合约 | 分阶段加入 `pnpm test:integration` | P0 |
@@ -111,7 +112,7 @@
 | --- | --- | --- | --- |
 | 母产品契约 | 已建立并进入自动执行 | 产品宪章、系统架构、路线图、`pnpm verify:architecture` | 后续模块加入时持续扩展禁止依赖规则 |
 | TMUA 原始资料 | Slice A 已交付：96 路径 / 46 canonical sources / 18 papers / 360 shells | `content/tmua/`、`docs/content/TMUA_CORPUS_REPORT.md`、`pnpm verify:tmua-corpus` | 其余 340 道题的结构化、逐题核验与发布 |
-| Content tooling | inventory、官方补充、build 与独立 corpus gate 已完成 | `src/content/tmua/`、schemas、CLI tests | 贡献审核、许可治理和内容发布后台 |
+| Content tooling | inventory、官方补充、build、PDF 题目提取与独立 gate 已完成 | `src/content/tmua/`、schemas、CLI tests、2022 Paper 1 的 20 题 staging bundle | 公式/图形审核工作台、贡献审核、许可治理和发布后台 |
 | Reference content | TMUA 2023 Paper 1 共 20 题已人工核验 | `src/features/practice/content/tmua-2023-p1.ts` | 后续解释和更多试卷 |
 | Reference Journey Web | 本地预览闭环与多考试前门已完成 | 四考试首页、TMUA 中心、完整 20 题、提交、结果；四组视口与 a11y 契约 | 生产身份与服务端持久化后再公开收集真实数据 |
 | Learner Space / Events | 核心领域契约已接入练习 | 稳定 ID、所有权、追加式事件、顺序、幂等、本地恢复和结果投影 | PostgreSQL 账本、RLS 与后台投影 |

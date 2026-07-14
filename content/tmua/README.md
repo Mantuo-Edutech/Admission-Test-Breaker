@@ -8,6 +8,7 @@ This directory contains generated metadata and reviewed taxonomy files. Raw PDFs
 - `official-resource-registry.json` records the four official 2022/2023 worked-solution supplements separately from that baseline.
 - `past-papers/index.json` contains 18 paper records.
 - `questions/index.json` contains 360 stable question shells.
+- `staging/<paper-id>/` contains directly importable, machine-extracted question revisions that remain blocked from publication until review.
 - `public-summary.json` is the only filesystem-safe aggregate intended for the website.
 - `taxonomy/` contains reviewed knowledge, skill, and error vocabularies.
 
@@ -27,11 +28,15 @@ Then use:
 pnpm tmua:inventory
 pnpm tmua:sync-official
 pnpm tmua:build
+pnpm tmua:extract-paper --paper-id tmua-2022-p1 --raw-dir "/path/to/Tmua"
 pnpm verify:tmua-files
 pnpm verify:tmua-taxonomy
 pnpm verify:tmua-corpus
+pnpm verify:tmua-extractions
 ```
 
 `tmua:sync-official` is the only command allowed to use the network. It accepts only HTTPS resources on `uat-wp.s3.eu-west-2.amazonaws.com`. The main `pnpm verify` gate remains offline.
 
 Generated writes are atomic. Persisted records must never contain an absolute machine path, parent traversal, or Windows path separator.
+
+`tmua:extract-paper` reads the question paper, answer key and worked-solution PDF without changing them. It writes one upload-ready `bundle.json`, one JSON revision per question and an extraction report. The source page is preserved in full, while the stem and options are best-effort parsed for editing. Formula fidelity is always marked `needs_review`; extraction can never make a question publishable.

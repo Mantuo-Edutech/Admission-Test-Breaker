@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q05",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 5,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "5   The terms x n of a sequence follow the rule\n\n                                                     xn + p\n                                           xn +1 ൌ\n                                                     xn + q\n\n    where p and q are real numbers.\n\n    Given that x 1 ൌ 3, x 2 ൌ 5, and x 3 ൌ 7, find the value of x 4\n\n    A   –5\n\n    B   –5\n            51\n    C   –\n            7\n            15\n    D   –\n             2\n            23\n    E   –\n            3\n    F   –9\n\n    G   – 11\n\n    H   – 13\n\n\n\n\n                                                     7"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The terms x n of a sequence follow the rule\n\n                                                     xn + p\n                                           xn +1 ൌ\n                                                     xn + q\n\n    where p and q are real numbers.\n\n    Given that x 1 ൌ 3, x 2 ൌ 5, and x 3 ൌ 7, find the value of x 4"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "–5"
+    },
+    {
+      "label": "B",
+      "rawText": "–5\n            51"
+    },
+    {
+      "label": "C",
+      "rawText": "–\n            7\n            15"
+    },
+    {
+      "label": "D",
+      "rawText": "–\n             2\n            23"
+    },
+    {
+      "label": "E",
+      "rawText": "–\n            3"
+    },
+    {
+      "label": "F",
+      "rawText": "–9"
+    },
+    {
+      "label": "G",
+      "rawText": "– 11"
+    },
+    {
+      "label": "H",
+      "rawText": "– 13"
+    }
+  ],
+  "correctAnswer": "H",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We write out the formulae for x2 , x3 and x4 in terms of p and q, using the values x1 = 3, x2 = 5\nand x3 = 7:\n\n\n                                                        3+p\n                                     n=1:         5=\n                                                        3+q\n                                                        5+p\n                                     n=2:         7=\n                                                        5+q\n                                                        7+p\n                                     n=3:        x4 =\n                                                        7+q\n\nMultiplying the first equation by 3 + q and the second by 5 + q gives\n\n                                        15 + 5q = 3 + p\n                                        35 + 7q = 5 + p\n\nThese are simultaneous equations for p and q; subtracting gives 20 + 2q = 2 so q = −9 and\ntherefore p = −33.\nSubstituting these into the expression for x4 gives\n                                              7 − 33\n                                       x4 =          = 13\n                                               7−9\nso the answer is option H.\n\n\n\n\nVersion 1.0, July 2023                                                                    Page 7"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        7
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

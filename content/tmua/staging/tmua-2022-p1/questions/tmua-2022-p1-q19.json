@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "19   Circle C1 is defined as x 2 + y 2 ൌ 25\n\n     A second circle C2 has radius 4 and centre (a, b) where\n\n                                         – 2  a  2 and – 3  b  3\n\n     If the centre of C2 is equally likely to be located anywhere within the given range, what is the\n     probability that C2 intersects C1 ?\n\n          1\n     A\n          25\n          9\n     B\n          25\n          16\n     C\n          25\n          6–ʌ\n     D\n           6\n          16 – ʌ\n     E\n            24\n          24 – ʌ\n     F\n            24\n\n\n\n\n                                                  21"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Circle C1 is defined as x 2 + y 2 ൌ 25\n\n     A second circle C2 has radius 4 and centre (a, b) where\n\n                                         – 2  a  2 and – 3  b  3\n\n     If the centre of C2 is equally likely to be located anywhere within the given range, what is the\n     probability that C2 intersects C1 ?\n\n          1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "25\n          9"
+    },
+    {
+      "label": "B",
+      "rawText": "25\n          16"
+    },
+    {
+      "label": "C",
+      "rawText": "25\n          6–ʌ"
+    },
+    {
+      "label": "D",
+      "rawText": "6\n          16 – ʌ"
+    },
+    {
+      "label": "E",
+      "rawText": "24\n          24 – ʌ"
+    },
+    {
+      "label": "F",
+      "rawText": "24"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Note first that the region where the centre of C2 may lie is entirely within the circle C1 , as\n22 + 32 = 13 < 25.\nAs the radius of C1 is 5, the circle C2 will intersect C1 if and only if the centre of C2 is at least\na distance of 1 from the origin (the centre of C1 ). This is because in this case, a line from the\ncentre of C1 passing through the centre of C2 will reach the circle C1 before (or as) it reaches\nthe circle C2 , but a line from the centre of C1 in the opposite direction will reach C2 first. If,\nthough, the centre of C2 is at a distance of less than 1 from the origin, the furthest point on C2\nfrom the origin will be at a distance of less than 1 + 4 = 5 from the origin, so C2 lies entirely\ninside C1 .\nThe area of the allowed (a, b) region is 4 × 6 = 24. The (a, b) region where the circles do not\nintersect is a circle of radius 1, with area π, lying entirely within the allowed region, so the\nregion where the circles do intersect has area 24 − π.\n                                        24 − π\nThus the probability of intersection is        , which is option F.\n                                          24\n\n\n\n\nVersion 1.0, July 2023                                                                      Page 23"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        23
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

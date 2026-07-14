@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q04",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 4,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "4\n                                             6\n\n                                      r                          r+3\n\n    These sectors of circles are similar.\n\n    The arc length of the smaller sector is 6.\n\n    The difference between the areas of the sectors is 21.\n\n    Find the positive difference between the perimeters of the sectors.\n\n    A   4.5\n\n    B   7\n\n    C   8\n\n    D   9\n\n    E   10.5\n\n    F   14\n\n    G 15\n\n\n\n\n                                                 6"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "6\n\n                                      r                          r+3\n\n    These sectors of circles are similar.\n\n    The arc length of the smaller sector is 6.\n\n    The difference between the areas of the sectors is 21.\n\n    Find the positive difference between the perimeters of the sectors."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "4.5"
+    },
+    {
+      "label": "B",
+      "rawText": "7"
+    },
+    {
+      "label": "C",
+      "rawText": "8"
+    },
+    {
+      "label": "D",
+      "rawText": "9"
+    },
+    {
+      "label": "E",
+      "rawText": "10.5"
+    },
+    {
+      "label": "F",
+      "rawText": "14"
+    },
+    {
+      "label": "G",
+      "rawText": "15"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Suppose that the angle of the sector is θ (in radians). Then the arc length of the smaller sector\nis rθ and the area is 12 r2 θ.\nFor the smaller sector, this gives rθ = 6, so θ = 6/r. Therefore the area is 12 r2 (6/r) = 3r.\nLikewise, since the larger sector has the same angle as the smaller one, its arc length is (r+3)(6/r)\nand its area is 21 (r + 3)2 (6/r) = 3(r + 3)2 /r.\nWe are told the difference between the areas, so we have\n\n                                       3(r + 3)2\n                                                 − 3r = 21.\n                                           r\nMultiplying this by r and rearranging gives\n\n                                     3(r + 3)2 − 3r2 − 21r = 0\n\nwhich we can expand and simplify to give\n\n                                           −3r + 27 = 0,\n\nso r = 9.\nWe can now calculate the arc length of the larger sector; it is (r + 3)(6/r) = 8.\nTherefore, the perimeter of the first sector is 2r + 6 = 24 and the perimeter of the second sector\nis 2(r + 3) + 8 = 32. The positive difference is 8, which is option C.\n\n\n\n\nVersion 1.0, July 2023                                                                        Page 6"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

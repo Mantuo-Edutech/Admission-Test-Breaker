@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "20   n is the number of points of intersection of the graphs\n\n                                      y ൌ | x 2 – a 2 | and y ൌ a 2 | x – 1|\n\n     where a is a real number.\n\n     What is the smallest value of n that is not possible?\n\n     A   nൌ1\n\n     B   nൌ2\n\n     C   nൌ3\n\n     D   nൌ4\n\n     E   nൌ5\n\n\n\n\n                                                   22"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "n is the number of points of intersection of the graphs\n\n                                      y ൌ | x 2 – a 2 | and y ൌ a 2 | x – 1|\n\n     where a is a real number.\n\n     What is the smallest value of n that is not possible?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "nൌ1"
+    },
+    {
+      "label": "B",
+      "rawText": "nൌ2"
+    },
+    {
+      "label": "C",
+      "rawText": "nൌ3"
+    },
+    {
+      "label": "D",
+      "rawText": "nൌ4"
+    },
+    {
+      "label": "E",
+      "rawText": "nൌ5"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The graph y = |x2 − a2 | intersects the x-axis at ±a. The graph y = a2 |x − 1| intersects the\nx-axis at x = 1. Replacing a with −a does not change the equations, so we may as well assume\nthat a ≥ 0.\nHere is a sketch of the graphs with a = 2; we note that the graphs always intersect at x = 0\n(and y = a2 there):\n\n\n\n\n                                         −2         1 2\n\n\nWe immediately see that when a > 1, there will be 4 points of intersection: the graph y = a2 |x−1|\nis below the “hill” at (1, 0), so intersects it twice as x moves away from x = 1, and then intersects\nthe quadratic y = x2 − a2 for some x < −a and some x > a as the quadratic grows faster than\nthe linear y = −a2 (x − 1) or y = a2 (x − 1) in these regions.\nWhat happens when a = 1? In this case, the equations become y = |x2 − 1| and y = x − 1. The\nderivative of the quadratic y = x2 − 1 is 2x, so the gradient is just over 2 when x is just over 1.\n(There is no gradient at the point x = 1.) Therefore the graph looks like this:\n\n\n\n\n                                           −1        1\n\n\nWe see that we have lost one point of intersection: there are now only three points of intersection.\nWhat happens if 0 < a < 1? Now the vertex of y = a2 |x − 1| will be to the right of x = a, where\nthe quadratic meets the axis, and so there will be no points of intersection there – the quadratic\ngrows too quickly to meet the linear function for x > 1. (To be more precise: the gradient of\nthe quadratic to the right of x = a is 2x > 2a > a2 , so the quadratic will be growing faster than\nthe linear function.)\nOn the left of x = a, we have one point of intersection to the left of x = −a as before. There\nis also a point of intersection at (0, a2 ). Since this is the vertex of the quadratic, the linear\n\n\nVersion 1.0, July 2023                                                                      Page 24\n\f\nTest of Mathematics for University Admission, 2022 Paper 1 Solutions\n\n\nfunction must go below the “hill”, giving another two points of intersection, yielding four points\nof intersection in total:\n\n\n\n\n                                       −1           1\n\n\nThere is one remaining case to consider: a = 0. In this case, the graphs become y = |x2 | = x2\nand y = 0, and these graphs have a single point of intersection at the origin.\nTherefore the possible numbers of points of intersection are 1, 3 and 4, and the smallest number\nnot possible is n = 2, option B.\n\n\n\n\nVersion 1.0, July 2023                                                                    Page 25"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        24,
+        25
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "9   This question is about pairs of functions f and g that satisfy\n\n                                            f (x) – g (x) ൌ 2 sin x\n\n                                               f (x) g (x) ൌ cos2 x\n\n    for all real numbers x .\n\n    Across all solutions for f (x), what is the minimum value that f (x) attains for any x ?\n\n    A   –1 –    2\n\n    B   –1 –    2\n\n    C   –0\n\n    D   –1\n\n    E   –2\n\n    F   –3\n\n    G –4\n\n\n\n\n                                                  11"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "This question is about pairs of functions f and g that satisfy\n\n                                            f (x) – g (x) ൌ 2 sin x\n\n                                               f (x) g (x) ൌ cos2 x\n\n    for all real numbers x .\n\n    Across all solutions for f (x), what is the minimum value that f (x) attains for any x ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "–1 –    2"
+    },
+    {
+      "label": "B",
+      "rawText": "–1 –    2"
+    },
+    {
+      "label": "C",
+      "rawText": "–0"
+    },
+    {
+      "label": "D",
+      "rawText": "–1"
+    },
+    {
+      "label": "E",
+      "rawText": "–2"
+    },
+    {
+      "label": "F",
+      "rawText": "–3"
+    },
+    {
+      "label": "G",
+      "rawText": "–4"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "It may well require reading this question a couple of times to understand what it is asking! It\nseems like we need to find all possible functions f(x) and g(x), then for each one, to find the\nminimum value that f(x) takes, and then to find the minimum of all the minima. There might,\nof course, be some shortcuts!\n\nLet us try to solve the equations to find f(x). The first equation rearranges to give g(x) =\nf(x) − 2 sin x, so we can substitute this into the second equation to give\n\n                                  f(x)(f(x) − 2 sin x) = cos2 x.\n\nThis is a quadratic in f(x), so we can rearrange it into the standard form and use the quadratic\nformula:\n                                (f(x))2 − (2 sin x)f(x) − cos2 x = 0,\nhence\n                                               p\n                                     2 sin x ±  4 sin2 x + 4 cos2 x\n                              f(x) =\n                                                   2\n                                   = sin x ± 1.\n\nSo there are two possible functions f(x), namely f(x) = sin x + 1 and f(x) = sin x − 1. The\nminimum value taken by these for any x is 0 for the first function and −2 for the second, so the\nminimum possible value is −2, which is option E.\n\n\n\n\nVersion 1.0, July 2023                                                                  Page 11"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q01",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 1,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "1   How many real solutions are there to the equation\n\n                                       2 cos4 ș – 5 cos2 ș + 3 ൌ 0\n\n    in the interval 0  ș  2ʌ ?\n\n    A   1\n\n    B   2\n\n    C   3\n\n    D   4\n\n    E   5\n\n    F   6\n\n    G 7\n\n    H 8\n\n\n\n\n                                                3"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "How many real solutions are there to the equation\n\n                                       2 cos4 ș – 5 cos2 ș + 3 ൌ 0\n\n    in the interval 0  ș  2ʌ ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "1"
+    },
+    {
+      "label": "B",
+      "rawText": "2"
+    },
+    {
+      "label": "C",
+      "rawText": "3"
+    },
+    {
+      "label": "D",
+      "rawText": "4"
+    },
+    {
+      "label": "E",
+      "rawText": "5"
+    },
+    {
+      "label": "F",
+      "rawText": "6"
+    },
+    {
+      "label": "G",
+      "rawText": "7"
+    },
+    {
+      "label": "H",
+      "rawText": "8"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "This equation is a quadratic in cos2 θ, and it factorises as\n\n                                  (2 cos2 θ − 3)(cos2 θ − 1) = 0.\n\nTherefore 2 cos4 θ − 5 cos2 θ + 3 = 0 if and only if cos2 θ = 23 or cos2 θ = 1. The first equation\nhas no real solutions, so the original equation holds if and only if cos2 θ = 1, or cos θ = ±1.\ncos θ = 1 has the solutions θ = 0 and θ = 2π in the interval 0 ≤ θ ≤ 2π, and cos θ = −1 has the\nsolution θ = π in this interval.\nTherefore the original equation has three real solutions in the interval, and the correct option\nis C.\n\n\n\n\nVersion 1.0, July 2023                                                                     Page 3"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        3
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

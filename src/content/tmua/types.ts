@@ -132,6 +132,78 @@ export interface QuestionRecord {
   audit: AuditStamp;
 }
 
+export interface QuestionSourceReference {
+  role: "question" | "answer_key" | "worked_solution";
+  sourceId: string;
+  portablePath: string;
+  sha256: string;
+  pages: number[];
+}
+
+export interface ExtractedQuestionOption {
+  label: string;
+  rawText: string;
+}
+
+export interface QuestionRevisionDraft {
+  schemaVersion: 1;
+  id: string;
+  revision: 1;
+  exam: "TMUA";
+  paperId: string;
+  edition: string;
+  paper: 1 | 2;
+  questionNumber: number;
+  sourceType: "past_paper";
+  contentStage: "extracted";
+  reviewStatus: "needs_review";
+  sourcePage: {
+    format: "pdf-layout-text";
+    rawText: string;
+  };
+  stem: {
+    format: "pdf-layout-text";
+    rawText: string;
+  };
+  options: ExtractedQuestionOption[];
+  correctAnswer: string;
+  solution: {
+    format: "pdf-layout-text";
+    rawText: string;
+  };
+  sourceRefs: QuestionSourceReference[];
+  knowledgeTags: string[];
+  skillTags: string[];
+  errorTypes: string[];
+  extraction: {
+    generatedAt: string;
+    generatedBy: "tmua-extraction-cli";
+    method: "poppler-layout-text";
+    mathFidelity: "needs_review";
+    warnings: string[];
+  };
+}
+
+export interface QuestionImportBundle {
+  schemaVersion: 1;
+  bundleType: "question-import";
+  id: string;
+  exam: "TMUA";
+  paperId: string;
+  edition: string;
+  paper: 1 | 2;
+  generatedAt: string;
+  generatedBy: "tmua-extraction-cli";
+  sourceDocumentIds: {
+    question: string;
+    answerKey: string;
+    workedSolution: string;
+  };
+  questionCount: number;
+  publishableQuestionCount: 0;
+  questions: QuestionRevisionDraft[];
+}
+
 export interface TmuaPublicSummary {
   schemaVersion: 1;
   exam: "TMUA";

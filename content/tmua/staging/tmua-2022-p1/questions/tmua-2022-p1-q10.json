@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q10",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 10,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "10   A sequence of translations is applied to the graph of y ൌ x 3\n\n     Which of the following graphs could be the result of this sequence of translations?\n\n           I      y ൌ x 3 – 3 x 2 + 9 x – 27\n\n           II     y ൌ x 3 – 9 x 2 + 27 x – 3\n\n           III    y ൌ 27 x 3 – 9 x 2 + x – 3\n\n     A   none of them\n\n     B   I only\n\n     C   II only\n\n     D   III only\n\n     E   I and II only\n\n     F   I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                                  12"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A sequence of translations is applied to the graph of y ൌ x 3\n\n     Which of the following graphs could be the result of this sequence of translations?\n\n           I      y ൌ x 3 – 3 x 2 + 9 x – 27\n\n           II     y ൌ x 3 – 9 x 2 + 27 x – 3\n\n           III    y ൌ 27 x 3 – 9 x 2 + x – 3"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Any sequence of translations is equivalent to a translation in the x-direction followed by a\ntranslation in the y-direction (where the translations could be zero).\nTranslating y = x3 by a in the x-direction gives the graph\n\n                            y = (x − a)3 = x3 − 3ax2 + 3a2 x − a3 .\n\nThen translating by b in the y-direction gives the graph\n\n                                y = x3 − 3ax2 + 3a2 x − a3 + b.\n\nNow considering the three graphs:\n\nI    The x2 term is −3x2 , which means we require a = 1. Substituting this into the above\n     general equation gives y = x3 − 3x2 + 3x − 1 + b, which does not match the given equation.\n     So this is not a translation of y = x3 .\n\nII   The x2 term is −9x2 , so we require a = 3. Substituting gives y = x3 − 9x2 + 27x − 27 + b,\n     which matches the equation with b = 24, so this is a translation of y = x3 .\n\nIII The x3 term does not match here, so this is not a translation of y = x3 .\n\nTherefore the answer is option C, II only.\n\n\n\n\nVersion 1.0, July 2023                                                                 Page 12"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

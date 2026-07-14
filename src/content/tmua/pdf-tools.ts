@@ -13,6 +13,11 @@ export interface RawPdfFacts {
   openingText: string;
 }
 
+export interface ExtractedPdfPage {
+  page: number;
+  layoutText: string;
+}
+
 export interface PdfToolDependencies {
   execFile(
     file: string,
@@ -104,4 +109,32 @@ export async function inspectPdf(
     metadata,
     openingText,
   };
+}
+
+export async function extractPdfPages(
+  absolutePath: string,
+  dependencies: PdfToolDependencies = defaultDependencies,
+): Promise<ExtractedPdfPage[]> {
+  let output: string;
+  try {
+    const result = await dependencies.execFile("pdftotext", [
+      "-layout",
+      absolutePath,
+      "-",
+    ]);
+    output = String(result.stdout).replace(/\r\n?/gu, "\n");
+  } catch (error) {
+    throw popplerError("pdftotext", error);
+  }
+
+  const chunks = output.split("\f");
+  if (chunks.at(-1)?.trim() === "") chunks.pop();
+  if (chunks.length === 0) {
+    throw new Error("pdftotext returned no PDF pages");
+  }
+
+  return chunks.map((layoutText, index) => ({
+    page: index + 1,
+    layoutText: layoutText.replace(/[ \t]+$/gmu, "").trimEnd(),
+  }));
 }

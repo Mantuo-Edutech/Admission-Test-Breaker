@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "3   Given the following statements about a function f\n\n        •       f Ǝ (x) ൌ a for all x\n        •       f (0) ൌ 1, f (1) ൌ 2\n                  1\n        •       ³ f ( x) dx ൌ 1\n                 0\n\n\n    find the value of a.\n\n    A   –6\n\n    B   –3\n\n    C   –2\n\n    D       2\n\n    E       3\n\n    F       6\n\n\n\n\n                                                5"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Given the following statements about a function f\n\n        •       f Ǝ (x) ൌ a for all x\n        •       f (0) ൌ 1, f (1) ൌ 2\n                  1\n        •       ³ f ( x) dx ൌ 1\n                 0\n\n\n    find the value of a."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "–6"
+    },
+    {
+      "label": "B",
+      "rawText": "–3"
+    },
+    {
+      "label": "C",
+      "rawText": "–2"
+    },
+    {
+      "label": "D",
+      "rawText": "2"
+    },
+    {
+      "label": "E",
+      "rawText": "3"
+    },
+    {
+      "label": "F",
+      "rawText": "6"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Using the first statement, f 00 (x) = a for all x, we can integrate to get f 0 (x) = ax + b for some\nconstant b, and a further integration gives f(x) = 21 ax2 + bx + c for some constant c.\nThe second statement then yields f(0) = c = 1 and f(1) = 12 a + b + 1 = 2, so a + 2b = 2.\nFinally, we can now use the third statement:\n                               Z 1\n                                                                \u00031\n                                   f(x) dx = 16 ax3 + 12 bx2 + x 0\n                                            \u0002\n                                  0\n                                            = 16 a + 12 b + 1\n                                            =1\n\nso that a + 3b = 0.\nCombining the simultaneous equations\n\n                                            a + 2b = 2\n                                            a + 3b = 0\n\ngives b = −2 and a = 6, so the correct answer is option F.\n\n\n\n\nVersion 1.0, July 2023                                                                       Page 5"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

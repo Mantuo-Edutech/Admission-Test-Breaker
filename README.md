@@ -29,6 +29,8 @@ Admission Test Breaker 是由满托发起的开源英国大学入学考试学习
 
 当前真正结构化、逐题核验并可在线作答的历年真题仍只有 TMUA 2023 Paper 1 的 20 道题。可以体验 CAIE 9709/9231 或 Pearson IAL Mathematics/Further Mathematics 的精确资格与模块档案，以及完整计时、数学公式与图形、作答/改答/标记、手机与 iPad 导航、本地自动保存与恢复、明确提交和证据型结果页。练习与档案都绑定到当前设备的稳定 Guest Space；结果页不会伪造课程覆盖、群体 Benchmark、官方分数或 AI 解释。
 
+PDF 数据化流水线已经开始运行。TMUA 2022 Paper 1 已生成第一套 20 题结构化 staging bundle，包含页级原文、题干与选项草稿、官方答案、Worked Solution、来源哈希和页码。该 bundle 可以直接导入后续审核后台，但全部保持 `needs_review`，不会因为自动提取而进入在线题库。
+
 当前版本仍是本地预览：练习数据只保存在当前浏览器。5 题原创体验、8 题诊断、免费诊断报告和 2027 院校专业注册表尚未实现；生产级账户、PostgreSQL/RLS、多租户隔离和学生逐项授权也尚未接入，因此不能用于收集真实学生数据。原始 PDF 保持只读且不进入 Git。
 
 ## 本地运行
@@ -46,10 +48,11 @@ pnpm dev
 pnpm verify
 ```
 
-该命令依次检查架构边界、机器可读功能主张与证据、TMUA corpus 一致性、全部测试、严格 TypeScript 和生产构建。功能验证层也可以单独运行：
+该命令依次检查架构边界、机器可读功能主张与证据、TMUA corpus 一致性、PDF 提取 staging、全部测试、严格 TypeScript 和生产构建。功能验证层也可以单独运行：
 
 ```bash
 pnpm verify:features
+pnpm verify:tmua-extractions
 ```
 
 ## 文档层级

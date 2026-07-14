@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q07",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 7,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "7   Find the finite area enclosed between the line y ൌ 0 and the curve y ൌ x 2 – 4| x | – 12\n\n        128\n    A\n         3\n        176\n    B\n         3\n         256\n    C\n          3\n    D   108\n\n    E   144\n\n    F   288\n\n\n\n\n                                                  9"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the finite area enclosed between the line y ൌ 0 and the curve y ൌ x 2 – 4| x | – 12\n\n        128"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "3\n        176"
+    },
+    {
+      "label": "B",
+      "rawText": "3\n         256"
+    },
+    {
+      "label": "C",
+      "rawText": "3"
+    },
+    {
+      "label": "D",
+      "rawText": "108"
+    },
+    {
+      "label": "E",
+      "rawText": "144"
+    },
+    {
+      "label": "F",
+      "rawText": "288"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The line y = 0 is the x-axis; the curve y = x2 − 4|x| − 12 is y = x2 − 4x − 12 when x ≥ 0 and\ny = x2 + 4x − 12 when x < 0, so we sketch these two graphs.\nThe curve y = x2 − 4x − 12 = (x − 6)(x + 2) intersects the x-axis at x = 6 and x = −2 and\nhas a minimum half way between them, at x = 2. Since we are only considering x ≥ 0, we only\nobserve one point of intersection with the x-axis.\nSimilarly, the curve y = x2 + 4x − 12 = (x + 6)(x − 2) intersects the x-axis at x = −6 and x = 2\nand has a minimum half way between them, at x = −2. Since we are only considering x < 0,\nwe only observe one point of intersection with the x-axis.\nWe can now sketch the graph, where we have shown the parts of the quadratics we are not using\nas dashed lines:\n\n\n\n\n                                   −6    −2         2       6\n\n\nThe finite area enclosed between the x-axis and the graph y = x2 − 4|x| − 12 is therefore between\nx = −6 and x = 6. We could calculate the integrals of the two quadratics, one between x = −6\nand x = 0 and the other between x = 0 and x = 6. But we could also notice that the graph is\nsymmetrical about the y-axis, so we only need to find one of these and double the answer.\nWe have\n                         Z 6                 \u0014 3            \u00156\n                               2              x      2\n                            x − 4x − 12 dx =     − 2x − 12x\n                          0                    3             0\n                                                63\n                                              =    − 2 × 62 − 12 × 6 − 0\n                                                3\n                                              = −72\n     R6  2\nso   −6 x − 4|x| − 12 dx = −144 and the (unsigned) area required is 144, which is option E.\n\n\n\n\nVersion 1.0, July 2023                                                                    Page 9"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

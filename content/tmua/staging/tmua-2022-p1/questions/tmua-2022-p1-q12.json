@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q12",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 12,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "12   A family of quadratic curves is given by\n\n                                                       2\n                                                    k     k2\n                                       yk ൌ 2 §¨ x – ·¸ +    + 4k + 3\n                                               ©    2¹    2\n\n     where k is any real number and yk is a function of x.\n\n     All these curves are sketched, and the point with the lowest y-coordinate among all the\n     curves yk is (a, b).\n\n     Find the value of a + b\n\n     A   –1\n\n     B   –3\n\n     C   –5\n\n     D   –7\n\n     E   –9\n\n\n\n\n                                                  14"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A family of quadratic curves is given by\n\n                                                       2\n                                                    k     k2\n                                       yk ൌ 2 §¨ x – ·¸ +    + 4k + 3\n                                               ©    2¹    2\n\n     where k is any real number and yk is a function of x.\n\n     All these curves are sketched, and the point with the lowest y-coordinate among all the\n     curves yk is (a, b).\n\n     Find the value of a + b"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "–1"
+    },
+    {
+      "label": "B",
+      "rawText": "–3"
+    },
+    {
+      "label": "C",
+      "rawText": "–5"
+    },
+    {
+      "label": "D",
+      "rawText": "–7"
+    },
+    {
+      "label": "E",
+      "rawText": "–9"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The formula for yk is given in completed square form. The minimum of the graph y = a(x−b)2 +c,\nwhere a > 0, is at x = b, and the minimum value is c. Therefore the minimum of yk is at\n         2\n( k2 , k2 + 4k + 3).\n                                                                           2\nThe minimum of the minimum y-coordinates is therefore the minimum of k2 + 4k + 3. We can\nfind this minimum either by completing the square or by differentiating this with respect to k.\nLet us use the latter method here as it seems simpler. We have\n\n                                  d k2\n                                     \u0012             \u0013\n                                           + 4k + 3 = k + 4\n                                  dk 2\n\nso the minimum occurs at k = −4, giving\n\n                                k k2\n                              \u0012               \u0013\n                                  ,   + 4k + 3 = (−2, −5)\n                                2 2\n\nso that a + b = −7, which is option D.\n\n\n\n\nVersion 1.0, July 2023                                                                 Page 14"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

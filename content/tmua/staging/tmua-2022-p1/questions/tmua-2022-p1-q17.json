@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "17\n\n\n                                                         –x2 + 6x – 5\n                            x–1\n\n\n\n                                                                     30°\n\n     Find the complete set of values of x for which there are two non-congruent triangles with the\n     side lengths and angle as shown in the diagram.\n\n     A   1<x<3\n\n     B   1<x<4\n\n     C   1<x<5\n\n     D   3<x<4\n\n     E   3<x<5\n\n     F   4<x<5\n\n\n\n\n                                                 19"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "–x2 + 6x – 5\n                            x–1\n\n\n\n                                                                     30°\n\n     Find the complete set of values of x for which there are two non-congruent triangles with the\n     side lengths and angle as shown in the diagram."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "1<x<3"
+    },
+    {
+      "label": "B",
+      "rawText": "1<x<4"
+    },
+    {
+      "label": "C",
+      "rawText": "1<x<5"
+    },
+    {
+      "label": "D",
+      "rawText": "3<x<4"
+    },
+    {
+      "label": "E",
+      "rawText": "3<x<5"
+    },
+    {
+      "label": "F",
+      "rawText": "4<x<5"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We first require that the lengths shown are both positive; x − 1 > 0 if and only if x > 1, and\n−x2 + 6x − 5 = −(x − 5)(x − 1) > 0 if and only if 1 < x < 5. Therefore we require 1 < x < 5 to\nensure both lengths are positive.\nThere are two non-congruent triangles when the side marked x − 1 can be drawn in two config-\nurations:\n\n\n\n                                x−1                       −x2 + 6x − 5\n\n\n                                                                        30◦\n\n\n\n\nThis is possible when the following conditions are satisfied:\n\n•     x − 1 < −x2 + 6x − 5 (otherwise one of the possibilities will lie to the right of the 30◦ angle\n      in the above diagram)\n\n•     x − 1 > (−x2 + 6x − 5) sin 30◦ (so that the distance from the end of the −x2 + 6x − 5 side\n      to the base is at least x − 1, making it possible to form a triangle; if there is equality here,\n      then the dashed circle will be tangent to the base of the triangle, and there will only be\n      one possibility)\n\nThe first inequality rearranges as x2 − 5x + 4 < 0, which factorises as (x − 1)(x − 4) < 0, giving\n1 < x < 4.\nThe second equality, using sin 30◦ = 21 , becomes 2x − 2 > −x2 + 6x − 5, so x2 − 4x + 3 > 0. This\nfactorises as (x − 1)(x − 3) > 0, so x < 1 or x > 3.\nRequiring both of these inequalities to hold thus gives 3 < x < 4; this also satifies the positivity\nrequirement we started with (1 < x < 5), and so the answer is option D.\n\n\n\n\nVersion 1.0, July 2023                                                                       Page 20"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        20
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

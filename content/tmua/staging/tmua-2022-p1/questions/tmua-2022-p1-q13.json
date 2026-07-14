@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13   Given that\n\n                                    § a 3 + 2 · § 2 – b3 · ൌ   2\n                                    ¨          ¸¨        ¸\n                                    ©       b3 ¹ © a 3   ¹\n\n     where a and b are real numbers, what is the least value of a b ?\n\n     A    – 2\n\n     B   –     2\n\n     C    –2 2\n\n     D   –2 2\n\n                2\n     E    –\n               2\n                2\n     F   –\n               2\n               1\n     G    –2   6\n\n\n               1\n     H – 26\n\n\n\n\n                                                  15"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Given that\n\n                                    § a 3 + 2 · § 2 – b3 · ൌ   2\n                                    ¨          ¸¨        ¸\n                                    ©       b3 ¹ © a 3   ¹\n\n     where a and b are real numbers, what is the least value of a b ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "– 2"
+    },
+    {
+      "label": "B",
+      "rawText": "–     2"
+    },
+    {
+      "label": "C",
+      "rawText": "–2 2"
+    },
+    {
+      "label": "D",
+      "rawText": "–2 2\n\n                2"
+    },
+    {
+      "label": "E",
+      "rawText": "–\n               2\n                2"
+    },
+    {
+      "label": "F",
+      "rawText": "–\n               2\n               1"
+    },
+    {
+      "label": "G",
+      "rawText": "–2   6\n\n\n               1"
+    },
+    {
+      "label": "H",
+      "rawText": "– 26"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Expanding the brackets gives\n                                                   4            √\n                                    2 − a3 b3 +           −2=       2\n                                                  a3 b3\nso\n                                         4        3 3\n                                                        √\n                                              − a  b  =   2.\n                                        a3 b3\nWe are interested in the least possible value of ab, so we can find the least possible value    3 3\n                                                                          3 3    4\n                                                                                          √ of a b\nand take the cube root. Let us simplify the notation by writing x = a b , so x − x = 2.\n                                               √                                       √\nMultiplying by x gives a quadratic: 4 − x2 = 2 x, which we can rearrange to x2 + 2 x − 4 = 0\nand then solve using the quadratic formula:\n                             √     √              √      √\n                           − 2 ± 2 + 16        − 2±3 2            √       √\n                      x=                    =                = −2 2 or 2.\n                                  2                   2\n                                                                            √        3\nSince we want the least possible value of x, we take    √ x = a3 b3 = −2 2 = −2 2 , and so the\n                                      3 1       1\nminimum possible value of ab is (−2 2 ) 3 = −2 2 = − 2, which is option A.\n\n\n\n\nVersion 1.0, July 2023                                                                     Page 15"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

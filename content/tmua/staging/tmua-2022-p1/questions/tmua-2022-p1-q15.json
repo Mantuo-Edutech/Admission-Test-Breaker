@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "15   A rectangle is drawn in the region enclosed by the curves p and q , where\n\n                                                 p (x) ൌ 8 – 2 x 2\n\n                                                 q (x) ൌ x 2 – 2\n\n     such that the sides of the rectangle are parallel to the x- and y-axes.\n\n     What is the maximum possible area of the rectangle?\n\n          26\n     A\n          9\n          52\n     B\n           9\n          4 6\n     C\n           3\n          8 6\n     D\n           3\n     E    4 2\n\n     F   8 2\n\n          20 10\n     G\n            9\n          40 10\n     H\n            9\n\n\n\n\n                                                   17"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A rectangle is drawn in the region enclosed by the curves p and q , where\n\n                                                 p (x) ൌ 8 – 2 x 2\n\n                                                 q (x) ൌ x 2 – 2\n\n     such that the sides of the rectangle are parallel to the x- and y-axes.\n\n     What is the maximum possible area of the rectangle?\n\n          26"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "9\n          52"
+    },
+    {
+      "label": "B",
+      "rawText": "9\n          4 6"
+    },
+    {
+      "label": "C",
+      "rawText": "3\n          8 6"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "4 2"
+    },
+    {
+      "label": "F",
+      "rawText": "8 2\n\n          20 10"
+    },
+    {
+      "label": "G",
+      "rawText": "9\n          40 10"
+    },
+    {
+      "label": "H",
+      "rawText": "9"
+    }
+  ],
+  "correctAnswer": "H",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We start by sketching the two curves to understand what is happening.\nThey are both quadratics. The graph of p has a maximum at (0, 8) and the graph of q has a\nminimum at (0, −2). They are both symmetrical about x = 0 (the y-axis). It might\n                                                                           p     be helpful\nto work out where they intersect: 8 − 2x2 = x2 − 2 implies 3x2 = 10, so x = 10/3, which is\nbetween 1.5 and 2.\nThe graph of these therefore looks like this, where we have also sketched a possible rectangle.\nFor the rectangle to have the maximum possible area, it must meet the graphs at all four of its\nvertices.\n\n\n\n\n                                                                                     p\nLet us suppose that the vertices of the rectangle are at x = ±a, with 0 < a < 10/3. Then\nthe width of the rectangle is 2a and the height is (8 − 2a2 ) − (a2 − 2) = 10 − 3a2 . Therefore the\narea is A = 2a(10 − 3a2 ) = 20a − 6a3 .\nTo maximise this area, we differentiate with respect to a to find the stationary points. We have\n                                         dA\n                                            = 20 − 18a2\n                                         da\n                                                                                    √\nso there is a stationary point when this is zero, at a = ± 20/18 = ± 10/9 = ± 13 10. We are\n                                                           p         p\n                                                             p\nonly interested in the positive value, and this is less than 10/3, so it is a valid value for our\nproblem. We therefore obtain the maximum possible area: it is\n\n                                     A = 2a(10 − 3a2 )\n                                           √\n                                       = 32 10(10 − 31 × 10)\n                                           √\n                                       = 23 10 × 23 × 10\n                                            √\n                                          40 10\n                                       =\n                                            9\nwhich is option H.\n\n\n\n\nVersion 1.0, July 2023                                                                     Page 18"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -74,11 +74,31 @@ claims:
       - test
       - build
 
+  - id: pdf-to-question-staging
+    status: verified
+    statement: >-
+      A read-only TMUA question paper, official answer key and worked-solution
+      PDF can be converted into source-linked per-question JSON revisions and
+      an upload-ready bundle without making auto-extracted content publishable.
+    artifacts:
+      - src/content/tmua/extract-cli.ts
+      - src/content/tmua/extraction.ts
+      - src/content/tmua/verify-extractions.ts
+      - content/tmua/schemas/question-revision.schema.json
+      - content/tmua/staging/tmua-2022-p1/bundle.json
+      - tests/content/tmua/extraction.test.ts
+      - tests/content/tmua/extraction-staging.test.ts
+    automatedChecks:
+      - verify:tmua-extractions
+      - test
+      - typecheck
+
 boundaries:
   - This is local browser persistence, not production server storage.
   - Guest Space isolation is not a claim of production multi-tenant RLS.
   - Course coverage and practical readiness remain unknown until reviewed mappings and learner evidence exist.
   - Only TMUA 2023 Paper 1 currently has 20 published online questions.
+  - TMUA 2022 Paper 1 is structured staging data and remains unavailable to students until formula, figure and content review is complete.
   - No benchmark, admissions probability, paid interpretation or AI recommendation is produced by this feature.
 
 manualChecks:

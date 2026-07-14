@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16   The solutions to 7 x 4 – 6 x 2 + 1 ൌ 0 are േ cos ș and േ cos ȕ.\n\n     Which one of the following equations has solutions േ sin ș and േ sin ȕ ?\n\n     A   7x4 – 8x2 – 5 ൌ 0\n\n     B   7x4 – 8x2 + 2 ൌ 0\n\n     C   7x4 – 6x2 – 2 ൌ 0\n\n     D   7x4 – 6x2 + 1 ൌ 0\n\n     E   7x4 + 6x2 – 1 ൌ 0\n\n     F   7x4 + 6x2 + 5 ൌ 0\n\n\n\n\n                                                  18"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The solutions to 7 x 4 – 6 x 2 + 1 ൌ 0 are േ cos ș and േ cos ȕ.\n\n     Which one of the following equations has solutions േ sin ș and േ sin ȕ ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "7x4 – 8x2 – 5 ൌ 0"
+    },
+    {
+      "label": "B",
+      "rawText": "7x4 – 8x2 + 2 ൌ 0"
+    },
+    {
+      "label": "C",
+      "rawText": "7x4 – 6x2 – 2 ൌ 0"
+    },
+    {
+      "label": "D",
+      "rawText": "7x4 – 6x2 + 1 ൌ 0"
+    },
+    {
+      "label": "E",
+      "rawText": "7x4 + 6x2 – 1 ൌ 0"
+    },
+    {
+      "label": "F",
+      "rawText": "7x4 + 6x2 + 5 ൌ 0"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The given quartic can be thought of as a quadratic in x2 , and as such it has roots\n                                         √                 √\n                                2    6 ± 62 − 28      3± 2\n                               x =                 =          .\n                                          14              7\nSince the roots of the quartic are ± cos θ and ± cos β, these x2 values are the values of cos2 θ\nand cos2 β (in some order).\nNow sin2 θ = 1 − cos2 θ and sin2 β = 1 − cos2 β, so\n                                                   √      √\n                                2       2       3± 2   4∓ 2\n                             sin θ, sin β = 1 −      =      .\n                                                  7      7\n                                    √                 √\nTherefore the equations x2 − 4+7 2 = 0 and x2 − 4−7 2 = 0 have solutions ± sin θ and ± sin β\n(again, in some order, and x is not the same as earlier). It follows that the product of these two\nequations will have the four solutions ± sin θ and ± sin β; this equation is\n                                         √ !              √ !\n                                 2   4+ 2         2   4− 2\n                               x −               x −              = 0.\n                                        7                7\n\nTo obtain the form given in the question, we first expand the brackets:\n                                √         √ !            √        √\n                      4     4 +   2   4 −   2     2   4+ 2 4− 2\n                    x −             +           x +          ·        =0\n                               7         7              7        7\n\nthen perform the surd calculations to give\n                                            8    2\n                                        x4 − x2 + = 0.\n                                            7    7\nFinally, multiplying by 7 gives 7x2 − 8x + 2 = 0, which is option B.\n\n\n\n\nVersion 1.0, July 2023                                                                    Page 19"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -11,6 +11,7 @@ const schemaFiles = [
   "official-resource",
   "paper",
   "question",
+  "question-revision",
   "public-summary",
   "taxonomy",
 ] as const;

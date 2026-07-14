@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11   Evaluate\n\n                            100\n\n                            ¦ log ( 3 )\n                            n =1\n                                   10\n                                        1– n\n\n\n\n\n     A   – 4950 log10 3\n\n     B   4950 log10 3\n\n     C   – 5050 log10 3\n\n     D   5050 log10 3\n\n     E   1 – 4950 log10 3\n\n     F   1 + 4950 log10 3\n\n     G 1 – 5050 log10 3\n\n     H 1 + 5050 log10 3\n\n\n\n\n                                               13"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Evaluate\n\n                            100\n\n                            ¦ log ( 3 )\n                            n =1\n                                   10\n                                        1– n"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "– 4950 log10 3"
+    },
+    {
+      "label": "B",
+      "rawText": "4950 log10 3"
+    },
+    {
+      "label": "C",
+      "rawText": "– 5050 log10 3"
+    },
+    {
+      "label": "D",
+      "rawText": "5050 log10 3"
+    },
+    {
+      "label": "E",
+      "rawText": "1 – 4950 log10 3"
+    },
+    {
+      "label": "F",
+      "rawText": "1 + 4950 log10 3"
+    },
+    {
+      "label": "G",
+      "rawText": "1 – 5050 log10 3"
+    },
+    {
+      "label": "H",
+      "rawText": "1 + 5050 log10 3"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We have log10 (31−n ) = (1 − n) log10 3, so the sum becomes\n                            100\n                            X                       100\n                                                    X\n                                  log10 (31−n ) =         (1 − n) log10 3\n                            n=1                     n=1\n                                                               100\n                                                               X\n                                               = (log10 3)           (1 − n).\n                                                               n=1\n\n\nNow the sum is actually an arithmetic series: expanding it gives\n                         100\n                         X\n                               (1 − n) = 0 + (−1) + (−2) + · · · + (−99)\n                         n=1\n                                      = −(0 + 1 + 2 + · · · + 99)\n                                      = − 12 × 100(0 + 99 × 1)\n                                      = −4950\n\nusing the formula Sn = 12 n(2a + (n − 1)d). (Alternatively, we could have used the formula for\nthe nth triangular number.)\nTherefore the original sum evaluates to −4950 log10 3, which is option A.\n\n\n\n\nVersion 1.0, July 2023                                                                Page 13"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "8   A geometric sequence has first term a and common ratio r, where a and r are positive integers\n    and r is greater than 1.\n\n    The sum of the first n terms of this sequence is denoted by Sn\n\n    It is given that the terms of the sequence satisfy\n\n                                              S30 – S20 ൌ k S10\n\n    for some positive integer k.\n\n    What is the smallest possible value of k ?\n\n    A   210\n\n    B   220\n\n    C   230\n\n           210\n    D\n         210 – 1\n\n    E   210 (210 – 1)\n\n\n\n\n                                                  10"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A geometric sequence has first term a and common ratio r, where a and r are positive integers\n    and r is greater than 1.\n\n    The sum of the first n terms of this sequence is denoted by Sn\n\n    It is given that the terms of the sequence satisfy\n\n                                              S30 – S20 ൌ k S10\n\n    for some positive integer k.\n\n    What is the smallest possible value of k ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "210"
+    },
+    {
+      "label": "B",
+      "rawText": "220"
+    },
+    {
+      "label": "C",
+      "rawText": "230\n\n           210"
+    },
+    {
+      "label": "D",
+      "rawText": "210 – 1"
+    },
+    {
+      "label": "E",
+      "rawText": "210 (210 – 1)"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "a(rn − 1)\nWe use the formula Sn =             and substitute into the given equation:\n                            r−1\n\n                             a(r30 − 1) a(r20 − 1)    a(r10 − 1)\n                                       −           =k            .\n                               r−1        r−1           r−1\nWe can multiply this by r − 1 and divide by a to get\n\n                               (r30 − 1) − (r20 − 1) = k(r10 − 1),\n\nwhich simplifies to\n                                     r30 − r20 = k(r10 − 1).\nFactorising the left hand side then gives\n\n                                   r20 (r10 − 1) = k(r10 − 1);\n\nas r > 1, we can divide by r10 − 1 6= 0 to obtain\n\n                                            r20 = k.\n\nTherefore k is a 20th power, and the smallest possible value is 220 , which is option B.\n\n\n\n\nVersion 1.0, July 2023                                                                     Page 10"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        10
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

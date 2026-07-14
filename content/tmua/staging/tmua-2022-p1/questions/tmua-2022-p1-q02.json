@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p1-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "2   Find the complete set of values of p for which the equation\n\n                                    x2 – 2px + y2 – 6y – p2 + 8p + 9 ൌ 0\n\n    describes a circle in the x y-plane.\n\n               9\n    A   p<–\n               4\n    B   0<p<4\n\n    C   –1 < p < 9\n\n    D   p < 0 or p > 4\n\n    E   p < –1 or p > 9\n\n    F   all real values of p\n\n\n\n\n                                                  4"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the complete set of values of p for which the equation\n\n                                    x2 – 2px + y2 – 6y – p2 + 8p + 9 ൌ 0\n\n    describes a circle in the x y-plane.\n\n               9"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "p<–\n               4"
+    },
+    {
+      "label": "B",
+      "rawText": "0<p<4"
+    },
+    {
+      "label": "C",
+      "rawText": "–1 < p < 9"
+    },
+    {
+      "label": "D",
+      "rawText": "p < 0 or p > 4"
+    },
+    {
+      "label": "E",
+      "rawText": "p < –1 or p > 9"
+    },
+    {
+      "label": "F",
+      "rawText": "all real values of p"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We rewrite the equation in completed square form: starting from\n\n                             x2 − 2px + y 2 − 6y − p2 + 8p + 9 = 0,\n\ncompleting the square for x and y gives\n\n                         (x − p)2 − p2 + (y − 3)2 − 9 − p2 + 8p + 9 = 0,\n\nwhich simplifies to\n                               (x − p)2 + (y − 3)2 − 2p2 + 8p = 0\nor\n                                 (x − p)2 + (y − 3)2 = 2p2 − 8p.\nThis is a circle with squared radius 2p2 − 8p, as long as this is positive. So the complete set of\nvalues of p for which the original equation describes a circle in the xy-plane are those for which\n2p2 − 8p > 0, or p2 − 4p > 0.\nThis factorises as p(p − 4) > 0, which has roots p = 0, p = 4, so the complete set of values in\nwhich the inequality holds is p < 0 or p > 4, which is option D.\n\n\n\n\nVersion 1.0, July 2023                                                                     Page 4"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-14T04:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

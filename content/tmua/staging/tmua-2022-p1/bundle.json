@@ -1,0 +1,1948 @@
+{
+  "schemaVersion": 1,
+  "bundleType": "question-import",
+  "id": "tmua-2022-p1-extraction-v1",
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p1",
+  "edition": "2022",
+  "paper": 1,
+  "generatedAt": "2026-07-14T04:00:00.000Z",
+  "generatedBy": "tmua-extraction-cli",
+  "sourceDocumentIds": {
+    "question": "tmua-official-2022-paper-1",
+    "answerKey": "tmua-official-2022-answer-key",
+    "workedSolution": "tmua-official-2022-paper-1-worked-solutions"
+  },
+  "questionCount": 20,
+  "publishableQuestionCount": 0,
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q01",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 1,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "1   How many real solutions are there to the equation\n\n                                       2 cos4 ș – 5 cos2 ș + 3 ൌ 0\n\n    in the interval 0  ș  2ʌ ?\n\n    A   1\n\n    B   2\n\n    C   3\n\n    D   4\n\n    E   5\n\n    F   6\n\n    G 7\n\n    H 8\n\n\n\n\n                                                3"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "How many real solutions are there to the equation\n\n                                       2 cos4 ș – 5 cos2 ș + 3 ൌ 0\n\n    in the interval 0  ș  2ʌ ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "1"
+        },
+        {
+          "label": "B",
+          "rawText": "2"
+        },
+        {
+          "label": "C",
+          "rawText": "3"
+        },
+        {
+          "label": "D",
+          "rawText": "4"
+        },
+        {
+          "label": "E",
+          "rawText": "5"
+        },
+        {
+          "label": "F",
+          "rawText": "6"
+        },
+        {
+          "label": "G",
+          "rawText": "7"
+        },
+        {
+          "label": "H",
+          "rawText": "8"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "This equation is a quadratic in cos2 θ, and it factorises as\n\n                                  (2 cos2 θ − 3)(cos2 θ − 1) = 0.\n\nTherefore 2 cos4 θ − 5 cos2 θ + 3 = 0 if and only if cos2 θ = 23 or cos2 θ = 1. The first equation\nhas no real solutions, so the original equation holds if and only if cos2 θ = 1, or cos θ = ±1.\ncos θ = 1 has the solutions θ = 0 and θ = 2π in the interval 0 ≤ θ ≤ 2π, and cos θ = −1 has the\nsolution θ = π in this interval.\nTherefore the original equation has three real solutions in the interval, and the correct option\nis C.\n\n\n\n\nVersion 1.0, July 2023                                                                     Page 3"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            3
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q02",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 2,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "2   Find the complete set of values of p for which the equation\n\n                                    x2 – 2px + y2 – 6y – p2 + 8p + 9 ൌ 0\n\n    describes a circle in the x y-plane.\n\n               9\n    A   p<–\n               4\n    B   0<p<4\n\n    C   –1 < p < 9\n\n    D   p < 0 or p > 4\n\n    E   p < –1 or p > 9\n\n    F   all real values of p\n\n\n\n\n                                                  4"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the complete set of values of p for which the equation\n\n                                    x2 – 2px + y2 – 6y – p2 + 8p + 9 ൌ 0\n\n    describes a circle in the x y-plane.\n\n               9"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "p<–\n               4"
+        },
+        {
+          "label": "B",
+          "rawText": "0<p<4"
+        },
+        {
+          "label": "C",
+          "rawText": "–1 < p < 9"
+        },
+        {
+          "label": "D",
+          "rawText": "p < 0 or p > 4"
+        },
+        {
+          "label": "E",
+          "rawText": "p < –1 or p > 9"
+        },
+        {
+          "label": "F",
+          "rawText": "all real values of p"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We rewrite the equation in completed square form: starting from\n\n                             x2 − 2px + y 2 − 6y − p2 + 8p + 9 = 0,\n\ncompleting the square for x and y gives\n\n                         (x − p)2 − p2 + (y − 3)2 − 9 − p2 + 8p + 9 = 0,\n\nwhich simplifies to\n                               (x − p)2 + (y − 3)2 − 2p2 + 8p = 0\nor\n                                 (x − p)2 + (y − 3)2 = 2p2 − 8p.\nThis is a circle with squared radius 2p2 − 8p, as long as this is positive. So the complete set of\nvalues of p for which the original equation describes a circle in the xy-plane are those for which\n2p2 − 8p > 0, or p2 − 4p > 0.\nThis factorises as p(p − 4) > 0, which has roots p = 0, p = 4, so the complete set of values in\nwhich the inequality holds is p < 0 or p > 4, which is option D.\n\n\n\n\nVersion 1.0, July 2023                                                                     Page 4"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q03",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 3,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "3   Given the following statements about a function f\n\n        •       f Ǝ (x) ൌ a for all x\n        •       f (0) ൌ 1, f (1) ൌ 2\n                  1\n        •       ³ f ( x) dx ൌ 1\n                 0\n\n\n    find the value of a.\n\n    A   –6\n\n    B   –3\n\n    C   –2\n\n    D       2\n\n    E       3\n\n    F       6\n\n\n\n\n                                                5"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Given the following statements about a function f\n\n        •       f Ǝ (x) ൌ a for all x\n        •       f (0) ൌ 1, f (1) ൌ 2\n                  1\n        •       ³ f ( x) dx ൌ 1\n                 0\n\n\n    find the value of a."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "–6"
+        },
+        {
+          "label": "B",
+          "rawText": "–3"
+        },
+        {
+          "label": "C",
+          "rawText": "–2"
+        },
+        {
+          "label": "D",
+          "rawText": "2"
+        },
+        {
+          "label": "E",
+          "rawText": "3"
+        },
+        {
+          "label": "F",
+          "rawText": "6"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Using the first statement, f 00 (x) = a for all x, we can integrate to get f 0 (x) = ax + b for some\nconstant b, and a further integration gives f(x) = 21 ax2 + bx + c for some constant c.\nThe second statement then yields f(0) = c = 1 and f(1) = 12 a + b + 1 = 2, so a + 2b = 2.\nFinally, we can now use the third statement:\n                               Z 1\n                                                                \u00031\n                                   f(x) dx = 16 ax3 + 12 bx2 + x 0\n                                            \u0002\n                                  0\n                                            = 16 a + 12 b + 1\n                                            =1\n\nso that a + 3b = 0.\nCombining the simultaneous equations\n\n                                            a + 2b = 2\n                                            a + 3b = 0\n\ngives b = −2 and a = 6, so the correct answer is option F.\n\n\n\n\nVersion 1.0, July 2023                                                                       Page 5"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q04",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 4,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "4\n                                             6\n\n                                      r                          r+3\n\n    These sectors of circles are similar.\n\n    The arc length of the smaller sector is 6.\n\n    The difference between the areas of the sectors is 21.\n\n    Find the positive difference between the perimeters of the sectors.\n\n    A   4.5\n\n    B   7\n\n    C   8\n\n    D   9\n\n    E   10.5\n\n    F   14\n\n    G 15\n\n\n\n\n                                                 6"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "6\n\n                                      r                          r+3\n\n    These sectors of circles are similar.\n\n    The arc length of the smaller sector is 6.\n\n    The difference between the areas of the sectors is 21.\n\n    Find the positive difference between the perimeters of the sectors."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "4.5"
+        },
+        {
+          "label": "B",
+          "rawText": "7"
+        },
+        {
+          "label": "C",
+          "rawText": "8"
+        },
+        {
+          "label": "D",
+          "rawText": "9"
+        },
+        {
+          "label": "E",
+          "rawText": "10.5"
+        },
+        {
+          "label": "F",
+          "rawText": "14"
+        },
+        {
+          "label": "G",
+          "rawText": "15"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Suppose that the angle of the sector is θ (in radians). Then the arc length of the smaller sector\nis rθ and the area is 12 r2 θ.\nFor the smaller sector, this gives rθ = 6, so θ = 6/r. Therefore the area is 12 r2 (6/r) = 3r.\nLikewise, since the larger sector has the same angle as the smaller one, its arc length is (r+3)(6/r)\nand its area is 21 (r + 3)2 (6/r) = 3(r + 3)2 /r.\nWe are told the difference between the areas, so we have\n\n                                       3(r + 3)2\n                                                 − 3r = 21.\n                                           r\nMultiplying this by r and rearranging gives\n\n                                     3(r + 3)2 − 3r2 − 21r = 0\n\nwhich we can expand and simplify to give\n\n                                           −3r + 27 = 0,\n\nso r = 9.\nWe can now calculate the arc length of the larger sector; it is (r + 3)(6/r) = 8.\nTherefore, the perimeter of the first sector is 2r + 6 = 24 and the perimeter of the second sector\nis 2(r + 3) + 8 = 32. The positive difference is 8, which is option C.\n\n\n\n\nVersion 1.0, July 2023                                                                        Page 6"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q05",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 5,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "5   The terms x n of a sequence follow the rule\n\n                                                     xn + p\n                                           xn +1 ൌ\n                                                     xn + q\n\n    where p and q are real numbers.\n\n    Given that x 1 ൌ 3, x 2 ൌ 5, and x 3 ൌ 7, find the value of x 4\n\n    A   –5\n\n    B   –5\n            51\n    C   –\n            7\n            15\n    D   –\n             2\n            23\n    E   –\n            3\n    F   –9\n\n    G   – 11\n\n    H   – 13\n\n\n\n\n                                                     7"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The terms x n of a sequence follow the rule\n\n                                                     xn + p\n                                           xn +1 ൌ\n                                                     xn + q\n\n    where p and q are real numbers.\n\n    Given that x 1 ൌ 3, x 2 ൌ 5, and x 3 ൌ 7, find the value of x 4"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "–5"
+        },
+        {
+          "label": "B",
+          "rawText": "–5\n            51"
+        },
+        {
+          "label": "C",
+          "rawText": "–\n            7\n            15"
+        },
+        {
+          "label": "D",
+          "rawText": "–\n             2\n            23"
+        },
+        {
+          "label": "E",
+          "rawText": "–\n            3"
+        },
+        {
+          "label": "F",
+          "rawText": "–9"
+        },
+        {
+          "label": "G",
+          "rawText": "– 11"
+        },
+        {
+          "label": "H",
+          "rawText": "– 13"
+        }
+      ],
+      "correctAnswer": "H",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We write out the formulae for x2 , x3 and x4 in terms of p and q, using the values x1 = 3, x2 = 5\nand x3 = 7:\n\n\n                                                        3+p\n                                     n=1:         5=\n                                                        3+q\n                                                        5+p\n                                     n=2:         7=\n                                                        5+q\n                                                        7+p\n                                     n=3:        x4 =\n                                                        7+q\n\nMultiplying the first equation by 3 + q and the second by 5 + q gives\n\n                                        15 + 5q = 3 + p\n                                        35 + 7q = 5 + p\n\nThese are simultaneous equations for p and q; subtracting gives 20 + 2q = 2 so q = −9 and\ntherefore p = −33.\nSubstituting these into the expression for x4 gives\n                                              7 − 33\n                                       x4 =          = 13\n                                               7−9\nso the answer is option H.\n\n\n\n\nVersion 1.0, July 2023                                                                    Page 7"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q06",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 6,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "6   Given that\n\n                                log 2 20\n                               ³log 5 x dx ൌ log 2 M\n                                  2\n\n\n    what is the value of M ?\n\n    A   4\n\n    B   15\n\n    C   16\n\n    D   20\n\n    E   25\n\n    F   100\n\n    G 10 000\n\n\n\n\n                                             8"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Given that\n\n                                log 2 20\n                               ³log 5 x dx ൌ log 2 M\n                                  2\n\n\n    what is the value of M ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "4"
+        },
+        {
+          "label": "B",
+          "rawText": "15"
+        },
+        {
+          "label": "C",
+          "rawText": "16"
+        },
+        {
+          "label": "D",
+          "rawText": "20"
+        },
+        {
+          "label": "E",
+          "rawText": "25"
+        },
+        {
+          "label": "F",
+          "rawText": "100"
+        },
+        {
+          "label": "G",
+          "rawText": "10 000"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We calculate the integral and use the laws of logarithms; we obtain\n                         Z log2 20\n                                              \u0002 1 2 \u0003log2 20\n                                     x dx =     2 x log 5\n                                                        2\n                          log2 5\n                                         = 12 (log2 20)2 − 12 (log2 5)2\n                                         = 12 (log2 20)2 − (log2 5)2\n                                                                       \u0001\n\n                                         = 21 (log2 4 + log2 5)2 − (log2 5)2\n                                                                               \u0001\n\n                                         = 21 (2 + log2 5)2 − (log2 5)2\n                                                                        \u0001\n\n                                         = 12 4 + 4 log2 5 + (log2 5)2 − (log2 5)2\n                                                                                     \u0001\n\n                                         = 12 (4 + 4 log2 5)\n                                         = 2 + 2 log2 5\n                                         = log2 4 + log2 25\n                                         = log2 100\n\nso the answer is option F.\n\n\n\n\nVersion 1.0, July 2023                                                                   Page 8"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            8
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q07",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 7,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "7   Find the finite area enclosed between the line y ൌ 0 and the curve y ൌ x 2 – 4| x | – 12\n\n        128\n    A\n         3\n        176\n    B\n         3\n         256\n    C\n          3\n    D   108\n\n    E   144\n\n    F   288\n\n\n\n\n                                                  9"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the finite area enclosed between the line y ൌ 0 and the curve y ൌ x 2 – 4| x | – 12\n\n        128"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "3\n        176"
+        },
+        {
+          "label": "B",
+          "rawText": "3\n         256"
+        },
+        {
+          "label": "C",
+          "rawText": "3"
+        },
+        {
+          "label": "D",
+          "rawText": "108"
+        },
+        {
+          "label": "E",
+          "rawText": "144"
+        },
+        {
+          "label": "F",
+          "rawText": "288"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The line y = 0 is the x-axis; the curve y = x2 − 4|x| − 12 is y = x2 − 4x − 12 when x ≥ 0 and\ny = x2 + 4x − 12 when x < 0, so we sketch these two graphs.\nThe curve y = x2 − 4x − 12 = (x − 6)(x + 2) intersects the x-axis at x = 6 and x = −2 and\nhas a minimum half way between them, at x = 2. Since we are only considering x ≥ 0, we only\nobserve one point of intersection with the x-axis.\nSimilarly, the curve y = x2 + 4x − 12 = (x + 6)(x − 2) intersects the x-axis at x = −6 and x = 2\nand has a minimum half way between them, at x = −2. Since we are only considering x < 0,\nwe only observe one point of intersection with the x-axis.\nWe can now sketch the graph, where we have shown the parts of the quadratics we are not using\nas dashed lines:\n\n\n\n\n                                   −6    −2         2       6\n\n\nThe finite area enclosed between the x-axis and the graph y = x2 − 4|x| − 12 is therefore between\nx = −6 and x = 6. We could calculate the integrals of the two quadratics, one between x = −6\nand x = 0 and the other between x = 0 and x = 6. But we could also notice that the graph is\nsymmetrical about the y-axis, so we only need to find one of these and double the answer.\nWe have\n                         Z 6                 \u0014 3            \u00156\n                               2              x      2\n                            x − 4x − 12 dx =     − 2x − 12x\n                          0                    3             0\n                                                63\n                                              =    − 2 × 62 − 12 × 6 − 0\n                                                3\n                                              = −72\n     R6  2\nso   −6 x − 4|x| − 12 dx = −144 and the (unsigned) area required is 144, which is option E.\n\n\n\n\nVersion 1.0, July 2023                                                                    Page 9"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q08",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 8,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "8   A geometric sequence has first term a and common ratio r, where a and r are positive integers\n    and r is greater than 1.\n\n    The sum of the first n terms of this sequence is denoted by Sn\n\n    It is given that the terms of the sequence satisfy\n\n                                              S30 – S20 ൌ k S10\n\n    for some positive integer k.\n\n    What is the smallest possible value of k ?\n\n    A   210\n\n    B   220\n\n    C   230\n\n           210\n    D\n         210 – 1\n\n    E   210 (210 – 1)\n\n\n\n\n                                                  10"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A geometric sequence has first term a and common ratio r, where a and r are positive integers\n    and r is greater than 1.\n\n    The sum of the first n terms of this sequence is denoted by Sn\n\n    It is given that the terms of the sequence satisfy\n\n                                              S30 – S20 ൌ k S10\n\n    for some positive integer k.\n\n    What is the smallest possible value of k ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "210"
+        },
+        {
+          "label": "B",
+          "rawText": "220"
+        },
+        {
+          "label": "C",
+          "rawText": "230\n\n           210"
+        },
+        {
+          "label": "D",
+          "rawText": "210 – 1"
+        },
+        {
+          "label": "E",
+          "rawText": "210 (210 – 1)"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "a(rn − 1)\nWe use the formula Sn =             and substitute into the given equation:\n                            r−1\n\n                             a(r30 − 1) a(r20 − 1)    a(r10 − 1)\n                                       −           =k            .\n                               r−1        r−1           r−1\nWe can multiply this by r − 1 and divide by a to get\n\n                               (r30 − 1) − (r20 − 1) = k(r10 − 1),\n\nwhich simplifies to\n                                     r30 − r20 = k(r10 − 1).\nFactorising the left hand side then gives\n\n                                   r20 (r10 − 1) = k(r10 − 1);\n\nas r > 1, we can divide by r10 − 1 6= 0 to obtain\n\n                                            r20 = k.\n\nTherefore k is a 20th power, and the smallest possible value is 220 , which is option B.\n\n\n\n\nVersion 1.0, July 2023                                                                     Page 10"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q09",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 9,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "9   This question is about pairs of functions f and g that satisfy\n\n                                            f (x) – g (x) ൌ 2 sin x\n\n                                               f (x) g (x) ൌ cos2 x\n\n    for all real numbers x .\n\n    Across all solutions for f (x), what is the minimum value that f (x) attains for any x ?\n\n    A   –1 –    2\n\n    B   –1 –    2\n\n    C   –0\n\n    D   –1\n\n    E   –2\n\n    F   –3\n\n    G –4\n\n\n\n\n                                                  11"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "This question is about pairs of functions f and g that satisfy\n\n                                            f (x) – g (x) ൌ 2 sin x\n\n                                               f (x) g (x) ൌ cos2 x\n\n    for all real numbers x .\n\n    Across all solutions for f (x), what is the minimum value that f (x) attains for any x ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "–1 –    2"
+        },
+        {
+          "label": "B",
+          "rawText": "–1 –    2"
+        },
+        {
+          "label": "C",
+          "rawText": "–0"
+        },
+        {
+          "label": "D",
+          "rawText": "–1"
+        },
+        {
+          "label": "E",
+          "rawText": "–2"
+        },
+        {
+          "label": "F",
+          "rawText": "–3"
+        },
+        {
+          "label": "G",
+          "rawText": "–4"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "It may well require reading this question a couple of times to understand what it is asking! It\nseems like we need to find all possible functions f(x) and g(x), then for each one, to find the\nminimum value that f(x) takes, and then to find the minimum of all the minima. There might,\nof course, be some shortcuts!\n\nLet us try to solve the equations to find f(x). The first equation rearranges to give g(x) =\nf(x) − 2 sin x, so we can substitute this into the second equation to give\n\n                                  f(x)(f(x) − 2 sin x) = cos2 x.\n\nThis is a quadratic in f(x), so we can rearrange it into the standard form and use the quadratic\nformula:\n                                (f(x))2 − (2 sin x)f(x) − cos2 x = 0,\nhence\n                                               p\n                                     2 sin x ±  4 sin2 x + 4 cos2 x\n                              f(x) =\n                                                   2\n                                   = sin x ± 1.\n\nSo there are two possible functions f(x), namely f(x) = sin x + 1 and f(x) = sin x − 1. The\nminimum value taken by these for any x is 0 for the first function and −2 for the second, so the\nminimum possible value is −2, which is option E.\n\n\n\n\nVersion 1.0, July 2023                                                                  Page 11"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q10",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 10,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "10   A sequence of translations is applied to the graph of y ൌ x 3\n\n     Which of the following graphs could be the result of this sequence of translations?\n\n           I      y ൌ x 3 – 3 x 2 + 9 x – 27\n\n           II     y ൌ x 3 – 9 x 2 + 27 x – 3\n\n           III    y ൌ 27 x 3 – 9 x 2 + x – 3\n\n     A   none of them\n\n     B   I only\n\n     C   II only\n\n     D   III only\n\n     E   I and II only\n\n     F   I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                                  12"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A sequence of translations is applied to the graph of y ൌ x 3\n\n     Which of the following graphs could be the result of this sequence of translations?\n\n           I      y ൌ x 3 – 3 x 2 + 9 x – 27\n\n           II     y ൌ x 3 – 9 x 2 + 27 x – 3\n\n           III    y ൌ 27 x 3 – 9 x 2 + x – 3"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Any sequence of translations is equivalent to a translation in the x-direction followed by a\ntranslation in the y-direction (where the translations could be zero).\nTranslating y = x3 by a in the x-direction gives the graph\n\n                            y = (x − a)3 = x3 − 3ax2 + 3a2 x − a3 .\n\nThen translating by b in the y-direction gives the graph\n\n                                y = x3 − 3ax2 + 3a2 x − a3 + b.\n\nNow considering the three graphs:\n\nI    The x2 term is −3x2 , which means we require a = 1. Substituting this into the above\n     general equation gives y = x3 − 3x2 + 3x − 1 + b, which does not match the given equation.\n     So this is not a translation of y = x3 .\n\nII   The x2 term is −9x2 , so we require a = 3. Substituting gives y = x3 − 9x2 + 27x − 27 + b,\n     which matches the equation with b = 24, so this is a translation of y = x3 .\n\nIII The x3 term does not match here, so this is not a translation of y = x3 .\n\nTherefore the answer is option C, II only.\n\n\n\n\nVersion 1.0, July 2023                                                                 Page 12"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q11",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 11,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "11   Evaluate\n\n                            100\n\n                            ¦ log ( 3 )\n                            n =1\n                                   10\n                                        1– n\n\n\n\n\n     A   – 4950 log10 3\n\n     B   4950 log10 3\n\n     C   – 5050 log10 3\n\n     D   5050 log10 3\n\n     E   1 – 4950 log10 3\n\n     F   1 + 4950 log10 3\n\n     G 1 – 5050 log10 3\n\n     H 1 + 5050 log10 3\n\n\n\n\n                                               13"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Evaluate\n\n                            100\n\n                            ¦ log ( 3 )\n                            n =1\n                                   10\n                                        1– n"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "– 4950 log10 3"
+        },
+        {
+          "label": "B",
+          "rawText": "4950 log10 3"
+        },
+        {
+          "label": "C",
+          "rawText": "– 5050 log10 3"
+        },
+        {
+          "label": "D",
+          "rawText": "5050 log10 3"
+        },
+        {
+          "label": "E",
+          "rawText": "1 – 4950 log10 3"
+        },
+        {
+          "label": "F",
+          "rawText": "1 + 4950 log10 3"
+        },
+        {
+          "label": "G",
+          "rawText": "1 – 5050 log10 3"
+        },
+        {
+          "label": "H",
+          "rawText": "1 + 5050 log10 3"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We have log10 (31−n ) = (1 − n) log10 3, so the sum becomes\n                            100\n                            X                       100\n                                                    X\n                                  log10 (31−n ) =         (1 − n) log10 3\n                            n=1                     n=1\n                                                               100\n                                                               X\n                                               = (log10 3)           (1 − n).\n                                                               n=1\n\n\nNow the sum is actually an arithmetic series: expanding it gives\n                         100\n                         X\n                               (1 − n) = 0 + (−1) + (−2) + · · · + (−99)\n                         n=1\n                                      = −(0 + 1 + 2 + · · · + 99)\n                                      = − 12 × 100(0 + 99 × 1)\n                                      = −4950\n\nusing the formula Sn = 12 n(2a + (n − 1)d). (Alternatively, we could have used the formula for\nthe nth triangular number.)\nTherefore the original sum evaluates to −4950 log10 3, which is option A.\n\n\n\n\nVersion 1.0, July 2023                                                                Page 13"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q12",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 12,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "12   A family of quadratic curves is given by\n\n                                                       2\n                                                    k     k2\n                                       yk ൌ 2 §¨ x – ·¸ +    + 4k + 3\n                                               ©    2¹    2\n\n     where k is any real number and yk is a function of x.\n\n     All these curves are sketched, and the point with the lowest y-coordinate among all the\n     curves yk is (a, b).\n\n     Find the value of a + b\n\n     A   –1\n\n     B   –3\n\n     C   –5\n\n     D   –7\n\n     E   –9\n\n\n\n\n                                                  14"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A family of quadratic curves is given by\n\n                                                       2\n                                                    k     k2\n                                       yk ൌ 2 §¨ x – ·¸ +    + 4k + 3\n                                               ©    2¹    2\n\n     where k is any real number and yk is a function of x.\n\n     All these curves are sketched, and the point with the lowest y-coordinate among all the\n     curves yk is (a, b).\n\n     Find the value of a + b"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "–1"
+        },
+        {
+          "label": "B",
+          "rawText": "–3"
+        },
+        {
+          "label": "C",
+          "rawText": "–5"
+        },
+        {
+          "label": "D",
+          "rawText": "–7"
+        },
+        {
+          "label": "E",
+          "rawText": "–9"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The formula for yk is given in completed square form. The minimum of the graph y = a(x−b)2 +c,\nwhere a > 0, is at x = b, and the minimum value is c. Therefore the minimum of yk is at\n         2\n( k2 , k2 + 4k + 3).\n                                                                           2\nThe minimum of the minimum y-coordinates is therefore the minimum of k2 + 4k + 3. We can\nfind this minimum either by completing the square or by differentiating this with respect to k.\nLet us use the latter method here as it seems simpler. We have\n\n                                  d k2\n                                     \u0012             \u0013\n                                           + 4k + 3 = k + 4\n                                  dk 2\n\nso the minimum occurs at k = −4, giving\n\n                                k k2\n                              \u0012               \u0013\n                                  ,   + 4k + 3 = (−2, −5)\n                                2 2\n\nso that a + b = −7, which is option D.\n\n\n\n\nVersion 1.0, July 2023                                                                 Page 14"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            14
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            14
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q13",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 13,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "13   Given that\n\n                                    § a 3 + 2 · § 2 – b3 · ൌ   2\n                                    ¨          ¸¨        ¸\n                                    ©       b3 ¹ © a 3   ¹\n\n     where a and b are real numbers, what is the least value of a b ?\n\n     A    – 2\n\n     B   –     2\n\n     C    –2 2\n\n     D   –2 2\n\n                2\n     E    –\n               2\n                2\n     F   –\n               2\n               1\n     G    –2   6\n\n\n               1\n     H – 26\n\n\n\n\n                                                  15"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Given that\n\n                                    § a 3 + 2 · § 2 – b3 · ൌ   2\n                                    ¨          ¸¨        ¸\n                                    ©       b3 ¹ © a 3   ¹\n\n     where a and b are real numbers, what is the least value of a b ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "– 2"
+        },
+        {
+          "label": "B",
+          "rawText": "–     2"
+        },
+        {
+          "label": "C",
+          "rawText": "–2 2"
+        },
+        {
+          "label": "D",
+          "rawText": "–2 2\n\n                2"
+        },
+        {
+          "label": "E",
+          "rawText": "–\n               2\n                2"
+        },
+        {
+          "label": "F",
+          "rawText": "–\n               2\n               1"
+        },
+        {
+          "label": "G",
+          "rawText": "–2   6\n\n\n               1"
+        },
+        {
+          "label": "H",
+          "rawText": "– 26"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Expanding the brackets gives\n                                                   4            √\n                                    2 − a3 b3 +           −2=       2\n                                                  a3 b3\nso\n                                         4        3 3\n                                                        √\n                                              − a  b  =   2.\n                                        a3 b3\nWe are interested in the least possible value of ab, so we can find the least possible value    3 3\n                                                                          3 3    4\n                                                                                          √ of a b\nand take the cube root. Let us simplify the notation by writing x = a b , so x − x = 2.\n                                               √                                       √\nMultiplying by x gives a quadratic: 4 − x2 = 2 x, which we can rearrange to x2 + 2 x − 4 = 0\nand then solve using the quadratic formula:\n                             √     √              √      √\n                           − 2 ± 2 + 16        − 2±3 2            √       √\n                      x=                    =                = −2 2 or 2.\n                                  2                   2\n                                                                            √        3\nSince we want the least possible value of x, we take    √ x = a3 b3 = −2 2 = −2 2 , and so the\n                                      3 1       1\nminimum possible value of ab is (−2 2 ) 3 = −2 2 = − 2, which is option A.\n\n\n\n\nVersion 1.0, July 2023                                                                     Page 15"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            15
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            15
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q14",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 14,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "14   A circle has centre O and radius 6.\n                                                                   ʌ\n     P, Q and R are points on the circumference with angle POQ \n                                                                   2\n     The area of the triangle POQ is 9 3\n\n     What is the greatest possible area of triangle PRQ ?\n\n     A   18 + 9 3\n\n     B   18 3\n\n     C   27 + 9 3\n\n     D   27 3\n\n     E   36 + 9 3\n\n     F   36 3\n\n\n\n\n                                                 16"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A circle has centre O and radius 6.\n                                                                   ʌ\n     P, Q and R are points on the circumference with angle POQ \n                                                                   2\n     The area of the triangle POQ is 9 3\n\n     What is the greatest possible area of triangle PRQ ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "18 + 9 3"
+        },
+        {
+          "label": "B",
+          "rawText": "18 3"
+        },
+        {
+          "label": "C",
+          "rawText": "27 + 9 3"
+        },
+        {
+          "label": "D",
+          "rawText": "27 3"
+        },
+        {
+          "label": "E",
+          "rawText": "36 + 9 3"
+        },
+        {
+          "label": "F",
+          "rawText": "36 3"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let us start by drawing the triangle P OQ in the circle:\n\n\n\n\n                                                O\n                                          6            6\n                                                2θ\n                                  P                           Q\n\n\n\n\n(We have called the angle 2θ as we will shortly want to consider half of the angle.)\n                                        √\nWe are told that the area of P OQ is 9 3, so we can use the formula for the area of a triangle\ngiven two sides and the included angle to determine 2θ: the area formula is A = 12 ab sin C, which\nin this case gives                                        √\n                                   1\n                                   2 ×  6 × 6 × sin 2θ = 9 3\n              √\n               3             π                     2          ◦\nso sin 2θ =   2 . Since 2θ ≥ 2 , we must have 2θ = 3 π (or 120 ).\nWe can now work out the length P Q by dropping a perpendicular from O to P Q:\n\n                                                O\n                                           6          6\n                                               θ θ\n                                      P                       Q\n                                                S\n\n                                           √             √\nWe have P S = SQ = 6 sin θ = 6 sin 31 π = 3 3, so P Q = 6 3, and we also have OS = 6 cos θ =\n6 cos 31 π = 3.\nWe can now work out the maximum possible area of the triangle P QR. The triangle P QR looks\nlike this:\n\n                                                          R\n\n\n\n\n                                                O\n\n\n                                      P         √             Q\n                                               6 3\n\n\nFixing P Q and allowing R to move, we see that the largest possible area of P QR occurs when\nR is as far as possible from P Q, as the area of the triangle is 12 × base × height. When R is at\nthe top of the circle (in our diagram), we have this configuration:\n\n\nVersion 1.0, July 2023                                                                    Page 16\n\f\nTest of Mathematics for University Admission, 2022 Paper 1 Solutions\n\n\n                                              R\n\n\n\n\n                                              O\n\n                                             S\n                                P           √           Q\n                                           6 3\n\n\n\nWe have RS = RO + OS. Now RO = 6 (it is a radius of the circle) and OS = 3 as we calculated\nearlier, so RS = 9. Therefore the maximum possible area of P QR is\n                            1              1\n                                                √            √\n                            2 × P Q × RS = 2 × 6 3 × 9 = 27 3,\n\nwhich is option D.\n\n\n\n\nVersion 1.0, July 2023                                                             Page 17"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            16
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            16,
+            17
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q15",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 15,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "15   A rectangle is drawn in the region enclosed by the curves p and q , where\n\n                                                 p (x) ൌ 8 – 2 x 2\n\n                                                 q (x) ൌ x 2 – 2\n\n     such that the sides of the rectangle are parallel to the x- and y-axes.\n\n     What is the maximum possible area of the rectangle?\n\n          26\n     A\n          9\n          52\n     B\n           9\n          4 6\n     C\n           3\n          8 6\n     D\n           3\n     E    4 2\n\n     F   8 2\n\n          20 10\n     G\n            9\n          40 10\n     H\n            9\n\n\n\n\n                                                   17"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A rectangle is drawn in the region enclosed by the curves p and q , where\n\n                                                 p (x) ൌ 8 – 2 x 2\n\n                                                 q (x) ൌ x 2 – 2\n\n     such that the sides of the rectangle are parallel to the x- and y-axes.\n\n     What is the maximum possible area of the rectangle?\n\n          26"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "9\n          52"
+        },
+        {
+          "label": "B",
+          "rawText": "9\n          4 6"
+        },
+        {
+          "label": "C",
+          "rawText": "3\n          8 6"
+        },
+        {
+          "label": "D",
+          "rawText": "3"
+        },
+        {
+          "label": "E",
+          "rawText": "4 2"
+        },
+        {
+          "label": "F",
+          "rawText": "8 2\n\n          20 10"
+        },
+        {
+          "label": "G",
+          "rawText": "9\n          40 10"
+        },
+        {
+          "label": "H",
+          "rawText": "9"
+        }
+      ],
+      "correctAnswer": "H",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We start by sketching the two curves to understand what is happening.\nThey are both quadratics. The graph of p has a maximum at (0, 8) and the graph of q has a\nminimum at (0, −2). They are both symmetrical about x = 0 (the y-axis). It might\n                                                                           p     be helpful\nto work out where they intersect: 8 − 2x2 = x2 − 2 implies 3x2 = 10, so x = 10/3, which is\nbetween 1.5 and 2.\nThe graph of these therefore looks like this, where we have also sketched a possible rectangle.\nFor the rectangle to have the maximum possible area, it must meet the graphs at all four of its\nvertices.\n\n\n\n\n                                                                                     p\nLet us suppose that the vertices of the rectangle are at x = ±a, with 0 < a < 10/3. Then\nthe width of the rectangle is 2a and the height is (8 − 2a2 ) − (a2 − 2) = 10 − 3a2 . Therefore the\narea is A = 2a(10 − 3a2 ) = 20a − 6a3 .\nTo maximise this area, we differentiate with respect to a to find the stationary points. We have\n                                         dA\n                                            = 20 − 18a2\n                                         da\n                                                                                    √\nso there is a stationary point when this is zero, at a = ± 20/18 = ± 10/9 = ± 13 10. We are\n                                                           p         p\n                                                             p\nonly interested in the positive value, and this is less than 10/3, so it is a valid value for our\nproblem. We therefore obtain the maximum possible area: it is\n\n                                     A = 2a(10 − 3a2 )\n                                           √\n                                       = 32 10(10 − 31 × 10)\n                                           √\n                                       = 23 10 × 23 × 10\n                                            √\n                                          40 10\n                                       =\n                                            9\nwhich is option H.\n\n\n\n\nVersion 1.0, July 2023                                                                     Page 18"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            17
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            18
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q16",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 16,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "16   The solutions to 7 x 4 – 6 x 2 + 1 ൌ 0 are േ cos ș and േ cos ȕ.\n\n     Which one of the following equations has solutions േ sin ș and േ sin ȕ ?\n\n     A   7x4 – 8x2 – 5 ൌ 0\n\n     B   7x4 – 8x2 + 2 ൌ 0\n\n     C   7x4 – 6x2 – 2 ൌ 0\n\n     D   7x4 – 6x2 + 1 ൌ 0\n\n     E   7x4 + 6x2 – 1 ൌ 0\n\n     F   7x4 + 6x2 + 5 ൌ 0\n\n\n\n\n                                                  18"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The solutions to 7 x 4 – 6 x 2 + 1 ൌ 0 are േ cos ș and േ cos ȕ.\n\n     Which one of the following equations has solutions േ sin ș and േ sin ȕ ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "7x4 – 8x2 – 5 ൌ 0"
+        },
+        {
+          "label": "B",
+          "rawText": "7x4 – 8x2 + 2 ൌ 0"
+        },
+        {
+          "label": "C",
+          "rawText": "7x4 – 6x2 – 2 ൌ 0"
+        },
+        {
+          "label": "D",
+          "rawText": "7x4 – 6x2 + 1 ൌ 0"
+        },
+        {
+          "label": "E",
+          "rawText": "7x4 + 6x2 – 1 ൌ 0"
+        },
+        {
+          "label": "F",
+          "rawText": "7x4 + 6x2 + 5 ൌ 0"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The given quartic can be thought of as a quadratic in x2 , and as such it has roots\n                                         √                 √\n                                2    6 ± 62 − 28      3± 2\n                               x =                 =          .\n                                          14              7\nSince the roots of the quartic are ± cos θ and ± cos β, these x2 values are the values of cos2 θ\nand cos2 β (in some order).\nNow sin2 θ = 1 − cos2 θ and sin2 β = 1 − cos2 β, so\n                                                   √      √\n                                2       2       3± 2   4∓ 2\n                             sin θ, sin β = 1 −      =      .\n                                                  7      7\n                                    √                 √\nTherefore the equations x2 − 4+7 2 = 0 and x2 − 4−7 2 = 0 have solutions ± sin θ and ± sin β\n(again, in some order, and x is not the same as earlier). It follows that the product of these two\nequations will have the four solutions ± sin θ and ± sin β; this equation is\n                                         √ !              √ !\n                                 2   4+ 2         2   4− 2\n                               x −               x −              = 0.\n                                        7                7\n\nTo obtain the form given in the question, we first expand the brackets:\n                                √         √ !            √        √\n                      4     4 +   2   4 −   2     2   4+ 2 4− 2\n                    x −             +           x +          ·        =0\n                               7         7              7        7\n\nthen perform the surd calculations to give\n                                            8    2\n                                        x4 − x2 + = 0.\n                                            7    7\nFinally, multiplying by 7 gives 7x2 − 8x + 2 = 0, which is option B.\n\n\n\n\nVersion 1.0, July 2023                                                                    Page 19"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            18
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            19
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q17",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 17,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "17\n\n\n                                                         –x2 + 6x – 5\n                            x–1\n\n\n\n                                                                     30°\n\n     Find the complete set of values of x for which there are two non-congruent triangles with the\n     side lengths and angle as shown in the diagram.\n\n     A   1<x<3\n\n     B   1<x<4\n\n     C   1<x<5\n\n     D   3<x<4\n\n     E   3<x<5\n\n     F   4<x<5\n\n\n\n\n                                                 19"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "–x2 + 6x – 5\n                            x–1\n\n\n\n                                                                     30°\n\n     Find the complete set of values of x for which there are two non-congruent triangles with the\n     side lengths and angle as shown in the diagram."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "1<x<3"
+        },
+        {
+          "label": "B",
+          "rawText": "1<x<4"
+        },
+        {
+          "label": "C",
+          "rawText": "1<x<5"
+        },
+        {
+          "label": "D",
+          "rawText": "3<x<4"
+        },
+        {
+          "label": "E",
+          "rawText": "3<x<5"
+        },
+        {
+          "label": "F",
+          "rawText": "4<x<5"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We first require that the lengths shown are both positive; x − 1 > 0 if and only if x > 1, and\n−x2 + 6x − 5 = −(x − 5)(x − 1) > 0 if and only if 1 < x < 5. Therefore we require 1 < x < 5 to\nensure both lengths are positive.\nThere are two non-congruent triangles when the side marked x − 1 can be drawn in two config-\nurations:\n\n\n\n                                x−1                       −x2 + 6x − 5\n\n\n                                                                        30◦\n\n\n\n\nThis is possible when the following conditions are satisfied:\n\n•     x − 1 < −x2 + 6x − 5 (otherwise one of the possibilities will lie to the right of the 30◦ angle\n      in the above diagram)\n\n•     x − 1 > (−x2 + 6x − 5) sin 30◦ (so that the distance from the end of the −x2 + 6x − 5 side\n      to the base is at least x − 1, making it possible to form a triangle; if there is equality here,\n      then the dashed circle will be tangent to the base of the triangle, and there will only be\n      one possibility)\n\nThe first inequality rearranges as x2 − 5x + 4 < 0, which factorises as (x − 1)(x − 4) < 0, giving\n1 < x < 4.\nThe second equality, using sin 30◦ = 21 , becomes 2x − 2 > −x2 + 6x − 5, so x2 − 4x + 3 > 0. This\nfactorises as (x − 1)(x − 3) > 0, so x < 1 or x > 3.\nRequiring both of these inequalities to hold thus gives 3 < x < 4; this also satifies the positivity\nrequirement we started with (1 < x < 5), and so the answer is option D.\n\n\n\n\nVersion 1.0, July 2023                                                                       Page 20"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            19
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            20
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q18",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 18,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "18   It is given that\n\n                                           f (x) ൌ x 2(x – 1)2 (x – 2)\n\n                                           g (x) ൌ – p (x – q)2 (x – r)2\n\n     where p, q and r are positive and q < r\n\n     Find the set of values of q and r that guarantees the greatest number of distinct real solutions of\n     the equation f (x) ൌ g (x) for all p.\n\n     A   q < 1 and r < 1\n\n     B   q < 1 and 1 < r < 2\n\n     C   q < 1 and r > 2\n\n     D   1 < q < 2 and 1 < r < 2\n\n     E   1 < q < 2 and r > 2\n\n     F   q > 2 and r > 2\n\n\n\n\n                                                   20"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "It is given that\n\n                                           f (x) ൌ x 2(x – 1)2 (x – 2)\n\n                                           g (x) ൌ – p (x – q)2 (x – r)2\n\n     where p, q and r are positive and q < r\n\n     Find the set of values of q and r that guarantees the greatest number of distinct real solutions of\n     the equation f (x) ൌ g (x) for all p."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "q < 1 and r < 1"
+        },
+        {
+          "label": "B",
+          "rawText": "q < 1 and 1 < r < 2"
+        },
+        {
+          "label": "C",
+          "rawText": "q < 1 and r > 2"
+        },
+        {
+          "label": "D",
+          "rawText": "1 < q < 2 and 1 < r < 2"
+        },
+        {
+          "label": "E",
+          "rawText": "1 < q < 2 and r > 2"
+        },
+        {
+          "label": "F",
+          "rawText": "q > 2 and r > 2"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The equation f(x) = g(x) is a polynomial equation with degree 5, so has at most 5 distinct real\nsolutions; we wish there to be 5 such solutions for all values of p.\nWe would have fewer than 5 distinct real solutions if we either have a square factor of the form\n(x − a)2 for some a, or if the graph of y = f(x) − g(x) has fewer than four turning (stationary)\npoints, or if this graph has a minimum point above the x-axis or a maximum point below it, for\nthen it would not cross the x-axis 5 times.\nLet us write\n                   h(x) = f(x) − g(x) = x2 (x − 1)2 (x − 2) + p(x − q)2 (x − r)2\n\nWe can try expanding and differentiating this, but that looks horrible. Let us think about the\nabove description, though, remembering that there need to be 5 distinct real solutions for all\nvalues of p.\nThe graph of y = f(x) = x2 (x − 1)2 (x − 2) intersects the x-axis at x = 0 (where it is tangent to\nthe axis, because it is a double root), x = 1 (likewise) and x = 2, and it is positive when x > 2\nand negative or zero when x < 2, so the graph looks like this:\n\n\n\n\n                                               1    2\n\n\nThe graph of y = g(x) = −p(x − q)2 (x − r)2 has two points of intersection with the x-axis, one\nat x = q and one at x = r, and at both of these points, the graph is tangent to the axis. (In\nthe case q = r, there is just one point of tangency.) The graph is entirely below or touching the\nx-axis as we are given that p > 0. It looks like this:\n\n\n\n\n                                           q        r\n\n\nIf r > 2, then the graph of y = g(x) will entirely miss one of the “valleys” of y = f(x) if p is\nlarge, as it will if r < 1; in this case, there would be at most three points of intersection for\n\n\nVersion 1.0, July 2023                                                                    Page 21\n\f\nTest of Mathematics for University Admission, 2022 Paper 1 Solutions\n\n\nlarge p. So we must have 1 < r < 2. If 1 < q < r, then it will miss the left valley for large\nenough p, so we must have 0 < q < 1 and 1 < r < 2. In this case, the graph of y = g(x) must\nintersect both valleys twice as g(1) < 0:\n\n\n\n\nThis sketch shows four points of intersection, and we are looking for five. But the graph of\ny = f(x) tends to −∞ as x tends to −∞ far faster that y = g(x), regardless of the value of p,\nas y = f(x) is a quintic but y = g(x) is only a quartic. So there will always be another point of\nintersection with x < 0.\nHence the correct answer is option B.\n\nNote that there is actually a small simplification in the above argument. We showed that we\ncannot have 1 < q < r and deduced that we must have 0 < q < 1. But what about the possibility\nq = 1? In that case, there would be a double root at x = 1, and so there would not be five distinct\nroots, hence we cannot have q = 1. But what about r? We showed that we cannot have r > 2 or\nr < 1. If r = 1, we have the same problem, but what about r = 2 and 0 < q < 1? In this case,\nit is still true that the equation has five distinct real solutions for all positive p, as x = 2 is only\na single root of f(x) = 0. So the full set is actually q < 1 and 1 < r ≤ 2.\n\n\n\n\nVersion 1.0, July 2023                                                                         Page 22"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            20
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            21,
+            22
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q19",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 19,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "19   Circle C1 is defined as x 2 + y 2 ൌ 25\n\n     A second circle C2 has radius 4 and centre (a, b) where\n\n                                         – 2  a  2 and – 3  b  3\n\n     If the centre of C2 is equally likely to be located anywhere within the given range, what is the\n     probability that C2 intersects C1 ?\n\n          1\n     A\n          25\n          9\n     B\n          25\n          16\n     C\n          25\n          6–ʌ\n     D\n           6\n          16 – ʌ\n     E\n            24\n          24 – ʌ\n     F\n            24\n\n\n\n\n                                                  21"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Circle C1 is defined as x 2 + y 2 ൌ 25\n\n     A second circle C2 has radius 4 and centre (a, b) where\n\n                                         – 2  a  2 and – 3  b  3\n\n     If the centre of C2 is equally likely to be located anywhere within the given range, what is the\n     probability that C2 intersects C1 ?\n\n          1"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "25\n          9"
+        },
+        {
+          "label": "B",
+          "rawText": "25\n          16"
+        },
+        {
+          "label": "C",
+          "rawText": "25\n          6–ʌ"
+        },
+        {
+          "label": "D",
+          "rawText": "6\n          16 – ʌ"
+        },
+        {
+          "label": "E",
+          "rawText": "24\n          24 – ʌ"
+        },
+        {
+          "label": "F",
+          "rawText": "24"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Note first that the region where the centre of C2 may lie is entirely within the circle C1 , as\n22 + 32 = 13 < 25.\nAs the radius of C1 is 5, the circle C2 will intersect C1 if and only if the centre of C2 is at least\na distance of 1 from the origin (the centre of C1 ). This is because in this case, a line from the\ncentre of C1 passing through the centre of C2 will reach the circle C1 before (or as) it reaches\nthe circle C2 , but a line from the centre of C1 in the opposite direction will reach C2 first. If,\nthough, the centre of C2 is at a distance of less than 1 from the origin, the furthest point on C2\nfrom the origin will be at a distance of less than 1 + 4 = 5 from the origin, so C2 lies entirely\ninside C1 .\nThe area of the allowed (a, b) region is 4 × 6 = 24. The (a, b) region where the circles do not\nintersect is a circle of radius 1, with area π, lying entirely within the allowed region, so the\nregion where the circles do intersect has area 24 − π.\n                                        24 − π\nThus the probability of intersection is        , which is option F.\n                                          24\n\n\n\n\nVersion 1.0, July 2023                                                                      Page 23"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            21
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            23
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2022-p1-q20",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2022-p1",
+      "edition": "2022",
+      "paper": 1,
+      "questionNumber": 20,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "20   n is the number of points of intersection of the graphs\n\n                                      y ൌ | x 2 – a 2 | and y ൌ a 2 | x – 1|\n\n     where a is a real number.\n\n     What is the smallest value of n that is not possible?\n\n     A   nൌ1\n\n     B   nൌ2\n\n     C   nൌ3\n\n     D   nൌ4\n\n     E   nൌ5\n\n\n\n\n                                                   22"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "n is the number of points of intersection of the graphs\n\n                                      y ൌ | x 2 – a 2 | and y ൌ a 2 | x – 1|\n\n     where a is a real number.\n\n     What is the smallest value of n that is not possible?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "nൌ1"
+        },
+        {
+          "label": "B",
+          "rawText": "nൌ2"
+        },
+        {
+          "label": "C",
+          "rawText": "nൌ3"
+        },
+        {
+          "label": "D",
+          "rawText": "nൌ4"
+        },
+        {
+          "label": "E",
+          "rawText": "nൌ5"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The graph y = |x2 − a2 | intersects the x-axis at ±a. The graph y = a2 |x − 1| intersects the\nx-axis at x = 1. Replacing a with −a does not change the equations, so we may as well assume\nthat a ≥ 0.\nHere is a sketch of the graphs with a = 2; we note that the graphs always intersect at x = 0\n(and y = a2 there):\n\n\n\n\n                                         −2         1 2\n\n\nWe immediately see that when a > 1, there will be 4 points of intersection: the graph y = a2 |x−1|\nis below the “hill” at (1, 0), so intersects it twice as x moves away from x = 1, and then intersects\nthe quadratic y = x2 − a2 for some x < −a and some x > a as the quadratic grows faster than\nthe linear y = −a2 (x − 1) or y = a2 (x − 1) in these regions.\nWhat happens when a = 1? In this case, the equations become y = |x2 − 1| and y = x − 1. The\nderivative of the quadratic y = x2 − 1 is 2x, so the gradient is just over 2 when x is just over 1.\n(There is no gradient at the point x = 1.) Therefore the graph looks like this:\n\n\n\n\n                                           −1        1\n\n\nWe see that we have lost one point of intersection: there are now only three points of intersection.\nWhat happens if 0 < a < 1? Now the vertex of y = a2 |x − 1| will be to the right of x = a, where\nthe quadratic meets the axis, and so there will be no points of intersection there – the quadratic\ngrows too quickly to meet the linear function for x > 1. (To be more precise: the gradient of\nthe quadratic to the right of x = a is 2x > 2a > a2 , so the quadratic will be growing faster than\nthe linear function.)\nOn the left of x = a, we have one point of intersection to the left of x = −a as before. There\nis also a point of intersection at (0, a2 ). Since this is the vertex of the quadratic, the linear\n\n\nVersion 1.0, July 2023                                                                      Page 24\n\f\nTest of Mathematics for University Admission, 2022 Paper 1 Solutions\n\n\nfunction must go below the “hill”, giving another two points of intersection, yielding four points\nof intersection in total:\n\n\n\n\n                                       −1           1\n\n\nThere is one remaining case to consider: a = 0. In this case, the graphs become y = |x2 | = x2\nand y = 0, and these graphs have a single point of intersection at the origin.\nTherefore the possible numbers of points of intersection are 1, 3 and 4, and the smallest number\nnot possible is n = 2, option B.\n\n\n\n\nVersion 1.0, July 2023                                                                    Page 25"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2022-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-1.pdf",
+          "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a",
+          "pages": [
+            22
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2022-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+          "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2022-paper-1-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2022-paper-1-worked-answers.pdf",
+          "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d",
+          "pages": [
+            24,
+            25
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-14T04:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    }
+  ]
+}
