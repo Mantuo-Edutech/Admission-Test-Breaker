@@ -173,6 +173,22 @@ function evaluate(reference: ImportReference): ArchitectureViolation[] {
     }
   }
 
+  if (relativeFile === "src/features/account/domain.ts") {
+    const importsFrameworkOrAdapter =
+      packageIs(reference.specifier, "react") ||
+      packageIs(reference.specifier, "react-router") ||
+      packageIs(reference.specifier, "react-router-dom") ||
+      packageIs(reference.specifier, "@supabase/supabase-js") ||
+      /\/src\/features\/account\/(components|pages|storage)\//.test(target);
+
+    if (importsFrameworkOrAdapter) {
+      violations.push({
+        ...reference,
+        rule: "account access domain must remain UI and provider independent",
+      });
+    }
+  }
+
   return violations;
 }
 
@@ -228,7 +244,7 @@ describe("module architecture boundaries", () => {
       "vitest run tests/architecture/feature-manifests.test.ts",
     );
     expect(packageJson.scripts?.verify).toBe(
-      "pnpm verify:architecture && pnpm verify:features && pnpm verify:tmua-corpus && pnpm verify:tmua-extractions && pnpm test && pnpm typecheck && pnpm build",
+      "pnpm verify:architecture && pnpm verify:features && pnpm verify:supabase-contracts && pnpm verify:content-imports && pnpm verify:tmua-corpus && pnpm verify:tmua-extractions && pnpm test && pnpm typecheck && pnpm build",
     );
   });
 });

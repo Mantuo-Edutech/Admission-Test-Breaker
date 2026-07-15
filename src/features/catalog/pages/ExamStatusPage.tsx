@@ -16,7 +16,7 @@ export function ExamStatusPage({ exam }: ExamStatusPageProps) {
       </header>
 
       <section className="exam-status-page__content page-shell">
-        <p className="eyebrow">ADMISSION TEST / {exam.name}</p>
+        <p className="eyebrow">{exam.name} 考试空间</p>
         <h1>{exam.name}</h1>
         <p className="exam-status-page__purpose">{exam.purpose}</p>
 

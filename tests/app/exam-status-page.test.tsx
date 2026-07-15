@@ -32,7 +32,7 @@ describe("unopened exam spaces", () => {
         await screen.findByRole("heading", { name }),
       ).toBeInTheDocument();
       expect(screen.getByText(purpose)).toBeInTheDocument();
-      expect(screen.getByText("资料馆建设中")).toBeInTheDocument();
+      expect(screen.getByText("建设中")).toBeInTheDocument();
       expect(
         screen.getByRole("link", { name: "返回全部考试" }),
       ).toHaveAttribute("href", "/");

@@ -15,7 +15,7 @@ import {
   FIXED_GUEST_SPACE,
   FIXED_GUEST_SPACE_STORE,
 } from "../support/fixed-guest-space-store.js";
-import { EMPTY_PREPARATION_PROFILE_STORE } from "../support/empty-preparation-profile-store.js";
+import { FIXED_PREPARATION_PROFILE_STORE } from "../support/fixed-preparation-profile-store.js";
 
 class PracticeStore implements PracticeSessionStore {
   saves: PracticeSession[] = [];
@@ -52,7 +52,7 @@ function appServices(store: PracticeSessionStore): AppServices {
   return {
     store,
     guestSpaceStore: FIXED_GUEST_SPACE_STORE,
-    profileStore: EMPTY_PREPARATION_PROFILE_STORE,
+    profileStore: FIXED_PREPARATION_PROFILE_STORE,
     now: () => new Date("2026-07-13T09:05:00.000Z"),
     ids: {
       sessionId: () => "ses_unused",
@@ -149,9 +149,9 @@ describe("responsive TMUA practice page", () => {
     expect(
       await screen.findByRole("heading", { name: "这里没有可继续的练习" }),
     ).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "返回练习首页" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "返回我的准备路径" })).toHaveAttribute(
       "href",
-      "/exams/tmua",
+      "/exams/tmua/dashboard",
     );
   });
 });

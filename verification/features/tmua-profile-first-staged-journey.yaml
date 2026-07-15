@@ -1,0 +1,104 @@
+schemaVersion: 1
+feature:
+  id: tmua-profile-first-staged-journey
+  title: TMUA profile-first staged preparation journey
+  status: partial
+  userOutcome: >-
+    A student can read the public TMUA overview, establish a local course
+    profile, receive a deterministic course-coverage report, and then choose
+    separate diagnostic, practice, past-paper or resource pages.
+
+run:
+  packageScript: verify
+
+claims:
+  - id: separate-staged-pages
+    status: verified
+    statement: >-
+      Public overview, profile, coverage, dashboard, diagnostic explanation,
+      past-paper archive and resource access use separate routes, and the
+      personalised dashboard is not shown without a preparation profile. The
+      past-paper archive remains public so students can inspect the corpus
+      before sharing course information.
+    artifacts:
+      - src/app/routes.tsx
+      - src/features/catalog/pages/TmuaHubPage.tsx
+      - src/features/catalog/pages/TmuaDashboardPage.tsx
+      - src/features/catalog/pages/TmuaDiagnosticPage.tsx
+      - src/features/catalog/pages/TmuaPastPapersPage.tsx
+      - src/features/catalog/pages/TmuaResourcesPage.tsx
+      - src/features/preparation-profile/pages/TmuaProfilePage.tsx
+      - src/features/preparation-profile/pages/TmuaCoveragePage.tsx
+      - src/features/preparation-profile/components/PreparationProfileGate.tsx
+      - tests/app/tmua-hub-page.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+
+  - id: public-imported-past-paper-catalog
+    status: verified
+    statement: >-
+      Every one of the 18 imported TMUA papers is visible in the public archive
+      as collected, while online availability is reported separately: only the
+      20 verified questions in 2023 Paper 1 link to online practice and every
+      unfinished paper is labelled simply as building.
+    artifacts:
+      - content/tmua/public-summary.json
+      - src/features/catalog/tmua-summary.ts
+      - src/features/catalog/pages/TmuaPastPapersPage.tsx
+      - tests/app/tmua-hub-page.test.tsx
+    automatedChecks:
+      - verify:tmua-corpus
+      - test
+      - typecheck
+
+  - id: deterministic-course-coverage
+    status: verified
+    statement: >-
+      CAIE and Pearson module selections produce a versioned zero-token report
+      that gives bilingual topic names, explicit review/check/learn decisions,
+      concrete study topics and conservative teacher-planning time ranges while
+      distinguishing course evidence from mastery, readiness, official scores,
+      benchmark time estimates and AI output.
+    artifacts:
+      - src/features/preparation-profile/coverage.ts
+      - tests/features/preparation-profile/coverage.test.ts
+      - src/features/preparation-profile/pages/TmuaCoveragePage.tsx
+      - docs/architecture/SYSTEM_ARCHITECTURE.md
+    automatedChecks:
+      - verify:architecture
+      - test
+      - typecheck
+
+  - id: actionable-dashboard-primary
+    status: verified
+    statement: >-
+      The personalised dashboard recommends only the currently available 2023
+      Paper 1 practice; the unreviewed diagnostic and admissions registry are
+      shown as upcoming status and do not create a primary-action dead end.
+    artifacts:
+      - src/features/catalog/pages/TmuaDashboardPage.tsx
+      - src/features/catalog/pages/TmuaDiagnosticPage.tsx
+      - tests/app/tmua-hub-page.test.tsx
+      - tests/app/front-door-css-contract.test.ts
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+
+boundaries:
+  - The current mapping covers only the configured CAIE and Pearson IAL modules; AP and IB are not yet configured.
+  - Course coverage is not practical readiness and does not replace the 30-minute diagnostic.
+  - The 8-question original diagnostic form is still under independent review and cannot yet be started.
+  - This is local Guest Space persistence, not production identity, server storage or multi-tenant isolation.
+  - Direct practice entry is profile-gated, but the imported past-paper catalog is public; result routes remain recoverable from an existing submitted session.
+
+manualChecks:
+  - id: staged-responsive-route-review
+    status: pending
+    evidence: Review the new overview, profile, coverage, dashboard and module pages at desktop, tablet and phone sizes.
+    viewports:
+      - 1440x900
+      - 768x1024
+      - 390x844

@@ -66,4 +66,29 @@ describe("responsive editorial front-door CSS", () => {
     );
     expect(css).not.toMatch(/\.profile-[^{]*\{[^}]*linear-gradient/su);
   });
+
+  it("keeps the staged TMUA journey responsive without separate device logic", async () => {
+    const css = await readFile("src/styles/practice.css", "utf8");
+    const stagedJourney = css.slice(css.indexOf("/* TMUA staged preparation journey */"));
+
+    expect(stagedJourney).toMatch(
+      /\.tmua-starting-path ol\s*\{[^}]*grid-template-columns:\s*repeat\(4,/su,
+    );
+    expect(stagedJourney).toMatch(
+      /@media \(max-width: 62rem\)[\s\S]*?\.tmua-starting-path ol\s*\{[^}]*repeat\(2,/u,
+    );
+    expect(stagedJourney).toMatch(
+      /@media \(max-width: 35rem\)[\s\S]*?\.tmua-starting-path ol\s*\{[^}]*grid-template-columns:\s*1fr/u,
+    );
+    expect(stagedJourney).toMatch(
+      /\.tmua-dashboard-grid\s*\{[^}]*grid-template-columns:\s*repeat\(3,/su,
+    );
+    expect(stagedJourney).toMatch(
+      /@media \(max-width: 62rem\)[\s\S]*?\.tmua-dashboard-grid\s*\{[^}]*repeat\(2,/u,
+    );
+    expect(stagedJourney).toMatch(
+      /@media \(max-width: 45rem\)[\s\S]*?\.tmua-dashboard-grid,[\s\S]*?grid-template-columns:\s*1fr/u,
+    );
+    expect(stagedJourney).not.toContain("linear-gradient");
+  });
 });

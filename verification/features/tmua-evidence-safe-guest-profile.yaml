@@ -64,8 +64,10 @@ claims:
   - id: responsive-progressive-interface
     status: verified
     statement: >-
-      The profile is optional, AI is absent from the first interaction, and
-      the editorial layout adapts across desktop, tablet and phone widths.
+      Public exam information remains available before a profile, the local
+      course profile is required before personalised module choices, AI is
+      absent from the first interaction, and the editorial layout adapts
+      across desktop, tablet and phone widths.
     artifacts:
       - src/styles/practice.css
       - tests/app/front-door-accessibility.test.tsx
@@ -96,7 +98,7 @@ claims:
 boundaries:
   - This is local browser persistence, not production server storage.
   - Guest Space isolation is not a claim of production multi-tenant RLS.
-  - Course coverage and practical readiness remain unknown until reviewed mappings and learner evidence exist.
+  - Course coverage is limited to the versioned CAIE/Pearson mapping; practical readiness remains unknown until learner evidence exists.
   - Only TMUA 2023 Paper 1 currently has 20 published online questions.
   - TMUA 2022 Paper 1 is structured staging data and remains unavailable to students until formula, figure and content review is complete.
   - No benchmark, admissions probability, paid interpretation or AI recommendation is produced by this feature.

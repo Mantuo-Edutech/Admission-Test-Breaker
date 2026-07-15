@@ -1,0 +1,78 @@
+schemaVersion: 1
+feature:
+  id: private-account-invite-foundation
+  title: Private account and invite-entitlement foundation
+  status: partial
+  userOutcome: >-
+    A student with a valid invite can create or sign in to an email-verified
+    account and bind the invite's content package to that account, while
+    learner data stays owner-only and separate from content access.
+
+run:
+  packageScript: verify
+
+claims:
+  - id: invite-first-account-flow
+    status: verified
+    statement: >-
+      The browser validates an invite before registration, retains it only for
+      the current browser session, and redeems it after immediate login or
+      email confirmation without exposing a service-role key to the client.
+    artifacts:
+      - src/features/account/domain.ts
+      - src/features/account/supabase-account-service.ts
+      - src/features/account/pages/InviteAccessPage.tsx
+      - src/features/account/pages/RegisterPage.tsx
+      - src/features/account/pages/LoginPage.tsx
+      - src/features/account/pages/EmailConfirmationPage.tsx
+      - tests/app/account-access-flow.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+      - verify:supabase-contracts
+
+  - id: tenant-owned-private-data
+    status: verified
+    statement: >-
+      Auth users receive one learner space; learner profiles, sessions and
+      events are protected by owner-only RLS, and learning events are append-only
+      with consecutive sequence and authenticated student actor checks.
+    artifacts:
+      - supabase/migrations/20260715090000_private_account_foundation.sql
+      - supabase/tests/database/private_account_rls.test.sql
+      - tests/architecture/supabase-contracts.test.ts
+      - scripts/verify-supabase-local.ts
+    automatedChecks:
+      - verify:supabase-contracts
+      - verify:supabase
+
+  - id: separate-content-entitlement
+    status: verified
+    statement: >-
+      Invite redemption creates a content package entitlement only; it does not
+      create a learner-data grant for the invite issuer, Mantou staff, teachers,
+      parents or agents.
+    artifacts:
+      - supabase/migrations/20260715090000_private_account_foundation.sql
+      - supabase/tests/database/private_account_rls.test.sql
+      - docs/architecture/SYSTEM_ARCHITECTURE.md
+    automatedChecks:
+      - verify:supabase-contracts
+      - verify:supabase
+
+boundaries:
+  - The implementation is connected to local Supabase only; no Mantou cloud project or production domain has been configured.
+  - Existing preparation profiles and practice sessions still use local Guest Space adapters and are not yet uploaded to the learner-space tables.
+  - Production SMTP, CAPTCHA or equivalent abuse protection, backup recovery, account deletion and security review remain pending.
+  - Teacher, parent and agent Grants, access audit and revocation UI remain a later Phase 2 slice.
+  - A local deterministic seed invite exists only for development and must never be deployed as a production invite.
+
+manualChecks:
+  - id: account-responsive-and-email-review
+    status: pending
+    evidence: Review invite, registration, login and confirmation pages with the production email templates before release.
+    viewports:
+      - 1440x900
+      - 768x1024
+      - 390x844

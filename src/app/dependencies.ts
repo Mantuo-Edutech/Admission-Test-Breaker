@@ -8,6 +8,10 @@ import { LocalPreparationProfileStore } from "../features/preparation-profile/st
 import type { PreparationProfileStore } from "../features/preparation-profile/storage/store.js";
 import { LocalPracticeSessionStore } from "../features/practice/storage/local-store.js";
 import type { PracticeSessionStore } from "../features/practice/storage/store.js";
+import { createAccountAccessService } from "../features/account/supabase-account-service.js";
+import type { AccountAccessService } from "../features/account/domain.js";
+import { SessionPendingInviteStore } from "../features/account/storage/pending-invite.js";
+import type { PendingInviteStore } from "../features/account/storage/pending-invite.js";
 
 export interface AppIdFactory {
   sessionId(): PracticeSessionId;
@@ -20,6 +24,8 @@ export interface AppServices {
   profileStore: PreparationProfileStore;
   now(): Date;
   ids: AppIdFactory;
+  accountAccess?: AccountAccessService;
+  pendingInvite?: PendingInviteStore;
 }
 
 function randomSuffix(): string {
@@ -31,6 +37,7 @@ function randomSuffix(): string {
 
 export function createDefaultAppServices(): AppServices {
   const now = () => new Date();
+  const browserOrigin = globalThis.location?.origin ?? "http://127.0.0.1:57145";
   return {
     store: new LocalPracticeSessionStore(globalThis.localStorage),
     guestSpaceStore: new LocalGuestSpaceStore(
@@ -44,5 +51,13 @@ export function createDefaultAppServices(): AppServices {
       sessionId: () => `ses_${randomSuffix()}`,
       eventId: () => `evt_${randomSuffix()}`,
     },
+    accountAccess: createAccountAccessService(
+      {
+        url: import.meta.env.VITE_SUPABASE_URL,
+        publishableKey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+      },
+      browserOrigin,
+    ),
+    pendingInvite: new SessionPendingInviteStore(globalThis.sessionStorage),
   };
 }

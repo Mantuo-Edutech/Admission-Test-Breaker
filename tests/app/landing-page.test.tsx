@@ -58,7 +58,7 @@ describe("Mantou multi-exam homepage", () => {
     expect(screen.getByText("Admission Test Breaker")).toBeInTheDocument();
     expect(
       screen.getByText(
-        "从了解考试、诊断水平，到系统训练、模考复盘和准备进度判断，都在这里完成。",
+        "选择考试，填写课程信息，查看需要补充的知识，然后开始练习和模考。",
       ),
     ).toBeInTheDocument();
     expect(
@@ -83,7 +83,7 @@ describe("Mantou multi-exam homepage", () => {
       );
     }
     expect(screen.getByText("现已开放")).toBeInTheDocument();
-    expect(screen.getAllByText("资料馆建设中")).toHaveLength(3);
+    expect(screen.getAllByText("建设中")).toHaveLength(3);
   });
 
   it("presents the common preparation path in order", async () => {
@@ -94,11 +94,11 @@ describe("Mantou multi-exam homepage", () => {
     expect(
       within(path).getAllByRole("listitem").map((item) => item.textContent),
     ).toEqual([
-      "了解考试",
-      "完成诊断",
-      "系统训练",
-      "模考复盘",
-      "判断准备进度",
+      "选择考试",
+      "填写课程信息",
+      "查看知识差距",
+      "完成练习与模考",
+      "跟踪准备进度",
     ]);
   });
 
@@ -141,7 +141,7 @@ describe("Mantou multi-exam homepage", () => {
     );
     expect(router.state.location.pathname).toBe("/exams/tmua");
     expect(
-      await screen.findByRole("heading", { name: "TMUA 备考中心" }),
+      await screen.findByRole("heading", { name: /先了解起点.*再开始练习/u }),
     ).toBeInTheDocument();
     expect(document.documentElement.scrollTop).toBe(0);
     expect(document.body.scrollTop).toBe(0);

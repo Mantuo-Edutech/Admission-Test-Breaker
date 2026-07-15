@@ -87,7 +87,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
   async function restart() {
     setRestarting(true);
     await services.store.clearCurrent();
-    navigate("/exams/tmua");
+    navigate("/exams/tmua/dashboard");
   }
 
   if (state.kind === "loading") {
@@ -105,7 +105,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
         <p className="eyebrow">RESULT NOT AVAILABLE</p>
         <h1>这份结果暂时不可用</h1>
         <p>只有当前设备中已经提交、且与你打开的地址一致的练习可以查看。</p>
-        <Link className="button button--primary" to="/exams/tmua">返回练习首页</Link>
+        <Link className="button button--primary" to="/exams/tmua/dashboard">返回我的准备路径</Link>
       </main>
     );
   }
@@ -121,12 +121,12 @@ export function ResultsPage({ services }: ResultsPageProps) {
     <div className="results-page">
       <header className="results-header page-shell">
         <BrandMark />
-        <Link to="/exams/tmua" className="results-back-link">
-          <ArrowLeft aria-hidden="true" />返回 TMUA 备考中心
+        <Link to="/exams/tmua/dashboard" className="results-back-link">
+          <ArrowLeft aria-hidden="true" />返回我的准备路径
         </Link>
       </header>
 
-      <main>
+      <main className="results-page">
         <section className="results-hero page-shell">
           <div className="results-hero__copy">
             <p className="eyebrow">YOUR SESSION · YOUR EVIDENCE</p>

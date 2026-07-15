@@ -1,7 +1,7 @@
 # 总路线图与验证矩阵
 
 **状态：** 生效
-**日期：** 2026-07-14
+**日期：** 2026-07-15
 **目标：** 让每次开发同时回答“离完整产品更近了吗”和“如何独立证明它没有偏离架构”。
 
 ## 1. 发布原则
@@ -34,18 +34,20 @@
 
 ### Phase 1B — 多考试首页与 TMUA 信任阶梯
 
-**旅程：** 学生在首屏识别 TMUA/ESAT/TARA/UCAT → 无登录完成 5 题原创体验 → 完成 8 题初步诊断 → 免费理解自身证据 → 再选择目标专业。
-**成果：** 满托统一品牌、四考试入口、TMUA 考试空间、18 套/360 题完整资料档案、本地 Guest Space、13 道经验证原创题、免费基础报告、UAT-UK 2027 TMUA 专业要求注册表。
+**旅程：** 学生在首屏识别 TMUA/ESAT/TARA/UCAT → 填写不含联系方式的本地课程信息 → 查看知识覆盖 → 立即完成当前已开放练习 → 免费理解自身证据 → 自主选择真题、模考或资料；30 分钟诊断达到原创题审核门后再加入主路径。
+**成果：** 满托统一品牌、四考试入口、TMUA 分阶段独立页面、18 套/360 题完整资料档案、本地 Guest Space、首版确定性课程映射、8 道经验证原创诊断题、免费基础报告、UAT-UK 2027 TMUA 专业要求注册表。
 **边界：** 首版不输出官方 1–9 分、百分位、录取概率或精确训练小时；Guest Space 只在当前设备，不能用于生产匿名追踪。
 **发布门：** 品牌/文案契约、原创题发布门、Guest 恢复、诊断结果诚实性、申请年度/来源验证、响应式与无障碍。
 
-**当前状态：** Slice A/B 已于 2026-07-13 交付：多考试首页、TMUA 考试中心、96 路径/46 canonical source manifest、18 套试卷/360 道题目档案和诚实资料馆已完成。2026-07-14 又完成证据安全计时、本地 Guest Space 隔离、CAIE/Pearson 精确准备档案及其桌面/iPad/手机界面。知识图谱与审核课程映射、5 题体验、8 题诊断、免费报告和专业注册表仍待实施。当前只有 2023 Paper 1 的 20 题达到 verified/published 并可在线练习。
+**当前状态：** Slice A/B 已于 2026-07-13 交付：多考试首页、96 路径/46 canonical source manifest、18 套试卷/360 道题目目录和诚实资料馆已完成。2026-07-14 又完成证据安全计时、本地 Guest Space 隔离、CAIE/Pearson 精确课程信息、首版零 Token 知识覆盖映射，以及“公开介绍 → 课程信息 → 知识覆盖 → 个人准备首页”的独立页面流程。2026-07-15 统一了全站用户路径，并把真实可完成的 2023 Paper 1 设为唯一推荐动作；历年真题页公开展示全部 18 套已收录目录，同时把“已收录”与“可在线作答”分开呈现。未开放诊断不再形成主路径死路。覆盖报告也升级为中英文教师建议：明确“复习即可/先查缺口/需要补学”的分支、具体主题和非 Benchmark 的学习时间区间。8 道原创诊断题、正式诊断报告和专业注册表仍待实施。
 
 ### Phase 2 — 私密账户与授权协作
 
 **旅程：** 学生注册/登录 → 数据跨设备保存 → 分别授权老师查看、批注、制定计划或布置练习 → 查看审计并撤销。
 **成果：** PostgreSQL、身份、RLS、Grant、审计、老师/家长协作视图、数据导出与删除。
 **发布门：** 跨租户负面测试、权限组合测试、撤销时效、备份恢复、安全审查。任何真实学生数据进入系统前必须完成本阶段生产门。
+
+**当前状态：** Slice 2A 本地底座已于 2026-07-15 完成：Supabase Auth、邀请码预检与原子核销、内容 entitlement、`app_users`/`learner_spaces`、课程档案/会话/事件表、RLS、追加式事件约束，以及邀请码优先的注册/登录页面已经接通。26 项 pgTAP 数据库测试和真实本地 HTTP 核销验证已通过。云端项目绑定、正式 SMTP/域名、滥用防护、备份恢复、服务端练习仓储、Guest 接管、Grant/审计和协作视图仍未完成，所以 Phase 2 仍是 partial。
 
 ### Phase 3 — 内容 Commons 与完整 TMUA
 
@@ -70,11 +72,11 @@
 | 产品目标 | 主模块 | 首个可见成果 | 独立验证证据 | 阶段 |
 | --- | --- | --- | --- | --- |
 | 迅速体验好用 | Practice + Web | 首页一键进入真实 20 题 | 首题时间、E2E、响应式截图 | 1 |
-| 第一次访问先建立安全感 | Web + Practice + Admissions Registry | 四考试入口、5 题体验、免费诊断 | 首屏识别、Guest Journey、无虚假分数 | 1B |
+| 第一次访问先建立安全感 | Web + Practice + Admissions Registry | 四考试入口、课程定位、可完成的推荐动作 | 首屏识别、Guest Journey、无点击死路 | 1B |
 | 查清院校和专业要求 | Admissions Registry | 2027 TMUA 官方专业清单 | 来源、申请年度、revision 和过期测试 | 1B–5 |
 | 不浪费真题完成诊断 | Content Commons + Practice | 原创体验题和诊断题 | 蓝图、答案、独立审核和发布状态 | 1B–3 |
 | 记录所有有意义动作 | Event Ledger | 作答/修改/停留/标记/提交事件 | reducer/event schema/恢复测试 | 0–1 |
-| 学生数据高度私密 | Learner Space + Consent | 明确归属，本地版数据提示 | 数据边界测试；后续 RLS 跨租户测试 | 1–2 |
+| 学生数据高度私密 | Learner Space + Consent | 明确归属，本地版数据提示 | 本地 Supabase RLS 与跨租户负面测试；后续云端安全门 | 1–2 |
 | 老师/家长分别授权 | Consent & Grants | Scope 模型和授权界面 | 权限组合与撤销测试 | 0–2 |
 | 衡量训练时间 | Projection + Benchmark | 个人会话时间；后续区间估计 | 时间确定性；cohort/置信度统计复核 | 1–4 |
 | 题目易维护 | Content Commons | 20 题 typed content 与验证器 | schema、来源、答案、revision 测试 | 1–3 |
@@ -94,10 +96,12 @@
 | G1 Types | 严格 TypeScript | `pnpm typecheck` | P0 |
 | G2 Unit | 领域 reducer、授权、事件、投影、计时 | `pnpm test -- tests/features tests/platform` | P0 |
 | G3 Content | schema、题数、答案、来源和 revision | `pnpm verify:tmua-corpus` + content tests | P0 |
+| G3a Document import | MinerU 输出规范化、页码/坐标、不可发布边界 | `pnpm verify:content-imports` | P0 |
 | G3b Extraction | PDF 页级证据、题目 bundle、答案/解析关联、非发布边界 | `pnpm verify:tmua-extractions` | P0 |
 | G4 Architecture | 禁止依赖、模块公开 API、私密/公开域隔离 | `pnpm verify:architecture` | P0 |
 | G4b Feature claims | 机器可读用户结果、证据路径、命令与限制 | `pnpm verify:features` | P0 |
-| G5 Integration | 存储、RLS、AI provider、Webhook/MCP 合约 | 分阶段加入 `pnpm test:integration` | P0 |
+| G4c Supabase static | RLS 开启、服务端函数权限、认证与密钥边界 | `pnpm verify:supabase-contracts` | P0 |
+| G5 Integration | 存储、RLS、真实 HTTP 邀请码/登录/核销链路 | `pnpm verify:supabase`；后续扩展 AI/Webhook/MCP | P0 |
 | G6 Journey | 开始、恢复、提交、结果、授权闭环 | 分阶段加入 `pnpm test:e2e` | P0 |
 | G7 UI Quality | 无障碍、手机/iPad/桌面、reduced motion | 组件测试 + Playwright 视口矩阵 + 人工截图评审 | P1；关键动作 P0 |
 | G8 Security/Privacy | 越权、撤销、密钥、日志、导出/删除 | 安全套件 + 威胁模型复核 | 生产 P0 |
@@ -106,19 +110,20 @@
 
 `P0` 失败禁止合并或发布；`P1` 必须在当前里程碑解决；`P2` 可以记录并排期但不能伪装成完成。
 
-## 5. 当前进度基线（2026-07-13）
+## 5. 当前进度基线（2026-07-15）
 
 | 工作流 | 状态 | 证据 | 尚欠 |
 | --- | --- | --- | --- |
 | 母产品契约 | 已建立并进入自动执行 | 产品宪章、系统架构、路线图、`pnpm verify:architecture` | 后续模块加入时持续扩展禁止依赖规则 |
 | TMUA 原始资料 | Slice A 已交付：96 路径 / 46 canonical sources / 18 papers / 360 shells | `content/tmua/`、`docs/content/TMUA_CORPUS_REPORT.md`、`pnpm verify:tmua-corpus` | 其余 340 道题的结构化、逐题核验与发布 |
-| Content tooling | inventory、官方补充、build、PDF 题目提取与独立 gate 已完成 | `src/content/tmua/`、schemas、CLI tests、2022 Paper 1 的 20 题 staging bundle | 公式/图形审核工作台、贡献审核、许可治理和发布后台 |
+| Content tooling | inventory、官方补充、PDF 题目提取、MinerU 稳定 JSON 规范化与独立 gate 已完成 | `src/content/tmua/`、`src/content/imports/`、schemas、CLI tests、2022 Paper 1 staging bundle | 真实资料 MinerU 对比试点、公式/图形审核工作台、贡献审核、许可治理和发布后台 |
 | Reference content | TMUA 2023 Paper 1 共 20 题已人工核验 | `src/features/practice/content/tmua-2023-p1.ts` | 后续解释和更多试卷 |
-| Reference Journey Web | 本地预览闭环与多考试前门已完成 | 四考试首页、TMUA 中心、完整 20 题、提交、结果；四组视口与 a11y 契约 | 生产身份与服务端持久化后再公开收集真实数据 |
-| Learner Space / Events | 核心领域契约已接入练习 | 稳定 ID、所有权、追加式事件、顺序、幂等、本地恢复和结果投影 | PostgreSQL 账本、RLS 与后台投影 |
+| Reference Journey Web | 本地预览闭环、多考试前门和邀请码账户页面已完成 | 四考试首页、TMUA 中心、完整 20 题、提交、结果、邀请码/注册/登录；视口与 a11y 契约 | 云端身份、正式邮件和服务端练习持久化后再收集真实数据 |
+| Private Account / Entitlement | Slice 2A 本地底座通过 | Supabase migration、Edge Function、邀请码页面、26 项 pgTAP 与真实 HTTP gate | 云项目、SMTP/CAPTCHA、备份、Guest 接管、正式内容资源映射 |
+| Learner Space / Events | 领域契约与本地 Supabase 表/约束已实现 | 稳定 ID、所有权、追加式事件、连续序号、RLS 跨租户负面测试 | 前端练习仓储切换、后台投影与云端生产验证 |
 | Consent / Grants | 纯策略契约已实现 | 精确 scope、资源、有效期、撤销和 actor 测试 | 持久化、授权界面与访问审计 |
 | Benchmark / AI / Integrations | AI Job 核心契约已实现 | 投影引用、预算、委托授权和禁止 secret 校验 | Provider 适配器、Benchmark 与外部集成 |
-| 品牌与完整准备旅程 | Slice A/B 与证据安全准备档案基础已交付 | 多考试首页、TMUA 资料馆、精确课程/模块档案、本地 Guest 隔离、响应式/a11y 测试、功能清单门禁 | 审核知识图谱和课程映射、原创体验、诊断、复习资料、免费报告与院校注册表 |
+| 品牌与完整准备旅程 | 分阶段页面与首版课程映射已交付 | 多考试首页、课程信息优先流程、零 Token 覆盖报告、个人准备首页、独立资料馆与资料入口、本地 Guest 隔离 | 扩展 AP/IB 映射、原创 8 题诊断、复习资料、免费报告与院校注册表 |
 
 ## 6. 既有局部方案的归属
 
@@ -129,8 +134,8 @@
 
 ## 7. 接下来三个可验证增量
 
-1. **TMUA 完整纵向闭环（先 B）：** 采用考试书架型入口和渐进式准备档案，完成首批 TMUA 知识图谱、CAIE/Pearson 准确课程映射、5 题体验、8 题固定诊断、免费证据报告、复习资料样本、专业要求和现有 2023 Paper 1 的一体化旅程。
-2. **TMUA 全量录题（后 A）：** 按 paper 逐套完成剩余约 340 题的提取、公式/图形恢复、答案核验、知识标注和发布；每套通过独立验证后立即上线并更新公开进度。
-3. **Private Account Slice：** 接入身份、PostgreSQL、RLS、Guest 数据接管与跨租户负面测试，把本地记录迁移到生产私密空间。
+1. **TMUA 完整纵向闭环（先 B）：** 在已交付的课程信息优先页面和 CAIE/Pearson 首版确定性映射上，扩展 AP/IB 准确档案与映射，完成 8 题/30 分钟固定诊断、免费证据报告、复习资料样本、专业要求和现有 2023 Paper 1 的一体化旅程。
+2. **MinerU 真实资料试点与 TMUA 全量录题（后 A）：** 用 Question Paper、Answer Key、Worked Solution 和 Student Textbook 对比现有 Poppler 与 MinerU 输出；通过验收后按 paper 逐套完成剩余约 340 题的公式/图形恢复、答案核验、知识标注和发布。
+3. **Private Account Slice 2B：** 在已通过的本地 Supabase/Auth/RLS/entitlement 底座上绑定满托云项目，配置正式域名、SMTP、滥用防护和备份；再完成服务端练习仓储与显式 Guest 数据接管。
 
 前两个增量可以作为明确标注“当前设备保存”的本地 Reference Journey 交付，但不得公开收集真实学生的长期私密数据。任何真实用户服务端数据必须等待 Private Account Slice 的生产门。Benchmark、付费 AI 解读和外部 Agent 接入继续依赖真实、合规、经授权的数据基础，不会越过以上生产门提前伪装上线。

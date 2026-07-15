@@ -17,7 +17,10 @@ describe("package contract", () => {
 
     expect(packageJson.scripts?.["verify:architecture"]).toBeDefined();
     expect(packageJson.scripts?.["verify:features"]).toBeDefined();
+    expect(packageJson.scripts?.["verify:supabase-contracts"]).toBeDefined();
+    expect(packageJson.scripts?.["verify:supabase"]).toBeDefined();
     expect(packageJson.scripts?.verify).toContain("pnpm verify:architecture");
     expect(packageJson.scripts?.verify).toContain("pnpm verify:features");
+    expect(packageJson.scripts?.verify).toContain("pnpm verify:supabase-contracts");
   });
 });

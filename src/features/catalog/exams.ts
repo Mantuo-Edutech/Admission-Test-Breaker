@@ -24,7 +24,7 @@ export const EXAM_CATALOG: readonly ExamCatalogEntry[] = [
     name: "ESAT",
     purpose: "数学与科学模块化入学测试",
     availability: "building",
-    statusLabel: "资料馆建设中",
+    statusLabel: "建设中",
     href: "/exams/esat",
   },
   {
@@ -32,7 +32,7 @@ export const EXAM_CATALOG: readonly ExamCatalogEntry[] = [
     name: "TARA",
     purpose: "批判思维、问题解决与写作",
     availability: "building",
-    statusLabel: "资料馆建设中",
+    statusLabel: "建设中",
     href: "/exams/tara",
   },
   {
@@ -40,7 +40,7 @@ export const EXAM_CATALOG: readonly ExamCatalogEntry[] = [
     name: "UCAT",
     purpose: "医学与牙科申请能力测试",
     availability: "building",
-    statusLabel: "资料馆建设中",
+    statusLabel: "建设中",
     href: "/exams/ucat",
   },
 ];

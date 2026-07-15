@@ -1,0 +1,56 @@
+schemaVersion: 1
+feature:
+  id: mineru-content-import-foundation
+  title: MinerU content import normalization foundation
+  status: partial
+  userOutcome: >-
+    A content operator can convert an existing MinerU content_list_v2 result
+    into provider-independent, source-linked JSON that remains review-only and
+    cannot enter the published question bank automatically.
+
+run:
+  packageScript: verify:content-imports
+
+claims:
+  - id: stable-provider-boundary
+    status: verified
+    statement: >-
+      MinerU page blocks are normalized into a versioned platform document with
+      source digest, parser version, backend, page, order, coordinates, text and
+      asset references without exposing MinerU raw structures to question code.
+    artifacts:
+      - src/content/imports/types.ts
+      - src/content/imports/mineru-normalizer.ts
+      - content/imports/schemas/normalized-document.schema.json
+      - tests/content/imports/mineru-normalizer.test.ts
+      - tests/content/imports/schema.test.ts
+    automatedChecks:
+      - verify:content-imports
+      - typecheck
+
+  - id: review-only-import
+    status: verified
+    statement: >-
+      Normalized parser output is always needs_review and publishable false;
+      provider warnings and empty content remain visible instead of being
+      silently accepted.
+    artifacts:
+      - src/content/imports/verify.ts
+      - src/content/imports/mineru-cli.ts
+      - tests/content/imports/mineru-cli.test.ts
+      - docs/content/MINERU_CONTENT_IMPORT_FOUNDATION.md
+    automatedChecks:
+      - verify:content-imports
+      - test
+
+boundaries:
+  - The project does not yet invoke MinerU locally or through its cloud API.
+  - No local PDF has been uploaded to a third party by this feature.
+  - A real-document accuracy and correction-time benchmark is still required.
+  - The normalization layer does not segment questions or publish content revisions.
+  - The future review workbench must remain isolated from private learner data.
+
+manualChecks:
+  - id: representative-document-benchmark
+    status: pending
+    evidence: Compare Poppler and MinerU on a question paper, answer key, worked solution and textbook before choosing a deployment backend.

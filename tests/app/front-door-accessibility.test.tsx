@@ -68,26 +68,25 @@ describe("public exam front-door accessibility", () => {
 
     await screen.findByRole("heading", { level: 1, name: "ESAT" });
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
-    expect(screen.getByText("资料馆建设中")).toBeInTheDocument();
+    expect(screen.getByText("建设中")).toBeInTheDocument();
     expect(screen.queryByRole("link", { name: /开始|训练/u })).not.toBeInTheDocument();
     expect(screen.queryByRole("button")).not.toBeInTheDocument();
     expectNamedControlsAndImages(container);
   });
 
-  it("keeps future TMUA steps inert and exposes the archive as a table", async () => {
+  it("keeps the public TMUA overview focused on the profile-first staged path", async () => {
     const router = createAppRouter(["/exams/tmua"], services);
     const { container } = render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { level: 1, name: "TMUA 备考中心" });
+    await screen.findByRole("heading", { level: 1, name: /先了解起点.*再开始练习/u });
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
-    const journey = screen.getByRole("list", { name: "TMUA 完整备考路径" });
+    const journey = screen.getByRole("list", { name: "TMUA 分阶段准备路径" });
     const steps = within(journey).getAllByRole("listitem");
-    expect(within(steps[0]!).queryByRole("link")).not.toBeInTheDocument();
-    expect(within(steps[1]!).queryByRole("button")).not.toBeInTheDocument();
-    expect(within(steps[4]!).queryByRole("link")).not.toBeInTheDocument();
+    expect(steps).toHaveLength(4);
     expect(
-      screen.getByRole("table", { name: "TMUA 历年真题资料馆" }),
-    ).toBeInTheDocument();
+      screen.getByRole("link", { name: /填写课程信息/u }),
+    ).toHaveAttribute("href", "/exams/tmua/profile");
+    expect(screen.queryByRole("table", { name: "TMUA 历年真题资料馆" })).not.toBeInTheDocument();
     expectNamedControlsAndImages(container);
   });
 });
