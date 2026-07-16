@@ -99,7 +99,7 @@ boundaries:
   - This is local browser persistence, not production server storage.
   - Guest Space isolation is not a claim of production multi-tenant RLS.
   - Course coverage is limited to the versioned CAIE/Pearson mapping; practical readiness remains unknown until learner evidence exists.
-  - Only TMUA 2023 Paper 1 currently has 20 published online questions.
+  - Only TMUA 2023 Paper 1 is natively structured; the other 17 papers use verified original PDFs with an online answer sheet.
   - TMUA 2022 Paper 1 is structured staging data and remains unavailable to students until formula, figure and content review is complete.
   - No benchmark, admissions probability, paid interpretation or AI recommendation is produced by this feature.
 

@@ -32,9 +32,12 @@ function accountSession(email: string | undefined): AccountSession {
   return { email };
 }
 
-function readableAuthError(message: string): Error {
+export function readableAuthError(message: string): Error {
   if (/invalid login credentials/i.test(message)) {
     return new Error("邮箱或密码不正确");
+  }
+  if (/email not confirmed/i.test(message)) {
+    return new Error("邮箱尚未确认。请先点击确认邮件中的链接，再重新登录");
   }
   if (/user already registered/i.test(message)) {
     return new Error("这个邮箱已经注册，请直接登录");

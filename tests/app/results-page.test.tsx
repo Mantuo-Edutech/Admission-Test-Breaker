@@ -113,7 +113,7 @@ describe("evidence-only results page", () => {
       await screen.findByRole("button", { name: "重新练习这份试卷" }),
     );
     expect(store.cleared).toBe(true);
-    expect(router.state.location.pathname).toBe("/exams/tmua/dashboard");
+    expect(router.state.location.pathname).toBe("/practice/tmua-2023-p1/start");
   });
 
   it("does not expose an active or mismatched result session", async () => {

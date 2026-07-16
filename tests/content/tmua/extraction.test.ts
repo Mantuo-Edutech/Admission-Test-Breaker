@@ -80,6 +80,20 @@ describe("answer and solution linking", () => {
     ]);
   });
 
+  it("reads answer keys that place the two papers in separate sections", () => {
+    const answerPages = pages([
+      "PAPER 1\nQuestion Key\n 1 D\n 2 C\n\nPAPER 2\nQuestion Key\n 1 C\n 2 B",
+    ]);
+    expect([...parseAnswerKey(answerPages, 1)]).toEqual([
+      [1, { label: "D", page: 1 }],
+      [2, { label: "C", page: 1 }],
+    ]);
+    expect([...parseAnswerKey(answerPages, 2)]).toEqual([
+      [1, { label: "C", page: 1 }],
+      [2, { label: "B", page: 1 }],
+    ]);
+  });
+
   it("keeps solution continuations and their page evidence together", () => {
     const solutionPages = pages([
       "Contents",

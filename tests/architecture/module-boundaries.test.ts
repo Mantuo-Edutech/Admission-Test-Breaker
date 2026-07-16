@@ -244,7 +244,7 @@ describe("module architecture boundaries", () => {
       "vitest run tests/architecture/feature-manifests.test.ts",
     );
     expect(packageJson.scripts?.verify).toBe(
-      "pnpm verify:architecture && pnpm verify:features && pnpm verify:supabase-contracts && pnpm verify:content-imports && pnpm verify:tmua-corpus && pnpm verify:tmua-extractions && pnpm test && pnpm typecheck && pnpm build",
+      "pnpm verify:architecture && pnpm verify:features && pnpm verify:supabase-contracts && pnpm verify:content-imports && pnpm verify:tmua-corpus && pnpm verify:tmua-extractions && pnpm verify:tmua-online-papers && pnpm test && pnpm typecheck && pnpm build",
     );
   });
 });

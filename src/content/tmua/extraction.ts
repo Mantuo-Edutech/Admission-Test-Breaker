@@ -169,7 +169,26 @@ export function parseAnswerKey(
       if (number >= 1 && number <= 20) answers.set(number, { label, page: page.page });
     }
   }
-  return answers;
+  if (answers.size === 20) return answers;
+
+  const pairedAnswers = new Map(answers);
+  answers.clear();
+  const headingPattern = /^\s*PAPER\s+([12])\s*$/gimu;
+  for (const page of pages) {
+    const headings = [...page.layoutText.matchAll(headingPattern)];
+    const targetIndex = headings.findIndex((match) => Number(match[1]) === paper);
+    if (targetIndex < 0) continue;
+    const start = (headings[targetIndex]!.index ?? 0) + headings[targetIndex]![0].length;
+    const end = headings[targetIndex + 1]?.index ?? page.layoutText.length;
+    const section = page.layoutText.slice(start, end);
+    for (const match of section.matchAll(/^\s*(\d{1,2})\s+([A-H])\s*$/gmu)) {
+      const number = Number.parseInt(match[1]!, 10);
+      if (number >= 1 && number <= 20) {
+        answers.set(number, { label: match[2]!, page: page.page });
+      }
+    }
+  }
+  return answers.size > 0 ? answers : pairedAnswers;
 }
 
 export function parseWorkedSolutions(

@@ -4,12 +4,14 @@ import { MathContent } from "./MathContent.js";
 
 interface QuestionCardProps {
   question: PracticeQuestion;
+  paperNumber?: 1 | 2;
   selectedAnswer: string | null;
   onAnswer(answer: string): void;
 }
 
 export function QuestionCard({
   question,
+  paperNumber = 1,
   selectedAnswer,
   onAnswer,
 }: QuestionCardProps) {
@@ -17,7 +19,7 @@ export function QuestionCard({
     <article className="question-card" aria-labelledby={`question-${question.number}`}>
       <div className="question-card__heading">
         <div>
-          <p>TMUA · PAPER 1</p>
+          <p>TMUA · PAPER {paperNumber}</p>
           <h1 id={`question-${question.number}`}>第 {question.number} 题</h1>
         </div>
         <span>单项选择</span>

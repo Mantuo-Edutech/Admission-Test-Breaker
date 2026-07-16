@@ -57,6 +57,19 @@ function BlockContent({ block }: { block: QuestionBlock }) {
     );
   }
 
+  if (block.kind === "source-pdf") {
+    const source = `${block.src}#page=${block.page}&view=FitH`;
+    return (
+      <section className="source-pdf-question" aria-label={block.title}>
+        <iframe src={source} title={block.title} loading="lazy" />
+        <p>
+          当前定位到原卷第 {block.page} 页。
+          <a href={source} target="_blank" rel="noreferrer">在新窗口打开完整试卷</a>
+        </p>
+      </section>
+    );
+  }
+
   return (
     <figure className="question-figure">
       <img src={block.src} alt={block.alt} />

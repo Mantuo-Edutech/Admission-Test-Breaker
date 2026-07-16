@@ -89,6 +89,7 @@ export const TMUA_2023_P1: PracticePaper = {
   edition: "2023",
   paper: 1,
   durationMinutes: 75,
+  deliveryMode: "structured",
   questions: [
     question(
       1,

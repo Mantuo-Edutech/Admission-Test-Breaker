@@ -5,7 +5,13 @@ export type InlineRun =
 export type QuestionBlock =
   | { kind: "paragraph"; runs: InlineRun[] }
   | { kind: "display-math"; tex: string }
-  | { kind: "figure"; src: string; alt: string; caption?: string };
+  | { kind: "figure"; src: string; alt: string; caption?: string }
+  | {
+      kind: "source-pdf";
+      src: string;
+      page: number;
+      title: string;
+    };
 
 export interface PracticeOption {
   label: string;
@@ -27,11 +33,12 @@ export interface PracticeQuestion {
 }
 
 export interface PracticePaper {
-  id: "tmua-2023-p1";
+  id: string;
   exam: "TMUA";
-  edition: "2023";
-  paper: 1;
+  edition: string;
+  paper: 1 | 2;
   durationMinutes: 75;
+  deliveryMode: "structured" | "source-pdf-answer-sheet";
   questions: PracticeQuestion[];
 }
 

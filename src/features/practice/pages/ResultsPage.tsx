@@ -11,7 +11,8 @@ import {
 import type { AppServices } from "../../../app/dependencies.js";
 import { BrandMark } from "../components/BrandMark.js";
 import { QuestionResultRow } from "../components/QuestionResultRow.js";
-import { TMUA_2023_P1 } from "../content/tmua-2023-p1.js";
+import { getTmuaPracticePaper } from "../content/tmua-online-registry.js";
+import type { PracticePaper } from "../content/types.js";
 import {
   calculateResults,
   type PracticeResults,
@@ -24,7 +25,7 @@ interface ResultsPageProps {
 type ResultLoadState =
   | { kind: "loading" }
   | { kind: "unavailable" }
-  | { kind: "ready"; results: PracticeResults; eventCount: number };
+  | { kind: "ready"; results: PracticeResults; eventCount: number; paper: PracticePaper };
 
 function formatDuration(timeMs: number): string {
   const totalSeconds = Math.round(timeMs / 1_000);
@@ -73,10 +74,16 @@ export function ResultsPage({ services }: ResultsPageProps) {
         setState({ kind: "unavailable" });
         return;
       }
+      const paper = getTmuaPracticePaper(session.paperId);
+      if (paper === null) {
+        setState({ kind: "unavailable" });
+        return;
+      }
       setState({
         kind: "ready",
-        results: calculateResults(TMUA_2023_P1, session),
+        results: calculateResults(paper, session),
         eventCount: session.events.length,
+        paper,
       });
     });
     return () => {
@@ -85,9 +92,10 @@ export function ResultsPage({ services }: ResultsPageProps) {
   }, [services.store, sessionId]);
 
   async function restart() {
+    if (state.kind !== "ready") return;
     setRestarting(true);
     await services.store.clearCurrent();
-    navigate("/exams/tmua/dashboard");
+    navigate(`/practice/${state.paper.id}/start`);
   }
 
   if (state.kind === "loading") {
@@ -110,7 +118,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
     );
   }
 
-  const { results, eventCount } = state;
+  const { results, eventCount, paper } = state;
   const attemptedCount = results.correctCount + results.incorrectCount;
   const attemptedTopics = results.topics
     .filter((topic) => topic.attemptedCount > 0)
@@ -190,7 +198,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
               <QuestionResultRow
                 key={result.questionId}
                 result={result}
-                question={TMUA_2023_P1.questions[index]!}
+                question={paper.questions[index]!}
               />
             ))}
           </div>

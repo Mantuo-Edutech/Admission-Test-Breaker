@@ -1,7 +1,7 @@
 # Admission Test Breaker 系统架构
 
 **状态：** 生效
-**日期：** 2026-07-15
+**日期：** 2026-07-17
 **架构形态：** API-first 模块化单体，事件账本与版本化投影
 **上位约束：** `docs/product/PRODUCT_CHARTER.md`
 
@@ -90,6 +90,8 @@ flowchart LR
 ```
 
 MinerU 是可替换的边缘适配器，不是平台数据模型。平台保存 provider、版本、backend、解析时间、页码、顺序和坐标，但业务代码不直接依赖 MinerU 的 `middle.json` 或 `content_list_v2.json`。所有自动解析结果必须保持 `reviewStatus = needs_review` 与 `publishable = false`；只有独立的内容审核流程可以创建可发布 revision。
+
+在线原卷模式是独立的交付层，不把 OCR 草稿冒充结构化题目。它只在原始 Question Paper 和官方 Answer Key 的哈希均匹配 corpus 后，发布不可变 PDF、题号到原卷页码的映射及官方答案；Practice Engine 仍负责会话、在线答题卡、计时、事件与结果。原生结构化题和原卷模式使用同一个 `PracticePaper` 契约，但必须通过 `deliveryMode` 明确区分。原卷模式的“可在线练习”表示题面在线显示且答案可记录/评分，不表示公式、图形和知识标签已经逐题结构化。
 
 内容解析默认不得包含或读取真实学生记录。云解析只用于已明确允许传输的内容文件；原创教研资料和未来用户上传文件优先采用私有部署，并由平台自己的持久任务队列、对象存储、重试和审计管理生命周期。
 

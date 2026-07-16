@@ -133,6 +133,10 @@ describe("invite-first account access flow", () => {
     await user.click(screen.getByRole("button", { name: "创建账号并解锁" }));
 
     expect(await screen.findByRole("heading", { name: "请确认你的邮箱" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "打开本地确认邮箱" })).toHaveAttribute(
+      "href",
+      "http://127.0.0.1:54324",
+    );
     expect(account.redeemInvite).not.toHaveBeenCalled();
     expect(pending.load()).toBe("MANTUOTMUALOCAL2026ACCESS");
   });

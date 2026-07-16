@@ -28,7 +28,7 @@ export function validatePracticePaper(paper: PracticePaper): ValidationIssue[] {
   for (const question of paper.questions) {
     const labels = question.options.map((option) => option.label);
 
-    if (question.id !== `tmua-2023-p1-q${String(question.number).padStart(2, "0")}`) {
+    if (question.id !== `${paper.id}-q${String(question.number).padStart(2, "0")}`) {
       issues.push({
         code: "question-id",
         questionId: question.id,

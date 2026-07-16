@@ -64,7 +64,7 @@ export function TmuaDashboardPage({ services }: TmuaDashboardPageProps) {
       eventId: services.ids.eventId(),
     });
     const result = await services.store.save(session);
-    navigate("/practice/tmua-2023-paper-1", {
+    navigate("/practice/tmua-2023-p1", {
       state: result.persisted ? undefined : { recoveryWarning: true },
     });
   }
@@ -76,7 +76,7 @@ export function TmuaDashboardPage({ services }: TmuaDashboardPageProps) {
         <div>
           <p className="eyebrow">你的 TMUA 准备首页</p>
           <h1>下一步：完成一套在线真题</h1>
-          <p>根据目前可用的已核验内容，建议先完成 2023 Paper 1，系统会记录作答和用时。</p>
+          <p>建议先从已经完成逐题在线排版的 2023 Paper 1 开始；历年真题页另有 17 套原卷可练习。</p>
         </div>
         <Link to="/exams/tmua/profile">修改课程信息</Link>
       </section>
@@ -103,7 +103,7 @@ export function TmuaDashboardPage({ services }: TmuaDashboardPageProps) {
             <button
               className="button button--primary"
               type="button"
-              onClick={() => navigate("/practice/tmua-2023-paper-1")}
+              onClick={() => navigate("/practice/tmua-2023-p1")}
             >
               继续练习 · {Object.keys(recoverable.answers).length} / 20
             </button>
@@ -125,9 +125,9 @@ export function TmuaDashboardPage({ services }: TmuaDashboardPageProps) {
           </article>
 
         <article className="tmua-dashboard-card">
-          <div className="tmua-dashboard-card__meta"><LibraryBig aria-hidden="true" /><span>18 套档案</span></div>
+          <div className="tmua-dashboard-card__meta"><LibraryBig aria-hidden="true" /><span>18 套可练习</span></div>
           <h2>历年真题</h2>
-          <p>查看每套试卷的年份、核验状态和目前可在线作答的题目。</p>
+          <p>选择任一历年试卷，直接计时作答并提交评分。</p>
           <Link className="button button--secondary" to="/exams/tmua/past-papers">查看历年真题</Link>
         </article>
 

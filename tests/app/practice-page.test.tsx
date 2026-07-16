@@ -47,6 +47,17 @@ function activeSession() {
   });
 }
 
+function activePdfSession() {
+  return createPracticeSession({
+    id: "ses_pdf-practice-test",
+    learningSpaceId: FIXED_GUEST_SPACE.id,
+    actor: { kind: "guest", actorId: FIXED_GUEST_SPACE.ownerActorId },
+    paperId: "tmua-2022-p2",
+    startedAt: "2026-07-13T09:00:00.000Z",
+    eventId: "evt_pdf-practice-started",
+  });
+}
+
 function appServices(store: PracticeSessionStore): AppServices {
   let eventNumber = 0;
   return {
@@ -64,6 +75,26 @@ function appServices(store: PracticeSessionStore): AppServices {
 afterEach(() => vi.restoreAllMocks());
 
 describe("responsive TMUA practice page", () => {
+  it("renders a non-native paper from its original PDF and records online answers", async () => {
+    const user = userEvent.setup();
+    const store = new PracticeStore(activePdfSession());
+    const router = createAppRouter(
+      ["/practice/tmua-2022-p2"],
+      appServices(store),
+    );
+    render(<RouterProvider router={router} />);
+
+    const frame = await screen.findByTitle("2022 Paper 2 第 1 题原卷");
+    expect(frame).toHaveAttribute(
+      "src",
+      "/papers/tmua/tmua-2022-p2.pdf#page=3&view=FitH",
+    );
+    await user.click(screen.getByRole("radio", { name: "选项 B" }));
+    await waitFor(() => {
+      expect(store.saves.at(-1)?.answers).toEqual({ "tmua-2022-p2-q01": "B" });
+    });
+  });
+
   it("pauses timing while the page is hidden and resumes when visible", async () => {
     const store = new PracticeStore(activeSession());
     const visibility = vi.spyOn(document, "visibilityState", "get");

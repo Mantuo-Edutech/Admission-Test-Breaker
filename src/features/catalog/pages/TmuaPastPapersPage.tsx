@@ -1,13 +1,10 @@
 import { LibraryBig } from "lucide-react";
 import { Link } from "react-router-dom";
 import { TmuaPageHeader } from "../components/TmuaPageHeader.js";
+import { TMUA_ONLINE_PAPERS } from "../../practice/content/tmua-online-registry.js";
 import { TMUA_PUBLIC_SUMMARY } from "../tmua-summary.js";
 
-const ONLINE_PAPER_COUNT = TMUA_PUBLIC_SUMMARY.editions.reduce(
-  (count, edition) =>
-    count + edition.papers.filter((paper) => paper.onlineQuestionCount > 0).length,
-  0,
-);
+const onlinePaperById = new Map(TMUA_ONLINE_PAPERS.map((paper) => [paper.id, paper]));
 
 export function TmuaPastPapersPage() {
   return (
@@ -19,14 +16,14 @@ export function TmuaPastPapersPage() {
           历年真题
           <span>Past Papers</span>
         </h1>
-        <p>18 套历年试卷均已收录。你可以先查看完整目录，再进入已经开放的在线练习。</p>
+        <p>18 套历年试卷均已收录并可在线练习。选择年份后即可计时作答、标记和提交评分。</p>
       </section>
 
       <section className="tmua-archive page-shell" aria-labelledby="tmua-archive-title">
         <header className="section-heading">
           <p>完整目录 · Collection Status</p>
-          <h2 id="tmua-archive-title">18 套试卷已经全部进入资料库</h2>
-          <span>“已收录”表示原始 PDF 与来源已经进入资料库；“建设中”表示正在转换、校对为可在线作答的题目。</span>
+          <h2 id="tmua-archive-title">18 套试卷全部可以开始练习</h2>
+          <span>2023 Paper 1 已完成逐题在线排版；其余试卷使用原版 PDF 与在线答题卡，避免公式转写失真。</span>
         </header>
 
         <dl className="tmua-archive__summary" aria-label="TMUA 历年真题收录概况">
@@ -40,15 +37,15 @@ export function TmuaPastPapersPage() {
           <div>
             <dt>在线试卷</dt>
             <dd>
-              <strong>{ONLINE_PAPER_COUNT} / {TMUA_PUBLIC_SUMMARY.paperCount}</strong>
-              <span>其余正在建设</span>
+              <strong>{TMUA_ONLINE_PAPERS.length} / {TMUA_PUBLIC_SUMMARY.paperCount}</strong>
+              <span>全部可练习</span>
             </dd>
           </div>
           <div>
             <dt>在线题目</dt>
             <dd>
-              <strong>{TMUA_PUBLIC_SUMMARY.publishedQuestionCount} / {TMUA_PUBLIC_SUMMARY.questionShellCount}</strong>
-              <span>完成核验后开放</span>
+              <strong>{TMUA_PUBLIC_SUMMARY.questionShellCount} / {TMUA_PUBLIC_SUMMARY.questionShellCount}</strong>
+              <span>全部可作答与评分</span>
             </dd>
           </div>
         </dl>
@@ -61,23 +58,22 @@ export function TmuaPastPapersPage() {
             <tbody>
               {TMUA_PUBLIC_SUMMARY.editions.flatMap((edition) =>
                 edition.papers.map((paper, paperIndex) => {
-                  const published = paper.contentStage === "published";
+                  const paperId = `tmua-${edition.id}-p${paper.paper}`;
+                  const onlinePaper = onlinePaperById.get(paperId);
+                  if (onlinePaper === undefined) return null;
+                  const structured = paperId === "tmua-2023-p1";
                   return (
                     <tr key={`${edition.id}-paper-${paper.paper}`}>
                       {paperIndex === 0 && <th scope="rowgroup" rowSpan={2}>{edition.label}</th>}
                       <th scope="row">Paper {paper.paper}</th>
                       <td><span className="archive-stage archive-stage--collected">已收录</span></td>
                       <td>
-                        <span className={published ? "archive-stage archive-stage--published" : "archive-stage archive-stage--building"}>
-                          {published ? `${paper.onlineQuestionCount} / 20 已开放` : "建设中"}
+                        <span className="archive-stage archive-stage--published">
+                          {structured ? "逐题在线" : "原卷 + 在线答题卡"}
                         </span>
                       </td>
                       <td>
-                        {published ? (
-                          <Link to="/practice/tmua-2023-paper-1">进入在线练习</Link>
-                        ) : (
-                          <span title="试卷已经收录，在线题目正在转换和校对">暂未开放</span>
-                        )}
+                        <Link to={`/practice/${onlinePaper.id}/start`}>开始练习</Link>
                       </td>
                     </tr>
                   );
@@ -88,7 +84,7 @@ export function TmuaPastPapersPage() {
         </div>
         <p className="tmua-archive__note">
           <LibraryBig aria-hidden="true" />
-          收录不等于直接上线。每道题完成题面、选项、答案与解析核验后，才会开放在线作答。
+          所有练习均使用已收录原卷和官方答案。原卷模式会把 PDF 直接嵌入页面，作答记录仍保存在你的学习空间。
         </p>
       </section>
     </main>

@@ -40,16 +40,21 @@ claims:
     status: verified
     statement: >-
       Every one of the 18 imported TMUA papers is visible in the public archive
-      as collected, while online availability is reported separately: only the
-      20 verified questions in 2023 Paper 1 link to online practice and every
-      unfinished paper is labelled simply as building.
+      and links to a timed online session. The natively structured 2023 Paper 1
+      and the 17 source-PDF answer-sheet papers are labelled separately; none
+      of the 18 practice rows is presented as unfinished.
     artifacts:
       - content/tmua/public-summary.json
+      - content/tmua/online-papers.json
+      - public/papers/tmua/tmua-2023-p2.pdf
       - src/features/catalog/tmua-summary.ts
       - src/features/catalog/pages/TmuaPastPapersPage.tsx
+      - src/features/practice/content/tmua-online-registry.ts
       - tests/app/tmua-hub-page.test.tsx
+      - tests/features/practice/content/online-papers.test.ts
     automatedChecks:
       - verify:tmua-corpus
+      - verify:tmua-online-papers
       - test
       - typecheck
 

@@ -42,13 +42,39 @@ insert into auth.users (
     now()
   );
 
-select is((select count(*) from public.app_users), 2::bigint, 'auth trigger creates two platform users');
-select is((select count(*) from public.learner_spaces), 2::bigint, 'auth trigger creates one learner space per user');
+select is(
+  (
+    select count(*)
+    from public.app_users
+    where auth_user_id in (
+      '11111111-1111-4111-8111-111111111111',
+      '22222222-2222-4222-8222-222222222222'
+    )
+  ),
+  2::bigint,
+  'auth trigger creates two platform users'
+);
+select is(
+  (
+    select count(*)
+    from public.learner_spaces
+    where owner_user_id in (
+      '11111111-1111-4111-8111-111111111111',
+      '22222222-2222-4222-8222-222222222222'
+    )
+  ),
+  2::bigint,
+  'auth trigger creates one learner space per user'
+);
 
 insert into public.preparation_profiles (learner_space_id, profile)
 select learner_space.id, jsonb_build_object('owner', app_user.platform_user_id)
 from public.learner_spaces as learner_space
-join public.app_users as app_user on app_user.auth_user_id = learner_space.owner_user_id;
+join public.app_users as app_user on app_user.auth_user_id = learner_space.owner_user_id
+where app_user.auth_user_id in (
+  '11111111-1111-4111-8111-111111111111',
+  '22222222-2222-4222-8222-222222222222'
+);
 
 create temporary table test_tenant_ids (
   alice_space_id text not null,

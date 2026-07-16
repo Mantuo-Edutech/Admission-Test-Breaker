@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import {
   createBrowserRouter,
   createMemoryRouter,
+  Navigate,
   useLocation,
 } from "react-router-dom";
 import type { AppServices } from "./dependencies.js";
@@ -13,6 +14,10 @@ import { PreparationProfileGate } from "../features/preparation-profile/componen
 
 const PracticePage = lazy(async () => ({
   default: (await import("../features/practice/pages/PracticePage.js")).PracticePage,
+}));
+const PracticeLaunchPage = lazy(async () => ({
+  default: (await import("../features/practice/pages/PracticeLaunchPage.js"))
+    .PracticeLaunchPage,
 }));
 const ResultsPage = lazy(async () => ({
   default: (await import("../features/practice/pages/ResultsPage.js")).ResultsPage,
@@ -202,6 +207,22 @@ export function createAppRouter(
     })),
     {
       path: "/practice/tmua-2023-paper-1",
+      element: <Navigate to="/practice/tmua-2023-p1" replace />,
+    },
+    {
+      path: "/practice/:paperId/start",
+      element: (
+        <RouteFrame>
+          <Suspense fallback={<RouteLoading />}>
+            <PreparationProfileGate services={services}>
+              <PracticeLaunchPage services={services} />
+            </PreparationProfileGate>
+          </Suspense>
+        </RouteFrame>
+      ),
+    },
+    {
+      path: "/practice/:paperId",
       element: (
         <RouteFrame>
           <Suspense fallback={<RouteLoading />}>

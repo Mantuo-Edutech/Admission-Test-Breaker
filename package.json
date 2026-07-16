@@ -17,7 +17,7 @@
     "verify:features": "vitest run tests/architecture/feature-manifests.test.ts",
     "verify:supabase-contracts": "vitest run tests/architecture/supabase-contracts.test.ts",
     "verify:supabase": "supabase test db && tsx scripts/verify-supabase-local.ts",
-    "verify": "pnpm verify:architecture && pnpm verify:features && pnpm verify:supabase-contracts && pnpm verify:content-imports && pnpm verify:tmua-corpus && pnpm verify:tmua-extractions && pnpm test && pnpm typecheck && pnpm build",
+    "verify": "pnpm verify:architecture && pnpm verify:features && pnpm verify:supabase-contracts && pnpm verify:content-imports && pnpm verify:tmua-corpus && pnpm verify:tmua-extractions && pnpm verify:tmua-online-papers && pnpm test && pnpm typecheck && pnpm build",
     "supabase:start": "supabase start",
     "supabase:stop": "supabase stop",
     "supabase:reset": "supabase db reset",
@@ -26,11 +26,13 @@
     "tmua:inventory": "tsx src/content/tmua/cli.ts inventory",
     "tmua:sync-official": "tsx src/content/tmua/cli.ts sync-official",
     "tmua:build": "tsx src/content/tmua/cli.ts build",
+    "tmua:build-online-papers": "tsx src/content/tmua/build-online-papers.ts",
     "tmua:extract-paper": "tsx src/content/tmua/extract-cli.ts",
     "verify:tmua-files": "tsx src/content/tmua/cli.ts verify-files",
     "verify:tmua-taxonomy": "tsx src/content/tmua/cli.ts verify-taxonomy",
     "verify:tmua-corpus": "tsx src/content/tmua/cli.ts verify-corpus",
-    "verify:tmua-extractions": "tsx src/content/tmua/verify-extractions.ts"
+    "verify:tmua-extractions": "tsx src/content/tmua/verify-extractions.ts",
+    "verify:tmua-online-papers": "vitest run tests/features/practice/content/online-papers.test.ts"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.19",

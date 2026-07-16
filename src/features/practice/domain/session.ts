@@ -9,15 +9,17 @@ import type {
   PracticeSessionId,
 } from "../../../platform/shared/ids.js";
 
-export const TMUA_2023_P1_DURATION_MS = 75 * 60 * 1_000;
-export const TMUA_2023_P1_QUESTION_COUNT = 20;
+export const TMUA_PAPER_DURATION_MS = 75 * 60 * 1_000;
+export const TMUA_PAPER_QUESTION_COUNT = 20;
+export const TMUA_2023_P1_DURATION_MS = TMUA_PAPER_DURATION_MS;
+export const TMUA_2023_P1_QUESTION_COUNT = TMUA_PAPER_QUESTION_COUNT;
 
 export interface PracticeSession {
   schemaVersion: 2;
   id: PracticeSessionId;
   learningSpaceId: LearningSpaceId;
   startedBy: ActorRef;
-  paperId: "tmua-2023-p1";
+  paperId: string;
   status: "active" | "submitted" | "expired";
   startedAt: string;
   deadlineAt: string;
@@ -36,9 +38,13 @@ export interface CreatePracticeSessionInput {
   actor: ActorRef;
   startedAt: string;
   eventId: LearningEventId;
+  paperId?: string;
 }
 
-export function questionIdForNumber(questionNumber: number): string {
+export function questionIdForNumber(
+  questionNumber: number,
+  paperId = "tmua-2023-p1",
+): string {
   if (
     !Number.isInteger(questionNumber) ||
     questionNumber < 1 ||
@@ -49,12 +55,19 @@ export function questionIdForNumber(questionNumber: number): string {
     );
   }
 
-  return `tmua-2023-p1-q${String(questionNumber).padStart(2, "0")}`;
+  if (!/^tmua-.+-p[12]$/u.test(paperId)) {
+    throw new Error("Practice paper ID is invalid");
+  }
+  return `${paperId}-q${String(questionNumber).padStart(2, "0")}`;
 }
 
 export function createPracticeSession(
   input: CreatePracticeSessionInput,
 ): PracticeSession {
+  const paperId = input.paperId ?? "tmua-2023-p1";
+  if (!/^tmua-.+-p[12]$/u.test(paperId)) {
+    throw new Error("Practice paper ID is invalid");
+  }
   const deadlineAt = new Date(
     Date.parse(input.startedAt) + TMUA_2023_P1_DURATION_MS,
   ).toISOString();
@@ -66,7 +79,7 @@ export function createPracticeSession(
     type: "session_started",
     actor: input.actor,
     occurredAt: input.startedAt,
-    payload: { paperId: "tmua-2023-p1", deadlineAt },
+    payload: { paperId, deadlineAt },
   });
 
   return {
@@ -74,7 +87,7 @@ export function createPracticeSession(
     id: input.id,
     learningSpaceId: input.learningSpaceId,
     startedBy: input.actor,
-    paperId: "tmua-2023-p1",
+    paperId,
     status: "active",
     startedAt: input.startedAt,
     deadlineAt,

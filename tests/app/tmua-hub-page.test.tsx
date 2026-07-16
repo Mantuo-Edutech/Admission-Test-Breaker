@@ -248,7 +248,7 @@ describe("TMUA staged preparation journey", () => {
       learningSpaceId: FIXED_GUEST_SPACE.id,
       startedBy: { kind: "guest", actorId: FIXED_GUEST_SPACE.ownerActorId },
     });
-    expect(router.state.location.pathname).toBe("/practice/tmua-2023-paper-1");
+    expect(router.state.location.pathname).toBe("/practice/tmua-2023-p1");
   });
 
   it("resumes a Guest-owned active paper from the dashboard", async () => {
@@ -261,7 +261,7 @@ describe("TMUA staged preparation journey", () => {
     render(<RouterProvider router={router} />);
 
     await user.click(await screen.findByRole("button", { name: "继续练习 · 1 / 20" }));
-    expect(router.state.location.pathname).toBe("/practice/tmua-2023-paper-1");
+    expect(router.state.location.pathname).toBe("/practice/tmua-2023-p1");
   });
 
   it("keeps the 30-minute diagnostic honest while its original form is reviewed", async () => {
@@ -288,12 +288,12 @@ describe("TMUA staged preparation journey", () => {
     const table = await screen.findByRole("table", { name: "TMUA 历年真题资料馆" });
     expect(within(table).getAllByRole("row")).toHaveLength(19);
     expect(within(table).getAllByText("已收录")).toHaveLength(18);
-    expect(within(table).getAllByText("建设中")).toHaveLength(17);
-    expect(within(table).getByText("20 / 20 已开放")).toBeInTheDocument();
-    expect(within(table).getAllByRole("link")).toHaveLength(1);
-    expect(screen.getByText("18 / 18")).toBeInTheDocument();
-    expect(screen.getByText("1 / 18")).toBeInTheDocument();
-    expect(screen.getByText("20 / 360")).toBeInTheDocument();
+    expect(within(table).getAllByText("原卷 + 在线答题卡")).toHaveLength(17);
+    expect(within(table).getByText("逐题在线")).toBeInTheDocument();
+    expect(within(table).getAllByRole("link", { name: "开始练习" })).toHaveLength(18);
+    expect(screen.getAllByText("18 / 18")).toHaveLength(2);
+    expect(screen.getByText("360 / 360")).toBeInTheDocument();
+    expect(screen.queryByText("建设中")).not.toBeInTheDocument();
   });
 
   it("opens Bingbing's QR only from the separate resources page", async () => {

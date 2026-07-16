@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { Bookmark, ChevronLeft, ChevronRight } from "lucide-react";
 import type { AppServices } from "../../../app/dependencies.js";
-import { TMUA_2023_P1 } from "../content/tmua-2023-p1.js";
+import { getTmuaPracticePaper } from "../content/tmua-online-registry.js";
 import { ExamHeader } from "../components/ExamHeader.js";
 import { MobileQuestionMap, QuestionMap } from "../components/QuestionMap.js";
 import { QuestionCard } from "../components/QuestionCard.js";
@@ -10,7 +10,7 @@ import { SubmissionDialog } from "../components/SubmissionDialog.js";
 import { practiceSessionReducer } from "../domain/reducer.js";
 import {
   questionIdForNumber,
-  TMUA_2023_P1_QUESTION_COUNT,
+  TMUA_PAPER_QUESTION_COUNT,
   type PracticeSession,
 } from "../domain/session.js";
 import { remainingTimeMs } from "../domain/timer.js";
@@ -27,6 +27,8 @@ type PracticeLoadState =
 export function PracticePage({ services }: PracticePageProps) {
   const navigate = useNavigate();
   const location = useLocation();
+  const { paperId } = useParams();
+  const requestedPaper = paperId === undefined ? null : getTmuaPracticePaper(paperId);
   const [loadState, setLoadState] = useState<PracticeLoadState>({ kind: "loading" });
   const [clockMs, setClockMs] = useState(() => services.now().getTime());
   const [submissionOpen, setSubmissionOpen] = useState(false);
@@ -39,7 +41,11 @@ export function PracticePage({ services }: PracticePageProps) {
     let active = true;
     void services.store.loadCurrent().then((result) => {
       if (!active) return;
-      if (result.session === null) {
+      if (
+        result.session === null ||
+        requestedPaper === null ||
+        result.session.paperId !== requestedPaper.id
+      ) {
         setLoadState({ kind: "missing" });
       } else if (result.session.status !== "active") {
         navigate(`/results/${result.session.id}`, { replace: true });
@@ -50,7 +56,7 @@ export function PracticePage({ services }: PracticePageProps) {
     return () => {
       active = false;
     };
-  }, [navigate, services.store]);
+  }, [navigate, requestedPaper, services.store]);
 
   useEffect(() => {
     const timer = globalThis.setInterval(
@@ -148,7 +154,7 @@ export function PracticePage({ services }: PracticePageProps) {
       practiceSessionReducer(current, {
         type: "answer",
         eventId: services.ids.eventId(),
-        questionId: questionIdForNumber(current.currentQuestion),
+        questionId: questionIdForNumber(current.currentQuestion, current.paperId),
         answer,
         at: services.now().toISOString(),
       }),
@@ -160,7 +166,7 @@ export function PracticePage({ services }: PracticePageProps) {
       practiceSessionReducer(current, {
         type: "toggle-mark",
         eventId: services.ids.eventId(),
-        questionId: questionIdForNumber(current.currentQuestion),
+        questionId: questionIdForNumber(current.currentQuestion, current.paperId),
         at: services.now().toISOString(),
       }),
     );
@@ -185,7 +191,7 @@ export function PracticePage({ services }: PracticePageProps) {
         type: "open-submission",
         eventId: services.ids.eventId(),
         at: services.now().toISOString(),
-        totalQuestions: TMUA_2023_P1_QUESTION_COUNT,
+        totalQuestions: TMUA_PAPER_QUESTION_COUNT,
       }),
     );
   }
@@ -210,8 +216,8 @@ export function PracticePage({ services }: PracticePageProps) {
     () =>
       session === null
         ? null
-        : TMUA_2023_P1.questions[session.currentQuestion - 1] ?? null,
-    [session],
+        : requestedPaper?.questions[session.currentQuestion - 1] ?? null,
+    [requestedPaper, session],
   );
 
   if (loadState.kind === "loading") {
@@ -242,7 +248,9 @@ export function PracticePage({ services }: PracticePageProps) {
     <div className="practice-page">
       <ExamHeader
         answeredCount={answeredCount}
-        totalQuestions={TMUA_2023_P1_QUESTION_COUNT}
+        edition={requestedPaper?.edition ?? ""}
+        paperNumber={requestedPaper?.paper ?? 1}
+        totalQuestions={TMUA_PAPER_QUESTION_COUNT}
         remainingMs={remainingMs}
         mobileMap={
           <MobileQuestionMap session={session} onSelect={goToQuestion} />
@@ -260,6 +268,7 @@ export function PracticePage({ services }: PracticePageProps) {
         <section className="exam-workspace">
           <QuestionCard
             question={currentQuestion}
+            paperNumber={requestedPaper?.paper ?? 1}
             selectedAnswer={session.answers[currentQuestionId] ?? null}
             onAnswer={selectAnswer}
           />
@@ -285,7 +294,7 @@ export function PracticePage({ services }: PracticePageProps) {
               <button
                 className="button button--primary"
                 type="button"
-                disabled={session.currentQuestion === TMUA_2023_P1_QUESTION_COUNT}
+                disabled={session.currentQuestion === TMUA_PAPER_QUESTION_COUNT}
                 onClick={() => goToQuestion(session.currentQuestion + 1)}
               >
                 下一题<ChevronRight aria-hidden="true" />
@@ -316,7 +325,7 @@ export function PracticePage({ services }: PracticePageProps) {
         open={submissionOpen}
         answeredCount={answeredCount}
         markedCount={session.markedQuestionIds.length}
-        totalQuestions={TMUA_2023_P1_QUESTION_COUNT}
+        totalQuestions={TMUA_PAPER_QUESTION_COUNT}
         submitting={submitting}
         onOpenChange={setSubmissionOpen}
         onConfirm={() => void confirmSubmission()}

@@ -25,6 +25,10 @@ export function RegisterPage({ services }: RegisterPageProps) {
   const account = services.accountAccess;
   const pendingInvite = services.pendingInvite;
   const inviteCode = pendingInvite?.load() ?? null;
+  const localConfirmationInbox =
+    import.meta.env.DEV && /^(?:localhost|127\.0\.0\.1)$/u.test(globalThis.location.hostname)
+      ? "http://127.0.0.1:54324"
+      : null;
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -63,6 +67,13 @@ export function RegisterPage({ services }: RegisterPageProps) {
           <p className="eyebrow">还差一步</p>
           <h1>请确认你的邮箱</h1>
           <p>确认邮件已发送至 <strong>{confirmationEmail}</strong>。点击邮件中的链接后，系统会自动解锁邀请码对应的内容。</p>
+          {localConfirmationInbox !== null && (
+            <p className="account-message__note">
+              当前是本地预览，确认邮件不会进入你的真实邮箱。
+              <a href={localConfirmationInbox} target="_blank" rel="noreferrer">打开本地确认邮箱</a>
+              ，再点击最新邮件中的确认链接。
+            </p>
+          )}
           <p className="account-message__note">邀请码已暂存在当前浏览器中，请尽量使用同一设备完成确认。</p>
           <Link className="button button--secondary" to="/login">已经确认？前往登录</Link>
         </section>

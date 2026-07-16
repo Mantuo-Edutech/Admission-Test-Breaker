@@ -9,7 +9,7 @@ interface QuestionMapProps {
 }
 
 function questionState(session: PracticeSession, questionNumber: number) {
-  const questionId = questionIdForNumber(questionNumber);
+  const questionId = questionIdForNumber(questionNumber, session.paperId);
   return {
     current: session.currentQuestion === questionNumber,
     answered: session.answers[questionId] !== undefined,

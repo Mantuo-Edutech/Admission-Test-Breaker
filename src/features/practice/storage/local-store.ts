@@ -120,19 +120,20 @@ function actorsEqual(left: ActorRef, right: ActorRef): boolean {
   return false;
 }
 
-const questionIdPattern = /^tmua-2023-p1-q(?:0[1-9]|1\d|20)$/;
+const paperIdPattern = /^tmua-(?:specimen|practice-2016|20\d{2})-p[12]$/u;
 
-function assertQuestionId(value: string, label: string): void {
-  if (!questionIdPattern.test(value)) {
-    throw new Error(`${label} is not a TMUA 2023 Paper 1 question ID`);
+function assertQuestionId(value: string, paperId: string, label: string): void {
+  const expectedPrefix = `${paperId}-q`;
+  if (!value.startsWith(expectedPrefix) || !/^(?:0[1-9]|1\d|20)$/u.test(value.slice(expectedPrefix.length))) {
+    throw new Error(`${label} does not belong to ${paperId}`);
   }
 }
 
-function parseAnswers(value: unknown): Record<string, string> {
+function parseAnswers(value: unknown, paperId: string): Record<string, string> {
   assertRecord(value, "answers");
   const answers: Record<string, string> = {};
   for (const [questionId, answer] of Object.entries(value)) {
-    assertQuestionId(questionId, "Answer question ID");
+    assertQuestionId(questionId, paperId, "Answer question ID");
     if (typeof answer !== "string" || !/^[A-Z]$/.test(answer)) {
       throw new Error(`Answer for ${questionId} is invalid`);
     }
@@ -141,22 +142,22 @@ function parseAnswers(value: unknown): Record<string, string> {
   return answers;
 }
 
-function parseMarkedQuestions(value: unknown): string[] {
+function parseMarkedQuestions(value: unknown, paperId: string): string[] {
   if (!Array.isArray(value) || !value.every((item) => typeof item === "string")) {
     throw new Error("markedQuestionIds must be a string array");
   }
-  value.forEach((questionId) => assertQuestionId(questionId, "Marked question ID"));
+  value.forEach((questionId) => assertQuestionId(questionId, paperId, "Marked question ID"));
   if (new Set(value).size !== value.length) {
     throw new Error("markedQuestionIds cannot contain duplicates");
   }
   return [...value];
 }
 
-function parseTiming(value: unknown): Record<string, number> {
+function parseTiming(value: unknown, paperId: string): Record<string, number> {
   assertRecord(value, "timingByQuestionMs");
   const timing: Record<string, number> = {};
   for (const [questionId, activeMs] of Object.entries(value)) {
-    assertQuestionId(questionId, "Timing question ID");
+    assertQuestionId(questionId, paperId, "Timing question ID");
     if (
       typeof activeMs !== "number" ||
       !Number.isInteger(activeMs) ||
@@ -220,9 +221,10 @@ function parseSession(value: unknown): PracticeSession {
   const learningSpaceId = asLearningSpaceId(value.learningSpaceId);
   const startedBy = assertActor(value.startedBy);
 
-  if (value.paperId !== "tmua-2023-p1") {
+  if (typeof value.paperId !== "string" || !paperIdPattern.test(value.paperId)) {
     throw new Error("Practice paper is invalid");
   }
+  const paperId = value.paperId;
   if (
     value.status !== "active" &&
     value.status !== "submitted" &&
@@ -286,7 +288,7 @@ function parseSession(value: unknown): PracticeSession {
     id,
     learningSpaceId,
     startedBy,
-    paperId: "tmua-2023-p1",
+    paperId,
     status: value.status,
     startedAt: value.startedAt,
     deadlineAt: value.deadlineAt,
@@ -294,9 +296,9 @@ function parseSession(value: unknown): PracticeSession {
       ? {}
       : { submittedAt: value.submittedAt as string }),
     currentQuestion: value.currentQuestion as number,
-    answers: parseAnswers(value.answers),
-    markedQuestionIds: parseMarkedQuestions(value.markedQuestionIds),
-    timingByQuestionMs: parseTiming(value.timingByQuestionMs),
+    answers: parseAnswers(value.answers, paperId),
+    markedQuestionIds: parseMarkedQuestions(value.markedQuestionIds, paperId),
+    timingByQuestionMs: parseTiming(value.timingByQuestionMs, paperId),
     activeQuestionEnteredAt,
     events,
   };

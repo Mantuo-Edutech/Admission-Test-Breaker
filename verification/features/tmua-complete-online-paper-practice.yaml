@@ -1,0 +1,74 @@
+schemaVersion: 1
+feature:
+  id: tmua-complete-online-paper-practice
+  title: Complete TMUA online past-paper practice
+  status: partial
+  userOutcome: >-
+    A student with a local preparation profile can choose any of the 18
+    imported TMUA papers and complete a timed, saved and scored online session.
+
+run:
+  packageScript: verify:tmua-online-papers
+
+claims:
+  - id: complete-online-paper-registry
+    status: verified
+    statement: >-
+      The online manifest contains 18 unique papers and 360 questions, with 20
+      source pages and 20 official answers for every paper.
+    artifacts:
+      - content/tmua/online-papers.json
+      - src/content/tmua/build-online-papers.ts
+      - src/features/practice/content/tmua-online-registry.ts
+      - tests/features/practice/content/online-papers.test.ts
+    automatedChecks:
+      - verify:tmua-online-papers
+      - typecheck
+
+  - id: audited-original-paper-assets
+    status: verified
+    statement: >-
+      Every browser-served original PDF matches the SHA-256 recorded for its
+      imported question source; automatic OCR drafts are not substituted for
+      the mathematical source pages.
+    artifacts:
+      - public/papers/tmua/tmua-specimen-p1.pdf
+      - public/papers/tmua/tmua-practice-2016-p1.pdf
+      - public/papers/tmua/tmua-2022-p2.pdf
+      - tests/features/practice/content/online-papers.test.ts
+    automatedChecks:
+      - verify:tmua-online-papers
+
+  - id: shared-evidence-safe-runtime
+    status: verified
+    statement: >-
+      Native and PDF-backed papers use the same session, answer, mark, timing,
+      submission and scoring runtime while keeping question IDs scoped to the
+      selected paper.
+    artifacts:
+      - src/features/practice/pages/PracticeLaunchPage.tsx
+      - src/features/practice/pages/PracticePage.tsx
+      - src/features/practice/pages/ResultsPage.tsx
+      - src/features/practice/domain/session.ts
+      - src/features/practice/storage/local-store.ts
+      - tests/app/practice-page.test.tsx
+      - tests/app/results-page.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+
+boundaries:
+  - The current sessions are stored in the local Guest Space, not the cloud learner-space tables.
+  - Seventeen papers preserve the original PDF rather than claiming native formula and figure structure.
+  - Source-PDF questions do not yet include reviewed knowledge tags or worked explanations.
+  - The 30-minute original diagnostic, mock papers and review notes are separate deliverables.
+
+manualChecks:
+  - id: embedded-pdf-responsive-review
+    status: pending
+    evidence: Review original-PDF practice at desktop, tablet and phone sizes in the browser.
+    viewports:
+      - 1440x900
+      - 768x1024
+      - 390x844

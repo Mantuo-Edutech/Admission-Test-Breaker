@@ -1,7 +1,7 @@
 # 总路线图与验证矩阵
 
 **状态：** 生效
-**日期：** 2026-07-15
+**日期：** 2026-07-17
 **目标：** 让每次开发同时回答“离完整产品更近了吗”和“如何独立证明它没有偏离架构”。
 
 ## 1. 发布原则
@@ -39,7 +39,7 @@
 **边界：** 首版不输出官方 1–9 分、百分位、录取概率或精确训练小时；Guest Space 只在当前设备，不能用于生产匿名追踪。
 **发布门：** 品牌/文案契约、原创题发布门、Guest 恢复、诊断结果诚实性、申请年度/来源验证、响应式与无障碍。
 
-**当前状态：** Slice A/B 已于 2026-07-13 交付：多考试首页、96 路径/46 canonical source manifest、18 套试卷/360 道题目目录和诚实资料馆已完成。2026-07-14 又完成证据安全计时、本地 Guest Space 隔离、CAIE/Pearson 精确课程信息、首版零 Token 知识覆盖映射，以及“公开介绍 → 课程信息 → 知识覆盖 → 个人准备首页”的独立页面流程。2026-07-15 统一了全站用户路径，并把真实可完成的 2023 Paper 1 设为唯一推荐动作；历年真题页公开展示全部 18 套已收录目录，同时把“已收录”与“可在线作答”分开呈现。未开放诊断不再形成主路径死路。覆盖报告也升级为中英文教师建议：明确“复习即可/先查缺口/需要补学”的分支、具体主题和非 Benchmark 的学习时间区间。8 道原创诊断题、正式诊断报告和专业注册表仍待实施。
+**当前状态：** Slice A/B 已于 2026-07-13 交付：多考试首页、96 路径/46 canonical source manifest、18 套试卷/360 道题目目录和诚实资料馆已完成。2026-07-14 又完成证据安全计时、本地 Guest Space 隔离、CAIE/Pearson 精确课程信息、首版零 Token 知识覆盖映射，以及“公开介绍 → 课程信息 → 知识覆盖 → 个人准备首页”的独立页面流程。2026-07-17，全部 18 套真题均已接入 75 分钟在线会话：2023 Paper 1 为原生逐题排版，其余 17 套为经过来源哈希和官方答案核验的原卷 PDF + 在线答题卡；360 道均可作答、标记、计时、提交和评分。覆盖报告也升级为中英文教师建议。8 道原创诊断题、正式诊断报告和专业注册表仍待实施。
 
 ### Phase 2 — 私密账户与授权协作
 
@@ -98,6 +98,7 @@
 | G3 Content | schema、题数、答案、来源和 revision | `pnpm verify:tmua-corpus` + content tests | P0 |
 | G3a Document import | MinerU 输出规范化、页码/坐标、不可发布边界 | `pnpm verify:content-imports` | P0 |
 | G3b Extraction | PDF 页级证据、题目 bundle、答案/解析关联、非发布边界 | `pnpm verify:tmua-extractions` | P0 |
+| G3c Online papers | 18 份原卷字节哈希、页码、官方答案、360 题运行时契约 | `pnpm verify:tmua-online-papers` | P0 |
 | G4 Architecture | 禁止依赖、模块公开 API、私密/公开域隔离 | `pnpm verify:architecture` | P0 |
 | G4b Feature claims | 机器可读用户结果、证据路径、命令与限制 | `pnpm verify:features` | P0 |
 | G4c Supabase static | RLS 开启、服务端函数权限、认证与密钥边界 | `pnpm verify:supabase-contracts` | P0 |
@@ -110,15 +111,15 @@
 
 `P0` 失败禁止合并或发布；`P1` 必须在当前里程碑解决；`P2` 可以记录并排期但不能伪装成完成。
 
-## 5. 当前进度基线（2026-07-15）
+## 5. 当前进度基线（2026-07-17）
 
 | 工作流 | 状态 | 证据 | 尚欠 |
 | --- | --- | --- | --- |
 | 母产品契约 | 已建立并进入自动执行 | 产品宪章、系统架构、路线图、`pnpm verify:architecture` | 后续模块加入时持续扩展禁止依赖规则 |
-| TMUA 原始资料 | Slice A 已交付：96 路径 / 46 canonical sources / 18 papers / 360 shells | `content/tmua/`、`docs/content/TMUA_CORPUS_REPORT.md`、`pnpm verify:tmua-corpus` | 其余 340 道题的结构化、逐题核验与发布 |
+| TMUA 原始资料 | 18 papers / 360 题均可使用原卷模式在线练习；1 套已原生结构化 | `content/tmua/online-papers.json`、`public/papers/tmua/`、`pnpm verify:tmua-online-papers` | 其余 340 道题的原生结构化、知识标注和解析发布 |
 | Content tooling | inventory、官方补充、PDF 题目提取、MinerU 稳定 JSON 规范化与独立 gate 已完成 | `src/content/tmua/`、`src/content/imports/`、schemas、CLI tests、2022 Paper 1 staging bundle | 真实资料 MinerU 对比试点、公式/图形审核工作台、贡献审核、许可治理和发布后台 |
 | Reference content | TMUA 2023 Paper 1 共 20 题已人工核验 | `src/features/practice/content/tmua-2023-p1.ts` | 后续解释和更多试卷 |
-| Reference Journey Web | 本地预览闭环、多考试前门和邀请码账户页面已完成 | 四考试首页、TMUA 中心、完整 20 题、提交、结果、邀请码/注册/登录；视口与 a11y 契约 | 云端身份、正式邮件和服务端练习持久化后再收集真实数据 |
+| Reference Journey Web | 本地预览闭环、多考试前门、18 套在线真题和邀请码账户页面已完成 | 四考试首页、TMUA 中心、360 题可作答与评分、邀请码/注册/登录；视口与 a11y 契约 | 云端身份、正式邮件和服务端练习持久化后再收集真实数据 |
 | Private Account / Entitlement | Slice 2A 本地底座通过 | Supabase migration、Edge Function、邀请码页面、26 项 pgTAP 与真实 HTTP gate | 云项目、SMTP/CAPTCHA、备份、Guest 接管、正式内容资源映射 |
 | Learner Space / Events | 领域契约与本地 Supabase 表/约束已实现 | 稳定 ID、所有权、追加式事件、连续序号、RLS 跨租户负面测试 | 前端练习仓储切换、后台投影与云端生产验证 |
 | Consent / Grants | 纯策略契约已实现 | 精确 scope、资源、有效期、撤销和 actor 测试 | 持久化、授权界面与访问审计 |
@@ -135,7 +136,7 @@
 ## 7. 接下来三个可验证增量
 
 1. **TMUA 完整纵向闭环（先 B）：** 在已交付的课程信息优先页面和 CAIE/Pearson 首版确定性映射上，扩展 AP/IB 准确档案与映射，完成 8 题/30 分钟固定诊断、免费证据报告、复习资料样本、专业要求和现有 2023 Paper 1 的一体化旅程。
-2. **MinerU 真实资料试点与 TMUA 全量录题（后 A）：** 用 Question Paper、Answer Key、Worked Solution 和 Student Textbook 对比现有 Poppler 与 MinerU 输出；通过验收后按 paper 逐套完成剩余约 340 题的公式/图形恢复、答案核验、知识标注和发布。
+2. **MinerU 真实资料试点与 TMUA 原生结构化（后 A）：** 18 套已经能以原卷模式练习；下一步用 Question Paper、Answer Key、Worked Solution 和 Student Textbook 对比现有 Poppler 与 MinerU 输出，再逐套完成剩余约 340 题的公式/图形恢复、知识标注、解析和原生发布。
 3. **Private Account Slice 2B：** 在已通过的本地 Supabase/Auth/RLS/entitlement 底座上绑定满托云项目，配置正式域名、SMTP、滥用防护和备份；再完成服务端练习仓储与显式 Guest 数据接管。
 
 前两个增量可以作为明确标注“当前设备保存”的本地 Reference Journey 交付，但不得公开收集真实学生的长期私密数据。任何真实用户服务端数据必须等待 Private Account Slice 的生产门。Benchmark、付费 AI 解读和外部 Agent 接入继续依赖真实、合规、经授权的数据基础，不会越过以上生产门提前伪装上线。
