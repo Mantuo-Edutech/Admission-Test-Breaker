@@ -420,8 +420,8 @@
               "route": "/exams/tmua/notes/foundations"
             }
           ],
-          "sourceFingerprint": "sha256:cb478e7d630d0988e2dc6188d40094b07a176de5a0d6d015cbed17f4d30af0d1",
-          "sourceArtifactCount": 12
+          "sourceFingerprint": "sha256:becce76b84301381ab21c2f8730e26f73e42696efc237414a69e16e3743ae67c",
+          "sourceArtifactCount": 11
         },
         {
           "reviewKey": "tmua-original-diagnostic/independent-mathematics-review",
@@ -1454,8 +1454,8 @@
               "route": "/exams/tmua/notes/foundations"
             }
           ],
-          "sourceFingerprint": "sha256:06a46d4648428de4fed64f1a5233d8a6692641baf1e1679949edebdf2e00fa8e",
-          "sourceArtifactCount": 12
+          "sourceFingerprint": "sha256:8f6d6916e92265e07d1eeac7094586e8bc4a7f4d04faf15791f9affc77c30982",
+          "sourceArtifactCount": 11
         },
         {
           "reviewKey": "tmua-invite-bound-review-plan/responsive-entitled-plan-review",
@@ -1506,7 +1506,7 @@
               "route": "/exams/tmua/profile"
             }
           ],
-          "sourceFingerprint": "sha256:feccc792607c869c7e1ff8158cdce03ab03c6eb6069ed721a919724b4bc1c706",
+          "sourceFingerprint": "sha256:2dfdcbcad2b5409cef800de0b7251395ae45cd4d43bf2509d0f796e7667a6b3f",
           "sourceArtifactCount": 26
         },
         {

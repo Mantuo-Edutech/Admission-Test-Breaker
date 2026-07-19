@@ -24,11 +24,11 @@ claims:
       - scripts/build-review-notes-pdfs.sh
       - content/products/review-notes-pdf-assets.json
       - tests/features/notes/review-notes-pdf-assets.test.ts
-      - output/pdf/esat-mathematics-foundations-v1.pdf
-      - output/pdf/esat-sciences-foundations-v1.pdf
-      - output/pdf/tara-reasoning-writing-foundations-v1.pdf
-      - output/pdf/lnat-reading-writing-foundations-v1.pdf
-      - output/pdf/ucat-four-subtest-foundations-v1.pdf
+      - public/notes/esat/esat-mathematics-foundations-v1.pdf
+      - public/notes/esat/esat-sciences-foundations-v1.pdf
+      - public/notes/tara/tara-reasoning-writing-foundations-v1.pdf
+      - public/notes/lnat/lnat-reading-writing-foundations-v1.pdf
+      - public/notes/ucat/ucat-four-subtest-foundations-v1.pdf
     automatedChecks:
       - verify:review-notes-pdfs
 

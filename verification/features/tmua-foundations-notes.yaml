@@ -51,7 +51,6 @@ claims:
       path, has valid PDF metadata and was rendered page-by-page to PNG without clipped
       tables or unsupported formula glyph boxes.
     artifacts:
-      - output/pdf/tmua-foundations-v2.pdf
       - public/notes/tmua/tmua-foundations-v2.pdf
       - scripts/build-tmua-foundations-pdf.sh
     automatedChecks:

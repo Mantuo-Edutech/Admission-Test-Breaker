@@ -100,7 +100,7 @@ MinerU 是可替换的边缘适配器，不是平台数据模型。平台保存 
 
 内部教研可以在 Git 忽略的 `content/official/raw/` 保存官网页面快照和原始 PDF/RTF，但必须由 `research-asset-inventory.json` 记录 URL、发现页面、SHA-256、大小、用途和权利状态。该目录不得被 `public/`、生产构建或公开对象存储引用。内部下载状态只证明文件可读，不能改变 `publishable: false`；满托 Notes 需要独立撰写、来源 claim 映射、相似度检查、学科复核和单独 publication revision。
 
-所有进入 GitHub CI、生产构建和 feature manifest 的证据路径必须在干净 checkout 中可复现。私有 raw 文件只能通过已跟踪的 inventory 记录及其 SHA-256 参与公开验证，不能直接列为 feature artifact；本机的 `official:sync-research` 可以额外核对原件，但原件缺席不得使公开应用验证失败。`tests/architecture/feature-manifests.test.ts` 会拒绝任何重新引入 `content/official/raw/` 的 feature artifact。
+所有进入 GitHub CI、生产构建和 feature manifest 的证据路径必须在干净 checkout 中可复现。私有 raw 文件只能通过已跟踪的 inventory 记录及其 SHA-256 参与公开验证，不能直接列为 feature artifact；本机的 `official:sync-research` 可以额外核对原件，但原件缺席不得使公开应用验证失败。相同原则适用于 Git 忽略的 `output/`：manifest 应引用已跟踪的 `public/` 产品、资产清单或生成器，而不能依赖本机生成缓存。`tests/architecture/feature-manifests.test.ts` 会同时拒绝 `content/official/raw/` 和 `output/` feature artifact。
 
 原创复习资料采用单一内容源：版本化 JSON 位于 `content/notes/<exam>/`，运行时验证后供 Web 页面读取，PDF 生成器也读取同一 revision，并把最终交付写入 `output/pdf/` 后复制到明确的公开下载路径。跨考试生成器必须嵌入经过 SHA 固定且带本地许可文本的可再分发 CJK 字体，禁止依赖机器字体；`review-notes-pdf-assets.json` 必须锁定源 SHA、输出/公开路径、页数、字节数和 PDF SHA，并由独立测试验证 public/output 内容完全一致。`officialAnchors` 只记录核对范围的来源、内部路径与 SHA，不得把 Git 忽略的官方原件复制进公开 bundle。`teaching-preview` 可以公开用于教研体验，但必须显示版本与未完成边界；只有独立学科复核、权利/相似度复核、双语术语复核、响应式 Web 和 A4 PDF 检查全部通过后，才可升级为最终发布 revision。
 

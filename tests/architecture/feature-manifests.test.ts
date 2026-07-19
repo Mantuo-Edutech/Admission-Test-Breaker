@@ -171,6 +171,10 @@ describe("machine-readable feature verification manifests", () => {
             artifact.startsWith("content/official/raw/"),
             `${file}: private raw artifact must be represented by a tracked inventory ${artifact}`,
           ).toBe(false);
+          expect(
+            artifact.startsWith("output/"),
+            `${file}: generated output artifact must use a tracked product path ${artifact}`,
+          ).toBe(false);
           await expect(access(path.resolve(artifact))).resolves.toBeUndefined();
         }
         for (const check of claim.automatedChecks) {
