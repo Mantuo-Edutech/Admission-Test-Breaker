@@ -55,11 +55,12 @@ describe("production platform contracts", () => {
   });
 
   it("gates changes with application, database, recovery, capacity and container checks", async () => {
-    const [workflow, supabaseDeployment, packageJson, performanceGate] = await Promise.all([
+    const [workflow, supabaseDeployment, packageJson, performanceGate, capacityCheck] = await Promise.all([
       source(".github/workflows/verify.yml"),
       source(".github/workflows/deploy-supabase.yml"),
       source("package.json"),
       source("scripts/check-web-performance-budget.ts"),
+      source("scripts/load-test-beta-local.ts"),
     ]);
 
     expect(workflow).toContain("pnpm verify");
@@ -72,6 +73,11 @@ describe("production platform contracts", () => {
     expect(performanceGate).toContain("entryJavascriptGzipBytes");
     expect(performanceGate).toContain("initialJavascriptAndCssGzipBytes");
     expect(performanceGate).toContain("nonEntryJavascriptBytes");
+    expect(capacityCheck).toContain(
+      'const capacityFeedbackMessage = "Capacity exercise feedback marker.";',
+    );
+    expect(capacityCheck).toContain("p_message: capacityFeedbackMessage");
+    expect(capacityCheck).not.toContain("Capacity feedback marker ${suffix}");
     expect(supabaseDeployment).toContain("supabase db push --linked --dry-run");
     expect(supabaseDeployment).toContain("supabase db push --linked");
     expect(supabaseDeployment).toContain("pnpm supabase:auth-protection:apply");

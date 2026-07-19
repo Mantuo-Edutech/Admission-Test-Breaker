@@ -106,6 +106,7 @@ const userCount = integerEnvironment("BETA_LOAD_USERS", 100);
 const concurrency = integerEnvironment("BETA_LOAD_CONCURRENCY", 10);
 const maximumP95Ms = integerEnvironment("BETA_LOAD_MAX_P95_MS", 3_000);
 const runId = `${Date.now()}_${randomUUID().replaceAll("-", "")}`;
+const capacityFeedbackMessage = "Capacity exercise feedback marker.";
 const publicHeaders = {
   apikey: status.PUBLISHABLE_KEY,
   "Content-Type": "application/json",
@@ -281,7 +282,7 @@ try {
           p_route: "/practice/tmua-specimen-p1",
           p_resource_id: "tmua-specimen-p1",
           p_question_id: "tmua-specimen-p1-q01",
-          p_message: `Capacity feedback marker ${suffix}.`,
+          p_message: capacityFeedbackMessage,
         }),
       },
       "Submit feedback",
