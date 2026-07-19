@@ -257,6 +257,7 @@ describe("Supabase architecture contracts", () => {
       "utf8",
     );
     const syncScript = await readFile("scripts/sync-content-review-queue.ts", "utf8");
+    const localHttpVerifier = await readFile("scripts/verify-supabase-local.ts", "utf8");
 
     for (const table of [
       "content_review_viewer_grants",
@@ -282,6 +283,12 @@ describe("Supabase architecture contracts", () => {
     expect(syncScript).toContain("SUPABASE_SERVICE_ROLE_KEY");
     expect(syncScript).toContain("CONTENT_REVIEW_SYNC_CONFIRM");
     expect(syncScript).not.toContain("VITE_SUPABASE_SERVICE_ROLE_KEY");
+    expect(localHttpVerifier).toContain("syncCurrentContentReviewQueue(status)");
+    expect(localHttpVerifier).toContain("readContentReviewExpectations()");
+    expect(localHttpVerifier).toContain('CONTENT_REVIEW_SYNC_CONFIRM: "sync-current-content-review-queue"');
+    expect(localHttpVerifier).toContain("SUPABASE_SERVICE_ROLE_KEY: status.SERVICE_ROLE_KEY");
+    expect(localHttpVerifier).toContain("contentReviewExpectations.catalogRevision");
+    expect(localHttpVerifier).not.toContain("VITE_SUPABASE_SERVICE_ROLE_KEY");
   });
 
   it("separates free practice evidence from server-authorised deep review", async () => {

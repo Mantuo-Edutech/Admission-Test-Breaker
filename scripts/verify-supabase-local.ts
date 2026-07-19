@@ -1,4 +1,6 @@
 import { execFileSync } from "node:child_process";
+import { readFile } from "node:fs/promises";
+import type { ManualReviewWorklist } from "../src/features/library/manual-review-worklist.js";
 
 interface LocalSupabaseStatus {
   API_URL: string;
@@ -116,6 +118,12 @@ interface ContentReviewQueueRow {
   products: Array<{ route?: string }>;
 }
 
+interface ContentReviewExpectations {
+  catalogRevision: string;
+  pendingReviewItems: number;
+  affectedPublicProducts: number;
+}
+
 interface InviteOperatorPackageRow {
   package_id: string;
   published_resource_count: number;
@@ -154,6 +162,38 @@ function readLocalStatus(): LocalSupabaseStatus {
   }
 }
 
+function syncCurrentContentReviewQueue(status: LocalSupabaseStatus): void {
+  const output = execFileSync("pnpm", ["content-review:sync:apply"], {
+    encoding: "utf8",
+    stdio: ["ignore", "pipe", "inherit"],
+    env: {
+      ...process.env,
+      SUPABASE_URL: status.API_URL,
+      SUPABASE_SERVICE_ROLE_KEY: status.SERVICE_ROLE_KEY,
+      CONTENT_REVIEW_SYNC_CONFIRM: "sync-current-content-review-queue",
+    },
+  });
+  console.log(output.trim());
+}
+
+async function readContentReviewExpectations(): Promise<ContentReviewExpectations> {
+  const worklist = JSON.parse(
+    await readFile("content/products/manual-review-worklist.json", "utf8"),
+  ) as ManualReviewWorklist;
+  const pendingReviewItems = worklist.campaigns.reduce(
+    (count, campaign) => count + campaign.items.length,
+    0,
+  );
+  if (pendingReviewItems !== worklist.summary.pendingReviewItems) {
+    throw new Error("The generated content-review worklist has an inconsistent item count.");
+  }
+  return {
+    catalogRevision: worklist.catalogRevision,
+    pendingReviewItems,
+    affectedPublicProducts: worklist.summary.affectedPublicProducts,
+  };
+}
+
 async function jsonRequest<T>(
   url: string,
   init: RequestInit,
@@ -183,6 +223,8 @@ async function expectRequestFailure(
 
 async function main() {
   const status = readLocalStatus();
+  const contentReviewExpectations = await readContentReviewExpectations();
+  syncCurrentContentReviewQueue(status);
   const code = "MANTUO-TMUA-LOCAL-2026-ACCESS";
   const unique = `${Date.now()}-${Math.random().toString(16).slice(2)}`;
   const email = `supabase-contract-${unique}@example.test`;
@@ -376,9 +418,9 @@ async function main() {
       "Source-bound content-review summary",
     );
     if (
-      Number(reviewSummary[0]?.pending_review_items) !== 68
-      || Number(reviewSummary[0]?.affected_public_products) !== 40
-      || reviewSummary[0]?.catalog_revision !== "2026-07-19.33"
+      Number(reviewSummary[0]?.pending_review_items) !== contentReviewExpectations.pendingReviewItems
+      || Number(reviewSummary[0]?.affected_public_products) !== contentReviewExpectations.affectedPublicProducts
+      || reviewSummary[0]?.catalog_revision !== contentReviewExpectations.catalogRevision
     ) {
       throw new Error("The content-review summary did not match the current generated worklist.");
     }
@@ -392,7 +434,7 @@ async function main() {
       "Source-bound content-review queue",
     );
     if (
-      reviewQueue.length !== 68
+      reviewQueue.length !== contentReviewExpectations.pendingReviewItems
       || reviewQueue.some((item) => !/^sha256:[0-9a-f]{64}$/u.test(item.source_fingerprint))
       || reviewQueue.some((item) => item.products.some((product) => !product.route?.startsWith("/")))
     ) {
