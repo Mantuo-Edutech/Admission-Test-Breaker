@@ -33,7 +33,7 @@ Web 镜像不包含数据库密码、service-role key、学生数据或 entitlem
 ### 生产配置预检
 
 **Owner:** 创始人/技术责任人 | **Frequency:** 首次配置、每次发布候选
-**Last Updated:** 2026-07-19 | **Last Run:** 2026-07-19（GitHub setup incomplete）
+**Last Updated:** 2026-07-19 | **Last Run:** 2026-07-19（13 passed / 13 failed / 5 manual）
 
 从仓库根目录运行：
 
@@ -44,7 +44,7 @@ pnpm production:preflight
 **Expected result:** 只显示仓库、工作流、GitHub Environment、secret 名称、公开 origin、审批人、当前 commit 与 Docker 状态；不会读取或打印 secret 值。`GitHub setup ready` 只表示发布控制面配置完整，不等于 Beta 已可上线。
 **If it fails:** 按输出逐项处理；不要把 secret 放入命令参数、聊天、截图、仓库或任何 `VITE_*` 环境变量。
 
-当前真实结果：GitHub 远端与 CLI 权限有效；`staging`、`production` 两个 Environment 均不存在，因此八个 environment secret、两个 `PUBLIC_APP_ORIGIN` 和 production required reviewer 都缺失。Supabase 云项目也未绑定。先创建环境：
+当前真实结果：GitHub 远端与 CLI 权限有效；`staging`、`production` 两个 Environment 已于 2026-07-19 创建，但八个 environment secret、两个 `PUBLIC_APP_ORIGIN` 和 production required reviewer 仍未配置。独立 Supabase 云项目、SMTP、Turnstile hostname、域名/TLS、平台恢复和告警也尚未留下真实生产证据。最新 PR 的 application、database-and-capacity、browser-journey 和不可变容器验证全部通过，但这只证明发布候选代码可复现，不代表生产已上线。
 
 推荐先使用默认 dry-run 的自动配置器。复制模板到已被 Git 忽略的本地文件，只填写公开 origin、production GitHub reviewer 和 secret 的本机环境变量**名称**，不要把真实 secret 写入 JSON：
 
