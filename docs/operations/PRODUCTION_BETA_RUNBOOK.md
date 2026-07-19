@@ -46,6 +46,27 @@ pnpm production:preflight
 
 当前真实结果：GitHub 远端与 CLI 权限有效；`staging`、`production` 两个 Environment 已于 2026-07-19 创建，但八个 environment secret、两个 `PUBLIC_APP_ORIGIN` 和 production required reviewer 仍未配置。独立 Supabase 云项目、SMTP、Turnstile hostname、域名/TLS、平台恢复和告警也尚未留下真实生产证据。最新 PR 的 application、database-and-capacity、browser-journey 和不可变容器验证全部通过，但这只证明发布候选代码可复现，不代表生产已上线。
 
+### Supabase 项目只读盘点与选择
+
+**Owner:** 创始人/技术责任人 | **Frequency:** 首次选项目、组织或区域变化时
+
+先读取当前登录账号可见的项目，不创建、不恢复、不暂停、不删除、不链接项目：
+
+```bash
+pnpm production:supabase-inventory
+```
+
+当前账号清单含两个名称不能证明用途、状态均为 `INACTIVE` 的旧项目。不得因为项目“已经存在”就直接作为本产品 staging 或 production。若要复用，必须先单独批准恢复，再检查历史用户、表、Storage、Auth、Edge Function、API key、团队成员、区域和迁移历史；本选择器在项目非 `ACTIVE_HEALTHY` 时会失败关闭。
+
+推荐为本产品使用两个独立项目。先复制模板到 Git 忽略的本地文件，确认 organization、环境策略和数据地区，再运行 dry-run：
+
+```bash
+cp deploy/supabase-project-selection.example.json deploy/supabase-project-selection.local.json
+pnpm production:supabase-plan -- --config deploy/supabase-project-selection.local.json
+```
+
+`create` 只形成计划，不接受费用；`reuse` 要求清单内、同 organization、健康且 staging/production 不能共用；`defer` 可以表达“先做 staging”，但计划不会被标记为可进入完整生产配置。配置文件不包含 access token、数据库密码或 service-role key。当前实现没有任何云项目写入路径；真正的创建/恢复动作必须另有明确批准、费用确认和数据地区确认。
+
 推荐先使用默认 dry-run 的自动配置器。复制模板到已被 Git 忽略的本地文件，只填写公开 origin、production GitHub reviewer 和 secret 的本机环境变量**名称**，不要把真实 secret 写入 JSON：
 
 ```bash

@@ -1,0 +1,44 @@
+schemaVersion: 1
+feature:
+  id: supabase-project-selection-plan
+  title: 失败关闭的 Supabase 双环境选择计划
+  status: partial
+  userOutcome: 非技术创始人可以先看到账号内真实项目，再明确选择新建、复用或暂缓，而不会误覆盖旧数据或在不知情时触发项目费用。
+run:
+  packageScript: verify:supabase-project-selection
+claims:
+  - id: read-only-project-inventory
+    status: verified
+    statement: CLI 只调用 Supabase projects list，输出项目名称、公开 ref、organization、状态和创建时间，不读取数据库密码、service-role key 或学生数据。
+    artifacts:
+      - scripts/plan-supabase-projects.ts
+      - tests/architecture/supabase-project-selection-contract.test.ts
+    automatedChecks:
+      - verify:supabase-project-selection
+  - id: distinct-fail-closed-environment-selection
+    status: verified
+    statement: staging 与 production 必须各有明确策略并使用不同项目；休眠、跨 organization、缺失、重复、占位和同名创建计划都会失败关闭，defer 可以保留 staging-only 计划但不能进入完整 provisioning。
+    artifacts:
+      - src/platform/supabase-project-selection.ts
+      - tests/platform/supabase-project-selection.test.ts
+      - deploy/supabase-project-selection.example.json
+    automatedChecks:
+      - verify:supabase-project-selection
+  - id: explicit-cost-and-legacy-boundaries
+    status: verified
+    statement: 所有 create 计划明确标记可能产生费用并要求后续动作前批准；所有 reuse 计划要求历史数据和权限审计，INACTIVE 项目不能直接进入 provisioning。
+    artifacts:
+      - src/platform/supabase-project-selection.ts
+      - docs/architecture/decisions/2026-07-19-fail-closed-supabase-project-selection.md
+    automatedChecks:
+      - verify:supabase-project-selection
+boundaries:
+  - 该功能只产生只读清单和 dry-run 计划，不创建、恢复、暂停、删除或链接任何 Supabase 项目。
+  - Supabase CLI 登录令牌保留在本机配置，不进入仓库、计划 JSON、浏览器 bundle 或日志。
+  - 选择计划通过不等于接受费用、批准数据地区、完成历史数据审计或完成生产部署。
+manualChecks:
+  - id: choose-project-strategy-and-data-region
+    status: pending
+    evidence: 创始人确认 A/B/C；若新建，确认 organization、东京或其他数据地区和可能费用；若复用，完成旧项目恢复、历史数据与权限审计。
+    viewports:
+      - operations

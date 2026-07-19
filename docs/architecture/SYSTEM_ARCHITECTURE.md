@@ -400,4 +400,6 @@ Projections ──只消费事件，不反向修改──> Event Ledger
 
 写入路径与预检保持物理分离。`deploy/bootstrap-input.local.json` 只记录公开 origin、GitHub reviewer 和 secret 的本机环境变量来源名，并被 Git 忽略；`production:bootstrap-plan` 默认不读取真实值、不调用写 API。只有 `production:bootstrap-apply` 加精确确认文字才进入执行器，且执行器在任何外部调用前一次性验证全部八个 secret 来源。secret 通过子进程 stdin 交给 `gh secret set`，不进入 argv、日志或报告；Environment、公开 variable 与 reviewer 写入失败会立即停止，最后再调用独立只读 bootstrap gate 复核。该路径解决可重复配置，不创造 Supabase 项目或任何人工生产证据；决策见 `docs/architecture/decisions/2026-07-19-explicit-production-bootstrap-apply.md`。
 
+Supabase 云项目选择先经过独立的只读边界。`production:supabase-inventory` 只执行 `projects list` 并返回公开 project ref、名称、organization、状态和创建时间；`production:supabase-plan` 将 staging/production 的 `create`、`reuse` 或 `defer` 输入验证为 dry-run 步骤。两个环境不能共用项目，非健康旧项目不能直接复用，首次新建只能计划 nano 且必须提示可能费用。该层没有 create/delete/pause/restore/link、数据库密码、service-role 或学生数据读取路径，也不等于后续项目创建获批。决策见 `docs/architecture/decisions/2026-07-19-fail-closed-supabase-project-selection.md`。
+
 当前 Vite 应用、本地 Supabase、可运行容器、恢复演练和容量结果是 Reference Journey 与生产兼容底座，不代表满托云端后端、SMTP、平台恢复或告警已经完成。任何“本地可体验”能力都必须在界面和文档中区分本地证据与生产隐私保证。具体操作和 RPO/RTO 边界见 `docs/operations/PRODUCTION_BETA_RUNBOOK.md`。

@@ -103,12 +103,16 @@ pnpm verify
 pnpm beta:audit
 pnpm beta:gate
 pnpm production:preflight
+pnpm production:supabase-inventory
+pnpm production:supabase-plan -- --config deploy/supabase-project-selection.local.json
 pnpm production:bootstrap-plan -- --config deploy/bootstrap-input.local.json
 ```
 
 当前 `beta:gate` 预期失败：两项真实 entitlement 资料、本地全数据库恢复和 100 用户容量已经闭环，未发布的多考试深度解析承诺也已从公开页面删除；但生产 Supabase/邮件、学习数据的生产部署与跨设备验证、未成年人最终隐私权利、平台备份恢复和真实监控接收人仍有 P0 未关闭。详见 [100 人封闭 Beta 上线评估](docs/BETA_100_LAUNCH_READINESS.md)。
 
-`production:preflight` 是只读且不泄密的生产配置检查：它读取 GitHub Environment 中已配置的 secret **名称**和公开 variable，不读取 secret 值，并分别报告 GitHub setup、当前 release candidate 与仍需人工证明的生产条件。当前真实检查显示 `staging` 与 `production` Environment 都尚未创建。配置完成后可使用 `pnpm production:bootstrap-gate` 和 `pnpm production:release-candidate-gate` 作为更严格的子门；它们不能替代最终 `beta:gate`。
+`production:preflight` 是只读且不泄密的生产配置检查：它读取 GitHub Environment 中已配置的 secret **名称**和公开 variable，不读取 secret 值，并分别报告 GitHub setup、当前 release candidate 与仍需人工证明的生产条件。当前真实检查显示 `staging` 与 `production` Environment 已创建，但八个 environment secret、两个公开 origin 和 production required reviewer 仍未配置。配置完成后可使用 `pnpm production:bootstrap-gate` 和 `pnpm production:release-candidate-gate` 作为更严格的子门；它们不能替代最终 `beta:gate`。
+
+Supabase 云项目先经过单独的失败关闭选择层：`production:supabase-inventory` 只读取账号内项目清单；复制 `deploy/supabase-project-selection.example.json` 到被 Git 忽略的 `deploy/supabase-project-selection.local.json` 后，`production:supabase-plan` 只生成 staging/production 的 create、reuse 或 defer 计划。它不会创建、恢复、暂停、删除或链接项目，也不读取数据库密码。当前账号内检测到的两个旧项目均为 `INACTIVE`，复用前必须恢复并审计历史数据；新建项目可能产生费用，且数据地区必须由创始人明确确认。
 
 不熟悉 GitHub GUI 时，复制 `deploy/bootstrap-input.example.json` 为被 Git 忽略的 `deploy/bootstrap-input.local.json`，只填写两个公开 HTTPS origin、production reviewer 和八个本机 secret 环境变量的**名称**。`production:bootstrap-plan` 默认只输出计划；只有 `pnpm production:bootstrap-apply -- --config deploy/bootstrap-input.local.json --confirm CONFIGURE_MANTUO_PRODUCTION_CONTROL_PLANE` 才执行外部写入。执行前会一次检查全部 secret 来源，任一缺失则零写入；secret 值只通过 stdin 进入 GitHub CLI，不写配置文件、命令参数或日志。完整边界见生产运行手册。
 
@@ -119,6 +123,7 @@ pnpm verify:features
 pnpm verify:supabase-contracts
 pnpm verify:production-platform
 pnpm verify:production-bootstrap
+pnpm verify:supabase-project-selection
 pnpm verify:web-performance
 pnpm verify:content-imports
 pnpm verify:tmua-extractions
