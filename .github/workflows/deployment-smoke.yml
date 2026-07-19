@@ -26,11 +26,11 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ github.event_name == 'workflow_dispatch' && inputs.environment || 'production' }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
         with:
           version: 10.14.0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22.18.0
           cache: pnpm
@@ -51,7 +51,7 @@ jobs:
         env:
           DEPLOYMENT_BASE_URL: ${{ vars.PUBLIC_APP_ORIGIN }}
       - if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: deployment-smoke-report-${{ github.run_id }}
           path: |

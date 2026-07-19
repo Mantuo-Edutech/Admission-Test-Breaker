@@ -80,6 +80,24 @@ describe("production platform contracts", () => {
     expect(supabaseDeployment).toContain("ALLOWED_ORIGINS=$PUBLIC_APP_ORIGIN");
   });
 
+  it("uses Node 24 actions and avoids duplicate branch and pull-request verification", async () => {
+    const workflowPaths = [
+      ".github/workflows/verify.yml",
+      ".github/workflows/deploy-supabase.yml",
+      ".github/workflows/release-image.yml",
+      ".github/workflows/deployment-smoke.yml",
+    ];
+    const workflows = await Promise.all(workflowPaths.map(source));
+
+    for (const workflow of workflows) {
+      expect(workflow).toContain("actions/checkout@v7");
+      expect(workflow).toContain("pnpm/action-setup@v6");
+      expect(workflow).toContain("actions/setup-node@v7");
+      expect(workflow).not.toMatch(/@(v4|v5)(?:\s|$)/u);
+    }
+    expect(workflows[0]).not.toContain('"codex/**"');
+  });
+
   it("continuously checks the real deployed URL without creating accounts or consuming invites", async () => {
     const [workflow, config, smoke] = await Promise.all([
       source(".github/workflows/deployment-smoke.yml"),
