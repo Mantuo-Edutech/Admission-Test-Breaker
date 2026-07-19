@@ -144,7 +144,7 @@
               "route": "/exams/esat/notes/mathematics"
             }
           ],
-          "sourceFingerprint": "sha256:a249ea771bc6dd8eb8149a8feef1d2c92c35d370a0d37106d1b6ed292295bb44",
+          "sourceFingerprint": "sha256:70422db9576cc7c7fddbb3d61180fdbdd78ac07518d9846d71be3dc7f8669b90",
           "sourceArtifactCount": 14
         },
         {
@@ -776,7 +776,7 @@
               "route": "/exams/esat/notes/mathematics"
             }
           ],
-          "sourceFingerprint": "sha256:54bf7b3c9eef25fd6f6f60ecf4684b7a7693097df16f393fdcc33878ec0eb450",
+          "sourceFingerprint": "sha256:575849e1ff89eb822a93f843be06242077e8d2befa63c63120e6213ddc868793",
           "sourceArtifactCount": 14
         },
         {
@@ -1056,7 +1056,7 @@
               "route": "/exams/esat"
             }
           ],
-          "sourceFingerprint": "sha256:441eec0aa002fb0cc7293be3380f767ce60b18fc924d0eaeb84ce621f65226bc",
+          "sourceFingerprint": "sha256:632fc3080f48b01c09c51013dc2b60d91a2fc7a9c8270bb0ba990218028a638e",
           "sourceArtifactCount": 21
         },
         {
@@ -1480,7 +1480,7 @@
               "route": "/exams/tmua/notes/six-week-plan"
             }
           ],
-          "sourceFingerprint": "sha256:268f12ab43ecffe2a880082eeabb705e8590f4b4e2d2cb2a5837ae4ef3b38a98",
+          "sourceFingerprint": "sha256:ca32ee189554cb4ba647ffff97f20b6522cfbe57f4a70cfc43cf5b774ddee4c3",
           "sourceArtifactCount": 11
         },
         {
@@ -1506,7 +1506,7 @@
               "route": "/exams/tmua/profile"
             }
           ],
-          "sourceFingerprint": "sha256:c57f9f083d05e2b1a1ef2aadbb01784141c2eb5e6e241d45f2eea783a2d194d0",
+          "sourceFingerprint": "sha256:feccc792607c869c7e1ff8158cdce03ab03c6eb6069ed721a919724b4bc1c706",
           "sourceArtifactCount": 26
         },
         {

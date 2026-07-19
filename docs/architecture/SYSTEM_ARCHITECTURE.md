@@ -100,6 +100,8 @@ MinerU 是可替换的边缘适配器，不是平台数据模型。平台保存 
 
 内部教研可以在 Git 忽略的 `content/official/raw/` 保存官网页面快照和原始 PDF/RTF，但必须由 `research-asset-inventory.json` 记录 URL、发现页面、SHA-256、大小、用途和权利状态。该目录不得被 `public/`、生产构建或公开对象存储引用。内部下载状态只证明文件可读，不能改变 `publishable: false`；满托 Notes 需要独立撰写、来源 claim 映射、相似度检查、学科复核和单独 publication revision。
 
+所有进入 GitHub CI、生产构建和 feature manifest 的证据路径必须在干净 checkout 中可复现。私有 raw 文件只能通过已跟踪的 inventory 记录及其 SHA-256 参与公开验证，不能直接列为 feature artifact；本机的 `official:sync-research` 可以额外核对原件，但原件缺席不得使公开应用验证失败。`tests/architecture/feature-manifests.test.ts` 会拒绝任何重新引入 `content/official/raw/` 的 feature artifact。
+
 原创复习资料采用单一内容源：版本化 JSON 位于 `content/notes/<exam>/`，运行时验证后供 Web 页面读取，PDF 生成器也读取同一 revision，并把最终交付写入 `output/pdf/` 后复制到明确的公开下载路径。跨考试生成器必须嵌入经过 SHA 固定且带本地许可文本的可再分发 CJK 字体，禁止依赖机器字体；`review-notes-pdf-assets.json` 必须锁定源 SHA、输出/公开路径、页数、字节数和 PDF SHA，并由独立测试验证 public/output 内容完全一致。`officialAnchors` 只记录核对范围的来源、内部路径与 SHA，不得把 Git 忽略的官方原件复制进公开 bundle。`teaching-preview` 可以公开用于教研体验，但必须显示版本与未完成边界；只有独立学科复核、权利/相似度复核、双语术语复核、响应式 Web 和 A4 PDF 检查全部通过后，才可升级为最终发布 revision。
 
 跨考试 Notes 使用同一份 `ReviewNotesDocument` 契约、通用页面渲染器和通用 A4 生成器，而不是每个考试重新拼页面。validator 必须检查来源哈希、模块/知识单元/原创例题 ID 唯一性、课程桥接、公式文本 fallback、主动回忆和发布边界；考试 wrapper 只负责读取学生已选择的模块或考试隔离档案、课程背景、下载入口和下一步站内路由。各考试的 JSON 与已验证常量必须放在独立 content module，并随对应 lazy route 单独加载，禁止把五考试正文重新合并进一个共享异步包。当前 ESAT Mathematics 1/2 与 Physics/Chemistry/Biology 首版覆盖全部 50 个一级知识单元，TARA 覆盖 4 模块/21 单元，LNAT 覆盖论证阅读、写作、EAL 和节奏 4 模块/21 单元，UCAT 覆盖 VR、DM、QR、SJT 与工具节奏 5 模块/25 单元；五套 A4 教学预览共 79 页，并在普通界面沿用本人档案门。因为文件位于公开静态路径，这个界面门不等于 entitlement 或防下载安全边界；未来真正付费的完整 Notes 必须改用服务端权限交付。后续细颗粒章节和考试专属 block 只能扩展同一数据模型与验证门，不能绕过通用内容门。

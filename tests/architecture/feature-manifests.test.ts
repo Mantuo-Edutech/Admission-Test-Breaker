@@ -167,6 +167,10 @@ describe("machine-readable feature verification manifests", () => {
       for (const claim of manifest.claims) {
         for (const artifact of claim.artifacts) {
           expect(isSafeRelativePath(artifact), `${file}: unsafe artifact ${artifact}`).toBe(true);
+          expect(
+            artifact.startsWith("content/official/raw/"),
+            `${file}: private raw artifact must be represented by a tracked inventory ${artifact}`,
+          ).toBe(false);
           await expect(access(path.resolve(artifact))).resolves.toBeUndefined();
         }
         for (const check of claim.automatedChecks) {

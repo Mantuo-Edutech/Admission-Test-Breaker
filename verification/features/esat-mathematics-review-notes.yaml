@@ -31,13 +31,15 @@ claims:
     status: verified
     statement: >-
       The first ESAT revision maps all seven Mathematics 1 and eight Mathematics 2
-      top-level knowledge units already used by the course-coverage engine, and anchors
-      exam facts and scope to two locally preserved official PDFs and their SHA-256 hashes.
+      top-level knowledge units already used by the course-coverage engine. Exam facts
+      and scope are anchored to versioned inventory records containing the source URLs,
+      private local paths and SHA-256 hashes of two internally preserved official PDFs;
+      the ignored raw files are not a public CI or production-build dependency.
     artifacts:
       - content/notes/esat/mathematics-foundations-v1.json
       - content/esat/knowledge-units.json
-      - content/official/raw/shared/ESAT_Content_Specification.pdf
-      - content/official/raw/shared/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf
+      - content/esat/source-inventory.json
+      - content/official/research-asset-inventory.json
       - tests/features/notes/review-notes.test.ts
     automatedChecks:
       - verify:review-notes
