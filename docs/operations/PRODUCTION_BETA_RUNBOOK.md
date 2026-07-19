@@ -274,7 +274,7 @@ pnpm restore:supabase-logical
 ### 已有本地证据
 
 - `pnpm verify:recovery-local`：创建真实 Auth 标记用户和反馈/审计标记，完整 dump 后恢复到隔离数据库，并比对 Auth、应用账号、Learner Space、7 项资源、2 份私密 payload、反馈、审计事件和 16 条 RLS policy；2026-07-18 已通过。
-- `pnpm verify:beta-load-local`：100 个隔离用户、并发 10，完成邀请码、档案、开始、提交与站内反馈；最近一次本机 p50 21ms、p95 51ms、最大 60ms。它证明代码路径和本地容量，不代替生产地区网络/SMTP/数据库负载测试。
+- `pnpm verify:beta-load-local`：100 个隔离用户、并发 10，完成邀请码、档案、开始、提交与站内反馈；最近一次本机 p50 24ms、p95 62ms、最大 103ms。它证明代码路径和本地容量，不代替生产地区网络/SMTP/数据库负载测试。
 
 ## 6. 监控与告警
 

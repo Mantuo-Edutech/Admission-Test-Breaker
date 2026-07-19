@@ -74,13 +74,13 @@ claims:
 boundaries:
   - A green GitHub bootstrap gate does not prove Supabase, SMTP, Turnstile, domain, backup, alerting or privacy readiness.
   - Secret values are never printed, stored in a generated report or accepted through browser-safe VITE variables.
-  - The current external audit found both GitHub Environments absent; this feature does not create them without explicit authorization.
+  - The current external audit finds both GitHub Environments present, while all eight environment secrets, both public origins and the production reviewer remain missing; Environment existence alone is not setup readiness.
   - Bootstrap apply configures GitHub control-plane names and protection only; it does not create Supabase projects, SMTP, Turnstile widgets, DNS, backups or alert ownership.
   - Production publication still requires the full Beta gate, human review evidence and an approved immutable release SHA.
 
 manualChecks:
   - id: configure-and-verify-real-production-control-plane
     status: pending
-    evidence: Create both GitHub Environments, configure approved Supabase projects and all named secret/variable/protection requirements, then rerun the preflight and attach the non-secret output before staging deployment.
+    evidence: Configure approved Supabase projects and all named secret/variable/protection requirements in the existing GitHub Environments, then rerun the preflight and attach the non-secret output before staging deployment.
     viewports:
       - operations
