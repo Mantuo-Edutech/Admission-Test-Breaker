@@ -53,7 +53,7 @@ describe("generated Review Notes PDF assets", () => {
     expect(manifest.assets.reduce((sum, asset) => sum + asset.pageCount, 0)).toBe(79);
   });
 
-  it("matches every source, public file, page count and catalog download", async () => {
+  it("matches every source, tracked public file, page count and catalog download", async () => {
     const manifest = await loadManifest();
 
     for (const asset of manifest.assets) {
@@ -64,9 +64,8 @@ describe("generated Review Notes PDF assets", () => {
         examId: string;
         publicationStatus: string;
       };
-      const outputBytes = await readFile(path.resolve(asset.output));
       const publicBytes = await readFile(path.resolve("public", asset.publicPath.slice(1)));
-      const pageObjects = outputBytes.toString("latin1").match(/\/Type\s*\/Page\b/gu) ?? [];
+      const pageObjects = publicBytes.toString("latin1").match(/\/Type\s*\/Page\b/gu) ?? [];
       const product = CONTENT_PRODUCT_CATALOG.products.find(
         (candidate) => candidate.id === asset.productId,
       );
@@ -77,11 +76,11 @@ describe("generated Review Notes PDF assets", () => {
         publicationStatus: "teaching-preview",
       });
       expect(sha256(sourceBytes)).toBe(asset.sourceSha256);
-      expect(outputBytes.subarray(0, 5).toString("ascii")).toBe("%PDF-");
-      expect(outputBytes.toString("latin1")).toContain("D:20000101000000+00'00'");
-      expect(outputBytes.byteLength).toBe(asset.byteSize);
-      expect(outputBytes.byteLength).toBeGreaterThan(100_000);
-      expect(sha256(outputBytes)).toBe(asset.sha256);
+      expect(asset.output).toMatch(/^output\/pdf\/[a-z0-9-]+\.pdf$/u);
+      expect(publicBytes.subarray(0, 5).toString("ascii")).toBe("%PDF-");
+      expect(publicBytes.toString("latin1")).toContain("D:20000101000000+00'00'");
+      expect(publicBytes.byteLength).toBe(asset.byteSize);
+      expect(publicBytes.byteLength).toBeGreaterThan(100_000);
       expect(sha256(publicBytes)).toBe(asset.sha256);
       expect(pageObjects).toHaveLength(asset.pageCount);
       expect(asset.pageCount).toBeGreaterThanOrEqual(10);
