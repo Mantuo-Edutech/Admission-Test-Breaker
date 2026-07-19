@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "exam": "ESAT",
+  "verifiedAt": "2026-07-18",
+  "officialArchive": {
+    "locallyVerifiedFiles": 39,
+    "coreDocuments": 2,
+    "moduleGuides": 5,
+    "historicQuestionAnswerPairs": 16,
+    "directlyPublishableFiles": 0
+  },
+  "statusZh": "39 份官方资料已完整下载并通过文件校验",
+  "statusEn": "39 official files downloaded and integrity-verified",
+  "publicationBoundaryZh": "原件只保存在内部教研库；在书面许可或独立权利审核完成前，本站不会公开原 PDF，也不会把历史卷链接冒充原生在线题库。",
+  "nextActionZh": "按 Mathematics 1、Biology、Chemistry、Physics、Mathematics 2 五个模块完成题目拆分、来源映射、权利审核和教研复核后，再发布本站原生练习。"
+}

@@ -1,0 +1,1863 @@
+{
+  "schemaVersion": 1,
+  "bundleType": "question-import",
+  "id": "tmua-practice-2016-p1-extraction-v1",
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "generatedAt": "2026-07-17T07:00:00.000Z",
+  "generatedBy": "tmua-extraction-cli",
+  "sourceDocumentIds": {
+    "question": "tmua-official-practice-2016-paper-1",
+    "answerKey": "tmua-official-practice-2016-answer-key",
+    "workedSolution": "tmua-official-practice-2016-paper-1-worked-solutions"
+  },
+  "questionCount": 20,
+  "publishableQuestionCount": 0,
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q01",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 1,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "ͳ\u0003       \u0003\u0003\u0003\u0003\u0003\u0003\u0003ሺܽ‫ ݔ‬൅ ܾሻଷ \u0003\u0003\u0003\u0003ͺ‫ ݔ‬ଷ െ ‫ ݔ݌‬ଶ ൅ ͳͺ‫ ݔ‬െ ͵ξ͵ǡ\u0003\u0003ܽǡ\u0003ܾ\u0003\u0003‫\u0003\u0003݌‬\n       \u0003 Ǥ\u0003\u0003\n       \u0003\n       \u001a\u0003\u0003\u0003\u0003\u0003‫݌‬ǫ\u0003\n       \u0003\n\u0003      \u0003\n\u0003      \u0004\u0003 െͳʹξ͵\u0003\n\u0003      \u0003\n       \u0005\u0003 െ͸ξ͵\u0003\n\u0003      \u0003\n       \u0006\u0003 െͶξ͵\u0003\n\u0003      \u0003\n       \u0007\u0003 െξ͵\u0003\n\u0003      \u0003\n       \b\u0003 ξ͵\u0003\n\u0003      \u0003\n          \u0003 Ͷξ͵\u0003\n\u0003      \u0003\n          \u0003 ͸ξ͵\u0003\n     \u0003 \u0003 \u0003 ͳʹξ͵\u0003"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "ሺܽ‫ ݔ‬൅ ܾሻଷ 8‫ ݔ‬ଷ െ ‫ ݔ݌‬ଶ ൅ 18‫ ݔ‬െ 3ξ3ǡܽǡܾ‫݌‬\n        Ǥ\n       \n       ‫݌‬ǫ"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        },
+        {
+          "label": "F",
+          "rawText": "[visual option F; transcription required]"
+        },
+        {
+          "label": "G",
+          "rawText": "[visual option G; transcription required]"
+        },
+        {
+          "label": "H",
+          "rawText": "[visual option H; transcription required]"
+        }
+      ],
+      "correctAnswer": "H",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We expand (ax + b)3 and compare with the given expansion.\n\n                                                                             √\n              (ax + b)3 = a3 x3 + 3a2 bx2 + 3ab2 x + b3 = 8x3 − px2 + 18x − 3 3.\n\nSo we must have:\n\n                                          a3 = 8\n                                        3a2 b = −p\n                                        3ab2 = 18\n                                                 √\n                                          b3 = −3 3\n                                                                  √\nThe final equation can be rewritten as b3 = −3 2 , so b = −3 2 = − 3.\n                                               3             1\n\n\n\nThen the third equation becomes 3a × 3 = 18, so a = 2.\n                                              √                  √\nFinally, the second equation gives 3 × 22 × (− 3) = −p, so p = 12 3 and the answer is H.\n\n\n\n\n                                              4\n                                                                                   © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required",
+          "option-count-review",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q02",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 2,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "ʹ\u0003     \u0017\u0003\u0003͵‫ ݔ‬ଷ ൅ ͳ͵‫ ݔ‬ଶ ൅ ͺ‫ ݔ‬൅ ܽǡ\u0003\u0003ܽ\u0003\u0003\u0003 ǡ\u0003\u0003ሺ‫ ݔ‬൅ ʹሻ\u0003\u0003\u0003 Ǥ\u0003\n       \u0003\n       \u001a \u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003 \u0003\u0003\u0003ǫ\u0003\n       \u0003\n\u0003      \u0003\n     \u0003 \u0004\u0003 ሺ‫ ݔ‬൅ ʹሻሺ‫ ݔ‬െ ͳሻሺ͵‫ ݔ‬െ ʹሻ\u0003\n\n\u0003      \u0003\n       \u0005\u0003 ሺ‫ ݔ‬൅ ʹሻሺ‫ ݔ‬൅ ͳሻሺ͵‫ ݔ‬െ ʹሻ\u0003\n\u0003      \u0003\n       \u0006\u0003 ሺ‫ ݔ‬൅ ʹሻሺ‫ ݔ‬൅ ͳሻሺ͵‫ ݔ‬൅ ʹሻ\u0003\n\u0003      \u0003\n       \u0007\u0003 ሺ‫ ݔ‬൅ ʹሻሺ‫ ݔ‬െ ͵ሻሺ͵‫ ݔ‬൅ ʹሻ\u0003\n\u0003      \u0003\n       \b\u0003 ሺ‫ ݔ‬൅ ʹሻሺ‫ ݔ‬൅ ͵ሻሺ͵‫ ݔ‬െ ʹሻ\u0003\u0003\u0003\u0003\u0003\n\u0003      \u0003\n         \u0003 ሺ‫ ݔ‬൅ ʹሻሺ‫ ݔ‬൅ ͵ሻሺ͵‫ ݔ‬൅ ʹሻ\u0003\u0003\u0003\n\n\n\n\n© UCLES 2016                                                                                 [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "3‫ ݔ‬ଷ ൅ 13‫ ݔ‬ଶ ൅ 8‫ ݔ‬൅ ܽǡܽ ǡሺ‫ ݔ‬൅ 2ሻ Ǥ\n       \n          ǫ"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "ሺ‫ ݔ‬൅ 2ሻሺ‫ ݔ‬െ 1ሻሺ3‫ ݔ‬െ 2ሻ"
+        },
+        {
+          "label": "B",
+          "rawText": "ሺ‫ ݔ‬൅ 2ሻሺ‫ ݔ‬൅ 1ሻሺ3‫ ݔ‬െ 2ሻ"
+        },
+        {
+          "label": "C",
+          "rawText": "ሺ‫ ݔ‬൅ 2ሻሺ‫ ݔ‬൅ 1ሻሺ3‫ ݔ‬൅ 2ሻ"
+        },
+        {
+          "label": "D",
+          "rawText": "ሺ‫ ݔ‬൅ 2ሻሺ‫ ݔ‬െ 3ሻሺ3‫ ݔ‬൅ 2ሻ"
+        },
+        {
+          "label": "E",
+          "rawText": "ሺ‫ ݔ‬൅ 2ሻሺ‫ ݔ‬൅ 3ሻሺ3‫ ݔ‬െ 2ሻ\n      \n          ሺ‫ ݔ‬൅ 2ሻሺ‫ ݔ‬൅ 3ሻሺ3‫ ݔ‬൅ 2ሻ\n\n\n\n\n© UCLES 2016                                                                                 [Turn over"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can use the factor theorem to find the value of a; alternatively we can just divide by (x + 2)\nand deduce a that way, as we will need to divide by (x+2) anyway to complete the factorisation.\nWe show both methods.\nThe factor theorem states that in this case, f(−2) = 0, where f(x) is the polynomial. So\n3(−2)3 + 13(−2)2 + 8(−2) + a = 0, giving −24 + 52 − 16 + a = 0, so a = −12. We can now\ndivide the polynomial by (x + 2).\nAlternatively, dividing the given polynomial by (x + 2) by considering the x3 , x2 and x terms,\nbut ignoring the constant term, gives:\n\n                         3x3 + 13x2 + 8x + a = (x + 2)(3x2 + 7x − 6)\n\nand so a = −12, though that is actually not needed to answer the question.\nFinally, we can factorise 3x2 + 7x − 6 to determine the answer. Alternatively, we can use the\nsuggested options: only options D and E give a constant term in the quadratic of −6, so it must\nbe one of those. D expands to 3x2 − 7x − 6 and E expands to 3x2 + 7x − 6, so the answer is E.\n\n\n\n\n                                               5\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q03",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 3,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "͵\u0003    \u0004\u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003‫ ݕ‬ൌ ௫ మ \u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003‫ ݔ‬ൌ ͳǤ\u0003\n      \u0003\n      \u0017\u0003\u0003 \u0003\u0003‫ݔ‬Ǧ\u0003\u0003ܲ\u0003\u0003\u0003‫ݕ‬Ǧ\u0003\u0003ܳǤ\u0003\u0003\u0003\u0003\n      \u0003\n      \u0017\u0003\u0003\u0003ܲܳ\u0003\u0003\n      \u0003\n\n            ͵ξͷ\n      \u0004\u0003\n             ʹ\n      \u0003\n          ͵ξͳ͹\n      \u0005\u0003"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A ‫ ݕ‬ൌ ௫ మ  ‫ ݔ‬ൌ 1Ǥ\n      \n       ‫ݔ‬Ǧܲ‫ݕ‬ǦܳǤ\n      \n      ܲܳ\n      \n\n            3ξ5"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        },
+        {
+          "label": "F",
+          "rawText": "[visual option F; transcription required]"
+        },
+        {
+          "label": "G",
+          "rawText": "[visual option G; transcription required]"
+        },
+        {
+          "label": "H",
+          "rawText": "[visual option H; transcription required]"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We need to find the gradient of the curve at (1, 2). We have y = 2x−2 and so dx\n                                                                              dy\n                                                                                 = −4x−3 . At\nx = 1, this gives dx = −4 and so the normal has gradient 4 . As it passes through (1, 2), it has\n                  dy                                      1\n\nequation\n                                      y − 2 = 41 (x − 1).\n\nIt cuts the x-axis (y = 0) at P , so at P , we have −2 = 14 (x − 1), giving x = −7, and so P has\ncoordinates (−7, 0).\nIt cuts the y-axis (x = 0) at Q, so at Q, we have y − 2 = 41 (−1), giving y = 74 , and so Q has\ncoordinates (0, 47 ).\nThus P Q has length                                          √\n                                              7            7   17\n                               q                p\n                                       7\n                                72 + ( 4 )2 =     42 + 1 =\n                                              4              4\n(where we have written 7 = 74 × 4 for the first equality).\nHence the answer is C.\n\n\n\n\n                                                6\n                                                                                    © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required",
+          "option-count-review",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q04",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 4,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "Ͷ\n      \u0003\n          ͹ξͳ͹\n      \u0006\u0003\n             Ͷ\n      \u0003\n          ͵ͷ\n      \u0007\u0003\n           Ͷ\n      \u0003\n          ͵ͷξͷ\n      \b\u0003\n             ʹ\n      \u0003\n          ͵ξͳ͹\n        \u0003\n             ʹ\n\n\n\n\nͶ\u0003    \u0017\u0003 \u0003ܽ௡ \u0003\u0003\u0003\u0003\u0003ǣ\u0003\n      \u0003\n                                  ௡       ௡ିଵ         ௡ାଶ\n      \u0003       \u0003      \u0003\u0003\u0003\u0003ܽ௡ ൌ ሺെͳሻ െ ሺെͳሻ       ൅ ሺെͳሻ \u0003\u0003\u0003\u0003݊ ൒ ͳǤ\u0003\n      \u0003\n        \u0003\u0003\u0003\u0003\u0003\u0003\u0003\n                                                    ଷଽ\n\n                                                    ෍ ܽ௡ \u0003\n                                                    ௡ୀଵ\n\n\n\n      \u0004\u0003    Ȃ ͵ͻ\u0003\n      \u0003\n      \u0005\u0003    Ȃ ͵\u0003\n      \u0003\n      \u0006\u0003    Ȃ ͳ\u0003\n      \u0003\n      \u0007\u0003    Ͳ\u0003\u0003\n      \u0003\n      \b\u0003    ͳ\u0003\u0003\n      \u0003\n        \u0003   ͵\u0003\u0003\n      \u0003\n        \u0003   ͵ͻ\u0003\u0003\n\n\n\n© UCLES 2016"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "7ξ17\n      C\n             4\n      \n          35\n      D\n           4\n      \n          35ξ5\n      E\n             2\n      \n          3ξ17\n        \n             2\n\n\n\n\n4     ܽ௡ ǣ\n      \n                                  ௡       ௡ିଵ         ௡ାଶ\n                   ܽ௡ ൌ ሺെ1ሻ െ ሺെ1ሻ       ൅ ሺെ1ሻ ݊ ൒ 1Ǥ\n      \n        \n                                                    ଷଽ\n\n                                                    ෍ ܽ௡ \n                                                    ௡ୀଵ"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "Ȃ 39"
+        },
+        {
+          "label": "B",
+          "rawText": "Ȃ 3"
+        },
+        {
+          "label": "C",
+          "rawText": "Ȃ 1"
+        },
+        {
+          "label": "D",
+          "rawText": "0"
+        },
+        {
+          "label": "E",
+          "rawText": "1\n      \n           3\n      \n           39\n\n\n\n© UCLES 2016"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Commentary: This looks quite scary! It is unlikely that you have ever seen a sequence\n      looking like this, so a sensible thing to do is to work out the first few values and look for\n      any patterns.\n\nWe calculate the first few terms of the sequence:\n\n                       a1 = (−1)1 − (−1)0 + (−1)3 = (−1) − 1 + (−1) = −3\n                       a2 = (−1)2 − (−1)1 + (−1)4 = 1 − (−1) + 1 = 3\n                       a3 = (−1)3 − (−1)2 + (−1)5 = (−1) − 1 + (−1) = −3\n                       a4 = (−1)4 − (−1)3 + (−1)6 = 1 − (−1) + 1 = 3\n\nThe pattern is now clear (and we could prove it if we wished to): the sequence goes −3, 3, −3,\n3, −3, 3 and so on. So the sum of each pair of terms is zero: a1 + a2 = 0, a3 + a4 = 0, …,\na37 + a38 = 0. Thus\n                    39\n                    X\n                          an = (a1 + a2 ) + (a3 + a4 ) + · · · + (a37 + a38 ) + a39\n                    n=1\n                             = 0 + 0 + · · · + 0 + (−3)\n                             = −3\n\nand the answer is B.\n\n\n\n\n                                                   7\n                                                                                      © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q05",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 5,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "5\n\nͷ\u0003    What is the total area enclosed between the curve\u0003‫ ݕ‬ൌ ‫ ݔ‬ଶ െ ͳ, the ‫ݔ‬-axis and\n      the lines ‫ ݔ‬ൌ െʹ and ‫ ݔ‬ൌ ʹ\u0003?\n      \u0003\n\n         Ͷ\n      \u0004\u0003  \u0003\n         ͵\n      \u0003  ͺ\n      \u0005\u0003 \u0003\n         ͵\n      \u0003\n      \u0006\u0003 Ͷ\u0003\n      \u0003  ͳ͸\n      \u0007\u0003    \u0003\n          ͵\n      \u0003\n      \b\u0003 ͳʹ\u0003\n      \u0003\n          \u0003   ͳ͸\u0003\n      \u0003"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "5    What is the total area enclosed between the curve‫ ݕ‬ൌ ‫ ݔ‬ଶ െ 1, the ‫ݔ‬-axis and\n      the lines ‫ ݔ‬ൌ െ2 and ‫ ݔ‬ൌ 2?\n      \n\n         4"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "3\n        8"
+        },
+        {
+          "label": "B",
+          "rawText": "3"
+        },
+        {
+          "label": "C",
+          "rawText": "4\n        16"
+        },
+        {
+          "label": "D",
+          "rawText": "3"
+        },
+        {
+          "label": "E",
+          "rawText": "12\n      \n             16"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "To answer this question, it is worth drawing a sketch.\nThe graph is of y = x2 − 1 = (x + 1)(x − 1), so the parabola intersects the x-axis at (1, 0) and\n(−1, 0):\n\n                                                     y\n\n\n\n\n                                                                    x\n                                     −2 −1               1      2\n\n\n\n\nTo find the area enclosed, we integrate over the three separate regions, from −2 to −1, from −1\nto 1, and from 1 to 2:\n                             Z −1\n                                                        \u0003−1\n                                  x2 − 1 dx = 13 x3 − x −2\n                                               \u0002\n                               −2\n                                              = (− 31 + 1) − (− 83 + 2)\n                                               = 43\n                              Z 1\n                                                          \u00031\n                                     x2 − 1 dx = 13 x3 − x −1\n                                                 \u0002\n                                −1\n                                              = ( 31 − 1) − (− 13 + 1)\n                                             = − 43\n                               Z 2\n                                                        \u00032\n                                   x2 − 1 dx = 13 x3 − x 1\n                                               \u0002\n                                1\n                                              = ( 38 − 2) − ( 13 − 1)\n                                              = 43\n\nThus the three areas are each 43 , and the total area is 4, so the answer is C.\n\n\n\n\n                                                  8\n                                                                                    © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            8
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q06",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 6,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "͸\u0003    \u0013ǡ\u0003\u0014ǡ\u0003\u0003\u0015\u0003\u0003 \u0003\u0003\u0003\u0003\u0003\u0003Ǥ\u0003\u0003\n\n      \u0017\u0003 \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0013\u0003\u0003͵ͲΨǤ\u0003\u0003\u0003\n\n      \u0017\u0003 \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0014\u0003\u0003ʹͲΨǤ\u0003\u0003\n\n      \u0017\u0003\u0003\u0013ǡ\u0003\u0014ǡ\u0003\u0003\u0015\u0003\u0003 \u0003\u0003\u0003\u0003ͳʹ\u0003ǣ\u0003ͷ\u0003ǣ\u0003͵\u0003 Ǥ\u0003\n\n       \u0003\u0003\u0003\u0003 \u0003ʹͷΨ\u0003\u0003\u0003\u0003\u0003ǡ\u0003\u0003 \u0003\u0003\u0003\n      \u0003\u0003\u0015\u0003\u0003\u0003ǫ\u0003\n      \u0003\n\n      \u0004\u0003      ʹͷΨ\u0003\n      \u0003\n      \u0005\u0003      ʹ͵Ψ\u0003\n      \u0003          ଵ\n      \u0006\u0003      ͳ͵ ଷ Ψ\u0003\u0003\n      \u0003          ଵ\n      \u0007\u0003      ͳͻ ଶ Ψ\u0003\u0003\n      \u0003    ଷ\n      \b\u0003 ͻ ସ Ψ\u0003\u0003\n      \u0003\n          \u0003    \u0003\u0003\u0003\u0003 \u0003\u0003Ǥ\u0003\n      \u0003\n\n\n\n\n© UCLES 2016                                                                              [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "ǡǡ Ǥ\n\n       30ΨǤ\n\n       20ΨǤ\n\n      ǡǡ 12ǣ5ǣ3 Ǥ\n\n        25Ψǡ \n      ǫ"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "25Ψ"
+        },
+        {
+          "label": "B",
+          "rawText": "23Ψ\n                ଵ"
+        },
+        {
+          "label": "C",
+          "rawText": "13 ଷ Ψ\n                ଵ"
+        },
+        {
+          "label": "D",
+          "rawText": "19 ଶ Ψ\n          ଷ"
+        },
+        {
+          "label": "E",
+          "rawText": "9 ସ Ψ\n      \n               Ǥ\n      \n\n\n\n\n© UCLES 2016                                                                              [Turn over"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can either work in fractions or percentages. This solution works in fractions.\nThe fraction of red paint in P is 10\n                                  3\n                                     and in Q is 51 . Let the fraction of red paint in R be x.\nThe combination is in the ratio 12 : 5 : 3, with 14 red paint, so the composition is as follows:\n\n\n                                    Paint   Volume       Red\n                                      P        12           3\n                                                       12 × 10\n                                      Q         5       5 × 51\n                                      R         3        3x\n                                    total      20      20 × 14\n\nWe can now sum the individual red amounts, giving:\n\n                                      3         1\n                                 12 × 10 +5×      + 3x = 20 × 14\n                                                5\n\n   5 + 3x = 5, giving 3x = 5 = 40%, so x = 13 3 %.\nso 23                      2                  1\n\nThe correct answer is C.\n\n\n\n\n                                                 9\n                                                                                       © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q07",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 7,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "͹\u0003     ͸ͲΨ\u0003\u0003\u0003\u0003 ǯ\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003Ǥ\u0003\n\n       \u0017\u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003  Ǥ\u0003 \b\u0003 \u0003 \u0003\n        \u0003\u0003\u0003\u0003\u0003Ǥ\u0003\u0003\n       ଶ\n            \u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003  Ǣ\u0003\u0003\n       ହ\u0003\n\n       ଶ\n           \u0003\u0003\u0003  \u0003\u0003\u0003\u0003 \u0003\u0003Ǥ\u0003\n       ଷ\n\n       \u001a\u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003 ǡ\u0003 \u0003 \u0003 ǡ\u0003 \u0003 \u0003 \u0003 \u0003\n       \u0003ǫ\u0003\n\n\n\u0003             ͳ\n       \u0004\u0003      \u0003\n              ͷ\n\u0003      \u0003       ͹\n       \u0005\u0003        \u0003\n              ʹͷ\n\u0003      \u0003      ͳ\n       \u0006\u0003      \u0003\n              ͵\n\u0003      \u0003      ͳͳ\n       \u0007\u0003        \u0003\n              ʹͷ\n     \u0003 \u0003      ͵\n       \b\u0003      \u0003\n              ͷ\n       \u0003"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "60Ψ ǯǤ\n\n                  Ǥ E  \n        Ǥ\n       ଶ\n               Ǣ\n       ହ\n\n       ଶ\n              Ǥ\n       ଷ\n\n                ǡ   ǡ    \n       ǫ\n\n\n             1"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "5\n             7"
+        },
+        {
+          "label": "B",
+          "rawText": "25\n            1"
+        },
+        {
+          "label": "C",
+          "rawText": "3\n            11"
+        },
+        {
+          "label": "D",
+          "rawText": "25\n            3"
+        },
+        {
+          "label": "E",
+          "rawText": "5"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "There are two factors for each member: whether the member is a man or woman, and whether\nthe member plays tennis or cricket. We can either display this situation as a tree diagram or as\na two-way table. Since the information given has both the fraction of male members who play\ncricket and the fraction of the cricketing members who are women, it will be simpler to use a\ntwo-way table. (In a tree diagram, we could easily display one of the two, but the other will be\nhard.)\nWe could also work with fractions or with numbers of people. In this solution, we will work\nwith numbers. The 60% suggests that we work with a multiple of 100 people, and the presence\nof a fraction 23 , suggests that we work with a multiple of 3. So we start with 300 people. This\nis the information we obtain from the 60% of members are women and 52 of the resulting 120\nmale members play cricket:\n\n                                         Men    Women     Total\n                               Tennis     72\n                               Cricket    48\n                                Total    120        180    300\n\nWe are also told that 23 of the cricketing members are women, so the 48 cricketing men are 31 of\nthe cricketers, hence 96 cricketers are women, leaving 84 women to play tennis:\n\n                                         Men    Women     Total\n                               Tennis     72     84       (156)\n                               Cricket    48     96       (144)\n                                Total    120     180       300\n\n(The parenthesised figures are not needed to finish the question.)\nTherefore the probability that a member of the club, chosen at random, is a woman who plays\n          84    28      7\ntennis is     =     = , and the answer is B.\n          300   100    25\n\n\n\n\n                                               10\n                                                                                    © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q08",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 8,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "ͺ\u0003     Find the maximum angle ‫ ݔ‬in the range Ͳι ൑ ‫ ݔ‬൑ ͵͸Ͳι which satisfies the equation\n\n                                                                                ͹\n                 \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003  ଶ ሺʹ‫ݔ‬ሻ ൅ ξ͵ ሺʹ‫ݔ‬ሻ െ     ൌͲ\n                                                                                Ͷ\n\n       A      30ι\n\n       B      60ι\n\n       C      120ι\n\n       D      150ι\n\n       E      210ι\n\n       F      240ι\n\n       G      300ι\n\n       H      330ι\n\n\n© UCLES 2016"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the maximum angle ‫ ݔ‬in the range 0ι ൑ ‫ ݔ‬൑ 360ι which satisfies the equation\n\n                                                                                7\n                   ଶ ሺ2‫ݔ‬ሻ ൅ ξ3 ሺ2‫ݔ‬ሻ െ     ൌ0\n                                                                                4"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "30ι"
+        },
+        {
+          "label": "B",
+          "rawText": "60ι"
+        },
+        {
+          "label": "C",
+          "rawText": "120ι"
+        },
+        {
+          "label": "D",
+          "rawText": "150ι"
+        },
+        {
+          "label": "E",
+          "rawText": "210ι"
+        },
+        {
+          "label": "F",
+          "rawText": "240ι"
+        },
+        {
+          "label": "G",
+          "rawText": "300ι"
+        },
+        {
+          "label": "H",
+          "rawText": "330ι\n\n\n© UCLES 2016"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We note that the only angle involved is 2x, and 0◦ ⩽ x ⩽ 360◦ gives 0◦ ⩽ 2x ⩽ 720◦ .\nWe start by writing everything in terms of sin 2x, giving:\n                                               √\n                              (1 − sin2 2x) + 3 sin 2x − 74 = 0\n\nwhich rearranges to give                     √\n                                 sin2 2x −       3 sin 2x + 34 = 0.\nWe can apply the quadratic formula to this to obtain\n                                        √      √       √\n                                           3± 3−3        3\n                               sin 2x =              =\n                                               2       2\nand hence the possible values of 2x in the range are 2x = 60◦ , 120◦ , 420◦ and 480◦ . Thus the\nlargest possible value of x in the range 0◦ ⩽ x ⩽ 360◦ is 240◦ , and the answer is F.\n\n\n\n\n                                                  11\n                                                                                   © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q09",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 9,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "ͻ\u0003    \u0017\u0003\u0003\u0003\u0003\u0003\u0003ሺ͵ǡ\u0003͵ሻ\u0003\u0003ሺ͹ǡ\u0003ͷሻ\u0003\u0003\u0003\u0003\u0003\u0003  Ǥ\u0003\u0003\u0003\n      \u0003\n      \u0017\u0003  \u0003\u0003\u0003\u0003͵\u0003\u0003\u0003\u0003\u0003‫ݔ‬Ǧ ǡ\u0003\u0003 \u0003\u0003\u0003‫ݔ‬Ǧǡ\u0003\n      \u0003\u0003\u0003\u0003\u0003 \u0003 \u0003\u0003Ͷ\u0003\u0003\u0003 \u0003\u0003\u0003\u0003  Ǥ\u0003\u0003\u0003\n      \u0003\n      \u0017\u0003\u0003\u0003\u0003\u0003  \u0003\u0003\u0003\n      \u0003\n      \u0003\n      \u0004\u0003 ሺ‫ ݔ‬െ ʹሻଶ ൅ ሺ‫ ݕ‬െ Ͷሻଶ ൌ ͵ʹͲ\u0003\n      \u0003\n      \u0005\u0003 ሺ‫ ݔ‬െ ʹሻଶ ൅ ሺ‫ ݕ‬൅ Ͷሻଶ ൌ ͵ʹͲ\u0003\n      \u0003\n      \u0006\u0003 ሺ‫ ݔ‬െ ʹሻଶ ൅ ሺ‫ ݕ‬െ Ͷሻଶ ൌ ͺͲ\u0003\n      \u0003\n      \u0007\u0003 ሺ‫ ݔ‬െ ʹሻଶ ൅ ሺ‫ ݕ‬൅ Ͷሻଶ ൌ ͺͲ\u0003\n      \u0003\n      \b\u0003 ሺ‫ ݔ‬െ ʹሻଶ ൅ ሺ‫ ݕ‬െ Ͷሻଶ ൌ ʹͲ\u0003\n      \u0003\n        \u0003 ሺ‫ ݔ‬െ ʹሻଶ ൅ ሺ‫ ݕ‬൅ Ͷሻଶ ൌ ʹͲ\u0003\n      \u0003"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "ሺ3ǡ3ሻሺ7ǡ5ሻ  Ǥ\n      \n        3‫ݔ‬Ǧ ǡ ‫ݔ‬Ǧǡ\n        4   Ǥ\n      \n        "
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "ሺ‫ ݔ‬െ 2ሻଶ ൅ ሺ‫ ݕ‬െ 4ሻଶ ൌ 320"
+        },
+        {
+          "label": "B",
+          "rawText": "ሺ‫ ݔ‬െ 2ሻଶ ൅ ሺ‫ ݕ‬൅ 4ሻଶ ൌ 320"
+        },
+        {
+          "label": "C",
+          "rawText": "ሺ‫ ݔ‬െ 2ሻଶ ൅ ሺ‫ ݕ‬െ 4ሻଶ ൌ 80"
+        },
+        {
+          "label": "D",
+          "rawText": "ሺ‫ ݔ‬െ 2ሻଶ ൅ ሺ‫ ݕ‬൅ 4ሻଶ ൌ 80"
+        },
+        {
+          "label": "E",
+          "rawText": "ሺ‫ ݔ‬െ 2ሻଶ ൅ ሺ‫ ݕ‬െ 4ሻଶ ൌ 20\n      \n         ሺ‫ ݔ‬െ 2ሻଶ ൅ ሺ‫ ݕ‬൅ 4ሻଶ ൌ 20"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The initial circle looks like this:\n\n                                       y\n\n                                                          (7, 5)\n\n                                        (3, 3)\n\n\n                                                            x\n\n                                                                         \u00103 + 7 3 + 5\u0011\nThe centre of the circle is at the midpoint of this diameter, which is         ,       = (5, 4),\n                                                                            2     2\nand the radius is therefore        p                      √\n                                     (5 − 3)2 + (4 − 3)2 = 5.\n\nThe transformations do the following to the centre and radius of the circle:\n\n                                                      Centre    Radius\n                                                                  √\n                                      original         (5, 4)     √5\n                                 after translation     (2, 4)     √5\n                                  after reflection    (2, −4)     √5\n                                after enlargement     (2, −4)    4 5\n\nTherefore the final circle has equation\n                                                         √\n                                 (x − 2)2 + (y + 4)2 = (4 5)2 = 80\n\nand the answer is D.\n\n\n\n\n                                                 12\n                                                                                    © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q10",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 10,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "ͳͲ\u0003     \u0003\u0003\u0003\u0003\u0003\u0003‫ ݔ  ݔ‬ൌ ͳ\u0003\u0003\u0003\u0003\u0003\u0003െʹߨ ൑ ‫ ݔ‬൑ ʹߨ\u0003ǫ\u0003\u0003\n      \u0003\n      \u0003\n      \u0004\u0003    Ͳ\u0003\n      \u0003\n      \u0005\u0003    ͳ\u0003\n      \u0003\n      \u0006\u0003    ʹ\u0003\n      \u0003\n      \u0007\u0003    ͵\u0003\n      \u0003\n      \b\u0003    Ͷ\u0003\n      \u0003\n        \u0003   ͷ\u0003\n      \u0003\n        \u0003   ͸\u0003\n\n\n\n\n© UCLES 2016                                                                                [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "‫ ݔ  ݔ‬ൌ 1െ2ߨ ൑ ‫ ݔ‬൑ 2ߨǫ"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0"
+        },
+        {
+          "label": "B",
+          "rawText": "1"
+        },
+        {
+          "label": "C",
+          "rawText": "2"
+        },
+        {
+          "label": "D",
+          "rawText": "3"
+        },
+        {
+          "label": "E",
+          "rawText": "4\n      \n           5\n      \n           6\n\n\n\n\n© UCLES 2016                                                                                [Turn over"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "1\nWe can rearrange this equation as tan x =       . (We note that x = 0 is not a solution of the\n                                              x\noriginal equation x tan x = 1, so we can divide by x without losing any solutions.)\nIt is impossible to solve this equation exactly, but we are only asked for the number of solutions.\nTherefore we sketch the graphs of y = tan x and y = x1 on the same axes, and count the number\nof intersections.\n\n                                                     y\n\n\n\n\n                                                                               x\n                 −2π                 −π              0          π             2π\n\n\n\n\nThere are four points of intersection with −2π ⩽ x ⩽ 2π, so the answer is 4, which is option E.\n\n\n\n\n                                                13\n                                                                                      © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q11",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 11,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "8\n\nͳͳ\u0003    \u0017\u0003\u0003\u0003\u0003\u0003\u0003Ͷଶ௫ ൅ ͳʹ ൌ ʹଶ௫ାଷ \u0003\u0003‫ݍ\u0003\u0003݌‬ǡ\u0003\u0003‫ ݌‬൐ ‫ݍ‬Ǥ\u0003\u0003\u0003\n       \u0003\n       \u0017\u0003\u0003\u0003‫ ݌‬െ ‫\u0003\u0003\u0003\u0003 \u0003ݍ‬\n       \u0003\n\n\u0003           ͵\n       \u0004\u0003    \u0003\n            Ͷ\n\u0003       \u0003\n        \u0005\u0003 ͳ\u0003\n\u0003       \u0003\n        \u0006\u0003 Ͷ\u0003\n\u0003       \u0003\n              ͳ      ͵\n        \u0007\u0003 െ ൅ ଵ଴ \u0003\u0003\u0003\n              ʹ      ʹ\n      \u0003 \u0003   ଵ଴ ͵\n        \b\u0003         \u0003\n            ଵ଴ Ͷ\n\u0003       \u0003   ଵ଴ ͵\n          \u0003        \u0003\n            ଵ଴ ʹ\n        \u0003\n\n\n\n\n© UCLES 2016"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "8\n\n11    4ଶ௫ ൅ 12 ൌ 2ଶ௫ାଷ ‫ݍ݌‬ǡ‫ ݌‬൐ ‫ݍ‬Ǥ\n       \n       ‫ ݌‬െ ‫ ݍ‬\n       \n\n           3"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "4"
+        },
+        {
+          "label": "B",
+          "rawText": "1"
+        },
+        {
+          "label": "C",
+          "rawText": "4\n       \n              1      3"
+        },
+        {
+          "label": "D",
+          "rawText": "െ ൅ ଵ଴ \n              2      2\n          ଵ଴ 3"
+        },
+        {
+          "label": "E",
+          "rawText": "ଵ଴ 4\n          ଵ଴ 3\n                  \n            ଵ଴ 2\n        \n\n\n\n\n© UCLES 2016"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "This is a quadratic in 22x , so we write y = 22x and solve for y. The quadratic becomes\n\n                                           y 2 + 12 = 8y\n\nas 42x = (22 )2x = 24x = (22x )2 and 22x+3 = 22x × 23 .\nThis rearranges to y 2 − 8y + 12 = 0, which factorises as (y − 6)(y − 2) = 0, so y = 6 or y = 2.\nThus 22x = 6 or 22x = 2, with the value of x being larger in the first than in the second, so\n22p = 6 and 22q = 2. The options are given in terms of log to base 10, so we take log10 of the\nfirst equation. Thus 2p log10 2 = log10 6 and 2q = 1, and hence\n\n                                         log10 6                1\n                                   p=                    and q = .\n                                        2 log10 2               2\n\nTherefore\n                                              log10 6     1\n                                     p−q =            −\n                                             2 log10 2 2\n                                             log10 6 − log10 2\n                                           =\n                                                 2 log10 2\n                                             log10 3\n                                           =\n                                             log10 4\n\nso the answer is option E.\n\n\n\n\n                                                    14\n                                                                                    © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            14
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q12",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 12,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "9\n\nͳʹ\u0003     \u0004\u0003\u0003  \u0003 \u0003\u0003 \u0003\u0003\u0003\u0003\u0003\u0003ͷ\u0003 \u0003\u0003 \u0003\u0003\u0003\u0003\u0003\n        \u0003\u0003\u0003   \u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003\u0003  \u0003\u0003\u0003Ǥ\u0003\n        \u0003\n        \u0017\u0003\u0003\u0003\u0003\u0003 \u0003 \u0003\u0003\u0003 \u0003\u0003\u0003\u0003\u0003 Ǥ\u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n        \u0003\n          ǡ\u0003\u0003  \u0003 ǡ\u0003\u0003\u0003\u0003\u0003\u0003\u0003 Ǥ\u0003\u0003\u0003\u0003\n        \u0003\n\u0003       \u0003\n\u0003       \u0004\u0003 ʹͷͲߨ\n\u0003       \u0003\n        \u0005\u0003 ͷͲͲߨ\u0003\n\u0003       \u0003\n        \u0006\u0003 ͳͲͲͲߨ\u0003\n\u0003       \u0003\n             ʹͷͲξ͵\n        \u0007\u0003           ߨ\u0003\n                 ͵\n      \u0003 \u0003    ͷͲͲξ͵\n        \b\u0003           ߨ\u0003\n                 ͻ\n\u0003       \u0003\n             ͳͲͲͲξ͵\n          \u0003           ߨ\u0003\n                  ͻ\n        \u0003\n\n\n\n\n© UCLES 2016                                                                               [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "9\n\n12     A    5  \n              Ǥ\n        \n            Ǥ\n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n          ǡ   ǡ Ǥ"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "250ߨ"
+        },
+        {
+          "label": "B",
+          "rawText": "500ߨ"
+        },
+        {
+          "label": "C",
+          "rawText": "1000ߨ\n       \n             250ξ3"
+        },
+        {
+          "label": "D",
+          "rawText": "ߨ\n                 3\n           500ξ3"
+        },
+        {
+          "label": "E",
+          "rawText": "ߨ\n                 9\n       \n             1000ξ3\n                     ߨ\n                  9\n        \n\n\n\n\n© UCLES 2016                                                                               [Turn over"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let the radius of the cylinder be r. Then the diagram is as follows (with all measurements in\ncm), where we have drawn in two extra lines:\n\n\n                                                    r\n                                              h         5\n\n\n\n\nThe 5cm is the radius of the sphere and hence of the circle shown (as the cross section is through\nthe centre of the sphere).\nPythagoras’s theorem gives h2 + r2 = 52 , and the volume of the cylinder is V = πr2 (2h) =\nπ(52 − h2 )(2h) = 2π(25h − h3 ). We can maximise this by differentiating with respect to h. (We\ncould write everything in terms of r instead, but that would involve square roots.)\n         dV                                                          5\nWe have       = 2π(25 − 3h2 ), which is zero when 25 = 3h2 , so h = √ . Substituting this into\n         dh                                                           3\nthe formula for V gives the largest possible V as\n                                          \u0012         \u0013                    √\n                           2     2               25   5      500    500 3\n                  V = 2π(5 − h )h = 2π 25 −           √ = √ π=             π\n                                                  3    3    3 3         9\n\nhence the answer is E.\n\n\n\n\n                                               15\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            15
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q13",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 13,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "ͳ͵\u0003         \u0003\u0003\u0003\u0003\u0003\u0003\u0003͵‫ ݔ‬ହ െ ͳͲ‫ ݔ‬ଷ െ ͳʹͲ‫ ݔ‬൅ ͵Ͳ ൌ Ͳ\u0003ǫ\u0003\n        \u0003\n\n        \u0004\u0003    ͳ\u0003\n        \u0003\n        \u0005\u0003    ʹ\u0003\n        \u0003\n        \u0006\u0003    ͵\u0003\n        \u0003\n        \u0007\u0003    Ͷ\u0003\n        \u0003\n        \b\u0003    ͷ\u0003"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "3‫ ݔ‬ହ െ 10‫ ݔ‬ଷ െ 120‫ ݔ‬൅ 30 ൌ 0ǫ"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "1"
+        },
+        {
+          "label": "B",
+          "rawText": "2"
+        },
+        {
+          "label": "C",
+          "rawText": "3"
+        },
+        {
+          "label": "D",
+          "rawText": "4"
+        },
+        {
+          "label": "E",
+          "rawText": "5"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Commentary:          This is not something that you will have learnt how to do, and in\n      general, this is a very difficult problem indeed. But we can use the tools at our disposal\n      to do something helpful. We don’t know how to solve a quintic (x5 ) equation, but we can\n      at least try to find the turning (stationary) points, and see where that gets us.\n\nWe attempt to sketch the graph of y = 3x5 − 10x3 − 120x + 30, or at least think about what a\nsketch might look like.\nWe calculate\n               dy\n                  = 15x4 − 30x2 − 120 = 15(x4 − 2x2 − 8) = 15(x2 − 4)(x2 + 2)\n               dx\n\nso there are stationary points when dx\n                                    dy\n                                       = 0, that is, when x = 2 and when x = −2. We can now\ncalculate the y-coordinates: when x = −2, y = −36 + 80 + 240 + 30 > 0 (we do not need to\ncalculate the exact value), and when x = 2, y = 36 − 80 − 240 + 30 < 0.\nSo the graph must look something like the following:\n\n                                                y\n\n\n\n                                (−2, y)\n\n\n\n\n                                                                             x\n\n\n\n\n                                                         (2, y)\n\n\n\nThere are clearly 3 points of intersection of this graph with y = 0, so the original equation has\n3 real roots, and the answer is C.\n\n\n\n\n                                               16\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            16
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q14",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 14,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "ͳͶ\u0003     \u0017\u0003\u0003\u0003\u0003\u0003\u0003\u0016\u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003\u0003\n        \u0003\u0003 \u0003ǡ\u0003\u0017\u0003\u0003\u0018Ǥ\u0003\u0003\u0003\n        \u0003\n        \u0017\u0003\u0003\u0003\u0003\u0017\u0003\u0003\u0003\u0003\u0003\u0003\u0018\u0003\u0003 \u0003ͶǤ\u0003\u0003\n        \u0003\n                                                                                ହ\n          \u0003ǡ\u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003\u0016\u0003\u0003ͺǡ\u0003͵ǡ\u0003\u0003 \u0003 \u0003 \u0003\u0003\u0003\n                                                                                ସ\n        \u0003\n        \u001a\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0016ǫ\u0003\n        \u0003\n\u0003       \u0003\n\u0003            ͵ʹ\n        \u0004\u0003      \u0003\n              ͷ\n\u0003       \u0003    ʹͲ\n        \u0005\u0003      \u0003\n              ͵\n      \u0003 \u0003    ͸Ͷ\n        \u0006\u0003      \u0003\n              ͷ\n\u0003       \u0003    ͶͲ\n        \u0007\u0003      \u0003\n              ͵\n\u0003       \u0003\n        \b\u0003 ͳ͸\u0003\n\u0003       \u0003\n          \u0003 ͵ʹ\u0003\n        \u0003\n\n\n\n\n© UCLES 2016"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": " \n         ǡǤ\n        \n         4Ǥ\n        \n                                                                                ହ\n          ǡ 8ǡ3ǡ   \n                                                                                ସ\n        \n        ǫ\n        \n       \n            32"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "5\n           20"
+        },
+        {
+          "label": "B",
+          "rawText": "3\n           64"
+        },
+        {
+          "label": "C",
+          "rawText": "5\n           40"
+        },
+        {
+          "label": "D",
+          "rawText": "3"
+        },
+        {
+          "label": "E",
+          "rawText": "16\n       \n           32\n        \n\n\n\n\n© UCLES 2016"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let us write out the first few terms of the three sequences explicitly. Let the common ratio of T\nbe R and the common ratio of U be r.\n\n         term    1       2          3             4             5      …          n         …\n           T     4      4R        4R2           4R3           4R4      …       4Rn−1        …\n           U     4      4r         4r2           4r3           4r4     …       4rn−1        …\n           S     8    4R + 4r   4R + 4r2\n                                  2           4R + 4r3\n                                                3           4R + 4r4\n                                                              4        …   4R n−1 + 4rn−1   …\n\nWe are given the first three terms of S, so\n\n                                                      8=8\n                                              4R + 4r = 3\n                                         4R2 + 4r2 = 45\n\nTherefore R + r = 34 and R2 + r2 = 16\n                                   5\n                                      . We can work out the values of R and r by guessing, or\nwe can work them out by solving these equations. We show the second approach here.\nThe first equation gives R = 34 − r, which we can substitute into the second equation to give\n\n                                       ( 34 − r)2 + r2 = 16\n                                                         5\n\n\nso 2r2 − 32 r + 14 = 0, hence 8r2 − 6r + 1 = 0, which factorises as (4r − 1)(2r − 1) = 0, giving\nr = 21 or r = 14 and R = 14 or R = 12 respectively.\nWe can therefore work out the sums to infinity of T and U, taking R = 14 and r = 12 :\n\n                                                         4\n                                sum to infinity of T =        = 16\n                                                                3\n                                                       1 − 41\n                                                         4\n                                sum to infinity of U =        =8\n                                                       1 − 21\n\ngiving the sum to infinity of S as 16\n                                   3 + 8 = 3 , since S is the sum of T and U. If we took the\n                                           40\n\nvalues of R and r to be the other way round, we would have the series T and U swapped, but\ntheir sum would be unchanged.\nSo the answer is D.\n\n\n\n\n                                                 17\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            17
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q15",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 15,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "ͳͷ\u0003     \u0017\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003‫ ݕ‬ൌ ሺʹ‫ ݔ‬൅ ܽሻሺ‫ ݔ‬െ ʹܽሻଶ \u0003\u0003\u0003\u0003\n        \u0003‫ ݔ‬ൌ ͳǡ\u0003\u0003ܽ\u0003ǡ\u0003\u0003\n        \u0003\n        \u0003\n              Ͷͻ\n        \u0004\u0003 െ \u0003\n               Ͷ\n        \u0003\n        \u0005\u0003 െͺ\u0003\n        \u0003     ʹͷ\n        \u0006\u0003 െ \u0003\n               Ͷ\n        \u0003   ͹\n        \u0007\u0003 \u0003\n            Ͷ\n        \u0003   Ͷ͹\n        \b\u0003     \u0003"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": " ‫ ݕ‬ൌ ሺ2‫ ݔ‬൅ ܽሻሺ‫ ݔ‬െ 2ܽሻଶ \n        ‫ ݔ‬ൌ 1ǡܽǡ\n        \n        \n              49"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "െ \n               4"
+        },
+        {
+          "label": "B",
+          "rawText": "െ8\n             25"
+        },
+        {
+          "label": "C",
+          "rawText": "െ \n               4\n           7"
+        },
+        {
+          "label": "D",
+          "rawText": "4\n           47"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We start by expanding the brackets to get\n\n                   y = (2x + a)(x2 − 4ax + 4a2 ) = 2x3 − 7ax2 + 4a2 x + 8a3\n\nso the derivative is given by\n                                       dy\n                                          = 6x2 − 14ax + 4a2 .\n                                       dx\nTherefore at x = 1, the gradient is 6 − 14a + 4a2 . To find the least possible value of this as\na varies, we can either differentiate this expression with respect to a or complete the square.\nThe latter approach gives\n\n                                4a2 − 14a + 6 = 4(a2 − 72 a) + 6\n                                              = 4 (a − 74 )2 − ( 74 )2 + 6\n                                                                      \u0001\n\n                                              = 4(a − 47 )2 − 49\n                                                              4 +6\n                                              = 4(a − 47 )2 − 25\n                                                              4\n\nso the minimum value is − 25\n                          4 and the answer is C.\n\n\n\n\n                                                  18\n                                                                                   © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            18
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q16",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 16,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "ͳ͸\n\n\n\n\nͳ͸\u0003         \u0003\u0003\u0003\u0003\u0003\n        \u0003\n        \u0003        \u0003      \u0003         \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003ଵ଴ ʹ ൅ ଵ଴ ሺ‫ ݕ‬െ ͳሻ ൌ ʹ ଵ଴ ‫\u0003ݔ‬\n        \u0003\n                        \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003ଵ଴ ሺ‫ ݕ‬൅ ͵ െ ͵‫ݔ‬ሻ ൌ Ͳ\u0003\n         \u0003\n         \u0003\u0003\u0003‫\u0003\u0003ݕ‬\n         \u0003\n\u0003        \u0003\n\u0003            ͷ ͵ξͷ\n         \u0004\u0003    േ      \u0003\n             ʹ     ʹ\n\u0003        \u0003\n         \u0005\u0003 ͵േξ͵\u0003\n      \u0003 \u0003\u0006\u0003 ͹േ͵ξ͵\u0003\n\n\u0003        \u0003\n         \u0007\u0003 ͵ǡ\u0003ͻ\u0003\n\u0003        \u0003\n         \b\u0003 ͳǡ\u0003ͳ͵\u0003\n         \u0003\n\n\n\n\n© UCLES 2016                                                                               [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "16         \n        \n                               ଵ଴ 2 ൅ ଵ଴ ሺ‫ ݕ‬െ 1ሻ ൌ 2 ଵ଴ ‫ݔ‬\n        \n                        ଵ଴ ሺ‫ ݕ‬൅ 3 െ 3‫ݔ‬ሻ ൌ 0\n         \n         ‫ݕ‬\n         \n        \n            5 3ξ5"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "േ      \n             2     2"
+        },
+        {
+          "label": "B",
+          "rawText": "3േξ3"
+        },
+        {
+          "label": "C",
+          "rawText": "7േ3ξ3"
+        },
+        {
+          "label": "D",
+          "rawText": "3ǡ9"
+        },
+        {
+          "label": "E",
+          "rawText": "1ǡ13\n         \n\n\n\n\n© UCLES 2016                                                                               [Turn over"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The first equation involves the sum of two logarithms, so we can rewrite it as:\n\n                                    log10 (2(y − 1)) = log10 x2\n\nand so 2(y − 1) = x2 .\nThe second equation becomes y + 3 − 3x = 1, as loga 1 = 0 for any base a.\nWe therefore have two simultaneous equations:\n\n                                             2y − 2 = x2\n                                         y − 3x + 2 = 0.\n\nWe want to find the values of y, so we rewrite the second equation to eliminate x:\n                                                 y+2\n                                            x=\n                                                  3\nand so the first equation becomes\n                                                   (y + 2)2\n                                        2y − 2 =\n                                                      9\nor\n                                     18y − 18 = y 2 + 4y + 4\nwhich rearranges to give the quadratic y 2 − 14y + 22 = 0. The solutions to this quadratic are\n                             √\n                        14 ± 142 − 4 × 22          p               √\n                                             = 7 ± 72 − 22 = 7 ± 27\n                                2\nand so the correct answer is C.\nIt would be good to check whether both of these solutions are valid (though the√ question does\nnot require us to do so). To be valid, we require both x > 0 and y > 1. Since 27 < 6, we see\nthat y > 1. Also, as x = 31 (y + 2) and y > 0, it follows that x > 0. So there are, indeed, two\nvalid solutions.\n\n\n\n\n                                                 19\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            19
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q17",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 17,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "ͳ͹\u0003       \u0003\u0003\u0003\u0003\n        \u0003\n        \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003‫ ݕ‬ൌ ሺͳ ൅ ʹ  ‫ݔ‬ሻ  ʹ‫ Ͳ\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003ݔ‬൏ ‫ ݔ‬൏ ߨ\u0003\u0003\u0003\n        \u0003\n        \u0017\u0003 \u0003\u0003\u0003\u0003\u0003‫\u0003\u0003\u0003\u0003ݕ\u0003 \u0003\u0003ݔ‬\n        \u0003\n        \u0003\n                               గ   ଶగ       ଷగ\n        \u0004\u0003 Ͳ ൏ ‫ ݔ‬൏ ସ , ଷ ൏ ‫ ݔ‬൏ ସ\n        \u0003                      గ   ଷగ\n        \u0005\u0003 Ͳ ൏ ‫ ݔ‬൏ ସ , ସ ൏ ‫ ݔ‬൏ ߨ\n        \u0003                      ଶగ ଷగ\n        \u0006\u0003 Ͳ ൏ ‫ ݔ‬൏ ଷ , ସ ൏ ‫ ݔ‬൏ ߨ\n        \u0003       గ              ଶగ ଷగ\n        \u0007\u0003 ସ ൏ ‫ ݔ‬൏ ଷ , ସ ൏ ‫ ݔ‬൏ ߨ\n        \u0003     గ        ଶగ\n        \b\u0003    ସ\n                  ൏‫ݔ‬൏ ଷ\n        \u0003     గ        ଷగ\n          \u0003   ସ\n                ൏‫ݔ‬൏ ସ\n\n\n\n\n                       ଵି௫"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "\n        \n        ‫ ݕ‬ൌ ሺ1 ൅ 2  ‫ݔ‬ሻ  2‫ 0ݔ‬൏ ‫ ݔ‬൏ ߨ\n        \n         ‫ݕ ݔ‬\n        \n        \n                               గ   ଶగ       ଷగ"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0 ൏ ‫ ݔ‬൏ ସ , ଷ ൏ ‫ ݔ‬൏ ସ\n                              గ   ଷగ"
+        },
+        {
+          "label": "B",
+          "rawText": "0 ൏ ‫ ݔ‬൏ ସ , ସ ൏ ‫ ݔ‬൏ ߨ\n                              ଶగ ଷగ"
+        },
+        {
+          "label": "C",
+          "rawText": "0 ൏ ‫ ݔ‬൏ ଷ , ସ ൏ ‫ ݔ‬൏ ߨ\n               గ              ଶగ ଷగ"
+        },
+        {
+          "label": "D",
+          "rawText": "ସ ൏ ‫ ݔ‬൏ ଷ , ସ ൏ ‫ ݔ‬൏ ߨ\n             గ        ଶగ"
+        },
+        {
+          "label": "E",
+          "rawText": "ସ\n                  ൏‫ݔ‬൏ ଷ\n             గ        ଷగ\n             ସ\n                ൏‫ݔ‬൏ ସ\n\n\n\n\n                       ଵି௫"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The formula for y is the product of two factors, namely 1 + 2 cos x and cos 2x. The whole\nexpression is negative when one of the two factors is positive and the other is negative. The\nfactors change sign when they cross a point where the factor is zero, and we can find these\npoints:\n\n•    1 + 2 cos x = 0 when cos x = − 21 , which is when x = 2π\n                                                            3 (within the range 0 < x < π).\n\n•    cos 2x = 0 when x = π4 and when x = 3π\n                                          4 .\n\n\nWe can now make a table showing the signs of the two factors in the different parts of the\ninterval 0 < x < π. (This is a useful technique in general.)\n\n\n                                     π                     2π                      3π\n               0 < x < π4   x = π4         2π\n                                     4 <x< 3      x = 2π\n                                                       3\n                                                                  3π\n                                                            3 <x< 4      x = 3π\n                                                                              4     4 <x<π\n 1 + 2 cos x       +          +         +            0         −           −           −\n   cos 2x          +          0         −           −          −            0          +\n     y             +          0         −            0         +            0          −\n\nTherefore y is negative when π4 < x < 2π\n                                       3 and when 4 < x < π, and so the answer is D.\n                                                  3π\n\n\n\n\n                                             20\n                                                                                   © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            20
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q18",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 18,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "ͳͺ\u0003     \u0017\u0003 \u0003\u0003 య \u0003\u0003\u0003\u0003\u0003\u0003‫Ͳ ് ݔ‬Ǥ\u0003\u0003\n                       ξ௫ మ\n        \u0003\n        \u0017\u0003 \u0003\u0003\u0003\u0003\u0003‫\u0003\u0003 \u0003\u0003 \u0003\u0003 \u0003\u0003ݔ‬\n        \u0003\n\n      \u0003 \u0004\u0003 ‫ ݔ‬൑ െʹǡ\u0003\u0003\u0003‫ ݔ‬൐ Ͳ\u0003\n\n\u0003       \u0003\n        \u0005\u0003 െʹ ൑ ‫ ݔ‬൏ Ͳ\u0003\n\u0003       \u0003\n        \u0006\u0003 ‫ ݔ‬൑ ͳǡ\u0003\u0003\u0003‫\u0003Ͳ ് ݔ‬\n\u0003       \u0003\n        \u0007\u0003 ‫ ݔ‬൒ ͳ\u0003\u0003\n\u0003       \u0003\n        \b\u0003 െʹ ൑ ‫ ݔ‬൑ ͳǡ\u0003\u0003\u0003‫\u0003Ͳ ് ݔ‬\n\u0003       \u0003\n          \u0003 ‫ ݔ‬൑ െʹǡ\u0003\u0003\u0003‫ ݔ‬൒ ͳ\u0003\n        \u0003\n\n\n\n\n© UCLES 2016"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "  య ‫0 ് ݔ‬Ǥ\n                       ξ௫ మ\n        \n         ‫   ݔ‬"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "‫ ݔ‬൑ െ2ǡ‫ ݔ‬൐ 0"
+        },
+        {
+          "label": "B",
+          "rawText": "െ2 ൑ ‫ ݔ‬൏ 0"
+        },
+        {
+          "label": "C",
+          "rawText": "‫ ݔ‬൑ 1ǡ‫0 ് ݔ‬"
+        },
+        {
+          "label": "D",
+          "rawText": "‫ ݔ‬൒ 1"
+        },
+        {
+          "label": "E",
+          "rawText": "െ2 ൑ ‫ ݔ‬൑ 1ǡ‫0 ് ݔ‬\n       \n           ‫ ݔ‬൑ െ2ǡ‫ ݔ‬൒ 1\n        \n\n\n\n\n© UCLES 2016"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "This requires us to first differentiate the function. We therefore write\n                                        1−x         2     1\n                                     y= √3\n                                               = x− 3 − x 3\n                                           x 2\n\nwhich we can differentiate to get\n                                      dy           5         2\n                                         = − 32 x− 3 − 13 x− 3\n                                      dx\nThis is zero when\n                                             5        2\n                                      − 32 x− 3 − 31 x− 3 = 0,\n\nso multiplying by 3x 3 to clear fractions in both the coefficients and in the powers gives\n                     5\n\n\n\n\n                                           −2 − x = 0\n\nso x = −2. (We could also have obtained this by writing − 23 x− 3 = 13 x− 3 and dividing one side\n                                                                   5         2\n\n\nby the other.)\nWe next need to determine the sign of dx    dy\n                                               in each region. We note that the function is not\ndefined at x = 0, so we have to deal with x < 0 and x > 0 separately. It is also not clear how\nto find the sign of dx\n                    dy\n                       directly from its given form, so we first factorise it, giving\n\n                                      dy           5\n                                         = − 31 x− 3 (2 + x).\n                                      dx\n(Incidentally, this gives yet another way to see that the derivative is zero at x = −2.) We can\nnow work out the signs of the two factors, and hence of the derivative, in the various ranges:\n\n                                 x < −2    x = −2     −2 < x < 0       x>0\n                          − 35\n                         x         −         −            −             +\n                         2+x       −          0           +             +\n                          dy\n                          dx       +          0           −             +\n\nIt is therefore increasing in the region x < −2 and x > 0. (It it not increasing at x = −2, but\nrather it is stationary at that point.) The correct answer is therefore A (though the question\nmistakenly says x ⩽ −2).\n\n\n\n\n                                                 21\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            21
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q19",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 19,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "13\n\nͳͻ\u0003     \u0017\u0003  \u0003\u0003‫ ݔ‬ଷ \u0003\u0003\u0003\u0003\u0003ሺͳ ൅ ʹ‫ ݔ‬൅ ͵‫ ݔ‬ଶ ሻ଺ \u0003\u0003\u0003\u0003 \u0003\u0003  \u0003\n        \u0003‫ ݔ‬ସ \u0003\u0003\u0003\u0003\u0003ሺͳ െ ܽ‫ ݔ‬ଶ ሻହ Ǥ\u0003\u0003\u0003\n        \u0003\n          \u0003\u0003\u0003\u0003\u0003\u0003 \u0003ܽǤ\u0003\u0003\u0003\n        \u0003\n\n\u0003        \u0004\u0003 േ\u0003ʹξʹ\u0003\n      \u0003 \u0003\u0005\u0003 േ\u0003ξͳ͹\u0003\n\n\u0003        \u0003\n         \u0006\u0003 േ\u0003ξ͵Ͷ\u0003\n\u0003        \u0003\n         \u0007\u0003 േ\u0003ʹξͳ͹\u0003\n\u0003        \u0003\n         \b\u0003 \u0017\u0003\u0003\u0003\u0003\u0003\u0003ܽǤ\u0003\n         \u0003\n\n\n\n\n© UCLES 2016                                                                                    [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "13\n\n19       ‫ ݔ‬ଷ ሺ1 ൅ 2‫ ݔ‬൅ 3‫ ݔ‬ଶ ሻ଺    \n        ‫ ݔ‬ସ ሺ1 െ ܽ‫ ݔ‬ଶ ሻହ Ǥ\n        \n           ܽǤ"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "േ2ξ2"
+        },
+        {
+          "label": "B",
+          "rawText": "േξ17"
+        },
+        {
+          "label": "C",
+          "rawText": "േξ34"
+        },
+        {
+          "label": "D",
+          "rawText": "േ2ξ17"
+        },
+        {
+          "label": "E",
+          "rawText": "ܽǤ\n         \n\n\n\n\n© UCLES 2016                                                                                    [Turn over"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We expand the first expression up to powers of x3 to find its coefficient. We can think of the\nfirst expression as (1 + (2x + 3x2 ))6 and use the binomial theorem to expand it. We note that\nthe first few binomial coefficients are\n           \u0012 \u0013           \u0012 \u0013            \u0012 \u0013                    \u0012 \u0013\n             6             6              6     6×5              6     6×5×4\n                = 1;           = 6;          =        = 15;         =           = 20.\n             0             1              2      2!              3        3!\n\nWe thus have\n\n  (1 + (2x + 3x2 ))6 = 1 + 61 (2x + 3x2 ) + 62 (2x + 3x2 )2 + 63 (2x + 3x2 )3 + · · ·\n                             \u0001                \u0001                 \u0001\n\n                      = 1 + 6(2x + 3x2 ) + 15((2x)2 + 2(2x)(3x2 ) + · · · ) + 20((2x)3 + · · · ) + · · ·\n\nwhere we have stopped when the powers reach 3. We can read off the coefficient of x3 from this;\nit is\n                              15 × 2 × 2 × 3 + 20 × 8 = 340.\n\nWe can expand (1 − ax2 )5 similarly, and obtain\n\n               1 + 51 (−ax2 ) + 52 (−ax2 )2 + · · · = 1 − 5ax2 + 10a2 x4 + · · ·\n                     \u0001              \u0001\n\n\nso the coefficient of x4 is 10a2 .\nWe are told how these two coefficients relate to each other: we have\n\n                                            340 = 2 × 10a2\n                    √\nso a2 = 17 and a = ± 17, giving the answer as option B.\n\n\n\n\n                                                   22\n                                                                                             © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            22
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-practice-2016-p1-q20",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-practice-2016-p1",
+      "edition": "practice-2016",
+      "paper": 1,
+      "questionNumber": 20,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "14\n\nʹͲ\u0003     \u0017\u0003\u0003\u0003\u0003Ǧ\u0003\u0003\u0003\u0003ܴܲܳܵ\u0003\u0003\u0003ܱǤ\u0003\u0003\u0004\u0003\u0003\u0003\n        \u0003\u0003\u0003\u0003\u0003\u0003ʹͲ\u0003Ǥ\u0003\u0003\u0003\n\n\n\n\n                                                                      \u0003\n        \u0003\n           \u0003\u0003\u0003 ǡ\u0003\u0003ǡ\u0003\u0003\u0003\u0003 \u0003\u0003\u0003\u0003\u0003ܲ\u0003\u0003\u0003\n         \u0003\u0003ܱܴǤ\u0003\u0003\n         \u0003\n\u0003        \u0003\n\u0003        \u0004\u0003 ͳͲඥͷ െ ʹξ͵\u0003\n\u0003        \u0003\n         \u0005\u0003 ͳͲξ͵\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\n\u0003        \u0003\n         \u0006\u0003 ͳͲξͷ\u0003\n      \u0003 \u0003\u0007\u0003 ͳͲξ͹\u0003\n\n\u0003        \u0003\n         \b\u0003 ͳͲඥͷ ൅ ʹξ͵\u0003\n         \u0003\n\n\n\n                                           END OF TEST\n\n                                                    \u0003\n\n                                                    \u0003\n\n                                                    \u0003\n\n                                                    \u0003\n\n                                                    \u0003\n\n                                                    \u0003\n\n                                                    \u0003\n\n\n© UCLES 2016"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "14\n\n20     ǦܴܲܳܵܱǤA\n        20Ǥ\n\n\n\n\n                                                                      \n        \n            ǡǡ ܲ\n         ܱܴǤ"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "10ඥ5 െ 2ξ3"
+        },
+        {
+          "label": "B",
+          "rawText": "10ξ3"
+        },
+        {
+          "label": "C",
+          "rawText": "10ξ5"
+        },
+        {
+          "label": "D",
+          "rawText": "10ξ7"
+        },
+        {
+          "label": "E",
+          "rawText": "10ඥ5 ൅ 2ξ3\n         \n\n\n\n                                           END OF TEST\n\n                                                    \n\n                                                    \n\n                                                    \n\n                                                    \n\n                                                    \n\n                                                    \n\n                                                    \n\n\n© UCLES 2016"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let us label the midpoint of OR as T , so that we can refer to it.\nWe first observe that since all the edges of the pyramid are of length 20m, the triangles are all\nequilateral.\nThere are two ways to get from P to the midpoint of OR in a short distance: one can either\ntravel along the base to RS and then along the triangular face to T , or one could travel along\nthe triangular face OP S to the edge OS and from there to T . It is not obvious which route is\nshorter, so we will calculate both. (There are also routes which are mirror-reflections of these\ngoing via the edge QR or OQ.)\nTo find these distances, we can “unfold” the tetrahedron, that is, make a net for the tetrahedron.\nFor the first route, we draw just the faces P QRS and ORS:\n\n                                                   O\n\n                                                        T\n\n                                        S                   R\n\n\n\n\n                                            P            Q\n\n                                                       √       √            √\nThe height of the triangle OSR is 20 sin 60◦ = 20 × 23 = 10 3, so T lies 5 3 above the line SR;\nT also lies 34 × 20 = 15 to the right of S (as it is at the midpoint of OR). We can therefore find\nthe length P T using Pythagoras’s theorem:\n                                                         √\n                                  P T 2 = 152 + (20 + 5 3)2\n                                                            √\n                                        = 225 + 400 + 200 3 + 75\n                                                     √\n                                        = 700 + 200 3\n\nWe now look at the other route, which we can do by drawing the triangles OP S and OSR:\n\n                                                    O\n                                                        T\n                                    P                            R\n\n\n                                                    S\n\n                                                                   √\nUsing\n √    the  height  of the triangle as calculated above, P  lies 10   3 to the left of OS and T lies\n5 3 to its right, while T lies 5 above P (being a quarter of OS). Pythagoras’s theorem therefore\ngives\n                                                  √\n                                       P T 2 = (15 3)2 + 52\n                                                = 225 × 3 + 25\n                                                = 700\n\n\n                                                   23\n                                                                                      © UCLES 2019\n\f\n√           √\nThis is therefore the shorter of the two routes, and its length is       700 = 10 7, hence the solution\nis option D.\n\n\n\n\n                                                 24\n                                                                                           © UCLES 2019\n\f\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support:\nadmissionstesting.org/help"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-practice-2016-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+          "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+          "pages": [
+            14
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-practice-2016-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+          "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+          "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+          "pages": [
+            23,
+            24,
+            25
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "pdf-font-mapping-anomaly"
+        ]
+      }
+    }
+  ]
+}

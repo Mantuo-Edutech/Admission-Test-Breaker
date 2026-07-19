@@ -1,0 +1,57 @@
+schemaVersion: 1
+feature:
+  id: official-research-and-review-notes
+  title: Internal official research archive and China-student Notes blueprint
+  status: partial
+  userOutcome: >-
+    The team has a reproducible local snapshot of official preparation pages
+    and downloadable assets for TMUA, ESAT, TARA, LNAT and UCAT, plus a precise
+    original-writing blueprint for curriculum-aware Chinese-student review notes.
+
+run:
+  packageScript: verify
+
+claims:
+  - id: reproducible-official-research-snapshot
+    status: verified
+    statement: >-
+      The sync process records official page provenance, downloadable PDF/RTF
+      URLs, local research paths, byte sizes, SHA-256 hashes, rights status and
+      external-only interactive resources. Raw files are Git-ignored and never
+      treated as publishable content.
+    artifacts:
+      - scripts/sync-official-research-assets.ts
+      - content/official/research-asset-inventory.json
+      - content/official/README.md
+      - tests/content/official/research-asset-inventory.test.ts
+    automatedChecks:
+      - test
+      - typecheck
+
+  - id: curriculum-aware-notes-blueprint
+    status: verified
+    statement: >-
+      The versioned blueprint covers TMUA, ESAT, TARA, LNAT and UCAT with
+      bilingual modules, A-Level/IAL, IB or AP bridges where relevant, a
+      public-versus-entitled boundary, original-writing rules and seven review gates.
+    artifacts:
+      - content/notes/china-student-review-notes-blueprint.json
+      - docs/content/CHINA_STUDENT_REVIEW_NOTES_BLUEPRINT.md
+      - tests/content/official/review-notes-blueprint.test.ts
+    automatedChecks:
+      - test
+      - typecheck
+
+boundaries:
+  - Downloaded official files are an internal research archive, not a publication licence and not a product content collection.
+  - UAT-UK and UCAT materials require written permission for direct or indirect commercial use beyond their stated personal or internal non-commercial allowances.
+  - UCAT and Pearson practice banks are interactive external resources and have not been represented as locally downloaded PDFs.
+  - The seven-chapter TMUA Foundations and the five cross-exam Review Notes revisions now have same-source downloadable teaching-preview editions; all still need independent final review and fine-grained completion.
+
+manualChecks:
+  - id: notes-pedagogy-and-rights-review
+    status: pending
+    evidence: The first TMUA teaching preview exists, but a separate subject teacher and rights/similarity reviewer must approve it before the pattern is promoted to a final complete series.
+    viewports:
+      - web
+      - printable-a4

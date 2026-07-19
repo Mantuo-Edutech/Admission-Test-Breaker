@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q04",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 4,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "4   Consider the following statement:\n\n            Every positive integer N that is greater than 6 can be written as the sum\n            of two non-prime integers that are greater than 1.\n\n    Which of the following is/are counterexample(s) to this statement?\n\n        I      N =5\n        II     N =7\n        III N = 9\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                              6"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following statement:\n\n            Every positive integer N that is greater than 6 can be written as the sum\n            of two non-prime integers that are greater than 1.\n\n    Which of the following is/are counterexample(s) to this statement?\n\n        I      N =5\n        II     N =7\n        III N = 9"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "G",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "A counterexample is a positive integer N that is greater than 6 but it is not the case that N\ncan be written as the sum of two non-prime integers that are greater than 1.\n\n     N = 5 is not greater than 6, so is not a counterexample.\n\n     N = 7 = 2 + 5 = 3 + 4 cannot be written in this way, so this provides a counterexample.\n\n     N = 9 = 2 + 7 = 3 + 6 = 4 + 5 also cannot be written in this way.\n\nTherefore both II and III provide counterexamples; the correct option is G.\n\n\n\n\nVersion 1.0, April 2021                                                                Page 6\n\n                                         © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

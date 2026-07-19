@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16   The curve C has equation y = x2 + bx + 2, where b ≥ 0.\n\n     Find the value of b that minimises the distance between the origin and the\n     stationary point of the curve C.\n\n     A b=0\n\n     B b=1\n\n     C b=2\n             √\n     D b = 26\n          √\n     E b= 2\n          √\n     F b= 6\n\n\n\n\n                                            18"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The curve C has equation y = x2 + bx + 2, where b ≥ 0.\n\n     Find the value of b that minimises the distance between the origin and the\n     stationary point of the curve C."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "b=0"
+    },
+    {
+      "label": "B",
+      "rawText": "b=1"
+    },
+    {
+      "label": "C",
+      "rawText": "b=2\n             √"
+    },
+    {
+      "label": "D",
+      "rawText": "b = 26\n          √"
+    },
+    {
+      "label": "E",
+      "rawText": "b= 2\n          √"
+    },
+    {
+      "label": "F",
+      "rawText": "b= 6"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We first need to find the stationary point of the curve C. We can do this either by differentiating\nor, as the equation is a quadratic, by completing the square.\nBy differentiating, we have\n                                                dy\n                                                   = 2x + b\n                                                dx\n     dy\nso      = 0 if and only if x = − 12 b, and so\n     dx\n                                 y = (− 21 b)2 + b(− 21 b) + 2 = 2 − 14 b2\n\nAlternatively, we can complete the square to give y = (x + 21 b)2 − 14 b2 + 2, and so the stationary\npoint is at (− 12 b, 2 − 14 b2 ).\nThe distance of this point from the origin is then given by\n           q                             q                               q\n              (− 21 b)2 + (2 − 14 b2 )2 = 14 b2 + 4 − 4( 14 b2 ) + 16\n                                                                   1 4     1 4\n                                                                      b = 16 b − 34 b2 + 4\n\nTo minimise this square root, we can minimise the expression inside the square root. This is a\n                            1\nfunction of B = b2 , namely 16 B 2 − 34 B + 4, so we can minimise this.\n\n        Commentary: If a quartic is actually a quadratic in the variable squared, it is usually\n        much easier to work with the quadratic than the quartic.\n\nWe can minimise this by completing the square or differentiating, as before. We can start by\n                       1                                1\ntaking out a factor of 16 so we are trying to minimise 16 (B 2 − 12B) + 4. (There’s no need to\nthink about the 4 at the end: this additional term does not change the value of b or B at which\nthe function is minimised.)\nWe therefore wish√to minimise B 2 − 12B = (B − 6)2 − 36 so B = 6 gives the minimum value, so\nb2 = 6 giving b = 6 (as b ⩾ 0), hence the answer is F.\n\n        Commentary: We could have gone ahead and differentiated the whole square root\n        expression for distance, if we know the chain rule. But that’s more effort than needed.\n        Similarly, we could have differentiated the expression as a quartic, but again that is more\n        complex than required. It is almost always worth spending a moment thinking how to\n        make the problem a little easier before diving into algebra and calculations.\n\n\n\n\nVersion 1.0, April 2019                                                                          Page 18\n\n                                                                                             © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q06",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 6,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "6   The circles with equations\n\n                           (x + 4)2 + (y + 1)2 = 64 and\n\n                           (x − 8)2 + (y − 4)2 = r2 where r > 0\n\n\n    have exactly one point in common.\n\n    Find the diﬀerence between the two possible values of r.\n\n    A 4\n\n    B 10\n\n    C 16\n\n    D 26\n\n    E 50\n\n\n\n\n                                           8"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The circles with equations\n\n                           (x + 4)2 + (y + 1)2 = 64 and\n\n                           (x − 8)2 + (y − 4)2 = r2 where r > 0\n\n\n    have exactly one point in common.\n\n    Find the diﬀerence between the two possible values of r."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "4"
+    },
+    {
+      "label": "B",
+      "rawText": "10"
+    },
+    {
+      "label": "C",
+      "rawText": "16"
+    },
+    {
+      "label": "D",
+      "rawText": "26"
+    },
+    {
+      "label": "E",
+      "rawText": "50"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We could try to solve this algebraically or geometrically. An algebraic approach looks difficult,\nas we have two quadratic equations, and one of them has an unknown coefficient (that is, r2 ).\nSo we use a geometric approach instead.\nThe first circle has centre (−4, −1) and radius 8, while the second circle has centre (8, 4) and\nradius r. The point (8, 4) does not lie inside the first circle (it is more than 8 − (−4) = 12 units\naway), so the two circles will have exactly one point in common when the first circle is tangent\nto the second circle externally or when it lies inside the second circle and touches it internally.\nHere is a sketch of these two situations:\n\n                       y                                    y\n\n\n\n\n                                      x                                                 x\n\n\n\n\nIn the first case, where r = r1 , we see that r1 + 8 is the distance between the centres of the two\ncircles. In the second case, where r = r2 , we see that r2 − 8 is the distance between the centres.\nTherefore r1 + 8 = r2 − 8, so r2 − r1 = 16, and the answer is C.\nNote that we did not even need to work\n                                   √    out the actual values of r1 and r2 . If we had done so,\nthe distance between the centres is 122 + 52 = 13, so r1 = 13 − 8 = 5 and r2 = 13 + 8 = 21.\n\n\n\n\nc UCLES                                                                                      Page 8"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

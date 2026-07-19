@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p1-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p1",
+  "edition": "specimen",
+  "paper": 1,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16.    Given that and      are non‐zero integers, the expression               is an integer if\n\n\n\n       A           0\n\n       B           0\n\n       C           0 and       0\n\n       D           0 and       0\n\n       E           0 and       0\n\n       F           0 and       0\n\n       G           0\n\n       H           0"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Given that and      are non‐zero integers, the expression               is an integer if"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0"
+    },
+    {
+      "label": "B",
+      "rawText": "0"
+    },
+    {
+      "label": "C",
+      "rawText": "0 and       0"
+    },
+    {
+      "label": "D",
+      "rawText": "0 and       0"
+    },
+    {
+      "label": "E",
+      "rawText": "0 and       0"
+    },
+    {
+      "label": "F",
+      "rawText": "0 and       0"
+    },
+    {
+      "label": "G",
+      "rawText": "0"
+    },
+    {
+      "label": "H",
+      "rawText": "0"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We begin by simplifying this expression; we write each term as a product of prime powers to\nobtain:\n                          10c−2d × 202c+d   (2 × 5)c−2d × (22 × 5)2c+d\n                                          =\n                            8c × 125c+d           (23 )c × (53 )c+d\n                                              2c−2d+2(2c+d) × 5c−2d+(2c+d)\n                                            =\n                                                      23c × 53(c+d)\n                                              25c) × 53c−d\n                                            = 3c\n                                              2 × 53c+3d\n                                            = 22c × 5−4d\n\nFor this to be an integer, we require 2c and −4d to be non-negative integers. Since c and d are\nnon-zero integers, we need c > 0 and d < 0, which is option E.\n(In fact, this is an “if and only if” condition; options C, D and F would make the expression\nnon-integer, as would A and G; while conditions B and H are necessary, they are not sufficient:\nif d < 0, it is still possible that c < 0, so it is not true that the given expression is (necessarily)\nan integer if d < 0.)\n\n\n\n\nVersion 1.1, November 2020                                                                    Page 18"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+      "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+      "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

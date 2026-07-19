@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11   A spiral line is drawn as shown.\n\n                                              y\n                                              5\n\n                                              4\n\n                                              3\n\n                                              2\n\n                                              1\n\n\n                   −5   −4   −3   −2    −1        0   1   2    3    4   5 x\n                                             −1\n\n                                             −2\n\n                                             −3\n\n                                             −4\n\n                                             −5\n\n\n     This spiral pattern continues indeﬁnitely.\n\n     Which one of the following points is not on the spiral line?\n\n     A (99, 100)\n\n     B (99, −100)\n\n     C (−99, 100)\n\n     D (−99, −100)\n\n     E (100, 99)\n\n     F (100, −99)\n\n     G (−100, 99)\n\n     H (−100, −99)\n\n\n\n\n                                              13"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A spiral line is drawn as shown.\n\n                                              y\n                                              5\n\n                                              4\n\n                                              3\n\n                                              2\n\n                                              1\n\n\n                   −5   −4   −3   −2    −1        0   1   2    3    4   5 x\n                                             −1\n\n                                             −2\n\n                                             −3\n\n                                             −4\n\n                                             −5\n\n\n     This spiral pattern continues indeﬁnitely.\n\n     Which one of the following points is not on the spiral line?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "(99, 100)"
+    },
+    {
+      "label": "B",
+      "rawText": "(99, −100)"
+    },
+    {
+      "label": "C",
+      "rawText": "(−99, 100)"
+    },
+    {
+      "label": "D",
+      "rawText": "(−99, −100)"
+    },
+    {
+      "label": "E",
+      "rawText": "(100, 99)"
+    },
+    {
+      "label": "F",
+      "rawText": "(100, −99)"
+    },
+    {
+      "label": "G",
+      "rawText": "(−100, 99)"
+    },
+    {
+      "label": "H",
+      "rawText": "(−100, −99)"
+    }
+  ],
+  "correctAnswer": "G",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "From the nature of the pattern, we see that it sort-of repeats every 2 units along each axis. So\nlet us simplify this question by replacing 99 and 100 by 3 and 4 (an odd number and the even\nnumber one more than it).\nLooking at the portion of the graph we are given, we see the points (3, 4) and (4, 3) are both\non the spiral (top right), (3, −4) and (4, −3) are too (bottom right), (−4, −3) and (−3, −4) are\nboth on the bottom left and if we continue the line at the top, (−3, 4) is at the top left. However\n(−4, 3) is missed out: that is the gap at the end of one ‘loop’ as the spiral heads out to form\nthe next ‘loop’.\nTherefore in the case of 99 and 100, (−100, 99) will be missed, which is option G.\n\n\n\n\nVersion 1.0, April 2021                                                                    Page 13\n\n                                           © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

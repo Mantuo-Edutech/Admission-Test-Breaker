@@ -2,6 +2,7 @@ import { ArrowRight, BookOpenCheck, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { AppServices } from "../../../app/dependencies.js";
 import { usePreparationProfileContext } from "../../preparation-profile/hooks/usePreparationProfileContext.js";
+import { TMUA_ONLINE_PAPER_MANIFEST } from "../../practice/content/tmua-online-registry.js";
 import { TmuaPageHeader } from "../components/TmuaPageHeader.js";
 import { TMUA_PUBLIC_SUMMARY } from "../tmua-summary.js";
 
@@ -28,7 +29,7 @@ const STARTING_STEPS = [
   {
     number: "04",
     title: "根据结果继续训练",
-    detail: "回看错题与时间分配，再选择真题、模考或复习资料。",
+    detail: "回看错题与时间分配，再选择真题、起点诊断或已发布复习资料。",
   },
 ] as const;
 
@@ -38,7 +39,7 @@ export function TmuaHubPage({ services }: TmuaHubPageProps) {
 
   return (
     <main className="tmua-hub-page tmua-overview-page">
-      <TmuaPageHeader backTo="/" backLabel="全部考试" />
+      <TmuaPageHeader />
 
       <section className="tmua-hub-hero page-shell">
         <div>
@@ -62,10 +63,15 @@ export function TmuaHubPage({ services }: TmuaHubPageProps) {
             )}
           </div>
         </div>
-        <dl aria-label="TMUA 已核验资料概览">
+        <dl aria-label="TMUA 已核验资料概览" role="group">
           <div><dt>已归档试卷</dt><dd>{TMUA_PUBLIC_SUMMARY.paperCount} 套</dd></div>
-          <div><dt>已建立题目档案</dt><dd>{TMUA_PUBLIC_SUMMARY.questionShellCount} 道</dd></div>
-          <div className="tmua-hub-hero__available"><dt>可在线作答</dt><dd>{TMUA_PUBLIC_SUMMARY.publishedQuestionCount} 道</dd></div>
+          <div className="tmua-hub-hero__available"><dt>可在线作答</dt><dd>{TMUA_ONLINE_PAPER_MANIFEST.questionCount} 道</dd></div>
+          <div>
+            <dt>已完成原生排版</dt>
+            <dd>
+              {TMUA_PUBLIC_SUMMARY.publishedQuestionCount} / {TMUA_ONLINE_PAPER_MANIFEST.questionCount} 道
+            </dd>
+          </div>
         </dl>
       </section>
 

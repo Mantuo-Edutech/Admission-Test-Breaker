@@ -1,0 +1,88 @@
+schemaVersion: 1
+feature:
+  id: esat-mathematics-review-notes
+  title: Curriculum-aware ESAT Mathematics 1 and 2 review notes
+  status: partial
+  userOutcome: >-
+    A student who has selected an ESAT programme and completed a course profile can
+    read a precise in-site Mathematics 1 and Mathematics 2 teaching preview, compare
+    A-Level, IB and AP transfer gaps, work through original examples and continue to
+    the matching native practice without leaving Mantou.
+
+run:
+  packageScript: verify:review-notes
+
+claims:
+  - id: reusable-versioned-review-notes-model
+    status: verified
+    statement: >-
+      A runtime-validated, exam-aware Review Notes model requires SHA-pinned official
+      anchors, factual exam scope, curriculum bridges, unique module and knowledge-unit
+      identities, clearly labelled original examples, text fallbacks for formulae,
+      active recall and an explicit publication boundary.
+    artifacts:
+      - src/features/notes/content/review-notes.ts
+      - tests/features/notes/review-notes.test.ts
+    automatedChecks:
+      - verify:review-notes
+      - typecheck
+
+  - id: exact-esat-mathematics-scope
+    status: verified
+    statement: >-
+      The first ESAT revision maps all seven Mathematics 1 and eight Mathematics 2
+      top-level knowledge units already used by the course-coverage engine, and anchors
+      exam facts and scope to two locally preserved official PDFs and their SHA-256 hashes.
+    artifacts:
+      - content/notes/esat/mathematics-foundations-v1.json
+      - content/esat/knowledge-units.json
+      - content/official/raw/shared/ESAT_Content_Specification.pdf
+      - content/official/raw/shared/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf
+      - tests/features/notes/review-notes.test.ts
+    automatedChecks:
+      - verify:review-notes
+      - verify:esat-assets
+
+  - id: profile-and-module-aware-native-page
+    status: verified
+    statement: >-
+      The native responsive route first requires a real ESAT programme and course
+      profile, then displays only the Mathematics modules selected by that plan, with
+      curriculum bridges, six question methods, two Mantou-original worked examples,
+      six active-recall prompts, a profile-first 10-page A4 download and an in-site
+      practice continuation.
+    artifacts:
+      - src/features/notes/pages/ReviewNotesPage.tsx
+      - src/features/notes/pages/EsatMathematicsNotesPage.tsx
+      - src/app/routes.tsx
+      - content/products/review-notes-pdf-assets.json
+      - public/notes/esat/esat-mathematics-foundations-v1.pdf
+      - src/styles/practice.css
+      - tests/app/esat-mathematics-notes-page.test.tsx
+      - tests/e2e/esat-review-notes.spec.ts
+    automatedChecks:
+      - verify:review-notes
+      - verify:review-notes-pdfs
+      - verify:content-products
+      - verify:e2e
+      - build
+
+boundaries:
+  - This is the Mathematics 1 and Mathematics 2 slice of a five-module top-level ESAT teaching preview, not a complete textbook.
+  - Official sources support exam facts, scope and terminology only; no official question or explanation is republished.
+  - The 10-page downloadable edition is a top-level teaching preview; fine-grained chapters and independent mathematics, bilingual, rights/similarity, student-comprehension and device review remain pending. The science slice is tracked separately.
+  - The curriculum bridge is a scope comparison, not an individual ability, score, percentile or admissions prediction.
+
+manualChecks:
+  - id: independent-mathematics-bilingual-and-similarity-review
+    status: pending
+    evidence: A separate mathematics teacher, bilingual terminology reviewer and rights/similarity reviewer must approve the complete revision before final publication status.
+    viewports:
+      - content
+  - id: student-comprehension-and-device-review
+    status: pending
+    evidence: Automated route, DOM, type, build and Chromium desktop/tablet/phone overflow checks pass; representative A-Level, IB and AP students plus real-device reviewers still need to validate comprehension and layout.
+    viewports:
+      - desktop
+      - tablet
+      - phone

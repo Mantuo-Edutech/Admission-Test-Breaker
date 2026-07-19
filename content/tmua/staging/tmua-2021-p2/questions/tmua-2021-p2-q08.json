@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "8   Consider the following statement about the polynomial p(x), where a and b are real\n    numbers with a < b :\n\n      (∗) There exists a number c with a < c < b such that p\u0002 (c) = 0.\n\n    Which one of the following is true?\n\n    A The condition p(a) = p(b) is necessary and suﬃcient for (∗)\n\n    B The condition p(a) = p(b) is necessary but not suﬃcient for (∗)\n\n    C The condition p(a) = p(b) is suﬃcient but not necessary for (∗)\n\n    D The condition p(a) = p(b) is not necessary and not suﬃcient for (∗)\n\n\n\n\n                                          10"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following statement about the polynomial p(x), where a and b are real\n    numbers with a < b :\n\n      (∗) There exists a number c with a < c < b such that p (c) = 0.\n\n    Which one of the following is true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "The condition p(a) = p(b) is necessary and suﬃcient for (∗)"
+    },
+    {
+      "label": "B",
+      "rawText": "The condition p(a) = p(b) is necessary but not suﬃcient for (∗)"
+    },
+    {
+      "label": "C",
+      "rawText": "The condition p(a) = p(b) is suﬃcient but not necessary for (∗)"
+    },
+    {
+      "label": "D",
+      "rawText": "The condition p(a) = p(b) is not necessary and not suﬃcient for (∗)"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "If p(a) = p(b) = c, say, then if the graph of y = p(x) (strictly) increases as it leaves (a, c) towards\nx = b, but then it must decrease again to get back to (b, c), so there must be a stationary point\nbetween x = a and x = b. Similarly, if the graph (strictly) decreases as it leaves (a, c), it must\nthen increase again, which also results in a stationary point. The only other possibility is that\nthe graph of y = p(x) is constant, in which case p′ (x) = 0 throughout. In all cases, (∗) holds,\nso p(a) = p(b) is sufficient for (∗).\nHowever, it is not necessary for (∗): if p(x) = x2 and a = −1, b = 2, then this satisfies (∗) (with\nc = 0) but p(a) ̸= p(b).\nThus the correct option is C.\n\n\n\n\nVersion 1.0, March 2022                                                                       Page 11"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -42,7 +42,12 @@ function selectionMap(profile: PreparationProfile | null): Record<string, string
 }
 
 function systemLabel(system: CurriculumSystemId): string {
-  return system === "caie" ? "CAIE" : "Pearson Edexcel IAL";
+  return {
+    caie: "CAIE",
+    "pearson-ial": "Pearson Edexcel IAL",
+    ib: "IB Diploma Programme",
+    ap: "AP / US Curriculum",
+  }[system];
 }
 
 function experienceLabel(experience: PreparationExperience): string {
@@ -274,12 +279,25 @@ export function ProfilePanel({
               />
               <span><strong>Pearson Edexcel IAL</strong><small>International Advanced Level</small></span>
             </label>
+            <label className="profile-choice">
+              <input
+                type="radio"
+                name="curriculum-system"
+                checked={system === "ib"}
+                onChange={() => chooseSystem("ib")}
+              />
+              <span><strong>IB Diploma Programme</strong><small>AA / AI · SL / HL</small></span>
+            </label>
+            <label className="profile-choice">
+              <input
+                type="radio"
+                name="curriculum-system"
+                checked={system === "ap"}
+                onChange={() => chooseSystem("ap")}
+              />
+              <span><strong>AP / US Curriculum</strong><small>Precalculus · Calculus AB / BC</small></span>
+            </label>
           </div>
-          <p className="profile-form__coming-options">
-            <span>IB Mathematics</span>
-            <span>AP Calculus</span>
-            <strong>课程映射正在整理</strong>
-          </p>
         </fieldset>
 
         {system !== null && (

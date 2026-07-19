@@ -143,7 +143,7 @@ describe("complete TMUA past-paper index", () => {
     }
   });
 
-  it("publishes only the verified 2023 Paper 1 content IDs", () => {
+  it("publishes all 18 verified native datasets", () => {
     const result = buildPastPaperIndex({
       manifest: corpusManifest(),
       officialResources: officialResources(),
@@ -156,32 +156,14 @@ describe("complete TMUA past-paper index", () => {
       (question) => question.contentStage === "published",
     );
 
-    expect(publishedPapers).toEqual([
-      expect.objectContaining({
-        id: "tmua-2023-p1",
-        onlineQuestionCount: 20,
-      }),
-    ]);
-    expect(publishedQuestions).toHaveLength(20);
-    expect(publishedQuestions.map((question) => question.onlineContentId)).toEqual(
-      Array.from(
-        { length: 20 },
-        (_, index) => `tmua-2023-p1-q${String(index + 1).padStart(2, "0")}`,
-      ),
-    );
-    expect(
-      result.questions
-        .filter((question) => question.edition !== "2023" || question.paper !== 1)
-        .every(
-          (question) =>
-            question.contentStage === "indexed" &&
-            question.reviewStatus === "needs_review" &&
-            question.onlineContentId === undefined,
-        ),
-    ).toBe(true);
+    expect(publishedPapers).toHaveLength(18);
+    expect(publishedPapers.every((paper) => paper.onlineQuestionCount === 20)).toBe(true);
+    expect(publishedQuestions).toHaveLength(360);
+    expect(publishedQuestions.every((question) => question.onlineContentId === question.id)).toBe(true);
+    expect(publishedQuestions.every((question) => question.reviewStatus === "verified")).toBe(true);
   });
 
-  it("derives a UI-safe 96/46/4/18/360/20 public summary", () => {
+  it("derives a UI-safe 96/46/4/18/360/360 public summary", () => {
     const result = buildPastPaperIndex({
       manifest: corpusManifest(),
       officialResources: officialResources(),
@@ -196,7 +178,7 @@ describe("complete TMUA past-paper index", () => {
       officialSupplementCount: 4,
       paperCount: 18,
       questionShellCount: 360,
-      publishedQuestionCount: 20,
+      publishedQuestionCount: 360,
     });
     expect(result.publicSummary.editions).toHaveLength(9);
     expect(JSON.stringify(result.publicSummary)).not.toMatch(
@@ -226,10 +208,13 @@ describe("complete TMUA past-paper index", () => {
         officialResources: officialResources(),
         audit,
         publishedQuestionIds: Array.from(
-          { length: 19 },
-          (_, index) => `tmua-2023-p1-q${String(index + 1).padStart(2, "0")}`,
+          { length: 39 },
+          (_, index) =>
+            index < 20
+              ? `tmua-2022-p1-q${String(index + 1).padStart(2, "0")}`
+              : `tmua-2023-p1-q${String(index - 19).padStart(2, "0")}`,
         ),
       }),
-    ).toThrow(/exactly 20.*2023 Paper 1/i);
+    ).toThrow(/exactly 360.*native question IDs/i);
   });
 });

@@ -1,0 +1,1965 @@
+{
+  "schemaVersion": 1,
+  "bundleType": "question-import",
+  "id": "tmua-2023-p2-extraction-v1",
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "generatedAt": "2026-07-17T07:00:00.000Z",
+  "generatedBy": "tmua-extraction-cli",
+  "sourceDocumentIds": {
+    "question": "tmua-official-2023-paper-2",
+    "answerKey": "tmua-official-2023-answer-key",
+    "workedSolution": "tmua-official-2023-paper-2-worked-solutions"
+  },
+  "questionCount": 20,
+  "publishableQuestionCount": 0,
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q01",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 1,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "1   Given that\n\n                                1        1     3\n                                    −        =\n                               x −6     x +6   11\n\n    what is the value of x ?\n\n    A    2 15\n\n    B    4 5\n\n    C   5 2\n\n    D     58\n\n    E   50\n\n    F   58\n\n    G   60\n\n    H   80\n\n\n\n\n                                    3"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Given that\n\n                                1        1     3\n                                    −        =\n                               x −6     x +6   11\n\n    what is the value of x ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "2 15"
+        },
+        {
+          "label": "B",
+          "rawText": "4 5"
+        },
+        {
+          "label": "C",
+          "rawText": "5 2"
+        },
+        {
+          "label": "D",
+          "rawText": "58"
+        },
+        {
+          "label": "E",
+          "rawText": "50"
+        },
+        {
+          "label": "F",
+          "rawText": "58"
+        },
+        {
+          "label": "G",
+          "rawText": "60"
+        },
+        {
+          "label": "H",
+          "rawText": "80"
+        }
+      ],
+      "correctAnswer": "H",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "√       √\nWe first multiply both sides of the equation by 11( x − 6)( x + 6) to eliminate all of the\nfractions, giving        √      \u0001      √      \u0001    √     \u0001 √     \u0001\n                      11 x + 6 − 11 x − 6 = 3 x − 6          x+6 .\nWe can now expand all of the brackets to give\n                              √             √\n                            11 x + 66 − 11 x + 66 = 3x − 108,\n\nwhich simplifies to\n                                          240 = 3x.\nDividing by 3 gives x = 80, which is option H.\n\n\n\n\nVersion 1.0, September 2023                                                        Page 3"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            3
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q02",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 2,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "2   Evaluate\n\n               16           2       16          2\n                 ⎛ 1        ⎞        ⎛ 1        ⎞\n               ∫ ⎜\n               9 ⎝\n                    x\n                      +   x ⎟ dx − ⎜\n                            ⎠\n                                    ∫\n                                   9 ⎝\n                                        x\n                                          −   x ⎟ dx\n                                                ⎠\n\n    A   0\n\n    B   2\n\n    C   4\n\n    D   7\n\n    E   14\n\n    F   28\n\n    G   75\n\n    H   175\n\n\n\n\n                                4"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Evaluate\n\n               16           2       16          2\n                 ⎛ 1        ⎞        ⎛ 1        ⎞\n               ∫ ⎜\n               9 ⎝\n                    x\n                      +   x ⎟ dx − ⎜\n                            ⎠\n                                    ∫\n                                   9 ⎝\n                                        x\n                                          −   x ⎟ dx\n                                                ⎠"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0"
+        },
+        {
+          "label": "B",
+          "rawText": "2"
+        },
+        {
+          "label": "C",
+          "rawText": "4"
+        },
+        {
+          "label": "D",
+          "rawText": "7"
+        },
+        {
+          "label": "E",
+          "rawText": "14"
+        },
+        {
+          "label": "F",
+          "rawText": "28"
+        },
+        {
+          "label": "G",
+          "rawText": "75"
+        },
+        {
+          "label": "H",
+          "rawText": "175"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We first expand the brackets to obtain\n                            Z 16                Z 16\n                                 1                   1\n                                   + 2 + x dx −        − 2 + x dx.\n                             9   x               9   x\n\nSince these integrals have the same limits, we can combine them into a single integral to get\n               Z 16 \u0012          \u0013 \u0012             \u0013 Z 16\n                      1              1\n                        +2+x −         −2+x =          4 dx = 4 × (16 − 9) = 28,\n                9     x              x               9\n\nwhich is option F.\n\nNote that integration of x1 is not on the specification for this test; it is, of course, possible to\nanswer this question by calculating both integrals explicitly and then subtracting, but it is much\nmore work than the solution just presented.\n\n\n\n\nVersion 1.0, September 2023                                                                  Page 4"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q03",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 3,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "3   Consider the claim:\n\n             For all positive real numbers x and y,\n\n                                                      xy = x y\n\n    Which of the following is/are a counterexample to the claim?\n\n         I        x = 1, y = 16\n\n         II       x = 2, y = 8\n\n         III      x = 3, y = 4\n\n\n    A   none of them\n\n    B   I only\n\n    C   II only\n\n    D   III only\n\n    E   I and II only\n\n    F   I and III only\n\n    G   II and III only\n\n    H   I, II and III\n\n\n\n\n                                                  5"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the claim:\n\n             For all positive real numbers x and y,\n\n                                                      xy = x y\n\n    Which of the following is/are a counterexample to the claim?\n\n         I        x = 1, y = 16\n\n         II       x = 2, y = 8\n\n         III      x = 3, y = 4"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We substitute the values into the two sides of the equation:\n\n      √           √                √\nI         116 =       1 = 1 and 1 16 = 14 = 1, so this is not a counterexample.\n      √                         √\nII        28 = 24 = 16 and 2 8 6= 16, so this is a counterexample.\n      √                        √\nIII       34 = 32 = 9 and 3 4 = 32 = 9, so this is not a counterexample.\n\nTherefore the answer is option C, II only.\n\n\n\n\nVersion 1.0, September 2023                                                       Page 5"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q04",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 4,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "4   A student attempts to answer the following question.\n\n             What is the largest number of consecutive odd integers that are all prime?\n\n    The student’s attempt is as follows:\n\n         I       There are two consecutive odd integers that are prime (for example: 17, 19).\n\n         II      Any three consecutive odd integers can be written in the form n – 2, n, n + 2 for\n                 some n.\n         III     If n is one more than a multiple of 3, then n + 2 is a multiple of 3.\n\n         IV      If n is two more than a multiple of 3, then n – 2 is a multiple of 3.\n\n         V       The only other possibility is that n is a multiple of 3.\n\n         VI      In each case, one of the integers is a multiple of 3, so not prime.\n\n         VII     Therefore the largest number of consecutive odd integers that are all prime is two.\n\n    Which of the following best describes this attempt?\n\n    A   It is completely correct.\n\n    B   It is incorrect, and the first error is on line I.\n\n    C   It is incorrect, and the first error is on line II.\n\n    D   It is incorrect, and the first error is on line III.\n\n    E   It is incorrect, and the first error is on line IV.\n\n    F   It is incorrect, and the first error is on line V.\n\n    G   It is incorrect, and the first error is on line VI.\n\n    H   It is incorrect, and the first error is on line VII.\n\n\n\n\n                                                      6"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A student attempts to answer the following question.\n\n             What is the largest number of consecutive odd integers that are all prime?\n\n    The student’s attempt is as follows:\n\n         I       There are two consecutive odd integers that are prime (for example: 17, 19).\n\n         II      Any three consecutive odd integers can be written in the form n – 2, n, n + 2 for\n                 some n.\n         III     If n is one more than a multiple of 3, then n + 2 is a multiple of 3.\n\n         IV      If n is two more than a multiple of 3, then n – 2 is a multiple of 3.\n\n         V       The only other possibility is that n is a multiple of 3.\n\n         VI      In each case, one of the integers is a multiple of 3, so not prime.\n\n         VII     Therefore the largest number of consecutive odd integers that are all prime is two.\n\n    Which of the following best describes this attempt?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "It is completely correct."
+        },
+        {
+          "label": "B",
+          "rawText": "It is incorrect, and the first error is on line I."
+        },
+        {
+          "label": "C",
+          "rawText": "It is incorrect, and the first error is on line II."
+        },
+        {
+          "label": "D",
+          "rawText": "It is incorrect, and the first error is on line III."
+        },
+        {
+          "label": "E",
+          "rawText": "It is incorrect, and the first error is on line IV."
+        },
+        {
+          "label": "F",
+          "rawText": "It is incorrect, and the first error is on line V."
+        },
+        {
+          "label": "G",
+          "rawText": "It is incorrect, and the first error is on line VI."
+        },
+        {
+          "label": "H",
+          "rawText": "It is incorrect, and the first error is on line VII."
+        }
+      ],
+      "correctAnswer": "G",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The argument looks very convincing and there is no obvious error. However, writing down the\nfirst few odd integers and underlining those which are prime shows that there is a problem:\n\n                                  1, 3, 5, 7, 9, 11, 13, 15, 17, 19, . . .\n\nThere are three consecutive odd numbers that are all prime right at the start (3, 5, 7), so the\nstudent’s final answer in line VII is incorrect. We must therefore find the first error in the\nargument.\n\nI    This line is correct: 17 and 19 are consecutive odd integers that are prime.\n\nII   This is correct: consecutive odd integers differ by 2, and we can call the middle one n.\n\nIII If n = 3k + 1, then n + 2 = 3k + 3 = 3(k + 1), which is a multiple of 3, so this line is correct.\n\nIV If n = 3k + 2, then n − 2 = 3k, which is a multiple of 3, so this line is correct.\n\nV    All integers are either multiples of 3, one more than a multiple of 3 or two more than a\n     multiple of 3; a number which is three more than a multiple of 3 is itself a multiple of 3.\n     Similarly, a number which is four more than a multiple of 3 is one more than the next\n     multiple of 3 (in algebraic notation: 3k + 4 = 3(k + 1) + 1), and so on. So this statement\n     is correct.\n\nVI In each case, one of n + 2, n − 2 and n is a multiple of 3. But our example of 3, 5, 7 shows\n   that the last part of this statement is false: 3 is a multiple of 3, but is prime.\n\nSo the first error is on line VI, which is option G.\n\n\n\n\nVersion 1.0, September 2023                                                                   Page 6"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q05",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 5,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "5   Consider the two statements\n\n           R:   k is an integer multiple of π\n                  k\n           S:    ∫ sin 2 x dx = 0\n                  0\n\n\n    Which of the following statements is true?\n\n    A   R is necessary and sufficient for S.\n\n    B   R is necessary but not sufficient for S.\n\n    C   R is sufficient but not necessary for S.\n\n    D   R is not necessary and not sufficient for S.\n\n\n\n\n                                                 7"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the two statements\n\n           R:   k is an integer multiple of π\n                  k\n           S:    ∫ sin 2 x dx = 0\n                  0\n\n\n    Which of the following statements is true?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "R is necessary and sufficient for S."
+        },
+        {
+          "label": "B",
+          "rawText": "R is necessary but not sufficient for S."
+        },
+        {
+          "label": "C",
+          "rawText": "R is sufficient but not necessary for S."
+        },
+        {
+          "label": "D",
+          "rawText": "R is not necessary and not sufficient for S."
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The graph of y = sin 2x is periodic with period π: it is the graph of y = sin x stretched by a\nfactor of 21 in the x-direction:\n\n                                                 y\n                                             1\n\n\n                                                                  x\n                                             0\n\n\n                                           −1\n\n\n                                             Rk\nSo if R is true, we see from the graph that 0 sin 2x dx = 0 as the areas above and below the\nx-axis cancel. Thus R is sufficient for S.\n               Rk\nConversely, if 0 sin 2x dx = 0, the areas above and below the x-axis must cancel. We can see\nfrom the graph that the only way to achieve this is if k is a multiple of π, so that we have an\nexact number of periods of y = sin 2x. (The integral increases as k increases from 0 to π2 , and\nthen decreases back to 0 as k increases from π2 to π, and the same happens in every period.)\nTherefore S implies R, or R is necessary for S.\nIt follows that the correct answer is option A: R is necessary and sufficient for S.\n\n\n\n\nVersion 1.0, September 2023                                                              Page 7"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q06",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 6,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "6   Consider the following equation where a is a real number and a > 1:\n\n                                             (∗)   ax = x\n\n    Which of the following equations must have the same number of real solutions as (∗)?\n\n         I        loga x = x\n\n         II       a 2x = x 2\n\n         III      a 2x = 2x\n\n    A   none of them\n\n    B   I only\n\n    C   II only\n\n    D   III only\n\n    E   I and II only\n\n    F   I and III only\n\n    G   II and III only\n\n    H   I, II and III\n\n\n\n\n                                               8"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following equation where a is a real number and a > 1:\n\n                                             (∗)   ax = x\n\n    Which of the following equations must have the same number of real solutions as (∗)?\n\n         I        loga x = x\n\n         II       a 2x = x 2\n\n         III      a 2x = 2x"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "I    If we take the logarithm to base a of the equation (∗), we get x = loga x.\n     This suggests that this equation must have the same number of real solutions as (∗), but\n     we must be careful and check that we are allowed to take the logarithm of both sides of (∗)\n     without adding or losing solutions. We can only take the logarithm of a positive number.\n     The left hand side of (∗) is always positive, and if x ≤ 0, then this value of x does not\n     give a solution to (∗). So the solutions to (∗) (if there are any) all have x > 0. So we can\n     take the logarithm of both sides without losing any solutions. And by exponentiating the\n     resulting equation, we get back to (∗), so we do not introduce any new solutions. Therefore\n     this equation must have the same number of real solutions as (∗).\n\nII   If we square both sides of (∗), we obtain a2x = x2 . Squaring can introduce new solutions,\n     though; does it on this occasion? If we have a solution to a2x = x2 , we can deduce that\n     ax = ±x. We always have ax > 0, so it might be that we get a new solution with x < 0.\n     Let us try a numerically simple example to see if this does happen. As x < 0, we have\n     0 < ax < 1, so we need −1 < x < 0. Taking x = − 21 , (∗) becomes a−1/2 = 12 ; we then get\n     a = 4. So in this case, 42x = x2 has an extra solution, x = − 21 , which is not a solution to\n     4x = x. Therefore this equation may not have the same number of real solutions as (∗).\n     Another way to think about it is graphically. The graphs of y = ax and y = a2x are both\n     exponential graphs with y < 1 for all x < 0. The graph of y = x is negative for all x < 0\n     so any solutions to (∗) have x > 0. On the other hand, y = x2 is positive for all x 6= 0\n     and it reaches 1 at x = −1. Therefore there will always be a solution to a2x = x2 with\n     −1 < x < 0.\n\nIII If we replace 2x with u in this equation, we get au = u, so there are the same number of\n    real solutions for u as (∗) has. Every (real) value of u corresponds to a unique value of x,\n    namely x = u/2, so there must be the same number of real solutions to a2x = 2x as (∗).\n\nThus the answer is option F, I and III only.\n\n\n\n\nVersion 1.0, September 2023                                                                Page 8"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            8
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q07",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 7,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "7   The graph of the line ax + by = c is drawn, where a, b and c are real non-zero constants.\n\n    Which one of the following is a necessary but not sufficient condition for the line to have a\n    positive gradient and a positive y-intercept?\n\n        c         a\n    A     > 0 and   <0\n        b         b\n        c         a\n    B     < 0 and   >0\n        b         b\n    C   a>b>c\n\n    D   a<b<c\n\n    E   a and c have opposite signs\n\n    F   a and c have the same sign\n\n\n\n\n                                                9"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The graph of the line ax + by = c is drawn, where a, b and c are real non-zero constants.\n\n    Which one of the following is a necessary but not sufficient condition for the line to have a\n    positive gradient and a positive y-intercept?\n\n        c         a"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "> 0 and   <0\n        b         b\n        c         a"
+        },
+        {
+          "label": "B",
+          "rawText": "< 0 and   >0\n        b         b"
+        },
+        {
+          "label": "C",
+          "rawText": "a>b>c"
+        },
+        {
+          "label": "D",
+          "rawText": "a<b<c"
+        },
+        {
+          "label": "E",
+          "rawText": "a and c have opposite signs"
+        },
+        {
+          "label": "F",
+          "rawText": "a and c have the same sign"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can rearrange the equation to give by = −ax + c, so\n                                               a  c\n                                           y =− x+ .\n                                               b  b\n\nTherefore the gradient is − ab and the y-intercept is cb .\nWe go through the conditions to determine whether they are necessary and/or sufficient for a\npositive gradient and positive y-intercept.\n\nA cb > 0 is equivalent to the y-intercept being positive. Next, ab < 0 is equivalent to − ab > 0,\n  which is equivalent to the gradient being positive. So this is a necessary and sufficient\n  condition.\n\nB cb < 0 is equivalent to the y-intercept being negative, so this is neither necessary nor sufficient.\n\nC If we take a > 0 > c > b, then − ab > 0 and cb > 0, so the gradient and y-intercept are both\n  positive. Therefore a > b > c is not necessary.\n\nD If we take a < 0 < c < b, then − ab > 0 and cb > 0, so the gradient and y-intercept are both\n  positive. Therefore a < b < c is not necessary.\n\nE If − ab > 0 and cb > 0, then ab < 0 < cb , so a and c must have opposite signs. Therefore this\n  condition is necessary. But if a and c have opposite signs, we know nothing about the sign\n  of b, so we might or might not have − ab > 0. So this condition is not sufficient.\n\nF As in E, if the gradient and y-intercept are both positive, a and c must have opposite signs,\n  so this condition is not necessary.\n\nThe correct option is therefore E.\n\n\n\n\nVersion 1.0, September 2023                                                                    Page 9"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q08",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 8,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "8   A student draws a triangle that is acute-angled or obtuse-angled but not right-angled.\n\n    The student counts the number of straight lines that divide the triangle into two triangles, at\n    least one of which is right-angled.\n\n    Which of the following statements is/are true?\n\n          I       The student can draw a triangle for which there is exactly 1 such straight line.\n\n          II      The student can draw a triangle for which there are exactly 2 such straight lines.\n\n          III     The student can draw a triangle for which there are exactly 3 such straight lines.\n\n\n    A   none of them\n\n    B   I only\n\n    C   II only\n\n    D   III only\n\n    E   I and II only\n\n    F   I and III only\n\n    G   II and III only\n\n    H   I, II and III\n\n\n\n\n                                                   10"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A student draws a triangle that is acute-angled or obtuse-angled but not right-angled.\n\n    The student counts the number of straight lines that divide the triangle into two triangles, at\n    least one of which is right-angled.\n\n    Which of the following statements is/are true?\n\n          I       The student can draw a triangle for which there is exactly 1 such straight line.\n\n          II      The student can draw a triangle for which there are exactly 2 such straight lines.\n\n          III     The student can draw a triangle for which there are exactly 3 such straight lines."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let us start with a triangle and see how many such straight lines it has. If we take an acute-\nangled triangle, then it has three such lines (shown in red), which are the altitudes of the triangle,\ngoing from each vertex perpendicular to the opposite side:\n\n\n\n\nTherefore statement III is true.\nBut can the student draw a triangle for which there are fewer than 3 such straight lines? There\nis always such a straight line (altitude) from every vertex in an acute-angled triangle, so the\nonly hope for fewer than 3 such straight lines is to consider an obtuse-angled triangle. There is\nonly one usable altitude in this case, and that is from the obtuse angle; the other two altitudes\nland outside the triangle:\n\n\n\n\nSo it may appear that there is only one such line in this case. However, we are not restricted\nto altitudes! Instead, we can split the obtuse angle into a right angle and an acute angle in two\ndifferent ways, giving another two lines:\n\n\n\n\nNeither of these lines can meet the side opposite the obtuse angle perpendicularly, as if they did,\nwe would have a triangle with two right angles, so they are always distinct from the altitude.\nSo in this case, we also get three such staight lines.\nHence the correct answer is option D, III only.\n\n\n\n\nVersion 1.0, September 2023                                                                  Page 10"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q09",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 9,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "9   Consider the following statement about a pentagon P:\n\n              (∗) If at least one of the interior angles in P is 108°, then all the interior angles in P\n                  form an arithmetic sequence.\n\n    Which of the following is/are true?\n\n          I       The statement (∗)\n\n          II      The contrapositive of (∗)\n\n          III     The converse of (∗)\n\n\n    A   none of them\n\n    B   I only\n\n    C   II only\n\n    D   III only\n\n    E   I and II only\n\n    F   I and III only\n\n    G   II and III only\n\n    H   I, II and III\n\n\n\n\n                                                     11"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following statement about a pentagon P:\n\n              (∗) If at least one of the interior angles in P is 108°, then all the interior angles in P\n                  form an arithmetic sequence.\n\n    Which of the following is/are true?\n\n          I       The statement (∗)\n\n          II      The contrapositive of (∗)\n\n          III     The converse of (∗)"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We first note that the interior angles in a pentagon sum to 3 × 180◦ = 540◦ (since a pentagon\ncan be cut up into three triangles). Therefore the mean interior angle is 540◦ /5 = 108◦ .\n\nI    The angles could be 108◦ , 108◦ , 108◦ , 107◦ and 109◦ : start with a regular pentagon and\n     slightly rotate one of the sides. These do not form an arithmetic sequence, so statement (∗)\n     is false.\n\nII   The contrapositive of a statement always has the same truth value as the statement itself,\n     so this is also false.\n\nIII The converse of (∗) states: if all the interior angles in P form an arithmetic sequence, then\n    at least one of the interior angles in P is 108◦ . If the interior angles in P form an arithmetic\n    sequence with common difference d, then the angles can be written as c − 2d, c − d, c, c + d,\n    c + 2d. (One could also write them as a, a + d, . . . , a + 4d, but this approach is easier.)\n    Then the sum of the interior angles is 5c = 540◦ , so c = 108◦ . Since one of the interior\n    angles is c, the converse of (∗) is true.\n\nThus the answer is option D, III only.\n\n\n\n\nVersion 1.0, September 2023                                                                 Page 11"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q10",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 10,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "4           2\n10   Here is an attempt to solve the inequality x – 2x – 3 < 0 by completing the square:\n\n\n                                 x 4 – 2x 2 – 3 < 0\n                                                  4        2\n                           I     if and only if x – 2x + 1 < 4\n\n                                                  2           2\n                           II    if and only if (x – 1) < 4\n\n                                                          2\n                           III   if and only if –2 < x – 1 < 2\n\n                                                  2\n                           IV    if and only if x – 1 < 2\n\n                                                  2\n                           V     if and only if x < 3\n\n                           VI    if and only if − 3 < x <             3\n\n\n     Which of the following statements is true?\n\n     A   The argument is completely correct.\n\n     B   The first error occurs in line I.\n\n     C   The first error occurs in line II.\n\n     D   The first error occurs in line III.\n\n     E   The first error occurs in line IV.\n\n     F   The first error occurs in line V.\n\n     G   The first error occurs in line VI.\n\n\n\n\n                                                      12"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "4           2\n10   Here is an attempt to solve the inequality x – 2x – 3 < 0 by completing the square:\n\n\n                                 x 4 – 2x 2 – 3 < 0\n                                                  4        2\n                           I     if and only if x – 2x + 1 < 4\n\n                                                  2           2\n                           II    if and only if (x – 1) < 4\n\n                                                          2\n                           III   if and only if –2 < x – 1 < 2\n\n                                                  2\n                           IV    if and only if x – 1 < 2\n\n                                                  2\n                           V     if and only if x < 3\n\n                           VI    if and only if − 3 < x <             3\n\n\n     Which of the following statements is true?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "The argument is completely correct."
+        },
+        {
+          "label": "B",
+          "rawText": "The first error occurs in line I."
+        },
+        {
+          "label": "C",
+          "rawText": "The first error occurs in line II."
+        },
+        {
+          "label": "D",
+          "rawText": "The first error occurs in line III."
+        },
+        {
+          "label": "E",
+          "rawText": "The first error occurs in line IV."
+        },
+        {
+          "label": "F",
+          "rawText": "The first error occurs in line V."
+        },
+        {
+          "label": "G",
+          "rawText": "The first error occurs in line VI."
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Substituting x = 0 gives x4 − 2x2 − 3 = −3 < 0, so the final conclusion on line VI is at least\nplausible. We will check the argument line-by-line.\n\nI    This is obtained by adding 4 to both sides, and this is reversible. This line is correct.\n\nII   This is an algebraic rearrangement: (x2 − 1)2 = x4 − 2x2 + 1 is an identity, so this line is\n     correct.\n\nIII We have u2 < 4 if and only if −2 < u < 2. Taking u = x2 − 1, we see that this line is\n    equivalent to line II, so this step is correct.\n\nIV This looks suspicious, as one of the inequalities has been dropped. The statement x2 −1 < 2\n   certainly follows from −2 < x2 − 1 < 2, but the claim is that they follow from each other.\n   Can we deduce −2 < x2 − 1 < 2 from x2 − 1 < 2?\n     Perhaps surprisingly, it turns out that we can. The function x2 − 1 has a minimum value\n     of −1, so we always have x2 − 1 ≥ −1, and therefore −2 < x2 − 1 is true for all x. Hence\n     the statement in line III does follow from x2 − 1 < 2, and this line is correct.\n\nV  This is obtained by adding 1 to both sides, which is reversible, so this line is correct.\n                                                                            √         √\nVI Similarly to our observation in line III, x2 < 3 is true if and only if − 3 < x < 3, so this\n   line is correct.\n\nThus the entire argument is correct, and the correct option is A.\n\n\n\n\nVersion 1.0, September 2023                                                                Page 12"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q11",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 11,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "11   In this question, k is a positive integer.\n\n     Consider the following theorem:\n                                     k\n                                 If 2 + 1 is a prime, then k is a power of 2.   (∗)\n\n     Which of the following statements, taken individually, is/are equivalent to (∗)?\n                                               k\n           I       If k is a power of 2, then 2 + 1 is prime.\n                    k\n           II      2 + 1 is not prime only if k is not a power of 2.\n                                                                            k\n           III     A sufficient condition for k to be a power of 2 is that 2 + 1 is prime.\n\n\n\n                  Statement I is             Statement II is            Statement III is\n                 equivalent to (∗)          equivalent to (∗)           equivalent to (∗)\n     A                  Yes                        Yes                          Yes\n\n     B                  Yes                        Yes                          No\n\n     C                  Yes                        No                           Yes\n\n     D                  Yes                        No                           No\n\n     E                  No                         Yes                          Yes\n\n     F                  No                         Yes                          No\n\n     G                  No                         No                           Yes\n\n     H                  No                         No                           No\n\n\n\n\n                                                     13"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "In this question, k is a positive integer.\n\n     Consider the following theorem:\n                                     k\n                                 If 2 + 1 is a prime, then k is a power of 2.   (∗)\n\n     Which of the following statements, taken individually, is/are equivalent to (∗)?\n                                               k\n           I       If k is a power of 2, then 2 + 1 is prime.\n                    k\n           II      2 + 1 is not prime only if k is not a power of 2.\n                                                                            k\n           III     A sufficient condition for k to be a power of 2 is that 2 + 1 is prime.\n\n\n\n                  Statement I is             Statement II is            Statement III is\n                 equivalent to (∗)          equivalent to (∗)           equivalent to (∗)"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "Yes                        Yes                          Yes"
+        },
+        {
+          "label": "B",
+          "rawText": "Yes                        Yes                          No"
+        },
+        {
+          "label": "C",
+          "rawText": "Yes                        No                           Yes"
+        },
+        {
+          "label": "D",
+          "rawText": "Yes                        No                           No"
+        },
+        {
+          "label": "E",
+          "rawText": "No                         Yes                          Yes"
+        },
+        {
+          "label": "F",
+          "rawText": "No                         Yes                          No"
+        },
+        {
+          "label": "G",
+          "rawText": "No                         No                           Yes"
+        },
+        {
+          "label": "H",
+          "rawText": "No                         No                           No"
+        }
+      ],
+      "correctAnswer": "G",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "I    This is the converse of (∗), so is not equivalent to (∗).\n\nII   We can rewrite this as an ‘if. . . then’ statement, noting that ‘A only if B’ means the same\n     as ‘if A, then B’. So this becomes ‘if 2k + 1 is not prime, then k is not a power of 2’. This\n     is the contrapositive of ‘if k is a power of 2, then 2k + 1 is prime’, which is the statement\n     in I, namely the converse of (∗). So this statement is equivalent to the converse of (∗) but\n     not equivalent to (∗) itself. (The contrapositive of the converse, which is the same as the\n     converse of the contrapositive, is called the inverse of the original statement.)\n\nIII ‘A is a sufficient condition for B’ is the same as ‘if A, then B’, so this statement can be\n    rewritten as ‘if 2k + 1 is prime, then k is a power of 2’. (Note the subtlety of language\n    here: the condition A is ‘2k + 1 is prime’ and B is ‘k is a power of 2’, but they are written\n    in the order ‘a sufficient condition for B is A’.) This is equivalent to (∗) (and is in fact just\n    a different way of saying the same thing).\n\nThe correct option is G.\n\n      Commentary: It turns out that statement I is false. It was conjectured by Pierre\n                                                        n\n      de Fermat in the 17th century, who noted that 22 + 1 is prime for n = 1, 2, 3 and 4.\n      Such primes are called Fermat primes. The smallest counterexample to statement I is\n        5\n      22 + 1 = 641 × 6 700 417, which was discovered by Leonhard Euler in the 18th century.\n                                n\n      It is not known whether 22 + 1 is prime for any n > 4.\n\n\n\n\nVersion 1.0, September 2023                                                                 Page 13"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q12",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 12,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "12   In this question, p is a real constant.\n\n     The equation sin x cos 2 x = p 2 sin x has n distinct solutions in the range 0 ≤ x ≤ 2π\n\n     Which of the following statements is/are true?\n\n           I      n = 3 is sufficient for p > 1\n\n           II     n = 7 only if –1 < p < 1\n\n     A   none of them\n\n     B   I only\n\n     C   II only\n\n     D   I and II\n\n\n\n\n                                                   14"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "In this question, p is a real constant.\n\n     The equation sin x cos 2 x = p 2 sin x has n distinct solutions in the range 0 ≤ x ≤ 2π\n\n     Which of the following statements is/are true?\n\n           I      n = 3 is sufficient for p > 1\n\n           II     n = 7 only if –1 < p < 1"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "I and II"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can rewrite the two statements in if/then language as\n\nI    if n = 3, then p > 1\n\nII   if n = 7, then −1 < p < 1\n\nWe will determine whether these statements are true or false using this if/then formulation.\nThe equation can be rearranged as sin x(cos2 x − p2 ) = 0, so this is true if and only if sin x = 0\nor cos x = ±p. The first of these has solutions x = 0, π, 2π, while the solutions to the second\ndepend on the value of p:\n\n•     If p = 0, then it has solutions x = π2 , 3π\n                                                2 .\n\n•     If −1 < p < 0 or 0 < p < 1, then it has four solutions, one with 0 < x < π2 , one with\n      π                           3π                3π\n      2 < x < π, one with π < x < 2 and one with 2 < x < 2π; these are all different from\n      the solutions to sin x = 0.\n\n•     If p = ±1, then it has three solutions, x = 0, π, 2π, which are exactly the same as the\n      solutions of sin x = 0.\n\n•     If p < −1 or p > 1, then it has no solutions.\n\nTherefore the original equation has:\n\n•     n = 5 distinct solutions if (and only if) p = 0\n\n•     n = 7 distinct solutions if (and only if) −1 < p < 0 or 0 < p < 1\n\n•     n = 3 distinct solutions if (and only if) p = ±1 or p < −1 or p > 1\n\nWe can now return to the statements I and II in our rewritten form:\n\nI    This is false: we could have p = 1 or p ≤ −1\n\nII   This is true, even though p = 0 is included here: if −1 < p < 0 or 0 < p < 1, then certainly\n     −1 < p < 1 is true\n\nThe correct option is therefore C, II only.\n\n\n\n\nVersion 1.0, September 2023                                                                Page 14"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            14
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            14
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q13",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 13,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "13   Let x be a real number.\n\n     Which one of the following statements is a sufficient condition for exactly three of the other\n     four statements?\n\n     A   x≥0\n\n     B   x=1\n\n     C   x = 0 or x = 1\n\n     D   x ≥ 0 or x ≤ 1\n\n     E   x ≥ 0 and x ≤ 1\n\n\n\n\n                                                 15"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Let x be a real number.\n\n     Which one of the following statements is a sufficient condition for exactly three of the other\n     four statements?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "x≥0"
+        },
+        {
+          "label": "B",
+          "rawText": "x=1"
+        },
+        {
+          "label": "C",
+          "rawText": "x = 0 or x = 1"
+        },
+        {
+          "label": "D",
+          "rawText": "x ≥ 0 or x ≤ 1"
+        },
+        {
+          "label": "E",
+          "rawText": "x ≥ 0 and x ≤ 1"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We work through them sequentially:\n\nA If x ≥ 0, then B may be false, C may be false, D may be false and E may be false\n\nB If x = 1, then A is true, C is true, D is true and E is true\n\nC If x = 0 or x = 1, then A is true, B may be false, D is true and E is true\n\nD If x ≥ 0 or x ≤ 1, then A may be false (for example if x = −1), B may be false, C may be\n  false and E may be false\n\nE If x ≥ 0 and x ≤ 1, then A is true, B may be false, C may be false and D is true\n\nThe correct option is therefore C, which is sufficient for exactly three of the other four statements.\n\n\n\n\nVersion 1.0, September 2023                                                                  Page 15"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            15
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            15
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q14",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 14,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "14   Three lines are given by the equations:\n\n                                                 ax + by + c = 0\n                                                 bx + cy + a = 0\n                                                 cx + ay + b = 0\n\n     where a, b and c are non-zero real numbers.\n\n     Which one of the following is correct?\n\n     A   If two of the lines are parallel, then all three are parallel.\n\n     B   If two of the lines are parallel, then the third is perpendicular to the other two.\n\n     C   If two of the lines are parallel, then the third is parallel to y = x.\n\n     D   If two of the lines are parallel, then the third is perpendicular to y = x.\n\n     E   If two of the lines are perpendicular, then all three meet at a point.\n\n     F   If two of the lines are perpendicular, then the third is parallel to y = x.\n\n     G   If two of the lines are perpendicular, then the third is perpendicular to y = x.\n\n\n\n\n                                                    16"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Three lines are given by the equations:\n\n                                                 ax + by + c = 0\n                                                 bx + cy + a = 0\n                                                 cx + ay + b = 0\n\n     where a, b and c are non-zero real numbers.\n\n     Which one of the following is correct?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "If two of the lines are parallel, then all three are parallel."
+        },
+        {
+          "label": "B",
+          "rawText": "If two of the lines are parallel, then the third is perpendicular to the other two."
+        },
+        {
+          "label": "C",
+          "rawText": "If two of the lines are parallel, then the third is parallel to y = x."
+        },
+        {
+          "label": "D",
+          "rawText": "If two of the lines are parallel, then the third is perpendicular to y = x."
+        },
+        {
+          "label": "E",
+          "rawText": "If two of the lines are perpendicular, then all three meet at a point."
+        },
+        {
+          "label": "F",
+          "rawText": "If two of the lines are perpendicular, then the third is parallel to y = x."
+        },
+        {
+          "label": "G",
+          "rawText": "If two of the lines are perpendicular, then the third is perpendicular to y = x."
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We rewrite these equations in the form y = mx + c:\n                                                a   c\n                                            y =− x−\n                                                b   b\n                                                b   a\n                                            y =− x−\n                                                c   c\n                                                c   b\n                                            y =− x−\n                                                a   a\n\nSince these equations are cyclically symmetrical (replacing a → b → c → a leaves the set of\nequations unchanged), we may assume the two parallel or perpendicular lines are the first two.\n\nA If the first two lines are parallel, then ab = cb , but this does not imply that ac is equal to these.\n  For example we could have a = 1, b = 2, c = 4 giving ab = cb = 12 but ac = 4.\n\nB The same example shows that the third  \u0001 b \u0001line need \u0001 not be perpendicular to the other two.\n                               a       a               a 2\n  In fact, in this case, since c = − b − c = − b > 0, the third line will always have a\n  negative gradient (namely − ac ), even if the first two also have negative gradients.\n\nC The same example shows that this is not necessarily the case; in fact, as the third line always\n  has a negative gradient, it cannot be parallel to y = x.\n\nD Again, the same example shows that the third line might not have gradient −1.\n\nE If the first two lines are perpendicular, we have − ab − cb = ac = −1, so − ac = 1. It is not\n                                                        \u0001    \u0001\n\n  obvious why the lines should meet at a point, so let us return to this after we have looked at\n  the remaining options.\n\nF This is true: the calculation in E shows that the third line has gradient 1.\n\nG This is false: the third line has gradient 1, not −1.\n\nSo the correct option is F.\nWe still need to eliminate option E. Let us consider an example with a = 1, b = 2; we therefore\nneed c = −1 as − ac = 1. Thus the three lines are\n\n                                              1   −1\n                                          y =− x−\n                                              2    2\n                                               2     1\n                                          y =− x−\n                                              −1    −1\n                                              −1    2\n                                          y =− x−\n                                               1    1\nwhich simplifies to\n\n                                            y = − 12 x + 12\n                                            y = 2x + 1\n                                            y =x−2\n\nThe second and third lines meet at (−3, −5), but the first line passes through (−3, 2), so these\nthree lines do not all meet at a point.\n\n\nVersion 1.0, September 2023                                                                    Page 16"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            16
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            16
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q15",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 15,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "15   The base 10 number 0.03841 has the value\n\n                  0 × 10–1 + 3 × 10–2 + 8 × 10–3 + 4 × 10–4 + 1 × 10–5 = 0.03841\n\n\n     Similarly, the base 2 number 0.01101 has the value\n\n                                                                            13\n                        0 × 2–1 + 1 × 2–2 + 1 × 2–3 + 0 × 2–4 + 1 × 2–5 =\n                                                                            32\n\n                                                          .   .\n     What is the value of the recurring base 2 number 0. 0011 = 0.001100110011 … ?\n\n         1\n     A\n         3\n         1\n     B\n         5\n          1\n     C\n         15\n          2\n     D\n         15\n          4\n     E\n         15\n          3\n     F\n         16\n          5\n     G\n         16\n         6\n     H\n         31\n\n\n\n\n                                               17"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The base 10 number 0.03841 has the value\n\n                  0 × 10–1 + 3 × 10–2 + 8 × 10–3 + 4 × 10–4 + 1 × 10–5 = 0.03841\n\n\n     Similarly, the base 2 number 0.01101 has the value\n\n                                                                            13\n                        0 × 2–1 + 1 × 2–2 + 1 × 2–3 + 0 × 2–4 + 1 × 2–5 =\n                                                                            32\n\n                                                          .   .\n     What is the value of the recurring base 2 number 0. 0011 = 0.001100110011 … ?\n\n         1"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "3\n         1"
+        },
+        {
+          "label": "B",
+          "rawText": "5\n          1"
+        },
+        {
+          "label": "C",
+          "rawText": "15\n          2"
+        },
+        {
+          "label": "D",
+          "rawText": "15\n          4"
+        },
+        {
+          "label": "E",
+          "rawText": "15\n          3"
+        },
+        {
+          "label": "F",
+          "rawText": "16\n          5"
+        },
+        {
+          "label": "G",
+          "rawText": "16\n         6"
+        },
+        {
+          "label": "H",
+          "rawText": "31"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Approach 1\nUsing the rule for working out the value of a base 2 number, we have\n\n0.0̇011̇ = 0.001100110011 . . .\n       = 0 × 2−1 + 0 × 2−2 + 1 × 2−3 + 1 × 2−4 + 0 × 2−5 + 0 × 2−6 + 1 × 2−7 + 1 × 2−8 + · · ·\n\nGrouping these into sets of four consecutive terms gives\n\n             0.0̇011̇ = (0 × 2−1 + 0 × 2−2 + 1 × 2−3 + 1 × 2−4 ) +\n                         (0 × 2−5 + 0 × 2−6 + 1 × 2−7 + 1 × 2−8 ) + · · ·\n                     = (0 × 2−1 + 0 × 2−2 + 1 × 2−3 + 1 × 2−4 ) +\n                        2−4 (0 × 2−1 + 0 × 2−2 + 1 × 2−3 + 1 × 2−4 ) + 2−8 (· · · ) + · · ·\n                       \u0012        \u0013       \u0012         \u0013      \u0012        \u0013\n                         1    1      −4 1       1      −8 1     1\n                     =     +      +2        +       +2       +       + ···\n                         8 16             8 16             8 16\n                       3\n                     = (1 + 2−4 + 2−8 + · · · )\n                       16\nThe term in brackets is an infinite geometric series with first term 1 and common ratio 2−4 , so\nits sum is\n                                       1          1      16\n                                         −4\n                                            =        1 = .\n                                     1−2       1 − 16    15\nTherefore\n                                                 3   16    3   1\n                                    0.0̇011̇ =     ×    =    =\n                                                 16 15    15   5\nwhich is option B.\n\nApproach 2\nWe have, on dropping zero terms and rearranging:\n\n0.0̇011̇ = 0.001100110011 . . .\n       = 0 × 2−1 + 0 × 2−2 + 1 × 2−3 + 1 × 2−4 + 0 × 2−5 + 0 × 2−6 + 1 × 2−7 + 1 × 2−8 + · · ·\n       = 2−3 + 2−4 + 2−7 + 2−8 + 2−11 + 2−12 + · · ·\n       = (2−3 + 2−7 + 2−11 + · · · ) + (2−4 + 2−8 + 2−12 + · · · )\n\n(Technical note: we are allowed to rearrange this infinite series as all of the terms are positive.)\nWe can now calculate the sums of these infinite geometric series to get\n\n                                                2−3      2−4\n                                    0.0̇011̇ =        +\n                                              1 − 2−4 1 − 2−4\n                                                 2      1\n                                            =        +\n                                              16 − 1 16 − 1\n                                              3\n                                            =\n                                              15\n                                              1\n                                            =\n                                              5\n\n\n\n\nVersion 1.0, September 2023                                                                   Page 17\n\f\nTest of Mathematics for University Admission (TMUA), 2023 Paper 2 Solutions\n\n\nApproach 3\nWe can adapt the method used to evaluate a base 10 recurring decimal.\nLet x = 0.0̇011̇ = 0.001100110011 . . . . Then writing a subscript ‘2’ to indicate base 2 and a\nsubscript ‘10’ to indicate the usual base 10, we have\n\n                                           x = (0.001100110011 . . . )2\n                              so       1610 x = (11.001100110011 . . . )2\n                              giving   1510 x = 112\n\nNow 112 = 1 × 21 + 1 × 20 = 310 , so we have (in base 10) 15x = 3, yielding x = 51 , which is\noption B.\n\n\n\n\nVersion 1.0, September 2023                                                            Page 18"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            17
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            17,
+            18
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q16",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 16,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "16   A sequence is defined by:\n\n                                                        u1 = a\n                                                        u2 = b\n                                                      un+2 = un + un+1 for n ≥ 1\n\n     where a and b are positive integers. The highest common factor of a and b is 7.\n\n     Which of the following statements must be true?\n\n          I        u2023 is a multiple of 7\n\n          II       If u1 is not a factor of u2, then u1 is not a factor of un for any n > 1\n\n          III      The highest common factor of u1 and u5 is 7\n\n\n     A   none of them\n\n     B   I only\n\n     C   II only\n\n     D   III only\n\n     E   I and II only\n\n     F   I and III only\n\n     G   II and III only\n\n     H   I, II and III\n\n\n\n\n                                                       18"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A sequence is defined by:\n\n                                                        u1 = a\n                                                        u2 = b\n                                                      un+2 = un + un+1 for n ≥ 1\n\n     where a and b are positive integers. The highest common factor of a and b is 7.\n\n     Which of the following statements must be true?\n\n          I        u2023 is a multiple of 7\n\n          II       If u1 is not a factor of u2, then u1 is not a factor of un for any n > 1\n\n          III      The highest common factor of u1 and u5 is 7"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "I    Since the highest common factor of a and b is 7, they are both multiples of 7. So u1 and u2\n     are multiples of 7, hence u3 = u1 + u2 is a multiple of 7. Then u4 = u2 + u3 is a multiple\n     of 7, and so on. So every un is a multiple of 7 and this statement is true.\n\nII   We have u3 = u1 + u2 = u1 (1 + u2 /u1 ). As u1 is not a factor of u2 , the expression in\n     brackets is not an integer, so u1 is not a factor of u3 .\n     Next, we have u4 = u2 + u3 = u1 + 2u2 = u1 (1 + 2u2 /u1 ). It is feasible that u1 is a factor\n     of u4 : it will be if 2u2 /u1 is an integer. We could take u1 = 14 and u2 = 7 to achieve this.\n     (Explicitly, in this case we have u3 = 21, u4 = 28, and 14 is a factor of 28.)\n     So this statement may be false.\n\nIII Following on from our calculations in II, we have u5 = u3 + u4 = (u1 + u2 ) + (u1 + 2u2 ) =\n    2u1 + 3u2 . The highest common factor of u1 and u5 is therefore the same as the highest\n    common factor of u1 and 3u2 , and it is possible that this is 21 if u1 is a multiple of 21 but\n    u2 is not. Let us check this explicitly: take u1 = 21 and u2 = 7, so the highest common\n    factor of u1 and u2 is 7, as required. Then u5 = 2 × 21 + 3 × 7 = 3 × 21, and so the highest\n    common factor of u1 = 21 and u5 = 3 × 21 is 21. Therefore this statement may be false.\n\nThe correct answer is therefore option B, I only.\n\n\n\n\nVersion 1.0, September 2023                                                                Page 19"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            18
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            19
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q17",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 17,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "17   The ceiling of x, written ⌈ x ⌉, is defined to be the value of x rounded up to the nearest integer.\n\n     For example: ⌈ π ⌉ = 4,     ⌈ 2.1 ⌉ = 3,   ⌈8 ⌉ = 8\n\n     What is the value of the following integral?\n\n                                                    99\n                                                    ∫ 2 dx\n                                                           ⎡⎢ x ⎤⎥\n                                                    0\n\n\n     A   299\n\n     B   299 – 1\n\n     C   299 – 2\n\n     D   2100\n\n     E   2100 – 1\n\n     F   2100 – 2\n\n\n\n\n                                                    19"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The ceiling of x, written ⌈ x ⌉, is defined to be the value of x rounded up to the nearest integer.\n\n     For example: ⌈ π ⌉ = 4,     ⌈ 2.1 ⌉ = 3,   ⌈8 ⌉ = 8\n\n     What is the value of the following integral?\n\n                                                    99\n                                                    ∫ 2 dx\n                                                           ⎡⎢ x ⎤⎥\n                                                    0"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "299"
+        },
+        {
+          "label": "B",
+          "rawText": "299 – 1"
+        },
+        {
+          "label": "C",
+          "rawText": "299 – 2"
+        },
+        {
+          "label": "D",
+          "rawText": "2100"
+        },
+        {
+          "label": "E",
+          "rawText": "2100 – 1"
+        },
+        {
+          "label": "F",
+          "rawText": "2100 – 2"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The value of 2dxe changes at every integer. We have\n                                      \n                                      \n                                      \n                                       20 when x = 0\n                                        21 when 0 < x ≤ 1\n                                      \n                                      \n                                      \n                                      \n                                      \n                                      22 when 1 < x ≤ 2\n                                      \n                               2dxe =\n                                      \n                                      \n                                       23 when 2 < x ≤ 3\n                                      \n                                      \n                                      \n                                      \n                                       ...\n                                      299 when 98 < x ≤ 99\n                                      \n\n\nWe therefore break the integral up into unit intervals. The value of 2dxe at the endpoints does\nnot influence the value of the integral, so we have\n            Z 99           Z 1            Z 2           Z 3                  Z 99\n                  dxe            dxe           dxe           dxe\n                 2 dx =        2 dx +         2 dx +        2 dx + · · · +        2dxe dx\n              0              0             1             2                     98\n                           Z 1          Z 2         Z 3                 Z 99\n                         =     21 dx +      22 dx +     23 dx + · · · +      299 dx\n                              0            1           2                98\n                        = 21 + 22 + 23 + · · · + 299\n\nas the integral of a constant is just the constant times the interval width. We now have a\ngeometric series with first term a = 2, common ratio r = 2 and n = 99 terms, so the sum is\n\n                                  a(rn − 1)   21 (299 − 1)\n                                            =              = 2100 − 2\n                                    r−1           2−1\nwhich is option F.\n\n\n\n\nVersion 1.0, September 2023                                                            Page 20"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            19
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            20
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q18",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 18,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "18   The equation x 4 + bx 2 + c = 0 has four distinct real roots if and only if which of the following\n     conditions is satisfied?\n\n     A   b 2 > 4c\n\n     B   b 2 < 4c\n\n     C   c > 0 and b > 2 c\n\n     D   c > 0 and b < −2 c\n\n     E   c < 0 and b < 0\n\n     F   c < 0 and b > 0\n\n\n\n\n                                                  20"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The equation x 4 + bx 2 + c = 0 has four distinct real roots if and only if which of the following\n     conditions is satisfied?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "b 2 > 4c"
+        },
+        {
+          "label": "B",
+          "rawText": "b 2 < 4c"
+        },
+        {
+          "label": "C",
+          "rawText": "c > 0 and b > 2 c"
+        },
+        {
+          "label": "D",
+          "rawText": "c > 0 and b < −2 c"
+        },
+        {
+          "label": "E",
+          "rawText": "c < 0 and b < 0"
+        },
+        {
+          "label": "F",
+          "rawText": "c < 0 and b > 0"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Writing u = x2 , the equation becomes u2 + bu + c = 0. This has two distinct real roots u1 and u2\nif and only if b2 − 4c > 0, or b2 > 4c, so this is a necessary condition.\n                                                                 √              √\nThe roots of the original equation are then given by x = ± u1 and x = ± u2 . So for the\noriginal equation to have four distinct real roots, we require u1 and u2 to be distinct positive\nreal numbers. We have                                 √\n                                                 −b ± b2 − 4c\n                                      u1 , u2 =\n                                                       2\n                             1\n                                     √          \u0001\nso the smaller of the two is 2 −b − b2 − 4c . If b > 0, then this will be negative, so we require\n                                                    √\nb < 0. Supposing b < 0, we also require −b > b2 − 4c, which becomes on squaring (as both\nsides are positive) b2 > b2 − 4c, so c > 0.\nPutting these all together, the original equation will have four distinct real roots if and only if\nall of the following hold:\n\n•    b2 > 4c\n\n•    b<0\n\n•    c>0\n                                                               √            √\nAs c > 0, we can deduce that b2 > 4c if and only if b > 2 c or b < −2 c. Since we require\nb < 0, the first is not possible, so the pair of conditions b < 0 and b2 > 4c is equivalent to the\n                         √\nsingle condition b < −2 c.\nTherefore a necessary and sufficient condition for the original equation to have four distinct real\n                         √\nroots is c > 0 and b < −2 c, which is option D.\n\n\n\n\nVersion 1.0, September 2023                                                                Page 21"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            20
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            21
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q19",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 19,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "19   In this question, f (x) is a non-constant polynomial, and g(x) = x f ′(x)\n\n     f (x) = 0 for exactly M real values of x.\n\n     g(x) = 0 for exactly N real values of x.\n\n     Which of the following statements is/are true?\n\n           I       It is possible that M < N\n\n           II      It is possible that M = N\n\n           III     It is possible that M > N\n\n\n     A   none of them\n\n     B   I only\n\n     C   II only\n\n     D   III only\n\n     E   I and II only\n\n     F   I and III only\n\n     G   II and III only\n\n     H   I, II and III\n\n\n\n\n                                                   21"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "In this question, f (x) is a non-constant polynomial, and g(x) = x f ′(x)\n\n     f (x) = 0 for exactly M real values of x.\n\n     g(x) = 0 for exactly N real values of x.\n\n     Which of the following statements is/are true?\n\n           I       It is possible that M < N\n\n           II      It is possible that M = N\n\n           III     It is possible that M > N"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "H",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Since f (x) = 0 for exactly M real values of x, f (x) has at least M − 1 stationary points: there\nmust be at least one stationary point between every adjacent pair of values of x for which\nf (x) = 0. But there may also be more stationary points between these pairs of values or before\nthe first or after the last value.\nNow g(x) = xf 0 (x) is zero whenever f (x) has a stationary point. So there are at least M − 1\nvalues of x for which g(x) = 0, but there will be more if f (x) has more than M − 1 stationary\npoints. In addition, g(x) = 0 when x = 0. If x = 0 is a stationary point of f (x), then g(x) = 0\nat every stationary point of f (x) and nowhere else. If x = 0 is not a stationary point of f (x),\nthen g(x) = 0 will be true for one further value of x.\nSummarising:\n\n•     the number of stationary points of f (x) is at least M − 1\n\n•     N equals the number of stationary points of f (x) or one more than the number of stationary\n      points of f (x).\n\nTherefore N is at least M − 1, so N ≥ M − 1, which rearranges to M ≤ N + 1.\nNow considering the options:\n\nI    M < N is possible if f (x) has extra stationary points between zeros. For example, f (x) =\n     x2 + 1 has M = 0 but N = 1. As a second example, let f (x) be a cubic with both turning\n     points above the x-axis; this has M = 1 and N = 2 or N = 3.\n\nII   M = N is possible if the number of stationary points of f (x) is M − 1 and x = 0 is not a\n     stationary point of f (x). For example, f (x) = (x − 1)2 − 1 has M = 2 (at x = 0 and x = 2)\n     and one stationary point at x = 1. So g(x) = 0 at x = 0 and x = 1, giving N = 2.\n\nIII M > N is possible if the number of stationary points of f (x) is M − 1 and x = 0 is a\n    stationary point of f (x). For example, f (x) = x2 − 1 has M = 2 (at x = ±1) and one\n    stationary point at x = 0. So g(x) = 0 at x = 0 only, giving N = 1.\n\nThe correct answer is option H, I, II and III.\n\n\n\n\nVersion 1.0, September 2023                                                              Page 22"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            21
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            22
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2023-p2-q20",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2023-p2",
+      "edition": "2023",
+      "paper": 2,
+      "questionNumber": 20,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "20   Let f be a polynomial with real coefficients.\n\n     The integral Ip,q where p < q is defined by\n\n                                                  q\n\n                                         Ip,q = ∫ ( f ( x )) − ( f ( | x| ) ) dx\n                                                            2              2\n\n                                                  p\n\n\n     Which of the following statements must be true?\n\n           1   Ip,q = 0 only if 0 < p\n\n           2   f ′(x) < 0 for all x only if Ip,q < 0 for all p < q < 0\n\n           3   Ip,q > 0 only if p < 0\n\n     A   none of them\n\n     B   1 only\n\n     C   2 only\n\n     D   3 only\n\n     E   1 and 2 only\n\n     F   1 and 3 only\n\n     G   2 and 3 only\n\n     H   1, 2 and 3\n\n\n\n\n                                                       22"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Let f be a polynomial with real coefficients.\n\n     The integral Ip,q where p < q is defined by\n\n                                                  q\n\n                                         Ip,q = ∫ ( f ( x )) − ( f ( | x| ) ) dx\n                                                            2              2\n\n                                                  p\n\n\n     Which of the following statements must be true?\n\n           1   Ip,q = 0 only if 0 < p\n\n           2   f ′(x) < 0 for all x only if Ip,q < 0 for all p < q < 0\n\n           3   Ip,q > 0 only if p < 0"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "1 only"
+        },
+        {
+          "label": "C",
+          "rawText": "2 only"
+        },
+        {
+          "label": "D",
+          "rawText": "3 only"
+        },
+        {
+          "label": "E",
+          "rawText": "1 and 2 only"
+        },
+        {
+          "label": "F",
+          "rawText": "1 and 3 only"
+        },
+        {
+          "label": "G",
+          "rawText": "2 and 3 only"
+        },
+        {
+          "label": "H",
+          "rawText": "1, 2 and 3"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "\u00012\nWe note first that when x ≥ 0, f (|x|) = f (x), and so for x ≥ 0, the integrand is just f (x)        −\n     \u00012\nf (x) = 0. When x < 0, though, the integrand could take any value.\n\n1 We present a complicated approach first.\n  There seems to be no obvious reason why this must be true; one could imagine a polynomial\n  for which the values of the integrand are positive for some negative values of x and negative\n  for others, so the positive parts and negative parts cancel out making the integral zero even\n  though p < 0. Here is one example: consider a quartic f (x) that looks roughly like this:\n\n                                                             y\n\n\n\n\n                                                                       x\n                                                    x0   0       −x0\n                                                \u00012          \u00012\n  For negative values of x close to x = 0, f (x) > f (|x|) . But once x < x0 , we have\n        \u00012         \u00012\n   f (x) < f (|x|) as f (|x|) > f (x). We can therefore take q = 0 and find some p < x0 for\n  which Ip,q = 0.\n  A much simpler approach is that we can take p = 0, q > 0 and then Ip,q = 0, so this statement\n  is not true. Were the question to have said 0 ≤ p instead of 0 < p, though, we would not have\n  been able to use this simpler approach.\n2 We could take f (x) = 1 − x, with f 0 (x) = −1 < 0 for all x.\n\n                                                     y\n\n\n\n\n                                                                       x\n                                                0\n\n\n\n\n            \u00012        \u00012\n  Then f (x) > f (|x|) for all x < 0, so Ip,q > 0 for all p < q < 0.\n3 We observedR at the start of this question that the integrand is zero for all x ≥ 0. So if p ≥ 0,\n                q\n  then Ip,q = p 0 dx = 0. The contrapositive of this statement is: if Ip,q 6= 0, then p < 0. The\n  given statement (Ip,q > 0 only if p < 0, which is the same as saying: if Ip,q > 0, then p < 0)\n  is a special case of the more general result and is therefore true.\n\nThe correct answer is therefore option D, 3 only.\n\n\nVersion 1.0, September 2023                                                                Page 23"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2023-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+          "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+          "pages": [
+            22
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2023-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+          "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+          "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+          "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+          "pages": [
+            23
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    }
+  ]
+}

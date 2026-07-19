@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q04",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 4,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "4      The following question appeared in an examination:\n\n                                    √\n               Given that tan x =       3, ﬁnd the possible values of sin 2x.\n\n        A student gave the following answer:\n\n                       √\n               tan x =   3 so x = 60◦ and 2x = 120◦ ,\n                                  √\n                                    3\n               therefore sin 2x =     .\n                                   2\n\n        Which one of the following statements is correct?\n\n               √\n                3\n        A         is the only possible value, and this is fully supported by the reasoning given\n               2\n               in the student’s answer.\n          √\n            3\n        B     is the only possible value, but the reasoning given should consider other\n           2\n                                                 √\n          possible values of x for which tan x = 3.\n               √\n            3\n        C     is the only possible value, but the reasoning given should consider other\n           2                                      √\n                                                    3\n          possible values of x for which sin 2x =     .\n                                                   2\n          √\n            3\n        D     is not the only possible value because the reasoning given should have\n           2\n                                                                  √\n          considered other possible values of x for which tan x = 3.\n               √\n                 3\n        E          is not the only possible value because the reasoning given should have\n                2                                                       √\n                                                                         3\n               considered other possible values of x for which sin 2x =    .\n                                                                        2\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                          \u0019"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The following question appeared in an examination:\n\n                                    √\n               Given that tan x =       3, ﬁnd the possible values of sin 2x.\n\n        A student gave the following answer:\n\n                       √\n               tan x =   3 so x = 60◦ and 2x = 120◦ ,\n                                  √\n                                    3\n               therefore sin 2x =     .\n                                   2\n\n        Which one of the following statements is correct?\n\n               √\n                3"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "is the only possible value, and this is fully supported by the reasoning given\n               2\n               in the student’s answer.\n          √\n            3"
+    },
+    {
+      "label": "B",
+      "rawText": "is the only possible value, but the reasoning given should consider other\n           2\n                                                 √\n          possible values of x for which tan x = 3.\n               √\n            3"
+    },
+    {
+      "label": "C",
+      "rawText": "is the only possible value, but the reasoning given should consider other\n           2                                      √\n                                                    3\n          possible values of x for which sin 2x =     .\n                                                   2\n          √\n            3"
+    },
+    {
+      "label": "D",
+      "rawText": "is not the only possible value because the reasoning given should have\n           2\n                                                                  √\n          considered other possible values of x for which tan x = 3.\n               √\n                 3"
+    },
+    {
+      "label": "E",
+      "rawText": "is not the only possible value because the reasoning given should have\n                2                                                       √\n                                                                         3\n               considered other possible values of x for which sin 2x =    .\n                                                                        2\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let’s run through every step of the argument with care.\n                          √\nThe first step is ‘tan x = 3 so x = 60◦ ’. We should first check that x = 60◦√is a solution: using\nour knowledge of trigonometry and special angles, we know that tan 60◦ = 3, so it is.\nBut we also know\n            √    that tan is periodic with period\n                                            √     180◦ : there are multiple values of x which\nhave tan x = 3, and all solutions to tan x = 3 are therefore of the form x = 60◦ + 180n◦ for\nn ∈ Z.\nSo there is unquestionably an error in the student’s answer, but we do not yet know whether\nthere is more than one possible value of sin 2x.\nIt follows from x = 60◦ + 180n◦ that 2x = 120◦ + 360n◦\n                                           √\nIt is certainly the case that sin 120◦ =    3\n                                           2 .   But since sin is periodic with period 360◦ , we see\n                            √\nthat sin(120◦ + 360n◦ ) =    3\n                            2 for every n ∈ Z.\nSo there is only one possible value\n                                √ of sin 2x, but the student should have considered other possible\nvalues of x for which tan x = 3; this is option B.\n\n\n\n\nVersion 1.0, April 2019                                                                      Page 6\n\n                                                                                        © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        7
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

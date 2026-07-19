@@ -22,6 +22,11 @@ export interface ExtractPaperInput {
   answerSource: ExtractionSource;
   workedSolutionSource: ExtractionSource;
   questionPages: ExtractedPdfPage[];
+  /**
+   * Audited mapping from question number (array index + 1) to the physical PDF
+   * page that contains it. The online-paper manifest is the canonical source.
+   */
+  questionPageMap?: readonly number[];
   answerPages: ExtractedPdfPage[];
   workedSolutionPages: ExtractedPdfPage[];
   generatedAt: string;
@@ -32,6 +37,11 @@ interface ParsedQuestionPage {
   stem: string;
   options: Array<{ label: string; rawText: string }>;
   warnings: string[];
+}
+
+interface QuestionPageParseOptions {
+  allowOptionPlaceholders?: boolean;
+  expectedAnswer?: string;
 }
 
 interface LocatedAnswer {
@@ -60,6 +70,28 @@ function stripPhysicalPageFooter(lines: string[], physicalPage: number): string[
   if (result.at(-1)?.trim() === String(physicalPage)) result.pop();
   while (result.at(-1)?.trim() === "") result.pop();
   return result;
+}
+
+function questionMarkerPattern(questionNumber: number): RegExp {
+  return new RegExp(`^\\s*${questionNumber}(?:(?:[.)])?\\s+|[.)]\\s*|$)`, "u");
+}
+
+function normalizeLegacyExtractionText(value: string): string {
+  return value
+    .replace(/[\u0372-\u037b]/gu, (character) =>
+      String(character.codePointAt(0)! - 0x372),
+    )
+    .replace(/[\u0004-\u0008]/gu, (character) =>
+      String.fromCharCode(character.codePointAt(0)! + 61),
+    )
+    .replace(/[\u0000-\u0003\u000b\u000e-\u001f]/gu, "");
+}
+
+function optionPlaceholders(): Array<{ label: string; rawText: string }> {
+  return Array.from({ length: 8 }, (_, index) => {
+    const label = String.fromCharCode(65 + index);
+    return { label, rawText: `[visual option ${label}; transcription required]` };
+  });
 }
 
 function optionCandidates(lines: string[]): OptionStart[] {
@@ -96,36 +128,71 @@ export function parseQuestionPage(
   questionNumber: number,
   physicalPage: number,
   layoutText: string,
+  parseOptions: QuestionPageParseOptions = {},
 ): ParsedQuestionPage {
   const sourcePageText = layoutText.trim();
-  const lines = stripPhysicalPageFooter(sourcePageText.split("\n"), physicalPage);
+  const lines = stripPhysicalPageFooter(
+    normalizeLegacyExtractionText(sourcePageText).split("\n"),
+    physicalPage,
+  );
   const firstContentLine = lines.findIndex((line) => line.trim() !== "");
   if (firstContentLine < 0) throw new Error(`Question ${questionNumber} page is empty`);
 
   lines[firstContentLine] = lines[firstContentLine]!.replace(
-    new RegExp(`^\\s*${questionNumber}(?:\\s+|$)`, "u"),
+    questionMarkerPattern(questionNumber),
     "",
   );
 
   const starts = longestOptionSequence(optionCandidates(lines));
   if (starts.length < 2) {
+    if (parseOptions.allowOptionPlaceholders === true) {
+      const stem = lines.join("\n").trim();
+      if (stem === "") throw new Error(`Question ${questionNumber} has an empty parsed stem`);
+      return {
+        sourcePageText,
+        stem,
+        options: optionPlaceholders(),
+        warnings: [
+          "math-transcription-required",
+          "visual-option-transcription-required",
+          "option-count-review",
+        ],
+      };
+    }
     throw new Error(`Question ${questionNumber} has fewer than two parsed options`);
   }
 
   const stem = lines.slice(0, starts[0]!.lineIndex).join("\n").trim();
   if (stem === "") throw new Error(`Question ${questionNumber} has an empty parsed stem`);
 
-  const options = starts.map((start, index) => {
+  let options = starts.map((start, index) => {
     const next = starts[index + 1];
     const continuation = lines.slice(start.lineIndex + 1, next?.lineIndex ?? lines.length);
     const rawText = [start.firstLine, ...continuation].join("\n").trim();
-    if (rawText === "") {
+    if (rawText === "" && parseOptions.allowOptionPlaceholders !== true) {
       throw new Error(`Question ${questionNumber} option ${start.label} is empty`);
     }
-    return { label: start.label, rawText };
+    return {
+      label: start.label,
+      rawText:
+        rawText === ""
+          ? `[visual option ${start.label}; transcription required]`
+          : rawText,
+    };
   });
 
   const warnings = ["math-transcription-required"];
+  if (options.some((option) => option.rawText.includes("transcription required"))) {
+    warnings.push("visual-option-transcription-required");
+  }
+  if (
+    parseOptions.allowOptionPlaceholders === true &&
+    parseOptions.expectedAnswer !== undefined &&
+    !options.some((option) => option.label === parseOptions.expectedAnswer)
+  ) {
+    options = optionPlaceholders();
+    warnings.push("visual-option-transcription-required", "option-count-review");
+  }
   if (/[ൌșƎ³ʌ]/u.test(sourcePageText)) {
     warnings.push("pdf-font-mapping-anomaly");
   }
@@ -136,7 +203,7 @@ export function parseQuestionPage(
     warnings.push("option-label-sequence-review");
   }
 
-  return { sourcePageText, stem, options, warnings };
+  return { sourcePageText, stem, options, warnings: [...new Set(warnings)] };
 }
 
 function locateQuestionPages(pages: ExtractedPdfPage[]): Map<number, ExtractedPdfPage> {
@@ -151,6 +218,81 @@ function locateQuestionPages(pages: ExtractedPdfPage[]): Map<number, ExtractedPd
     const number = Number.parseInt(match[1], 10);
     if (number >= 1 && number <= 20 && !located.has(number)) {
       located.set(number, page);
+    }
+  }
+  return located;
+}
+
+function segmentSharedQuestionPage(
+  page: ExtractedPdfPage,
+  questionNumbers: readonly number[],
+): Map<number, ExtractedPdfPage> {
+  const lines = page.layoutText.split("\n");
+  const starts: Array<{ questionNumber: number; lineIndex: number }> = [];
+  let searchFrom = 0;
+
+  for (const questionNumber of questionNumbers) {
+    const relativeIndex = lines
+      .slice(searchFrom)
+      .findIndex((line) =>
+        questionMarkerPattern(questionNumber).test(normalizeLegacyExtractionText(line)),
+      );
+    if (relativeIndex < 0) {
+      throw new Error(
+        `Question ${questionNumber} shares source page ${page.page}, but its boundary could not be safely located`,
+      );
+    }
+    const lineIndex = searchFrom + relativeIndex;
+    starts.push({ questionNumber, lineIndex });
+    searchFrom = lineIndex + 1;
+  }
+
+  return new Map(
+    starts.map((start, index) => {
+      const next = starts[index + 1];
+      const segment = lines.slice(start.lineIndex, next?.lineIndex ?? lines.length).join("\n");
+      return [
+        start.questionNumber,
+        { page: page.page, layoutText: segment } satisfies ExtractedPdfPage,
+      ];
+    }),
+  );
+}
+
+export function resolveQuestionPages(
+  pages: ExtractedPdfPage[],
+  questionPageMap?: readonly number[],
+): Map<number, ExtractedPdfPage> {
+  if (questionPageMap === undefined) return locateQuestionPages(pages);
+  if (
+    questionPageMap.length !== 20 ||
+    questionPageMap.some((page) => !Number.isInteger(page) || page < 1)
+  ) {
+    throw new Error("Audited question page map must contain 20 positive page numbers");
+  }
+
+  const pagesByNumber = new Map(pages.map((page) => [page.page, page]));
+  const questionsByPage = new Map<number, number[]>();
+  questionPageMap.forEach((physicalPage, index) => {
+    const questionNumber = index + 1;
+    questionsByPage.set(physicalPage, [
+      ...(questionsByPage.get(physicalPage) ?? []),
+      questionNumber,
+    ]);
+  });
+
+  const located = new Map<number, ExtractedPdfPage>();
+  for (const [physicalPage, questionNumbers] of questionsByPage) {
+    const page = pagesByNumber.get(physicalPage);
+    if (page === undefined) {
+      throw new Error(`Audited question source page ${physicalPage} was not found in the PDF`);
+    }
+    if (questionNumbers.length === 1) {
+      located.set(questionNumbers[0]!, page);
+      continue;
+    }
+    for (const [questionNumber, segment] of segmentSharedQuestionPage(page, questionNumbers)) {
+      located.set(questionNumber, segment);
     }
   }
   return located;
@@ -236,7 +378,7 @@ function sourceRef(
 }
 
 export function buildQuestionImportBundle(input: ExtractPaperInput): QuestionImportBundle {
-  const questionPages = locateQuestionPages(input.questionPages);
+  const questionPages = resolveQuestionPages(input.questionPages, input.questionPageMap);
   const answers = parseAnswerKey(input.answerPages, input.paper.paper);
   const solutions = parseWorkedSolutions(input.workedSolutionPages);
   const questions: QuestionRevisionDraft[] = [];
@@ -249,7 +391,10 @@ export function buildQuestionImportBundle(input: ExtractPaperInput): QuestionImp
     if (answer === undefined) throw new Error(`Question ${questionNumber} answer was not found`);
     if (solution === undefined) throw new Error(`Question ${questionNumber} solution was not found`);
 
-    const parsed = parseQuestionPage(questionNumber, page.page, page.layoutText);
+    const parsed = parseQuestionPage(questionNumber, page.page, page.layoutText, {
+      allowOptionPlaceholders: true,
+      expectedAnswer: answer.label,
+    });
     if (!parsed.options.some((option) => option.label === answer.label)) {
       throw new Error(
         `Question ${questionNumber} official answer ${answer.label} is not a parsed option`,

@@ -1,0 +1,1924 @@
+{
+  "schemaVersion": 1,
+  "bundleType": "question-import",
+  "id": "tmua-2017-p2-extraction-v1",
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "generatedAt": "2026-07-17T07:00:00.000Z",
+  "generatedBy": "tmua-extraction-cli",
+  "sourceDocumentIds": {
+    "question": "tmua-official-2017-paper-2",
+    "answerKey": "tmua-official-2017-answer-key",
+    "workedSolution": "tmua-official-2017-paper-2-worked-solutions"
+  },
+  "questionCount": 20,
+  "publishableQuestionCount": 0,
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q01",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 1,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "(1 − 3x)2                                                                 dy\n 1      Given that y =                   3   , which one of the following is a correct expression for      ?\n                                    2x   2                                                              dx\n\n                 9 − 12      3         5\n        A        4\n                   x + 32 x− 2 − 34 x− 2\n                 9 − 12      3         5\n        B        4\n                   x − 32 x− 2 + 34 x− 2\n                 9 − 12      3         5\n        C        4\n                   x − 32 x− 2 − 34 x− 2\n                      1         3            5\n        D − 94 x− 2 + 32 x− 2 + 34 x− 2\n                      1         3            5\n        E      − 94 x− 2 + 32 x− 2 − 34 x− 2\n                      1         3            5\n        F      − 94 x− 2 − 32 x− 2 − 34 x− 2\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                                \u0016                                      >7XUQ\u0003RYHU"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "(1 − 3x)2                                                                 dy\n 1      Given that y =                   3   , which one of the following is a correct expression for      ?\n                                    2x   2                                                              dx\n\n                 9 − 12      3         5"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "4\n                   x + 32 x− 2 − 34 x− 2\n                 9 − 12      3         5"
+        },
+        {
+          "label": "B",
+          "rawText": "4\n                   x − 32 x− 2 + 34 x− 2\n                 9 − 12      3         5"
+        },
+        {
+          "label": "C",
+          "rawText": "4\n                   x − 32 x− 2 − 34 x− 2\n                      1         3            5"
+        },
+        {
+          "label": "D",
+          "rawText": "− 94 x− 2 + 32 x− 2 + 34 x− 2\n                      1         3            5"
+        },
+        {
+          "label": "E",
+          "rawText": "− 94 x− 2 + 32 x− 2 − 34 x− 2\n                      1         3            5"
+        },
+        {
+          "label": "F",
+          "rawText": "− 94 x− 2 − 32 x− 2 − 34 x− 2\n\n\n\n\n8&/(6                                                                                      >7XUQRYHU"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We first expand the brackets and split up the fraction:\n\n                                           (1 − 3x)2\n                                    y=              3\n                                              2x 2\n                                           1 − 6x + 9x2\n                                       =                3\n                                             2x 2\n                                             − 32  1        1\n                                       = 2 x − 3x− 2 + 92 x 2\n                                         1\n\n\nand we can now differentiate this to get\n                           dy                5              3              1\n                              = 21 (− 32 )x− 2 − 3(− 12 )x− 2 + 92 × 21 x− 2\n                           dx\n                                          5       3         1\n                              = − 43 x− 2 + 32 x− 2 + 49 x− 2\n\nand so the correct answer is A.\n\n\n\n\nVersion 1.0, April 2019                                                             Page 3\n\n                                                                               © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q02",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 2,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "2      P QRS is a rectangle.\n\n        The coordinates of P and Q are (0, 6) and (1, 8) respectively.\n\n        The perpendicular to P Q at Q meets the x-axis at R.\n\n        What is the area of P QRS?\n\n               5\n        A      2\n           √\n        B 4 10\n\n        C 20\n           √\n        D 8 10\n\n        E      40\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "P QRS is a rectangle.\n\n        The coordinates of P and Q are (0, 6) and (1, 8) respectively.\n\n        The perpendicular to P Q at Q meets the x-axis at R.\n\n        What is the area of P QRS?\n\n               5"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "2\n           √"
+        },
+        {
+          "label": "B",
+          "rawText": "4 10"
+        },
+        {
+          "label": "C",
+          "rawText": "20\n           √"
+        },
+        {
+          "label": "D",
+          "rawText": "8 10"
+        },
+        {
+          "label": "E",
+          "rawText": "40\n\n\n\n\n8&/(6"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "A quick sketch (not drawn to scale) may help us here.\n\n                                y\n                                    Q(1, 8)\n\n\n                     P (0, 6)\n\n\n\n\n                                                                                  x\n                                0                                       R(r, 0)\n\n                                                                    S\n\n                 √          √\nP Q has length    12 + 22 = 5 by Pythagoras’s theorem.\n                        8−6\nThe gradient of P Q is        = 2, so QR has gradient − 21\n                        1−0\nWe could now find the coordinates of R by finding the equation of the line QR and substituting\nin y = 0 to find the x-coordinate of R.\n\n\nAlternatively, if we set the coordinates of R to be (r, 0), we can just use the known gradient of\nQR to find r:\n                                            0−8       1\n                                                 =−\n                                            r−1       2\n    8\nso r−1 = 12 giving r − 1 = 16, hence r = 17\nTherefore the length QR is\n                     p                    p            p           √\n                        (r − 1)2 + (−8)2 = 162 + 82 = 8 22 + 12 = 8 5\n                                   √     √\nwhich gives the area of P QRS as 5 × 8 5 = 40, and the answer is E.\nInterestingly, it turns out that we only actually needed r − 1; we did not need to know the actual\ncoordinates of R.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 4\n\n                                                                                      © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q03",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 3,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "√\n 3      The ﬁrst term of a geometric progression is 2 3 and the fourth term is 94\n\n        What is the sum to inﬁnity of this geometric progression?\n\n                       √\n        A −2(2 −        3)\n\n             √\n        B 4(2 3 − 3)\n              √\n          16(8 3 + 9)\n        C\n              37\n             √\n          4(2 3 − 3)\n        D\n              7\n             √\n          4(2 3 + 3)\n        E\n              7\n                       √\n        F      2(2 +       3)\n\n             √\n        G 4(2 3 + 3)\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                   \u0018                                    >7XUQ\u0003RYHU"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "√\n 3      The ﬁrst term of a geometric progression is 2 3 and the fourth term is 94\n\n        What is the sum to inﬁnity of this geometric progression?\n\n                       √"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "−2(2 −        3)\n\n             √"
+        },
+        {
+          "label": "B",
+          "rawText": "4(2 3 − 3)\n              √\n          16(8 3 + 9)"
+        },
+        {
+          "label": "C",
+          "rawText": "37\n             √\n          4(2 3 − 3)"
+        },
+        {
+          "label": "D",
+          "rawText": "7\n             √\n          4(2 3 + 3)"
+        },
+        {
+          "label": "E",
+          "rawText": "7\n                       √"
+        },
+        {
+          "label": "F",
+          "rawText": "2(2 +       3)\n\n             √"
+        },
+        {
+          "label": "G",
+          "rawText": "4(2 3 + 3)\n\n\n\n\n8&/(6                                                                       >7XUQRYHU"
+        }
+      ],
+      "correctAnswer": "G",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "√                                                          √\nThe first term is a = 2 3 and the common ratio is r. So the fourth term is ar3 = 2 3 r3 = 94\nand hence                                     √        √\n                                  3   9      9 3      3 3\n                                 r = √ =           =\n                                     8 3    8×3        8\nby rationalising the denominator.\n\n               √     √        3\nWe can write 3 3 as 27 or 3 2 (since we want to take the cube root of this expression), and so\nwe have                                 3            1    √\n                                  3    32          32       3\n                                 r =       =⇒ r =      =      .\n                                       8            2      2\n(There is a unique real cube root of any real number, unlike the case for square roots.)\nWe can now find the sum to infinity of the geometric progression:\n                       a\n              S∞ =\n                     1−r\n                       √\n                      2 3\n              S∞ =        √\n                    1 − 23\n                       √\n                      4 3                                  2\n                  =     √                 multiplying by\n                    2− 3                                   2\n                        √      √\n                       4 3(2 + 3)\n                  =      √       √        rationalising the denominator\n                    (2 − 3)(2 + 3)\n                        √\n                    4(2 3 + 3)\n                  =                       paying attention to the options offered\n                        √1\n                  = 4(2 3 + 3)\n\nand the correct answer is G.\n\n\n\n\nVersion 1.0, April 2019                                                                  Page 5\n\n                                                                                    © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q04",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 4,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "4      The following question appeared in an examination:\n\n                                    √\n               Given that tan x =       3, ﬁnd the possible values of sin 2x.\n\n        A student gave the following answer:\n\n                       √\n               tan x =   3 so x = 60◦ and 2x = 120◦ ,\n                                  √\n                                    3\n               therefore sin 2x =     .\n                                   2\n\n        Which one of the following statements is correct?\n\n               √\n                3\n        A         is the only possible value, and this is fully supported by the reasoning given\n               2\n               in the student’s answer.\n          √\n            3\n        B     is the only possible value, but the reasoning given should consider other\n           2\n                                                 √\n          possible values of x for which tan x = 3.\n               √\n            3\n        C     is the only possible value, but the reasoning given should consider other\n           2                                      √\n                                                    3\n          possible values of x for which sin 2x =     .\n                                                   2\n          √\n            3\n        D     is not the only possible value because the reasoning given should have\n           2\n                                                                  √\n          considered other possible values of x for which tan x = 3.\n               √\n                 3\n        E          is not the only possible value because the reasoning given should have\n                2                                                       √\n                                                                         3\n               considered other possible values of x for which sin 2x =    .\n                                                                        2\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                          \u0019"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The following question appeared in an examination:\n\n                                    √\n               Given that tan x =       3, ﬁnd the possible values of sin 2x.\n\n        A student gave the following answer:\n\n                       √\n               tan x =   3 so x = 60◦ and 2x = 120◦ ,\n                                  √\n                                    3\n               therefore sin 2x =     .\n                                   2\n\n        Which one of the following statements is correct?\n\n               √\n                3"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "is the only possible value, and this is fully supported by the reasoning given\n               2\n               in the student’s answer.\n          √\n            3"
+        },
+        {
+          "label": "B",
+          "rawText": "is the only possible value, but the reasoning given should consider other\n           2\n                                                 √\n          possible values of x for which tan x = 3.\n               √\n            3"
+        },
+        {
+          "label": "C",
+          "rawText": "is the only possible value, but the reasoning given should consider other\n           2                                      √\n                                                    3\n          possible values of x for which sin 2x =     .\n                                                   2\n          √\n            3"
+        },
+        {
+          "label": "D",
+          "rawText": "is not the only possible value because the reasoning given should have\n           2\n                                                                  √\n          considered other possible values of x for which tan x = 3.\n               √\n                 3"
+        },
+        {
+          "label": "E",
+          "rawText": "is not the only possible value because the reasoning given should have\n                2                                                       √\n                                                                         3\n               considered other possible values of x for which sin 2x =    .\n                                                                        2\n\n\n\n\n8&/(6"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let’s run through every step of the argument with care.\n                          √\nThe first step is ‘tan x = 3 so x = 60◦ ’. We should first check that x = 60◦√is a solution: using\nour knowledge of trigonometry and special angles, we know that tan 60◦ = 3, so it is.\nBut we also know\n            √    that tan is periodic with period\n                                            √     180◦ : there are multiple values of x which\nhave tan x = 3, and all solutions to tan x = 3 are therefore of the form x = 60◦ + 180n◦ for\nn ∈ Z.\nSo there is unquestionably an error in the student’s answer, but we do not yet know whether\nthere is more than one possible value of sin 2x.\nIt follows from x = 60◦ + 180n◦ that 2x = 120◦ + 360n◦\n                                           √\nIt is certainly the case that sin 120◦ =    3\n                                           2 .   But since sin is periodic with period 360◦ , we see\n                            √\nthat sin(120◦ + 360n◦ ) =    3\n                            2 for every n ∈ Z.\nSo there is only one possible value\n                                √ of sin 2x, but the student should have considered other possible\nvalues of x for which tan x = 3; this is option B.\n\n\n\n\nVersion 1.0, April 2019                                                                      Page 6\n\n                                                                                        © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q05",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 5,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "5      Consider the following three statements:\n\n               1    10p2 + 1 and 10p2 − 1 are both prime when p is an odd prime.\n\n               2    Every prime greater than 5 is of the form 6n + 1 for some integer n.\n\n               3    No multiple of 7 greater than 7 is prime.\n\n        The result 91 = 7 × 13 can be used to provide a counterexample to which of the\n        above statements?\n\n        A none of them\n\n        B 1 only\n\n        C 2 only\n\n        D 3 only\n\n        E      1 and 2 only\n\n        F      1 and 3 only\n\n        G 2 and 3 only\n\n        H 1, 2 and 3\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u001a                                    >7XUQ\u0003RYHU"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following three statements:\n\n               1    10p2 + 1 and 10p2 − 1 are both prime when p is an odd prime.\n\n               2    Every prime greater than 5 is of the form 6n + 1 for some integer n.\n\n               3    No multiple of 7 greater than 7 is prime.\n\n        The result 91 = 7 × 13 can be used to provide a counterexample to which of the\n        above statements?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "1 only"
+        },
+        {
+          "label": "C",
+          "rawText": "2 only"
+        },
+        {
+          "label": "D",
+          "rawText": "3 only"
+        },
+        {
+          "label": "E",
+          "rawText": "1 and 2 only"
+        },
+        {
+          "label": "F",
+          "rawText": "1 and 3 only"
+        },
+        {
+          "label": "G",
+          "rawText": "2 and 3 only"
+        },
+        {
+          "label": "H",
+          "rawText": "1, 2 and 3\n\n\n\n\n8&/(6                                                                          >7XUQRYHU"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We note from the context of the statements that 91 = 7 × 13 shows that 91 is not prime. It also\nshows that 91 is a multiple of 7 and a multiple of 13.\nWe use a counterexample when we are trying to disprove a statement of the form ‘if A then B’;\nthe counterexample will be a case where A is true but B is false. We can also use counterexamples\nto disprove statements of the form ‘for all x, A is true’: a single example of an x for which A is\nfalse shows that the statement is false.\nWe first rewrite each of the statements given into an explicit ‘if . . . then’ statement or an explicit\n‘for all’ statement.\n(With experience, this is not actually necessary; once you have seen enough statements, it\nbecomes clear what a counterexample ‘looks like’. But for the purposes of reaching this point,\nit can be useful to go through these formal steps.)\n\n1 The word ‘when’ in this context has the same logical meaning as ‘if’, so the statement can be\n  rewritten as ‘if p is an odd prime, then 10p2 + 1 and 10p2 − 1 are both prime’.\n  So if 91 = 7 × 13 is to provide a counterexample, we need an odd prime p with 10p2 + 1 = 91\n  or 10p2 − 1 = 91, since in that case, ‘10p2 + 1 and 10p2 − 1 are both prime’ will be false. It is\n  clear that p = 3 achieves this, for then 10p2 + 1 = 91.\n\n2 We can write this statement as an explicit ‘for all’ statement, as ‘Every prime. . . ’ suggests\n  this meaning. The statement becomes: ‘For all primes p where p > 5, p = 6n + 1 for some\n  integer n’.\n  So a counterexample would be a prime p with p > 5 but for which p = 6n+1 is false. However,\n  91 is not prime, so 91 = 7 × 13 does not provide a counterexample. The fact that 91 = 6n + 1\n  for n = 15 is immaterial, and the fact that the statement is false (as 11 = 6 × 2 − 1) does not\n  help either.\n\n3 We can again write this as an explicit ‘for all’ statement; the English is better with the\n  equivalent ‘for each’, though: ‘For each n which is a multiple of 7 greater than 7, n is not\n  prime.’\n  If we now look at 91 = 7 × 13, we see that 91 is a multiple of 7 greater than 7. However,\n  91 is not prime, so 91 is an example of where the statement does hold, rather than being a\n  counterexample. In fact, the given statement is true, so there cannot be any counterexamples,\n  and we need not have looked at 91 = 7 × 13 at all.\n\nSo the answer is B.\n\n\n\n\nVersion 1.0, April 2019                                                                        Page 7\n\n                                                                                          © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            8
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q06",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 6,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "6      A sequence u0 , u1 , u2 , . . . is deﬁned as follows:\n\n\n\n                                       u0 = 1\n                                            \u0002 1\n                                       un =     4xun−1 dx for n ⩾ 1\n                                              0\n\n\n\n        What is the value of u1000 ?\n\n\n        A 21000\n\n\n        B 41000\n\n                 4\n        C\n               1000!\n                 4\n        D\n               1001!\n               21000\n        E\n               1000!\n               41000\n        F\n               1000!\n               21000\n        G\n               1001!\n               41000\n        H\n               1001!\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                         \u001b"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A sequence u0 , u1 , u2 , . . . is deﬁned as follows:\n\n\n\n                                       u0 = 1\n                                             1\n                                       un =     4xun−1 dx for n ⩾ 1\n                                              0\n\n\n\n        What is the value of u1000 ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "21000"
+        },
+        {
+          "label": "B",
+          "rawText": "41000\n\n                 4"
+        },
+        {
+          "label": "C",
+          "rawText": "1000!\n                 4"
+        },
+        {
+          "label": "D",
+          "rawText": "1001!\n               21000"
+        },
+        {
+          "label": "E",
+          "rawText": "1000!\n               41000"
+        },
+        {
+          "label": "F",
+          "rawText": "1000!\n               21000"
+        },
+        {
+          "label": "G",
+          "rawText": "1001!\n               41000"
+        },
+        {
+          "label": "H",
+          "rawText": "1001!\n\n\n\n\n8&/(6"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We calculate the first few values of un in the hope that this will show a clear pattern.\nWe have\n\n                                        u0 = 1\n                                             Z 1\n                                        u1 =     4x.1 dx\n                                               0\n                                                  \u00031\n                                           = 2x2 0\n                                             \u0002\n\n                                           =2\n                                             Z 1\n                                        u2 =     4x.2 dx\n                                               0\n                                                  \u00031\n                                           = 4x2 0\n                                             \u0002\n\n                                           =4\n                                             Z 1\n                                        u3 =     4x.4 dx\n                                               0\n                                                  \u00031\n                                           = 8x2 0\n                                             \u0002\n\n                                           =8\n\nThe pattern is now apparent: un = 2n , and so the answer is A.\nIf we wanted to prove this to be true, we could use induction. The result is clearly true when\nn = 0, so assume that it is true when n = k. Then\n                                             Z 1\n                                      uk+1 =     4x.2k dx\n                                              0\n                                             \u0002 k 2 \u00031\n                                           = 2.2 x 0\n                                            = 2.2k\n                                            = 2k+1\n\nand so the result holds for n = k + 1. Hence by induction, un = 2n for all n ⩾ 0.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 8\n\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q07",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 7,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "7      The graphs of two functions are shown here:\n\n               •   y = ax is shown with a solid line, where a is a positive real number\n               •   y = f (x) is shown with a dashed line\n\n\n\n\n        Which of the following statements (1, 2, 3, 4) could be true?\n\n               1    f (x) = bx for some b > a\n               2    f (x) = bx for some b < a\n               3    f (x) = akx for some k > 1\n               4    f (x) = akx for some k < 1\n\n        A 1 only\n\n        B 2 only\n\n        C 3 only\n\n        D 4 only\n\n        E      1 and 3 only\n\n        F      1 and 4 only\n\n        G 2 and 3 only\n\n        H 2 and 4 only\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u001c                                       >7XUQ\u0003RYHU"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The graphs of two functions are shown here:\n\n               •   y = ax is shown with a solid line, where a is a positive real number\n               •   y = f (x) is shown with a dashed line\n\n\n\n\n        Which of the following statements (1, 2, 3, 4) could be true?\n\n               1    f (x) = bx for some b > a\n               2    f (x) = bx for some b < a\n               3    f (x) = akx for some k > 1\n               4    f (x) = akx for some k < 1"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "1 only"
+        },
+        {
+          "label": "B",
+          "rawText": "2 only"
+        },
+        {
+          "label": "C",
+          "rawText": "3 only"
+        },
+        {
+          "label": "D",
+          "rawText": "4 only"
+        },
+        {
+          "label": "E",
+          "rawText": "1 and 3 only"
+        },
+        {
+          "label": "F",
+          "rawText": "1 and 4 only"
+        },
+        {
+          "label": "G",
+          "rawText": "2 and 3 only"
+        },
+        {
+          "label": "H",
+          "rawText": "2 and 4 only\n\n\n\n\n8&/(6                                                                             >7XUQRYHU"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The graph of y = f(x) looks like an exponential graph, so all of the four given statements\ncertainly seem plausible.\nOne approach to this question is to think about the shapes of different exponential graphs.\nAnother is to consider a specific value of x, and see what happens.\nIf we take x = 1, ax = a, and f(1) > a. We can now substitute x = 1 into the two expressions\nfor f(x) offered: f(x) = bx gives f(1) = b, so we would need b > a. Similarly, f(x) = akx gives\nf(1) = ak . But it is clear from the solid line that a > 1 (as a0 = 1 and a1 = a > 1), so ak > a\nrequires k > 1.\nSo both statements 1 and 3 could be true, but not 2 or 4.\nWe can be even more careful and show that we cannot have just one of 1 and 3 being true. If\nstatement 3 is true, we have f(x) = akx = (ak )x , so writing b = ak > a shows that statement 1\nis true; likewise, if statement 1 is true, we have f(x) = bx = (aloga b )x = a(loga b)x and loga b > 1,\nso statement 3 is also true.\nHence the correct answer is E.\n\n\n\n\nVersion 1.0, April 2019                                                                        Page 9\n\n                                                                                          © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q08",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 8,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "8      Which one of the following numbers is smallest in value?\n\n\n        A log2 7\n\n\n        B (2−3 + 2−2 )−1\n\n\n        C 2(π/3)\n\n                        1\n        D          \u0003√           \u00043\n               4        2−1\n                        \u0005π \u0006\n        E      4 sin2\n                            4\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                  \u0014\u0013"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Which one of the following numbers is smallest in value?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "log2 7"
+        },
+        {
+          "label": "B",
+          "rawText": "(2−3 + 2−2 )−1"
+        },
+        {
+          "label": "C",
+          "rawText": "2(π/3)\n\n                        1"
+        },
+        {
+          "label": "D",
+          "rawText": "√           A3\n               4        2−1\n                        Bπ C"
+        },
+        {
+          "label": "E",
+          "rawText": "4 sin2\n                            4\n\n\n\n\n8&/(6"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can start by estimating or calculating the values.\n\nA 2 < log2 7 < 3, since log2 4 = 2 and log2 8 = 3\n\nB (2−3 + 2−2 )−1 = ( 18 + 41 )−1 = ( 38 )−1 = 38 which again lies between 2 and 3\n\nC π/3 is just a little greater than 1, so 2π/3 is a little greater than 2\n               √\nD We expand ( 2 − 1)3 using the binomial theorem to get\n                     √         √        √            √           √        √\n                    ( 2)3 − 3( 2)2 + 3 2 − 1 = 2 2 − 6 + 3 2 − 1 = 5 2 − 7\n\n   Thus                                              √              √\n                           1            1           5 2+7          5 2+7\n                         √        =    √       =     √           =\n                       4( 2 − 1)3   4(5 2 − 7)   4((5 2)2 − 72 )      4\n  This is greater than 5+7    4 = 3, so is certainly not the smallest in value.\n                                            \u00012\nE sin( π4 ) = √12 , so 4 sin2 ( π4 ) = 4 √12 = 4 × 21 = 2\n\n\nSince A, B and C are each greater than 2, the correct answer is E.\n\n\n\n\nVersion 1.0, April 2019                                                                 Page 10\n\n                                                                                    © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q09",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 9,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "9      Consider the following attempt to prove this true theorem:\n\n               Theorem: a3 + b3 = c3 has no solutions with a, b and c positive integers.\n\n               Attempted proof:\n               Suppose that there are positive integers a, b and c such that a3 + b3 = c3 .\n               I      We have a3 = c3 − b3 .\n\n               II     Hence a3 = (c − b)(c2 + cb + b2 ).\n\n               III    It follows that a = c − b and a2 = c2 + cb + b2 , since a ⩽ a2 and\n                      c − b ⩽ c2 + cb + b2 .\n\n               IV     Eliminating a, we have (c − b)2 = c2 + cb + b2 .\n\n               V      Multiplying out, we have c2 − 2cb + b2 = c2 + cb + b2 .\n\n               VI     Hence 3cb = 0 so one of b and c is zero.\n               But this is a contradiction to the original assumption that all of a, b and c\n               are positive. It follows that the equation has no solutions.\n\n        Comment on this proof by choosing one of the following options:\n\n        A The proof is correct\n\n        B The proof is incorrect and the ﬁrst mistake occurs on line I.\n\n        C The proof is incorrect and the ﬁrst mistake occurs on line II.\n\n        D The proof is incorrect and the ﬁrst mistake occurs on line III.\n\n        E      The proof is incorrect and the ﬁrst mistake occurs on line IV.\n\n        F      The proof is incorrect and the ﬁrst mistake occurs on line V.\n\n        G The proof is incorrect and the ﬁrst mistake occurs on line VI.\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u0014\u0014                                       >7XUQ\u0003RYHU"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following attempt to prove this true theorem:\n\n               Theorem: a3 + b3 = c3 has no solutions with a, b and c positive integers.\n\n               Attempted proof:\n               Suppose that there are positive integers a, b and c such that a3 + b3 = c3 .\n               I      We have a3 = c3 − b3 .\n\n               II     Hence a3 = (c − b)(c2 + cb + b2 ).\n\n               III    It follows that a = c − b and a2 = c2 + cb + b2 , since a ⩽ a2 and\n                      c − b ⩽ c2 + cb + b2 .\n\n               IV     Eliminating a, we have (c − b)2 = c2 + cb + b2 .\n\n               V      Multiplying out, we have c2 − 2cb + b2 = c2 + cb + b2 .\n\n               VI     Hence 3cb = 0 so one of b and c is zero.\n               But this is a contradiction to the original assumption that all of a, b and c\n               are positive. It follows that the equation has no solutions.\n\n        Comment on this proof by choosing one of the following options:"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "The proof is correct"
+        },
+        {
+          "label": "B",
+          "rawText": "The proof is incorrect and the ﬁrst mistake occurs on line I."
+        },
+        {
+          "label": "C",
+          "rawText": "The proof is incorrect and the ﬁrst mistake occurs on line II."
+        },
+        {
+          "label": "D",
+          "rawText": "The proof is incorrect and the ﬁrst mistake occurs on line III."
+        },
+        {
+          "label": "E",
+          "rawText": "The proof is incorrect and the ﬁrst mistake occurs on line IV."
+        },
+        {
+          "label": "F",
+          "rawText": "The proof is incorrect and the ﬁrst mistake occurs on line V."
+        },
+        {
+          "label": "G",
+          "rawText": "The proof is incorrect and the ﬁrst mistake occurs on line VI.\n\n\n\n\n8&/(6                                                                             >7XUQRYHU"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Commentary: This is Fermat’s Last Theorem for the case n = 3; it was first proven by\n      Euler in the 18th century. The attempted proof here, though, is deeply flawed, as we will\n      see.\n\nLine I is fine: this is a simple rearrangement.\nLine II is fine: this is a standard algebraic identity which is easy to check.\nLine III is problematic. It is certainly true that a ⩽ a2 and c − b < c + b ⩽ c2 + b2 < c2 + cb + b2 .\nIt is therefore plausible that a = c − b and a2 = c2 + cb + b2 , but it is far from necessary. Of\ncourse we cannot give an explicit example to show this, as there are no sets of positive integers\na, b and c with a3 + b3 = c3 . But we can observe that if c − b = 1, we must have a3 = c2 + bc + b3 ,\nand this possibility has not been considered; alternatively, we could consider a case where a is\nnot prime such as a = 6; then we can write a3 = 63 = 3 × 72, and we could have c − b = 3 and\nc2 + cb + b2 = 72. Either way, it does not necessarily follow that a = c − b and a2 = c2 + cb + b2 ,\nso this step is wrong.\nThe correct answer is D.\n\n\n\n\nVersion 1.0, April 2019                                                                      Page 11\n\n                                                                                         © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q10",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 10,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "10     f (x) is a function deﬁned for all real values of x.\n                                                                 \u00073\n        Which one of the following is a suﬃcient condition for   1\n                                                                      f (x) dx = 0?\n\n        A f (2) = 0\n\n        B f (1) = f (3) = 0\n\n        C f (−x) = −f (x) for all x\n\n        D f (x + 2) = −f (2 − x) for all x\n\n        E      f (x − 2) = −f (2 − x) for all x\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u0014\u0015"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "f (x) is a function deﬁned for all real values of x.\n                                                                 D3\n        Which one of the following is a suﬃcient condition for   1\n                                                                      f (x) dx = 0?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "f (2) = 0"
+        },
+        {
+          "label": "B",
+          "rawText": "f (1) = f (3) = 0"
+        },
+        {
+          "label": "C",
+          "rawText": "f (−x) = −f (x) for all x"
+        },
+        {
+          "label": "D",
+          "rawText": "f (x + 2) = −f (2 − x) for all x"
+        },
+        {
+          "label": "E",
+          "rawText": "f (x − 2) = −f (2 − x) for all x\n\n\n\n\n8&/(6"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "RTo3 show that a condition is sufficient, we need to show that if the condition is satisfied, then\n  1 f(x) dx = 0\n                                                                                   R3\n Note that it is not enough for us to find an example of a function which satisfies 1 f(x) dx = 0\n and then to check whether the function satisfies the suggested conditions, as this would be\n checking whether the conditions are necessary, not whether they are sufficient.\n\nA Knowing the value of f(x) at a single value of x cannot hope to force the integral to be 0;\n  consider, for example, the quadratic f(x) = (x − 2)2\n\nB Likewise, knowing the value of f(x) at the endpoints is not sufficient; consider, for example,\n  the quadratic f(x) = (x − 1)(x − 3)\n\nC This says that the function is odd: the values of f(x) for negative values of x match those for\n  positive values of x. But it gives no control over the values of f(x) between x = 1 and x = 3,\n  R 3 it cannot be a sufficient condition. For example, f(x) = x satisfies f(−x) = −f(x), but\n  so\n   1 x dx > 0\n\n\nSo it is one of D and E, both of which look complicated. E looks marginally easier to deal\nwith, as x − 2 = −(2 − x). But that means that if we write y = 2 − x, condition E becomes\nf(−y) = −f(y), which is exactly the same as condition C. So condition E is not sufficient.\nBy elimination, therefore, the correct answer must be condition D.\nLet us show that D is, indeed, sufficient. It would help to see what is going on if we write x + 2\nas 2 + x, so the condition becomes f(2 + x) = −f(2 − x). If we take 0 < x ⩽ 1, this shows that\nthere is rotational symmetry about the point (2, 0):\n\n\n\n                                                               x\n                                  2−a          2        2+a\n\n\n\nAnd when x = 0, we get f(2) = −f(2) so f(2) = 0\nSo the graph of y = f(x) itself might look like this:\n\n\n\n                                                               x\n                                               2\n\n\n                                                                                  R2\nSince the graph of y = f(x) has rotational symmetry about (2, 0), the integrals 1 f(x) dx and\nR3                                                                             R3\n 2 f(x) dx will be negative of each other, and so condition D is sufficient for 1 f(x) dx = 0.\n\n\n\n\nVersion 1.0, April 2019                                                                   Page 12\n\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q11",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 11,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "11     The function f (x) is increasing and f (0) = 0.\n\n        The positive constants a and b are such that a < b.\n\n        The area of the region enclosed by the curve y = f (x), the x-axis and the lines x = a\n        and x = b is denoted by R.\n\n        The function g(x) is deﬁned by g(x) = f (x) + 2f (b).\n\n        Which of the following is an expression for the area enclosed by the curve y = g(x),\n        the x-axis and the lines x = a and x = b?\n\n        A R + (b − a)f (b)\n\n        B R + 2(b − a)f (b)\n\n        C R + 2f (b) − f (a)\n\n        D R + 2f (b)\n\n        E      R + (f (b))2\n\n        F      R + (f (b))2 − (f (a))2\n\n        G R + 2(f (b) − f (a))f (b)\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0014\u0016                                    >7XUQ\u0003RYHU"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The function f (x) is increasing and f (0) = 0.\n\n        The positive constants a and b are such that a < b.\n\n        The area of the region enclosed by the curve y = f (x), the x-axis and the lines x = a\n        and x = b is denoted by R.\n\n        The function g(x) is deﬁned by g(x) = f (x) + 2f (b).\n\n        Which of the following is an expression for the area enclosed by the curve y = g(x),\n        the x-axis and the lines x = a and x = b?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "R + (b − a)f (b)"
+        },
+        {
+          "label": "B",
+          "rawText": "R + 2(b − a)f (b)"
+        },
+        {
+          "label": "C",
+          "rawText": "R + 2f (b) − f (a)"
+        },
+        {
+          "label": "D",
+          "rawText": "R + 2f (b)"
+        },
+        {
+          "label": "E",
+          "rawText": "R + (f (b))2"
+        },
+        {
+          "label": "F",
+          "rawText": "R + (f (b))2 − (f (a))2"
+        },
+        {
+          "label": "G",
+          "rawText": "R + 2(f (b) − f (a))f (b)\n\n\n\n\n8&/(6                                                                        >7XUQRYHU"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can approach this question algebraically or graphically.\nWe start with an algebraic approach. We first note that f(x) ⩾ 0 for all x > 0 as f(x) is\nincreasing. So the region described first, with area R, lies entirely above (or on) the x-axis, and\n                                                          Z b\n                                                R=              f(x) dx\n                                                           a\n\nWe note that g(x) = f(x) + 2f(b) ⩾ 0 for x > 0 as f(x) ⩾ 0 and f(b) ⩾ 0. Then the area required\nunder the graph g(x) is given by\n                                 Z b                Z b\n                                       g(x) dx =          f(x) + 2f(b) dx\n                                  a                  a\n                                                    Z b                     Z b\n                                                =         f(x) dx + 2f(b)          1 dx\n                                                     a                         a\n                                                = R + 2f(b)(b − a)\n\nOn the second line we have split the integral into a sum of two integrals, and taken out the\nconstant factor of 2f(b) from the second integral. Thus the answer is option B.\nWe could also work graphically. We can sketch the graphs of f(x) and g(x), making up a suitable\nincreasing shape for f(x):\n\n                             y\n                                                                    y = g(x) = f(x) + 2f(b)\n\n\n                     2f(b)\n\n                                                                    y = f(x)\n                      f(b)\n\n                                                    R\n                                                                      x\n                             0              a                   b\n\n\nIt is clear from this sketch that the area under the graph of y = g(x) is formed of a rectangle\nwhich is (b − a) by 2f(b) in size, and the area under the original graph, R, so that the required\narea is R + (b − a) × 2f(b).\n\n\n\n\nVersion 1.0, April 2019                                                                           Page 13\n\n                                                                                              © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            14
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q12",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 12,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "12     The diagram shows the graphs of y = sin 2x and y = cos 2x for − π2 < x < π2\n\n\n\n\n        Which one of the following is not true?\n\n        A cos 2x < sin 2x < tan x for some real number x with − π2 < x < π2\n\n        B cos 2x < tan x < sin 2x for some real number x with − π2 < x < π2\n\n        C sin 2x < cos 2x < tan x for some real number x with − π2 < x < π2\n\n        D sin 2x < tan x < cos 2x for some real number x with − π2 < x < π2\n\n        E      tan x < sin 2x < cos 2x for some real number x with − π2 < x < π2\n\n        F      tan x < cos 2x < sin 2x for some real number x with − π2 < x < π2\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u0014\u0017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The diagram shows the graphs of y = sin 2x and y = cos 2x for − π2 < x < π2\n\n\n\n\n        Which one of the following is not true?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "cos 2x < sin 2x < tan x for some real number x with − π2 < x < π2"
+        },
+        {
+          "label": "B",
+          "rawText": "cos 2x < tan x < sin 2x for some real number x with − π2 < x < π2"
+        },
+        {
+          "label": "C",
+          "rawText": "sin 2x < cos 2x < tan x for some real number x with − π2 < x < π2"
+        },
+        {
+          "label": "D",
+          "rawText": "sin 2x < tan x < cos 2x for some real number x with − π2 < x < π2"
+        },
+        {
+          "label": "E",
+          "rawText": "tan x < sin 2x < cos 2x for some real number x with − π2 < x < π2"
+        },
+        {
+          "label": "F",
+          "rawText": "tan x < cos 2x < sin 2x for some real number x with − π2 < x < π2\n\n\n\n\n8&/(6"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We clearly need to sketch the graph of y = tan x onto the given sketch.\nThis graph has asymptotes at x = ± π2 , and passes through the points ( π4 , 1) and (− π4 , −1).\nSince the function is increasing as it passes through these points, it must lie below the graph of\ny = sin 2x between 0 and π4 , and above it between − π4 and 0.\nThis results in the following graph:\n\n                                                    y\n\n\n                                              1.5\n\n\n\n                                                1\n\n\n\n                                              0.5\n\n\n\n                                                                                           x\n               π                 π                  0            π                 π\n           −                 −\n               2                 4                               4                 2\n\n                                             −0.5\n\n\n\n                                              −1\n\n\n\n                                             −1.5\n\n\n\nWe now pick various values for x and see which order the functions lie in. For example, when\nx is close to − π2 , we have tan x < cos 2x < sin 2x. Here are some cases as we move from x = − π2\nto x = π2 , each together with the option it eliminates:\n\n                     x value                  Function order            Option\n                     x close to − π2          tan x < cos 2x < sin 2x     F\n                     x just less than − π4    tan x < sin 2x < cos 2x     E\n                     x just more than − π4    sin 2x < tan x < cos 2x     D\n                     x just more than 0       tan x < sin 2x < cos 2x     E\n                     x just more than π8      tan x < cos 2x < sin 2x     F\n                     x just less than π4      cos 2x < tan x < sin 2x     B\n                     x just more than π4      cos 2x < sin 2x < tan x     A\n\nThe only option which is not eliminated is C: sin 2x < cos 2x < tan x for some real number x\nwith − π2 < x < π2\nIt is also clear from the graph that this is impossible: the only time that tan x is greater than\nboth sin 2x and cos 2x is when π4 < x < π2 , and in the whole of that range, cos 2x < sin 2x\n\n\nVersion 1.0, April 2019                                                                    Page 14\n\n                                                                                       © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            14
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            15
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q13",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 13,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "13     The positive real numbers a × 10−3 , b × 10−2 and c × 10−1 are each in standard form,\n        and\n                               (a × 10−3 ) + (b × 10−2 ) = (c × 10−1 ).\n\n        Which of the following statements (I, II, III, IV) must be true?\n\n               I    a>9\n\n               II   b>9\n\n               III a < c\n\n               IV b < c\n\n        A I only\n\n        B II only\n\n        C I and II only\n\n        D I and III only\n\n        E      I and IV only\n\n        F      II and III only\n\n        G II and IV only\n\n        H I, II, III and IV\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                   \u0014\u0018                                    >7XUQ\u0003RYHU"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The positive real numbers a × 10−3 , b × 10−2 and c × 10−1 are each in standard form,\n        and\n                               (a × 10−3 ) + (b × 10−2 ) = (c × 10−1 ).\n\n        Which of the following statements (I, II, III, IV) must be true?\n\n               I    a>9\n\n               II   b>9\n\n               III a < c\n\n               IV b < c"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "I only"
+        },
+        {
+          "label": "B",
+          "rawText": "II only"
+        },
+        {
+          "label": "C",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "D",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and IV only"
+        },
+        {
+          "label": "F",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and IV only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II, III and IV\n\n\n\n\n8&/(6                                                                       >7XUQRYHU"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "One way to think about this is to write it as a column addition. If we write a × 10−3 as\n0.00a1 a2 . . . , where a = a1 .a2 a3 . . . (as a decimal expansion), and similarly for the other num-\nbers, the sum becomes:\n                                                0 . 0 0 a1 a2 . . .\n                                             + 0 . 0 b1 b2 b3 . . .\n                                                0 . c1 c2 c3 c4 . . .\n\nWe see that, as c1 ⩾ 1, there must be a carry from the hundredths column to the tenths column,\nand hence b1 = 9, so b ⩾ 9. If b = 9 exactly, then there cannot be a carry; we would just get a\nsum of 0.09a1 a2 . . . in that case. So we must have b > 9, and II must be true.\nThere is no need to have a1 = 9; we could, for example, have a1 = 8 and b2 = 3 and still have a\ncarry. So I is not necessary true.\nComparing a and b to c, we know that 1 ⩽ c < 2, as c1 = 1. We saw that a1 = 8 is possible, so\na > 8 is possible, and a < c (statement III) is not necessarily true.\nWe have already shown that b > 9, so since c < 2, b > c (statement IV) is never true.\nSo the answer is B.\n\n\n\n\nVersion 1.0, April 2019                                                                      Page 15\n\n                                                                                         © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            15
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            16
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q14",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 14,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "14     The diagram below shows the graph of y = x2 − 2bx + c. The vertex of this graph is\n        at the point P .\n\n\n\n\n        Which one of the following could be the graph of y = x2 − 2Bx + c, where B > b?\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                  \u0014\u0019"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The diagram below shows the graph of y = x2 − 2bx + c. The vertex of this graph is\n        at the point P .\n\n\n\n\n        Which one of the following could be the graph of y = x2 − 2Bx + c, where B > b?\n\n\n\n\n8&/(6"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        },
+        {
+          "label": "F",
+          "rawText": "[visual option F; transcription required]"
+        },
+        {
+          "label": "G",
+          "rawText": "[visual option G; transcription required]"
+        },
+        {
+          "label": "H",
+          "rawText": "[visual option H; transcription required]"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can complete the square for the original quadratic:\n\n                                      x2 − 2bx + c = (x − b)2 − b2 + c\n\nso the vertex P is at (b, c − b2 ).\nThe graph given shows that b > 0 and c − b2 > 0.\nThe new quadratic is\n                                 x2 − 2Bx + c = (x − B)2 − B 2 + c\nso the new vertex is at (B, c − B 2 ).\nNow B > b, so the new vertex is to the right of P . As B > b > 0, B 2 > b2 so c − B 2 < c − b2 ,\nand the new vertex is below P .\nTherefore the correct answer is F.\n\n\n\n\nVersion 1.0, April 2019                                                                 Page 16\n\n                                                                                    © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            16
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            17
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required",
+          "option-count-review"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q15",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 15,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "15     The function f is deﬁned on the positive integers as follows:\n\n                   f (1) = 5, and for n ⩾ 1:   f (n + 1) = 3f (n) + 1 if f (n) is odd\n                                               f (n + 1) = 12 f (n)   if f (n) is even\n\n        The function g is deﬁned on the positive integers as follows:\n\n                   g(1) = 3, and for n ⩾ 1:    g(n + 1) = g(n) + 5 if g(n) is odd\n                                               g(n + 1) = 12 g(n)  if g(n) is even\n\n\n        What is the value of f (1000) − g(1000)?\n\n        A −6\n\n        B −5\n\n        C 1\n\n        D 2\n\n        E      4\n\n        F      8\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0014\u001a                                       >7XUQ\u0003RYHU"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The function f is deﬁned on the positive integers as follows:\n\n                   f (1) = 5, and for n ⩾ 1:   f (n + 1) = 3f (n) + 1 if f (n) is odd\n                                               f (n + 1) = 12 f (n)   if f (n) is even\n\n        The function g is deﬁned on the positive integers as follows:\n\n                   g(1) = 3, and for n ⩾ 1:    g(n + 1) = g(n) + 5 if g(n) is odd\n                                               g(n + 1) = 12 g(n)  if g(n) is even\n\n\n        What is the value of f (1000) − g(1000)?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "−6"
+        },
+        {
+          "label": "B",
+          "rawText": "−5"
+        },
+        {
+          "label": "C",
+          "rawText": "1"
+        },
+        {
+          "label": "D",
+          "rawText": "2"
+        },
+        {
+          "label": "E",
+          "rawText": "4"
+        },
+        {
+          "label": "F",
+          "rawText": "8\n\n\n\n\n8&/(6                                                                           >7XUQRYHU"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "From the question, it seems that we are expected to work out the first few values of the functions\nf(n) and g(n), and to look for a pattern.\n\n                                           n f(n) g(n)\n                                           1 5     3\n                                           2 16    8\n                                           3 8     4\n                                           4 4     2\n                                           5 2     1\n                                           6 1     6\n                                           7 4     3\n                                           8 2     8\n                                           9 1     4\n                                          10 4     2\n                                          11 2     1\n                                          12 1     6\n\nSo after the first three terms, f(n) repeats every 3 terms: for k ⩾ 1, f(3k + 1) = 4, f(3k + 2) = 2,\nf(3k+3) = 1, while g(n) repeats every 6 terms, and we can write similar expressions for g(6k+r).\nWe could either calculate f(n) − g(n) for all of these terms, and find the repeating pattern there,\nor find f(1000) and g(1000) separately. The latter approach seems like less effort, so we will go\nfor that.\nNote that 1000 = 3 × 333 + 1 = 6 × 166 + 4. So f(1000) = 4, g(1000) = 2.\nThus f(1000) − g(1000) = 4 − 2 = 2 and the answer is D.\n\n\n\n\nVersion 1.0, April 2019                                                                     Page 17\n\n                                                                                       © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            17
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            18
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q16",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 16,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "16     Consider the following statement:\n\n               (∗) If f (x) is an integer for every integer x, then f \u0003 (x) is an integer for\n                   every integer x.\n\n        Which one of the following is a counterexample to (∗)?\n\n                  x3 + x + 1\n        A f (x) =\n                      4\n                      x 4 + x2 + x\n        B f (x) =\n                            2\n                      x 4 + x 3 + x2 + x\n        C f (x) =\n                                2\n                      x4 + 2x3 + x2\n        D f (x) =\n                            4\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                        \u0014\u001b"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following statement:\n\n               (∗) If f (x) is an integer for every integer x, then f  (x) is an integer for\n                   every integer x.\n\n        Which one of the following is a counterexample to (∗)?\n\n                  x3 + x + 1"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "f (x) =\n                      4\n                      x 4 + x2 + x"
+        },
+        {
+          "label": "B",
+          "rawText": "f (x) =\n                            2\n                      x 4 + x 3 + x2 + x"
+        },
+        {
+          "label": "C",
+          "rawText": "f (x) =\n                                2\n                      x4 + 2x3 + x2"
+        },
+        {
+          "label": "D",
+          "rawText": "f (x) =\n                            4\n\n\n\n\n8&/(6"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "For a function to be a counterexample to (∗), it must be the case that f(x) is an integer for every\ninteger x, but for which f 0 (x) is not an integer for every integer x.\nWe can start by substituting in x = 0 and x = 1 into the given functions to see whether f(x) is\neven potentially an integer for every integer x:\n\nA f(0) = 14 . This cannot be a counterexample.\n\nB f(0) = 0, f(1) = 32 . This cannot be a counterexample.\n\nC f(0) = 0, f(1) = 2. This could potentially be a counterexample.\n\nD f(0) = 0, f(1) = 1. This could potentially be a counterexample.\n\nSo we now only need to consider C and D.\nOur next step is to differentiate them and then substitute x = 0 and x = 1 into the derivatives.\n\n              4x3 + 3x2 + 2x + 1 0\nC f 0 (x) =                     , f (0) = 12 , so this is potentially a counterexample.\n                      2\n              4x3 + 6x2 + 2x 0\nD f 0 (x) =                 , f (0) = 0, f 0 (1) = 4.\n                     4\n\nIt therefore seems most likely that C is a counterexample and D is not. To prove this, we need\nto show that for C, f(x) is an integer for every integer x, and that for D, either f(x) is not an\ninteger for some integer x or that f 0 (x) is an integer for every integer x.\nFor the purposes of the test, it probably makes most sense at this point to choose the answer C\nand move on, but we will go on here to complete the solution.\nFor C, we have\n                                     x(x3 + x2 + x + 1)   x(x + 1)(x2 + 1)\n                            f(x) =                      =\n                                             2                   2\nWe see that x(x + 1) is even if x is even and also if x is odd, so x(x + 1)(x2 + 1) is even for every\ninteger x, hence f(x) is an integer for every integer x. Therefore C is a counterexample.\nFor D, we have\n                                          x2 (x2 + 2x + 1)   x2 (x + 1)2\n                                 f(x) =                    =\n                                                  4               4\nSince x(x + 1) is even for every integer x, as we just showed, x2 (x + 1)2 is a multiple of 4 for\nevery integer x, and thus f(x) is an integer for every integer x.\nFor the derivative,\n                                  x(2x2 + 3x + 1)     x(x + 1)(2x + 1)\n                             f 0 (x) =             =\n                                         2                    2\n                                                 0\nand as before, the numerator is always even, so f (x) is an integer for every integer x. Therefore\nD is not a counterexample.\n\n\n\n\nVersion 1.0, April 2019                                                                       Page 18\n\n                                                                                          © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            18
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            19
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q17",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 17,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "17     A set S of whole numbers is called stapled if and only if for every whole number a\n        which is in S there exists a prime factor of a which divides at least one other number\n        in S.\n\n        Let T be a set of whole numbers. Which of the following is true if and only if T is\n        not stapled?\n\n        A For every number a which is in T , there is no prime factor of a which\n          divides every other number in T .\n\n        B For every number a which is in T , there is no prime factor of a which\n          divides at least one other number in T .\n\n        C For every number a which is in T , there is a prime factor of a which\n          does not divide any other number in T .\n\n        D For every number a which is in T , there is a prime factor of a which\n          does not divide at least one other number in T .\n\n        E      There exists a number a which is in T such that there is no prime factor of a\n               which divides every other number in T .\n\n        F      There exists a number a which is in T such that there is no prime factor of a\n               which divides at least one other number in T .\n\n        G There exists a number a which is in T such that there is a prime factor of a\n          which does not divide any other number in T .\n\n        H There exists a number a which is in T such that there is a prime factor of a\n          which does not divide at least one other number in T .\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u0014\u001c                                    >7XUQ\u0003RYHU"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A set S of whole numbers is called stapled if and only if for every whole number a\n        which is in S there exists a prime factor of a which divides at least one other number\n        in S.\n\n        Let T be a set of whole numbers. Which of the following is true if and only if T is\n        not stapled?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "For every number a which is in T , there is no prime factor of a which\n          divides every other number in T ."
+        },
+        {
+          "label": "B",
+          "rawText": "For every number a which is in T , there is no prime factor of a which\n          divides at least one other number in T ."
+        },
+        {
+          "label": "C",
+          "rawText": "For every number a which is in T , there is a prime factor of a which\n          does not divide any other number in T ."
+        },
+        {
+          "label": "D",
+          "rawText": "For every number a which is in T , there is a prime factor of a which\n          does not divide at least one other number in T ."
+        },
+        {
+          "label": "E",
+          "rawText": "There exists a number a which is in T such that there is no prime factor of a\n               which divides every other number in T ."
+        },
+        {
+          "label": "F",
+          "rawText": "There exists a number a which is in T such that there is no prime factor of a\n               which divides at least one other number in T ."
+        },
+        {
+          "label": "G",
+          "rawText": "There exists a number a which is in T such that there is a prime factor of a\n          which does not divide any other number in T ."
+        },
+        {
+          "label": "H",
+          "rawText": "There exists a number a which is in T such that there is a prime factor of a\n          which does not divide at least one other number in T .\n\n\n\n\n8&/(6                                                                          >7XUQRYHU"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We begin with the original statement with S replaced by T :\n\n      T is stapled if and only if for every whole number a which is in T , there exists\n      a prime factor of a which divides at least one other number in T .\n\nTherefore, negating this:\n\n      T is not stapled if and only if it is not the case that for every whole number a\n      which is in T , there exists a prime factor of a which divides at least one other\n      number in T .\n\nWe can negate the outer ‘for every’ to get ‘there exists . . . such that it is not the case\nthat . . . ’:\n\n      T is not stapled if and only if there exists a whole number a which is in T such\n      that it is not the case that there exists a prime factor of a which divides at least\n      one other number in T .\n\nSo the answer is one of E, F, G, H.\nOur current phrasing is ‘it is not the case that there exists’; we could convert this into ‘for\nevery . . . , it is not the case that . . . ’, but none of these options use this wording. Instead, E,\nF and G use the wording ‘there is no prime factor’, which is the same as ‘there does not exist a\nprime factor’, which in turn is the same as ‘it is not the case that there exists a prime factor’.\nSo we can rewrite the previous statement as:\n\n      T is not stapled if and only if there exists a whole number a which is in T such\n      that there is no prime factor of a which divides at least one other number in T .\n\nHence the correct answer is F.\n\n\n\n\nVersion 1.0, April 2019                                                                      Page 19\n\n                                                                                         © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            19
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            20
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q18",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 18,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "18     Consider the following problem:\n\n                                            \b         n       \b               10\n                                                1                 1\n               Solve the inequality                       <                        , where n is a positive integer.\n                                                4                 32\n\n        A student produces the following argument:\n                             \b n \b          10\n                               1         1\n                                    <\n                               4        32\n                                                                                                         (I)\n                                    \b           n                 \b            10\n                                        1                              1\n                            log 1                   < log 1\n                                2       4                     2       32\n                                                                                                         (II)\n                                        \b                                 \b\n                                            1                                 1\n                            n log 1                 < 10 log 1\n                                    2       4                     2           32\n                                                                                                         (III)\n                                                                 1\n                                                      10 log 1 ( 32 )\n                                                                      2\n                                                n<\n                                                          log 1 ( 14 )\n                                                                  2\n\n                                                                                                         (IV)\n                                                      10 × 5\n                                                n<           = 25\n                                                         2\n                                                                                                         (V)\n                                                1 ⩽ n ⩽ 24\n\n\n        Which step (if any) in the argument is invalid?\n\n        A There are no invalid steps; the argument is correct\n\n        B Only step (I) is invalid; the rest are correct\n\n        C Only step (II) is invalid; the rest are correct\n\n        D Only step (III) is invalid; the rest are correct\n\n        E      Only step (IV) is invalid; the rest are correct\n\n        F      Only step (V) is invalid; the rest are correct\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                                              \u0015\u0013"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following problem:\n\n                                            E         n       E               10\n                                                1                 1\n               Solve the inequality                       <                        , where n is a positive integer.\n                                                4                 32\n\n        A student produces the following argument:\n                             E n E          10\n                               1         1\n                                    <\n                               4        32\n                                                                                                         (I)\n                                    E           n                 E            10\n                                        1                              1\n                            log 1                   < log 1\n                                2       4                     2       32\n                                                                                                         (II)\n                                        E                                 E\n                                            1                                 1\n                            n log 1                 < 10 log 1\n                                    2       4                     2           32\n                                                                                                         (III)\n                                                                 1\n                                                      10 log 1 ( 32 )\n                                                                      2\n                                                n<\n                                                          log 1 ( 14 )\n                                                                  2\n\n                                                                                                         (IV)\n                                                      10 × 5\n                                                n<           = 25\n                                                         2\n                                                                                                         (V)\n                                                1 ⩽ n ⩽ 24\n\n\n        Which step (if any) in the argument is invalid?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "There are no invalid steps; the argument is correct"
+        },
+        {
+          "label": "B",
+          "rawText": "Only step (I) is invalid; the rest are correct"
+        },
+        {
+          "label": "C",
+          "rawText": "Only step (II) is invalid; the rest are correct"
+        },
+        {
+          "label": "D",
+          "rawText": "Only step (III) is invalid; the rest are correct"
+        },
+        {
+          "label": "E",
+          "rawText": "Only step (IV) is invalid; the rest are correct"
+        },
+        {
+          "label": "F",
+          "rawText": "Only step (V) is invalid; the rest are correct\n\n\n\n\n8&/(6"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We could first check to see whether\n                                  \u0001 the answer makes sense. If we substitute n = 1 into the\n                                1 10\noriginal equation, we get 41 < 32    , which is clearly nonsense, so there has to be a mistake\nsomewhere in the argument.\nThere are two straightforward approaches to finding the mistake: one is to check that the logic\nof each step works, the other is to try a value of n which either does or does not solve the original\ninequality, and check that each step works for this value of n. Since we know that the solution\nis wrong, it must fail somewhere, at least when n = 1.\n\nApproach 1: checking the logic\nClearly step (V) is correct, so the mistake must be earlier.\nStep (I) applies the same function to both sides of an inequality, so it looks fine.\nStep (II) is just a simplification of the logarithm expressions using the power rule. The powers\nare positive integers, and both 14 and 321\n                                            are positive, so this step is fine.\nStarting from the other end, step (IV) is just a calculation, and we can check quite easily that\nit is correct.\nStep (III) looks like it is probably wrong, as we are performing a division with an inequality.\nHowever, with more care, we can calculate log 1 41 = 2 (as we need to do to check step (IV)\n                                                     \u0001\n                                                 2\nanyway), so step (III) is just dividing by 2, and is actually fine.\nUnfortunately, though, every step looks fine.\nWorking through them once more, steps (IV) and (V) are certainly fine, as is step (III). We\nhave argued that step (II) is correct, so by elimination it must be step (I) which is wrong.\nIt is helpful to sketch a graph of y = log 1 x to understand why step (I) is wrong. We have\n                                                2\nlog 1 ( 12 ) = 1, log 1 1 = 0, log 1 2 = −1, so the graph looks like this:\n   2              2            2\n\n\n\n                                   y\n\n\n\n\n                                                                             x\n                                   0   1\n\n\n\n\nSo log 1 x is a decreasing function: if x < y, then log 1 x > log 1 y; in other words, log 1 reverses\n       2                                                2         2                        2\nthe direction of an inequality. Therefore step (I) is incorrect: the inequality should have been\nreversed in this step.\nThe correct answer is therefore B.\n\n\n\n\nVersion 1.0, April 2019                                                                     Page 20\n\n                                                                                        © UCLES 2019\n\f\nTest of Mathematics for University Admission, 2017 Paper 2 Solutions\n\n\nApproach 2: substituting a value of n\nWe have already shown that n = 1 does not satisfy the original inequality, yet it is given as\na solution at the end of step (V). So we use this value of n to find at least one error in the\nargument.\nNote that this approach is not guaranteed to work: there may be other errors in the argument\nthat will escape detection by this method, but given that the options tell us that only one step\nis invalid, it will be sufficient for our purposes.\nIt will help us with our calculations if we write everything in terms of powers of 21 .\nThe original inequality can be written as\n                                          \u0012 \u00132n \u0012 \u001350\n                                           1     1\n                                               <\n                                           2     2\n\nSubstituting n = 1 gives\n                                           \u0012 \u00132 \u0012 \u001350\n                                            1    1\n                                               <\n                                            2    2\nwhich is not true.\nAfter step (I), the inequality reads\n                                          \u0012 \u00132n         \u0012 \u001350\n                                           1             1\n                                    log 1       < log 1\n                                        2  2          2  2\n\nSubstituting n = 1 gives\n                                             \u0012 \u00132         \u0012 \u001350\n                                              1            1\n                                       log 1      < log 1\n                                           2  2         2  2\nwhich we can simplify to\n                                               2 < 50\nwhich is true.\nSo something has gone wrong in step (I), and this is where the error lies.\n\n      Commentary: There is a slightly subtle question about whether the student intended\n      each of the steps in this argument to be reversible. For example, if a student started with\n      the statement x + 5 = 8 and deduced x > 0, they have made a correct deduction (though\n      not ‘solved the equation’), but the argument is not reversible: x > 0 does not imply that\n      x + 5 = 8. So we will assume that in this case they intend to say that 1 ⩽ n ⩽ 24 are all\n      solutions to the original equation.\n      It follows that step (I) is where the mistake lies, as n = 1 satisfies the inequality after\n      step (I) but not the inequality before it.\n      If we did not make this assumption about the student’s intentions, we could repeat the\n      argument above with a value of n which does satisfy the original inequality, such as\n      n = 100; then the first inequality is true but the second inequality, obtained after step (I),\n      is false, so the proposed implication is false.\n\n\n\n\nVersion 1.0, April 2019                                                                       Page 21\n\n                                                                                          © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            20
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            21,
+            22
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q19",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 19,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "19     Which one of the following is a suﬃcient condition for the equation\n        x3 − 3x2 + a = 0, where a is a constant, to have exactly one real root?\n\n        A a>0\n\n        B a⩽0\n\n        C a⩾4\n\n        D a<4\n\n        E      |a| > 4\n\n        F      |a| ⩽ 4\n\n        G a = 94\n\n        H |a| = 32\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                   \u0015\u0014                                 >7XUQ\u0003RYHU"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Which one of the following is a suﬃcient condition for the equation\n        x3 − 3x2 + a = 0, where a is a constant, to have exactly one real root?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "a>0"
+        },
+        {
+          "label": "B",
+          "rawText": "a⩽0"
+        },
+        {
+          "label": "C",
+          "rawText": "a⩾4"
+        },
+        {
+          "label": "D",
+          "rawText": "a<4"
+        },
+        {
+          "label": "E",
+          "rawText": "|a| > 4"
+        },
+        {
+          "label": "F",
+          "rawText": "|a| ⩽ 4"
+        },
+        {
+          "label": "G",
+          "rawText": "a = 94"
+        },
+        {
+          "label": "H",
+          "rawText": "|a| = 32\n\n\n\n\n8&/(6                                                                    >7XUQRYHU"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We recall that a ‘sufficient condition’ means that if the condition holds, then the equation has\nexactly one real root.\nWe can start by sketching the graph of the cubic y = x3 − 3x2 + a, noting that the impact of\nchanging a is just to translate the graph vertically.\n                                                 dy                dy\nWe differentiate to find the stationary points: dx  = 3x2 − 6x, so dx = 0 when x = 0 and x = 2,\nso the stationary points are at (0, a) and (2, a − 4).\nSo the graph looks like this:\n\n                                         y\n\n\n\n\n                                     a\n\n\n\n                                              (2, a − 4)              x\n                                         0\n\n\n\n\nThere will be one real root for the equation x3 − 3x2 + a = 0 if either the local maximum lies\nbelow the x-axis or if the local minimum lies above the x-axis, as in the case sketched.\nThe first occurs when a < 0, the second when a − 4 > 0 or equivalently, when a > 4.\nSo a necessary and sufficient condition is a < 0 or a > 4. This does not, however, appear as\none of the options, so we need to go through them to see which one is sufficient. (Recall from\nearlier that sufficient means that if this condition holds, then the equation has exactly one real\nroot, but not necessarily the other way round.)\n\nA This includes a = 1, which gives more than one real root.\nB This includes a = 0, which gives more than one real root (as the minimum lies on the x-axis).\nC This includes a = 4, which gives more than one real root (as the maximum lies on the x-axis).\nD This includes a = 1 again.\nE This is a > 4 or a < −4, both of which are part of the valid range, so this is a sufficient\n  condition.\nF This includes a = 1 again.\nG This gives more than one real root.\nH a = 32 gives more than one real root.\n\nSo the correct answer is E.\n\n\nVersion 1.0, April 2019                                                                   Page 22\n\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            21
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            23
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2017-p2-q20",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2017-p2",
+      "edition": "2017",
+      "paper": 2,
+      "questionNumber": 20,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "20     I have forgotten my 5-character computer password, but I know that it consists of\n        the letters a, b, c, d, e in some order. When I enter a potential password into the\n        computer, it tells me exactly how many of the letters are in the correct position.\n\n        When I enter abcde, it tells me that none of the letters are in the correct position.\n        The same happens when I enter cdbea and eadbc.\n\n        Using the best strategy, how many further attempts must I make in order to\n        guarantee that I can deduce the correct password?\n\n        A None: I can deduce it immediately\n\n        B One\n\n        C Two\n\n        D Three\n\n        E      More than three\n\n\n\n\n                                           \b\u0011\u0007\u0003\u0012 \u0003\u0017\b\u0016\u0017\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0015\u0015"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "I have forgotten my 5-character computer password, but I know that it consists of\n        the letters a, b, c, d, e in some order. When I enter a potential password into the\n        computer, it tells me exactly how many of the letters are in the correct position.\n\n        When I enter abcde, it tells me that none of the letters are in the correct position.\n        The same happens when I enter cdbea and eadbc.\n\n        Using the best strategy, how many further attempts must I make in order to\n        guarantee that I can deduce the correct password?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "None: I can deduce it immediately"
+        },
+        {
+          "label": "B",
+          "rawText": "One"
+        },
+        {
+          "label": "C",
+          "rawText": "Two"
+        },
+        {
+          "label": "D",
+          "rawText": "Three"
+        },
+        {
+          "label": "E",
+          "rawText": "More than three\n\n\n\n\n                                           ED E\n\n\n8&/(6"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can write this out in a grid to see what the current state of knowledge is.\n\n                                                  Position\n                                              1   2 3 4       5\n                                   Tried      a   b c d       e\n                                              c   d b e       a\n                                              e   a d b       c\n                                   Possible   b   c a a       b\n                                              d   e e c       d\n\nSo positions 1 and 5 contain b and d in some order, while positions 2, 3, 4 contain either cea or\neac in that order.\nWe certainly do not know the correct password yet.\nWe could sensibly try bcead as our next attempt. What might we be told in response?\nIf we have the b and d in the correct order, these 2 letters will be correct, otherwise neither is\ncorrect.\nIf we have the middle three letters cea in the correct order, then these 3 letters will be correct,\notherwise none of them is.\nSo:\n\n•     if both are correct, the computer will tell us that 5 letters are correct, and we are done;\n\n•     if the outer pair are correct but the middle ones are not, the computer will tell us that\n      2 letters are correct, and we can deduce that the correct password is beacd;\n\n•     if the outer pair are wrong but the middle ones are correct, the computer will tell us that\n      3 letters are correct, and we can deduce that the correct password is dceab;\n\n•     if both are wrong, the computer will tell us that 0 letters are correct, and we can deduce\n      that the correct password is deacb.\n\nSince the four cases give four distinct responses by the computer (0, 2, 3, 5 correct letters),\nwe can distinguish between them, and therefore deduce the correct password with just this one\nfurther attempt.\nThe correct answer is B.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 23\n\n                                                                                      © UCLES 2019\n\f\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support:\nadmissionstesting.org/help"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2017-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+          "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+          "pages": [
+            22
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2017-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+          "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+          "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+          "pages": [
+            24,
+            25
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    }
+  ]
+}

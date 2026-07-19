@@ -1,4 +1,4 @@
-import { copyFile, mkdir, readFile } from "node:fs/promises";
+import { copyFile, mkdir, readFile, rm } from "node:fs/promises";
 import { join, relative, resolve, sep } from "node:path";
 import { pathToFileURL } from "node:url";
 import { parseAnswerKey } from "./extraction.js";
@@ -13,8 +13,8 @@ interface OnlinePaperRecord {
   paper: 1 | 2;
   durationMinutes: 75;
   questionCount: 20;
-  deliveryMode: "source-pdf-answer-sheet";
-  publicDocumentPath: string;
+  deliveryMode: "structured" | "source-pdf-answer-sheet";
+  publicDocumentPath: string | null;
   sourceQuestionPath: string;
   sourceAnswerPath: string;
   questionSourceSha256: string;
@@ -40,6 +40,18 @@ const legacyPageMaps: Readonly<Record<string, readonly number[]>> = {
   "tmua-practice-2016-p1": [3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 9, 10, 10, 11, 11, 12, 12, 13, 14],
   "tmua-practice-2016-p2": [3, 3, 4, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 14, 15, 16, 17, 18, 19],
 };
+
+const structuredPaperIds = new Set([
+  "tmua-specimen-p1", "tmua-specimen-p2",
+  "tmua-practice-2016-p1", "tmua-practice-2016-p2",
+  "tmua-2017-p1", "tmua-2017-p2",
+  "tmua-2018-p1", "tmua-2018-p2",
+  "tmua-2019-p1", "tmua-2019-p2",
+  "tmua-2020-p1", "tmua-2020-p2",
+  "tmua-2021-p1", "tmua-2021-p2",
+  "tmua-2022-p1", "tmua-2022-p2",
+  "tmua-2023-p1", "tmua-2023-p2",
+]);
 
 function paperLabel(edition: string): string {
   if (edition === "specimen") return "Early specimen";
@@ -117,7 +129,10 @@ export async function buildOnlinePaperManifest(input: {
     }
 
     const assetName = `${paper.id}.pdf`;
-    await copyFile(questionPath, join(outputDirectory, assetName));
+    const structured = structuredPaperIds.has(paper.id);
+    const publicAssetPath = join(outputDirectory, assetName);
+    if (structured) await rm(publicAssetPath, { force: true });
+    else await copyFile(questionPath, publicAssetPath);
     onlinePapers.push({
       id: paper.id,
       edition: paper.edition,
@@ -125,8 +140,8 @@ export async function buildOnlinePaperManifest(input: {
       paper: paper.paper,
       durationMinutes: 75,
       questionCount: 20,
-      deliveryMode: "source-pdf-answer-sheet",
-      publicDocumentPath: `/papers/tmua/${assetName}`,
+      deliveryMode: structured ? "structured" : "source-pdf-answer-sheet",
+      publicDocumentPath: structured ? null : `/papers/tmua/${assetName}`,
       sourceQuestionPath: questionSource.canonicalPath,
       sourceAnswerPath: answerSource.canonicalPath,
       questionSourceSha256: questionSource.sha256,

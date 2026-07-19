@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16   In this question, a1, …, a 100 and b1, …, b 100 and c1, …, c 100 are three sequences of integers\n     such that\n\n                                   an  bn + cn\n\n     for each n.\n\n     Which of the following statements must be true?\n\n          I     (minimum of a1, …, a 100 )  (minimum of b1, …, b 100 ) + (minimum of c1, …, c 100 )\n\n          II    (minimum of a1, …, a 100 )  (minimum of b1, …, b 100 ) + (minimum of c1, …, c 100 )\n\n          III   (maximum of a1, …, a 100 )  (maximum of b1, …, b 100 ) + (maximum of c1, …, c 100 )\n\n     A   none of them\n\n     B   I only\n\n     C   II only\n\n     D   III only\n\n     E   I and II only\n\n     F   I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                                  18"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "In this question, a1, …, a 100 and b1, …, b 100 and c1, …, c 100 are three sequences of integers\n     such that\n\n                                   an  bn + cn\n\n     for each n.\n\n     Which of the following statements must be true?\n\n          I     (minimum of a1, …, a 100 )  (minimum of b1, …, b 100 ) + (minimum of c1, …, c 100 )\n\n          II    (minimum of a1, …, a 100 )  (minimum of b1, …, b 100 ) + (minimum of c1, …, c 100 )\n\n          III   (maximum of a1, …, a 100 )  (maximum of b1, …, b 100 ) + (maximum of c1, …, c 100 )"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "For each of these, we can try to construct a counterexample, and if that doesn’t work, we may\nunderstand why the statement must be true.\nFor simplicity in the explanations below, let’s write\n\n                                Amin = minimum of a1 , . . . , a100\n                                Bmin = minimum of b1 , . . . , b100\n                                Cmin = minimum of c1 , . . . , c100\n\nand similarly for Amax etc.\n\nI    Let’s suppose that Bmin = 0 and Cmin = 0. Can we then make the minimum of the an s\n     greater than zero?\n     Yes, we can: if we take b1 = 0 and the rest of the bn s to be 100, and we take c100 = 0 and\n     the rest of the cn s to be 100, then we can have an = 100 for every n, so the minimum of\n     the an s is 100.\n     Therefore this statement is not necessarily true.\n\nII   If we try the same example as in I, we find that Amin = 100, which is greater than Bmin +\n     Cmin , so the inequality holds in this case.\n     But to get a counterexample, we want to make Amin small. Helpfully, the condition an ≤\n     bn + cn allows us to make each an as small as we like. So if we take an = 0, bn = 1 and\n     cn = 1 for all n, then the condition will be satisfied for each n, but we will have Amin = 0\n     and Bmin = Cmin = 1, so Amin < Bmin + Cmin in this case.\n     Therefore this statement is not necessarily true either.\n\nIII Both of the counterexamples we used for I and II satisfy this statement. It is not obvious\n    how to construct a counterexample: every simple example satisfies this statement. So let\n    us instead try to prove it.\n     Each an satisfies the condition an ≤ bn + cn . Now bn ≤ Bmax and cn ≤ Cmax for each n,\n     so an ≤ Bmax + Cmax for each n. But this means that the maximum of all of the an s also\n     satisfies this condition, that is Amax ≤ Bmax + Cmax , so the given statement must be true.\n\nTherefore only statement III must be true, and the correct answer is option D.\n\n\n\n\nVersion 1.0, July 2023                                                                   Page 18"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

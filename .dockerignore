@@ -1,0 +1,13 @@
+.git
+.github
+.worktrees
+.superpowers
+node_modules
+dist
+.env*
+!.env.example
+content/official/raw
+Tmua
+tmp
+output
+*.log

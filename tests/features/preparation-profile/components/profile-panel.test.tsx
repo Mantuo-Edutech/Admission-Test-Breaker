@@ -24,7 +24,7 @@ describe("progressive preparation profile panel", () => {
     ).toBeInTheDocument();
     expect(screen.queryByRole("link", { name: "先浏览 TMUA 内容" })).not.toBeInTheDocument();
     expect(screen.getByText(/只保存在这台设备/)).toBeInTheDocument();
-    expect(screen.queryByText(/\bAI\b|Token|付费/u)).not.toBeInTheDocument();
+    expect(screen.queryByText(/AI 解读|Token|付费/u)).not.toBeInTheDocument();
   });
 
   it("saves an exact CAIE qualification and module selection", async () => {
@@ -92,5 +92,45 @@ describe("progressive preparation profile panel", () => {
     for (const label of ["P1", "P2", "P3", "P4", "M1", "M2", "S1", "S2", "D1"]) {
       expect(within(moduleGroup).getByRole("checkbox", { name: new RegExp(`^${label}`, "u") })).toBeInTheDocument();
     }
+  });
+
+  it("offers all four IB mathematics routes with bilingual topic selection", async () => {
+    const user = userEvent.setup();
+    renderPanel();
+
+    await user.click(screen.getByRole("radio", { name: /IB Diploma Programme/u }));
+    for (const route of [
+      /Analysis & Approaches SL/u,
+      /Analysis & Approaches HL/u,
+      /Applications & Interpretation SL/u,
+      /Applications & Interpretation HL/u,
+    ]) {
+      expect(screen.getByRole("checkbox", { name: route })).toBeInTheDocument();
+    }
+    await user.click(screen.getByRole("checkbox", { name: /Analysis & Approaches HL/u }));
+    const modules = screen.getByLabelText(/Analysis & Approaches HL.*模块/u);
+    expect(within(modules).getByRole("checkbox", { name: /Functions · 函数/u })).toBeInTheDocument();
+    expect(within(modules).getByRole("checkbox", { name: /Calculus · 微积分/u })).toBeInTheDocument();
+  });
+
+  it("saves completed AP units instead of treating an AP course title as full coverage", async () => {
+    const user = userEvent.setup();
+    const onSave = renderPanel();
+
+    await user.click(screen.getByRole("radio", { name: /AP \/ US Curriculum/u }));
+    await user.click(screen.getByRole("checkbox", { name: /AP Precalculus/u }));
+    const modules = screen.getByLabelText(/AP Precalculus.*模块/u);
+    await user.click(within(modules).getByRole("checkbox", { name: /Unit 1.*多项式与有理函数/u }));
+    await user.click(within(modules).getByRole("checkbox", { name: /Unit 2.*指数与对数函数/u }));
+    await user.click(screen.getByRole("radio", { name: /做过少量题/u }));
+    await user.click(screen.getByRole("button", { name: "保存并查看知识覆盖" }));
+
+    expect(onSave).toHaveBeenCalledWith(expect.objectContaining({
+      curriculumSystem: "ap",
+      selections: [{
+        qualificationId: "ap-precalculus-effective-fall-2026",
+        unitIds: ["u1", "u2"],
+      }],
+    }));
   });
 });

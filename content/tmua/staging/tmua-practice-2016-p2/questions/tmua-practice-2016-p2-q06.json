@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q06",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 6,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "6\n\n͸\u0003    \u0017\u0003 \u0003\u0003 \u0003݂ଵ ሺ‫ݔ‬ሻǡ\u0003݂ଶ ሺ‫ݔ‬ሻǡ\u0003݂ଷ ሺ‫ݔ‬ሻǡ\u0003ǥ\u0003\u0003\u0003\u0003ǣ\u0003\n      \u0003\n                                                           ݂ଵ ሺ‫ݔ‬ሻ ൌ ‫ݔ‬ଵ଴ \u0003\n      \u0003\n                                 \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003݂௡ାଵ ሺ‫ݔ‬ሻ ൌ ‫݂ݔ‬௡ᇱ ሺ‫ݔ‬ሻ\u0003\u0003\u0003\u0003\u0003\u0003݊ ൒ ͳ\u0003\n      \u0003\n                       ௗ௙೙ ሺ௫ሻ\n      \u0003݂௡ᇱ ሺ‫ݔ‬ሻ ൌ ௗ௫       \u0003\n      \u0003\n        \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\n                                                        ଶ଴\n\n                                                        ෍ ݂௡ ሺ‫ݔ‬ሻ\u0003\n                                                        ௡ୀଵ\n      \u0003\n\n            ‫ݔ‬ଵ଴ ሺ‫ ݔ‬ଶ଴ െ ͳሻ\n      \u0004\u0003                   \u0003\n                ‫ݔ‬െͳ\n      \u0003\n            ‫ݔ‬ଵ଴ ሺ‫ ݔ‬ଶଵ െ ͳሻ\n      \u0005\u0003                   \u0003\n                ‫ݔ‬െͳ\n      \u0003\n           ͳͲଶ଴ െ ͳ ଵ଴\n      \u0006\u0003 ቆ           ቇ‫\u0003 ݔ‬\n               ͻ\n      \u0003\n           ͳͲଶଵ െ ͳ ଵ଴\n      \u0007\u0003 ቆ           ቇ‫\u0003 ݔ‬\n               ͻ\n      \u0003\n           ሺͳͲ‫ݔ‬ሻଶ଴ െ ͳ ଵ଴\n      \b\u0003 ቆ               ቇ‫\u0003 ݔ‬\n             ͳͲ‫ ݔ‬െ ͳ\n      \u0003\n           ሺͳͲ‫ݔ‬ሻଶଵ െ ͳ ଵ଴\n        \u0003 ቆ              ቇ‫\u0003 ݔ‬\n             ͳͲ‫ ݔ‬െ ͳ\n      \u0003\n        \u0003 ‫ݔ‬ଵ଴ ൅ ‫ ݔ‬ଽ ൅ ‫ ଼ ݔ‬൅ ‫ ڮ‬൅ ‫ ݔ‬൅ ͳ\u0003\n\n      \u0003\n          \u0003 ‫ݔ‬ଵ଴ ൅ ͳͲ‫ ݔ‬ଽ ൅ ሺͳͲ ൈ ͻሻ‫ ଼ ݔ‬൅ ‫ ڮ‬൅ ሺͳͲ ൈ ͻ ൈ ǥ\u0003ൈ ʹሻ‫ ݔ‬൅ ሺͳͲ ൈ ͻ ൈ ǥ\u0003ൈ ʹ ൈ ͳሻ\u0003\n\n\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "6      ݂ଵ ሺ‫ݔ‬ሻǡ݂ଶ ሺ‫ݔ‬ሻǡ݂ଷ ሺ‫ݔ‬ሻǡǥǣ\n      \n                                                           ݂ଵ ሺ‫ݔ‬ሻ ൌ ‫ݔ‬ଵ଴ \n      \n                                 ݂௡ାଵ ሺ‫ݔ‬ሻ ൌ ‫݂ݔ‬௡ᇱ ሺ‫ݔ‬ሻ݊ ൒ 1\n      \n                       ௗ௙೙ ሺ௫ሻ\n      ݂௡ᇱ ሺ‫ݔ‬ሻ ൌ ௗ௫       \n      \n        \n                                                        ଶ଴\n\n                                                        ෍ ݂௡ ሺ‫ݔ‬ሻ\n                                                        ௡ୀଵ\n      \n\n            ‫ݔ‬ଵ଴ ሺ‫ ݔ‬ଶ଴ െ 1ሻ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "‫ݔ‬െ1\n      \n            ‫ݔ‬ଵ଴ ሺ‫ ݔ‬ଶଵ െ 1ሻ"
+    },
+    {
+      "label": "B",
+      "rawText": "‫ݔ‬െ1\n      \n           10ଶ଴ െ 1 ଵ଴"
+    },
+    {
+      "label": "C",
+      "rawText": "ቆ           ቇ‫ ݔ‬\n               9\n      \n           10ଶଵ െ 1 ଵ଴"
+    },
+    {
+      "label": "D",
+      "rawText": "ቆ           ቇ‫ ݔ‬\n               9\n      \n           ሺ10‫ݔ‬ሻଶ଴ െ 1 ଵ଴"
+    },
+    {
+      "label": "E",
+      "rawText": "ቆ               ቇ‫ ݔ‬\n             10‫ ݔ‬െ 1\n      \n           ሺ10‫ݔ‬ሻଶଵ െ 1 ଵ଴\n         ቆ              ቇ‫ ݔ‬\n             10‫ ݔ‬െ 1\n      \n         ‫ݔ‬ଵ଴ ൅ ‫ ݔ‬ଽ ൅ ‫ ଼ ݔ‬൅ ‫ ڮ‬൅ ‫ ݔ‬൅ 1\n\n      \n           ‫ݔ‬ଵ଴ ൅ 10‫ ݔ‬ଽ ൅ ሺ10 ൈ 9ሻ‫ ଼ ݔ‬൅ ‫ ڮ‬൅ ሺ10 ൈ 9 ൈ ǥൈ 2ሻ‫ ݔ‬൅ ሺ10 ൈ 9 ൈ ǥൈ 2 ൈ 1ሻ\n\n\n\n\n© UCLES 2016"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We work out the first few functions in the sequence to find a pattern.\n\n                                      f1 (x) = x10\n                                      f2 (x) = x(10x9 ) = 10x10\n                                      f3 (x) = x(100x9 ) = 100x10\n                                      f4 (x) = x(1000x9 ) = 103 x10\n                                      f5 (x) = x(104 x9 ) = 104 x10\n\nand so the pattern is clear: fn (x) = 10n−1 x10 .\nThe sum expands to\n                    20\n                    X\n                          fn (x) = x10 + 10x10 + 102 x10 + 103 x10 + · · · + 1019 x10\n                    n=1\n                                = (1 + 10 + 102 + · · · + 1019 )x10\n                                  \u0012 20      \u0013\n                                    10 − 1\n                                =             x10\n                                     10 − 1\n\nwhere on the final line we have summed the geometric series with a = 1, r = 10, n = 20 using\nthe formula\n                                           a(rn − 1)\n                                     Sn =            .\n                                             r−1\nThe answer is therefore option C.\n\n\n\n\n                                                     9\n                                                                                        © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "3   a, b and c are real numbers.\n\n    Given that ab = ac, which of the following statements must be true?\n\n        I    a=0\n        II   b = 0 or c = 0\n        III b = c\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                          5"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "a, b and c are real numbers.\n\n    Given that ab = ac, which of the following statements must be true?\n\n        I    a=0\n        II   b = 0 or c = 0\n        III b = c"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "It might be tempting to divide by a to get b = c, but a might be zero, and we cannot divide by\nzero. Instead, we can rearrange and factorise to get ab − ac = 0, so a(b − c) = 0. From this, we\ncan deduce that a = 0 or b − c = 0 (or both).\n\nI    This might not be true; we could have b = c instead.\n\nII   This might not be true; we could have b = c = 1, for example.\n\nIII This might not be true; we could have a = 0 instead.\n\nSo the correct answer is A.\n\n\n\n\nc UCLES                                                                                  Page 5"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

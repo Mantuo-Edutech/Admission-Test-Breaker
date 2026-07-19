@@ -9,6 +9,6 @@ describe("committed TMUA extraction staging", () => {
       schemaPath: resolve("content/tmua/schemas/question-revision.schema.json"),
     });
 
-    expect(result).toMatchObject({ bundles: 1, questions: 20, issues: [] });
+    expect(result).toMatchObject({ bundles: 17, questions: 340, issues: [] });
   });
 });

@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "id": "lnat-section-a-starter-v1",
+  "exam": "LNAT",
+  "edition": "Section A Starter · Original v1",
+  "sectionLabel": "Section A Starter",
+  "sectionLabelZh": "文章阅读与推理 · 满托原创短诊断",
+  "durationMinutes": 30,
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本练习依据 LNAT 公开能力与界面范围独立命题，不复制或改写 LNAT 官方练习题、文章或解析。",
+  "sourceAnchors": [
+    {
+      "id": "lnat-preparation-guide",
+      "localPath": "content/official/raw/lnat/Your-Guide-To-Preparing-For-The-LNAT.pdf",
+      "sha256": "b876afae5e82ef0f43cb714c37ed26a08369b3d6714b40e1fca89288829ced08",
+      "usedFor": "reading and argument skill boundary only"
+    },
+    {
+      "id": "lnat-practice-paper-one",
+      "localPath": "content/official/raw/lnat/Practice-Test-2010-paper-1.pdf",
+      "sha256": "6e251cb2cf2eb0d803abe0747707b9f752ccae1d7334e414832bd56625f8f628",
+      "usedFor": "passage-question interaction and four-option format only"
+    }
+  ],
+  "passages": [
+    {
+      "id": "right-to-a-reason",
+      "title": "The Right to a Reason",
+      "content": [
+        {
+          "kind": "paragraph",
+          "runs": [{ "kind": "text", "value": "Public agencies increasingly use automated systems to decide which applications receive early scrutiny, which premises should be inspected, or which cases require a human review. These systems can process information consistently and quickly. Yet a decision may still be difficult to challenge when the person affected cannot discover why it was made. For that reason, agencies should be required to give a meaningful explanation whenever an automated recommendation materially affects an individual." }]
+        },
+        {
+          "kind": "paragraph",
+          "runs": [{ "kind": "text", "value": "Critics raise two objections. First, a detailed explanation may reveal how a system can be manipulated. Second, some statistical models do not translate neatly into a short account of cause and effect. Both points matter, but neither establishes that explanation is impossible. A meaningful explanation need not publish source code or provide instructions for gaming a threshold. It can identify the information that counted against the applicant, describe the general rule applied, name the public body responsible, and provide a route for correcting errors or asking for human reconsideration." }]
+        },
+        {
+          "kind": "paragraph",
+          "runs": [{ "kind": "text", "value": "This requirement may exclude some highly complex systems from the most consequential decisions. That is not an accidental cost. Public bodies already accept limits on efficiency in order to preserve procedural fairness: a hearing takes longer than an unexplained refusal, and a written judgment takes longer than a bare verdict. If an agency cannot give the affected person enough information to identify a factual mistake or challenge an unreasonable rule, the problem lies not merely in communication but in the agency's choice of decision process." }]
+        },
+        {
+          "kind": "paragraph",
+          "runs": [{ "kind": "text", "value": "An explanation standard is therefore not a demand that every citizen understand every line of a model. It is a minimum condition of accountable government. Automation may assist public decisions, but it should not make the grounds of those decisions inaccessible to the people who must live with them." }]
+        }
+      ]
+    },
+    {
+      "id": "late-library-hours",
+      "title": "Late Library Hours",
+      "content": [
+        {
+          "kind": "paragraph",
+          "runs": [{ "kind": "text", "value": "A city tested later opening hours at two public libraries for eight weeks. Recorded evening visits were 30 per cent higher than during the same weeks in the previous year, and 84 per cent of people who completed an in-library survey supported keeping the new hours. The library manager concluded that every branch should remain open until 10 pm throughout the year." }]
+        },
+        {
+          "kind": "paragraph",
+          "runs": [{ "kind": "text", "value": "The pilot is encouraging, but it does not yet support that conclusion. People surveyed inside a library during the additional hours are unusually likely to value those hours. The visit count also records entries rather than individuals: the same students may have visited more often, or shifted visits from the afternoon, without any increase in the number of residents served. Nor did the comparison separate the effect of later opening from other differences between the two years, such as examinations or the temporary closure of a nearby study centre." }]
+        },
+        {
+          "kind": "paragraph",
+          "runs": [{ "kind": "text", "value": "Costs and local conditions matter too. The pilot branches are close to evening bus routes and share security staff with neighbouring civic buildings. A small branch with no late transport may incur a much higher cost per additional user. On the other hand, later hours could be especially valuable during examination periods or in districts where many homes lack quiet study space. These possibilities argue for a better targeted policy, not for abandoning the experiment." }]
+        },
+        {
+          "kind": "paragraph",
+          "runs": [{ "kind": "text", "value": "Before adopting a permanent city-wide schedule, the council should extend the trial across branches with different locations, record unique users as well as entries, compare staffing and security costs, and ask a representative sample of residents—including non-users—why they do or do not visit. The present evidence justifies further testing; it does not justify treating every branch and every month alike." }]
+        }
+      ]
+    },
+    {
+      "id": "old-windows-new-obligations",
+      "title": "Old Windows, New Obligations",
+      "content": [
+        {
+          "kind": "paragraph",
+          "runs": [{ "kind": "text", "value": "Owners of historic buildings are often told both to preserve original windows and to reduce energy use. The two aims can appear incompatible. Manufacturers point to laboratory tests showing that modern sealed units lose less heat than a single pane. Some conservationists reply that replacing any original window destroys irreplaceable evidence of craft and age. Each side turns a relevant consideration into an absolute rule." }]
+        },
+        {
+          "kind": "paragraph",
+          "runs": [{ "kind": "text", "value": "Laboratory performance is not the same as the performance of a whole building. Heat may escape through roofs, floors and uncontrolled gaps; replacing windows can therefore produce a smaller reduction than the headline figure suggests. Conversely, heritage value is not identical in every component. A rare hand-made frame in a prominent room may carry more significance than a badly altered window at the rear. Treating both as equally untouchable can divert limited money from work that would preserve more of the building." }]
+        },
+        {
+          "kind": "paragraph",
+          "runs": [{ "kind": "text", "value": "A sensible policy begins with evidence about the particular building. Repairing joints, adding draught seals, using shutters, or fitting removable secondary glazing may improve comfort while retaining original material. These measures are also comparatively reversible: if they perform poorly or better technology appears, the building has not been permanently altered. Where careful assessment shows that such measures cannot meet an important energy or safety requirement, replacement may be justified, especially for elements of low heritage significance." }]
+        },
+        {
+          "kind": "paragraph",
+          "runs": [{ "kind": "text", "value": "The right presumption is thus neither ‘replace’ nor ‘preserve at any cost’. Decision-makers should prefer the least irreversible intervention capable of meeting a clearly defined objective, after measuring the building rather than relying on slogans. Preservation deserves weight precisely because loss cannot be undone; it does not deserve immunity from evidence." }]
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "lnat-section-a-starter-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "passageId": "right-to-a-reason",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which option best states the main conclusion of the passage?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Automated systems should never be used by public agencies." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every citizen should be taught how statistical models are programmed." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A public agency should provide a meaningful explanation when automation materially affects an individual." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Efficiency should always take priority over procedural fairness." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["lnat-main-conclusion"],
+      "skillTags": ["main-conclusion", "argument-structure"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/lnat/original-practice/section-a-starter-v1.json",
+      "sourceAnswerPath": "content/lnat/original-practice/section-a-starter-v1.json"
+    },
+    {
+      "id": "lnat-section-a-starter-v1-q02",
+      "number": 2,
+      "sourcePage": 1,
+      "passageId": "right-to-a-reason",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "What role do the two objections in the second paragraph play in the passage?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They provide the author's main reasons for prohibiting automation." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They acknowledge practical concerns before the author argues that explanation can still be meaningful." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They show that source code must always be published." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They demonstrate that all statistical models are easy to explain." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["lnat-argument-role"],
+      "skillTags": ["argument-role", "counterargument"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/lnat/original-practice/section-a-starter-v1.json",
+      "sourceAnswerPath": "content/lnat/original-practice/section-a-starter-v1.json"
+    },
+    {
+      "id": "lnat-section-a-starter-v1-q03",
+      "number": 3,
+      "sourcePage": 1,
+      "passageId": "right-to-a-reason",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which statement can most reasonably be inferred from the passage?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A meaningful explanation need not disclose an automated system's complete source code." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A human decision is always fairer than an automated one." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "People affected by public decisions are mainly interested in learning to manipulate them." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Complex statistical systems make no useful recommendations." }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["lnat-inference"],
+      "skillTags": ["inference", "qualification"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/lnat/original-practice/section-a-starter-v1.json",
+      "sourceAnswerPath": "content/lnat/original-practice/section-a-starter-v1.json"
+    },
+    {
+      "id": "lnat-section-a-starter-v1-q04",
+      "number": 4,
+      "sourcePage": 1,
+      "passageId": "right-to-a-reason",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which finding would most strengthen the author's case for requiring meaningful explanations?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Most public agencies purchase computers from more than one supplier." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some applicants prefer receiving decisions quickly." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Software engineers disagree about which programming language is easiest to read." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "When agencies state the material factors and offer review, factual data errors are frequently identified and corrected." }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["lnat-strengthen"],
+      "skillTags": ["strengthen", "relevant-evidence"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/lnat/original-practice/section-a-starter-v1.json",
+      "sourceAnswerPath": "content/lnat/original-practice/section-a-starter-v1.json"
+    },
+    {
+      "id": "lnat-section-a-starter-v1-q05",
+      "number": 5,
+      "sourcePage": 2,
+      "passageId": "late-library-hours",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which option best captures the author's recommendation?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "End the experiment because later opening cannot benefit library users." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Immediately extend every branch's hours throughout the year." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Run a broader, better-measured trial before adopting a targeted permanent policy." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Keep only the two pilot branches open and collect no further evidence." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["lnat-recommendation"],
+      "skillTags": ["conclusion", "policy-recommendation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/lnat/original-practice/section-a-starter-v1.json",
+      "sourceAnswerPath": "content/lnat/original-practice/section-a-starter-v1.json"
+    },
+    {
+      "id": "lnat-section-a-starter-v1-q06",
+      "number": 6,
+      "sourcePage": 2,
+      "passageId": "late-library-hours",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Why does the author treat the 84 per cent survey result with caution?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The percentage was calculated from too many branches." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "People surveyed inside during the extra hours are not representative of all residents." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Surveys cannot record whether anyone supports a policy." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The result proves that only students use libraries." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["lnat-sampling-bias"],
+      "skillTags": ["sampling-bias", "evidence-evaluation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/lnat/original-practice/section-a-starter-v1.json",
+      "sourceAnswerPath": "content/lnat/original-practice/section-a-starter-v1.json"
+    },
+    {
+      "id": "lnat-section-a-starter-v1-q07",
+      "number": 7,
+      "sourcePage": 2,
+      "passageId": "late-library-hours",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which additional evidence would be most useful when deciding whether later hours should be adopted across the city?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The colour of the signs outside each pilot branch." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The manager's personal opinion of the existing opening hours." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The number of books owned by the oldest branch." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Unique users gained and the additional staffing and security cost at branches with different locations." }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["lnat-evidence-evaluation"],
+      "skillTags": ["decision-relevant-evidence", "comparison"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/lnat/original-practice/section-a-starter-v1.json",
+      "sourceAnswerPath": "content/lnat/original-practice/section-a-starter-v1.json"
+    },
+    {
+      "id": "lnat-section-a-starter-v1-q08",
+      "number": 8,
+      "sourcePage": 2,
+      "passageId": "late-library-hours",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "In context, what does the author mean by saying that visits may have been ‘shifted’ from the afternoon?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some evening entries may replace earlier visits rather than represent additional access." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Library staff may have altered the recorded time of every visit." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Residents may have moved permanently to another city." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "All afternoon visitors may have stopped using libraries." }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["lnat-context-meaning"],
+      "skillTags": ["meaning-in-context", "causal-interpretation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/lnat/original-practice/section-a-starter-v1.json",
+      "sourceAnswerPath": "content/lnat/original-practice/section-a-starter-v1.json"
+    },
+    {
+      "id": "lnat-section-a-starter-v1-q09",
+      "number": 9,
+      "sourcePage": 3,
+      "passageId": "old-windows-new-obligations",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which principle does the author ultimately endorse?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Original building material must be preserved in every circumstance." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Use building-specific evidence and prefer the least irreversible measure that can meet a defined objective." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Laboratory figures should determine every building decision without further measurement." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Modern windows should replace all older windows." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["lnat-principle"],
+      "skillTags": ["general-principle", "synthesis"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/lnat/original-practice/section-a-starter-v1.json",
+      "sourceAnswerPath": "content/lnat/original-practice/section-a-starter-v1.json"
+    },
+    {
+      "id": "lnat-section-a-starter-v1-q10",
+      "number": 10,
+      "sourcePage": 3,
+      "passageId": "old-windows-new-obligations",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Why does the author say that laboratory window performance may be insufficient evidence?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "No window can ever be tested in a laboratory." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Historic buildings never lose heat through windows." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The whole building's heat loss and the significance of each component can differ from a headline window figure." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Laboratory tests measure only the age of a frame." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["lnat-evidence-limit"],
+      "skillTags": ["evidence-limit", "scope"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/lnat/original-practice/section-a-starter-v1.json",
+      "sourceAnswerPath": "content/lnat/original-practice/section-a-starter-v1.json"
+    },
+    {
+      "id": "lnat-section-a-starter-v1-q11",
+      "number": 11,
+      "sourcePage": 3,
+      "passageId": "old-windows-new-obligations",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which statement is most consistent with the author's position?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Replacement is justified whenever a new unit has a better laboratory rating." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The heritage significance of every window in a building is identical." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Energy and safety requirements should never affect conservation decisions." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Replacement can be justified when reversible measures cannot meet an important requirement and heritage significance is low." }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["lnat-qualification"],
+      "skillTags": ["qualified-claim", "author-position"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/lnat/original-practice/section-a-starter-v1.json",
+      "sourceAnswerPath": "content/lnat/original-practice/section-a-starter-v1.json"
+    },
+    {
+      "id": "lnat-section-a-starter-v1-q12",
+      "number": 12,
+      "sourcePage": 3,
+      "passageId": "old-windows-new-obligations",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which policy in another context most closely follows the author's reasoning?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Before permanently widening a protected path, test removable surfacing and measure whether it meets the access objective." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Demolish every old station because new stations use less energy in laboratory models." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Reject all changes to a historic park, even when a reversible safety measure is available." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Apply the same intervention to every site without measuring local conditions." }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["lnat-analogy"],
+      "skillTags": ["analogy", "principle-application"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/lnat/original-practice/section-a-starter-v1.json",
+      "sourceAnswerPath": "content/lnat/original-practice/section-a-starter-v1.json"
+    }
+  ]
+}

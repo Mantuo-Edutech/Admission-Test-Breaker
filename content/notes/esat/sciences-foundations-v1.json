@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 1,
+  "id": "esat-sciences-foundations-v1",
+  "version": "0.1.0",
+  "publicationStatus": "teaching-preview",
+  "examId": "esat",
+  "examCycle": "October 2026 and January 2027",
+  "titleZh": "ESAT 理科模块起点复习笔记",
+  "titleEn": "ESAT Science Modules Starting Review Notes",
+  "subtitleZh": "按申请专业只显示你实际需要的 Physics、Chemistry 和 Biology 知识单元、课程差距与第一轮复习方法。",
+  "subtitleEn": "A programme-aware starting review for the Physics, Chemistry and Biology modules you actually need.",
+  "authorship": "满托教研 · MANTUO ORIGINAL",
+  "rightsNotice": "本资料由满托独立撰写。官方 Content Specification 与三份模块 Guide 只用于核对考试事实、知识范围和术语；不复制官方题目、例题、练习或讲解。",
+  "scope": {
+    "includedZh": "Physics、Chemistry、Biology 共 35 个一级知识单元；A-Level/IAL、IB、AP 课程桥接；每模块 3 套起题方法、1 道原创逐步例题和 3 组主动回忆。页面按本人已选择的专业模块过滤。",
+    "includedEn": "Thirty-five top-level science units, curriculum bridges, nine question methods, three original worked examples and nine active-recall prompts, filtered by the student's programme modules.",
+    "remainingZh": "这不是完整教材或完整模考。每个一级单元仍需扩展成细分知识小节、模块训练集和下载版；独立物理、化学、生物教师，双语术语、权利/相似度、中国学生理解和实机终审仍未完成。"
+  },
+  "officialAnchors": [
+    {
+      "id": "esat-content-specification-2027-science",
+      "title": "ESAT Content Specification — October 2026 and January 2027",
+      "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165424/ESAT_Content_Specification.pdf",
+      "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+      "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+      "usedForZh": "核对五模块结构、27 题/40 分钟、独立计时、无计算器、计分规则和理科模块一级知识范围。"
+    },
+    {
+      "id": "esat-physics-guide-2026",
+      "title": "ESAT Guide — Physics",
+      "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103558/ESAT_Guide_Physics.pdf",
+      "localPath": "content/official/raw/esat/ESAT_Guide_Physics.pdf",
+      "sha256": "234651aa05f87112e3455bae420de782683938d8d28950293649a8352dc4729e",
+      "usedForZh": "只核对 Physics 的 P1–P7 范围与官方术语；本站方法、例题和课程桥接均为独立创作。"
+    },
+    {
+      "id": "esat-chemistry-guide-2025",
+      "title": "ESAT Guide — Chemistry",
+      "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/06/25103142/ESAT_GUIDE_Chemistry_June2025.pdf",
+      "localPath": "content/official/raw/esat/ESAT_GUIDE_Chemistry_June2025.pdf",
+      "sha256": "f1cfbc2ec1c44068526deeaac0b8ef7c87e245259cc89f9ed6b7c9124e359353",
+      "usedForZh": "只核对 Chemistry 的 C1–C17 范围与官方术语；不使用官方例题或讲解。"
+    },
+    {
+      "id": "esat-biology-guide-2025",
+      "title": "ESAT Guide — Biology",
+      "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/07/06120052/ESAT_Guide_Biology_June_2025.pdf",
+      "localPath": "content/official/raw/esat/ESAT_Guide_Biology_June_2025.pdf",
+      "sha256": "cd5fd84f56ef0e55722841fcbdacb86eec15b0eddd16a05ea56c5d902d9e125b",
+      "usedForZh": "只核对 Biology 的 B1–B11 范围与官方术语；不复制官方题面。"
+    }
+  ],
+  "examFacts": [
+    {
+      "labelZh": "每个模块",
+      "labelEn": "PER MODULE",
+      "valueZh": "27 道选择题",
+      "valueEn": "27 multiple-choice questions"
+    },
+    {
+      "labelZh": "模块时间",
+      "labelEn": "TIME",
+      "valueZh": "40 分钟，独立计时",
+      "valueEn": "40 minutes, separately timed"
+    },
+    {
+      "labelZh": "工具",
+      "labelEn": "TOOLS",
+      "valueZh": "不可使用计算器",
+      "valueEn": "Calculators are not permitted"
+    },
+    {
+      "labelZh": "计分",
+      "labelEn": "SCORING",
+      "valueZh": "答对 1 分，答错不倒扣",
+      "valueEn": "One mark per correct answer; no negative marking"
+    },
+    {
+      "labelZh": "共同基础",
+      "labelEn": "SHARED FOUNDATION",
+      "valueZh": "所有模块都默认 Mathematics 1 知识",
+      "valueEn": "All modules assume Mathematics 1 knowledge"
+    }
+  ],
+  "curriculumBridges": [
+    {
+      "curriculum": "A-Level / International A-Level Sciences",
+      "status": "strong-start",
+      "statusZh": "对应科目通常覆盖较多",
+      "likelyCoveredZh": [
+        "对应 A-Level Physics、Chemistry 或 Biology 的核心概念与计算",
+        "图表、实验变量、单位、标准方程和科学术语"
+      ],
+      "confirmZh": [
+        "本人实际考试局是否包含全部 ESAT 一级单元，尤其跨章节和 GCSE/IGCSE 回溯内容",
+        "能否在无计算器、40 分钟和混合主题选项下快速调用，而不只是在分章节作业中会做"
+      ],
+      "firstActionZh": "先按本人需要的模块逐项核对知识单元，再把不熟的单元与限时调用问题分开记录。"
+    },
+    {
+      "curriculum": "IB Diploma Sciences",
+      "status": "partial",
+      "statusZh": "HL/SL 与选科决定覆盖",
+      "likelyCoveredZh": [
+        "HL 通常对核心原理、数据分析和实验评价有较强起点",
+        "跨主题解释、图像趋势和证据判断通常可以直接迁移"
+      ],
+      "confirmZh": [
+        "SL 或旧/新 syllabus 与 ESAT 的具体单位是否完全对应",
+        "英国课程常用反应、定性检验、放射性、植物运输或遗传图解是否有直接课程证据"
+      ],
+      "firstActionZh": "不要按 HL/SL 标签直接判定；用 35 单元清单找到没有课程证据或只部分覆盖的条目。"
+    },
+    {
+      "curriculum": "AP Physics / Chemistry / Biology",
+      "status": "partial",
+      "statusZh": "需要按具体 AP 组合核对",
+      "likelyCoveredZh": [
+        "AP Chemistry 与 AP Biology 可覆盖大量核心原理和数据推理",
+        "AP Physics 1/2/C 的组合可覆盖不同部分的力学、电磁、波与热学"
+      ],
+      "confirmZh": [
+        "单一 AP Physics 课程通常不能证明 Physics 七个单元全部覆盖",
+        "化学定性检验、族趋势、金属提取，以及植物生理和人体系统是否在本人课程中学到"
+      ],
+      "firstActionZh": "先按具体 AP 科目组合建立证据，不把一门 AP 课程等同于整个 ESAT 模块。"
+    }
+  ],
+  "modules": [
+    {
+      "id": "physics",
+      "number": "01",
+      "titleZh": "Physics：模型、单位与证据",
+      "titleEn": "Physics — Models, Units and Evidence",
+      "summaryZh": "Physics 的关键不是背更多公式，而是把文字、图、单位和守恒关系快速连成同一个模型，并用边界和数量级排除不可能的选项。",
+      "learningOutcomes": [
+        "逐项识别 P1–P7 的课程证据与缺口",
+        "从图示或文字选择最小充分方程",
+        "用单位、方向、极限与数量级检查答案"
+      ],
+      "knowledgeUnits": [
+        { "id": "physics-electricity", "code": "P1", "labelZh": "静电、电路与电功率", "labelEn": "Electricity" },
+        { "id": "physics-magnetism", "code": "P2", "labelZh": "磁场、电磁感应与变压器", "labelEn": "Magnetism" },
+        { "id": "physics-mechanics", "code": "P3", "labelZh": "运动、力、动量与能量", "labelEn": "Mechanics" },
+        { "id": "physics-thermal", "code": "P4", "labelZh": "传热与热容量", "labelEn": "Thermal physics" },
+        { "id": "physics-matter", "code": "P5", "labelZh": "物态、气体、密度与压强", "labelEn": "Matter" },
+        { "id": "physics-waves", "code": "P6", "labelZh": "波、光、声与电磁波谱", "labelEn": "Waves" },
+        { "id": "physics-radioactivity", "code": "P7", "labelZh": "原子结构、衰变与半衰期", "labelEn": "Radioactivity" }
+      ],
+      "methods": [
+        {
+          "nameZh": "先画系统边界",
+          "nameEn": "DEFINE THE SYSTEM",
+          "signalZh": "题目同时出现多个物体、支路、能量转移或前后状态。",
+          "methodZh": "先标清研究对象、已知方向和初末状态，再选择守恒或连接关系。",
+          "checkZh": "方程中的每个量必须属于同一系统和同一时间区间。"
+        },
+        {
+          "nameZh": "单位先于代数",
+          "nameEn": "UNITS BEFORE ALGEBRA",
+          "signalZh": "数值带前缀、复合单位或题目要求换算输出。",
+          "methodZh": "先写目标单位和必要换算，再代入最少方程；无计算器时优先约分。",
+          "checkZh": "答案量纲、数量级、正负和方向必须同时合理。"
+        },
+        {
+          "nameZh": "用极限排除",
+          "nameEn": "TEST THE LIMIT",
+          "signalZh": "题目问参数增大、图像变化或四个选项只在趋势上不同。",
+          "methodZh": "把变量想成接近零或很大，判断物理量应趋向什么，再比较选项。",
+          "checkZh": "趋势不能违反守恒、稳定状态或已知边界。"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "esat-physics-original-parallel-01",
+          "titleZh": "满托原创例题：并联支路的总电流",
+          "titleEn": "Mantou original — total current in parallel branches",
+          "problemZh": "一个 12 V 电源连接两个并联电阻，电阻分别为 6 Ω 和 4 Ω。忽略电源内阻，电源提供的总电流是多少？",
+          "problemEn": "A 12 V supply is connected to 6-ohm and 4-ohm resistors in parallel. What total current does the supply provide?",
+          "steps": [
+            {
+              "labelZh": "确认连接关系",
+              "bodyZh": "并联支路两端电压相同，因此两个电阻各自承受 12 V。",
+              "math": { "tex": "V_1=V_2=12\\text{ V}", "text": "The voltage across each branch is 12 volts" }
+            },
+            {
+              "labelZh": "分别求支路电流",
+              "bodyZh": "对每个支路使用 I=V/R。",
+              "math": { "tex": "I_1=\\frac{12}{6}=2\\text{ A},\\qquad I_2=\\frac{12}{4}=3\\text{ A}", "text": "The branch currents are 2 amperes and 3 amperes" }
+            },
+            {
+              "labelZh": "在节点合并",
+              "bodyZh": "电源总电流等于流入两个支路的电流之和。",
+              "math": { "tex": "I_{\\mathrm{total}}=I_1+I_2=5\\text{ A}", "text": "The total current is 5 amperes" }
+            }
+          ],
+          "answerZh": "总电流为 5 A。",
+          "trapZh": "把 6 Ω 与 4 Ω 直接相加属于串联模型；先判断连接关系，再选择电压或电流的共同量。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "物理计算写第一行时，最应该先固定什么？", "promptEn": "What should the first line of a physics calculation establish?", "answerZh": "研究系统、量的方向或状态，以及目标单位。", "answerEn": "The system, directions or states, and the target unit." },
+        { "promptZh": "为什么单位检查不能只放在最后？", "promptEn": "Why should unit checks not be left until the end?", "answerZh": "单位能在选方程和代数前暴露不相容的量，也能减少无计算器换算错误。", "answerEn": "Units expose incompatible quantities before algebra and reduce non-calculator conversion errors." },
+        { "promptZh": "什么时候极限判断比精确计算更快？", "promptEn": "When is a limiting-case check faster than exact calculation?", "answerZh": "当选项主要区别在趋势、符号或边界，而不是接近的数值。", "answerEn": "When options differ mainly by trend, sign or boundary rather than close numerical values." }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "number": "02",
+      "titleZh": "Chemistry：粒子、比例与证据链",
+      "titleEn": "Chemistry — Particles, Ratios and Evidence",
+      "summaryZh": "Chemistry 需要在宏观现象、粒子模型、方程比例与实验观察之间切换。先确定反应身份和证据，再做摩尔或电荷计算。",
+      "learningOutcomes": [
+        "逐项识别 C1–C17 的课程证据与缺口",
+        "用粒子、键合和电子变化解释性质与反应",
+        "把方程系数、单位和实验观察连成完整证据链"
+      ],
+      "knowledgeUnits": [
+        { "id": "chem-atomic", "code": "C1", "labelZh": "原子结构与同位素", "labelEn": "Atomic structure" },
+        { "id": "chem-periodic", "code": "C2", "labelZh": "元素周期表", "labelEn": "The Periodic Table" },
+        { "id": "chem-equations", "code": "C3", "labelZh": "反应、化学式与方程式", "labelEn": "Reactions, formulae and equations" },
+        { "id": "chem-quantitative", "code": "C4", "labelZh": "定量化学与摩尔计算", "labelEn": "Quantitative chemistry" },
+        { "id": "chem-redox", "code": "C5", "labelZh": "氧化、还原与氧化还原", "labelEn": "Oxidation, reduction and redox" },
+        { "id": "chem-bonding", "code": "C6", "labelZh": "化学键、结构与性质", "labelEn": "Bonding, structure and properties" },
+        { "id": "chem-groups", "code": "C7", "labelZh": "族化学与趋势", "labelEn": "Group chemistry" },
+        { "id": "chem-separation", "code": "C8", "labelZh": "分离技术与色谱", "labelEn": "Separation techniques" },
+        { "id": "chem-acids", "code": "C9", "labelZh": "酸、碱与盐", "labelEn": "Acids, bases and salts" },
+        { "id": "chem-rates", "code": "C10", "labelZh": "反应速率与碰撞理论", "labelEn": "Rates of reaction" },
+        { "id": "chem-energetics", "code": "C11", "labelZh": "能量变化与量热", "labelEn": "Energetics" },
+        { "id": "chem-electrolysis", "code": "C12", "labelZh": "电解与半方程式", "labelEn": "Electrolysis" },
+        { "id": "chem-organic", "code": "C13", "labelZh": "碳与有机化学", "labelEn": "Carbon and organic chemistry" },
+        { "id": "chem-metals", "code": "C14", "labelZh": "金属、反应性与提取", "labelEn": "Metals" },
+        { "id": "chem-particles", "code": "C15", "labelZh": "粒子理论与物态", "labelEn": "Kinetic and particle theory" },
+        { "id": "chem-tests", "code": "C16", "labelZh": "气体、离子与水的化学检验", "labelEn": "Chemical tests" },
+        { "id": "chem-air-water", "code": "C17", "labelZh": "空气、水与污染", "labelEn": "Air and water" }
+      ],
+      "methods": [
+        {
+          "nameZh": "先写反应身份",
+          "nameEn": "IDENTIFY THE REACTION",
+          "signalZh": "题目同时给出物质名称、观察、条件或不完整方程。",
+          "methodZh": "先判断反应类型、粒子或电子变化，再补化学式、状态和系数。",
+          "checkZh": "元素、总电荷和题目观察必须全部守恒或相容。"
+        },
+        {
+          "nameZh": "摩尔是中间层",
+          "nameEn": "USE MOLES AS THE BRIDGE",
+          "signalZh": "质量、气体体积、浓度或粒子数需要通过方程比较。",
+          "methodZh": "输入量先变成摩尔，按方程系数转换，再变成目标量。",
+          "checkZh": "系数比作用于摩尔，不直接作用于克、立方分米或浓度。"
+        },
+        {
+          "nameZh": "结构解释性质",
+          "nameEn": "LINK STRUCTURE TO PROPERTY",
+          "signalZh": "题目问熔点、导电、溶解、硬度或反应趋势。",
+          "methodZh": "依次写粒子种类、排列/键合、可移动粒子或作用力，再导出宏观性质。",
+          "checkZh": "解释必须指出改变性质的具体粒子或作用力，不能只重复现象。"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "esat-chemistry-original-carbonate-01",
+          "titleZh": "满托原创例题：碳酸盐与气体体积",
+          "titleEn": "Mantou original — carbonate mass and gas volume",
+          "problemZh": "5.00 g 碳酸钙与过量盐酸完全反应。取 CaCO₃ 的摩尔质量为 100 g mol⁻¹，室温下 1 mol 气体体积为 24 dm³。生成多少 dm³ 二氧化碳？",
+          "problemEn": "Five grams of calcium carbonate reacts completely with excess hydrochloric acid. Using 100 grams per mole for calcium carbonate and 24 cubic decimetres per mole of gas, find the carbon dioxide volume.",
+          "steps": [
+            {
+              "labelZh": "质量变摩尔",
+              "bodyZh": "把给定质量除以摩尔质量。",
+              "math": { "tex": "n(\\mathrm{CaCO_3})=\\frac{5.00}{100}=0.0500\\text{ mol}", "text": "The amount of calcium carbonate is 0.0500 moles" }
+            },
+            {
+              "labelZh": "使用方程比例",
+              "bodyZh": "每 1 mol CaCO₃ 生成 1 mol CO₂，因此二氧化碳也是 0.0500 mol。",
+              "math": { "tex": "n(\\mathrm{CO_2})=0.0500\\text{ mol}", "text": "The amount of carbon dioxide is 0.0500 moles" }
+            },
+            {
+              "labelZh": "摩尔变目标体积",
+              "bodyZh": "使用题目给定的室温摩尔气体体积。",
+              "math": { "tex": "V=0.0500\\times24=1.20\\text{ dm}^3", "text": "The gas volume is 1.20 cubic decimetres" }
+            }
+          ],
+          "answerZh": "生成 1.20 dm³ CO₂。",
+          "trapZh": "方程系数比连接的是摩尔；把 5.00 g 直接乘 24 会跳过单位和反应比例。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "定量化学的通用三步桥是什么？", "promptEn": "What is the general three-step bridge in quantitative chemistry?", "answerZh": "输入量变摩尔，按方程系数转换，摩尔再变成目标量。", "answerEn": "Convert the input to moles, apply the equation ratio, then convert moles to the target quantity." },
+        { "promptZh": "解释物质性质时，为什么不能只写键的名称？", "promptEn": "Why is naming the bond alone insufficient when explaining a property?", "answerZh": "还要说明粒子排列、作用力或可移动带电粒子怎样导致观察到的性质。", "answerEn": "You must connect particle arrangement, forces or mobile charge carriers to the observed property." },
+        { "promptZh": "配平后最少要检查哪两种守恒？", "promptEn": "Which two conservation checks should follow balancing?", "answerZh": "每种元素的原子数与总电荷。", "answerEn": "The number of atoms of each element and the total charge." }
+      ]
+    },
+    {
+      "id": "biology",
+      "number": "03",
+      "titleZh": "Biology：层级、机制与数据",
+      "titleEn": "Biology — Levels, Mechanisms and Data",
+      "summaryZh": "Biology 题常把细胞机制、器官系统、遗传概率和实验数据放在同一道题中。先确定讨论层级，再沿因果链解释变化。",
+      "learningOutcomes": [
+        "逐项识别 B1–B11 的课程证据与缺口",
+        "区分细胞、组织、器官、个体和生态层级",
+        "用对照、变量、比例和因果机制解释数据"
+      ],
+      "knowledgeUnits": [
+        { "id": "bio-cells", "code": "B1", "labelZh": "细胞结构与组织层次", "labelEn": "Cells" },
+        { "id": "bio-membranes", "code": "B2", "labelZh": "跨膜运输", "labelEn": "Movement across membranes" },
+        { "id": "bio-division", "code": "B3", "labelZh": "细胞分裂、繁殖与性别决定", "labelEn": "Cell division and sex determination" },
+        { "id": "bio-inheritance", "code": "B4", "labelZh": "遗传、杂交与家系图", "labelEn": "Inheritance" },
+        { "id": "bio-dna", "code": "B5", "labelZh": "DNA、基因与蛋白质", "labelEn": "DNA" },
+        { "id": "bio-gene-tech", "code": "B6", "labelZh": "基因技术", "labelEn": "Gene technologies" },
+        { "id": "bio-variation", "code": "B7", "labelZh": "变异、选择与进化", "labelEn": "Variation" },
+        { "id": "bio-enzymes", "code": "B8", "labelZh": "酶与反应速率", "labelEn": "Enzymes" },
+        { "id": "bio-animal", "code": "B9", "labelZh": "动物生理与健康", "labelEn": "Animal physiology" },
+        { "id": "bio-ecosystems", "code": "B10", "labelZh": "生态系统、循环与生物多样性", "labelEn": "Ecosystems" },
+        { "id": "bio-plants", "code": "B11", "labelZh": "光合作用与植物运输", "labelEn": "Plant physiology" }
+      ],
+      "methods": [
+        {
+          "nameZh": "先确定生物层级",
+          "nameEn": "IDENTIFY THE LEVEL",
+          "signalZh": "题目同时出现分子、细胞、器官、个体或种群表述。",
+          "methodZh": "圈出直接变化发生的层级，再写它怎样影响上一级或下一级。",
+          "checkZh": "不要用个体目的解释分子机制，也不要把相关性直接写成因果。"
+        },
+        {
+          "nameZh": "沿机制写因果链",
+          "nameEn": "BUILD THE CAUSAL CHAIN",
+          "signalZh": "题目问某变化为什么导致某表型、速率或系统结果。",
+          "methodZh": "按刺激/变化 → 直接机制 → 中间结果 → 可观察结果写最短链。",
+          "checkZh": "每个箭头都必须能用课程中的过程或结构解释。"
+        },
+        {
+          "nameZh": "实验先查对照",
+          "nameEn": "CHECK THE CONTROL",
+          "signalZh": "题目给表格、图像、重复测量或要求评价结论。",
+          "methodZh": "先找自变量、因变量、控制变量、对照和重复，再比较比例、趋势与异常。",
+          "checkZh": "结论范围不能超过实验处理、样本和实际测量变量。"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "esat-biology-original-inheritance-01",
+          "titleZh": "满托原创例题：隐性性状的后代概率",
+          "titleEn": "Mantou original — probability of a recessive phenotype",
+          "problemZh": "某常染色体隐性性状由等位基因 a 引起。一位亲本基因型为 Aa，另一位为 aa。一个子代表现该隐性性状的概率是多少？",
+          "problemEn": "An autosomal recessive trait is caused by allele a. One parent is Aa and the other is aa. What is the probability that one child shows the trait?",
+          "steps": [
+            {
+              "labelZh": "先写配子",
+              "bodyZh": "Aa 亲本产生 A 或 a 配子，概率各一半；aa 亲本只能产生 a 配子。",
+              "math": { "tex": "Aa\\rightarrow \\tfrac12 A+\\tfrac12 a,\\qquad aa\\rightarrow a", "text": "The first parent produces A or a equally; the second produces only a" }
+            },
+            {
+              "labelZh": "组合后代基因型",
+              "bodyZh": "可能后代为 Aa 或 aa，概率各一半。",
+              "math": { "tex": "P(Aa)=\\tfrac12,\\qquad P(aa)=\\tfrac12", "text": "The probabilities of Aa and aa are each one half" }
+            },
+            {
+              "labelZh": "从基因型到表型",
+              "bodyZh": "隐性性状只在 aa 时表现。",
+              "math": { "tex": "P(\\text{recessive phenotype})=P(aa)=\\tfrac12", "text": "The recessive phenotype probability is one half" }
+            }
+          ],
+          "answerZh": "概率为 1/2，即 50%。",
+          "trapZh": "不能因为一个亲本是 aa 就判定所有后代都表现隐性；另一个亲本提供的等位基因仍决定一半组合。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "看到一个生物学因果题，第一步是什么？", "promptEn": "What is the first step in a biological causal question?", "answerZh": "确定直接变化发生在哪个层级，并列出需要连接的起点和结果。", "answerEn": "Identify the level where the direct change occurs and the starting and ending states to connect." },
+        { "promptZh": "实验图像有趋势时，为什么还不能立刻写因果？", "promptEn": "Why does a trend in experimental data not automatically prove causation?", "answerZh": "需要检查对照、控制变量、样本、重复和替代解释是否足以支持因果范围。", "answerEn": "Controls, variables, sample, repeats and alternative explanations must support the causal claim." },
+        { "promptZh": "遗传题中基因型与表型为什么要分两步？", "promptEn": "Why separate genotype from phenotype in inheritance questions?", "answerZh": "配子组合先给出基因型概率，显隐性或其他表达规则再把基因型映射为表型。", "answerEn": "Gamete combinations give genotype probabilities; expression rules then map genotypes to phenotypes." }
+      ]
+    }
+  ],
+  "reviewWorkflow": [
+    {
+      "stepZh": "按专业锁定模块",
+      "stepEn": "FILTER BY PROGRAMME",
+      "actionZh": "只复习申请专业实际要求的 Physics、Chemistry 或 Biology，不按别人组合浪费时间。"
+    },
+    {
+      "stepZh": "按课程核对证据",
+      "stepEn": "MAP COURSE EVIDENCE",
+      "actionZh": "把每个一级单元标为课程已覆盖、部分覆盖或没有证据；课程标签本身不等于掌握。"
+    },
+    {
+      "stepZh": "主动回忆后练习",
+      "stepEn": "RECALL THEN PRACTISE",
+      "actionZh": "合上笔记回答主动回忆，再进入对应模块短诊断；记录是知识缺口、模型选择还是限时调用问题。"
+    },
+    {
+      "stepZh": "用作答证据更新",
+      "stepEn": "UPDATE FROM EVIDENCE",
+      "actionZh": "根据真实作答、用时和改答更新下一轮计划，不从课程背景直接推断分数或录取概率。"
+    }
+  ]
+}

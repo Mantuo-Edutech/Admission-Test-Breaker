@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q04",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 4,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "4.     A set of five cards each have a letter printed on their front and a number printed on their\n       back, as follows:\n\n\n\n\n       Which one of the five cards (A, B, C, D or E) provides a counterexample to the following\n       statement?\n\n               Every card that has a vowel on its front has an even number on its back."
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A set of five cards each have a letter printed on their front and a number printed on their\n       back, as follows:\n\n\n\n\n       Which one of the five cards (A, B, C, D or E) provides a counterexample to the following\n       statement?\n\n               Every card that has a vowel on its front has an even number on its back."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    },
+    {
+      "label": "F",
+      "rawText": "[visual option F; transcription required]"
+    },
+    {
+      "label": "G",
+      "rawText": "[visual option G; transcription required]"
+    },
+    {
+      "label": "H",
+      "rawText": "[visual option H; transcription required]"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The statement is a ‘for all’ statement, and can be expressed as a conditional statement:\n\n    For every card, if it has a vowel on its front, then it has an even number on its back.\n\nThus a counterexample to this statement is a card for which ‘if it has a vowel on its front, then\nit has an even number on its back’ is false. This is false if the card has a vowel on its front and\nit does not have an even number on its back.\nThe only cards with vowels on their front are A and E; of these, E has an even number on its\nback but A does not.\nSo the only counterexample is A.\n\n\n\n\n                                                7\n                                                                                      © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        7
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required",
+      "option-count-review"
+    ]
+  }
+}

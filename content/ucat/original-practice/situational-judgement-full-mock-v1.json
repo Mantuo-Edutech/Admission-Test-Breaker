@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "id": "ucat-situational-judgement-full-mock-v1",
+  "exam": "UCAT",
+  "edition": "Situational Judgement Full Mock · Original v1",
+  "sectionId": "situational-judgement",
+  "sectionLabel": "Situational Judgement Full Mock",
+  "sectionLabelZh": "情境判断完整模考 · 满托原创",
+  "durationMinutes": 26,
+  "deliveryMode": "structured",
+  "responseMode": "choice",
+  "calculator": "none",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本模考依据 UCAT 公开分测验结构与职业素养范围独立命题，不复制或改写官方 Question Bank、Practice Test、情境、选项或解析。",
+  "scoringNotice": "等级题完全匹配得 1 分，相邻等级得 0.5 分；最合适/最不合适题需两项均匹配得 1 分。本站只报告满托原创卷原始分，不生成官方 SJT Band。",
+  "sourceAnchors": [
+    {
+      "id": "ucat-format-snapshot",
+      "localPath": "content/official/raw/pages/ucat-format.html",
+      "sha256": "9aa4a93bddcc62bf53c6196f2b38ac40240a1f781154590c772c68f179d52dbf",
+      "usedFor": "current Situational Judgement identity, 69-question count, 26-minute timing and partial-credit boundary only"
+    },
+    {
+      "id": "ucat-tutorials-snapshot",
+      "localPath": "content/official/raw/pages/ucat-tutorials.html",
+      "sha256": "f847c156d8c6f31f77dff7edd761251a656ab29a9ab5f8614ca41594ebd9df7d",
+      "usedFor": "appropriateness, importance and most/least interaction families only"
+    },
+    {
+      "id": "gdc-standards-for-dental-team",
+      "localPath": "content/official/raw/professional-standards/gdc-standards-for-dental-team.pdf",
+      "sha256": "77c41da22b43e6aa02d16a7d51da4ab1a53e37cb37e7e25b30a386c0b62e267b",
+      "usedFor": "professional-topic coverage audit only; it is not an official UCAT answer key"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "mismatched-label",
+      "title": "A mismatched label",
+      "questionType": "appropriateness",
+      "context": "During a supervised placement, Maya notices that the name on a sample label does not match the name on the request form. The sample has not yet been processed, and the supervising clinician is nearby.",
+      "knowledgeTags": ["ucat-sjt-patient-safety", "ucat-sjt-speaking-up"],
+      "items": [
+        { "prompt": "Pause the task and tell the supervising clinician exactly what does not match.", "answer": "A", "skillTags": ["immediate-safety", "factual-escalation"] },
+        { "prompt": "Change the label to the name Maya remembers hearing earlier.", "answer": "D", "skillTags": ["record-integrity", "unsafe-assumption"] },
+        { "prompt": "Ask another student whether the mismatch is probably harmless, while allowing the sample to continue.", "answer": "C", "skillTags": ["delay", "peer-reassurance"] },
+        { "prompt": "Make a factual note of what was observed after alerting the supervisor.", "answer": "A", "skillTags": ["documentation", "candour"] },
+        { "prompt": "Wait until the end of the placement week before mentioning the mismatch.", "answer": "D", "skillTags": ["delay", "patient-risk"] }
+      ]
+    },
+    {
+      "id": "corridor-conversation",
+      "title": "A corridor conversation",
+      "questionType": "appropriateness",
+      "context": "Leo hears a fellow student discussing an identifiable patient's condition in a busy corridor where visitors can hear. The conversation is not needed for the patient's care.",
+      "knowledgeTags": ["ucat-sjt-confidentiality", "ucat-sjt-respect"],
+      "items": [
+        { "prompt": "Quietly interrupt and suggest continuing any necessary discussion in a private place.", "answer": "A", "skillTags": ["privacy", "proportionate-intervention"] },
+        { "prompt": "Join the conversation and add another detail because the information is already being discussed.", "answer": "D", "skillTags": ["disclosure", "bystander-conduct"] },
+        { "prompt": "Walk away and take no action because Leo did not start the conversation.", "answer": "C", "skillTags": ["responsibility", "speaking-up"] },
+        { "prompt": "Afterwards, speak privately to the student about confidentiality and seek guidance if the behaviour continues.", "answer": "A", "skillTags": ["private-feedback", "escalation"] },
+        { "prompt": "Post online that students at the placement have poor confidentiality, without naming the patient.", "answer": "D", "skillTags": ["social-media", "professionalism"] }
+      ]
+    },
+    {
+      "id": "missed-group-tasks",
+      "title": "Repeatedly missed group tasks",
+      "questionType": "appropriateness",
+      "context": "Aisha is coordinating a student health-promotion project. One member has missed two agreed tasks and has recently appeared distracted. The final presentation is next week.",
+      "knowledgeTags": ["ucat-sjt-teamwork", "ucat-sjt-wellbeing-support"],
+      "items": [
+        { "prompt": "Speak privately with the student, describe the missed tasks, ask whether support is needed, and agree a realistic plan.", "answer": "A", "skillTags": ["constructive-conversation", "support"] },
+        { "prompt": "Remove the student's name from the presentation without speaking to them.", "answer": "D", "skillTags": ["fairness", "premature-punishment"] },
+        { "prompt": "Complete all the missing work without telling anyone and hope the pattern stops.", "answer": "C", "skillTags": ["avoidance", "team-risk"] },
+        { "prompt": "Agree clear responsibilities and a check-in point for the whole group.", "answer": "A", "skillTags": ["planning", "shared-accountability"] },
+        { "prompt": "Seek advice from the project tutor if the agreed plan fails or the student's wellbeing appears at risk.", "answer": "B", "skillTags": ["proportionate-escalation", "student-support"] }
+      ]
+    },
+    {
+      "id": "revision-photo",
+      "title": "A photograph for revision",
+      "questionType": "appropriateness",
+      "context": "During a dental placement, Sam wants to photograph a treatment setup for revision. No patient is visible, but local policy and consent arrangements are not known.",
+      "knowledgeTags": ["ucat-sjt-confidentiality", "ucat-sjt-boundaries"],
+      "items": [
+        { "prompt": "Ask the supervisor and follow the placement's policy before taking any photograph.", "answer": "A", "skillTags": ["policy", "supervision"] },
+        { "prompt": "Take the photograph now and check whether it was allowed later.", "answer": "D", "skillTags": ["digital-recording", "permission"] },
+        { "prompt": "Take the photograph on a personal phone because no patient can be seen.", "answer": "D", "skillTags": ["personal-device", "information-governance"] },
+        { "prompt": "Use an approved teaching image already provided by the placement instead.", "answer": "A", "skillTags": ["approved-resource", "risk-reduction"] },
+        { "prompt": "Ask another student whether photographs are usually tolerated and rely on their answer.", "answer": "C", "skillTags": ["unverified-advice", "policy"] }
+      ]
+    },
+    {
+      "id": "unwell-before-placement",
+      "title": "Unwell before placement",
+      "questionType": "appropriateness",
+      "context": "Nina wakes with fever and dizziness before a patient-facing placement. Attendance is assessed, and she is worried that reporting sick will affect her record.",
+      "knowledgeTags": ["ucat-sjt-wellbeing-support", "ucat-sjt-patient-safety"],
+      "items": [
+        { "prompt": "Contact the placement promptly, explain the symptoms honestly, and follow health and absence guidance.", "answer": "A", "skillTags": ["health-risk", "honesty"] },
+        { "prompt": "Attend and avoid mentioning the symptoms unless someone notices.", "answer": "D", "skillTags": ["concealment", "patient-risk"] },
+        { "prompt": "Ask a friend to record Nina as present.", "answer": "D", "skillTags": ["dishonesty", "attendance"] },
+        { "prompt": "Seek appropriate health advice rather than relying only on Nina's own judgement.", "answer": "A", "skillTags": ["independent-advice", "self-awareness"] },
+        { "prompt": "Tell the placement only after the session has finished.", "answer": "C", "skillTags": ["late-communication", "reliability"] }
+      ]
+    },
+    {
+      "id": "patient-asks-for-diagnosis",
+      "title": "A question beyond the student's role",
+      "questionType": "appropriateness",
+      "context": "A patient asks Omar, a student, whether a recent test means that the patient has a serious illness. Omar has seen the result but has not been asked to interpret it, and the clinician responsible is available.",
+      "knowledgeTags": ["ucat-sjt-competence-scope", "ucat-sjt-communication"],
+      "items": [
+        { "prompt": "Explain that Omar is a student and arrange for the responsible clinician to discuss the result.", "answer": "A", "skillTags": ["role-clarity", "safe-referral"] },
+        { "prompt": "Offer a confident interpretation so that the patient is not left waiting.", "answer": "D", "skillTags": ["scope", "false-reassurance"] },
+        { "prompt": "Listen to the patient's concern and pass it promptly to the responsible clinician.", "answer": "A", "skillTags": ["listening", "handover"] },
+        { "prompt": "Say that students are not allowed to speak with patients and leave immediately.", "answer": "C", "skillTags": ["communication", "avoidance"] },
+        { "prompt": "Ask another student to interpret the result instead.", "answer": "D", "skillTags": ["unsafe-delegation", "scope"] }
+      ]
+    },
+    {
+      "id": "patient-complaint",
+      "title": "A patient raises a concern",
+      "questionType": "importance",
+      "context": "A patient tells Priya, a student, that a member of the team repeatedly dismissed their questions. Priya did not witness the conversations and needs to decide what to do next.",
+      "knowledgeTags": ["ucat-sjt-patient-perspective", "ucat-sjt-speaking-up"],
+      "items": [
+        { "prompt": "Whether the patient may currently be at risk or unable to make an informed decision.", "answer": "A", "skillTags": ["safety", "patient-autonomy"] },
+        { "prompt": "The specific facts the patient can describe, separated from assumptions.", "answer": "A", "skillTags": ["fact-finding", "fairness"] },
+        { "prompt": "Whether Priya personally likes the member of staff involved.", "answer": "D", "skillTags": ["bias", "irrelevant-factor"] },
+        { "prompt": "The patient's perspective and what outcome they are seeking.", "answer": "A", "skillTags": ["listening", "perspective-taking"] },
+        { "prompt": "The appropriate route for sharing the concern with a supervisor.", "answer": "B", "skillTags": ["escalation-route", "proportionate-action"] }
+      ]
+    },
+    {
+      "id": "incomplete-handover",
+      "title": "An incomplete handover",
+      "questionType": "importance",
+      "context": "At the end of a placement session, Daniel realises that information he was asked to pass to the next student team was incomplete. A supervisor and the next team are still contactable.",
+      "knowledgeTags": ["ucat-sjt-patient-safety", "ucat-sjt-honesty"],
+      "items": [
+        { "prompt": "Whether the missing information could affect immediate care or safety.", "answer": "A", "skillTags": ["risk-assessment", "urgency"] },
+        { "prompt": "How to communicate the corrected information accurately and promptly.", "answer": "A", "skillTags": ["continuity", "clear-communication"] },
+        { "prompt": "Whether admitting the omission might be embarrassing for Daniel.", "answer": "D", "skillTags": ["self-interest", "candour"] },
+        { "prompt": "Which supervisor can help verify and pass on the information.", "answer": "B", "skillTags": ["supervision", "verification"] },
+        { "prompt": "Who originally caused the information to be incomplete.", "answer": "C", "skillTags": ["blame", "immediate-priority"] }
+      ]
+    },
+    {
+      "id": "thank-you-gift",
+      "title": "A thank-you gift",
+      "questionType": "importance",
+      "context": "A patient offers Elena, a student, an expensive gift after several placement visits. Elena wants to respond respectfully without creating an inappropriate personal obligation.",
+      "knowledgeTags": ["ucat-sjt-boundaries", "ucat-sjt-honesty"],
+      "items": [
+        { "prompt": "The value and nature of the gift.", "answer": "A", "skillTags": ["gift-value", "conflict-risk"] },
+        { "prompt": "The placement's policy and the supervisor's guidance.", "answer": "A", "skillTags": ["policy", "transparency"] },
+        { "prompt": "The patient's likely intention in offering thanks.", "answer": "B", "skillTags": ["perspective-taking", "communication"] },
+        { "prompt": "Whether Elena personally wants the gift.", "answer": "D", "skillTags": ["self-interest", "irrelevant-factor"] },
+        { "prompt": "Whether accepting it could affect trust or professional boundaries.", "answer": "A", "skillTags": ["boundaries", "public-trust"] }
+      ]
+    },
+    {
+      "id": "discriminatory-comment",
+      "title": "A discriminatory comment",
+      "questionType": "importance",
+      "context": "During a teaching session, a student makes a discriminatory remark about a patient group. Another student appears upset, and the tutor does not seem to have heard it.",
+      "knowledgeTags": ["ucat-sjt-inclusion-respect", "ucat-sjt-speaking-up"],
+      "items": [
+        { "prompt": "The possible impact on the student who heard the remark and on the learning environment.", "answer": "A", "skillTags": ["impact", "psychological-safety"] },
+        { "prompt": "Whether the remark reflects a risk to fair and respectful patient care.", "answer": "A", "skillTags": ["patient-respect", "professional-values"] },
+        { "prompt": "How popular the student who made the remark is.", "answer": "D", "skillTags": ["social-status", "bias"] },
+        { "prompt": "What support and reporting routes are available.", "answer": "B", "skillTags": ["support", "escalation-route"] },
+        { "prompt": "Whether this is part of a repeated pattern.", "answer": "B", "skillTags": ["pattern", "proportionality"] }
+      ]
+    },
+    {
+      "id": "task-beyond-competence",
+      "title": "A task beyond current competence",
+      "questionType": "importance",
+      "context": "A busy clinician asks Hugo, a student, to carry out a patient-facing task that Hugo has observed but never performed. The clinician begins to leave the room.",
+      "knowledgeTags": ["ucat-sjt-competence-scope", "ucat-sjt-patient-safety"],
+      "items": [
+        { "prompt": "Hugo's actual competence and experience with the task.", "answer": "A", "skillTags": ["self-awareness", "scope"] },
+        { "prompt": "Whether suitable supervision will remain available.", "answer": "A", "skillTags": ["supervision", "safe-delegation"] },
+        { "prompt": "The patient's safety, understanding and agreement to student involvement.", "answer": "A", "skillTags": ["consent", "patient-first"] },
+        { "prompt": "Whether declining will make Hugo look less confident.", "answer": "D", "skillTags": ["image-management", "self-interest"] },
+        { "prompt": "The potential learning value if the task can be made safe.", "answer": "B", "skillTags": ["learning-opportunity", "proportionality"] }
+      ]
+    },
+    {
+      "id": "research-spreadsheet",
+      "title": "An unexpected research result",
+      "questionType": "importance",
+      "context": "Mei is helping with a student research project. One result is inconsistent with the source record, and correcting it may weaken the group's conclusion shortly before submission.",
+      "knowledgeTags": ["ucat-sjt-research-integrity", "ucat-sjt-honesty"],
+      "items": [
+        { "prompt": "The need for the dataset and report to reflect the source accurately.", "answer": "A", "skillTags": ["data-integrity", "accuracy"] },
+        { "prompt": "Whether the difference could have arisen from an honest data-entry error.", "answer": "B", "skillTags": ["fairness", "verification"] },
+        { "prompt": "The correct route for checking the record and informing the supervisor.", "answer": "A", "skillTags": ["audit-trail", "escalation"] },
+        { "prompt": "How disappointed the group may be if the conclusion changes.", "answer": "C", "skillTags": ["group-pressure", "evidence-priority"] },
+        { "prompt": "Whether the person who entered the data is Mei's friend.", "answer": "D", "skillTags": ["personal-loyalty", "bias"] }
+      ]
+    },
+    {
+      "id": "distressed-teammate",
+      "title": "A distressed teammate",
+      "questionType": "most-least",
+      "context": "Just before a patient-education session, Ben notices that his teammate is visibly distressed and says they cannot concentrate.",
+      "knowledgeTags": ["ucat-sjt-wellbeing-support", "ucat-sjt-patient-safety"],
+      "prompt": "Select the most appropriate and least appropriate action for Ben.",
+      "actions": [
+        "Speak privately, check immediate safety, and involve the supervisor so the session can be covered safely.",
+        "Tell the teammate to hide how they feel because the session matters more.",
+        "Announce to the waiting group that the teammate is emotionally unstable."
+      ],
+      "most": "A",
+      "least": "C",
+      "skillTags": ["support", "privacy", "safe-cover"]
+    },
+    {
+      "id": "misdirected-email",
+      "title": "A misdirected email",
+      "questionType": "most-least",
+      "context": "Fatima realises that she sent identifiable placement information to the wrong university email address moments ago.",
+      "knowledgeTags": ["ucat-sjt-confidentiality", "ucat-sjt-honesty"],
+      "prompt": "Select the most appropriate and least appropriate action for Fatima.",
+      "actions": [
+        "Report the error promptly through the approved supervisor or information-governance route and follow instructions.",
+        "Delete the message from her sent folder and say nothing unless someone complains.",
+        "Ask the unintended recipient not to open or share it, while also reporting the incident."
+      ],
+      "most": "A",
+      "least": "B",
+      "skillTags": ["breach-response", "candour", "containment"]
+    },
+    {
+      "id": "project-conflict",
+      "title": "Conflict in a project group",
+      "questionType": "most-least",
+      "context": "Two members of Sofia's project group accuse each other of withholding work. The deadline is approaching, but neither has shown Sofia the relevant messages or files.",
+      "knowledgeTags": ["ucat-sjt-teamwork", "ucat-sjt-fairness"],
+      "prompt": "Select the most appropriate and least appropriate action for Sofia.",
+      "actions": [
+        "Hear each person separately, establish the facts, and agree transparent responsibilities and a review point.",
+        "Remove the quieter member from the project because they are less likely to object.",
+        "Send both accusations to the tutor immediately without first clarifying what happened."
+      ],
+      "most": "A",
+      "least": "B",
+      "skillTags": ["fact-finding", "fair-process", "conflict-resolution"]
+    },
+    {
+      "id": "social-contact-request",
+      "title": "A request for personal contact",
+      "questionType": "most-least",
+      "context": "A patient asks Jack, a student, to connect on a personal social-media account so they can continue discussing health questions after the placement.",
+      "knowledgeTags": ["ucat-sjt-boundaries", "ucat-sjt-communication"],
+      "prompt": "Select the most appropriate and least appropriate action for Jack.",
+      "actions": [
+        "Explain the professional boundary politely and direct the patient to an appropriate clinical contact route.",
+        "Accept the request but promise not to discuss anything confidential.",
+        "Walk away without answering or helping the patient find an appropriate route."
+      ],
+      "most": "A",
+      "least": "B",
+      "skillTags": ["boundaries", "clear-explanation", "safe-signposting"]
+    },
+    {
+      "id": "disrespectful-remark",
+      "title": "A disrespectful remark",
+      "questionType": "most-least",
+      "context": "During a break, Arun hears a student make a demeaning remark about another student's accent. The targeted student becomes silent.",
+      "knowledgeTags": ["ucat-sjt-inclusion-respect", "ucat-sjt-speaking-up"],
+      "prompt": "Select the most appropriate and least appropriate action for Arun.",
+      "actions": [
+        "Challenge the remark calmly, check on the targeted student, and seek support if needed.",
+        "Laugh along so the group does not become uncomfortable.",
+        "Check privately on the targeted student and later ask a tutor how best to address the remark."
+      ],
+      "most": "A",
+      "least": "B",
+      "skillTags": ["bystander-action", "support", "respect"]
+    },
+    {
+      "id": "missed-deadline",
+      "title": "A missed deadline",
+      "questionType": "most-least",
+      "context": "Grace forgets to submit a required reflective log. The online deadline passed that morning, and the tutor has not contacted her.",
+      "knowledgeTags": ["ucat-sjt-honesty", "ucat-sjt-responsibility"],
+      "prompt": "Select the most appropriate and least appropriate action for Grace.",
+      "actions": [
+        "Contact the tutor promptly, explain honestly, submit the work, and ask how to remedy the missed deadline.",
+        "Alter the file metadata and claim the system failed before the deadline.",
+        "Upload the work late without any explanation and hope it is not noticed."
+      ],
+      "most": "A",
+      "least": "B",
+      "skillTags": ["candour", "remediation", "accountability"]
+    },
+    {
+      "id": "language-barrier",
+      "title": "A language barrier",
+      "questionType": "most-least",
+      "context": "A patient is struggling to understand information during a student-observed consultation. An adult relative offers to translate, but sensitive matters may be discussed and an approved interpreting service is available.",
+      "knowledgeTags": ["ucat-sjt-communication", "ucat-sjt-patient-perspective"],
+      "prompt": "Select the most appropriate and least appropriate action for the student to suggest.",
+      "actions": [
+        "Ask the clinician to use the approved interpreting service and check the patient's communication preferences.",
+        "Use a young family member who has arrived, because this would be faster.",
+        "Use clear language and confirm understanding while the approved support is arranged."
+      ],
+      "most": "A",
+      "least": "B",
+      "skillTags": ["accessible-communication", "confidentiality", "patient-choice"]
+    },
+    {
+      "id": "safety-step-missed",
+      "title": "A safety step is missed",
+      "questionType": "most-least",
+      "context": "A student notices a peer about to begin patient contact after missing a routine safety step. The peer can correct it immediately and no harm has occurred.",
+      "knowledgeTags": ["ucat-sjt-patient-safety", "ucat-sjt-teamwork"],
+      "prompt": "Select the most appropriate and least appropriate action for the observing student.",
+      "actions": [
+        "Prompt the peer discreetly and immediately so the step is completed before contact.",
+        "Post a critical message about the peer in the student group chat after the session.",
+        "Say nothing because correcting peers is only a supervisor's responsibility."
+      ],
+      "most": "A",
+      "least": "C",
+      "skillTags": ["immediate-intervention", "speaking-up", "proportionality"]
+    },
+    {
+      "id": "shared-revision-file",
+      "title": "A shared revision file",
+      "questionType": "most-least",
+      "context": "Lina opens a shared student revision file and finds a detailed account of a real placement encounter that could identify the patient.",
+      "knowledgeTags": ["ucat-sjt-confidentiality", "ucat-sjt-research-integrity"],
+      "prompt": "Select the most appropriate and least appropriate action for Lina.",
+      "actions": [
+        "Stop sharing the material, alert the owner and an appropriate supervisor, and follow guidance on removing the identifiable content.",
+        "Forward the file to another group because it is useful for revision.",
+        "Ask the owner privately to anonymise the account but keep using the current version meanwhile."
+      ],
+      "most": "A",
+      "least": "B",
+      "skillTags": ["digital-confidentiality", "containment", "escalation"]
+    }
+  ]
+}

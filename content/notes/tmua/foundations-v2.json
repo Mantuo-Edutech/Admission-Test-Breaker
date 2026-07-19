@@ -1,0 +1,1380 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-foundations-v2",
+  "edition": "2026.07-v2",
+  "publicationStatus": "teaching-preview",
+  "examCycle": "October 2026 / January 2027",
+  "titleZh": "TMUA 基础复习笔记",
+  "titleEn": "TMUA Foundations Review Notes",
+  "subtitleZh": "从考试结构、课程缺口与核心数学，到限时推理和真题复盘",
+  "subtitleEn": "From exam structure and curriculum gaps to core mathematics, timed reasoning and paper review",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本资料依据公开考试框架重新组织并原创撰写。例题、自测题与解析均非官方真题；官方资料只用于核对考试范围与事实。",
+  "scope": {
+    "includedZh": "本版包含考试定位、无计算器策略、逻辑与证明、代数与函数、数列与几何、三角、指数对数、微积分、数学推理、真题复盘，以及 A-Level、IB、AP 课程衔接。",
+    "includedEn": "This release covers exam orientation, non-calculator strategy, logic and proof, algebra and functions, sequences and geometry, trigonometry, exponentials and logarithms, calculus, mathematical reasoning, paper review, and A-Level, IB and AP bridges.",
+    "remainingZh": "本版仍是教研预览。升级为正式发布版前，还需独立数学教师逐章复核、权利与相似度复核、双语术语终审，以及手机、平板、电脑和 A4 PDF 的最终实机检查。"
+  },
+  "officialAnchors": [
+    {
+      "id": "tmua-content-specification",
+      "title": "TMUA Content Specification — October 2026 and January 2027",
+      "localPath": "content/official/raw/shared/TMUA_Content_Specification.pdf",
+      "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf",
+      "usedForZh": "考试结构、Paper 1 / Paper 2 范围与知识点边界",
+      "sha256": "4e6ec1c29b795aa5e5002309c60988546bd16b6cfb6d237336bb414b5d5760b8"
+    },
+    {
+      "id": "tmua-logic-notes",
+      "title": "Notes on Logic and Proof",
+      "localPath": "content/official/raw/shared/Notes_on_Logic_and_Proof_June2025.pdf",
+      "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/06/25160507/Notes_on_Logic_and_Proof_June2025.pdf",
+      "usedForZh": "Paper 2 逻辑、量词、证明方式与辨错范围",
+      "sha256": "940e7ea3e18cf504387730d099d14dddb632393d3604ce5a4257e73edbd2067c"
+    },
+    {
+      "id": "tmua-mathematics-notes",
+      "title": "Notes on Mathematics for TMUA Paper 1 and ESAT Mathematics 2",
+      "localPath": "content/official/raw/shared/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+      "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103537/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+      "usedForZh": "数学术语、范围边界与常见概念核对",
+      "sha256": "12ed684ee2dfb9b53355d54018ba216b5cd32161e5f6c5c9ee5e96b93cbf8844"
+    },
+    {
+      "id": "uat-candidate-handbook",
+      "title": "UAT-UK Candidate Handbook — 2027 Entry",
+      "localPath": "content/official/raw/shared/Candidate-Handbook-2027-Entry.pdf",
+      "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/26111813/Candidate-Handbook-2027-Entry.pdf",
+      "usedForZh": "正式考试界面、分卷计时与考场操作事实",
+      "sha256": "f41a0fd1de83e9ac1bf1492fc633da0988360ba1a1eac9086ede3d6658930584"
+    }
+  ],
+  "examMap": {
+    "officialFacts": [
+      {
+        "labelZh": "两张试卷",
+        "labelEn": "Two papers",
+        "valueZh": "Paper 1 与 Paper 2 各 75 分钟",
+        "valueEn": "75 minutes each"
+      },
+      {
+        "labelZh": "题量",
+        "labelEn": "Question count",
+        "valueZh": "每张 20 道选择题，共 40 道",
+        "valueEn": "20 multiple-choice questions per paper"
+      },
+      {
+        "labelZh": "计分",
+        "labelEn": "Scoring",
+        "valueZh": "所有题等权；答错不倒扣；应尝试全部题目",
+        "valueEn": "Equal weighting; no penalty for incorrect answers"
+      },
+      {
+        "labelZh": "工具",
+        "labelEn": "Tools",
+        "valueZh": "不可使用计算器；不提供公式表",
+        "valueEn": "No calculator and no formula booklet"
+      },
+      {
+        "labelZh": "Paper 1",
+        "labelEn": "Applications",
+        "valueZh": "应用 Section 1 数学知识解决不同情境的问题",
+        "valueEn": "Applications of Mathematical Knowledge"
+      },
+      {
+        "labelZh": "Paper 2",
+        "labelEn": "Reasoning",
+        "valueZh": "同时使用 Section 1 数学与 Section 2 逻辑、证明和辨错",
+        "valueEn": "Mathematical Reasoning"
+      }
+    ],
+    "mantouStrategy": [
+      {
+        "nameZh": "第一轮：确定能做",
+        "nameEn": "Pass 1: Secure",
+        "guidanceZh": "先拿下路径清晰的题。若读完仍没有可执行的第一步，标记后继续。",
+        "guidanceEn": "Take the questions with a clear route first; flag uncertain starts."
+      },
+      {
+        "nameZh": "第二轮：限制分支",
+        "nameEn": "Pass 2: Resolve",
+        "guidanceZh": "对已标记题写出约束、精确值或反例目标，减少无方向试算。",
+        "guidanceEn": "Write constraints, exact values or a counterexample target before calculating."
+      },
+      {
+        "nameZh": "最后检查：完成全部",
+        "nameEn": "Final check: Complete",
+        "guidanceZh": "考试不倒扣。确认每题都已作答，再检查符号、范围、题目问法和误读。",
+        "guidanceEn": "Answer every question, then check signs, intervals, wording and transcription."
+      }
+    ]
+  },
+  "curriculumBridges": [
+    {
+      "curriculum": "A-Level / IAL Mathematics",
+      "status": "strong-start",
+      "statusZh": "通常覆盖较多，但不是自动全部覆盖",
+      "likelyCoveredZh": [
+        "代数、函数与图像",
+        "三角、指数与对数",
+        "基础微积分",
+        "数列与坐标几何"
+      ],
+      "confirmZh": [
+        "是否已经完成对应 Pure Mathematics 单元",
+        "Paper 2 的 necessary / sufficient、量词否定、反证法与反例",
+        "GCSE 层面的圆定理、单位、比例与精确计算"
+      ],
+      "firstActionZh": "先做课程映射；若核心 Pure 单元已完成，把时间优先用于逻辑语言、无计算器精确运算和限时选择题。"
+    },
+    {
+      "curriculum": "IB Mathematics: Analysis and Approaches HL",
+      "status": "strong-start",
+      "statusZh": "数学主干通常较强，需补英国考试语言与非计算器节奏",
+      "likelyCoveredZh": [
+        "函数、三角、数列",
+        "微积分与图像分析",
+        "代数建模"
+      ],
+      "confirmZh": [
+        "圆定理与英国 GCSE supporting knowledge",
+        "formal logic vocabulary 与证明辨错",
+        "不用 GDC 的精确值、因式分解和选项辨析"
+      ],
+      "firstActionZh": "不要重复学习整门数学；先核对几何与逻辑缺口，再用 TMUA 题型训练速度。"
+    },
+    {
+      "curriculum": "IB Mathematics: Analysis and Approaches SL",
+      "status": "partial",
+      "statusZh": "部分覆盖；完成单元决定实际缺口",
+      "likelyCoveredZh": [
+        "基础函数与图像",
+        "基础三角和微积分",
+        "基础统计与代数"
+      ],
+      "confirmZh": [
+        "更深的代数变形、指数对数与三角方程",
+        "数列、坐标几何和图像综合",
+        "Paper 2 全部逻辑与证明"
+      ],
+      "firstActionZh": "先按知识点做补学清单，不建议直接用整套真题定位所有缺口。"
+    },
+    {
+      "curriculum": "IB Mathematics: Applications and Interpretation HL",
+      "status": "partial",
+      "statusZh": "应用与技术工具经验有帮助，但纯数学与无计算器要求需单独核对",
+      "likelyCoveredZh": [
+        "建模与数据解释",
+        "部分函数与微积分",
+        "技术工具下的图像理解"
+      ],
+      "confirmZh": [
+        "精确代数、因式分解与根式",
+        "三角恒等式、数列和坐标几何",
+        "无计算器图像推理、形式逻辑与证明"
+      ],
+      "firstActionZh": "把技术工具拿掉后做一次分主题诊断；先补精确代数，再进入 Paper 2。"
+    },
+    {
+      "curriculum": "AP Precalculus + AP Calculus AB/BC",
+      "status": "partial",
+      "statusZh": "函数与微积分可衔接，但 AP 课程组合不能直接等同 TMUA 范围",
+      "likelyCoveredZh": [
+        "函数、图像与三角",
+        "指数对数",
+        "微分与积分（取决于 AB / BC 进度）"
+      ],
+      "confirmZh": [
+        "根式、二项式、有限几何级数与英国式精确答案",
+        "圆定理、坐标几何与 GCSE supporting knowledge",
+        "necessary / sufficient、量词、反例和证明辨错"
+      ],
+      "firstActionZh": "同时核对 Algebra II / Geometry 学习记录；仅有 AP Calculus 不能证明前置代数与几何已经覆盖。"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "orientation",
+      "number": "01",
+      "titleZh": "先建立考试地图",
+      "titleEn": "Build the Exam Map First",
+      "summaryZh": "TMUA 不是单纯比谁会更多数学，而是看你能否在无计算器、固定时间和相似选项中保持精确。",
+      "learningOutcomes": [
+        "能区分 Paper 1 的知识应用与 Paper 2 的数学推理",
+        "能把做不出题的原因分成知识缺口、路径缺口、运算错误和读题错误",
+        "能用三轮策略完成全部题，而不是在第一道难题上耗尽时间"
+      ],
+      "sections": [
+        {
+          "titleZh": "先判断卡在哪里",
+          "titleEn": "Diagnose the Bottleneck",
+          "paragraphsZh": [
+            "同一道错题，补救方式可能完全不同。不会判别式属于 knowledge gap；知道判别式但想不到使用属于 route gap；推导正确但符号出错属于 execution error；把 only if 看反属于 reading error。",
+            "每次复盘只记录“错了”没有训练价值。至少记录：知识点、第一处错误、主动思考时间、是否改答、下一次动作。"
+          ],
+          "rules": [
+            {
+              "term": "Knowledge gap｜知识缺口",
+              "statementZh": "概念、公式或适用条件本身不知道。下一步是学习一个最小知识单元。"
+            },
+            {
+              "term": "Route gap｜路径缺口",
+              "statementZh": "知识会，但无法从题目条件启动。下一步是总结触发信号和第一步。"
+            },
+            {
+              "term": "Execution error｜执行错误",
+              "statementZh": "思路正确但代数、符号、范围或抄写错误。下一步是建立检查点。"
+            },
+            {
+              "term": "Reading error｜读题错误",
+              "statementZh": "误读必要/充分、至少/至多、整数/实数或题目所求。下一步是圈定限定词。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "一道题你会完整重做，但第一次完全想不到从哪里开始，它属于哪类错误？",
+              "promptEn": "You can redo the question but could not find a starting move. Which error type is this?",
+              "answerZh": "路径缺口（route gap）。记录触发信号和第一步，而不是重新抄完整解答。",
+              "answerEn": "A route gap. Record the trigger and the first move."
+            }
+          ]
+        },
+        {
+          "titleZh": "无计算器不等于只练心算",
+          "titleEn": "Non-calculator Does Not Mean Mental Arithmetic Only",
+          "paragraphsZh": [
+            "真正需要训练的是 exact form、结构化约分、估算边界和选项验证。把所有表达式都展开，往往比保留因式或对称结构更慢。",
+            "遇到五个选项时，先问：题目要求完整求解，还是只需要排除四个不可能？选项是题目信息的一部分。"
+          ],
+          "rules": [
+            {
+              "term": "Exact form｜精确形式",
+              "statementZh": "优先保留分数、根式与 π；仅在比较大小时使用安全估算。"
+            },
+            {
+              "term": "Structure first｜先看结构",
+              "statementZh": "先找公因式、共轭、对称、判别式和图像意义，再决定是否展开。"
+            },
+            {
+              "term": "Option-aware｜利用选项",
+              "statementZh": "代入、奇偶性、符号、数量级与边界都可以快速排除选项。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "为什么“每题平均 3 分 45 秒”不能变成每题强制计时？",
+              "promptEn": "Why should 3 minutes 45 seconds not become a rigid per-question limit?",
+              "answerZh": "题目难度和路径长度不同。平均值用于整卷节奏，不代表每题必须平均分配。",
+              "answerEn": "Question difficulty varies; the average guides the paper, not every item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "logic-proof",
+      "number": "02",
+      "titleZh": "逻辑、证明与反例",
+      "titleEn": "Logic, Proof and Counterexamples",
+      "summaryZh": "Paper 2 的关键不是背符号，而是把英文句子稳定翻译成条件方向，并知道怎样推翻一个全称结论。",
+      "learningOutcomes": [
+        "能区分 implication、converse 与 contrapositive",
+        "能把 necessary 和 sufficient 转换成正确方向",
+        "能否定 for all / there exists，并选择直接证明、分类、反证或反例"
+      ],
+      "sections": [
+        {
+          "titleZh": "条件方向：先画箭头",
+          "titleEn": "Condition Direction: Draw the Arrow",
+          "paragraphsZh": [
+            "把 A 当作条件，B 当作结论。A is sufficient for B 表示 A 足以保证 B，因此方向是 A → B。A is necessary for B 表示 B 成立必须有 A，因此方向是 B → A。",
+            "原命题 A → B 与逆否命题 not B → not A 等价；逆命题 B → A 不一定成立。"
+          ],
+          "rules": [
+            {
+              "term": "Sufficient｜充分",
+              "statementZh": "A is sufficient for B",
+              "formula": {
+                "tex": "A \\Rightarrow B",
+                "text": "A → B"
+              }
+            },
+            {
+              "term": "Necessary｜必要",
+              "statementZh": "A is necessary for B",
+              "formula": {
+                "tex": "B \\Rightarrow A",
+                "text": "B → A"
+              }
+            },
+            {
+              "term": "Contrapositive｜逆否",
+              "statementZh": "与原命题逻辑等价",
+              "formula": {
+                "tex": "A \\Rightarrow B \\quad\\Longleftrightarrow\\quad \\neg B \\Rightarrow \\neg A",
+                "text": "A → B  ⇔  not B → not A"
+              }
+            },
+            {
+              "term": "Converse｜逆命题",
+              "statementZh": "把方向反过来，不能自动认为正确",
+              "formula": {
+                "tex": "B \\Rightarrow A",
+                "text": "B → A"
+              }
+            }
+          ],
+          "workedExamples": [
+            {
+              "id": "logic-even-square",
+              "titleZh": "原创例题：用逆否证明",
+              "titleEn": "Original Worked Example: Proof by Contrapositive",
+              "problemZh": "设 n 为整数。证明：如果 n² 能被 4 整除，那么 n 是偶数。",
+              "problemEn": "Let n be an integer. Prove that if 4 divides n², then n is even.",
+              "steps": [
+                {
+                  "labelZh": "1. 写逆否",
+                  "bodyZh": "证明“如果 n 不是偶数，那么 n² 不能被 4 整除”。对整数而言，不是偶数就是奇数。"
+                },
+                {
+                  "labelZh": "2. 表示奇数",
+                  "bodyZh": "令 n = 2k + 1，其中 k 为整数。",
+                  "math": {
+                    "tex": "n=2k+1",
+                    "text": "n = 2k + 1"
+                  }
+                },
+                {
+                  "labelZh": "3. 平方并看余数",
+                  "bodyZh": "n² = 4k² + 4k + 1 = 4k(k+1)+1，所以 n² 除以 4 余 1。",
+                  "math": {
+                    "tex": "n^2=4k(k+1)+1",
+                    "text": "n² = 4k(k + 1) + 1"
+                  }
+                },
+                {
+                  "labelZh": "4. 回到原命题",
+                  "bodyZh": "逆否命题成立，因此原命题成立。"
+                }
+              ],
+              "answerZh": "关键不是从 n² = 4m 直接“开方”，而是使用奇偶分类得到严格的余数结论。",
+              "trapZh": "从 n² 可被 4 整除直接写 n 可被 2 整除，等于把要证明的结论当作已知。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "“x > 3 是 x² > 9 的充分条件”在实数范围内正确吗？必要吗？",
+              "promptEn": "Over the reals, is x > 3 sufficient or necessary for x² > 9?",
+              "answerZh": "充分但不必要。x > 3 一定推出 x² > 9，但 x < −3 也会使 x² > 9。",
+              "answerEn": "Sufficient but not necessary, because x < −3 also gives x² > 9."
+            }
+          ]
+        },
+        {
+          "titleZh": "量词与反例",
+          "titleEn": "Quantifiers and Counterexamples",
+          "paragraphsZh": [
+            "否定“所有对象都满足 P”时，只需存在一个对象不满足 P。否定“至少存在一个对象满足 P”时，需要所有对象都不满足 P。",
+            "要推翻全称命题，一个合法反例就足够；列出很多支持例子仍然不能证明全称命题。"
+          ],
+          "rules": [
+            {
+              "term": "Not ‘for all’｜否定“对所有”",
+              "statementZh": "变成“至少存在一个不满足”",
+              "formula": {
+                "tex": "\\neg(\\forall x, P(x)) \\Longleftrightarrow \\exists x, \\neg P(x)",
+                "text": "not(for every x, P) ⇔ some x is not P"
+              }
+            },
+            {
+              "term": "Not ‘there exists’｜否定“存在”",
+              "statementZh": "变成“所有都不满足”",
+              "formula": {
+                "tex": "\\neg(\\exists x, P(x)) \\Longleftrightarrow \\forall x, \\neg P(x)",
+                "text": "not(some x is P) ⇔ every x is not P"
+              }
+            },
+            {
+              "term": "Counterexample｜反例",
+              "statementZh": "必须满足命题的前提，同时让结论失败。"
+            },
+            {
+              "term": "Illegal division｜非法除法",
+              "statementZh": "除以含变量表达式之前，必须确认它不为 0。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "否定“所有偶数都能写成两个质数之和”时，你需要证明什么形式的句子？",
+              "promptEn": "What form must the negation of ‘every even number is the sum of two primes’ take?",
+              "answerZh": "存在至少一个偶数，不能写成两个质数之和。这里只是在转换逻辑形式，不是在断言该反例实际存在。",
+              "answerEn": "There exists an even number that cannot be written as the sum of two primes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algebra-functions",
+      "number": "03",
+      "titleZh": "代数、函数与图像",
+      "titleEn": "Algebra, Functions and Graphs",
+      "summaryZh": "这一章不追求复杂技巧，而是建立 TMUA 最常复用的四个动作：先写限制、保留结构、连接图像、最后验根。",
+      "learningOutcomes": [
+        "能在平方、开方、约分和取对数前写出合法条件",
+        "能用判别式判断根的数量与参数范围",
+        "能识别函数图像变换并把交点解释为方程的解"
+      ],
+      "sections": [
+        {
+          "titleZh": "先写定义域与等价条件",
+          "titleEn": "State Restrictions Before Manipulating",
+          "paragraphsZh": [
+            "很多错误不是算错，而是把单向推导当成等价变形。平方可能引入增根；约分可能丢掉使分母为零的限制；根式和对数必须先检查定义域。",
+            "每次做可能改变解集的动作，在草稿边写一个 check：domain、denominator、sign 或 interval。"
+          ],
+          "rules": [
+            {
+              "term": "Square root｜平方根",
+              "statementZh": "√g(x) 要求 g(x) ≥ 0；若 √g(x) = h(x)，还必须有 h(x) ≥ 0。"
+            },
+            {
+              "term": "Denominator｜分母",
+              "statementZh": "约分前记录被除表达式不为 0。"
+            },
+            {
+              "term": "Logarithm｜对数",
+              "statementZh": "logₐg(x) 要求 a > 0、a ≠ 1 且 g(x) > 0。"
+            },
+            {
+              "term": "Verification｜验根",
+              "statementZh": "含根式、分式或平方步骤的方程，候选解必须代回原式。"
+            }
+          ],
+          "workedExamples": [
+            {
+              "id": "algebra-radical-equation",
+              "titleZh": "原创例题：根式方程先限制再平方",
+              "titleEn": "Original Worked Example: Restrict Before Squaring",
+              "problemZh": "在实数范围内解 √(x + 3) = x − 1。",
+              "problemEn": "Solve √(x + 3) = x − 1 over the reals.",
+              "steps": [
+                {
+                  "labelZh": "1. 写限制",
+                  "bodyZh": "左侧非负，因此 x − 1 ≥ 0，即 x ≥ 1。这个条件同时保证 x + 3 ≥ 0。",
+                  "math": {
+                    "tex": "x\\ge 1",
+                    "text": "x ≥ 1"
+                  }
+                },
+                {
+                  "labelZh": "2. 平方",
+                  "bodyZh": "x + 3 = (x − 1)²，整理得 x² − 3x − 2 = 0。",
+                  "math": {
+                    "tex": "x^2-3x-2=0",
+                    "text": "x² − 3x − 2 = 0"
+                  }
+                },
+                {
+                  "labelZh": "3. 求候选解",
+                  "bodyZh": "使用求根公式得到 x = (3 ± √17) / 2。",
+                  "math": {
+                    "tex": "x=\\frac{3\\pm\\sqrt{17}}{2}",
+                    "text": "x = (3 ± √17) / 2"
+                  }
+                },
+                {
+                  "labelZh": "4. 用限制筛选",
+                  "bodyZh": "(3 − √17) / 2 < 0，不满足 x ≥ 1；只保留正根。"
+                }
+              ],
+              "answerZh": "唯一实数解为 x = (3 + √17) / 2。",
+              "trapZh": "平方后的两个根只是候选解；不检查原式会保留增根。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "解 1/(x−2) = 3/(x²−4) 时，开始计算前必须记录哪些排除值？",
+              "promptEn": "Before solving 1/(x−2) = 3/(x²−4), which values must be excluded?",
+              "answerZh": "x ≠ 2 且 x ≠ −2，因为原方程的两个分母都不能为 0。",
+              "answerEn": "x ≠ 2 and x ≠ −2."
+            }
+          ]
+        },
+        {
+          "titleZh": "判别式与图像是同一件事的两种语言",
+          "titleEn": "Discriminant and Graph: Two Languages for One Structure",
+          "paragraphsZh": [
+            "对二次方程 ax² + bx + c = 0，判别式 Δ = b² − 4ac 告诉你图像与 x 轴交点的数量。参数题常常无需先求根，只需把“两个不同实根”“相切”或“无实根”翻译成 Δ 的条件。",
+            "两个函数 f(x) 与 g(x) 的交点，对应方程 f(x) = g(x) 的解。先看图像可能根数，再做代数，可以及时发现漏解。"
+          ],
+          "rules": [
+            {
+              "term": "Two distinct real roots｜两个不同实根",
+              "statementZh": "判别式严格大于 0",
+              "formula": {
+                "tex": "\\Delta=b^2-4ac>0",
+                "text": "Δ = b² − 4ac > 0"
+              }
+            },
+            {
+              "term": "Repeated real root｜重根 / 相切",
+              "statementZh": "判别式等于 0",
+              "formula": {
+                "tex": "\\Delta=0",
+                "text": "Δ = 0"
+              }
+            },
+            {
+              "term": "No real roots｜无实根",
+              "statementZh": "判别式小于 0",
+              "formula": {
+                "tex": "\\Delta<0",
+                "text": "Δ < 0"
+              }
+            }
+          ],
+          "workedExamples": [
+            {
+              "id": "algebra-parameter-discriminant",
+              "titleZh": "原创例题：参数与不同实根",
+              "titleEn": "Original Worked Example: Parameter and Distinct Roots",
+              "problemZh": "方程 x² − 2(k+1)x + k² + 1 = 0 有两个不同实根。求 k 的范围。",
+              "problemEn": "The equation x² − 2(k+1)x + k² + 1 = 0 has two distinct real roots. Find the range of k.",
+              "steps": [
+                {
+                  "labelZh": "1. 翻译题意",
+                  "bodyZh": "两个不同实根意味着 Δ > 0。"
+                },
+                {
+                  "labelZh": "2. 计算但保留结构",
+                  "bodyZh": "Δ = [−2(k+1)]² − 4(k²+1) = 8k。",
+                  "math": {
+                    "tex": "\\Delta=4(k+1)^2-4(k^2+1)=8k",
+                    "text": "Δ = 4(k + 1)² − 4(k² + 1) = 8k"
+                  }
+                },
+                {
+                  "labelZh": "3. 解不等式",
+                  "bodyZh": "8k > 0，因此 k > 0。",
+                  "math": {
+                    "tex": "k>0",
+                    "text": "k > 0"
+                  }
+                }
+              ],
+              "answerZh": "k > 0。无需先写出两个根。",
+              "trapZh": "“两个实根”与“两个不同实根”不同；后者要求严格不等式。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "若 y = f(x) 与 y = 2x+1 有三个交点，方程 f(x) = 2x+1 有多少个不同实根？",
+              "promptEn": "If y=f(x) and y=2x+1 meet three times, how many distinct real roots does f(x)=2x+1 have?",
+              "answerZh": "三个。每一个交点的 x 坐标对应一个不同实根。",
+              "answerEn": "Three, one x-coordinate per intersection."
+            }
+          ]
+        },
+        {
+          "titleZh": "图像变换：括号内方向相反",
+          "titleEn": "Graph Transformations: Inside Changes Run Opposite",
+          "paragraphsZh": [
+            "外部变化直接作用在输出 y 上；括号内部变化作用在输入 x 上，因此平移方向看起来相反。不要只背口诀：用一个已知点代入新表达式验证位置。",
+            "例如 f(x) 上点 (a, f(a)) 在 y = f(x−3) 上会变成 (a+3, f(a))，所以整体向右 3。"
+          ],
+          "rules": [
+            {
+              "term": "Vertical shift｜竖直平移",
+              "statementZh": "y = f(x) + a：向上 a（a > 0）"
+            },
+            {
+              "term": "Horizontal shift｜水平平移",
+              "statementZh": "y = f(x + a)：向左 a（a > 0）"
+            },
+            {
+              "term": "Vertical scale｜竖直伸缩",
+              "statementZh": "y = a f(x)：所有 y 坐标乘 a"
+            },
+            {
+              "term": "Horizontal scale｜水平伸缩",
+              "statementZh": "y = f(ax)：所有 x 坐标除以 a"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "把 y = f(x) 变成 y = f(2x−3)，可怎样描述水平变化？",
+              "promptEn": "How can the horizontal change from y=f(x) to y=f(2x−3) be described?",
+              "answerZh": "写成 f(2(x−3/2))：先理解为水平坐标缩为原来的 1/2，再向右平移 3/2。用特征点验证，不要只凭顺序口诀。",
+              "answerEn": "Write f(2(x−3/2)): horizontal scale factor 1/2, with a shift right by 3/2."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sequences-geometry",
+      "number": "04",
+      "titleZh": "数列、坐标几何与三角",
+      "titleEn": "Sequences, Coordinate Geometry and Trigonometry",
+      "summaryZh": "这些题经常把多个熟悉知识点压缩到同一道选择题里。关键是先辨认结构，再选择通项、距离、斜率或精确三角值。",
+      "learningOutcomes": [
+        "能在等差、等比与递推数列之间选择合适表示",
+        "能把直线、圆与相切条件转换成距离或判别式条件",
+        "能使用精确三角值、恒等式和象限符号排除不可能选项"
+      ],
+      "sections": [
+        {
+          "titleZh": "数列：先分清模型，再代公式",
+          "titleEn": "Sequences: Identify the Model Before Using a Formula",
+          "paragraphsZh": [
+            "等差数列关注固定差，等比数列关注固定倍数。题目给出不相邻项时，不要默认公比为正；由 r² 得到 r 时必须结合题目中的正负、单调或范围条件筛选。",
+            "递推式告诉你相邻项怎样变化，通项告诉你第 n 项是什么。选择题中可先写出前几项找结构，但观察到的规律仍要用递推或代数验证。"
+          ],
+          "rules": [
+            {
+              "term": "Arithmetic｜等差",
+              "statementZh": "第 n 项等于首项加 (n−1) 个公差。",
+              "formula": {
+                "tex": "u_n=a+(n-1)d",
+                "text": "u_n = a + (n − 1)d"
+              }
+            },
+            {
+              "term": "Geometric｜等比",
+              "statementZh": "第 n 项等于首项乘公比的 n−1 次方。",
+              "formula": {
+                "tex": "u_n=ar^{n-1}",
+                "text": "u_n = ar^(n − 1)"
+              }
+            },
+            {
+              "term": "Finite geometric sum｜有限等比和",
+              "statementZh": "r 不等于 1 时优先保留因式结构。",
+              "formula": {
+                "tex": "S_n=a\\frac{1-r^n}{1-r}",
+                "text": "S_n = a(1 − r^n)/(1 − r)"
+              }
+            },
+            {
+              "term": "Sign check｜符号检查",
+              "statementZh": "从 r² = c 得到 r = ±√c；只有额外条件才能删掉其中一个分支。"
+            }
+          ],
+          "workedExamples": [
+            {
+              "id": "sequence-positive-geometric",
+              "titleZh": "原创例题：不要漏掉公比的符号条件",
+              "titleEn": "Original Worked Example: Use the Sign Condition",
+              "problemZh": "一个各项均为正数的等比数列首项为 3，第三项为 12。求前四项之和。",
+              "problemEn": "A geometric sequence has positive terms, first term 3 and third term 12. Find the sum of its first four terms.",
+              "steps": [
+                {
+                  "labelZh": "1. 用第三项",
+                  "bodyZh": "第三项为 3r²，因此 3r² = 12，得到 r² = 4。",
+                  "math": {
+                    "tex": "3r^2=12",
+                    "text": "3r² = 12"
+                  }
+                },
+                {
+                  "labelZh": "2. 使用正数条件",
+                  "bodyZh": "代数上 r = ±2；但所有项均为正，所以公比不能是 −2，必须取 r = 2。",
+                  "math": {
+                    "tex": "r=2",
+                    "text": "r = 2"
+                  }
+                },
+                {
+                  "labelZh": "3. 求和",
+                  "bodyZh": "前四项为 3、6、12、24，因此总和为 45。",
+                  "math": {
+                    "tex": "S_4=3+6+12+24=45",
+                    "text": "S_4 = 45"
+                  }
+                }
+              ],
+              "answerZh": "前四项之和为 45。",
+              "trapZh": "只写 r = √4 会掩盖一个代数分支；正确做法是先写 ±2，再用题目条件筛选。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "若等比数列首项为 a，第四项为 −8a，且 a ≠ 0，公比是多少？",
+              "promptEn": "If a geometric sequence has first term a and fourth term −8a, with a non-zero, what is the common ratio?",
+              "answerZh": "r³ = −8，所以 r = −2。三次方在实数范围内只有一个对应根。",
+              "answerEn": "r³=−8, so r=−2."
+            }
+          ]
+        },
+        {
+          "titleZh": "直线、圆与三角：把图形翻译成条件",
+          "titleEn": "Lines, Circles and Trigonometry: Translate the Diagram",
+          "paragraphsZh": [
+            "坐标几何题的图形只是信息载体。平行转成斜率相同，垂直转成斜率乘积为 −1（斜率存在时），相切转成圆心到直线距离等于半径，或联立后判别式等于 0。",
+            "三角题优先使用精确值和象限符号。看到 sin²θ + cos²θ、tanθ = sinθ/cosθ 或补角关系时，先化结构，再决定是否求角。"
+          ],
+          "rules": [
+            {
+              "term": "Circle｜圆",
+              "statementZh": "圆心 (a,b)、半径 r 的标准式。",
+              "formula": {
+                "tex": "(x-a)^2+(y-b)^2=r^2",
+                "text": "(x − a)² + (y − b)² = r²"
+              }
+            },
+            {
+              "term": "Perpendicular｜垂直",
+              "statementZh": "两条非竖直直线垂直时，斜率乘积为 −1。",
+              "formula": {
+                "tex": "m_1m_2=-1",
+                "text": "m_1m_2 = −1"
+              }
+            },
+            {
+              "term": "Tangent｜相切",
+              "statementZh": "圆心到直线的垂直距离等于半径；等价地，联立方程只有一个交点。"
+            },
+            {
+              "term": "Exact trigonometry｜精确三角",
+              "statementZh": "对 0、30、45、60、90 度及其相关角保留根式和分数，不先转小数。"
+            }
+          ],
+          "workedExamples": [
+            {
+              "id": "geometry-tangent-line",
+              "titleZh": "原创例题：用距离识别切线",
+              "titleEn": "Original Worked Example: Identify Tangents by Distance",
+              "problemZh": "直线 y = mx + 5 与圆 x² + y² = 5 相切。求 m 的所有可能值。",
+              "problemEn": "The line y=mx+5 is tangent to the circle x²+y²=5. Find all possible values of m.",
+              "steps": [
+                {
+                  "labelZh": "1. 写圆心和半径",
+                  "bodyZh": "圆心是原点，半径为 √5。"
+                },
+                {
+                  "labelZh": "2. 写直线标准式",
+                  "bodyZh": "直线可写成 mx − y + 5 = 0。原点到该直线的距离是 5/√(m²+1)。",
+                  "math": {
+                    "tex": "d=\\frac{5}{\\sqrt{m^2+1}}",
+                    "text": "d = 5/√(m² + 1)"
+                  }
+                },
+                {
+                  "labelZh": "3. 使用相切条件",
+                  "bodyZh": "令距离等于半径并平方，得到 25/(m²+1) = 5，所以 m² = 4。",
+                  "math": {
+                    "tex": "\\frac{25}{m^2+1}=5",
+                    "text": "25/(m² + 1) = 5"
+                  }
+                },
+                {
+                  "labelZh": "4. 保留两个方向",
+                  "bodyZh": "因此 m = 2 或 m = −2；两条对称直线都与圆相切。"
+                }
+              ],
+              "answerZh": "m = 2 或 m = −2。",
+              "trapZh": "相切不代表斜率只有正值；圆关于 y 轴对称，因此应预期两个对称答案。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "若 cos θ < 0 且 tan θ > 0，θ 在 0° 到 360° 的哪个象限？",
+              "promptEn": "If cos theta is negative and tan theta is positive, which quadrant contains theta between 0 and 360 degrees?",
+              "answerZh": "第三象限。tan 为正表示 sin 与 cos 同号；cos 为负，所以二者都为负。",
+              "answerEn": "Quadrant III: sine and cosine are both negative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exponentials-calculus",
+      "number": "05",
+      "titleZh": "指数、对数与微积分模型",
+      "titleEn": "Exponentials, Logarithms and Calculus Models",
+      "summaryZh": "TMUA 不只考能否求导积分，更考你是否理解函数的定义域、增长方式，以及导数和面积在题目情境中的含义。",
+      "learningOutcomes": [
+        "能用同底、单调性与定义域处理指数和对数方程",
+        "能把导数解释为斜率、增减和极值条件",
+        "能把定积分解释为带符号面积，并检查模型的有效范围"
+      ],
+      "sections": [
+        {
+          "titleZh": "指数与对数：先统一语言",
+          "titleEn": "Exponentials and Logarithms: Use One Language",
+          "paragraphsZh": [
+            "若两边能改写成同底正数幂，利用指数函数的一一对应性通常比直接取对数更快。若必须取对数，先确认真数为正，并避免把 log(a+b) 错拆成 log a + log b。",
+            "增长与衰减问题先写模型，再检查变量范围。代数解即使正确，也可能落在时间为负或概率超出 0 到 1 的无效区间。"
+          ],
+          "rules": [
+            {
+              "term": "Same base｜同底",
+              "statementZh": "当 a > 0 且 a ≠ 1 时，a^u = a^v 推出 u = v。",
+              "formula": {
+                "tex": "a^u=a^v\\Rightarrow u=v",
+                "text": "a^u = a^v ⇒ u = v"
+              }
+            },
+            {
+              "term": "Log domain｜对数定义域",
+              "statementZh": "log g(x) 只在 g(x) > 0 时有实数意义。"
+            },
+            {
+              "term": "Product law｜乘积法则",
+              "statementZh": "只有乘积可以拆成和；和不能这样拆。",
+              "formula": {
+                "tex": "\\log(ab)=\\log a+\\log b",
+                "text": "log(ab) = log a + log b"
+              }
+            },
+            {
+              "term": "Model range｜模型范围",
+              "statementZh": "最后把解代回题目变量的实际范围，而不仅是原代数式。"
+            }
+          ],
+          "workedExamples": [
+            {
+              "id": "exponential-same-base",
+              "titleZh": "原创例题：先改写同底",
+              "titleEn": "Original Worked Example: Rewrite to a Common Base",
+              "problemZh": "解方程 2^(x+1) = 8 × 4^x。",
+              "problemEn": "Solve 2^(x+1)=8 times 4^x.",
+              "steps": [
+                {
+                  "labelZh": "1. 全部改写成 2 的幂",
+                  "bodyZh": "8 = 2³，4^x = 2^(2x)，所以右侧是 2^(2x+3)。",
+                  "math": {
+                    "tex": "8\\cdot4^x=2^{2x+3}",
+                    "text": "8 × 4^x = 2^(2x + 3)"
+                  }
+                },
+                {
+                  "labelZh": "2. 比较指数",
+                  "bodyZh": "底数 2 为正且不等于 1，因此 x + 1 = 2x + 3。",
+                  "math": {
+                    "tex": "x+1=2x+3",
+                    "text": "x + 1 = 2x + 3"
+                  }
+                },
+                {
+                  "labelZh": "3. 求解并检查",
+                  "bodyZh": "得到 x = −2；代回两边都等于 1/2。"
+                }
+              ],
+              "answerZh": "x = −2。",
+              "trapZh": "4^x = (2²)^x = 2^(2x)，不是 2^(x+2)。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "为什么 log(x−1) = log(3−x) 求出 x = 2 后仍需检查？",
+              "promptEn": "Why must x=2 still be checked after solving log(x−1)=log(3−x)?",
+              "answerZh": "原式要求 x−1 > 0 且 3−x > 0，即 1 < x < 3。x = 2 合法，但定义域检查不能省略。",
+              "answerEn": "Both logarithm arguments must be positive; x=2 lies in 1<x<3."
+            }
+          ]
+        },
+        {
+          "titleZh": "微积分：每个符号都要有题目含义",
+          "titleEn": "Calculus: Attach Meaning to Every Symbol",
+          "paragraphsZh": [
+            "f′(x)=0 只给出驻点候选，不自动保证最大值。需要结合导数变号、二阶导数或定义域端点判断。优化题尤其要先写允许的 x 范围，再比较所有候选。",
+            "定积分给出带符号面积；图像在 x 轴下方时贡献为负。题目若问几何总面积，必须在过零点处分段并取各部分的正面积。"
+          ],
+          "rules": [
+            {
+              "term": "Stationary point｜驻点",
+              "statementZh": "f′(x)=0 给出候选位置；类型仍需判断。",
+              "formula": {
+                "tex": "f'(x)=0",
+                "text": "f′(x) = 0"
+              }
+            },
+            {
+              "term": "Increasing｜递增",
+              "statementZh": "在可导区间内，f′(x) > 0 表示函数递增。"
+            },
+            {
+              "term": "Signed area｜带符号面积",
+              "statementZh": "定积分在 x 轴上方为正、下方为负。"
+            },
+            {
+              "term": "Endpoints｜端点",
+              "statementZh": "闭区间上的最大最小值要同时比较内部驻点和两个端点。"
+            }
+          ],
+          "workedExamples": [
+            {
+              "id": "calculus-rectangle-maximum",
+              "titleZh": "原创例题：优化前先写有效范围",
+              "titleEn": "Original Worked Example: State the Valid Range Before Optimising",
+              "problemZh": "一个关于 y 轴对称的矩形位于抛物线 y = 12 − x² 与 x 轴之间，右上角为 (x, 12−x²)，其中 x > 0。求矩形的最大面积。",
+              "problemEn": "A rectangle symmetric about the y-axis lies under y=12−x² and above the x-axis. Its upper-right corner is (x,12−x²), where x>0. Find its maximum area.",
+              "steps": [
+                {
+                  "labelZh": "1. 写尺寸和范围",
+                  "bodyZh": "矩形宽为 2x，高为 12−x²；需要 0 < x < √12。"
+                },
+                {
+                  "labelZh": "2. 写面积函数",
+                  "bodyZh": "A(x)=2x(12−x²)=24x−2x³。",
+                  "math": {
+                    "tex": "A(x)=24x-2x^3",
+                    "text": "A(x) = 24x − 2x³"
+                  }
+                },
+                {
+                  "labelZh": "3. 找驻点",
+                  "bodyZh": "A′(x)=24−6x²。令其为 0，在有效范围内得到 x=2。",
+                  "math": {
+                    "tex": "A'(x)=24-6x^2=0",
+                    "text": "A′(x) = 24 − 6x² = 0"
+                  }
+                },
+                {
+                  "labelZh": "4. 判断并求值",
+                  "bodyZh": "导数从正变负，所以 x=2 给出最大值；A(2)=4×8=32。"
+                }
+              ],
+              "answerZh": "最大面积为 32 平方单位。",
+              "trapZh": "只写 f′(x)=0 还没有完成优化；必须确认候选在有效范围内并确实是最大值。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "若函数在 [0,4] 上只有一个驻点 x=2，为什么不能只计算 f(2) 就宣布最大值？",
+              "promptEn": "Why is f(2) alone insufficient to identify the maximum on [0,4]?",
+              "answerZh": "闭区间绝对最大值也可能出现在端点；必须比较 f(0)、f(2) 和 f(4)，并确认函数在区间内有定义。",
+              "answerEn": "An absolute maximum can occur at an endpoint, so compare f(0), f(2) and f(4)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mathematical-reasoning",
+      "number": "06",
+      "titleZh": "数学推理与选项辨析",
+      "titleEn": "Mathematical Reasoning and Option Discrimination",
+      "summaryZh": "Paper 2 经常不要求长计算，而要求你判断一个论证是否完整、一个结论是否必然，或哪个选项能被条件迅速排除。",
+      "learningOutcomes": [
+        "能区分实验观察、一般猜想与严格证明",
+        "能使用奇偶、余数、边界、对称和不变量缩小可能性",
+        "能在五个选项中选择代入、反例或完整推导的最低成本路径"
+      ],
+      "sections": [
+        {
+          "titleZh": "必然、可能与不可能",
+          "titleEn": "Must, May and Cannot",
+          "paragraphsZh": [
+            "题目问 must be true 时，一个支持例子没有证明力；你需要从条件推出结论，或证明所有其他选项不可能。题目问 could be true 时，一个满足全部条件的构造就足够。",
+            "整数问题优先看奇偶和模运算，几何问题优先看边界与对称，函数问题优先看定义域、单调和极端值。先找不变量，可以避免把题目变成长计算。"
+          ],
+          "rules": [
+            {
+              "term": "Must be true｜必然成立",
+              "statementZh": "需要覆盖全部合法情况；个别数值例子不足。"
+            },
+            {
+              "term": "Could be true｜可能成立",
+              "statementZh": "构造一个满足全部前提的例子即可。"
+            },
+            {
+              "term": "Counterexample｜反例",
+              "statementZh": "要推翻结论，例子必须先满足题目所有前提。"
+            },
+            {
+              "term": "Invariant｜不变量",
+              "statementZh": "寻找操作前后保持不变的奇偶、余数、总和或颜色类别。"
+            }
+          ],
+          "workedExamples": [
+            {
+              "id": "reasoning-consecutive-divisibility",
+              "titleZh": "原创例题：用连续整数结构证明整除",
+              "titleEn": "Original Worked Example: Divisibility from Consecutive Integers",
+              "problemZh": "证明：对任意整数 n，n(n−1)(n+1) 都能被 6 整除。",
+              "problemEn": "Prove that n(n−1)(n+1) is divisible by 6 for every integer n.",
+              "steps": [
+                {
+                  "labelZh": "1. 识别结构",
+                  "bodyZh": "n−1、n、n+1 是三个连续整数。"
+                },
+                {
+                  "labelZh": "2. 找因子 2",
+                  "bodyZh": "任意两个连续整数中至少一个是偶数，所以三者乘积含因子 2。"
+                },
+                {
+                  "labelZh": "3. 找因子 3",
+                  "bodyZh": "任意三个连续整数中恰有一个能被 3 整除，所以乘积含因子 3。"
+                },
+                {
+                  "labelZh": "4. 合并",
+                  "bodyZh": "2 与 3 互质，因此乘积含因子 6。"
+                }
+              ],
+              "answerZh": "n(n−1)(n+1) 对所有整数 n 都能被 6 整除。",
+              "trapZh": "代入 n=1、2、3 只能支持猜想，不能证明对所有整数都成立。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "要证明某个整数表达式不一定是偶数，最短的合法方法是什么？",
+              "promptEn": "What is the shortest valid way to show an integer expression is not always even?",
+              "answerZh": "找一个满足所有前提、但使表达式为奇数的反例。",
+              "answerEn": "Give one counterexample satisfying every premise for which the expression is odd."
+            }
+          ]
+        },
+        {
+          "titleZh": "把选项当作额外条件",
+          "titleEn": "Treat the Options as Additional Constraints",
+          "paragraphsZh": [
+            "五个选项不是答案列表之外的装饰。若选项分布在不同符号、区间或数量级，先用这些差异决定最便宜的检验；只有当多个选项仍无法区分时才做完整推导。",
+            "代入特殊值时必须选择合法且有区分度的值。0、1、−1、端点和对称点常有用，但如果它们让多个选项偶然相同，就需要换值或回到一般推导。"
+          ],
+          "rules": [
+            {
+              "term": "Sign｜符号",
+              "statementZh": "先判断正、负或零，常能立即排除多数选项。"
+            },
+            {
+              "term": "Magnitude｜数量级",
+              "statementZh": "用上下界或安全估算判断结果落在哪个区间。"
+            },
+            {
+              "term": "Special value｜特殊值",
+              "statementZh": "只可在题目允许的定义域内代入，并确认该值能区分选项。"
+            },
+            {
+              "term": "Reverse test｜反向检验",
+              "statementZh": "从选项代回必要条件，适合候选值有限而正向求解较长的题。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "若五个选项中只有一个为负数，而题目表达式显然小于 0，你还需要完整化简吗？",
+              "promptEn": "If only one option is negative and the expression is certainly below zero, is full simplification needed?",
+              "answerZh": "不需要。只要负号判断严格来自题目条件，就可以直接选择唯一负数选项。",
+              "answerEn": "No. A rigorous sign argument is sufficient to select the only negative option."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "past-paper-review",
+      "number": "07",
+      "titleZh": "真题训练与证据化复盘",
+      "titleEn": "Past-paper Training and Evidence-based Review",
+      "summaryZh": "真题的价值不在于做过多少套，而在于每次尝试是否留下可比较的数据，并转化成下一次具体训练动作。",
+      "learningOutcomes": [
+        "能决定何时做分主题训练、半套诊断或完整限时卷",
+        "能依据第一处错误和时间记录选择正确补救方式",
+        "能在 24 小时和 7 天后用迁移题检验是否真正掌握"
+      ],
+      "sections": [
+        {
+          "titleZh": "先保护真题，再建立基线",
+          "titleEn": "Protect the Papers and Establish a Baseline",
+          "paragraphsZh": [
+            "如果课程范围尚未覆盖，直接消耗整套真题只会把知识缺口和考试技巧混在一起。先完成课程映射与分主题基础练习，再用一套未见卷建立限时基线。",
+            "同一套试卷的重做分数不能当作新的真实能力分数，因为记忆会抬高结果。重做用于检查修复；新的 benchmark 必须来自未见题或经过等值设计的模拟卷。"
+          ],
+          "rules": [
+            {
+              "term": "Unseen baseline｜未见基线",
+              "statementZh": "第一次完整限时作答，用于记录起始正确率、完成度和节奏。"
+            },
+            {
+              "term": "Repair attempt｜修复重做",
+              "statementZh": "遮住解析重做旧题，用于验证错误是否被修复，不作为新 benchmark。"
+            },
+            {
+              "term": "Transfer check｜迁移检查",
+              "statementZh": "使用同知识、不同表面结构的新题，判断是否只记住原答案。"
+            },
+            {
+              "term": "Paper preservation｜保护真题",
+              "statementZh": "给每套卷指定用途：基线、阶段检查或最终模拟，避免无目的打开。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "为什么一周后把同一套卷从 22/40 提高到 36/40，不能直接宣称能力达到 36/40？",
+              "promptEn": "Why does improving the same paper from 22/40 to 36/40 one week later not prove a 36/40 current ability?",
+              "answerZh": "第二次结果混入了题目记忆和解析暴露。它能证明部分修复，但新的能力估计需要未见题或等值模拟卷。",
+              "answerEn": "The second score includes memory and solution exposure; use unseen or equated material for a fresh estimate."
+            }
+          ]
+        },
+        {
+          "titleZh": "从错误标签到下一次训练动作",
+          "titleEn": "Turn Error Labels into the Next Training Action",
+          "paragraphsZh": [
+            "复盘先找第一处导致答案偏离的节点，而不是只看最后一行。读题方向错了，即使后面代数也错，首要修复仍是限定词和条件箭头；反之，路径完全正确却抄错符号，应训练检查点而不是重学整章。",
+            "时间数据要分成阅读、主动思考和执行。长时间并不自动代表知识差：可能是启动路径缺失，也可能是选项利用不足。只有结合草稿和第一步记录，时间才有解释价值。"
+          ],
+          "rules": [
+            {
+              "term": "Knowledge action｜知识缺口",
+              "statementZh": "学习最小概念单元，随后做 2 至 3 道直接应用题。"
+            },
+            {
+              "term": "Route action｜路径缺口",
+              "statementZh": "写出触发信号与第一步，再做不同表面的同方法题。"
+            },
+            {
+              "term": "Execution action｜执行错误",
+              "statementZh": "在高风险步骤设置符号、范围、抄写或估算检查点。"
+            },
+            {
+              "term": "Reading action｜读题错误",
+              "statementZh": "圈出 necessary、sufficient、must、could、integer、distinct 等限定词并复述题意。"
+            }
+          ],
+          "workedExamples": [
+            {
+              "id": "review-route-gap",
+              "titleZh": "原创例题：识别真正的训练缺口",
+              "titleEn": "Original Worked Example: Identify the Real Training Gap",
+              "problemZh": "一名学生会使用判别式，但在参数题上主动思考 4 分 40 秒仍没有第一步。看完一句“把不同实根翻译成 Δ>0”后可以独立完成；七天后遇到新参数题又无法启动。应怎样归因并安排下一步？",
+              "problemEn": "A student knows the discriminant but cannot start a parameter question after 4 minutes 40 seconds. One trigger sentence enables a complete solution, yet a new parameter question causes the same failure seven days later. How should this be classified and trained?",
+              "steps": [
+                {
+                  "labelZh": "1. 排除知识缺口",
+                  "bodyZh": "学生会计算判别式，也能在提示后独立完成，所以主要问题不是公式未知。"
+                },
+                {
+                  "labelZh": "2. 找第一处失败",
+                  "bodyZh": "失败发生在把题目语言转换为数学条件之前，属于启动路径缺口。"
+                },
+                {
+                  "labelZh": "3. 解释七天后结果",
+                  "bodyZh": "旧题会做但新题不能启动，说明记住了解法表面，没有形成可迁移触发信号。"
+                },
+                {
+                  "labelZh": "4. 安排下一步",
+                  "bodyZh": "制作一张“根的数量 → 判别式条件”触发卡，并穿插完成 3 道不同表面的参数题；每题只记录题意翻译和第一步。"
+                }
+              ],
+              "answerZh": "归类为 route gap；下一步训练触发信号和跨题型迁移，而不是重学完整二次方程章节。",
+              "trapZh": "看到用时很长就直接判断“知识不会”，会安排过量课程，却没有修复真正的启动问题。"
+            }
+          ],
+          "activeRecall": [
+            {
+              "promptZh": "一道题因把 distinct roots 误读成 real roots 而使用 Δ≥0。第一错误标签和下一步动作是什么？",
+              "promptEn": "A student reads distinct roots as real roots and uses delta greater than or equal to zero. What are the first error label and next action?",
+              "answerZh": "读题错误。建立限定词检查：distinct 对应严格条件 Δ>0，并在提交前复核不等号。",
+              "answerEn": "A reading error; map distinct to the strict condition delta greater than zero and check the inequality before submission."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "titleZh": "15 分钟主动回忆检查",
+    "titleEn": "15-minute Active Recall Check",
+    "instructionsZh": "先合上解析独立完成。所有题目均为满托原创，不对应任何官方真题。",
+    "questions": [
+      {
+        "id": "checkpoint-01",
+        "promptZh": "设 A、B 为两个陈述。“A 是 B 的必要条件”等价于哪一项？",
+        "promptEn": "Which statement is equivalent to ‘A is necessary for B’?",
+        "options": [
+          "A → B",
+          "B → A",
+          "not A → B",
+          "A if and only if B"
+        ],
+        "correctOption": 1,
+        "explanationZh": "B 成立必须有 A，所以方向是 B → A。",
+        "explanationEn": "B requires A, so B → A."
+      },
+      {
+        "id": "checkpoint-02",
+        "promptZh": "“对所有实数 x，x² ≥ x”这一命题为假。哪一个数本身就构成反例？",
+        "promptEn": "Which value is a counterexample to ‘for every real x, x² ≥ x’?",
+        "options": [
+          "−1",
+          "0",
+          "1/2",
+          "2"
+        ],
+        "correctOption": 2,
+        "explanationZh": "x = 1/2 时，x² = 1/4 < 1/2。一个合法反例即可推翻全称命题。",
+        "explanationEn": "At x=1/2, x²=1/4<1/2."
+      },
+      {
+        "id": "checkpoint-03",
+        "promptZh": "实数方程 √(x+3) = x−1 的解是？",
+        "promptEn": "What is the real solution of √(x+3)=x−1?",
+        "options": [
+          "(3−√17)/2 only",
+          "(3+√17)/2 only",
+          "both values",
+          "no real solution"
+        ],
+        "correctOption": 1,
+        "explanationZh": "原式要求 x ≥ 1；负的候选根不满足限制。",
+        "explanationEn": "The original equation requires x≥1, so the negative candidate is extraneous."
+      },
+      {
+        "id": "checkpoint-04",
+        "promptZh": "方程 x² − 2(k+1)x + k² + 1 = 0 有两个不同实根。k 必须满足？",
+        "promptEn": "For two distinct real roots, which condition on k is required?",
+        "options": [
+          "k < 0",
+          "k ≤ 0",
+          "k > 0",
+          "all real k"
+        ],
+        "correctOption": 2,
+        "explanationZh": "判别式为 8k；两个不同实根要求 8k > 0。",
+        "explanationEn": "The discriminant is 8k, which must be positive."
+      },
+      {
+        "id": "checkpoint-05",
+        "promptZh": "下列哪一项与命题 P → Q 逻辑等价？",
+        "promptEn": "Which statement is logically equivalent to P → Q?",
+        "options": [
+          "Q → P",
+          "not P → not Q",
+          "not Q → not P",
+          "P → not Q"
+        ],
+        "correctOption": 2,
+        "explanationZh": "原命题与逆否命题 not Q → not P 等价。",
+        "explanationEn": "A statement is equivalent to its contrapositive."
+      },
+      {
+        "id": "checkpoint-06",
+        "promptZh": "图像 y = f(x−4) 由 y = f(x) 怎样得到？",
+        "promptEn": "How is y=f(x−4) obtained from y=f(x)?",
+        "options": [
+          "向左 4",
+          "向右 4",
+          "向上 4",
+          "水平压缩为 1/4"
+        ],
+        "correctOption": 1,
+        "explanationZh": "括号内 x−4 对应向右平移 4。可用原图上的特征点验证。",
+        "explanationEn": "Replacing x by x−4 shifts the graph four units right."
+      },
+      {
+        "id": "checkpoint-07",
+        "promptZh": "一个各项均为正数的等比数列首项为 3、第三项为 12。前四项之和是多少？",
+        "promptEn": "A positive geometric sequence has first term 3 and third term 12. What is the sum of its first four terms?",
+        "options": [
+          "−15",
+          "21",
+          "45",
+          "48"
+        ],
+        "correctOption": 2,
+        "explanationZh": "3r²=12 给出 r=±2；各项为正排除 −2，所以前四项为 3、6、12、24，总和 45。",
+        "explanationEn": "Positivity selects r=2, giving 3+6+12+24=45."
+      },
+      {
+        "id": "checkpoint-08",
+        "promptZh": "直线 y=mx+5 与圆 x²+y²=5 相切。m 的取值是？",
+        "promptEn": "The line y=mx+5 is tangent to x²+y²=5. Which values can m take?",
+        "options": [
+          "2 only",
+          "−2 only",
+          "2 or −2",
+          "5 or −5"
+        ],
+        "correctOption": 2,
+        "explanationZh": "原点到直线 mx−y+5=0 的距离等于 √5，平方后得到 m²=4。",
+        "explanationEn": "Equating the centre-to-line distance to the radius gives m²=4."
+      },
+      {
+        "id": "checkpoint-09",
+        "promptZh": "方程 2^(x+1)=8×4^x 的解是？",
+        "promptEn": "What is the solution of 2^(x+1)=8 times 4^x?",
+        "options": [
+          "−3",
+          "−2",
+          "2",
+          "3"
+        ],
+        "correctOption": 1,
+        "explanationZh": "右侧为 2^(2x+3)，所以 x+1=2x+3，得到 x=−2。",
+        "explanationEn": "Rewrite the right side as 2^(2x+3), then equate exponents."
+      },
+      {
+        "id": "checkpoint-10",
+        "promptZh": "矩形宽为 2x、高为 12−x²。若 x>0 且矩形有效，其最大面积是多少？",
+        "promptEn": "A rectangle has width 2x and height 12−x². For valid positive x, what is its maximum area?",
+        "options": [
+          "24",
+          "30",
+          "32",
+          "36"
+        ],
+        "correctOption": 2,
+        "explanationZh": "A=24x−2x³，A′=24−6x²；有效驻点 x=2 给出最大面积 32。",
+        "explanationEn": "The valid stationary point x=2 gives area 32 and the derivative changes from positive to negative."
+      },
+      {
+        "id": "checkpoint-11",
+        "promptZh": "为什么 n(n−1)(n+1) 对每个整数 n 都能被 6 整除？",
+        "promptEn": "Why is n(n−1)(n+1) divisible by 6 for every integer n?",
+        "options": [
+          "三个因子总是偶数",
+          "三个连续整数中有一个偶数且有一个是 3 的倍数",
+          "代入 n=1、2、3 都成立",
+          "n²−1 总是 6 的倍数"
+        ],
+        "correctOption": 1,
+        "explanationZh": "三个连续整数的乘积一定含因子 2 和因子 3；2 与 3 互质，所以乘积能被 6 整除。",
+        "explanationEn": "Among three consecutive integers one supplies a factor 2 and one a factor 3."
+      },
+      {
+        "id": "checkpoint-12",
+        "promptZh": "学生重做同一套卷从 22/40 提升到 36/40。若要获得新的能力 benchmark，下一步最合适的是？",
+        "promptEn": "A student's score rises from 22/40 to 36/40 on the same paper. What is the best next step for a fresh ability benchmark?",
+        "options": [
+          "立即把 36/40 当作当前能力",
+          "再背一次这套卷的答案",
+          "完成一套未见卷或经过等值设计的模拟卷",
+          "只统计做题总时长"
+        ],
+        "correctOption": 2,
+        "explanationZh": "重做分数混入题目记忆，适合验证修复；新的能力估计应来自未见题或等值模拟卷。",
+        "explanationEn": "A repeat score includes memory; use unseen or equated material for a fresh estimate."
+      }
+    ]
+  },
+  "reviewWorkflow": [
+    {
+      "stepZh": "做题前",
+      "stepEn": "Before",
+      "actionZh": "标记题目主题与预期第一步，不查答案。"
+    },
+    {
+      "stepZh": "做题中",
+      "stepEn": "During",
+      "actionZh": "记录主动思考时间、改答和是否使用排除法。"
+    },
+    {
+      "stepZh": "提交后",
+      "stepEn": "After",
+      "actionZh": "定位第一处错误，不把最后一步错当作唯一原因。"
+    },
+    {
+      "stepZh": "24 小时后",
+      "stepEn": "24 hours later",
+      "actionZh": "遮住解析重做；能解释触发信号才算完成复盘。"
+    },
+    {
+      "stepZh": "7 天后",
+      "stepEn": "7 days later",
+      "actionZh": "用一道同方法原创题检查迁移，而不是背原题答案。"
+    }
+  ]
+}

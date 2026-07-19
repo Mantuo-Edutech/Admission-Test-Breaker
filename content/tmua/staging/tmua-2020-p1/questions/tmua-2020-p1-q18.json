@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "18   Find the number of solutions and the sum of the solutions of the equation\n\n\n                                    1 − 2 cos2 x = | cos x |\n\n     where 0 ≤ x ≤ 180◦\n\n     A Number of solutions = 2      Sum of solutions = 180◦\n\n     B Number of solutions = 2      Sum of solutions = 240◦\n\n     C Number of solutions = 3      Sum of solutions = 180◦\n\n     D Number of solutions = 3      Sum of solutions = 360◦\n\n     E Number of solutions = 4      Sum of solutions = 240◦\n\n     F Number of solutions = 4      Sum of solutions = 360◦\n\n\n\n\n                                            20"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the number of solutions and the sum of the solutions of the equation\n\n\n                                    1 − 2 cos2 x = | cos x |\n\n     where 0 ≤ x ≤ 180◦"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "Number of solutions = 2      Sum of solutions = 180◦"
+    },
+    {
+      "label": "B",
+      "rawText": "Number of solutions = 2      Sum of solutions = 240◦"
+    },
+    {
+      "label": "C",
+      "rawText": "Number of solutions = 3      Sum of solutions = 180◦"
+    },
+    {
+      "label": "D",
+      "rawText": "Number of solutions = 3      Sum of solutions = 360◦"
+    },
+    {
+      "label": "E",
+      "rawText": "Number of solutions = 4      Sum of solutions = 240◦"
+    },
+    {
+      "label": "F",
+      "rawText": "Number of solutions = 4      Sum of solutions = 360◦"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Approach 1: graph sketching\nOne way to start this question is to sketch the two graphs y = 1 − 2 cos2 x and y = |cos x|. It\nmay not be obvious how to sketch the first of these graphs (unless you happen to know about\ndouble-angle formulae), but we can sketch something adequate for this question.\nWe can sketch the graph of y = cos x, then use that to sketch both y = |cos x| and y = cos2 x,\nand then the latter one can be used to sketch y = 1 − 2 cos2 x. Squaring cos x gives a graph\nwhich is never negative, and is zero when cos x = 0. So the graphs look like this:\n\n                      y = cos x                                        y = |cos x|\n                y                                                y\n            1                                                1\n\n                                        x                                               x\n                0         90           180                       0           90         180\n\n          −1                                                −1\n\n\n\n                     y = cos2 x                                      y = 1 − 2 cos2 x\n                y                                                y\n            1                                                1\n\n                                        x                                               x\n                0         90           180                       0           90         180\n\n          −1                                                −1\n\n\nImagining overlaying the graphs of y = |cos x| and y = 1 − 2 cos2 x, we see that there are two\npoints of intersection symmetrically placed around 90◦ , so their sum is 180◦ , which is option A.\nApproach 2: using algebra\nWe solve the two equations 1 − 2 cos2 x = cos x when cos x ≥ 0 and 1 − 2 cos2 x = − cos x when\ncos x < 0.\nFirst, 1 − 2 cos2 x = cos x when cos x ≥ 0 gives 2 cos2 x + cos x − 1 = 0, which factorises as\n(2 cos x − 1)(cos x + 1) = 0. This has solutions cos x = 21 and cos x = −1. We must reject\nthe second solution as we require cos x ≥ 0, so we have the solution x = 60◦ (in the range\n0◦ ≤ x ≤ 180◦ ).\nNext, 1 − 2 cos2 x = − cos x when cos x < 0 gives 2 cos2 x − cos x − 1 = 0, which factorises as\n(2 cos x + 1)(cos x − 1) = 0. This has solutions cos x = − 21 and cos x = 1, of which only the first\nis valid. This gives the solution x = 120◦ .\nTherefore there are two solutions and their sum is 60◦ + 120◦ = 180◦ .\n\n\n\n\nVersion 1.0, April 2021                                                                       Page 20\n\n                                             © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        20
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

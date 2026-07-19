@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "9   Find the area enclosed by the graph of\n\n                                       |x| + |y| = 1\n\n        1\n    A\n        2\n    B 1\n\n    C 2\n\n    D 4\n      1√\n    E     2\n      2\n      √\n    F   2\n       √\n    G 2 2\n\n\n\n\n                                             \u0014\u0014"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the area enclosed by the graph of\n\n                                       |x| + |y| = 1\n\n        1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "2"
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "2"
+    },
+    {
+      "label": "D",
+      "rawText": "4\n      1√"
+    },
+    {
+      "label": "E",
+      "rawText": "2\n      2\n      √"
+    },
+    {
+      "label": "F",
+      "rawText": "2\n       √"
+    },
+    {
+      "label": "G",
+      "rawText": "2 2"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We first need to work out what the graph looks like. There are four cases for x and y depending\non whether there are positive or negative. We list them in a table:\n\n              quadrant    x   y   |x|   |y|    equation    rearranged to y = · · ·\n                1st       +   +     x     y    x+y =1           y = −x + 1\n                2nd       −   +   −x      y   −x + y = 1        y = x+1\n                3rd       −   −   −x    −y    −x − y = 1        y = −x − 1\n                4th       +   −     x   −y     x−y =1           y = x−1\n\nWe therefore have (at most) four lines making up this graph, and we can sketch these. We need\nto recall that we only draw the part of each line that appears within the relevant quadrant; for\nexample, y = x + 1 only appears in the 2nd quadrant.\n\n                                               y\n\n                                               1\n\n\n                                                             x\n                                   −1                  1\n\n\n                                               −1\n\n\n\nThis shape is a square. We can think of it as made up of 4 right angled triangles, each with\nbase and height equal to 1, so each has area 12 × 1 × 1 = 12 , and hence the square has area 2.\nThus the correct option is C.\n\n\n\n\nVersion 1.0, March 2022                                                                 Page 11"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

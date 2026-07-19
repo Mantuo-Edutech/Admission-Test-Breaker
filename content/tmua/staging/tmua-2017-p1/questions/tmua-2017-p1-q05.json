@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q05",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 5,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                            \u0003\n                                                            \u0003\n                                                            \u0003\n\nͷ\u0003     ܵ\u0003\u0003\u0003 \u0003\u0003\u0003\u0003\u0003‫\u0003\u0003\u0003\u0003\u0003 \u0003ݔ‬\n\n       \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003‫ ݔ‬ଶ െ ͺ‫ ݔ‬൅ ͳʹ ൏ Ͳ\u0003\u0003ʹ‫ ݔ‬൅ ͳ ൐ ͻ\u0003\n\n       \u0017\u0003\u0003ܵ\u0003 \u0003\u0003\u0003\u0003\u0003\u0003\u0003Ǥ\u0003\n\n       \u001a \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003ܵ\u0003ǫ\u0003\n\u0003      \u0003\n\u0003      A    ሺ‫ ݔ‬ଶ െ ͺ‫ ݔ‬൅ ͳʹሻሺʹ‫ ݔ‬൅ ͳሻ ൏ Ͳ\u0003\n\n\u0003      B    ሺ‫ ݔ‬ଶ െ ͺ‫ ݔ‬൅ ͳʹሻሺʹ‫ ݔ‬൅ ͳሻ ൐ Ͳ\u0003\n\n\u0003      C    ‫ ݔ‬ଶ െ ͳͲ‫ ݔ‬൅ ʹͶ ൏ Ͳ\u0003\n\n\u0003      D    ‫ ݔ‬ଶ െ ͳͲ‫ ݔ‬൅ ʹͶ ൐ Ͳ\u0003\n\n\u0003      E    ‫ ݔ‬ଶ െ ͸‫ ݔ‬൅ ͺ ൏ Ͳ\u0003\n\n\u0003      F    ‫ ݔ‬ଶ െ ͸‫ ݔ‬൅ ͺ ൐ Ͳ\u0003\n\n\u0003      G    ‫ ݔ‬൏ ʹ\u0003\n\n\u0003      H    ‫ ݔ‬൐ ͸\u0003\n\n\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                               \u001a                       >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "ܵ ‫ ݔ‬\n\n       ‫ ݔ‬ଶ െ 8‫ ݔ‬൅ 12 ൏ 02‫ ݔ‬൅ 1 ൐ 9\n\n       ܵ Ǥ\n\n        ܵǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "ሺ‫ ݔ‬ଶ െ 8‫ ݔ‬൅ 12ሻሺ2‫ ݔ‬൅ 1ሻ ൏ 0"
+    },
+    {
+      "label": "B",
+      "rawText": "ሺ‫ ݔ‬ଶ െ 8‫ ݔ‬൅ 12ሻሺ2‫ ݔ‬൅ 1ሻ ൐ 0"
+    },
+    {
+      "label": "C",
+      "rawText": "‫ ݔ‬ଶ െ 10‫ ݔ‬൅ 24 ൏ 0"
+    },
+    {
+      "label": "D",
+      "rawText": "‫ ݔ‬ଶ െ 10‫ ݔ‬൅ 24 ൐ 0"
+    },
+    {
+      "label": "E",
+      "rawText": "‫ ݔ‬ଶ െ 6‫ ݔ‬൅ 8 ൏ 0"
+    },
+    {
+      "label": "F",
+      "rawText": "‫ ݔ‬ଶ െ 6‫ ݔ‬൅ 8 ൐ 0"
+    },
+    {
+      "label": "G",
+      "rawText": "‫ ݔ‬൏ 2"
+    },
+    {
+      "label": "H",
+      "rawText": "‫ ݔ‬൐ 6\n\n\n\n\n\n\n\n\n8&/(6                                                                      >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Commentary: The start of this seems like a fairly standard question: find the values of x\n      which satisfy a pair of inequalities. The options offered, though, seem far from standard,\n      so we will have to think carefully once we have found the set S.\n\nWe start by solving the two inequalities separately.\nThe quadratic factorises as x2 − 8x + 12 = (x − 2)(x − 6), so we are solving (x − 2)(x − 6) < 0\nWe can sketch the graph of y = (x − 2)(x − 6):\n\n\n\n\n                                            2          6\n\n\nso we see that the first inequality is satisfied when 2 < x < 6\nThe second inequality is a linear inequality which immediately simplifies to 2x > 8 or x > 4\nWe can combine these two inequalities using a number line:\n\n\n\n                                        2       4          6\n\nSo the set S is given by 4 < x < 6\nOur problem now is that none of the given options says 4 < x < 6. Most of them are in the\nform of quadratic inequalities. So we assume that one of the quadratic inequalities probably\ngives 4 < x < 6 when we ‘solve’ it. That, though, seems like a lot of work. We would do better\nto work in reverse and try to derive the quadratic inequality from 4 < x < 6.\nWe could think about our earlier sketch, which helped us solve (x − 2)(x − 6) < 0 and gave\n2 < x < 6. If we replace the 2 by a 4, we see that the inequality (x − 4)(x − 6) < 0 will give\n4 < x < 6. We can expand this to get x2 − 10x + 24 < 0, and so the correct answer is C.\n\n\n\n\nVersion 1.1, March 2019                                                                  Page 7\n\n                                                                                    © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

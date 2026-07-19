@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "exam": "ESAT",
+  "assessmentCycle": "October 2026 and January 2027",
+  "source": {
+    "title": "ESAT Content Specification",
+    "publisher": "UAT-UK",
+    "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165424/ESAT_Content_Specification.pdf"
+  },
+  "modules": [
+    {
+      "id": "mathematics-1",
+      "units": [
+        { "id": "m1-units", "code": "M1", "label": "单位与复合单位", "labelEn": "Units" },
+        { "id": "m1-number", "code": "M2", "label": "数与精确计算", "labelEn": "Number" },
+        { "id": "m1-ratio", "code": "M3", "label": "比、比例与变化率", "labelEn": "Ratio and proportion" },
+        { "id": "m1-algebra", "code": "M4", "label": "代数、方程与函数", "labelEn": "Algebra" },
+        { "id": "m1-geometry", "code": "M5", "label": "几何、三角与向量", "labelEn": "Geometry" },
+        { "id": "m1-statistics", "code": "M6", "label": "统计与数据表示", "labelEn": "Statistics" },
+        { "id": "m1-probability", "code": "M7", "label": "概率与条件概率", "labelEn": "Probability" }
+      ]
+    },
+    {
+      "id": "mathematics-2",
+      "units": [
+        { "id": "m2-algebra-functions", "code": "MM1", "label": "代数与函数", "labelEn": "Algebra and functions" },
+        { "id": "m2-sequences-series", "code": "MM2", "label": "数列与级数", "labelEn": "Sequences and series" },
+        { "id": "m2-coordinate-geometry", "code": "MM3", "label": "坐标几何与圆", "labelEn": "Coordinate geometry" },
+        { "id": "m2-trigonometry", "code": "MM4", "label": "三角函数与弧度", "labelEn": "Trigonometry" },
+        { "id": "m2-exponentials-logs", "code": "MM5", "label": "指数与对数", "labelEn": "Exponentials and logarithms" },
+        { "id": "m2-differentiation", "code": "MM6", "label": "微分及其应用", "labelEn": "Differentiation" },
+        { "id": "m2-integration", "code": "MM7", "label": "积分、面积与微分方程", "labelEn": "Integration" },
+        { "id": "m2-graphs", "code": "MM8", "label": "函数图像与变换", "labelEn": "Graphs of functions" }
+      ]
+    },
+    {
+      "id": "physics",
+      "units": [
+        { "id": "physics-electricity", "code": "P1", "label": "静电、电路与电功率", "labelEn": "Electricity" },
+        { "id": "physics-magnetism", "code": "P2", "label": "磁场、电磁感应与变压器", "labelEn": "Magnetism" },
+        { "id": "physics-mechanics", "code": "P3", "label": "运动、力、动量与能量", "labelEn": "Mechanics" },
+        { "id": "physics-thermal", "code": "P4", "label": "传热与热容量", "labelEn": "Thermal physics" },
+        { "id": "physics-matter", "code": "P5", "label": "物态、气体、密度与压强", "labelEn": "Matter" },
+        { "id": "physics-waves", "code": "P6", "label": "波、光、声与电磁波谱", "labelEn": "Waves" },
+        { "id": "physics-radioactivity", "code": "P7", "label": "原子结构、衰变与半衰期", "labelEn": "Radioactivity" }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "units": [
+        { "id": "chem-atomic", "code": "C1", "label": "原子结构与同位素", "labelEn": "Atomic structure" },
+        { "id": "chem-periodic", "code": "C2", "label": "元素周期表", "labelEn": "The Periodic Table" },
+        { "id": "chem-equations", "code": "C3", "label": "反应、化学式与方程式", "labelEn": "Reactions, formulae and equations" },
+        { "id": "chem-quantitative", "code": "C4", "label": "定量化学与摩尔计算", "labelEn": "Quantitative chemistry" },
+        { "id": "chem-redox", "code": "C5", "label": "氧化、还原与氧化还原", "labelEn": "Oxidation, reduction and redox" },
+        { "id": "chem-bonding", "code": "C6", "label": "化学键、结构与性质", "labelEn": "Bonding, structure and properties" },
+        { "id": "chem-groups", "code": "C7", "label": "族化学与趋势", "labelEn": "Group chemistry" },
+        { "id": "chem-separation", "code": "C8", "label": "分离技术与色谱", "labelEn": "Separation techniques" },
+        { "id": "chem-acids", "code": "C9", "label": "酸、碱与盐", "labelEn": "Acids, bases and salts" },
+        { "id": "chem-rates", "code": "C10", "label": "反应速率与碰撞理论", "labelEn": "Rates of reaction" },
+        { "id": "chem-energetics", "code": "C11", "label": "能量变化与量热", "labelEn": "Energetics" },
+        { "id": "chem-electrolysis", "code": "C12", "label": "电解与半方程式", "labelEn": "Electrolysis" },
+        { "id": "chem-organic", "code": "C13", "label": "碳与有机化学", "labelEn": "Carbon and organic chemistry" },
+        { "id": "chem-metals", "code": "C14", "label": "金属、反应性与提取", "labelEn": "Metals" },
+        { "id": "chem-particles", "code": "C15", "label": "粒子理论与物态", "labelEn": "Kinetic and particle theory" },
+        { "id": "chem-tests", "code": "C16", "label": "气体、离子与水的化学检验", "labelEn": "Chemical tests" },
+        { "id": "chem-air-water", "code": "C17", "label": "空气、水与污染", "labelEn": "Air and water" }
+      ]
+    },
+    {
+      "id": "biology",
+      "units": [
+        { "id": "bio-cells", "code": "B1", "label": "细胞结构与组织层次", "labelEn": "Cells" },
+        { "id": "bio-membranes", "code": "B2", "label": "跨膜运输", "labelEn": "Movement across membranes" },
+        { "id": "bio-division", "code": "B3", "label": "细胞分裂、繁殖与性别决定", "labelEn": "Cell division and sex determination" },
+        { "id": "bio-inheritance", "code": "B4", "label": "遗传、杂交与家系图", "labelEn": "Inheritance" },
+        { "id": "bio-dna", "code": "B5", "label": "DNA、基因与蛋白质", "labelEn": "DNA" },
+        { "id": "bio-gene-tech", "code": "B6", "label": "基因技术", "labelEn": "Gene technologies" },
+        { "id": "bio-variation", "code": "B7", "label": "变异、选择与进化", "labelEn": "Variation" },
+        { "id": "bio-enzymes", "code": "B8", "label": "酶与反应速率", "labelEn": "Enzymes" },
+        { "id": "bio-animal", "code": "B9", "label": "动物生理与健康", "labelEn": "Animal physiology" },
+        { "id": "bio-ecosystems", "code": "B10", "label": "生态系统、循环与生物多样性", "labelEn": "Ecosystems" },
+        { "id": "bio-plants", "code": "B11", "label": "光合作用与植物运输", "labelEn": "Plant physiology" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "8\n\n8.     Consider the following statement about the positive integer :\n\n       Statement (*): The sum of the four consecutive integers, the smallest of which is      ,\n                       is a multiple of 6.\n\n       Which one of the following is true?\n\n       A       Statement (*) is true for all values of .\n\n       B       Statement (*) is true for all values of     which are odd, but not for any other values\n               of .\n\n       C       Statement (*) is true for all values of     which are multiples of 3, but not for any\n               other values of .\n\n       D       Statement (*) is true for all values of     which are multiples of 6, but not for any\n               other values of .\n\n       E       Statement (*) is not true for any value of ."
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "8.     Consider the following statement about the positive integer :\n\n       Statement (*): The sum of the four consecutive integers, the smallest of which is      ,\n                       is a multiple of 6.\n\n       Which one of the following is true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "Statement (*) is true for all values of ."
+    },
+    {
+      "label": "B",
+      "rawText": "Statement (*) is true for all values of     which are odd, but not for any other values\n               of ."
+    },
+    {
+      "label": "C",
+      "rawText": "Statement (*) is true for all values of     which are multiples of 3, but not for any\n               other values of ."
+    },
+    {
+      "label": "D",
+      "rawText": "Statement (*) is true for all values of     which are multiples of 6, but not for any\n               other values of ."
+    },
+    {
+      "label": "E",
+      "rawText": "Statement (*) is not true for any value of ."
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We could start by trying a few examples to get a feeling for the statement.\n\n•    n = 0 gives 0 + 1 + 2 + 3 = 6, so (∗) is true in this case.\n\n•    n = 1 gives 1 + 2 + 3 + 4 = 10, so (∗) is false in this case.\n\n•    n = 2 gives 2 + 3 + 4 + 5 = 14, so (∗) is false in this case.\n\n•    n = 3 gives 3 + 4 + 5 + 6 = 18, so (∗) is true in this case.\n\nOf the given options, this exploration shows: A is false; B is false (as (∗) is false for n = 1);\nC may be true; D is false (as (∗) is true for n = 3), and E is false.\nSo by elimination, the correct answer must be C.\nWe can also prove this. The sum of the four consecutive integers is\n\n                            n + (n + 1) + (n + 2) + (n + 3) = 4n + 6.\n\nThis is a multiple of 6 whenever 4n is a multiple of 6. An integer is a multiple of 6 if and only\nif it is a multiple of both 2 and 3. 4n is always a multiple of 2, and is a multiple of 3 when n is\na multiple of 3 and for no other value of n. Hence option C is correct.\n\n\n\n\n                                                11\n                                                                                      © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

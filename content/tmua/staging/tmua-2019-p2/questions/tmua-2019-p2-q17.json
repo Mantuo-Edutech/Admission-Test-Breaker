@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "17   A multiple-choice test question oﬀered the following four options relating to a certain\n     statement:\n\n     A The statement is true if and only if x > 1\n\n     B The statement is true if x > 1\n\n     C The statement is true if and only if x > 2\n\n     D The statement is true if x > 2\n\n     Given that exactly one of these options was correct, which one was it?\n\n\n\n\n                                             19"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A multiple-choice test question oﬀered the following four options relating to a certain\n     statement:"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "The statement is true if and only if x > 1"
+    },
+    {
+      "label": "B",
+      "rawText": "The statement is true if x > 1"
+    },
+    {
+      "label": "C",
+      "rawText": "The statement is true if and only if x > 2"
+    },
+    {
+      "label": "D",
+      "rawText": "The statement is true if x > 2\n\n     Given that exactly one of these options was correct, which one was it?"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "As exactly one of the options was correct, if option X is implied by option Y, then option Y\ncannot be correct (as then option X would also be correct).\nOption A implies option B: if A is correct, then the statement is true if and only if x > 1,\nwhich means the statement is true if x > 1 and the statement is true only if x > 1, so option B\nis also correct. Therefore option A cannot be the correct option.\nFor the same reason, option C cannot be correct, as it implies option D.\nWe must therefore consider options B and D. Let us assume that option B is correct and ask\nwhether option D follows from it. Option B tells us that whenever x > 1, the statement is true,\nso certainly whenever x > 2, the statement is true. Therefore option D follows from option B,\nand option B cannot be the correct option. The opposite direction does not follow, though: the\nstatement could be true for all x > 2, but be false for x = 32 , for example.\nTherefore the correct option must have been option D.\n\n\n\n\nc UCLES                                                                                Page 21"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        21
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

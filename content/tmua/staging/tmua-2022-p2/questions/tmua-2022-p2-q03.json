@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "3   Consider the following statement about the positive integer n\n\n                                if n is prime, then n 2 + 2 is not prime\n\n    Which of the following is a counterexample to this statement?\n\n         I       nൌ2\n\n         II      nൌ3\n\n         III     nൌ4\n\n    A   none of them\n\n    B   I only\n\n    C   II only\n\n    D   III only\n\n    E   I and II only\n\n    F   I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                                5"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following statement about the positive integer n\n\n                                if n is prime, then n 2 + 2 is not prime\n\n    Which of the following is a counterexample to this statement?\n\n         I       nൌ2\n\n         II      nൌ3\n\n         III     nൌ4"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "I    n = 2 is prime and n2 + 2 = 6 is not prime, so this case satisfies the statement and is not a\n     counterexample.\n\nII   n = 3 is prime but n2 + 2 = 11 is prime, so this is a counterexample as it does not satisfy\n     the statement.\n\nIII n = 4 is not prime, so it satisfies the statement and is not a counterexample.\n\nTherefore only II provides a counterexample, which is option C.\n\n\n\n\nVersion 1.0, July 2023                                                                     Page 5"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

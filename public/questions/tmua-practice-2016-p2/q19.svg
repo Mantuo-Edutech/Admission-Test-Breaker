@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 380" role="img" aria-labelledby="title desc">
+ <title id="title">Three orthographic cube views</title><desc id="desc">Side elevation, front elevation and plan view made of unit squares.</desc>
+ <g fill="none" stroke="#292437" stroke-width="3">
+  <path d="M70 100h45V55h45V10h45v135H70zM115 100h90M115 55h90M160 10v135"/>
+  <path d="M70 260h45v-45h90v-90h45v135H70zM115 215h135M205 170h45M115 215v45M205 125v135"/>
+  <path d="M350 260h135v-90h45v135H350zM395 260v45M440 170v135M485 170v135M485 215h45M350 260h180"/>
+ </g>
+ <g fill="#62528b" font-family="serif" font-size="22"><text x="270" y="80">side elevation</text><text x="270" y="190">front elevation</text><text x="270" y="300">plan view</text></g>
+</svg>

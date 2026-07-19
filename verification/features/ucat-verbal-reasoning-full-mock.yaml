@@ -1,0 +1,47 @@
+schemaVersion: 1
+feature:
+  id: ucat-verbal-reasoning-full-mock
+  title: Original full-length UCAT Verbal Reasoning mock
+  status: partial
+  userOutcome: A student can complete eleven original passages and forty-four questions in a 22-minute native Verbal Reasoning session with private autosave, raw results and learning history.
+run:
+  packageScript: verify:ucat-verbal-full-mock
+claims:
+  - id: current-full-length-vr-structure
+    status: verified
+    statement: The Mantou-original dataset contains 11 passages and 44 questions in 22 minutes, with four items per passage and a mixture of True/False/Can't Tell and four-option evidence questions.
+    artifacts:
+      - content/ucat/original-practice/verbal-reasoning-full-mock-v1.json
+      - src/features/practice/content/ucat-verbal-reasoning-full-mock.ts
+      - tests/features/practice/content/ucat-verbal-reasoning-full-mock.test.ts
+    automatedChecks:
+      - verify:ucat-verbal-full-mock
+      - typecheck
+  - id: responsive-route-only-vr-delivery
+    status: verified
+    statement: The full dataset is a route-only chunk and reuses the profile gate, passage split view, timer, autosave, factual result and private learning record without exposing official source files.
+    artifacts:
+      - src/features/practice/content/practice-paper-registry.ts
+      - src/features/practice/pages/PracticeRoutePage.tsx
+      - tests/e2e/ucat-verbal-reasoning-full-mock.spec.ts
+    automatedChecks:
+      - verify:ucat-verbal-full-mock
+      - verify:web-performance
+      - build
+boundaries:
+  - This is Mantou-original teaching-preview content, not an official UCAT Question Bank or official-equivalent difficulty claim.
+  - The result is a raw mark out of 44; no 300–900 conversion, percentile, university benchmark or admission probability is inferred.
+  - Official UCAT preparation assets remain internal research sources and are not delivered to the browser.
+manualChecks:
+  - id: independent-ucat-vr-full-mock-review
+    status: pending
+    evidence: A separate UCAT verbal-reasoning and English-language reviewer must verify every passage, evidence boundary, distractor, answer key and difficulty spread.
+    viewports: [content]
+  - id: full-vr-student-timing-pilot
+    status: pending
+    evidence: Real students must complete the 22-minute session to calibrate reading load and pacing without deriving an official scale score.
+    viewports: [student]
+  - id: full-vr-browser-device-review
+    status: pending
+    evidence: Desktop, tablet and phone review must verify all eleven passage groups, response persistence, timer and no horizontal overflow.
+    viewports: [desktop, tablet, phone]

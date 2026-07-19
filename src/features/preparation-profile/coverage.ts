@@ -27,7 +27,7 @@ export interface CourseCoverageDomain {
 }
 
 export interface CourseCoverageReport {
-  readonly mappingVersion: "2026-07-14.1";
+  readonly mappingVersion: "2026-07-19.2";
   readonly directCount: number;
   readonly relatedCount: number;
   readonly notEvidencedCount: number;
@@ -329,7 +329,133 @@ const UNIT_MAPPINGS: readonly UnitCoverageMapping[] = [
       "mathematical-reasoning": R,
     },
   },
+  ...ibCourseMappings("ib-aa-sl-first-assessment-2021", "analysis"),
+  ...ibCourseMappings("ib-aa-hl-first-assessment-2021", "analysis"),
+  ...ibCourseMappings("ib-ai-sl-first-assessment-2021", "applications"),
+  ...ibCourseMappings("ib-ai-hl-first-assessment-2021", "applications"),
+  ...apPrecalculusMappings(),
+  ...apCalculusMappings("ap-calculus-ab-2020-current", false),
+  ...apCalculusMappings("ap-calculus-bc-2020-current", true),
 ];
+
+function ibCourseMappings(
+  qualificationId: string,
+  route: "analysis" | "applications",
+): readonly UnitCoverageMapping[] {
+  const pure = route === "analysis" ? D : R;
+  return [
+    {
+      qualificationId,
+      unitId: "number-algebra",
+      domains: {
+        "algebra-and-functions": pure,
+        "sequences-and-series": pure,
+        "exponentials-and-logarithms": R,
+        "supporting-knowledge": R,
+      },
+    },
+    {
+      qualificationId,
+      unitId: "functions",
+      domains: {
+        "algebra-and-functions": pure,
+        "graphs-of-functions": pure,
+        "exponentials-and-logarithms": R,
+      },
+    },
+    {
+      qualificationId,
+      unitId: "geometry-trigonometry",
+      domains: {
+        "coordinate-geometry": R,
+        trigonometry: pure,
+        "supporting-knowledge": R,
+      },
+    },
+    {
+      qualificationId,
+      unitId: "statistics-probability",
+      domains: {
+        "mathematical-reasoning": R,
+        "supporting-knowledge": R,
+      },
+    },
+    {
+      qualificationId,
+      unitId: "calculus",
+      domains: {
+        differentiation: pure,
+        integration: pure,
+        "graphs-of-functions": R,
+      },
+    },
+  ];
+}
+
+function apPrecalculusMappings(): readonly UnitCoverageMapping[] {
+  const qualificationId = "ap-precalculus-effective-fall-2026";
+  return [
+    {
+      qualificationId,
+      unitId: "u1",
+      domains: {
+        "algebra-and-functions": D,
+        "graphs-of-functions": D,
+        "supporting-knowledge": R,
+      },
+    },
+    {
+      qualificationId,
+      unitId: "u2",
+      domains: {
+        "algebra-and-functions": D,
+        "sequences-and-series": R,
+        "exponentials-and-logarithms": D,
+        "graphs-of-functions": D,
+      },
+    },
+    {
+      qualificationId,
+      unitId: "u3",
+      domains: {
+        trigonometry: D,
+        "coordinate-geometry": R,
+        "graphs-of-functions": D,
+      },
+    },
+    {
+      qualificationId,
+      unitId: "u4",
+      domains: {
+        "algebra-and-functions": R,
+        "coordinate-geometry": R,
+        "mathematical-reasoning": R,
+      },
+    },
+  ];
+}
+
+function apCalculusMappings(
+  qualificationId: string,
+  includeBcOnly: boolean,
+): readonly UnitCoverageMapping[] {
+  const common: UnitCoverageMapping[] = [
+    { qualificationId, unitId: "u1", domains: { "graphs-of-functions": R, "mathematical-reasoning": R } },
+    { qualificationId, unitId: "u2", domains: { differentiation: D } },
+    { qualificationId, unitId: "u3", domains: { differentiation: D, trigonometry: R, "exponentials-and-logarithms": R } },
+    { qualificationId, unitId: "u4", domains: { differentiation: R, "mathematical-reasoning": R } },
+    { qualificationId, unitId: "u5", domains: { differentiation: D, "graphs-of-functions": R, "mathematical-reasoning": R } },
+    { qualificationId, unitId: "u6", domains: { integration: D } },
+    { qualificationId, unitId: "u7", domains: { differentiation: R, integration: R } },
+    { qualificationId, unitId: "u8", domains: { integration: D, "mathematical-reasoning": R } },
+  ];
+  if (!includeBcOnly) return common;
+  return [
+    ...common,
+    { qualificationId, unitId: "u9", domains: { "coordinate-geometry": R, trigonometry: R } },
+    { qualificationId, unitId: "u10", domains: { "sequences-and-series": D, "mathematical-reasoning": R } },
+  ];
+}
 
 function strongest(
   current: CourseCoverageStatus,
@@ -390,7 +516,7 @@ export function buildCourseCoverageReport(
     );
 
   return {
-    mappingVersion: "2026-07-14.1",
+    mappingVersion: "2026-07-19.2",
     directCount: domains.filter((domain) => domain.status === "direct").length,
     relatedCount: domains.filter((domain) => domain.status === "related").length,
     notEvidencedCount: domains.filter((domain) => domain.status === "not-evidenced").length,

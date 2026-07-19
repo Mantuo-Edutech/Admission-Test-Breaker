@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 660" role="img" aria-labelledby="title desc">
+  <title id="title">Four candidate graphs P, Q, R and S</title><desc id="desc">P decreases from one to zero, Q increases from zero to one, and R and S have differently positioned shallow minima.</desc>
+  <defs><pattern id="grid" width="42" height="28" patternUnits="userSpaceOnUse"><path d="M42 0H0V28" fill="none" stroke="#b9b2a8" stroke-width="1"/></pattern></defs>
+  <g font-family="Georgia,serif" fill="#282332" font-size="22">
+    <g transform="translate(65 45)"><text x="-30" y="15">P</text><rect x="25" y="25" width="330" height="196" fill="url(#grid)"/><path d="M25 221V15M15 221H370" fill="none" stroke="#282332" stroke-width="2"/><path d="M25 26 C125 27 185 58 245 116 C290 159 325 195 355 221" fill="none" stroke="#63528c" stroke-width="4"/><text x="305" y="250">π/2</text></g>
+    <g transform="translate(500 45)"><text x="-30" y="15">Q</text><rect x="25" y="25" width="330" height="196" fill="url(#grid)"/><path d="M25 221V15M15 221H370" fill="none" stroke="#282332" stroke-width="2"/><path d="M25 221 C105 145 165 82 235 48 C280 29 320 26 355 26" fill="none" stroke="#63528c" stroke-width="4"/><text x="305" y="250">π/2</text></g>
+    <g transform="translate(65 355)"><text x="-30" y="15">R</text><rect x="25" y="25" width="330" height="196" fill="url(#grid)"/><path d="M25 221V15M15 221H370" fill="none" stroke="#282332" stroke-width="2"/><path d="M25 26 C110 30 205 91 280 93 C325 94 345 70 355 26" fill="none" stroke="#63528c" stroke-width="4"/><text x="305" y="250">π/2</text></g>
+    <g transform="translate(500 355)"><text x="-30" y="15">S</text><rect x="25" y="25" width="330" height="196" fill="url(#grid)"/><path d="M25 221V15M15 221H370" fill="none" stroke="#282332" stroke-width="2"/><path d="M25 26 C40 72 70 96 120 94 C205 91 285 38 355 26" fill="none" stroke="#63528c" stroke-width="4"/><text x="305" y="250">π/2</text></g>
+  </g>
+</svg>

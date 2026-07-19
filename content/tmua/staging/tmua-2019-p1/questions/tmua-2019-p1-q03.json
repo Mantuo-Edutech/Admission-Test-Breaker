@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "3   Find the coeﬃcient of x in the expression:\n\n            (1 + x)0 + (1 + x)1 + (1 + x)2 + (1 + x)3 + · · · + (1 + x)79 + (1 + x)80\n\n    A 80\n\n    B 81\n\n    C 324\n\n    D 628\n\n    E 3240\n\n    F 3321\n\n    G 6480\n\n    H 6642\n\n\n\n\n                                              5"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the coeﬃcient of x in the expression:\n\n            (1 + x)0 + (1 + x)1 + (1 + x)2 + (1 + x)3 + · · · + (1 + x)79 + (1 + x)80"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "80"
+    },
+    {
+      "label": "B",
+      "rawText": "81"
+    },
+    {
+      "label": "C",
+      "rawText": "324"
+    },
+    {
+      "label": "D",
+      "rawText": "628"
+    },
+    {
+      "label": "E",
+      "rawText": "3240"
+    },
+    {
+      "label": "F",
+      "rawText": "3321"
+    },
+    {
+      "label": "G",
+      "rawText": "6480"
+    },
+    {
+      "label": "H",
+      "rawText": "6642"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The coefficient of x in the expansion of (1 + x)n is n1 = n, so the coefficient of x in this whole\n                                                         \u0001\n\nexpression is\n                           0 + 1 + 2 + 3 + · · · + 79 + 80 = 21 × 80 × 81\nusing the formula for the sum of the first n positive integers, 12 n(n+1). This gives 40×81 = 3240,\nso the answer is E.\n\n\n\n\nc UCLES                                                                                     Page 5"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

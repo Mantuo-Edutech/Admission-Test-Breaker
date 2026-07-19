@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "18   Consider the following inequality:\n\n          (∗):    a|x| + 1 ≤ |x − 2|\n\n     where a is a real constant.\n\n     Which one of the following describes the complete set of values of a such that (∗) is\n     true for all real x?\n\n     A a ≤ 32\n\n     B a≤1\n\n     C a ≤ 12\n\n     D a≤0\n\n     E a ≤ − 12\n\n     F a ≤ −1\n\n     G a ≤ − 32\n\n     H There are no such values of a.\n\n\n\n\n                                             20"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following inequality:\n\n          (∗):    a|x| + 1 ≤ |x − 2|\n\n     where a is a real constant.\n\n     Which one of the following describes the complete set of values of a such that (∗) is\n     true for all real x?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "a ≤ 32"
+    },
+    {
+      "label": "B",
+      "rawText": "a≤1"
+    },
+    {
+      "label": "C",
+      "rawText": "a ≤ 12"
+    },
+    {
+      "label": "D",
+      "rawText": "a≤0"
+    },
+    {
+      "label": "E",
+      "rawText": "a ≤ − 12"
+    },
+    {
+      "label": "F",
+      "rawText": "a ≤ −1"
+    },
+    {
+      "label": "G",
+      "rawText": "a ≤ − 32"
+    },
+    {
+      "label": "H",
+      "rawText": "There are no such values of a."
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We would do well to sketch a graph for this question! There are two functions involved, y =\na|x| + 1 and y = |x − 2|, so we sketch these for different values of a.\nThe graph of y = a|x|+1 is the graph of y = |x| first stretched by a factor of a in the y-direction,\nand then translated by 1 in the positive y-direction.\nThe graph of y = |x − 2| is the graph of y = |x| translated by 2 in the positive x-direction.\nThis gives us the following sketch:\n\n                                                 y\n\n\n                                                         a=2\n\n                                                 2\n\n                                                 1\n                                                                           x\n                                                            2\n\n\n\n\n                                                                a = −2\n\n\n\nWhat we can see from this sketch is that y = a|x| + 1 will be below y = |x − 2| when a is\nsufficiently negative; when a is positive, it will certainly intersect the graph of y = |x − 2|. We\ncan find the value of a at which the behaviour changes by sketching the graph at this point and\nthen doing some algebra:\n\n                                                 y\n\n\n\n\n                                                 2\n\n                                                 1\n                                                                           x\n                                                            2\n\n\n\n\nc UCLES                                                                                     Page 22\n\f\nTest of Mathematics for University Admission, 2019 Paper 2 Solutions\n\n\nWe can work out the value of a by noting that the graph passes through (2, 0):\n\n                                           a|2| + 1 = 0\n\ntherefore a = − 12 , and hence the correct answer is a ≤ − 12 , which is option E.\n\n\n\n\nc UCLES                                                                              Page 23"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        22,
+        23
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

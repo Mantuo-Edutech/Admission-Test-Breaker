@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q05",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 5,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "5   Which one of the following shows the graph of\n                                                    2x\n                                          y=\n                                                  1 + 2x\n    (Dotted lines indicate asymptotes.)\n\n     A                          B                              C\n              y                           y                        y\n\n\n\n\n              0             x             0                x       0   x\n\n     D                          E                              F\n              y                           y                        y\n\n\n\n\n              0             x             0                x       0   x\n\n\n\n\n                                              7"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Which one of the following shows the graph of\n                                                    2x\n                                          y=\n                                                  1 + 2x\n    (Dotted lines indicate asymptotes.)\n\n     A                          B                              C\n              y                           y                        y\n\n\n\n\n              0             x             0                x       0   x\n\n     D                          E                              F\n              y                           y                        y\n\n\n\n\n              0             x             0                x       0   x"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    },
+    {
+      "label": "F",
+      "rawText": "[visual option F; transcription required]"
+    },
+    {
+      "label": "G",
+      "rawText": "[visual option G; transcription required]"
+    },
+    {
+      "label": "H",
+      "rawText": "[visual option H; transcription required]"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Note that none of these graphs have scales on.\nA key question is what happens to y when x is large and positive and when x is large and\nnegative.\n                             2100\nIf x = 100, say, then y =           . Since 2100 is a very large positive number, this fraction is\n                           1 + 2100\nalmost exactly 1. This excludes graphs B and C, where the value of y increases towards infinity.\nIt also excludes graphs D and E, where the value of y tends towards 0. We are therefore left\nwith graphs A and F.\nOne way to distinguish between A and F is to compare the value at x = 0 with the value when\nx is large. When x = 0, we have y = 12 . Since 12 < 1 and y is close to 1 when x is large, graph F\nis not possible, so the answer is graph A.\n                                                                                    2−100\nAlternatively, we can consider what happens when x = −100, say. Then y =                    . Since\n                                                                                  1 + 2−100\n2−100 is a tiny positive number, very close to 0, this fraction is almost exactly 0. This excludes\nall of the graphs except for A and B; combining this with our earlier observations shows that\nthe correct graph is A.\n\n\n\n\nVersion 1.0, April 2021                                                                     Page 7\n\n                                           © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        7
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required",
+      "option-count-review"
+    ]
+  }
+}

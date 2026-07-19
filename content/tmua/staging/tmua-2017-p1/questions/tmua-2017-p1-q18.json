@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                     \u0003\n                                                     \u0003\n                                                     \u0003\n\nͳͺ\u0003    \u0017\u0003\u0003\u0003‫ ݕ‬ൌ \u0003 ଵ଴ ‫ݕ\u0003\u0003\u0003\u0003\u0003\u0003ݔ‬Ǧ \u0003\u0003ʹ\u0003Ǥ\u0003\n\n       \u0017\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003 \u0003݇\u0003\u0003\u0003\u0003‫ݔ‬ǦǤ\u0003\n\n       \u001a\u0003\u0003\u0003\u0003\u0003݇ǫ\u0003\n\u0003      \u0003\n\u0003      A   ͲǤͲͳ\u0003\n\n\u0003      B   ଵ଴ \u0003ʹ\u0003\n\n\u0003      C   ͲǤͷ\u0003\n\n\u0003      D   ʹ\u0003\n\n\u0003      E    ଶ \u0003ͳͲ\u0003\n\n\u0003      F   ͳͲͲ\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                       \u0015\u0013"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "‫ ݕ‬ൌ  ଵ଴ ‫ݕݔ‬Ǧ 2Ǥ\n\n         ݇‫ݔ‬ǦǤ\n\n       ݇ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0Ǥ01"
+    },
+    {
+      "label": "B",
+      "rawText": "ଵ଴ 2"
+    },
+    {
+      "label": "C",
+      "rawText": "0Ǥ5"
+    },
+    {
+      "label": "D",
+      "rawText": "2"
+    },
+    {
+      "label": "E",
+      "rawText": " ଶ 10"
+    },
+    {
+      "label": "F",
+      "rawText": "100\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can do this algebraically.\nA translation of the graph of y = f(x) by 2 units in the positive y-direction gives the graph of\ny = f(x) + 2\nA stretch of factor k parallel to the x-axis gives the graph of y = f( k1 x) = f( xk )\nFor these to be the same, we need f(x) + 2 = f( k1 x) for all (positive) x.\nIn our case, f(x) = log10 x, so we require\n\n                                        log10 x + 2 = log10 ( xk )\n\nBut log10 ( xk ) = log10 x − log10 k, so we require log10 k = −2, giving k = 10−2 = 0.01. Hence the\nanswer is A.\n\nWe have done more than required to answer this question: we have actually shown that these\ntransformations are equivalent. An alternative approach is to assume that the question is correct\nand that these transformations are equivalent, and to use a single point to find the value of k.\nWe could see which point ends up on the x-axis after the translation: it was at (a, −2), so it\nmust have been at (0.01, −2). Therefore the translated graph crosses the x-axis at 0.01, while\nthe original graph crossed the x-axis at 1. Therefore the stretch needs to be by a factor of 0.01\nparallel to the x-axis.\nWe could have done a similar calculation with any other point.\n\n\n\n\nVersion 1.1, March 2019                                                                      Page 22\n\n                                                                                         © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        23
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "id": "esat-mathematics-1-starter-v1",
+  "exam": "ESAT",
+  "edition": "Mathematics 1 Starter · Original v1",
+  "sectionLabel": "Mathematics 1 · Original Diagnostic",
+  "sectionLabelZh": "数学 1 · 满托原创短诊断",
+  "durationMinutes": 20,
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本练习依据 ESAT Mathematics 1 公开范围独立命题，不复制或改写官方 Guide、ENGAA 或 NSAA 题面。",
+  "sourceAnchors": [
+    {
+      "id": "esat-content-specification",
+      "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+      "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+      "usedFor": "Mathematics 1 scope boundary"
+    },
+    {
+      "id": "esat-guide-mathematics-1",
+      "localPath": "content/official/raw/esat/ESAT_Guide_Mathematics_1.pdf",
+      "sha256": "b376810fbd9ffea4c0c70fafb082d4c0287eb35ea16cfc354d06240a9798a3f5",
+      "usedFor": "terminology and topic coverage only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "esat-mathematics-1-starter-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A car travels 150 km in 2 hours 30 minutes. What is its average speed in metres per second?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "15" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{50}{3}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "18" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "60" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m1-units"],
+      "skillTags": ["unit-conversion", "rate"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-1-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-1-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-starter-v1-q02",
+      "number": 2,
+      "sourcePage": 2,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Simplify" }] },
+        { "kind": "display-math", "tex": "\\frac{3\\sqrt{8}-\\sqrt{18}}{\\sqrt{2}}" }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3\\sqrt{2}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m1-number"],
+      "skillTags": ["exact-arithmetic", "surds"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-1-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-1-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-starter-v1-q03",
+      "number": 3,
+      "sourcePage": 3,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A drink contains syrup and water in the ratio 2:5. After 3 litres of water are added, the ratio is 1:3. What was the original total volume of the drink?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "14 litres" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "18 litres" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "21 litres" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "24 litres" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m1-ratio"],
+      "skillTags": ["proportion", "modelling"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-1-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-1-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-starter-v1-q04",
+      "number": 4,
+      "sourcePage": 4,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "The function " }, { "kind": "math", "tex": "f" }, { "kind": "text", "value": " is defined by " }, { "kind": "math", "tex": "f(x)=2x^2-3" }, { "kind": "text", "value": ". Which expression is equal to " }, { "kind": "math", "tex": "f(x+1)-f(x)" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2x+2" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4x+2" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4x-1" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2x^2+4x-1" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m1-algebra"],
+      "skillTags": ["functions", "expansion"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-1-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-1-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-starter-v1-q05",
+      "number": 5,
+      "sourcePage": 5,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "The points " }, { "kind": "math", "tex": "A(1,2)" }, { "kind": "text", "value": " and " }, { "kind": "math", "tex": "B(7,10)" }, { "kind": "text", "value": " are joined. What is the length of " }, { "kind": "math", "tex": "AB" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "8" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "10" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "12" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "14" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m1-geometry"],
+      "skillTags": ["coordinate-geometry", "pythagoras"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-1-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-1-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-starter-v1-q06",
+      "number": 6,
+      "sourcePage": 6,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Five measurements have a mean of 12. One measurement, equal to 20, is removed. What is the mean of the remaining four measurements?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "8" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "9" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "10" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "11" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m1-statistics"],
+      "skillTags": ["mean", "reverse-calculation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-1-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-1-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-starter-v1-q07",
+      "number": 7,
+      "sourcePage": 7,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A bag contains 3 red counters and 2 blue counters. Two counters are drawn without replacement. Given that the first counter is blue, what is the probability that the second counter is red?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{1}{2}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{3}{5}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{2}{3}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{3}{4}" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["m1-probability"],
+      "skillTags": ["conditional-probability", "without-replacement"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-1-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-1-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-starter-v1-q08",
+      "number": 8,
+      "sourcePage": 8,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "How many integer values of " }, { "kind": "math", "tex": "x" }, { "kind": "text", "value": " satisfy " }, { "kind": "math", "tex": "|2x-3|<5" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m1-algebra"],
+      "skillTags": ["inequalities", "integer-counting"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-1-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-1-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-starter-v1-q09",
+      "number": 9,
+      "sourcePage": 9,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A quantity is increased by 20% and then decreased by 20%. Compared with its original value, the final value is" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "unchanged" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "4% lower" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "4% higher" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "8% lower" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m1-ratio"],
+      "skillTags": ["percentage-change", "multipliers"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-1-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-1-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-starter-v1-q10",
+      "number": 10,
+      "sourcePage": 10,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A rectangle has diagonal length 10 cm and one side length 6 cm. What is its area?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "24\\text{ cm}^2" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "40\\text{ cm}^2" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "48\\text{ cm}^2" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "60\\text{ cm}^2" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m1-geometry"],
+      "skillTags": ["pythagoras", "area"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-1-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-1-starter-v1.json"
+    }
+  ]
+}

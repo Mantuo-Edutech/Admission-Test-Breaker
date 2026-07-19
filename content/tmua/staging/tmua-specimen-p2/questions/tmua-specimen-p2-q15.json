@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "15.    For any real numbers , , and where           ≥ , consider these three statements:\n\n               1        − ≥−\n\n               2           +    ≥2\n\n               3           ≥\n\n       Which of the statements 1, 2, and 3 must be true?\n\n       A       none\n\n       B       1 only\n\n       C       2 only\n\n       D       3 only\n\n       E       1 and 2 only\n\n       F       1 and 3 only\n\n       G       2 and 3 only\n\n       H       1,2 and 3"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "For any real numbers , , and where           ≥ , consider these three statements:\n\n               1        − ≥−\n\n               2           +    ≥2\n\n               3           ≥\n\n       Which of the statements 1, 2, and 3 must be true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none"
+    },
+    {
+      "label": "B",
+      "rawText": "1 only"
+    },
+    {
+      "label": "C",
+      "rawText": "2 only"
+    },
+    {
+      "label": "D",
+      "rawText": "3 only"
+    },
+    {
+      "label": "E",
+      "rawText": "1 and 2 only"
+    },
+    {
+      "label": "F",
+      "rawText": "1 and 3 only"
+    },
+    {
+      "label": "G",
+      "rawText": "2 and 3 only"
+    },
+    {
+      "label": "H",
+      "rawText": "1,2 and 3"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "1 If we multiply the original inequality a ⩾ b by −1, we obtain −a ⩽ −b, since multiplying by\n  a negative number reverses the inequality. This is equivalent to −b ⩾ −a, so this statement\n  must be true.\n\n2 We can rearrange this inequality as a2 − 2ab + b2 ⩾ 0, and then factorise the left hand side to\n  get (a − b)2 ⩾ 0. As x2 ⩾ 0 for every real number x, this statement must be true. (Note that\n  the condition a ⩾ b is irrelevant here.)\n\n3 This is related to the original inequality by multiplying it by c. If c = −1, then this inequality\n  states −a ⩾ −b, which will not be the case unless a = b. For example, a = 2, b = 1, c = −1\n  provides an example where a ⩾ b but ac ⩾ bc is false. So this statement might not be true.\n\nHence the correct option is E.\n\n\n\n\n                                                19\n                                                                                       © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

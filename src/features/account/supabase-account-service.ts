@@ -3,6 +3,7 @@ import type {
   AccountAccessService,
   AccountAccessState,
   AccountSession,
+  AccountBotProtection,
   InvitePreview,
   RedeemedAccess,
   RegistrationResult,
@@ -23,6 +24,29 @@ interface EntitlementRow {
 export interface SupabaseBrowserConfiguration {
   url?: string;
   publishableKey?: string;
+}
+
+const DISABLED_BOT_PROTECTION: AccountBotProtection = {
+  provider: "turnstile",
+  required: false,
+  siteKey: null,
+};
+
+export function createSupabaseBrowserClient(
+  configuration: SupabaseBrowserConfiguration,
+): SupabaseClient | null {
+  const url = configuration.url?.trim();
+  const publishableKey = configuration.publishableKey?.trim();
+  if (!url || !publishableKey) return null;
+
+  return createClient(url, publishableKey, {
+    auth: {
+      flowType: "pkce",
+      detectSessionInUrl: false,
+      persistSession: true,
+      autoRefreshToken: true,
+    },
+  });
 }
 
 function accountSession(email: string | undefined): AccountSession {
@@ -48,11 +72,18 @@ export function readableAuthError(message: string): Error {
   if (/email rate limit/i.test(message)) {
     return new Error("确认邮件发送过于频繁，请稍后再试");
   }
+  if (/captcha/i.test(message)) {
+    return new Error("安全验证无效或已经过期，请重新完成验证");
+  }
+  if (/rate limit|too many requests/i.test(message)) {
+    return new Error("操作过于频繁，请稍后再试");
+  }
   return new Error("账号服务暂时不可用，请稍后再试");
 }
 
 class UnavailableAccountAccessService implements AccountAccessService {
   readonly configured = false;
+  readonly botProtection = DISABLED_BOT_PROTECTION;
 
   private unavailable(): never {
     throw new Error("账号服务尚未连接，请稍后再试");
@@ -62,6 +93,10 @@ class UnavailableAccountAccessService implements AccountAccessService {
   async register(): Promise<RegistrationResult> { return this.unavailable(); }
   async signIn(): Promise<AccountSession> { return this.unavailable(); }
   async completeEmailConfirmation(): Promise<AccountSession> { return this.unavailable(); }
+  async requestPasswordReset(): Promise<void> { return this.unavailable(); }
+  async completePasswordRecovery(): Promise<AccountSession> { return this.unavailable(); }
+  async updatePassword(): Promise<void> { return this.unavailable(); }
+  async signOut(): Promise<void> { return this.unavailable(); }
   async redeemInvite(): Promise<RedeemedAccess> { return this.unavailable(); }
   async getAccessState(): Promise<AccountAccessState> { return this.unavailable(); }
 }
@@ -72,7 +107,17 @@ export class SupabaseAccountAccessService implements AccountAccessService {
   constructor(
     private readonly client: SupabaseClient,
     private readonly confirmationRedirectUrl: string,
+    private readonly passwordResetRedirectUrl: string,
+    readonly botProtection: AccountBotProtection = DISABLED_BOT_PROTECTION,
   ) {}
+
+  private captchaToken(token: string | undefined): string | undefined {
+    const cleanedToken = token?.trim();
+    if (this.botProtection.required && !cleanedToken) {
+      throw new Error("请先完成安全验证");
+    }
+    return cleanedToken || undefined;
+  }
 
   async previewInvite(code: string): Promise<InvitePreview> {
     const { data, error } = await this.client.functions.invoke("invite-preview", {
@@ -92,11 +137,19 @@ export class SupabaseAccountAccessService implements AccountAccessService {
     };
   }
 
-  async register(email: string, password: string): Promise<RegistrationResult> {
+  async register(
+    email: string,
+    password: string,
+    captchaToken?: string,
+  ): Promise<RegistrationResult> {
+    const verifiedCaptchaToken = this.captchaToken(captchaToken);
     const { data, error } = await this.client.auth.signUp({
       email: email.trim(),
       password,
-      options: { emailRedirectTo: this.confirmationRedirectUrl },
+      options: {
+        emailRedirectTo: this.confirmationRedirectUrl,
+        ...(verifiedCaptchaToken === undefined ? {} : { captchaToken: verifiedCaptchaToken }),
+      },
     });
     if (error !== null) throw readableAuthError(error.message);
     if (data.session !== null) {
@@ -105,10 +158,18 @@ export class SupabaseAccountAccessService implements AccountAccessService {
     return { status: "confirmation-required", email: email.trim() };
   }
 
-  async signIn(email: string, password: string): Promise<AccountSession> {
+  async signIn(
+    email: string,
+    password: string,
+    captchaToken?: string,
+  ): Promise<AccountSession> {
+    const verifiedCaptchaToken = this.captchaToken(captchaToken);
     const { data, error } = await this.client.auth.signInWithPassword({
       email: email.trim(),
       password,
+      ...(verifiedCaptchaToken === undefined
+        ? {}
+        : { options: { captchaToken: verifiedCaptchaToken } }),
     });
     if (error !== null) throw readableAuthError(error.message);
     return accountSession(data.user.email);
@@ -118,6 +179,33 @@ export class SupabaseAccountAccessService implements AccountAccessService {
     const { data, error } = await this.client.auth.exchangeCodeForSession(code);
     if (error !== null) throw readableAuthError(error.message);
     return accountSession(data.user.email);
+  }
+
+  async requestPasswordReset(email: string, captchaToken?: string): Promise<void> {
+    const verifiedCaptchaToken = this.captchaToken(captchaToken);
+    const { error } = await this.client.auth.resetPasswordForEmail(email.trim(), {
+      redirectTo: this.passwordResetRedirectUrl,
+      ...(verifiedCaptchaToken === undefined
+        ? {}
+        : { captchaToken: verifiedCaptchaToken }),
+    });
+    if (error !== null) throw readableAuthError(error.message);
+  }
+
+  async completePasswordRecovery(code: string): Promise<AccountSession> {
+    const { data, error } = await this.client.auth.exchangeCodeForSession(code);
+    if (error !== null) throw new Error("重置链接无效或已经过期，请重新申请");
+    return accountSession(data.user.email);
+  }
+
+  async updatePassword(password: string): Promise<void> {
+    const { error } = await this.client.auth.updateUser({ password });
+    if (error !== null) throw readableAuthError(error.message);
+  }
+
+  async signOut(): Promise<void> {
+    const { error } = await this.client.auth.signOut();
+    if (error !== null) throw new Error("暂时无法退出登录，请稍后重试");
   }
 
   async redeemInvite(code: string): Promise<RedeemedAccess> {
@@ -160,21 +248,14 @@ export class SupabaseAccountAccessService implements AccountAccessService {
 export function createAccountAccessService(
   configuration: SupabaseBrowserConfiguration,
   browserOrigin: string,
+  sharedClient: SupabaseClient | null = createSupabaseBrowserClient(configuration),
+  botProtection: AccountBotProtection = DISABLED_BOT_PROTECTION,
 ): AccountAccessService {
-  const url = configuration.url?.trim();
-  const publishableKey = configuration.publishableKey?.trim();
-  if (!url || !publishableKey) return new UnavailableAccountAccessService();
-
-  const client = createClient(url, publishableKey, {
-    auth: {
-      flowType: "pkce",
-      detectSessionInUrl: false,
-      persistSession: true,
-      autoRefreshToken: true,
-    },
-  });
+  if (sharedClient === null) return new UnavailableAccountAccessService();
   return new SupabaseAccountAccessService(
-    client,
+    sharedClient,
     `${browserOrigin}/auth/confirm`,
+    `${browserOrigin}/auth/reset`,
+    botProtection,
   );
 }

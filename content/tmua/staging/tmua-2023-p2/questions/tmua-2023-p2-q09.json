@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "9   Consider the following statement about a pentagon P:\n\n              (∗) If at least one of the interior angles in P is 108°, then all the interior angles in P\n                  form an arithmetic sequence.\n\n    Which of the following is/are true?\n\n          I       The statement (∗)\n\n          II      The contrapositive of (∗)\n\n          III     The converse of (∗)\n\n\n    A   none of them\n\n    B   I only\n\n    C   II only\n\n    D   III only\n\n    E   I and II only\n\n    F   I and III only\n\n    G   II and III only\n\n    H   I, II and III\n\n\n\n\n                                                     11"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following statement about a pentagon P:\n\n              (∗) If at least one of the interior angles in P is 108°, then all the interior angles in P\n                  form an arithmetic sequence.\n\n    Which of the following is/are true?\n\n          I       The statement (∗)\n\n          II      The contrapositive of (∗)\n\n          III     The converse of (∗)"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We first note that the interior angles in a pentagon sum to 3 × 180◦ = 540◦ (since a pentagon\ncan be cut up into three triangles). Therefore the mean interior angle is 540◦ /5 = 108◦ .\n\nI    The angles could be 108◦ , 108◦ , 108◦ , 107◦ and 109◦ : start with a regular pentagon and\n     slightly rotate one of the sides. These do not form an arithmetic sequence, so statement (∗)\n     is false.\n\nII   The contrapositive of a statement always has the same truth value as the statement itself,\n     so this is also false.\n\nIII The converse of (∗) states: if all the interior angles in P form an arithmetic sequence, then\n    at least one of the interior angles in P is 108◦ . If the interior angles in P form an arithmetic\n    sequence with common difference d, then the angles can be written as c − 2d, c − d, c, c + d,\n    c + 2d. (One could also write them as a, a + d, . . . , a + 4d, but this approach is easier.)\n    Then the sum of the interior angles is 5c = 540◦ , so c = 108◦ . Since one of the interior\n    angles is c, the converse of (∗) is true.\n\nThus the answer is option D, III only.\n\n\n\n\nVersion 1.0, September 2023                                                                 Page 11"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

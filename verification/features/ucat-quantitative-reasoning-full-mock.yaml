@@ -1,0 +1,47 @@
+schemaVersion: 1
+feature:
+  id: ucat-quantitative-reasoning-full-mock
+  title: Original full-length UCAT Quantitative Reasoning mock
+  status: partial
+  userOutcome: A student can complete thirty-six original Quantitative Reasoning questions in a 26-minute native session with nine data sets, a basic calculator, private autosave, raw results and learning history.
+run:
+  packageScript: verify:ucat-quantitative-full-mock
+claims:
+  - id: current-full-length-quantitative-structure
+    status: verified
+    statement: The Mantou-original dataset contains 36 four-option questions in 26 minutes, arranged as nine four-question data sets and covering all ten published Quantitative Reasoning knowledge families.
+    artifacts:
+      - content/ucat/original-practice/quantitative-reasoning-full-mock-v1.json
+      - src/features/practice/content/ucat-quantitative-reasoning-full-mock.ts
+      - tests/features/practice/content/ucat-quantitative-reasoning-full-mock.test.ts
+    automatedChecks:
+      - verify:ucat-quantitative-full-mock
+      - typecheck
+  - id: independently-calculated-responsive-quantitative-delivery
+    status: verified
+    statement: Every keyed answer is recalculated from the published datasets by an automated test, while the route-only paper reuses the responsive table renderer, basic calculator, timer, autosave, factual raw result and private learning record without exposing official source files.
+    artifacts:
+      - src/features/practice/content/practice-paper-registry.ts
+      - src/features/practice/pages/PracticeRoutePage.tsx
+      - tests/e2e/ucat-quantitative-reasoning-full-mock.spec.ts
+    automatedChecks:
+      - verify:ucat-quantitative-full-mock
+      - verify:web-performance
+      - build
+boundaries:
+  - This is Mantou-original teaching-preview content, not an official UCAT Question Bank or an official-equivalent difficulty claim.
+  - The result is a raw mark out of 36; no 300–900 conversion, percentile, university benchmark or admission probability is inferred.
+  - Official UCAT preparation assets remain internal research sources and are not delivered to the browser.
+manualChecks:
+  - id: independent-ucat-quantitative-full-mock-review
+    status: pending
+    evidence: A separate UCAT Quantitative Reasoning reviewer must verify every calculation, unit, rounding rule, distractor, data presentation and difficulty spread.
+    viewports: [content]
+  - id: full-quantitative-student-timing-pilot
+    status: pending
+    evidence: Real students must complete the 26-minute session to calibrate calculation load and pacing without deriving an official scale score.
+    viewports: [student]
+  - id: full-quantitative-browser-device-review
+    status: pending
+    evidence: Desktop, tablet and phone review must verify every table, calculator, response persistence, timer and absence of horizontal page overflow.
+    viewports: [desktop, tablet, phone]

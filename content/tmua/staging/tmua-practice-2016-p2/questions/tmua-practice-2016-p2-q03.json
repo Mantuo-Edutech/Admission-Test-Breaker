@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "͵\u0003    \u001a\u0003\u0003\u0003ǡ\u0003\u0003ǡ\u0003\u0003\u0003\u0003\u0003‫ Ͳ\u0003\u0003\u0003\u0003ݔ‬൑ ‫ ݔ‬൑ ʹߨ\u0003\u0003\u0003\n      \u0003\u0003\u0003ͺ ଶ ‫ ݔ‬൅ Ͷ ଶ ‫ ݔ‬ൌ ͹\u0003ǫ\u0003\n      \u0003\n              ʹߨ\n      \u0004\u0003         \u0003\n               ͵\n      \u0003       ͷߨ\n      \u0005\u0003         \u0003\n               ͸\n      \u0003       Ͷߨ\n      \u0006\u0003         \u0003\n               ͵\n      \u0003       ͷߨ\n       \u0007\u0003        \u0003\n               ͵\n      \u0003       ͹ߨ\n      \b\u0003         \u0003"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "ǡǡ‫ 0ݔ‬൑ ‫ ݔ‬൑ 2ߨ\n      8 ଶ ‫ ݔ‬൅ 4 ଶ ‫ ݔ‬ൌ 7ǫ\n      \n              2ߨ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "3\n             5ߨ"
+    },
+    {
+      "label": "B",
+      "rawText": "6\n             4ߨ"
+    },
+    {
+      "label": "C",
+      "rawText": "3\n             5ߨ"
+    },
+    {
+      "label": "D",
+      "rawText": "3\n             7ߨ"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We use the identity sin2 x + cos2 x = 1 to write the equation in terms of sin x:\n\n                                8 sin2 x + 4 cos2 x = 4 sin2 x + 4 = 7\n                                                 √\nso 4 sin2 x = 3, giving sin2 x = 43 so sin x = ± 23 .\n                           √                                                                  √\nThe solutions to sin x = 23 lie in the interval 0 < x < π, while the solutions to sin x = − 23 lie\nin the interval π < x < 2π, and thus the largest angle√in the range 0 < x < 2π which satisfies the\noriginal equation is the largest solution to sin x = − 23 . This is 2π − π3 = 5π\n                                                                               3 , which is option D.\n\n\n\n\n                                                     6\n                                                                                        © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

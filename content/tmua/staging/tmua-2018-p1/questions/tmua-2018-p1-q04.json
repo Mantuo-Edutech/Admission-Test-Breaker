@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q04",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 4,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "4   Consider the simultaneous equations\n\n\n\n                                       3x2 + 2xy = 4\n\n                                            x+y =a\n\n\n    where a is a real constant.\n\n    Find the complete set of values of a for which the equations have two distinct real\n    solutions for x.\n\n    A There are no values of a.\n\n    B −2 < a < 2\n\n    C −1 < a < 1\n\n    D a=0\n\n    E   a < −1 or a > 1\n\n    F   a < −2 or a > 2\n\n    G All real values of a\n\n\n\n\n                                            6"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the simultaneous equations\n\n\n\n                                       3x2 + 2xy = 4\n\n                                            x+y =a\n\n\n    where a is a real constant.\n\n    Find the complete set of values of a for which the equations have two distinct real\n    solutions for x."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "There are no values of a."
+    },
+    {
+      "label": "B",
+      "rawText": "−2 < a < 2"
+    },
+    {
+      "label": "C",
+      "rawText": "−1 < a < 1"
+    },
+    {
+      "label": "D",
+      "rawText": "a=0"
+    },
+    {
+      "label": "E",
+      "rawText": "a < −1 or a > 1"
+    },
+    {
+      "label": "F",
+      "rawText": "a < −2 or a > 2"
+    },
+    {
+      "label": "G",
+      "rawText": "All real values of a"
+    }
+  ],
+  "correctAnswer": "G",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can solve the equations to find x by substituting for y.\nThe second equation gives y = a − x, so the first equation becomes\n\n                                       3x2 + 2x(a − x) = 4\n\nThis rearranges to\n                                        x2 + 2ax − 4 = 0\nand the discriminant of this equation is\n\n                                (2a)2 − 4 × 1 × (−4) = 4a2 + 16\n\nThis is always positive, as 4a2 ⩾ 0 for all real values of a, so there are always two distinct real\nroots, and the correct answer is G.\n\n\n\n\nVersion 1.0, April 2019                                                                     Page 6\n\n                                                                                      © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        7
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

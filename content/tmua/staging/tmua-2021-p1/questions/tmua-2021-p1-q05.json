@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q05",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 5,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "5   The function f is such that\n\n                                  \u0003\n                                      f(m)f(n) if mn is a multiple of 3\n                      f(mn) =\n                                      mn       if mn is not a multiple of 3\n\n    for all positive integers m and n.\n\n    Given that f(9) + f(16) − f(24) = 0, what is the value of f(3)?\n\n      8\n    A\n      3\n       √\n    B 2 2\n\n    C 3\n      16\n    D\n       5\n       √\n    E 3 2\n\n    F 4\n\n\n\n\n                                                 \u001a"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The function f is such that\n\n                                  \n                                      f(m)f(n) if mn is a multiple of 3\n                      f(mn) =\n                                      mn       if mn is not a multiple of 3\n\n    for all positive integers m and n.\n\n    Given that f(9) + f(16) − f(24) = 0, what is the value of f(3)?\n\n      8"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "3\n       √"
+    },
+    {
+      "label": "B",
+      "rawText": "2 2"
+    },
+    {
+      "label": "C",
+      "rawText": "3\n      16"
+    },
+    {
+      "label": "D",
+      "rawText": "5\n       √"
+    },
+    {
+      "label": "E",
+      "rawText": "3 2"
+    },
+    {
+      "label": "F",
+      "rawText": "4"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can rewrite f(9), f(16) and f(24) using the information given about the function:\n\n                          f(9) = f(3 × 3)\n                              = f(3)f(3)         as 9 is a multiple of 3\n                       f(16) = f(16 × 1)\n                              = 16               as 16 is not a multiple of 3\n                       f(24) = f(3 × 8)\n                              = f(3)f(8)         as 24 is a multiple of 3\n                              = f(3)f(8 × 1)\n                              = f(3) × 8         as 8 is not a multiple of 3\n                              = 8f(3)\n\nSubstituting these into the given equation then gives\n                                         \u00012\n                                     f(3) + 16 − 8f(3) = 0\n\nwhich is a quadratic in f(3); we can factorise it to give\n                                                       \u00012\n                                            f(3) − 4        =0\n\nwhich has one (repeated) solution: f(3) = 4. Hence the answer is option F.\n\n\n\n\nVersion 1.0, March 2022                                                                Page 7"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        7
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

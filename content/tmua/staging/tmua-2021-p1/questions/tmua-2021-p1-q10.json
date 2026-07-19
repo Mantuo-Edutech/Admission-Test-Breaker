@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q10",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 10,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "10   Use the trapezium rule with 3 strips to estimate\n                                        \u0002 2\n                                            2 log10 x dx\n                                          1\n                                          2\n\n\n               √\n                  6\n     A log10\n                 2\n\n               3\n     B log10\n               2\n\n               9\n     C log10\n               4\n\n     D log10 3\n\n               81\n     E log10\n               16\n\n               √\n                   23\n     F log10\n                   2\n\n\n\n\n                                              \u0014\u0015"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Use the trapezium rule with 3 strips to estimate\n                                         2\n                                            2 log10 x dx\n                                          1\n                                          2\n\n\n               √\n                  6"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "log10\n                 2\n\n               3"
+    },
+    {
+      "label": "B",
+      "rawText": "log10\n               2\n\n               9"
+    },
+    {
+      "label": "C",
+      "rawText": "log10\n               4"
+    },
+    {
+      "label": "D",
+      "rawText": "log10 3\n\n               81"
+    },
+    {
+      "label": "E",
+      "rawText": "log10\n               16\n\n               √\n                   23"
+    },
+    {
+      "label": "F",
+      "rawText": "log10\n                   2"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The interval has width 2 − 12 = 32 , so each strip will have width 21 . The boundaries of the\nthree strips will be at 12 , 1, 32 and 2. The trapezium rule then gives the estimate (writing\nf(x) = 2 log10 x):\n                         Z 2\n                              f(x) dx ≈ 21 × 21 f( 12 ) + 2f(1) + 2f( 23 ) + f(2)\n                                                                                  \u0001\n                           1\n                           2\n\n\nWe can now work out the individual function values:\n\n                               f( 12 ) = 2 log10 12 = −2 log10 2\n                               f(1) = 2 log10 1 = 0\n                               f( 32 ) = 2 log10 32 = 2 log10 3 − 2 log10 2\n                               f(2) = 2 log10 2\n\nTherefore we get the approximation\n          Z 2\n              f(x) dx ≈ 12 × 12 −2 log10 2 + 2 × 0 + 2(2 log10 3 − 2 log10 2) + 2 log10 2\n                                                                                          \u0001\n             1\n             2\n\n                       = 41 (4 log10 3 − 4 log10 2)\n                       = log10 3 − log10 2\n                       = log10 32\n\nwhich is option B.\n\n\n\n\nVersion 1.0, March 2022                                                                       Page 12"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

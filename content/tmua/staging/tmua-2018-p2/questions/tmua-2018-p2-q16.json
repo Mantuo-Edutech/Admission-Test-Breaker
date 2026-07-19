@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16   In this question, x1 , x2 , x3 , . . . is an arithmetic progression, all of whose terms\n     are integers.\n\n     Let n be a positive integer. If the median of the ﬁrst n terms of the sequence is an\n     integer, which of the following three statements must be true?\n\n         I    The median of the ﬁrst n + 2 terms is an integer.\n         II   The median of the ﬁrst 2n terms is an integer.\n         III The median of x2 , x4 , x6 , . . . , x2n is an integer.\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                                18"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "In this question, x1 , x2 , x3 , . . . is an arithmetic progression, all of whose terms\n     are integers.\n\n     Let n be a positive integer. If the median of the ﬁrst n terms of the sequence is an\n     integer, which of the following three statements must be true?\n\n         I    The median of the ﬁrst n + 2 terms is an integer.\n         II   The median of the ﬁrst 2n terms is an integer.\n         III The median of x2 , x4 , x6 , . . . , x2n is an integer."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Finding the median of the first n terms depends on whether n is even or odd.\nIf n is odd, then the median of the first n terms is the middle term, which is x(n+1)/2 , so it is\ncertainly an integer, whatever the sequence.\nWe can consider the three given statements in this case:\n\nI    n + 2 is also odd, so the median of the first n + 2 terms is a term of the sequence, specifically\n     x(n+3)/2 , so it is an integer.\n\nII   2n is even, so the median of the first 2n terms is midway between the nth and (n + 1)th\n     terms. This may or may not be an integer. For example, if the sequence is 1, 2, 3, . . . and\n     n = 3, then the median of the first 2n = 6 terms is midway between 3 and 4, so is 3.5. This\n     is not an integer. (On the other hand, it might be: if the sequence were 2, 4, 6, . . . , with\n     n = 3 still, then the median of the first 2n = 6 terms is midway between 6 and 8, which is\n     7; this is an integer.)\n\nIII There are n terms listed here, so the median of them is the middle one, which is certainly\n    an integer.\n\nThus in the case that n is odd, I and III must be true, but II need not be.\nNext we consider the case of n being even. In this case, the median of the first n terms is\nmidway between x 1 n and x 1 n+1 , and we are told that this is an integer. If we call the common\n                    2        2\ndifference of this arithmetic progression d, then midway between these is x 1 n + 21 d, so 12 d is an\n                                                                            2\ninteger. (Alternatively, note that both the middle two terms are even or both the middle two\nterms are odd, so either all the terms of the arithmetic progression are even or all of them are\nodd. This is equivalent to saying that the common difference is even.)\nWe again consider the three statements:\n\nI    Now n+2 is even, and the median is midway between two terms (namely x 1 n+1 and x 1 n+2 ),\n                                                                                     2          2\n     so it is an integer since the common difference is even. (Alternatively, it is an integer because\n     either all of the terms are even or all of the terms are odd.)\n\nII   We do not need to consider this statement, as we know it is not always true from before.\n     (Nevertheless, this statement is always true for this case, using the same reasoning as for I.)\n\nIII This time, we have n terms, and the common difference between consecutive pairs of them\n    is 2d. The median is midway between central two terms (as n is even), so is an integer\n    as d is an integer. Alternatively, the median is midway between xn and xn+2 , so is xn+1 ,\n    which is an integer.\n\nTherefore all three statements are true in the case that n is even.\nPutting this together, statements I and III must be true, whatever the value of n, but state-\nment II is not necessarily true. Hence the answer is F.\n\n\n\n\nVersion 1.0, April 2019                                                                      Page 19"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

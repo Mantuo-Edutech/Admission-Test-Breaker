@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "√\n 3      The ﬁrst term of a geometric progression is 2 3 and the fourth term is 94\n\n        What is the sum to inﬁnity of this geometric progression?\n\n                       √\n        A −2(2 −        3)\n\n             √\n        B 4(2 3 − 3)\n              √\n          16(8 3 + 9)\n        C\n              37\n             √\n          4(2 3 − 3)\n        D\n              7\n             √\n          4(2 3 + 3)\n        E\n              7\n                       √\n        F      2(2 +       3)\n\n             √\n        G 4(2 3 + 3)\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                   \u0018                                    >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "√\n 3      The ﬁrst term of a geometric progression is 2 3 and the fourth term is 94\n\n        What is the sum to inﬁnity of this geometric progression?\n\n                       √"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−2(2 −        3)\n\n             √"
+    },
+    {
+      "label": "B",
+      "rawText": "4(2 3 − 3)\n              √\n          16(8 3 + 9)"
+    },
+    {
+      "label": "C",
+      "rawText": "37\n             √\n          4(2 3 − 3)"
+    },
+    {
+      "label": "D",
+      "rawText": "7\n             √\n          4(2 3 + 3)"
+    },
+    {
+      "label": "E",
+      "rawText": "7\n                       √"
+    },
+    {
+      "label": "F",
+      "rawText": "2(2 +       3)\n\n             √"
+    },
+    {
+      "label": "G",
+      "rawText": "4(2 3 + 3)\n\n\n\n\n8&/(6                                                                       >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "G",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "√                                                          √\nThe first term is a = 2 3 and the common ratio is r. So the fourth term is ar3 = 2 3 r3 = 94\nand hence                                     √        √\n                                  3   9      9 3      3 3\n                                 r = √ =           =\n                                     8 3    8×3        8\nby rationalising the denominator.\n\n               √     √        3\nWe can write 3 3 as 27 or 3 2 (since we want to take the cube root of this expression), and so\nwe have                                 3            1    √\n                                  3    32          32       3\n                                 r =       =⇒ r =      =      .\n                                       8            2      2\n(There is a unique real cube root of any real number, unlike the case for square roots.)\nWe can now find the sum to infinity of the geometric progression:\n                       a\n              S∞ =\n                     1−r\n                       √\n                      2 3\n              S∞ =        √\n                    1 − 23\n                       √\n                      4 3                                  2\n                  =     √                 multiplying by\n                    2− 3                                   2\n                        √      √\n                       4 3(2 + 3)\n                  =      √       √        rationalising the denominator\n                    (2 − 3)(2 + 3)\n                        √\n                    4(2 3 + 3)\n                  =                       paying attention to the options offered\n                        √1\n                  = 4(2 3 + 3)\n\nand the correct answer is G.\n\n\n\n\nVersion 1.0, April 2019                                                                  Page 5\n\n                                                                                    © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

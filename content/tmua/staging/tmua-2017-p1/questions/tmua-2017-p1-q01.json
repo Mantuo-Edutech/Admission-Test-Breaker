@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q01",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 1,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                  \u0003\n                                                  \u0003\n                                                  \u0003\n\nͳ\u0003         \u0003\u0003\n\n                 ௗ௬             ଶ ଷ௫\n                        ൌ ͵‫ ݔ‬ଶ െ ିయ , ‫Ͳ ് ݔ‬\n                 ௗ௫              ௫\n\n        ‫ ݕ‬ൌ ͷ  ‫ ݔ‬ൌ ͳǡ  ‫ݔ\u0003\u0003\u0003\u0003ݕ‬Ǥ\u0003\n\u0003      \u0003\n\u0003                 ͳ ଷ                   ʹ\n       A     ‫ݕ‬ൌ     ‫ ݔ‬൅ ‫ି ݔ‬ଶ െ ͵‫ି ݔ‬ଵ ൅ ͸ \u0003\n                  ͵                     ͵\n\n\u0003                     ͳ                ͳ\n       B     ‫ ݕ‬ൌ ‫ ݔ‬ଷ ൅ ‫ି ݔ‬ଶ െ ͵‫ି ݔ‬ଵ ൅ ͸ \u0003\n                      ʹ                ʹ\n\n\u0003            ‫ ݕ‬ൌ ‫ ݔ‬ଷ ൅ \u0003 ‫ି ݔ‬ଶ െ ͵‫ି ݔ‬ଵ ൅ ͸\u0003\n       C\n\n\u0003            ‫ ݕ‬ൌ ‫ ݔ‬ଷ ൅ ‫ି ݔ‬ଶ െ ‫ି ݔ‬ଵ ൅ Ͷ\u0003\n       D\n\n\u0003            ‫ ݕ‬ൌ ‫ ݔ‬ଷ ൅ ʹ‫ି ݔ‬ଶ െ ‫ି ݔ‬ଵ ൅ ͵\u0003\n       E\n\n\u0003            ‫ ݕ‬ൌ ͵‫ ݔ‬ଷ ൅ ‫ି ݔ‬ଶ െ ‫ି ݔ‬ଵ ൅ ʹ\u0003\n       F\n\n\u0003\n\n\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                     \u0016    >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "\n\n                 ௗ௬             ଶ ଷ௫\n                        ൌ 3‫ ݔ‬ଶ െ ିయ , ‫0 ് ݔ‬\n                 ௗ௫              ௫\n\n        ‫ ݕ‬ൌ 5  ‫ ݔ‬ൌ 1ǡ  ‫ݔݕ‬Ǥ\n      \n                 1 ଷ                   2"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "‫ݕ‬ൌ     ‫ ݔ‬൅ ‫ି ݔ‬ଶ െ 3‫ି ݔ‬ଵ ൅ 6 \n                  3                     3\n\n                     1                1"
+    },
+    {
+      "label": "B",
+      "rawText": "‫ ݕ‬ൌ ‫ ݔ‬ଷ ൅ ‫ି ݔ‬ଶ െ 3‫ି ݔ‬ଵ ൅ 6 \n                      2                2\n\n            ‫ ݕ‬ൌ ‫ ݔ‬ଷ ൅  ‫ି ݔ‬ଶ െ 3‫ି ݔ‬ଵ ൅ 6"
+    },
+    {
+      "label": "C",
+      "rawText": "‫ ݕ‬ൌ ‫ ݔ‬ଷ ൅ ‫ି ݔ‬ଶ െ ‫ି ݔ‬ଵ ൅ 4"
+    },
+    {
+      "label": "D",
+      "rawText": "‫ ݕ‬ൌ ‫ ݔ‬ଷ ൅ 2‫ି ݔ‬ଶ െ ‫ି ݔ‬ଵ ൅ 3"
+    },
+    {
+      "label": "E",
+      "rawText": "‫ ݕ‬ൌ 3‫ ݔ‬ଷ ൅ ‫ି ݔ‬ଶ െ ‫ି ݔ‬ଵ ൅ 2"
+    },
+    {
+      "label": "F",
+      "rawText": "8&/(6                                         >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We are given the derivative of y, and we want to find y itself, so we need to integrate. We start\nby expanding the fraction:\n                                     dy         2 − 3x\n                                        = 3x2 −\n                                     dx           x3\n                                        = 3x − 2x−3 + 3x−2\n                                            2\n\n\nso we can now integrate term-by-term to get\n\n                                     y = x3 + x−2 − 3x−1 + c\n\nNow as y = 5 when x = 1, we can substitute to give\n\n                                5 = 13 + 1−2 − 3 × 1−1 + c = −1 + c\n\nso c = 6 and the answer is C.\n\n      Commentary: It turns out that there is a subtlety in this question which we usually\n      ignore at school level. The question assumes that there is a ‘simple’ formula for y in terms\n      of x. Since the function is not defined at x = 0, it is possible that we have different\n      constants when x > 0 and when x < 0, so we could have, for example,\n                                (\n                                   x3 + x−2 − 3x−1 + 6 when x > 0\n                             y=\n                                   x3 + x−2 − 3x−1 + 8 when x < 0\n\n      This may seem quite strange, but it would be a valid solution to the differential equation\n      given in the question.\n\n\n\n\nVersion 1.1, March 2019                                                                    Page 3\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11   In this question, k is a positive integer.\n\n     Consider the following theorem:\n                                     k\n                                 If 2 + 1 is a prime, then k is a power of 2.   (∗)\n\n     Which of the following statements, taken individually, is/are equivalent to (∗)?\n                                               k\n           I       If k is a power of 2, then 2 + 1 is prime.\n                    k\n           II      2 + 1 is not prime only if k is not a power of 2.\n                                                                            k\n           III     A sufficient condition for k to be a power of 2 is that 2 + 1 is prime.\n\n\n\n                  Statement I is             Statement II is            Statement III is\n                 equivalent to (∗)          equivalent to (∗)           equivalent to (∗)\n     A                  Yes                        Yes                          Yes\n\n     B                  Yes                        Yes                          No\n\n     C                  Yes                        No                           Yes\n\n     D                  Yes                        No                           No\n\n     E                  No                         Yes                          Yes\n\n     F                  No                         Yes                          No\n\n     G                  No                         No                           Yes\n\n     H                  No                         No                           No\n\n\n\n\n                                                     13"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "In this question, k is a positive integer.\n\n     Consider the following theorem:\n                                     k\n                                 If 2 + 1 is a prime, then k is a power of 2.   (∗)\n\n     Which of the following statements, taken individually, is/are equivalent to (∗)?\n                                               k\n           I       If k is a power of 2, then 2 + 1 is prime.\n                    k\n           II      2 + 1 is not prime only if k is not a power of 2.\n                                                                            k\n           III     A sufficient condition for k to be a power of 2 is that 2 + 1 is prime.\n\n\n\n                  Statement I is             Statement II is            Statement III is\n                 equivalent to (∗)          equivalent to (∗)           equivalent to (∗)"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "Yes                        Yes                          Yes"
+    },
+    {
+      "label": "B",
+      "rawText": "Yes                        Yes                          No"
+    },
+    {
+      "label": "C",
+      "rawText": "Yes                        No                           Yes"
+    },
+    {
+      "label": "D",
+      "rawText": "Yes                        No                           No"
+    },
+    {
+      "label": "E",
+      "rawText": "No                         Yes                          Yes"
+    },
+    {
+      "label": "F",
+      "rawText": "No                         Yes                          No"
+    },
+    {
+      "label": "G",
+      "rawText": "No                         No                           Yes"
+    },
+    {
+      "label": "H",
+      "rawText": "No                         No                           No"
+    }
+  ],
+  "correctAnswer": "G",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "I    This is the converse of (∗), so is not equivalent to (∗).\n\nII   We can rewrite this as an ‘if. . . then’ statement, noting that ‘A only if B’ means the same\n     as ‘if A, then B’. So this becomes ‘if 2k + 1 is not prime, then k is not a power of 2’. This\n     is the contrapositive of ‘if k is a power of 2, then 2k + 1 is prime’, which is the statement\n     in I, namely the converse of (∗). So this statement is equivalent to the converse of (∗) but\n     not equivalent to (∗) itself. (The contrapositive of the converse, which is the same as the\n     converse of the contrapositive, is called the inverse of the original statement.)\n\nIII ‘A is a sufficient condition for B’ is the same as ‘if A, then B’, so this statement can be\n    rewritten as ‘if 2k + 1 is prime, then k is a power of 2’. (Note the subtlety of language\n    here: the condition A is ‘2k + 1 is prime’ and B is ‘k is a power of 2’, but they are written\n    in the order ‘a sufficient condition for B is A’.) This is equivalent to (∗) (and is in fact just\n    a different way of saying the same thing).\n\nThe correct option is G.\n\n      Commentary: It turns out that statement I is false. It was conjectured by Pierre\n                                                        n\n      de Fermat in the 17th century, who noted that 22 + 1 is prime for n = 1, 2, 3 and 4.\n      Such primes are called Fermat primes. The smallest counterexample to statement I is\n        5\n      22 + 1 = 641 × 6 700 417, which was discovered by Leonhard Euler in the 18th century.\n                                n\n      It is not known whether 22 + 1 is prime for any n > 4.\n\n\n\n\nVersion 1.0, September 2023                                                                 Page 13"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 720" role="img" aria-labelledby="title desc">
+ <title id="title">Six candidate logarithmic graphs</title><desc id="desc">Candidate graphs A to F for y equals logarithm base x of 2, x greater than one.</desc>
+ <defs><g id="axes" fill="none" stroke="#aaa" stroke-width="1.3"><path d="M15 100H230M50 10V205"/></g></defs>
+ <g fill="none" stroke="#292437" stroke-width="3">
+  <g transform="translate(20 20)"><use href="#axes"/><path d="M60 195C70 120 95 85 220 55"/></g>
+  <g transform="translate(280 20)"><use href="#axes"/><path d="M60 15C75 75 120 120 220 155"/></g>
+  <g transform="translate(540 20)"><use href="#axes"/><path d="M60 195C85 115 130 65 220 25"/></g>
+  <g transform="translate(20 260)"><use href="#axes"/><path d="M60 15C70 70 95 100 220 125"/></g>
+  <g transform="translate(280 260)"><use href="#axes"/><path d="M60 15C65 50 80 80 110 100S170 120 220 125"/></g>
+  <g transform="translate(540 260)"><use href="#axes"/><path d="M60 15C65 55 75 85 95 100S160 112 220 115"/></g>
+ </g>
+ <g fill="#292437" font-family="serif" font-size="22" font-weight="700"><text x="25" y="245">A</text><text x="285" y="245">B</text><text x="545" y="245">C</text><text x="25" y="485">D</text><text x="285" y="485">E</text><text x="545" y="485">F</text></g>
+</svg>

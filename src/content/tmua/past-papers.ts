@@ -1,4 +1,21 @@
+import { TMUA_2017_P1 } from "../../features/practice/content/tmua-2017-p1.js";
+import { TMUA_2017_P2 } from "../../features/practice/content/tmua-2017-p2.js";
+import { TMUA_2018_P1 } from "../../features/practice/content/tmua-2018-p1.js";
+import { TMUA_2018_P2 } from "../../features/practice/content/tmua-2018-p2.js";
+import { TMUA_2019_P1 } from "../../features/practice/content/tmua-2019-p1.js";
+import { TMUA_2019_P2 } from "../../features/practice/content/tmua-2019-p2.js";
+import { TMUA_2020_P1 } from "../../features/practice/content/tmua-2020-p1.js";
+import { TMUA_2020_P2 } from "../../features/practice/content/tmua-2020-p2.js";
+import { TMUA_2021_P1 } from "../../features/practice/content/tmua-2021-p1.js";
+import { TMUA_2021_P2 } from "../../features/practice/content/tmua-2021-p2.js";
+import { TMUA_2022_P1 } from "../../features/practice/content/tmua-2022-p1.js";
+import { TMUA_2022_P2 } from "../../features/practice/content/tmua-2022-p2.js";
 import { TMUA_2023_P1 } from "../../features/practice/content/tmua-2023-p1.js";
+import { TMUA_2023_P2 } from "../../features/practice/content/tmua-2023-p2.js";
+import { TMUA_PRACTICE_2016_P1 } from "../../features/practice/content/tmua-practice-2016-p1.js";
+import { TMUA_PRACTICE_2016_P2 } from "../../features/practice/content/tmua-practice-2016-p2.js";
+import { TMUA_SPECIMEN_P1 } from "../../features/practice/content/tmua-specimen-p1.js";
+import { TMUA_SPECIMEN_P2 } from "../../features/practice/content/tmua-specimen-p2.js";
 import type {
   AuditStamp,
   CorpusManifest,
@@ -26,24 +43,41 @@ export interface PastPaperIndexResult {
   publicSummary: TmuaPublicSummary;
 }
 
-const expectedPublishedIds = Array.from(
-  { length: 20 },
-  (_, index) => `tmua-2023-p1-q${String(index + 1).padStart(2, "0")}`,
+const verifiedOnlinePapers = [
+  TMUA_SPECIMEN_P1, TMUA_SPECIMEN_P2,
+  TMUA_PRACTICE_2016_P1, TMUA_PRACTICE_2016_P2,
+  TMUA_2017_P1, TMUA_2017_P2,
+  TMUA_2018_P1, TMUA_2018_P2,
+  TMUA_2019_P1, TMUA_2019_P2,
+  TMUA_2020_P1, TMUA_2020_P2,
+  TMUA_2021_P1, TMUA_2021_P2,
+  TMUA_2022_P1, TMUA_2022_P2,
+  TMUA_2023_P1, TMUA_2023_P2,
+] as const;
+
+export const TMUA_PUBLISHED_PAPER_IDS = verifiedOnlinePapers.map(
+  (paper) => paper.id,
+);
+
+const expectedPublishedIds = verifiedOnlinePapers.flatMap((paper) =>
+  paper.questions.map((question) => question.id),
 );
 
 const verifiedOnlineQuestions = new Map(
-  TMUA_2023_P1.questions.map((question) => [question.id, question]),
+  verifiedOnlinePapers.flatMap((paper) =>
+    paper.questions.map((question) => [question.id, question] as const),
+  ),
 );
 
 function assertPublishedIds(publishedQuestionIds: readonly string[]): void {
   if (
-    publishedQuestionIds.length !== 20 ||
-    new Set(publishedQuestionIds).size !== 20 ||
+    publishedQuestionIds.length !== expectedPublishedIds.length ||
+    new Set(publishedQuestionIds).size !== expectedPublishedIds.length ||
     expectedPublishedIds.some((id) => !publishedQuestionIds.includes(id)) ||
     expectedPublishedIds.some((id) => !verifiedOnlineQuestions.has(id))
   ) {
     throw new Error(
-      "Publication requires exactly 20 verified 2023 Paper 1 question IDs",
+      `Publication requires exactly ${expectedPublishedIds.length} verified native question IDs`,
     );
   }
 }
@@ -84,9 +118,10 @@ export function buildPastPaperIndex(input: {
         requireSource(sourceIds, sourceId);
       }
 
-      const isPublished = edition.id === "2023" && paperNumber === 1;
+      const paperId = `tmua-${edition.id}-p${paperNumber}`;
+      const isPublished = TMUA_PUBLISHED_PAPER_IDS.includes(paperId);
       papers.push({
-        id: `tmua-${edition.id}-p${paperNumber}`,
+        id: paperId,
         edition: edition.id,
         paper: paperNumber,
         durationMinutes: 75,

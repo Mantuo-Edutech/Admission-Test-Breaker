@@ -13,6 +13,21 @@ function createStartedSession() {
 }
 
 describe("practice session domain", () => {
+  it("uses exam-specific timing without creating a second session model", () => {
+    const session = createPracticeSession({
+      id: "ses_esat-m1",
+      learningSpaceId: "gsp_browser-one",
+      actor: { kind: "guest", actorId: "guest_browser-one" },
+      paperId: "esat-specimen-mathematics-1",
+      durationMinutes: 40,
+      startedAt: "2026-07-13T00:00:00.000Z",
+      eventId: "evt_esat-started",
+    });
+
+    expect(session.deadlineAt).toBe("2026-07-13T00:40:00.000Z");
+    expect(session.paperId).toBe("esat-specimen-mathematics-1");
+  });
+
   it("starts a Guest-owned schema-v2 75-minute session with one ledger event", () => {
     const session = createStartedSession();
 

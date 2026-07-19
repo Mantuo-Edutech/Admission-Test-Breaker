@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q10",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 10,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "ͳͲ\u0003     \u0003\u0003\u0003\u0003\u0003\u0003‫ ݔ  ݔ‬ൌ ͳ\u0003\u0003\u0003\u0003\u0003\u0003െʹߨ ൑ ‫ ݔ‬൑ ʹߨ\u0003ǫ\u0003\u0003\n      \u0003\n      \u0003\n      \u0004\u0003    Ͳ\u0003\n      \u0003\n      \u0005\u0003    ͳ\u0003\n      \u0003\n      \u0006\u0003    ʹ\u0003\n      \u0003\n      \u0007\u0003    ͵\u0003\n      \u0003\n      \b\u0003    Ͷ\u0003\n      \u0003\n        \u0003   ͷ\u0003\n      \u0003\n        \u0003   ͸\u0003\n\n\n\n\n© UCLES 2016                                                                                [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "‫ ݔ  ݔ‬ൌ 1െ2ߨ ൑ ‫ ݔ‬൑ 2ߨǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0"
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "2"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "4\n      \n           5\n      \n           6\n\n\n\n\n© UCLES 2016                                                                                [Turn over"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "1\nWe can rearrange this equation as tan x =       . (We note that x = 0 is not a solution of the\n                                              x\noriginal equation x tan x = 1, so we can divide by x without losing any solutions.)\nIt is impossible to solve this equation exactly, but we are only asked for the number of solutions.\nTherefore we sketch the graphs of y = tan x and y = x1 on the same axes, and count the number\nof intersections.\n\n                                                     y\n\n\n\n\n                                                                               x\n                 −2π                 −π              0          π             2π\n\n\n\n\nThere are four points of intersection with −2π ⩽ x ⩽ 2π, so the answer is 4, which is option E.\n\n\n\n\n                                                13\n                                                                                      © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

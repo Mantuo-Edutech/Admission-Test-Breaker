@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "ͳ͸\n\n\n\n\nͳ͸\u0003         \u0003\u0003\u0003\u0003\u0003\n        \u0003\n        \u0003        \u0003      \u0003         \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003ଵ଴ ʹ ൅ ଵ଴ ሺ‫ ݕ‬െ ͳሻ ൌ ʹ ଵ଴ ‫\u0003ݔ‬\n        \u0003\n                        \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003ଵ଴ ሺ‫ ݕ‬൅ ͵ െ ͵‫ݔ‬ሻ ൌ Ͳ\u0003\n         \u0003\n         \u0003\u0003\u0003‫\u0003\u0003ݕ‬\n         \u0003\n\u0003        \u0003\n\u0003            ͷ ͵ξͷ\n         \u0004\u0003    േ      \u0003\n             ʹ     ʹ\n\u0003        \u0003\n         \u0005\u0003 ͵േξ͵\u0003\n      \u0003 \u0003\u0006\u0003 ͹േ͵ξ͵\u0003\n\n\u0003        \u0003\n         \u0007\u0003 ͵ǡ\u0003ͻ\u0003\n\u0003        \u0003\n         \b\u0003 ͳǡ\u0003ͳ͵\u0003\n         \u0003\n\n\n\n\n© UCLES 2016                                                                               [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "16         \n        \n                               ଵ଴ 2 ൅ ଵ଴ ሺ‫ ݕ‬െ 1ሻ ൌ 2 ଵ଴ ‫ݔ‬\n        \n                        ଵ଴ ሺ‫ ݕ‬൅ 3 െ 3‫ݔ‬ሻ ൌ 0\n         \n         ‫ݕ‬\n         \n        \n            5 3ξ5"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "േ      \n             2     2"
+    },
+    {
+      "label": "B",
+      "rawText": "3േξ3"
+    },
+    {
+      "label": "C",
+      "rawText": "7േ3ξ3"
+    },
+    {
+      "label": "D",
+      "rawText": "3ǡ9"
+    },
+    {
+      "label": "E",
+      "rawText": "1ǡ13\n         \n\n\n\n\n© UCLES 2016                                                                               [Turn over"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The first equation involves the sum of two logarithms, so we can rewrite it as:\n\n                                    log10 (2(y − 1)) = log10 x2\n\nand so 2(y − 1) = x2 .\nThe second equation becomes y + 3 − 3x = 1, as loga 1 = 0 for any base a.\nWe therefore have two simultaneous equations:\n\n                                             2y − 2 = x2\n                                         y − 3x + 2 = 0.\n\nWe want to find the values of y, so we rewrite the second equation to eliminate x:\n                                                 y+2\n                                            x=\n                                                  3\nand so the first equation becomes\n                                                   (y + 2)2\n                                        2y − 2 =\n                                                      9\nor\n                                     18y − 18 = y 2 + 4y + 4\nwhich rearranges to give the quadratic y 2 − 14y + 22 = 0. The solutions to this quadratic are\n                             √\n                        14 ± 142 − 4 × 22          p               √\n                                             = 7 ± 72 − 22 = 7 ± 27\n                                2\nand so the correct answer is C.\nIt would be good to check whether both of these solutions are valid (though the√ question does\nnot require us to do so). To be valid, we require both x > 0 and y > 1. Since 27 < 6, we see\nthat y > 1. Also, as x = 31 (y + 2) and y > 0, it follows that x > 0. So there are, indeed, two\nvalid solutions.\n\n\n\n\n                                                 19\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

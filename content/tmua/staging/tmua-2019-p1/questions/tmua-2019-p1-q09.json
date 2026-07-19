@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "9   p is a positive constant.\n                                                   √           √\n    Find the area enclosed between the curves y = p x and x = p y\n\n        2 52\n    A   3\n          p − 12 p2\n        4 52\n    B   3\n          p − p2\n        p4\n    C   6\n\n        p4\n    D   3\n\n        2 3\n    E   3\n          p − 12 p4\n        4 3\n    F   3\n          p − p4\n\n    G 2p4\n\n\n\n\n                                        11"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "p is a positive constant.\n                                                   √           √\n    Find the area enclosed between the curves y = p x and x = p y\n\n        2 52"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "3\n          p − 12 p2\n        4 52"
+    },
+    {
+      "label": "B",
+      "rawText": "3\n          p − p2\n        p4"
+    },
+    {
+      "label": "C",
+      "rawText": "6\n\n        p4"
+    },
+    {
+      "label": "D",
+      "rawText": "3\n\n        2 3"
+    },
+    {
+      "label": "E",
+      "rawText": "3\n          p − 12 p4\n        4 3"
+    },
+    {
+      "label": "F",
+      "rawText": "3\n          p − p4"
+    },
+    {
+      "label": "G",
+      "rawText": "2p4"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "√       √   x        x2\nWe can rearrange x = p y to give y = , so y = 2 (for x ≥ 0). We can then sketch the two\n                                    p        p\ncurves to see what is intended:\n\n                                          y\n\n\n\n\n                                                                 x\n\n\nWe need to find where these two curves intersect. We have\n                                               √  x2\n                                              p x= 2\n                                                  p\n    3                 1\nso x 2 = p3 , giving x 2 = p, so x = p2 and thus y = p2 as well; the point of intersection thus lies\non the line y = x and the graph is symmetrical about this line.\nWe can now find the area between the curves by integrating the difference from x = 0 to x = p2 :\n                                              Z p2\n                                                     √    x2\n                                     area =        p x − 2 dx\n                                             0            p\n                                            \" 3           #p2\n                                             px 2      x3\n                                          =          − 2\n                                              ( 32 )   3p\n                                                                     0\n                                              p.p3         p6\n                                          =            −         −0\n                                              ( 32 )       3p2\n                                          = 23 p4 − 13 p4\n                                          = 13 p4\n\nso the answer is D.\n\n\n\n\nc UCLES                                                                                     Page 11"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

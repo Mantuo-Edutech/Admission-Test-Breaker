@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q10",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 10,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "4           2\n10   Here is an attempt to solve the inequality x – 2x – 3 < 0 by completing the square:\n\n\n                                 x 4 – 2x 2 – 3 < 0\n                                                  4        2\n                           I     if and only if x – 2x + 1 < 4\n\n                                                  2           2\n                           II    if and only if (x – 1) < 4\n\n                                                          2\n                           III   if and only if –2 < x – 1 < 2\n\n                                                  2\n                           IV    if and only if x – 1 < 2\n\n                                                  2\n                           V     if and only if x < 3\n\n                           VI    if and only if − 3 < x <             3\n\n\n     Which of the following statements is true?\n\n     A   The argument is completely correct.\n\n     B   The first error occurs in line I.\n\n     C   The first error occurs in line II.\n\n     D   The first error occurs in line III.\n\n     E   The first error occurs in line IV.\n\n     F   The first error occurs in line V.\n\n     G   The first error occurs in line VI.\n\n\n\n\n                                                      12"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "4           2\n10   Here is an attempt to solve the inequality x – 2x – 3 < 0 by completing the square:\n\n\n                                 x 4 – 2x 2 – 3 < 0\n                                                  4        2\n                           I     if and only if x – 2x + 1 < 4\n\n                                                  2           2\n                           II    if and only if (x – 1) < 4\n\n                                                          2\n                           III   if and only if –2 < x – 1 < 2\n\n                                                  2\n                           IV    if and only if x – 1 < 2\n\n                                                  2\n                           V     if and only if x < 3\n\n                           VI    if and only if − 3 < x <             3\n\n\n     Which of the following statements is true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "The argument is completely correct."
+    },
+    {
+      "label": "B",
+      "rawText": "The first error occurs in line I."
+    },
+    {
+      "label": "C",
+      "rawText": "The first error occurs in line II."
+    },
+    {
+      "label": "D",
+      "rawText": "The first error occurs in line III."
+    },
+    {
+      "label": "E",
+      "rawText": "The first error occurs in line IV."
+    },
+    {
+      "label": "F",
+      "rawText": "The first error occurs in line V."
+    },
+    {
+      "label": "G",
+      "rawText": "The first error occurs in line VI."
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Substituting x = 0 gives x4 − 2x2 − 3 = −3 < 0, so the final conclusion on line VI is at least\nplausible. We will check the argument line-by-line.\n\nI    This is obtained by adding 4 to both sides, and this is reversible. This line is correct.\n\nII   This is an algebraic rearrangement: (x2 − 1)2 = x4 − 2x2 + 1 is an identity, so this line is\n     correct.\n\nIII We have u2 < 4 if and only if −2 < u < 2. Taking u = x2 − 1, we see that this line is\n    equivalent to line II, so this step is correct.\n\nIV This looks suspicious, as one of the inequalities has been dropped. The statement x2 −1 < 2\n   certainly follows from −2 < x2 − 1 < 2, but the claim is that they follow from each other.\n   Can we deduce −2 < x2 − 1 < 2 from x2 − 1 < 2?\n     Perhaps surprisingly, it turns out that we can. The function x2 − 1 has a minimum value\n     of −1, so we always have x2 − 1 ≥ −1, and therefore −2 < x2 − 1 is true for all x. Hence\n     the statement in line III does follow from x2 − 1 < 2, and this line is correct.\n\nV  This is obtained by adding 1 to both sides, which is reversible, so this line is correct.\n                                                                            √         √\nVI Similarly to our observation in line III, x2 < 3 is true if and only if − 3 < x < 3, so this\n   line is correct.\n\nThus the entire argument is correct, and the correct option is A.\n\n\n\n\nVersion 1.0, September 2023                                                                Page 12"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

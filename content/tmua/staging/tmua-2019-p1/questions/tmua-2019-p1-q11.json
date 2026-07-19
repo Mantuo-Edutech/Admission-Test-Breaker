@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11   Find the sum of the real values of x that satisfy the simultaneous equations:\n\n\n\n                                           log3 (xy 2 ) = 1\n\n                                     (log3 x)(log3 y) = −3\n\n         1\n     A   3\n\n     B 1\n\n     C 3\n\n     D 3 19\n         1\n     E 9 27\n\n     F 9 13\n\n     G 27\n\n     H 27 19\n\n\n\n\n                                             13"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the sum of the real values of x that satisfy the simultaneous equations:\n\n\n\n                                           log3 (xy 2 ) = 1\n\n                                     (log3 x)(log3 y) = −3\n\n         1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "3"
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "3"
+    },
+    {
+      "label": "D",
+      "rawText": "3 19\n         1"
+    },
+    {
+      "label": "E",
+      "rawText": "9 27"
+    },
+    {
+      "label": "F",
+      "rawText": "9 13"
+    },
+    {
+      "label": "G",
+      "rawText": "27"
+    },
+    {
+      "label": "H",
+      "rawText": "27 19"
+    }
+  ],
+  "correctAnswer": "H",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can write the first equation as log3 x + 2 log3 y = 1. Then writing X = log3 x and Y = log3 y,\nthe two equations become\n\n                                         X + 2Y = 1\n                                             XY = −3\n\nWe are interested in the values of X, so we rearrange the second equation to get Y = −3/X,\nand substitute this into the first equation to give\n                                               6\n                                          X−     = 1.\n                                               X\nMultiplying this by X gives the quadratic X 2 − 6 = X, or X 2 − X − 6 = 0. This factorises to\n(X − 3)(X + 2) = 0, so X = 3 or X = −2, so x = 3X is either 27 or 19 , and their sum is 27 91 ,\nwhich is option H.\nWe could also have solved this problem by writing Y in terms of X using the first equation, and\nthen substituting this into the second; it would have given the same result.\n\n\n\n\nc UCLES                                                                                  Page 13"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

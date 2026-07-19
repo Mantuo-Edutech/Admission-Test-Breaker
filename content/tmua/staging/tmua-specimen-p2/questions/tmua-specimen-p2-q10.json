@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q10",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 10,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "9\n\n10.    Which one of the following is a sketch of the graph of                = log 2 for       > 1?\n\n\n            5                                                  3\n                                                               2\n            4\n                                                               1\n            3                                                  0\n            2                                                      0 1   2    3 4   5      6   7   8   9 10\n            1                                              –1\n            0                                              –2\n                0 1   2   3 4   5   6   7   8   9 10       –3\n         –1\n                                                           –4\n         –2\n                                                           –5\n\n        A\n                                                           B\n\n                                                               4\n            5\n            4                                                  3\n            3                                                  2\n\n            2                                                  1\n                                                               0\n            1                                                      01    2    3 4   5      6   7   8   9 10\n            0                                              –1\n                0 1   2   3 4   5   6 7     8   9 10       –2\n         –1\n         –2                                                –3\n         –3                                                –4\n\n        C                                                  D\n\n            5                                                  3\n            4                                                  2\n            3                                                  1\n                                                               0\n            2\n                                                                   0 1 2      3 4   5      6   7   8   9 10\n            1                                              –1\n            0                                              –2\n                01    2   3 4   5   6 7     8   9 10\n         –1                                                –3\n         –2                                                –4\n         –3                                                –5\n\n        E                                                  F\n\n\n\n\n© UCLES 2017                                                                                            [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "9\n\n10.    Which one of the following is a sketch of the graph of                = log 2 for       > 1?\n\n\n            5                                                  3\n                                                               2\n            4\n                                                               1\n            3                                                  0\n            2                                                      0 1   2    3 4   5      6   7   8   9 10\n            1                                              –1\n            0                                              –2\n                0 1   2   3 4   5   6   7   8   9 10       –3\n         –1\n                                                           –4\n         –2\n                                                           –5"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    },
+    {
+      "label": "F",
+      "rawText": "[visual option F; transcription required]"
+    },
+    {
+      "label": "G",
+      "rawText": "[visual option G; transcription required]"
+    },
+    {
+      "label": "H",
+      "rawText": "[visual option H; transcription required]"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can start by finding the value of y when x is close to 1. When x = 1.1, say, y = log1.1 2,\nwhich is equivalent to 1.1y = 2. Now 1.12 = 1.21, so y > 2 (it looks as though y ≈ 10). The\nonly graph with this value of y near x = 1 is E, so this must be the answer.\nAlternatively, we could rearrange the equation to get xy = 2. y must always be positive,\notherwise xy would be less than 1. As x gets large, y must get closer to 0. Putting these\ntogether again shows that only graph E works.\n\n\n\n\n                                             13\n                                                                                 © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required",
+      "option-count-review"
+    ]
+  }
+}

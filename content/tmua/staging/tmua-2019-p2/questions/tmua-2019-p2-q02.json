@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "2   (2x + 1) and (x − 2) are factors of 2x3 + px2 + q.\n\n    What is the value of 2p + q?\n\n    A −10\n\n    B − 38\n        5\n\n    C − 22\n        3\n\n        22\n    D   3\n\n        38\n    E   5\n\n    F 10\n\n\n\n\n                                            4"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "(2x + 1) and (x − 2) are factors of 2x3 + px2 + q.\n\n    What is the value of 2p + q?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−10"
+    },
+    {
+      "label": "B",
+      "rawText": "− 38\n        5"
+    },
+    {
+      "label": "C",
+      "rawText": "− 22\n        3\n\n        22"
+    },
+    {
+      "label": "D",
+      "rawText": "3\n\n        38"
+    },
+    {
+      "label": "E",
+      "rawText": "5"
+    },
+    {
+      "label": "F",
+      "rawText": "10"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Since 2x + 1 = 2(x + 21 ) is a factor of f(x) = 2x3 + px2 + q, it follows that f(− 21 ) = 0. Similarly,\nf(2) = 0.\nSubstituting these values in to f(x) gives\n\n                                     2(− 12 )3 + p(− 12 )2 + q = 0\n                                          2(2)3 + p(22 ) + q = 0\n\nso\n\n                                          − 14 + 41 p + q = 0\n                                           16 + 4p + q = 0\n\nMultiplying the first equation by 16 gives\n\n                                         −4 + 4p + 16q = 0.\n\nSubtracting 16 + 4p + q = 0 from this gives −20 + 15q = 0, so q = 43 , hence 4p = −16 − q = − 52\n                                                                                              3 .\n                     26    4     22\nTherefore 2p + q = − 3 + 3 = − 3 , which is option C.\n\n\n\n\nc UCLES                                                                                        Page 4"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

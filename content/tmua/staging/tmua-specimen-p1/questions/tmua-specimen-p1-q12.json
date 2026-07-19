@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p1-q12",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p1",
+  "edition": "specimen",
+  "paper": 1,
+  "questionNumber": 12,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "12.    The cross‐section of a triangular prism is an equilateral triangle with side 2 cm.\n       The length of the prism is cm.\n\n       Let the total surface area of the prism be cm2. Given that the volume of the prism is\n       cm3, which one of the following is an expression for in terms of ?\n\n\n\n       A\n\n\n       B\n                       √\n\n\n       C\n                   √\n\n\n       D\n                   √\n\n\n       E\n                   √"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The cross‐section of a triangular prism is an equilateral triangle with side 2 cm.\n       The length of the prism is cm.\n\n       Let the total surface area of the prism be cm2. Given that the volume of the prism is\n       cm3, which one of the following is an expression for in terms of ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "√"
+    },
+    {
+      "label": "C",
+      "rawText": "√"
+    },
+    {
+      "label": "D",
+      "rawText": "√"
+    },
+    {
+      "label": "E",
+      "rawText": "√"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The volume of the prism is the length times the cross-sectional area, so we need to work out the\narea of the equilateral triangle:\n\n                                                  C\n\n                                            2x         2x\n\n                                        A        x M        B\n\n\nWe could use trigonometry and the formula for the area of a triangle, area = 12 ab sin C; this\n                                          √\ngives the area as 12 (2x)(2x) sin 60◦ = x2 3.\n                                                                              2      2\nAlternatively, we could\n 2     2\n                      √find the length CM using Pythagoras’s\n                                                        1\n                                                                          √ CM = (2x) −\n                                                             theorem, giving\n                                                                        2\nx = 3x , so CM = x 3. Thus the area of the triangle is 2 AB × CM = x 3.\n                                        √\nThus the volume of the prism is T = x2 d 3.\nThe total surface area of the prism is twice the area of the triangle, plus the area of the three\nrectangular faces, so                √                   √\n                             T = 2x2 3 + 3(2xd) = 2x2 3 + 6xd.\n\nThese expressions for T are equal, so\n                                        √       √\n                                    x2 d 3 = 2x2 3 + 6xd.\n\nCollecting the d terms to the left hand side gives\n                                         √             √\n                                     x2 d 3 − 6xd = 2x2 3\n\nso                                      √             √\n                                    d(x2 3 − 6x) = 2x2 3\nhence                                    √          √\n                                      2x2 3       2x 3\n                                d= √          = √       .\n                                    x2 3 − 6x    x 3−6\n                                                  √\nIf we now divide the numerator and denominator by 3, we obtain\n                                                  2x\n                                         d=         √ ,\n                                                 x−2 3\nwhich is option D.\n\n\n\n\nVersion 1.1, November 2020                                                               Page 14"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+      "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+      "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required"
+    ]
+  }
+}

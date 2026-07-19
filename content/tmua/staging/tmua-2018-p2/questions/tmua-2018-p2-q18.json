@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "18   f(x) is a polynomial function deﬁned for all real x.\n\n     Which of the following is a necessary condition for the inequality\n\n                                                      \u0002         \u0003\n                                     f(a) + f(b)          a+b\n                                                 ≥f\n                                          2                2\n\n     to be true for all real numbers a and b with a < b ?\n\n     A f(x) ≥ 0 for all real x\n\n     B f \u0002 (x) ≥ 0 for all real x\n\n     C f \u0002\u0002 (x) ≥ 0 for all real x\n\n     D f(x) ≤ 0 for all real x\n\n     E f \u0002 (x) ≤ 0 for all real x\n\n     F f \u0002\u0002 (x) ≤ 0 for all real x\n\n\n\n\n                                             20"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "f(x) is a polynomial function deﬁned for all real x.\n\n     Which of the following is a necessary condition for the inequality\n\n                                                               \n                                     f(a) + f(b)          a+b\n                                                 ≥f\n                                          2                2\n\n     to be true for all real numbers a and b with a < b ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "f(x) ≥ 0 for all real x"
+    },
+    {
+      "label": "B",
+      "rawText": "f  (x) ≥ 0 for all real x"
+    },
+    {
+      "label": "C",
+      "rawText": "f  (x) ≥ 0 for all real x"
+    },
+    {
+      "label": "D",
+      "rawText": "f(x) ≤ 0 for all real x"
+    },
+    {
+      "label": "E",
+      "rawText": "f  (x) ≤ 0 for all real x"
+    },
+    {
+      "label": "F",
+      "rawText": "f  (x) ≤ 0 for all real x"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "It is helpful to draw a sketch of y = f(x) to understand what is going on here.\n                   f(a) + f(b)\nNote first that                is the mean of the f(a) and f(b), so if we draw a line segment from\n                         2                                      \u0012                   \u0013\n                                                                  a + b f(a) + f(b)\n(a, f(a)) to (b, f(b)) on the graph of y = f(x), then the point        ,              is the midpoint\n                                                                    2        2\nof this line segment.\n            \u0012           \u0012      \u0013\u0013\n              a+b         a+b\nLikewise,            ,f            is the point on the graph with this x-coordinate.\n                2          2\nThe inequality states that the line segment lies above the graph at this point, so the graph could\nlook something like this:\n\n                                             y\n\n\n                           f(a) + f(b)\n                                2\n                             \u0012      \u0013\n                               a+b\n                           f\n                                 2\n\n                                                                        x\n                                                    a   a+b      b\n                                                         2\n\n\n\nWe see the for the inequality to be true in this case, the curve needs to “bend up”, so that it is\nbelow the chord connecting (a, f(a)) with (b, f(b)). This means that the second derivative, f 00 (x)\nmust be positive. So it would seem likely that the answer is C.\nWithout too much difficulty we can see that the other options don’t work, just by looking at\nthe above sketch. This shows that none of D, E or F is necessary (for the curve could bend back\nupwards for more negative values of x, as in a quadratic). If we translate the graph downwards,\nthen it will still have this property, but A is no longer the case, so A is not necessary. And if\nwe continue this graph to more negative values of x, it will have f 0 (x) < 0 if we go far enough,\nso B is not necessary either.\nTherefore by elimination, C must be necessary.\nWe can also prove directly that C is necessary. To do so, we will prove the contrapositive: if\nf 00 (x) < 0 for some real x, then there are real numbers a and b with a < b for which\n                                                      \u0012      \u0013\n                                       f(a) + f(b)      a+b\n                                                   <f                                      (∗)\n                                            2            2\n\nNow, f 00 (x) < 0 means that the curve is “bending downwards” at this point, which means that\na sketch of the graph will look like a reflection of the above sketch in a horizontal line (at least\nnear the point where f 00 (x) < 0). And then the curve will lie above the chord, so (∗) is true.\nHence C is necessary.\n\n\n\nVersion 1.0, April 2019                                                                     Page 21\n\f\nTest of Mathematics for University Admission 2018 Paper 2 Solutions\n\n\n      Commentary: An interesting question to wonder about is whether there are any ex-\n      amples of such polynomial functions. Clearly, constant polynomials (f(x) = c) satisfy\n      the condition, as do linear polynomials (f(x) = ax + b) and quadratics with a positive\n      coefficient of x2 (f(x) = ax2 + bx + c with a > 0)\n      For higher degree polynomials, if f(x) = axn + · · · , then f 00 (x) = an(n − 1)xn−2 + · · · . If\n      n is odd, then this polynomial takes all real values, including negative ones, so this cannot\n      satisfy the condition. If n is even, then it might be the case that f 00 (x) ⩾ 0 for all x, which\n      will be the case if f 00 (x) ⩾ 0 at all of its stationary points.\n      For example, if we take f 00 (x) = 3x1 + 1, then the corresponding f(x) will have this\n      condition.\n      A function satisfying this condition is called a convex function.\n\n\n\n\nVersion 1.0, April 2019                                                                       Page 22"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        21,
+        22
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

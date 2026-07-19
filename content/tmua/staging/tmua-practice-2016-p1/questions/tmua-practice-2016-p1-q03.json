@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "͵\u0003    \u0004\u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003‫ ݕ‬ൌ ௫ మ \u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003‫ ݔ‬ൌ ͳǤ\u0003\n      \u0003\n      \u0017\u0003\u0003 \u0003\u0003‫ݔ‬Ǧ\u0003\u0003ܲ\u0003\u0003\u0003‫ݕ‬Ǧ\u0003\u0003ܳǤ\u0003\u0003\u0003\u0003\n      \u0003\n      \u0017\u0003\u0003\u0003ܲܳ\u0003\u0003\n      \u0003\n\n            ͵ξͷ\n      \u0004\u0003\n             ʹ\n      \u0003\n          ͵ξͳ͹\n      \u0005\u0003"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A ‫ ݕ‬ൌ ௫ మ  ‫ ݔ‬ൌ 1Ǥ\n      \n       ‫ݔ‬Ǧܲ‫ݕ‬ǦܳǤ\n      \n      ܲܳ\n      \n\n            3ξ5"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    },
+    {
+      "label": "F",
+      "rawText": "[visual option F; transcription required]"
+    },
+    {
+      "label": "G",
+      "rawText": "[visual option G; transcription required]"
+    },
+    {
+      "label": "H",
+      "rawText": "[visual option H; transcription required]"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We need to find the gradient of the curve at (1, 2). We have y = 2x−2 and so dx\n                                                                              dy\n                                                                                 = −4x−3 . At\nx = 1, this gives dx = −4 and so the normal has gradient 4 . As it passes through (1, 2), it has\n                  dy                                      1\n\nequation\n                                      y − 2 = 41 (x − 1).\n\nIt cuts the x-axis (y = 0) at P , so at P , we have −2 = 14 (x − 1), giving x = −7, and so P has\ncoordinates (−7, 0).\nIt cuts the y-axis (x = 0) at Q, so at Q, we have y − 2 = 41 (−1), giving y = 74 , and so Q has\ncoordinates (0, 47 ).\nThus P Q has length                                          √\n                                              7            7   17\n                               q                p\n                                       7\n                                72 + ( 4 )2 =     42 + 1 =\n                                              4              4\n(where we have written 7 = 74 × 4 for the first equality).\nHence the answer is C.\n\n\n\n\n                                                6\n                                                                                    © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required",
+      "option-count-review",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

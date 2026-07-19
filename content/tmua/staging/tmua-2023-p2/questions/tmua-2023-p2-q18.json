@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "18   The equation x 4 + bx 2 + c = 0 has four distinct real roots if and only if which of the following\n     conditions is satisfied?\n\n     A   b 2 > 4c\n\n     B   b 2 < 4c\n\n     C   c > 0 and b > 2 c\n\n     D   c > 0 and b < −2 c\n\n     E   c < 0 and b < 0\n\n     F   c < 0 and b > 0\n\n\n\n\n                                                  20"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The equation x 4 + bx 2 + c = 0 has four distinct real roots if and only if which of the following\n     conditions is satisfied?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "b 2 > 4c"
+    },
+    {
+      "label": "B",
+      "rawText": "b 2 < 4c"
+    },
+    {
+      "label": "C",
+      "rawText": "c > 0 and b > 2 c"
+    },
+    {
+      "label": "D",
+      "rawText": "c > 0 and b < −2 c"
+    },
+    {
+      "label": "E",
+      "rawText": "c < 0 and b < 0"
+    },
+    {
+      "label": "F",
+      "rawText": "c < 0 and b > 0"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Writing u = x2 , the equation becomes u2 + bu + c = 0. This has two distinct real roots u1 and u2\nif and only if b2 − 4c > 0, or b2 > 4c, so this is a necessary condition.\n                                                                 √              √\nThe roots of the original equation are then given by x = ± u1 and x = ± u2 . So for the\noriginal equation to have four distinct real roots, we require u1 and u2 to be distinct positive\nreal numbers. We have                                 √\n                                                 −b ± b2 − 4c\n                                      u1 , u2 =\n                                                       2\n                             1\n                                     √          \u0001\nso the smaller of the two is 2 −b − b2 − 4c . If b > 0, then this will be negative, so we require\n                                                    √\nb < 0. Supposing b < 0, we also require −b > b2 − 4c, which becomes on squaring (as both\nsides are positive) b2 > b2 − 4c, so c > 0.\nPutting these all together, the original equation will have four distinct real roots if and only if\nall of the following hold:\n\n•    b2 > 4c\n\n•    b<0\n\n•    c>0\n                                                               √            √\nAs c > 0, we can deduce that b2 > 4c if and only if b > 2 c or b < −2 c. Since we require\nb < 0, the first is not possible, so the pair of conditions b < 0 and b2 > 4c is equivalent to the\n                         √\nsingle condition b < −2 c.\nTherefore a necessary and sufficient condition for the original equation to have four distinct real\n                         √\nroots is c > 0 and b < −2 c, which is option D.\n\n\n\n\nVersion 1.0, September 2023                                                                Page 21"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        21
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

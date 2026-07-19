@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "id": "ucat-decision-making-starter-v1",
+  "exam": "UCAT",
+  "edition": "Decision Making Starter · Original v1",
+  "sectionLabel": "Decision Making Starter",
+  "sectionLabelZh": "决策判断 · 满托原创短诊断",
+  "durationMinutes": 10,
+  "deliveryMode": "structured",
+  "responseMode": "choice",
+  "calculator": "basic",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本练习依据 UCAT 公开分测验与工具范围独立命题，不复制或改写官方 Question Bank、Practice Test、图表或解析。",
+  "sourceAnchors": [
+    {
+      "id": "ucat-format-snapshot",
+      "localPath": "content/official/raw/pages/ucat-format.html",
+      "sha256": "9aa4a93bddcc62bf53c6196f2b38ac40240a1f781154590c772c68f179d52dbf",
+      "usedFor": "current Decision Making identity and scoring boundary only"
+    },
+    {
+      "id": "ucat-tools-snapshot",
+      "localPath": "content/official/raw/pages/ucat-tools.html",
+      "sha256": "a659bedc40b1a603cb755e75121a19a633889d2aab62b66d62378e804f7b8c7c",
+      "usedFor": "basic calculator availability boundary only"
+    }
+  ],
+  "passages": [
+    {
+      "id": "presentation-rota",
+      "title": "Presentation rota",
+      "content": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Four trainees — J, K, L and M — each present once from Tuesday to Friday. J presents before L. L presents on Friday. K presents neither Tuesday nor Friday. M presents immediately after K." }] }
+      ]
+    },
+    {
+      "id": "programme-outcomes",
+      "title": "Training programme outcomes",
+      "content": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Costs are total programme costs. Completion rate is completed participants divided by applicants." }] },
+        {
+          "kind": "table",
+          "caption": "Applicants, completions and cost",
+          "headers": ["Programme", "Applicants", "Completed", "Total cost"],
+          "rows": [
+            ["A", "80", "60", "£18,000"],
+            ["B", "100", "75", "£30,000"],
+            ["C", "60", "54", "£21,600"]
+          ]
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ucat-decision-making-starter-v1-q01", "number": 1, "sourcePage": 1, "passageId": "presentation-rota",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which order, from Tuesday to Friday, satisfies all the rules?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "K, M, J, L" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "J, K, M, L" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "J, M, K, L" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "M, J, K, L" }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["ucat-dm-ordering"], "skillTags": ["constraints", "ordering"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/decision-making-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/decision-making-starter-v1.json"
+    },
+    {
+      "id": "ucat-decision-making-starter-v1-q02", "number": 2, "sourcePage": 1, "passageId": "presentation-rota",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Who must present on Thursday?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "J" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "K" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "L" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "M" }] }] }
+      ],
+      "correctAnswer": "D", "knowledgeTags": ["ucat-dm-deduction"], "skillTags": ["must-be-true", "constraints"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/decision-making-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/decision-making-starter-v1.json"
+    },
+    {
+      "id": "ucat-decision-making-starter-v1-q03", "number": 3, "sourcePage": 2,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "In a group of 1,000 people, 10% have a condition. A test detects 90% of people who have it and correctly gives a negative result to 80% of people who do not. If one person tests positive, what is the probability that they have the condition?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "1/5" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "1/3" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "1/2" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "9/10" }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["ucat-dm-bayes-table"], "skillTags": ["probability", "natural-frequencies"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/decision-making-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/decision-making-starter-v1.json"
+    },
+    {
+      "id": "ucat-decision-making-starter-v1-q04", "number": 4, "sourcePage": 2, "responseMode": "statement-set",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "All cedar boxes are sealed. No sealed item is transparent. Some archive containers are cedar boxes. No metal container is a cedar box. For each conclusion, answer Yes if it follows and No if it does not." }] }],
+      "options": [],
+      "statements": [
+        { "id": "archive-sealed", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some archive containers are sealed." }] }], "correctAnswer": "yes" },
+        { "id": "cedar-not-transparent", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "No cedar box is transparent." }] }], "correctAnswer": "yes" },
+        { "id": "archive-transparent", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some archive containers are transparent." }] }], "correctAnswer": "no" },
+        { "id": "sealed-cedar", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "All sealed items are cedar boxes." }] }], "correctAnswer": "no" },
+        { "id": "archive-not-metal", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some archive containers are not metal containers." }] }], "correctAnswer": "yes" }
+      ],
+      "correctAnswer": "", "scoring": { "kind": "statement-set-two-point" }, "knowledgeTags": ["ucat-dm-syllogisms"], "skillTags": ["syllogism", "five-statements"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/decision-making-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/decision-making-starter-v1.json"
+    },
+    {
+      "id": "ucat-decision-making-starter-v1-q05", "number": 5, "sourcePage": 3,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Of 120 volunteers, 68 have first-aid training, 54 can drive, and 30 have both skills. How many have neither skill?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "20" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "28" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "30" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "38" }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["ucat-dm-venn-counting"], "skillTags": ["sets", "inclusion-exclusion"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/decision-making-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/decision-making-starter-v1.json"
+    },
+    {
+      "id": "ucat-decision-making-starter-v1-q06", "number": 6, "sourcePage": 3,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Should a hospital publish average outpatient waiting times separately for each clinic? Which is the strongest argument?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "No, because averages are always misleading." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Yes, because consistent clinic-level data can reveal persistent delays to patients and managers." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Yes, because every patient should choose the clinic with the lowest number." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "No, because staff may dislike being compared." }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["ucat-dm-strongest-argument"], "skillTags": ["argument-strength", "relevance"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/decision-making-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/decision-making-starter-v1.json"
+    },
+    {
+      "id": "ucat-decision-making-starter-v1-q07", "number": 7, "sourcePage": 4, "passageId": "programme-outcomes", "responseMode": "statement-set",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "For each statement, answer Yes if it follows from the table and No if it does not." }] }],
+      "options": [],
+      "statements": [
+        { "id": "a-rate", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Programme A has a completion rate of 75%." }] }], "correctAnswer": "yes" },
+        { "id": "b-cost", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Programme B costs £400 per completer." }] }], "correctAnswer": "yes" },
+        { "id": "b-highest", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Programme B has the highest completion rate." }] }], "correctAnswer": "no" },
+        { "id": "combined-rate", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Exactly 80% of all applicants completed a programme." }] }], "correctAnswer": "no" },
+        { "id": "a-increase", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "If A's total cost rose by 10% with the same completions, its cost per completer would remain below B's." }] }], "correctAnswer": "yes" }
+      ],
+      "correctAnswer": "", "scoring": { "kind": "statement-set-two-point" }, "knowledgeTags": ["ucat-dm-data-inference"], "skillTags": ["five-statements", "table-inference"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/decision-making-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/decision-making-starter-v1.json"
+    },
+    {
+      "id": "ucat-decision-making-starter-v1-q08", "number": 8, "sourcePage": 4,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A bag contains 4 red, 3 blue and 2 green tokens. Two tokens are drawn without replacement. What is the probability that they are the same colour?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "5/18" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "1/3" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "7/18" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "4/9" }] }] }
+      ],
+      "correctAnswer": "A", "knowledgeTags": ["ucat-dm-probability"], "skillTags": ["without-replacement", "combinations"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/decision-making-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/decision-making-starter-v1.json"
+    }
+  ]
+}

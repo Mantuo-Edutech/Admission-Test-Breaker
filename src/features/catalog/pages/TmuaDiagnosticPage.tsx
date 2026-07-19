@@ -18,32 +18,36 @@ export function TmuaDiagnosticPage({ services }: TmuaDiagnosticPageProps) {
 
   return (
     <main className="tmua-stage-page tmua-diagnostic-page">
-      <TmuaPageHeader backTo="/exams/tmua/dashboard" backLabel="我的准备路径" />
+      <TmuaPageHeader />
       <section className="tmua-stage-hero page-shell">
-        <p className="eyebrow">即将开放</p>
-        <h1>30 分钟能力诊断</h1>
-        <p>8 道原创固定题，用于观察知识掌握、数学推理和时间分配。</p>
+        <p className="eyebrow">在线能力诊断 · STARTING DIAGNOSTIC</p>
+        <h1>30 分钟能力诊断<span>30-MINUTE TMUA STARTING DIAGNOSTIC</span></h1>
+        <p>8 道满托原创固定题，先观察代数、几何、数列、三角、微积分与证明推理，再决定如何使用真题。</p>
       </section>
 
       <section className="diagnostic-spec page-shell" aria-label="30 分钟诊断设计">
-        <div><Clock3 aria-hidden="true" /><strong>30 分钟</strong><span>与 8 道题的正式节奏一致</span></div>
-        <div><FileCheck2 aria-hidden="true" /><strong>8 道固定题</strong><span>同一版本才能形成可比较证据</span></div>
+        <div><Clock3 aria-hidden="true" /><strong>30 分钟</strong><span>每题保留活跃用时与改答记录</span></div>
+        <div><FileCheck2 aria-hidden="true" /><strong>8 道固定题</strong><span>不消耗、不拆分任何历年真题</span></div>
         <div><Scale aria-hidden="true" /><strong>只报告实际表现</strong><span>不把短诊断换算成官方分数或百分位</span></div>
       </section>
 
       <section className="diagnostic-review-state page-shell">
         <CheckCircle2 aria-hidden="true" />
         <div>
-          <p className="eyebrow">当前状态</p>
-          <h2>诊断卷正在独立审核</h2>
+          <p className="eyebrow">当前版本 · ORIGINAL V1</p>
+          <h2>8 道原创题已可在线完成</h2>
           <p>
-            题目、答案和难度审核完成后才会开放。现有历年真题不会被拆分使用。
+            本卷按公开 TMUA 内容范围独立命题。提交后只显示正确率、答案、每题用时和真实作答记录，不生成官方换算分、录取概率或伪 Benchmark。
           </p>
-          <strong>审核完成前不开放作答</strong>
+          <strong>教学预览版本 · 仍待独立教师终审与真实学生标定</strong>
         </div>
       </section>
 
       <div className="tmua-stage-actions page-shell">
+        <Link className="button button--primary" to="/practice/tmua-diagnostic-v1">
+          <FileCheck2 aria-hidden="true" />
+          开始 30 分钟诊断
+        </Link>
         <Link className="button button--secondary" to="/exams/tmua/dashboard">
           <ArrowLeft aria-hidden="true" />
           返回准备首页

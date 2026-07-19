@@ -3,7 +3,7 @@ begin;
 create extension if not exists pgtap with schema extensions;
 set local search_path = public, extensions;
 
-select plan(26);
+select plan(46);
 
 insert into auth.users (
   id,
@@ -87,6 +87,56 @@ select
 from public.learner_spaces;
 grant select on test_tenant_ids to authenticated;
 
+create or replace function pg_temp.guest_session(p_second_sequence integer default null)
+returns jsonb
+language sql
+immutable
+as $$
+  select jsonb_build_object(
+    'schemaVersion', 2,
+    'id', 'ses_alice_test',
+    'learningSpaceId', 'gsp_alice_browser',
+    'startedBy', jsonb_build_object('kind', 'guest', 'actorId', 'guest_alice_browser'),
+    'paperId', 'tmua-2023-p1',
+    'status', 'active',
+    'startedAt', '2026-07-15T00:00:00.000Z',
+    'deadlineAt', '2026-07-15T01:15:00.000Z',
+    'currentQuestion', 1,
+    'answers', '{}'::jsonb,
+    'markedQuestionIds', '[]'::jsonb,
+    'timingByQuestionMs', '{}'::jsonb,
+    'activeQuestionEnteredAt', '2026-07-15T00:00:00.000Z',
+    'events', jsonb_build_array(
+      jsonb_build_object(
+        'id', 'evt_alice_1',
+        'schemaVersion', 1,
+        'learningSpaceId', 'gsp_alice_browser',
+        'sessionId', 'ses_alice_test',
+        'sequence', 1,
+        'type', 'session_started',
+        'actor', jsonb_build_object('kind', 'guest', 'actorId', 'guest_alice_browser'),
+        'occurredAt', '2026-07-15T00:00:00.000Z',
+        'payload', jsonb_build_object(
+          'paperId', 'tmua-2023-p1',
+          'deadlineAt', '2026-07-15T01:15:00.000Z'
+        )
+      )
+    ) || case when p_second_sequence is null then '[]'::jsonb else jsonb_build_array(
+      jsonb_build_object(
+        'id', 'evt_alice_2',
+        'schemaVersion', 1,
+        'learningSpaceId', 'gsp_alice_browser',
+        'sessionId', 'ses_alice_test',
+        'sequence', p_second_sequence,
+        'type', 'question_viewed',
+        'actor', jsonb_build_object('kind', 'guest', 'actorId', 'guest_alice_browser'),
+        'occurredAt', '2026-07-15T00:01:00.000Z',
+        'payload', jsonb_build_object('questionId', 'tmua-2023-p1-q01')
+      )
+    ) end
+  );
+$$;
+
 insert into public.content_resources (
   id,
   exam,
@@ -147,6 +197,35 @@ select ok(
   not has_table_privilege('authenticated', 'public.learning_events', 'update'),
   'learning events are append-only for students'
 );
+select ok(
+  not has_function_privilege('anon', 'public.export_my_learning_data()', 'execute'),
+  'anonymous users cannot export account data'
+);
+select ok(
+  not has_function_privilege('anon', 'public.delete_my_account()', 'execute'),
+  'anonymous users cannot delete accounts'
+);
+select ok(
+  not has_function_privilege('anon', 'public.get_entitled_content_resource(text)', 'execute'),
+  'anonymous users cannot call entitled content delivery'
+);
+select ok(
+  not has_table_privilege('authenticated', 'public.content_resource_payloads', 'select'),
+  'students cannot bypass delivery by selecting private payload rows'
+);
+
+set local role service_role;
+select lives_ok(
+  $$select * from public.issue_invite('Published package test', array['tmua-full-access'], 1)$$,
+  'service role can issue an invite for a package with published entitled content'
+);
+select throws_ok(
+  $$select * from public.issue_invite('Draft-only package test', array['esat-deep-review'], 1)$$,
+  '22023',
+  'invite_package_unpublished',
+  'service role cannot issue an invite for a draft-only package'
+);
+reset role;
 
 set local role authenticated;
 select set_config('request.jwt.claim.sub', '11111111-1111-4111-8111-111111111111', true);
@@ -156,16 +235,20 @@ select is((select count(*) from public.app_users), 1::bigint, 'Alice sees only h
 select is((select count(*) from public.learner_spaces), 1::bigint, 'Alice sees only her learner space');
 select is((select count(*) from public.preparation_profiles), 1::bigint, 'Alice sees only her preparation profile');
 select is((select count(*) from public.content_resources), 1::bigint, 'Alice cannot see entitled content before redemption');
+select is(
+  (select count(*) from public.get_entitled_content_resource('tmua-six-week-review-plan-v1')),
+  0::bigint,
+  'Alice cannot retrieve the private review plan before redemption'
+);
+select is(
+  (select count(*) from public.get_entitled_content_resource('tmua-specimen-p1-worked-explanations-v1')),
+  0::bigint,
+  'Alice cannot retrieve the private worked review before redemption'
+);
 
-select throws_ok(
-  $$
-    insert into public.preparation_profiles (learner_space_id, profile)
-    select bob_space_id, '{"crossTenant":true}'::jsonb
-    from test_tenant_ids
-  $$,
-  '42501',
-  'new row violates row-level security policy for table "preparation_profiles"',
-  'Alice cannot insert a profile for a known Bob learner-space ID'
+select ok(
+  not has_table_privilege('authenticated', 'public.preparation_profiles', 'insert'),
+  'students cannot bypass the profile RPC with a direct insert'
 );
 
 select lives_ok(
@@ -173,7 +256,23 @@ select lives_ok(
   'Alice can redeem a valid invite'
 );
 select is((select count(*) from public.user_entitlements), 1::bigint, 'Alice sees her granted entitlement');
-select is((select count(*) from public.content_resources), 2::bigint, 'Alice sees entitled content after redemption');
+select is((select count(*) from public.content_resources), 4::bigint, 'Alice sees all package-bound content after redemption');
+select is(
+  (
+    select jsonb_array_length(payload->'weeklyPlan')
+    from public.get_entitled_content_resource('tmua-six-week-review-plan-v1')
+  ),
+  6,
+  'Alice receives the complete six-week structured plan after redemption'
+);
+select is(
+  (
+    select jsonb_array_length(payload->'explanations')
+    from public.get_entitled_content_resource('tmua-specimen-p1-worked-explanations-v1')
+  ),
+  20,
+  'Alice receives all 20 worked explanations after redemption'
+);
 select is(
   (select count(*) from public.redeem_invite('MANTUO-TMUA-ONE-USE-2026-ACCESS')),
   1::bigint,
@@ -181,94 +280,51 @@ select is(
 );
 
 select lives_ok(
-  $$
-    insert into public.practice_sessions (
-      id,
-      learner_space_id,
-      paper_id,
-      schema_version,
-      status,
-      snapshot,
-      started_at,
-      deadline_at
-    )
-    select
-      'ses_alice_test',
-      id,
-      'tmua-2023-p1',
-      2,
-      'active',
-      '{}'::jsonb,
-      '2026-07-15T00:00:00Z'::timestamptz,
-      '2026-07-15T01:15:00Z'::timestamptz
-    from public.learner_spaces
-  $$,
-  'Alice can create a session only in her learner space'
+  $$select public.save_practice_session(pg_temp.guest_session())$$,
+  'Alice can atomically claim a Guest session into her learner space'
 );
 
 select lives_ok(
-  $$
-    insert into public.learning_events (
-      id,
-      learner_space_id,
-      session_id,
-      sequence,
-      event_type,
-      actor,
-      occurred_at,
-      payload
-    )
-    select
-      'evt_alice_1',
-      session.learner_space_id,
-      session.id,
-      1,
-      'session_started',
-      jsonb_build_object('kind', 'student', 'userId', app_user.platform_user_id),
-      '2026-07-15T00:00:00Z'::timestamptz,
-      '{"paperId":"tmua-2023-p1"}'::jsonb
-    from public.practice_sessions as session
-    join public.app_users as app_user on app_user.auth_user_id = '11111111-1111-4111-8111-111111111111'
-    where session.id = 'ses_alice_test'
-  $$,
-  'Alice can append a correctly attributed first event'
+  $$select public.save_practice_session(pg_temp.guest_session(2))$$,
+  'repeating a save appends only the new consecutive event'
+);
+
+select lives_ok(
+  $$select public.save_practice_session(pg_temp.guest_session(2))$$,
+  'replaying the same session and events is idempotent'
+);
+select is(
+  public.export_my_learning_data()->'account'->>'email',
+  'alice@example.test',
+  'Alice export identifies only the authenticated account'
+);
+select is(
+  jsonb_array_length(public.export_my_learning_data()->'practiceSessions'),
+  1,
+  'Alice export contains her one idempotently saved practice session'
+);
+
+select throws_ok(
+  $$select public.save_practice_session(pg_temp.guest_session(3))$$,
+  '22023',
+  'learning_events_invalid',
+  'the transactional save rejects event sequence gaps'
 );
 
 select throws_ok(
   $$
-    insert into public.learning_events (
-      id, learner_space_id, session_id, sequence, event_type, actor, occurred_at, payload
+    select public.save_practice_session(
+      jsonb_set(
+        snapshot,
+        '{startedBy}',
+        '{"kind":"student","userId":"usr_spoofed"}'::jsonb
+      )
     )
-    select
-      'evt_alice_3', learner_space_id, id, 3, 'question_viewed',
-      jsonb_build_object(
-        'kind', 'student',
-        'userId', (select platform_user_id from public.app_users)
-      ),
-      '2026-07-15T00:01:00Z'::timestamptz,
-      '{"questionId":"tmua-2023-p1-q01"}'::jsonb
-    from public.practice_sessions where id = 'ses_alice_test'
-  $$,
-  '23514',
-  'learning_event_sequence_invalid',
-  'event sequence gaps are rejected'
-);
-
-select throws_ok(
-  $$
-    insert into public.learning_events (
-      id, learner_space_id, session_id, sequence, event_type, actor, occurred_at, payload
-    )
-    select
-      'evt_alice_spoof', learner_space_id, id, 2, 'question_viewed',
-      '{"kind":"student","userId":"usr_spoofed"}'::jsonb,
-      '2026-07-15T00:01:00Z'::timestamptz,
-      '{"questionId":"tmua-2023-p1-q01"}'::jsonb
     from public.practice_sessions where id = 'ses_alice_test'
   $$,
   '42501',
-  'learning_event_actor_invalid',
-  'event actor spoofing is rejected'
+  'practice_session_actor_invalid',
+  'the transactional save rejects actor spoofing'
 );
 
 reset role;
@@ -281,6 +337,18 @@ select is((select count(*) from public.preparation_profiles), 1::bigint, 'Bob se
 select is((select count(*) from public.practice_sessions), 0::bigint, 'Bob cannot see Alice practice sessions');
 select is((select count(*) from public.learning_events), 0::bigint, 'Bob cannot see Alice learning events');
 select is((select count(*) from public.content_resources), 1::bigint, 'Bob still sees only public content');
+select is(
+  (select count(*) from public.get_entitled_content_resource('tmua-six-week-review-plan-v1')),
+  0::bigint,
+  'Bob cannot retrieve Alice entitled review plan'
+);
+
+select throws_ok(
+  $$select public.save_practice_session(pg_temp.guest_session(2))$$,
+  '42501',
+  'guest_space_already_claimed',
+  'Bob cannot claim the Guest Space already bound to Alice'
+);
 
 select throws_ok(
   $$select * from public.redeem_invite('MANTUO-TMUA-ONE-USE-2026-ACCESS')$$,
@@ -289,6 +357,42 @@ select throws_ok(
   'a one-use invite cannot be redeemed by Bob after Alice'
 );
 
+select is(
+  jsonb_array_length(public.export_my_learning_data()->'practiceSessions'),
+  0,
+  'Bob export cannot include Alice practice sessions'
+);
+select lives_ok(
+  $$select public.delete_my_account()$$,
+  'Bob can delete his own authenticated account'
+);
+
+reset role;
+
+select is(
+  (select count(*) from public.app_users where auth_user_id = '22222222-2222-4222-8222-222222222222'),
+  0::bigint,
+  'account deletion cascades through Bob platform identity'
+);
+
+update public.user_entitlements
+set revoked_at = now()
+where user_id = '11111111-1111-4111-8111-111111111111'
+  and package_id = 'tmua-full-access';
+
+set local role authenticated;
+select set_config('request.jwt.claim.sub', '11111111-1111-4111-8111-111111111111', true);
+select set_config('request.jwt.claim.role', 'authenticated', true);
+select is(
+  (select count(*) from public.get_entitled_content_resource('tmua-six-week-review-plan-v1')),
+  0::bigint,
+  'revoking the package immediately removes private content access'
+);
+select is(
+  (select count(*) from public.get_entitled_content_resource('tmua-specimen-p1-worked-explanations-v1')),
+  0::bigint,
+  'revoking the package immediately removes worked-review access'
+);
 reset role;
 
 select * from finish();

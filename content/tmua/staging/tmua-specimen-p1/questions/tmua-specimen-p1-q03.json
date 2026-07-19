@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p1-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p1",
+  "edition": "specimen",
+  "paper": 1,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "3.     The perpendicular bisector of the line segment joining the points 2, 6 and 5, 4 cuts\n       the ‐axis at the point with ‐coordinate\n\n\n\n\n       A\n\n\n       B\n\n\n       C\n\n\n       D\n\n\n       E"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The perpendicular bisector of the line segment joining the points 2, 6 and 5, 4 cuts\n       the ‐axis at the point with ‐coordinate"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We find the equation of the perpendicular bisector first, and then find the x-coordinate of this\nline when y = 0.\nThe midpoint of the line segment joining (2, −6) and (5, 4) is ( 27 , −1), and the gradient of this\nline segment is 4−(−6)  10\n                 5−2 = 3 .\n\nTherefore the perpendicular bisector passes through ( 27 , −1) and has gradient − 10\n                                                                                  3\n                                                                                     . Its equation\nis therefore\n                                                 3\n                                                    x − 72 .\n                                                            \u0001\n                                   y − (−1) = − 10\n\nWe could expand and simplify this equation, but that is not necessary for our purposes. Instead,\nwe substitute y = 0 to obtain\n                                             3\n                                                x − 27\n                                                       \u0001\n                                      1 = − 10\ngiving\n                                          x − 72 = − 10\n                                                     3\n\nso x = 27 − 10  21  20  1\n            3 = 6 − 6 = 6 showing that the correct answer is option B.\n\n\n\n\nVersion 1.1, November 2020                                                                  Page 5"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+      "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+      "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required"
+    ]
+  }
+}

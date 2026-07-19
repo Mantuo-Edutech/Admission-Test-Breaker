@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q01",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 1,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "ͳ\u0003       \u0003\u0003\u0003\u0003\u0003\u0003\u0003ሺܽ‫ ݔ‬൅ ܾሻଷ \u0003\u0003\u0003\u0003ͺ‫ ݔ‬ଷ െ ‫ ݔ݌‬ଶ ൅ ͳͺ‫ ݔ‬െ ͵ξ͵ǡ\u0003\u0003ܽǡ\u0003ܾ\u0003\u0003‫\u0003\u0003݌‬\n       \u0003 Ǥ\u0003\u0003\n       \u0003\n       \u001a\u0003\u0003\u0003\u0003\u0003‫݌‬ǫ\u0003\n       \u0003\n\u0003      \u0003\n\u0003      \u0004\u0003 െͳʹξ͵\u0003\n\u0003      \u0003\n       \u0005\u0003 െ͸ξ͵\u0003\n\u0003      \u0003\n       \u0006\u0003 െͶξ͵\u0003\n\u0003      \u0003\n       \u0007\u0003 െξ͵\u0003\n\u0003      \u0003\n       \b\u0003 ξ͵\u0003\n\u0003      \u0003\n          \u0003 Ͷξ͵\u0003\n\u0003      \u0003\n          \u0003 ͸ξ͵\u0003\n     \u0003 \u0003 \u0003 ͳʹξ͵\u0003"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "ሺܽ‫ ݔ‬൅ ܾሻଷ 8‫ ݔ‬ଷ െ ‫ ݔ݌‬ଶ ൅ 18‫ ݔ‬െ 3ξ3ǡܽǡܾ‫݌‬\n        Ǥ\n       \n       ‫݌‬ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    },
+    {
+      "label": "F",
+      "rawText": "[visual option F; transcription required]"
+    },
+    {
+      "label": "G",
+      "rawText": "[visual option G; transcription required]"
+    },
+    {
+      "label": "H",
+      "rawText": "[visual option H; transcription required]"
+    }
+  ],
+  "correctAnswer": "H",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We expand (ax + b)3 and compare with the given expansion.\n\n                                                                             √\n              (ax + b)3 = a3 x3 + 3a2 bx2 + 3ab2 x + b3 = 8x3 − px2 + 18x − 3 3.\n\nSo we must have:\n\n                                          a3 = 8\n                                        3a2 b = −p\n                                        3ab2 = 18\n                                                 √\n                                          b3 = −3 3\n                                                                  √\nThe final equation can be rewritten as b3 = −3 2 , so b = −3 2 = − 3.\n                                               3             1\n\n\n\nThen the third equation becomes 3a × 3 = 18, so a = 2.\n                                              √                  √\nFinally, the second equation gives 3 × 22 × (− 3) = −p, so p = 12 3 and the answer is H.\n\n\n\n\n                                              4\n                                                                                   © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required",
+      "option-count-review",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

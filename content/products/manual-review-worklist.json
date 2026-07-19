@@ -1,0 +1,1825 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": "1.0.0",
+  "catalogRevision": "2026-07-19.33",
+  "sourceReleasePolicyVersion": "1.0.0",
+  "generatedAt": "2026-07-19",
+  "instructions": [
+    "This file is generated; do not mark an item passed here.",
+    "Complete the stated review, then update the owning feature manifest with status, reviewer, reviewerRole, checkedAt and evidence.",
+    "Rebuild release-readiness first, then rebuild this worklist; stale or missing coverage fails verification."
+  ],
+  "summary": {
+    "pendingReviewItems": 68,
+    "affectedPublicProducts": 40,
+    "academicContentItems": 25,
+    "studentCalibrationItems": 12,
+    "deviceAccessibilityItems": 31
+  },
+  "campaigns": [
+    {
+      "id": "academic-content",
+      "label": "独立学科、双语与权利审核",
+      "ownerRole": "content-review-lead",
+      "exitCriteria": [
+        "由未参与原始编写的适任审核人完成逐项检查。",
+        "证据记录覆盖答案、措辞、术语、相似度或专业判断中适用的部分。",
+        "对应 feature manifest 写入 reviewer、reviewerRole、checkedAt 和最终 evidence 后才能改为 passed。"
+      ],
+      "items": [
+        {
+          "reviewKey": "esat-biology-full-mock/independent-biology-and-language-review",
+          "campaignId": "academic-content",
+          "featureId": "esat-biology-full-mock",
+          "featureManifest": "verification/features/esat-biology-full-mock.yaml",
+          "manualCheckId": "independent-biology-and-language-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate Biology teacher and bilingual reviewer must verify all 27 prompts, distractors, answer keys, terminology and difficulty progression.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "esat-biology-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-biology-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:9ec2ce223b0aabde13a91aea08617337696f9c2c4f9a85c05637250e7b99d960",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-chemistry-full-mock/independent-chemistry-and-language-review",
+          "campaignId": "academic-content",
+          "featureId": "esat-chemistry-full-mock",
+          "featureManifest": "verification/features/esat-chemistry-full-mock.yaml",
+          "manualCheckId": "independent-chemistry-and-language-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate Chemistry teacher and bilingual reviewer must verify all 27 prompts, distractors, answer keys, units, terminology and difficulty progression.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "esat-chemistry-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-chemistry-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:00d2a529e009219f4ae049aa4fbb2f6e6d75e2a109e270175bc572a77f3786f9",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-mathematics-1-full-mock/independent-mathematics-and-language-review",
+          "campaignId": "academic-content",
+          "featureId": "esat-mathematics-1-full-mock",
+          "featureManifest": "verification/features/esat-mathematics-1-full-mock.yaml",
+          "manualCheckId": "independent-mathematics-and-language-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate Mathematics 1 teacher and bilingual reviewer must verify all 27 prompts, distractors, answer keys, terminology and difficulty progression.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "esat-mathematics-1-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-mathematics-1-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:732d929516e477dfe74cce7dd6728f665d840eb2c2c8c81060bae0267904baf8",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-mathematics-2-full-mock/independent-mathematics-and-language-review",
+          "campaignId": "academic-content",
+          "featureId": "esat-mathematics-2-full-mock",
+          "featureManifest": "verification/features/esat-mathematics-2-full-mock.yaml",
+          "manualCheckId": "independent-mathematics-and-language-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate Mathematics 2 teacher and bilingual reviewer must verify all 27 prompts, distractors, answer keys, terminology and difficulty progression.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "esat-mathematics-2-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-mathematics-2-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:216df975e5eae86ada46cf5d3fad31457d5777c3bf3bc80d72120153e998816f",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-mathematics-review-notes/independent-mathematics-bilingual-and-similarity-review",
+          "campaignId": "academic-content",
+          "featureId": "esat-mathematics-review-notes",
+          "featureManifest": "verification/features/esat-mathematics-review-notes.yaml",
+          "manualCheckId": "independent-mathematics-bilingual-and-similarity-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate mathematics teacher, bilingual terminology reviewer and rights/similarity reviewer must approve the complete revision before final publication status.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "esat-mathematics-review-notes-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/exams/esat/notes/mathematics"
+            }
+          ],
+          "sourceFingerprint": "sha256:a249ea771bc6dd8eb8149a8feef1d2c92c35d370a0d37106d1b6ed292295bb44",
+          "sourceArtifactCount": 14
+        },
+        {
+          "reviewKey": "esat-module-starters/independent-subject-review",
+          "campaignId": "academic-content",
+          "featureId": "esat-module-starters",
+          "featureManifest": "verification/features/esat-module-starters.yaml",
+          "manualCheckId": "independent-subject-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Independent Mathematics, Physics, Chemistry and Biology teachers must verify wording, distractors, difficulty spread and answer keys before final publication.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "esat-module-starters-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/exams/esat/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:8faa41718990de682abcb9c05eaec44a2c28e10a9657a3614cf2ecd04a375cb6",
+          "sourceArtifactCount": 16
+        },
+        {
+          "reviewKey": "esat-physics-full-mock/independent-physics-and-language-review",
+          "campaignId": "academic-content",
+          "featureId": "esat-physics-full-mock",
+          "featureManifest": "verification/features/esat-physics-full-mock.yaml",
+          "manualCheckId": "independent-physics-and-language-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate Physics teacher and bilingual reviewer must verify all 27 prompts, distractors, answer keys, units, terminology and difficulty progression.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "esat-physics-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-physics-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:6fe739c60fd670d359a959c464562eb2d2e7d8ddb3704c5cbe4bc620881d07a9",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-science-review-notes/independent-three-subject-review",
+          "campaignId": "academic-content",
+          "featureId": "esat-science-review-notes",
+          "featureManifest": "verification/features/esat-science-review-notes.yaml",
+          "manualCheckId": "independent-three-subject-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Separate Physics, Chemistry and Biology teachers plus a bilingual and rights/similarity reviewer must approve the full revision before final publication status.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "esat-science-review-notes-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/exams/esat/notes/sciences"
+            }
+          ],
+          "sourceFingerprint": "sha256:8fc50cb37c24579edf7712865c058f44dc6e305a955650c11279e2d4dd66b281",
+          "sourceArtifactCount": 11
+        },
+        {
+          "reviewKey": "lnat-review-notes/independent-reading-writing-bilingual-and-rights-review",
+          "campaignId": "academic-content",
+          "featureId": "lnat-review-notes",
+          "featureManifest": "verification/features/lnat-review-notes.yaml",
+          "manualCheckId": "independent-reading-writing-bilingual-and-rights-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate LNAT reading teacher, writing teacher, bilingual reviewer and rights/similarity reviewer must approve the complete revision before final publication.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "lnat-review-notes-v1",
+              "examId": "lnat",
+              "version": "0.1.0",
+              "route": "/exams/lnat/notes/foundations"
+            }
+          ],
+          "sourceFingerprint": "sha256:287c212452c54567cf1c66e8b793d68878f8ab1706001b0762949a26654437ad",
+          "sourceArtifactCount": 12
+        },
+        {
+          "reviewKey": "lnat-section-a-full-mock/independent-lnat-full-mock-review",
+          "campaignId": "academic-content",
+          "featureId": "lnat-section-a-full-mock",
+          "featureManifest": "verification/features/lnat-section-a-full-mock.yaml",
+          "manualCheckId": "independent-lnat-full-mock-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate LNAT teacher and English-language reviewer must verify every passage, construct, distractor, answer key and difficulty spread.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "lnat-section-a-full-mock-v1",
+              "examId": "lnat",
+              "version": "0.1.0",
+              "route": "/practice/lnat-section-a-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:381739baec95a9a5c2802d8c4947b421f2e9f27c6398909ce256a38d6d3317fb",
+          "sourceArtifactCount": 7
+        },
+        {
+          "reviewKey": "lnat-section-a-starter/independent-lnat-review",
+          "campaignId": "academic-content",
+          "featureId": "lnat-section-a-starter",
+          "featureManifest": "verification/features/lnat-section-a-starter.yaml",
+          "manualCheckId": "independent-lnat-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate LNAT teacher must verify passage quality, construct coverage, distractors, answer keys and difficulty spread.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "lnat-section-a-starter-v1",
+              "examId": "lnat",
+              "version": "0.1.0",
+              "route": "/exams/lnat/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:f6d412f90a22b58a4743e6f49cb866226290bc1f05022a8c2898af8c543b5837",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "tara-full-reasoning-mocks/independent-reasoning-and-language-review",
+          "campaignId": "academic-content",
+          "featureId": "tara-full-reasoning-mocks",
+          "featureManifest": "verification/features/tara-full-reasoning-mocks.yaml",
+          "manualCheckId": "independent-reasoning-and-language-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate TARA/TSA reasoning teacher and bilingual reviewer must verify all 44 prompts, distractors, answer keys, official family labels and difficulty progression.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "tara-critical-thinking-full-mock-v1",
+              "examId": "tara",
+              "version": "0.1.0",
+              "route": "/practice/tara-critical-thinking-full-mock-v1"
+            },
+            {
+              "productId": "tara-problem-solving-full-mock-v1",
+              "examId": "tara",
+              "version": "0.1.0",
+              "route": "/practice/tara-problem-solving-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:33677679356ec900dd9024fb31c3a280b5837f0d3bcaaca0319b018d5876f7cd",
+          "sourceArtifactCount": 9
+        },
+        {
+          "reviewKey": "tara-lnat-writing-practice/independent-writing-review",
+          "campaignId": "academic-content",
+          "featureId": "tara-lnat-writing-practice",
+          "featureManifest": "verification/features/tara-lnat-writing-practice.yaml",
+          "manualCheckId": "independent-writing-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate TARA/LNAT writing teacher must review prompt fairness, construct coverage, language and difficulty.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "lnat-section-b-writing-v1",
+              "examId": "lnat",
+              "version": "0.1.0",
+              "route": "/exams/lnat/past-papers"
+            },
+            {
+              "productId": "tara-writing-task-v1",
+              "examId": "tara",
+              "version": "0.1.0",
+              "route": "/exams/tara/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:1397c606d79cce39e79e78b6e916b4c48784c31c1b7ba9a66c848e8d5e685554",
+          "sourceArtifactCount": 14
+        },
+        {
+          "reviewKey": "tara-reasoning-starter/independent-reasoning-review",
+          "campaignId": "academic-content",
+          "featureId": "tara-reasoning-starter",
+          "featureManifest": "verification/features/tara-reasoning-starter.yaml",
+          "manualCheckId": "independent-reasoning-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate TARA/TSA reasoning teacher must verify wording, distractors, taxonomy, answer keys and difficulty spread.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "tara-reasoning-starter-v1",
+              "examId": "tara",
+              "version": "0.1.0",
+              "route": "/exams/tara/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:aaa16ce73bee70d5445a3d79c5a0039d59ce7c2573d246d46fca964aa587deee",
+          "sourceArtifactCount": 12
+        },
+        {
+          "reviewKey": "tara-review-notes/independent-reasoning-writing-and-bilingual-review",
+          "campaignId": "academic-content",
+          "featureId": "tara-review-notes",
+          "featureManifest": "verification/features/tara-review-notes.yaml",
+          "manualCheckId": "independent-reasoning-writing-and-bilingual-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate reasoning teacher, writing teacher, bilingual reviewer and rights/similarity reviewer must approve the complete revision before final publication.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "tara-review-notes-v1",
+              "examId": "tara",
+              "version": "0.1.0",
+              "route": "/exams/tara/notes/foundations"
+            }
+          ],
+          "sourceFingerprint": "sha256:6980954e7ad59e4da8ba5a69499f24b6eed9ee43f42f1d86971f29c89f053435",
+          "sourceArtifactCount": 12
+        },
+        {
+          "reviewKey": "tmua-foundations-notes/independent-subject-and-similarity-review",
+          "campaignId": "academic-content",
+          "featureId": "tmua-foundations-notes",
+          "featureManifest": "verification/features/tmua-foundations-notes.yaml",
+          "manualCheckId": "independent-subject-and-similarity-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate mathematics teacher and rights/similarity reviewer must approve the complete revision before final publication status.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "tmua-foundations-notes-v2",
+              "examId": "tmua",
+              "version": "0.2.0",
+              "route": "/exams/tmua/notes/foundations"
+            }
+          ],
+          "sourceFingerprint": "sha256:cb478e7d630d0988e2dc6188d40094b07a176de5a0d6d015cbed17f4d30af0d1",
+          "sourceArtifactCount": 12
+        },
+        {
+          "reviewKey": "tmua-original-diagnostic/independent-mathematics-review",
+          "campaignId": "academic-content",
+          "featureId": "tmua-original-diagnostic",
+          "featureManifest": "verification/features/tmua-original-diagnostic.yaml",
+          "manualCheckId": "independent-mathematics-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "由未参与命题的 TMUA 数学教师逐题核对答案、措辞、干扰项、难度分布与无计算器可行性。",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "tmua-diagnostic-v1",
+              "examId": "tmua",
+              "version": "0.1.0",
+              "route": "/exams/tmua/diagnostic"
+            }
+          ],
+          "sourceFingerprint": "sha256:cd5a371a693278bf12909a9bb4631959a022bf589da7947dc89de6de8e7a341b",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "ucat-decision-making-full-mock/independent-ucat-decision-full-mock-review",
+          "campaignId": "academic-content",
+          "featureId": "ucat-decision-making-full-mock",
+          "featureManifest": "verification/features/ucat-decision-making-full-mock.yaml",
+          "manualCheckId": "independent-ucat-decision-full-mock-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate UCAT Decision Making reviewer must verify every rule set, statistical calculation, syllogism, argument, distractor, answer key and difficulty spread.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "ucat-decision-making-full-mock-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/practice/ucat-decision-making-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:7369de17120506e4f28875334244c733a7a18ea9655187b7b108b93f00ab2d43",
+          "sourceArtifactCount": 6
+        },
+        {
+          "reviewKey": "ucat-quantitative-reasoning-full-mock/independent-ucat-quantitative-full-mock-review",
+          "campaignId": "academic-content",
+          "featureId": "ucat-quantitative-reasoning-full-mock",
+          "featureManifest": "verification/features/ucat-quantitative-reasoning-full-mock.yaml",
+          "manualCheckId": "independent-ucat-quantitative-full-mock-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate UCAT Quantitative Reasoning reviewer must verify every calculation, unit, rounding rule, distractor, data presentation and difficulty spread.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "ucat-quantitative-reasoning-full-mock-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/practice/ucat-quantitative-reasoning-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:f2699929aa3cb50bed11d9bff2e20bca6fd3f64828854d0a9ac76dd79a7d9cae",
+          "sourceArtifactCount": 6
+        },
+        {
+          "reviewKey": "ucat-quantitative-reasoning-starter/independent-quantitative-review",
+          "campaignId": "academic-content",
+          "featureId": "ucat-quantitative-reasoning-starter",
+          "featureManifest": "verification/features/ucat-quantitative-reasoning-starter.yaml",
+          "manualCheckId": "independent-quantitative-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate UCAT quantitative teacher must verify every calculation, distractor, data presentation, pace and difficulty spread.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "ucat-quantitative-reasoning-starter-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/exams/ucat/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:3da17cd5d4e767c6fb3936684a95b42b347f290f4ef8808ffcdf1f6754173333",
+          "sourceArtifactCount": 11
+        },
+        {
+          "reviewKey": "ucat-review-notes/independent-ucat-medical-bilingual-and-rights-review",
+          "campaignId": "academic-content",
+          "featureId": "ucat-review-notes",
+          "featureManifest": "verification/features/ucat-review-notes.yaml",
+          "manualCheckId": "independent-ucat-medical-bilingual-and-rights-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate UCAT teacher, UK medical professional, bilingual reviewer and rights/similarity reviewer must approve the complete revision before final publication.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "ucat-review-notes-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/exams/ucat/notes/foundations"
+            }
+          ],
+          "sourceFingerprint": "sha256:62daffda1c4d25dd9f4cfa699cda62fc322d454636558695a6faad816ac8e5f6",
+          "sourceArtifactCount": 12
+        },
+        {
+          "reviewKey": "ucat-situational-judgement-full-mock/independent-ucat-situational-professional-review",
+          "campaignId": "academic-content",
+          "featureId": "ucat-situational-judgement-full-mock",
+          "featureManifest": "verification/features/ucat-situational-judgement-full-mock.yaml",
+          "manualCheckId": "independent-ucat-situational-professional-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Separate UK medical and dental professionalism reviewers must verify every scenario, response distinction, answer key, cultural-language assumption and scope boundary.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "ucat-situational-judgement-full-mock-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/practice/ucat-situational-judgement-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:557ff18014fd4a6dfa53659179f635954431b2fffd0706e85df0477c2cc57aa6",
+          "sourceArtifactCount": 7
+        },
+        {
+          "reviewKey": "ucat-specialist-starters/independent-specialist-review",
+          "campaignId": "academic-content",
+          "featureId": "ucat-specialist-starters",
+          "featureManifest": "verification/features/ucat-specialist-starters.yaml",
+          "manualCheckId": "independent-specialist-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Separate UCAT subject reviewers must verify every answer key, scoring case, professional judgement, distractor and time expectation.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "ucat-decision-making-starter-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/exams/ucat/past-papers"
+            },
+            {
+              "productId": "ucat-situational-judgement-starter-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/exams/ucat/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:5435584cdb56c18487b3a2807e5ee0b443c082135e3dbdbdde8ee07484901d05",
+          "sourceArtifactCount": 18
+        },
+        {
+          "reviewKey": "ucat-verbal-reasoning-full-mock/independent-ucat-vr-full-mock-review",
+          "campaignId": "academic-content",
+          "featureId": "ucat-verbal-reasoning-full-mock",
+          "featureManifest": "verification/features/ucat-verbal-reasoning-full-mock.yaml",
+          "manualCheckId": "independent-ucat-vr-full-mock-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate UCAT verbal-reasoning and English-language reviewer must verify every passage, evidence boundary, distractor, answer key and difficulty spread.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "ucat-verbal-reasoning-full-mock-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/practice/ucat-verbal-reasoning-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:47aa8d11867b7f2f7314d9c3ca8d35f6ca67a994637a38ca2d6a607018f3292c",
+          "sourceArtifactCount": 6
+        },
+        {
+          "reviewKey": "ucat-verbal-reasoning-starter/independent-ucat-review",
+          "campaignId": "academic-content",
+          "featureId": "ucat-verbal-reasoning-starter",
+          "featureManifest": "verification/features/ucat-verbal-reasoning-starter.yaml",
+          "manualCheckId": "independent-ucat-review",
+          "status": "pending",
+          "ownerRole": "content-review-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "A separate UCAT teacher must verify passage style, answer keys, distractors, pace and difficulty spread.",
+          "viewports": [
+            "content"
+          ],
+          "products": [
+            {
+              "productId": "ucat-verbal-reasoning-starter-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/exams/ucat/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:70ab1f23a9d0d769298d345d22fc92a9dbc639c1b8e321fd2fbb8e01174c1ad3",
+          "sourceArtifactCount": 8
+        }
+      ]
+    },
+    {
+      "id": "student-calibration",
+      "label": "真实学生理解度与用时标定",
+      "ownerRole": "student-research-lead",
+      "exitCriteria": [
+        "记录样本课程体系、人数、设备和任务版本，不保存无关个人资料。",
+        "报告完成时间、理解障碍和限制；样本不足时保持事实型结果，不发布 Benchmark。",
+        "对应 feature manifest 写入 reviewer、reviewerRole、checkedAt 和证据摘要后才能改为 passed。"
+      ],
+      "items": [
+        {
+          "reviewKey": "esat-biology-full-mock/student-timing-calibration",
+          "campaignId": "student-calibration",
+          "featureId": "esat-biology-full-mock",
+          "featureManifest": "verification/features/esat-biology-full-mock.yaml",
+          "manualCheckId": "student-timing-calibration",
+          "status": "pending",
+          "ownerRole": "student-research-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Run the complete mock with representative A-Level, IB and AP students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.",
+          "viewports": [
+            "student-session"
+          ],
+          "products": [
+            {
+              "productId": "esat-biology-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-biology-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:85165a2977e16c50ac422f1fd822cf59d739c3b8f2515cdeaa8dba16aa20cdab",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-chemistry-full-mock/student-timing-calibration",
+          "campaignId": "student-calibration",
+          "featureId": "esat-chemistry-full-mock",
+          "featureManifest": "verification/features/esat-chemistry-full-mock.yaml",
+          "manualCheckId": "student-timing-calibration",
+          "status": "pending",
+          "ownerRole": "student-research-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Run the complete mock with representative A-Level, IB and AP students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.",
+          "viewports": [
+            "student-session"
+          ],
+          "products": [
+            {
+              "productId": "esat-chemistry-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-chemistry-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:df9bb8c0f5a1e98a44f5f30edc01c78a30d9299768e1169bb646175c60728a90",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-mathematics-1-full-mock/student-timing-calibration",
+          "campaignId": "student-calibration",
+          "featureId": "esat-mathematics-1-full-mock",
+          "featureManifest": "verification/features/esat-mathematics-1-full-mock.yaml",
+          "manualCheckId": "student-timing-calibration",
+          "status": "pending",
+          "ownerRole": "student-research-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Run the complete mock with representative A-Level, IB and AP students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.",
+          "viewports": [
+            "student-session"
+          ],
+          "products": [
+            {
+              "productId": "esat-mathematics-1-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-mathematics-1-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:529ba7ac6b03b995a0ea610e2435e2f5fa097e1ba183865d35af25eca7e86aff",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-mathematics-2-full-mock/student-timing-calibration",
+          "campaignId": "student-calibration",
+          "featureId": "esat-mathematics-2-full-mock",
+          "featureManifest": "verification/features/esat-mathematics-2-full-mock.yaml",
+          "manualCheckId": "student-timing-calibration",
+          "status": "pending",
+          "ownerRole": "student-research-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Run the complete mock with representative A-Level, IB and AP students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.",
+          "viewports": [
+            "student-session"
+          ],
+          "products": [
+            {
+              "productId": "esat-mathematics-2-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-mathematics-2-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:9ec4e26c1b2f3a15e5e5a3772b2842265793190882a5f1922f169727d59d6bf9",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-mathematics-review-notes/student-comprehension-and-device-review",
+          "campaignId": "student-calibration",
+          "featureId": "esat-mathematics-review-notes",
+          "featureManifest": "verification/features/esat-mathematics-review-notes.yaml",
+          "manualCheckId": "student-comprehension-and-device-review",
+          "status": "pending",
+          "ownerRole": "student-research-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Automated route, DOM, type, build and Chromium desktop/tablet/phone overflow checks pass; representative A-Level, IB and AP students plus real-device reviewers still need to validate comprehension and layout.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "esat-mathematics-review-notes-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/exams/esat/notes/mathematics"
+            }
+          ],
+          "sourceFingerprint": "sha256:54bf7b3c9eef25fd6f6f60ecf4684b7a7693097df16f393fdcc33878ec0eb450",
+          "sourceArtifactCount": 14
+        },
+        {
+          "reviewKey": "esat-physics-full-mock/student-timing-calibration",
+          "campaignId": "student-calibration",
+          "featureId": "esat-physics-full-mock",
+          "featureManifest": "verification/features/esat-physics-full-mock.yaml",
+          "manualCheckId": "student-timing-calibration",
+          "status": "pending",
+          "ownerRole": "student-research-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Run the complete mock with representative A-Level, IB and AP students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.",
+          "viewports": [
+            "student-session"
+          ],
+          "products": [
+            {
+              "productId": "esat-physics-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-physics-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:57da393a540e0bf17a4ae8da548a5ae17d301a373adf9062157560466af73f80",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-science-review-notes/student-comprehension-and-real-device-review",
+          "campaignId": "student-calibration",
+          "featureId": "esat-science-review-notes",
+          "featureManifest": "verification/features/esat-science-review-notes.yaml",
+          "manualCheckId": "student-comprehension-and-real-device-review",
+          "status": "pending",
+          "ownerRole": "student-research-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Automated DOM, type, build and Chromium desktop/tablet/phone checks pass; representative A-Level, IB and AP students and real-device reviewers must still validate comprehension and layout.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "esat-science-review-notes-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/exams/esat/notes/sciences"
+            }
+          ],
+          "sourceFingerprint": "sha256:93636b639da72292352b8ba69995c06198d3d7c0f086bd2dbc46e1c2120d70de",
+          "sourceArtifactCount": 11
+        },
+        {
+          "reviewKey": "lnat-review-notes/student-comprehension-and-real-device-review",
+          "campaignId": "student-calibration",
+          "featureId": "lnat-review-notes",
+          "featureManifest": "verification/features/lnat-review-notes.yaml",
+          "manualCheckId": "student-comprehension-and-real-device-review",
+          "status": "pending",
+          "ownerRole": "student-research-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Automated route, DOM, type, build and Chromium viewport checks run independently; representative students and real-device reviewers must still validate comprehension and layout.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "lnat-review-notes-v1",
+              "examId": "lnat",
+              "version": "0.1.0",
+              "route": "/exams/lnat/notes/foundations"
+            }
+          ],
+          "sourceFingerprint": "sha256:557948459a7969145a79cc3a30b9eb2e2eab4772704465572e4a33acdccd9a00",
+          "sourceArtifactCount": 12
+        },
+        {
+          "reviewKey": "tara-full-reasoning-mocks/student-timing-calibration",
+          "campaignId": "student-calibration",
+          "featureId": "tara-full-reasoning-mocks",
+          "featureManifest": "verification/features/tara-full-reasoning-mocks.yaml",
+          "manualCheckId": "student-timing-calibration",
+          "status": "pending",
+          "ownerRole": "student-research-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Run both complete modules with representative students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.",
+          "viewports": [
+            "student-session"
+          ],
+          "products": [
+            {
+              "productId": "tara-critical-thinking-full-mock-v1",
+              "examId": "tara",
+              "version": "0.1.0",
+              "route": "/practice/tara-critical-thinking-full-mock-v1"
+            },
+            {
+              "productId": "tara-problem-solving-full-mock-v1",
+              "examId": "tara",
+              "version": "0.1.0",
+              "route": "/practice/tara-problem-solving-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:a8047fa8feddba6e5ffe01be57a0e1270dd087e92c0bf6785a9edd5da62abf12",
+          "sourceArtifactCount": 9
+        },
+        {
+          "reviewKey": "tara-review-notes/student-comprehension-and-real-device-review",
+          "campaignId": "student-calibration",
+          "featureId": "tara-review-notes",
+          "featureManifest": "verification/features/tara-review-notes.yaml",
+          "manualCheckId": "student-comprehension-and-real-device-review",
+          "status": "pending",
+          "ownerRole": "student-research-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Automated route, DOM, type, build and Chromium viewport checks pass; representative students and real-device reviewers still need to validate comprehension and layout.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "tara-review-notes-v1",
+              "examId": "tara",
+              "version": "0.1.0",
+              "route": "/exams/tara/notes/foundations"
+            }
+          ],
+          "sourceFingerprint": "sha256:75cd174edb5c21c22b435d5ec20ab810b2fc52fe850bb2861f42c03cf7246569",
+          "sourceArtifactCount": 12
+        },
+        {
+          "reviewKey": "tmua-original-diagnostic/real-student-timing-calibration",
+          "campaignId": "student-calibration",
+          "featureId": "tmua-original-diagnostic",
+          "featureManifest": "verification/features/tmua-original-diagnostic.yaml",
+          "manualCheckId": "real-student-timing-calibration",
+          "status": "pending",
+          "ownerRole": "student-research-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "由封闭学生样本完成并检查中位完成时间、弃题点和题目区分度；样本不足时不发布 Benchmark。",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "tmua-diagnostic-v1",
+              "examId": "tmua",
+              "version": "0.1.0",
+              "route": "/exams/tmua/diagnostic"
+            }
+          ],
+          "sourceFingerprint": "sha256:7c758e1b4b5bca9be614025e28d4a52ce22a66e3a5441eaa45a212b8bdcd293d",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "ucat-review-notes/student-comprehension-and-real-device-review",
+          "campaignId": "student-calibration",
+          "featureId": "ucat-review-notes",
+          "featureManifest": "verification/features/ucat-review-notes.yaml",
+          "manualCheckId": "student-comprehension-and-real-device-review",
+          "status": "pending",
+          "ownerRole": "student-research-lead",
+          "independenceRequired": true,
+          "evidenceRequirement": "Automated route, DOM, type, build and Chromium viewport checks run independently; representative students and real-device reviewers must still validate comprehension and layout.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "ucat-review-notes-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/exams/ucat/notes/foundations"
+            }
+          ],
+          "sourceFingerprint": "sha256:30bb5e4bc92608d0eb2ea9fb43113a4d945b5a7162851c9b786fcc1c4d6ebf47",
+          "sourceArtifactCount": 12
+        }
+      ]
+    },
+    {
+      "id": "device-accessibility",
+      "label": "真机、响应式与无障碍验收",
+      "ownerRole": "interface-qa-lead",
+      "exitCriteria": [
+        "按工作项列出的全部路由和视口完成真实浏览器或设备矩阵。",
+        "检查横向溢出、键盘、触控、可读性、公式/表格/长文和 reduced-motion 中适用的部分。",
+        "保存设备矩阵、问题单或审核记录；自动 E2E 不能替代本项人工签字。"
+      ],
+      "items": [
+        {
+          "reviewKey": "esat-biology-full-mock/real-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "esat-biology-full-mock",
+          "featureManifest": "verification/features/esat-biology-full-mock.yaml",
+          "manualCheckId": "real-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Verify question navigation and scientific notation rendering on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "esat-biology-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-biology-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:e66076cc475f9fe5974ce9ab43e92692548dba250f8c99d5bf561c47c0228167",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-chemistry-full-mock/real-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "esat-chemistry-full-mock",
+          "featureManifest": "verification/features/esat-chemistry-full-mock.yaml",
+          "manualCheckId": "real-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Verify question navigation, units and KaTeX rendering on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "esat-chemistry-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-chemistry-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:812c0f53e6f615b4af71dc70380ebadb1ae4b61dcab54bdf220bbc590151499b",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-course-module-planner/esat-planner-responsive-review",
+          "campaignId": "device-accessibility",
+          "featureId": "esat-course-module-planner",
+          "featureManifest": "verification/features/esat-course-module-planner.yaml",
+          "manualCheckId": "esat-planner-responsive-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Review course selection, optional combinations and conflict states on desktop, tablet and phone.",
+          "viewports": [
+            "1440x900",
+            "390x844",
+            "768x1024"
+          ],
+          "products": [
+            {
+              "productId": "esat-course-coverage",
+              "examId": "esat",
+              "version": "0.8.0",
+              "route": "/exams/esat/profile"
+            },
+            {
+              "productId": "esat-course-module-planner",
+              "examId": "esat",
+              "version": "1.0.0",
+              "route": "/exams/esat"
+            }
+          ],
+          "sourceFingerprint": "sha256:441eec0aa002fb0cc7293be3380f767ce60b18fc924d0eaeb84ce621f65226bc",
+          "sourceArtifactCount": 21
+        },
+        {
+          "reviewKey": "esat-mathematics-1-full-mock/real-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "esat-mathematics-1-full-mock",
+          "featureManifest": "verification/features/esat-mathematics-1-full-mock.yaml",
+          "manualCheckId": "real-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Verify question navigation, tables, KaTeX and submission on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "esat-mathematics-1-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-mathematics-1-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:19dd0259e84bd3967e9d6418c60f8898024c3ba4d63258cdfaf434c98472c2a2",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-mathematics-2-full-mock/real-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "esat-mathematics-2-full-mock",
+          "featureManifest": "verification/features/esat-mathematics-2-full-mock.yaml",
+          "manualCheckId": "real-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Verify question navigation and KaTeX rendering on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "esat-mathematics-2-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-mathematics-2-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:3a5cb9fa7a45d95301c5ecad52050ae0e9399d8c110b68d8325213c84a2f6458",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "esat-module-starters/browser-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "esat-module-starters",
+          "featureManifest": "verification/features/esat-module-starters.yaml",
+          "manualCheckId": "browser-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Automated component, type, production-build and shared-kernel tests pass; desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "esat-module-starters-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/exams/esat/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:6d80a5ae8b59b97f909972f11ae5d0d4e2e9812e54e5e1961fc42f62adf0b0fb",
+          "sourceArtifactCount": 16
+        },
+        {
+          "reviewKey": "esat-physics-full-mock/real-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "esat-physics-full-mock",
+          "featureManifest": "verification/features/esat-physics-full-mock.yaml",
+          "manualCheckId": "real-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Verify question navigation, units and KaTeX rendering on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "esat-physics-full-mock-v1",
+              "examId": "esat",
+              "version": "0.1.0",
+              "route": "/practice/esat-physics-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:b2a6f7cfb8318fc9615d4f3eddf10f34937b64004e344fbf0cb5c14151ac2798",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "exam-aware-profile-first-practice/real-device-accessibility-uat",
+          "campaignId": "device-accessibility",
+          "featureId": "exam-aware-profile-first-practice",
+          "featureManifest": "verification/features/exam-aware-profile-first-practice.yaml",
+          "manualCheckId": "real-device-accessibility-uat",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Complete the same profile-to-result journey on real iPhone Safari, iPad Safari and desktop browsers, including keyboard-only, screen-reader and reduced-motion checks.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "lnat-starting-point-v1",
+              "examId": "lnat",
+              "version": "1.0.0",
+              "route": "/exams/lnat/preparation"
+            },
+            {
+              "productId": "tara-starting-point-v1",
+              "examId": "tara",
+              "version": "1.0.0",
+              "route": "/exams/tara/preparation"
+            },
+            {
+              "productId": "ucat-starting-point-v1",
+              "examId": "ucat",
+              "version": "1.0.0",
+              "route": "/exams/ucat/preparation"
+            }
+          ],
+          "sourceFingerprint": "sha256:f448b13fb16b22ca7d55bcc73c8719b8064af3ae231c818440adb34e9cb63686",
+          "sourceArtifactCount": 20
+        },
+        {
+          "reviewKey": "lnat-section-a-full-mock/full-mock-browser-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "lnat-section-a-full-mock",
+          "featureManifest": "verification/features/lnat-section-a-full-mock.yaml",
+          "manualCheckId": "full-mock-browser-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Desktop, tablet and phone review must confirm passage navigation, option selection, autosave and no horizontal overflow across all 42 questions.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "lnat-section-a-full-mock-v1",
+              "examId": "lnat",
+              "version": "0.1.0",
+              "route": "/practice/lnat-section-a-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:79ea7601e959c9bd6ddffba0968901a5c00cd0ad23f01e4856cc6b3d04981eac",
+          "sourceArtifactCount": 7
+        },
+        {
+          "reviewKey": "lnat-section-a-full-mock/full-mock-student-timing-pilot",
+          "campaignId": "device-accessibility",
+          "featureId": "lnat-section-a-full-mock",
+          "featureManifest": "verification/features/lnat-section-a-full-mock.yaml",
+          "manualCheckId": "full-mock-student-timing-pilot",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Real students must complete the 95-minute session so passage load, pacing and interpretation can be calibrated without claiming official equivalence.",
+          "viewports": [
+            "student"
+          ],
+          "products": [
+            {
+              "productId": "lnat-section-a-full-mock-v1",
+              "examId": "lnat",
+              "version": "0.1.0",
+              "route": "/practice/lnat-section-a-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:0d2e504338a2ae31758c6bd5502c558d2aee59638d101c06c7ab21e382956b6c",
+          "sourceArtifactCount": 7
+        },
+        {
+          "reviewKey": "lnat-section-a-starter/browser-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "lnat-section-a-starter",
+          "featureManifest": "verification/features/lnat-section-a-starter.yaml",
+          "manualCheckId": "browser-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Automated component, type and production-build checks pass; desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "lnat-section-a-starter-v1",
+              "examId": "lnat",
+              "version": "0.1.0",
+              "route": "/exams/lnat/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:508c8dda7ca724144d964f13ab75cfbf538a457789a087fbc4c6a3524575e55f",
+          "sourceArtifactCount": 10
+        },
+        {
+          "reviewKey": "multi-exam-official-guides/multi-exam-responsive-visual-review",
+          "campaignId": "device-accessibility",
+          "featureId": "multi-exam-official-guides",
+          "featureManifest": "verification/features/multi-exam-official-guides.yaml",
+          "manualCheckId": "multi-exam-responsive-visual-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Review the exam switcher, four contextual tabs, year cards and three official guide pages at desktop, tablet and phone sizes.",
+          "viewports": [
+            "1440x900",
+            "390x844",
+            "768x1024"
+          ],
+          "products": [
+            {
+              "productId": "lnat-exam-guide",
+              "examId": "lnat",
+              "version": "1.0.0",
+              "route": "/exams/lnat"
+            },
+            {
+              "productId": "tara-exam-guide",
+              "examId": "tara",
+              "version": "1.0.0",
+              "route": "/exams/tara"
+            },
+            {
+              "productId": "ucat-exam-guide",
+              "examId": "ucat",
+              "version": "1.0.0",
+              "route": "/exams/ucat"
+            }
+          ],
+          "sourceFingerprint": "sha256:89f6480b98cdaaa9f1e9514fb29df0321007cf65bf47fc18cc3a5a5b7f833e70",
+          "sourceArtifactCount": 13
+        },
+        {
+          "reviewKey": "tara-full-reasoning-mocks/real-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "tara-full-reasoning-mocks",
+          "featureManifest": "verification/features/tara-full-reasoning-mocks.yaml",
+          "manualCheckId": "real-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Verify long argument text, tables, five-option navigation and persistence on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "tara-critical-thinking-full-mock-v1",
+              "examId": "tara",
+              "version": "0.1.0",
+              "route": "/practice/tara-critical-thinking-full-mock-v1"
+            },
+            {
+              "productId": "tara-problem-solving-full-mock-v1",
+              "examId": "tara",
+              "version": "0.1.0",
+              "route": "/practice/tara-problem-solving-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:020f37e76590504a3e14ca5be0cdb50c40b155720b3b4259aee9e9717c3043a4",
+          "sourceArtifactCount": 9
+        },
+        {
+          "reviewKey": "tara-lnat-writing-practice/browser-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "tara-lnat-writing-practice",
+          "featureManifest": "verification/features/tara-lnat-writing-practice.yaml",
+          "manualCheckId": "browser-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Automated component, persistence, type and production-build checks pass; direct desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "lnat-section-b-writing-v1",
+              "examId": "lnat",
+              "version": "0.1.0",
+              "route": "/exams/lnat/past-papers"
+            },
+            {
+              "productId": "tara-writing-task-v1",
+              "examId": "tara",
+              "version": "0.1.0",
+              "route": "/exams/tara/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:7c5a5d7e829f19a13da533eb69f5bf04693171c89b5195964d10e3f8c55f5686",
+          "sourceArtifactCount": 14
+        },
+        {
+          "reviewKey": "tara-reasoning-starter/browser-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "tara-reasoning-starter",
+          "featureManifest": "verification/features/tara-reasoning-starter.yaml",
+          "manualCheckId": "browser-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Automated component, type and production-build checks pass; desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "tara-reasoning-starter-v1",
+              "examId": "tara",
+              "version": "0.1.0",
+              "route": "/exams/tara/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:60886f54009a69432af3b6fd04aa4ba1b1080e7de81d000e6eff41bd0c25ca50",
+          "sourceArtifactCount": 12
+        },
+        {
+          "reviewKey": "tmua-complete-online-paper-practice/native-and-migration-responsive-review",
+          "campaignId": "device-accessibility",
+          "featureId": "tmua-complete-online-paper-practice",
+          "featureManifest": "verification/features/tmua-complete-online-paper-practice.yaml",
+          "manualCheckId": "native-and-migration-responsive-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Review the 18 native papers at desktop, tablet and phone sizes in the browser.",
+          "viewports": [
+            "1440x900",
+            "390x844",
+            "768x1024"
+          ],
+          "products": [
+            {
+              "productId": "tmua-online-past-papers",
+              "examId": "tmua",
+              "version": "1.0.0",
+              "route": "/exams/tmua/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:3c40fb5c57daa353a731c132f9d8dfba5faf657330d03839e88a776e2f7d78ae",
+          "sourceArtifactCount": 23
+        },
+        {
+          "reviewKey": "tmua-foundations-notes/browser-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "tmua-foundations-notes",
+          "featureManifest": "verification/features/tmua-foundations-notes.yaml",
+          "manualCheckId": "browser-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Automated DOM, accessibility-name, type and production-build checks pass; the in-app browser runtime could not be attached in this run, so desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "tmua-foundations-notes-v2",
+              "examId": "tmua",
+              "version": "0.2.0",
+              "route": "/exams/tmua/notes/foundations"
+            }
+          ],
+          "sourceFingerprint": "sha256:06a46d4648428de4fed64f1a5233d8a6692641baf1e1679949edebdf2e00fa8e",
+          "sourceArtifactCount": 12
+        },
+        {
+          "reviewKey": "tmua-invite-bound-review-plan/responsive-entitled-plan-review",
+          "campaignId": "device-accessibility",
+          "featureId": "tmua-invite-bound-review-plan",
+          "featureManifest": "verification/features/tmua-invite-bound-review-plan.yaml",
+          "manualCheckId": "responsive-entitled-plan-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Record the review scope, findings and approval decision.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "tmua-six-week-review-plan-v1",
+              "examId": "tmua",
+              "version": "1.0.0",
+              "route": "/exams/tmua/notes/six-week-plan"
+            }
+          ],
+          "sourceFingerprint": "sha256:268f12ab43ecffe2a880082eeabb705e8590f4b4e2d2cb2a5837ae4ef3b38a98",
+          "sourceArtifactCount": 11
+        },
+        {
+          "reviewKey": "tmua-profile-first-staged-journey/staged-responsive-route-review",
+          "campaignId": "device-accessibility",
+          "featureId": "tmua-profile-first-staged-journey",
+          "featureManifest": "verification/features/tmua-profile-first-staged-journey.yaml",
+          "manualCheckId": "staged-responsive-route-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Review the new overview, profile, coverage, dashboard and module pages at desktop, tablet and phone sizes.",
+          "viewports": [
+            "1440x900",
+            "390x844",
+            "768x1024"
+          ],
+          "products": [
+            {
+              "productId": "tmua-course-coverage",
+              "examId": "tmua",
+              "version": "1.1.0",
+              "route": "/exams/tmua/profile"
+            }
+          ],
+          "sourceFingerprint": "sha256:c57f9f083d05e2b1a1ef2aadbb01784141c2eb5e6e241d45f2eea783a2d194d0",
+          "sourceArtifactCount": 26
+        },
+        {
+          "reviewKey": "tmua-specimen-p1-deep-review/responsive-result-review",
+          "campaignId": "device-accessibility",
+          "featureId": "tmua-specimen-p1-deep-review",
+          "featureManifest": "verification/features/tmua-specimen-p1-deep-review.yaml",
+          "manualCheckId": "responsive-result-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "在手机、iPad 和电脑上提交 Specimen Paper 1，检查锁定与解锁结果页、KaTeX 溢出及 20 份解析的阅读节奏。",
+          "viewports": [
+            "1440x900",
+            "390x844",
+            "768x1024"
+          ],
+          "products": [
+            {
+              "productId": "tmua-specimen-p1-worked-explanations-v1",
+              "examId": "tmua",
+              "version": "1.0.0",
+              "route": "/practice/tmua-specimen-p1"
+            }
+          ],
+          "sourceFingerprint": "sha256:2f72528f612a2060603cda416730a3fe2225e4206126cf680ea8e1081c6d1335",
+          "sourceArtifactCount": 24
+        },
+        {
+          "reviewKey": "ucat-decision-making-full-mock/full-decision-browser-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "ucat-decision-making-full-mock",
+          "featureManifest": "verification/features/ucat-decision-making-full-mock.yaml",
+          "manualCheckId": "full-decision-browser-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Desktop, tablet and phone review must verify all tables, five-statement sets, calculator, response persistence, timer and no horizontal overflow.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "ucat-decision-making-full-mock-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/practice/ucat-decision-making-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:0b29828256ffc57bc2912dde0fa4ba04109d0400caf7585b69fcf0c7b31e91be",
+          "sourceArtifactCount": 6
+        },
+        {
+          "reviewKey": "ucat-decision-making-full-mock/full-decision-student-timing-pilot",
+          "campaignId": "device-accessibility",
+          "featureId": "ucat-decision-making-full-mock",
+          "featureManifest": "verification/features/ucat-decision-making-full-mock.yaml",
+          "manualCheckId": "full-decision-student-timing-pilot",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Real students must complete the 37-minute session to calibrate reasoning load and pacing without deriving an official scale score.",
+          "viewports": [
+            "student"
+          ],
+          "products": [
+            {
+              "productId": "ucat-decision-making-full-mock-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/practice/ucat-decision-making-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:008aa5b02b1720e4875a52d23290c26c1dfd57d1f46063b76c6709ba740ba4df",
+          "sourceArtifactCount": 6
+        },
+        {
+          "reviewKey": "ucat-quantitative-reasoning-full-mock/full-quantitative-browser-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "ucat-quantitative-reasoning-full-mock",
+          "featureManifest": "verification/features/ucat-quantitative-reasoning-full-mock.yaml",
+          "manualCheckId": "full-quantitative-browser-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Desktop, tablet and phone review must verify every table, calculator, response persistence, timer and absence of horizontal page overflow.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "ucat-quantitative-reasoning-full-mock-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/practice/ucat-quantitative-reasoning-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:ca956fe36ebb8a7be4e5e0113de38492115ba9087e4a23a2f9e3643ab98ec5fb",
+          "sourceArtifactCount": 6
+        },
+        {
+          "reviewKey": "ucat-quantitative-reasoning-full-mock/full-quantitative-student-timing-pilot",
+          "campaignId": "device-accessibility",
+          "featureId": "ucat-quantitative-reasoning-full-mock",
+          "featureManifest": "verification/features/ucat-quantitative-reasoning-full-mock.yaml",
+          "manualCheckId": "full-quantitative-student-timing-pilot",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Real students must complete the 26-minute session to calibrate calculation load and pacing without deriving an official scale score.",
+          "viewports": [
+            "student"
+          ],
+          "products": [
+            {
+              "productId": "ucat-quantitative-reasoning-full-mock-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/practice/ucat-quantitative-reasoning-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:11624f494dfeb35c540263a6c61a2ec454d322d21529fcf61a6c52496b0efd48",
+          "sourceArtifactCount": 6
+        },
+        {
+          "reviewKey": "ucat-quantitative-reasoning-starter/browser-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "ucat-quantitative-reasoning-starter",
+          "featureManifest": "verification/features/ucat-quantitative-reasoning-starter.yaml",
+          "manualCheckId": "browser-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Automated component, table and CSS contracts pass; direct desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "ucat-quantitative-reasoning-starter-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/exams/ucat/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:96c5943532073e713e4bbf4c851c572cdb2c2b820adb04af3a1064e1eadc1bd6",
+          "sourceArtifactCount": 11
+        },
+        {
+          "reviewKey": "ucat-situational-judgement-full-mock/full-situational-browser-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "ucat-situational-judgement-full-mock",
+          "featureManifest": "verification/features/ucat-situational-judgement-full-mock.yaml",
+          "manualCheckId": "full-situational-browser-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Desktop, tablet and phone review must verify every rating scale, most/least control, response persistence, timer and absence of horizontal page overflow.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "ucat-situational-judgement-full-mock-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/practice/ucat-situational-judgement-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:74b045e86ff0e9b40c8e0f0de98768bfa4e7e582324f09eaddbb82559d2b1184",
+          "sourceArtifactCount": 7
+        },
+        {
+          "reviewKey": "ucat-situational-judgement-full-mock/full-situational-student-timing-pilot",
+          "campaignId": "device-accessibility",
+          "featureId": "ucat-situational-judgement-full-mock",
+          "featureManifest": "verification/features/ucat-situational-judgement-full-mock.yaml",
+          "manualCheckId": "full-situational-student-timing-pilot",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Real students must complete the 26-minute session to calibrate reading load, decision pace and cross-cultural clarity without deriving an official Band.",
+          "viewports": [
+            "student"
+          ],
+          "products": [
+            {
+              "productId": "ucat-situational-judgement-full-mock-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/practice/ucat-situational-judgement-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:bd73e5217dbc5702cf8e3f74d6876e58056b739de59e8126b55eca20e8b98185",
+          "sourceArtifactCount": 7
+        },
+        {
+          "reviewKey": "ucat-specialist-starters/browser-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "ucat-specialist-starters",
+          "featureManifest": "verification/features/ucat-specialist-starters.yaml",
+          "manualCheckId": "browser-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Automated interaction and CSS contracts pass; direct desktop, tablet, phone, keyboard and screen-reader review remains explicit.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "ucat-decision-making-starter-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/exams/ucat/past-papers"
+            },
+            {
+              "productId": "ucat-situational-judgement-starter-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/exams/ucat/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:71fbc3f0e7c01562f83d8235b8350a542ae9e3ead46e1564ae695f04ce771e8a",
+          "sourceArtifactCount": 18
+        },
+        {
+          "reviewKey": "ucat-verbal-reasoning-full-mock/full-vr-browser-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "ucat-verbal-reasoning-full-mock",
+          "featureManifest": "verification/features/ucat-verbal-reasoning-full-mock.yaml",
+          "manualCheckId": "full-vr-browser-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Desktop, tablet and phone review must verify all eleven passage groups, response persistence, timer and no horizontal overflow.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "ucat-verbal-reasoning-full-mock-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/practice/ucat-verbal-reasoning-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:ab40d391f2a6bafdf26b9ac2cd833147a380c39371dfab3378d3915ea9ea4765",
+          "sourceArtifactCount": 6
+        },
+        {
+          "reviewKey": "ucat-verbal-reasoning-full-mock/full-vr-student-timing-pilot",
+          "campaignId": "device-accessibility",
+          "featureId": "ucat-verbal-reasoning-full-mock",
+          "featureManifest": "verification/features/ucat-verbal-reasoning-full-mock.yaml",
+          "manualCheckId": "full-vr-student-timing-pilot",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Real students must complete the 22-minute session to calibrate reading load and pacing without deriving an official scale score.",
+          "viewports": [
+            "student"
+          ],
+          "products": [
+            {
+              "productId": "ucat-verbal-reasoning-full-mock-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/practice/ucat-verbal-reasoning-full-mock-v1"
+            }
+          ],
+          "sourceFingerprint": "sha256:1342097560c93fe834e5502beb1dc65848a1b176ac6337f23ffd49bcd27e2d76",
+          "sourceArtifactCount": 6
+        },
+        {
+          "reviewKey": "ucat-verbal-reasoning-starter/browser-device-review",
+          "campaignId": "device-accessibility",
+          "featureId": "ucat-verbal-reasoning-starter",
+          "featureManifest": "verification/features/ucat-verbal-reasoning-starter.yaml",
+          "manualCheckId": "browser-device-review",
+          "status": "pending",
+          "ownerRole": "interface-qa-lead",
+          "independenceRequired": false,
+          "evidenceRequirement": "Automated component and CSS contracts pass; desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "phone",
+            "tablet"
+          ],
+          "products": [
+            {
+              "productId": "ucat-verbal-reasoning-starter-v1",
+              "examId": "ucat",
+              "version": "0.1.0",
+              "route": "/exams/ucat/past-papers"
+            }
+          ],
+          "sourceFingerprint": "sha256:4b1842ad0ea9e43f73c48538a90d4062c3654d6c595c7c9982dfb552a60fc0e0",
+          "sourceArtifactCount": 8
+        }
+      ]
+    }
+  ]
+}

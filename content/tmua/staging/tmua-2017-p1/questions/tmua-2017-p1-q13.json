@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                       \u0003\n                                                       \u0003\n                                                       \u0003\n\nͳ͵\u0003     \u0003\u0003\u0003\u0003ሺܽ ൅ ܾ‫ݔ‬ሻହ \u0003\u0003  \u0003\u0003‫ ݔ‬ସ \u0003\u0003ͺ\u0003\u0003\u0003  \u0003\u0003‫ ݔ‬ଶ Ǥ\u0003\u0003\u0003\n\n        \u0003\u0003ܽ\u0003\u0003ܾ\u0003\u0003Ǧ\u0003\u0003ǡ\u0003\u0003\u0003\u0003\u0003\u0003\u0003\n       \u0003\u0003ܽ ൅ ܾ\u0003ǫ\u0003\n\u0003      \u0003\n\u0003      A   ͵\u0003\n\n\u0003      B   Ͷ\u0003\n\n\u0003      C   ͷ\u0003\n\n\u0003      D   ͻ\u0003\n\n\u0003      E   ͳ͵\u0003\n\n\u0003      F   ͳ͹\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                          \u0014\u0018                                         >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "ሺܽ ൅ ܾ‫ݔ‬ሻହ   ‫ ݔ‬ସ 8  ‫ ݔ‬ଶ Ǥ\n\n        ܽܾǦǡ\n       ܽ ൅ ܾǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "3"
+    },
+    {
+      "label": "B",
+      "rawText": "4"
+    },
+    {
+      "label": "C",
+      "rawText": "5"
+    },
+    {
+      "label": "D",
+      "rawText": "9"
+    },
+    {
+      "label": "E",
+      "rawText": "13"
+    },
+    {
+      "label": "F",
+      "rawText": "17\n\n\n\n\n\n\n\n\n\n\n8&/(6                                                                                   >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "5\nThe term in x4 is          4     4 4                         4      4\n                    \u0001\n                    4 a(bx) = 5ab x , so the coefficient of x is 5ab\n                     5 3      2       3 2 2                          2  3 2\nThe term in x2 is\n                    \u0001\n                     2 a (bx) = 10a b x , so the coefficient of x is 10a b\nIt follows, since the coefficient of x4 is 8 times that of x2 , that\n\n                                         5ab4 = 80a3 b2\n\nAs a and b are non-zero, we can divide by 5ab2 to get b2 = 16a2 . Since both a and b are positive,\nwe can take square roots to get b = 4a. (If we didn’t know about their signs, we could only say\nthat b = ±4a.)\nSo the smallest possible value of a + b occurs when a = 1, b = 4, giving a + b = 5, which is\noption C.\n\n\n\n\nVersion 1.1, March 2019                                                                   Page 16\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        17
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

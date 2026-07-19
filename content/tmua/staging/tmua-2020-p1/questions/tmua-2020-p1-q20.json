@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "20   For how many values of a is the equation\n\n                                    (x − a)(x2 − x + a) = 0\n\n     satisﬁed by exactly two distinct values of x ?\n\n     A 0\n\n     B 1\n\n     C 2\n\n     D 3\n\n     E 4\n\n     F more than 4\n\n\n\n\n                                             22"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "For how many values of a is the equation\n\n                                    (x − a)(x2 − x + a) = 0\n\n     satisﬁed by exactly two distinct values of x ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0"
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "2"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "4"
+    },
+    {
+      "label": "F",
+      "rawText": "more than 4"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "√\nThe equation has solutions x = a and x = 1± 21−4a .\nOne case in which there are two distinct values is when 1 − 4a = 0 and a 6= 21 , which occurs\nwhen a = 14 .\nThe other case in which there are two distinct values is when a is √one of the solutions of the\nquadratic x2 − x + a = 0. We could find this by equating a = 1± 21−4a , but a much simpler\napproach is to substitute x = a into the quadratic, giving a2 − a + a = 0, hence a2 = 0 giving\na = 0.\nTherefore there are two such values, a = 0 and a = 41 , which is option C.\n\n\n\n\nVersion 1.0, April 2021                                                                Page 22\n\n                                          © UCLES 2021\n\f\nThis document was initially designed for print and as such does not reach accessibility standard\nWCAG 2.1 in a number of ways including missing text alternatives and missing document structure.\n\n\n\nIf you need this document in a different format please email\nadmissionstesting@cambridgeassessment.org.uk telling us your name, email address and\nrequirements and we will respond within 15 working days.\n\n\n\nThis document contains maths equations and symbols which at present we are not able to produce\nadequately for accessibility. We are working to improve this.\n\n\n\n\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur range of research-based admissions tests connects schools, universities, governments\nand employers to the most suitable applicants around the world.\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\nAdmissions tests support: www.admissionstesting.org/help\n\n\n\n\n                                           © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        22,
+        23
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

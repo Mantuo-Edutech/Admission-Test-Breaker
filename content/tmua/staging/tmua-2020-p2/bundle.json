@@ -1,0 +1,1941 @@
+{
+  "schemaVersion": 1,
+  "bundleType": "question-import",
+  "id": "tmua-2020-p2-extraction-v1",
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "generatedAt": "2026-07-17T07:00:00.000Z",
+  "generatedBy": "tmua-extraction-cli",
+  "sourceDocumentIds": {
+    "question": "tmua-official-2020-paper-2",
+    "answerKey": "tmua-official-2020-answer-key",
+    "workedSolution": "tmua-official-2020-paper-2-worked-solutions"
+  },
+  "questionCount": 20,
+  "publishableQuestionCount": 0,
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q01",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 1,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "1   Find the complete set of values of k for which the line y = x − 2 crosses or touches\n    the curve y = x2 + kx + 2\n\n    A −1 ≤ k ≤ 3\n\n    B −3 ≤ k ≤ 5\n\n    C −4 ≤ k ≤ 4\n\n    D k ≤ −1 or k ≥ 3\n\n    E k ≤ −3 or k ≥ 5\n\n    F k ≤ −4 or k ≥ 4\n\n\n\n\n                                            3"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the complete set of values of k for which the line y = x − 2 crosses or touches\n    the curve y = x2 + kx + 2"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "−1 ≤ k ≤ 3"
+        },
+        {
+          "label": "B",
+          "rawText": "−3 ≤ k ≤ 5"
+        },
+        {
+          "label": "C",
+          "rawText": "−4 ≤ k ≤ 4"
+        },
+        {
+          "label": "D",
+          "rawText": "k ≤ −1 or k ≥ 3"
+        },
+        {
+          "label": "E",
+          "rawText": "k ≤ −3 or k ≥ 5"
+        },
+        {
+          "label": "F",
+          "rawText": "k ≤ −4 or k ≥ 4"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We find the points where the line and curve meet by solving the equations simultaneously; this\ngives x2 + kx + 2 = x − 2. Rearranging gives\n\n                                    x2 + (k − 1)x + 4 = 0.\n\nThe discriminant of this is (k − 1)2 − 4 × 1 × 4 = (k − 1)2 − 16. The line and curve cross or\ntouch when the discriminant is ≥ 0, so we must solve\n\n                                       (k − 1)2 − 16 ≥ 0.\n\nExpanding and simplifying this gives\n\n                                       k 2 − 2k − 15 ≥ 0,\n\nwhich we can factorise to get\n                                       (k − 5)(k + 3) ≥ 0.\nThe equation (k − 5)(k + 3) = 0 has roots k = −3 and k = 5, so the quadratic is non-negative\nwhen k ≤ −3 or k ≥ 5. Thus the correct solution is E.\n\n\n\n\nVersion 1.0, April 2021                                                                Page 3\n\n                                          © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            3
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q02",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 2,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "2   Given that tan θ = 2 and 180◦ < θ < 360◦ , ﬁnd the value of cos θ\n\n         √\n    A       3\n          √\n    B   − 3\n          √\n            3\n    C\n           2\n          √\n            3\n    D   −\n           2\n          √\n            5\n    E\n           5\n          √\n            5\n    F   −\n           5\n           √\n          2 5\n    G\n            5\n           √\n          2 5\n    H   −\n            5\n\n\n\n\n                                           4"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Given that tan θ = 2 and 180◦ < θ < 360◦ , ﬁnd the value of cos θ\n\n         √"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "3\n          √"
+        },
+        {
+          "label": "B",
+          "rawText": "− 3\n          √\n            3"
+        },
+        {
+          "label": "C",
+          "rawText": "2\n          √\n            3"
+        },
+        {
+          "label": "D",
+          "rawText": "−\n           2\n          √\n            5"
+        },
+        {
+          "label": "E",
+          "rawText": "5\n          √\n            5"
+        },
+        {
+          "label": "F",
+          "rawText": "−\n           5\n           √\n          2 5"
+        },
+        {
+          "label": "G",
+          "rawText": "5\n           √\n          2 5"
+        },
+        {
+          "label": "H",
+          "rawText": "−\n            5"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "In the range 180◦ < θ < 360◦ , we have that tan θ > 0 when 180◦ < θ < 270◦ . In this smaller\nrange, cos θ < 0.\nNext, in the range 0◦ < θ0 < 90◦ , if tan θ0 = 2, we can sketch a right-angled triangle with this\nangle:\n\n\n\n\n                                            2\n\n\n\n                                                           θ0\n                                                       1\n\n                                                                            √\n                            √               √                   1            5\nThe hypotenuse has length       22 + 12 =       5, so cos θ0 = √        =      .\n                                                                    5       5\n                                                                √\n                                                                 5\nTherefore for our original angle θ, we have cos θ = −              , which is option F.\n                                                                5\n\n\n\n\nVersion 1.0, April 2021                                                                   Page 4\n\n                                                © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q03",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 3,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "3   A student makes the following claim:\n                                                \u0002                   \u0003\n                                                    9n + 1 3n − 1\n         For all integers n, the expression 4             −             is divisible by 3.\n                                                      2      2\n\n    Here is the student’s argument:\n\n\n                   \u0002                   \u0003    \u0002 \u0002                 \u0003\u0003\n                       9n + 1 3n − 1              9n + 1 3n − 1\n               4             −           =2 2            −                       (I)\n                         2      2                    2        2\n                                         = 2(9n + 1 − 3n − 1)                    (II)\n                                         = 2(6n)                                 (III)\n                                         = 12n                                   (IV)\n                                         = 3(4n)                                 (V)\n                        which is always a multiple of 3.                         (VI)\n                                      \u0002                   \u0003\n                                          9n + 1 3n − 1\n               So the expression 4              −             is always divisible by 3.\n                                            2      2\n\n\n    Which one of the following is true?\n\n    A The argument is correct.\n\n    B The argument is incorrect, and the ﬁrst error occurs on line (I).\n\n    C The argument is incorrect, and the ﬁrst error occurs on line (II).\n\n    D The argument is incorrect, and the ﬁrst error occurs on line (III).\n\n    E The argument is incorrect, and the ﬁrst error occurs on line (IV).\n\n    F The argument is incorrect, and the ﬁrst error occurs on line (V).\n\n    G The argument is incorrect, and the ﬁrst error occurs on line (VI).\n\n\n\n\n                                                5"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A student makes the following claim:\n                                                                   \n                                                    9n + 1 3n − 1\n         For all integers n, the expression 4             −             is divisible by 3.\n                                                      2      2\n\n    Here is the student’s argument:\n\n\n                                                            \n                       9n + 1 3n − 1              9n + 1 3n − 1\n               4             −           =2 2            −                       (I)\n                         2      2                    2        2\n                                         = 2(9n + 1 − 3n − 1)                    (II)\n                                         = 2(6n)                                 (III)\n                                         = 12n                                   (IV)\n                                         = 3(4n)                                 (V)\n                        which is always a multiple of 3.                         (VI)\n                                                         \n                                          9n + 1 3n − 1\n               So the expression 4              −             is always divisible by 3.\n                                            2      2\n\n\n    Which one of the following is true?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "The argument is correct."
+        },
+        {
+          "label": "B",
+          "rawText": "The argument is incorrect, and the ﬁrst error occurs on line (I)."
+        },
+        {
+          "label": "C",
+          "rawText": "The argument is incorrect, and the ﬁrst error occurs on line (II)."
+        },
+        {
+          "label": "D",
+          "rawText": "The argument is incorrect, and the ﬁrst error occurs on line (III)."
+        },
+        {
+          "label": "E",
+          "rawText": "The argument is incorrect, and the ﬁrst error occurs on line (IV)."
+        },
+        {
+          "label": "F",
+          "rawText": "The argument is incorrect, and the ﬁrst error occurs on line (V)."
+        },
+        {
+          "label": "G",
+          "rawText": "The argument is incorrect, and the ﬁrst error occurs on line (VI)."
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Lines (I) to (V) are algebraic manipulations; we need to check whether each manipulation is\ncorrect.\nLine (I) writes 4 = 2 × 2, which is correct.\nLine (II) multiplies out the inner brackets, but does not do it correctly: the inner brackets should\nexpand to (9n + 1) − (3n − 1), which simplifies to 9n + 1 − 3n + 1.\nThe remaining manipulations are correct.\nThus the first error occurs on line (II), and the correct option is C.\n\n\n\n\nVersion 1.0, April 2021                                                                      Page 5\n\n                                           © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q04",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 4,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "4   Consider the following statement:\n\n            Every positive integer N that is greater than 6 can be written as the sum\n            of two non-prime integers that are greater than 1.\n\n    Which of the following is/are counterexample(s) to this statement?\n\n        I      N =5\n        II     N =7\n        III N = 9\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                              6"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following statement:\n\n            Every positive integer N that is greater than 6 can be written as the sum\n            of two non-prime integers that are greater than 1.\n\n    Which of the following is/are counterexample(s) to this statement?\n\n        I      N =5\n        II     N =7\n        III N = 9"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "G",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "A counterexample is a positive integer N that is greater than 6 but it is not the case that N\ncan be written as the sum of two non-prime integers that are greater than 1.\n\n     N = 5 is not greater than 6, so is not a counterexample.\n\n     N = 7 = 2 + 5 = 3 + 4 cannot be written in this way, so this provides a counterexample.\n\n     N = 9 = 2 + 7 = 3 + 6 = 4 + 5 also cannot be written in this way.\n\nTherefore both II and III provide counterexamples; the correct option is G.\n\n\n\n\nVersion 1.0, April 2021                                                                Page 6\n\n                                         © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q05",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 5,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "5   Which one of the following shows the graph of\n                                                    2x\n                                          y=\n                                                  1 + 2x\n    (Dotted lines indicate asymptotes.)\n\n     A                          B                              C\n              y                           y                        y\n\n\n\n\n              0             x             0                x       0   x\n\n     D                          E                              F\n              y                           y                        y\n\n\n\n\n              0             x             0                x       0   x\n\n\n\n\n                                              7"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Which one of the following shows the graph of\n                                                    2x\n                                          y=\n                                                  1 + 2x\n    (Dotted lines indicate asymptotes.)\n\n     A                          B                              C\n              y                           y                        y\n\n\n\n\n              0             x             0                x       0   x\n\n     D                          E                              F\n              y                           y                        y\n\n\n\n\n              0             x             0                x       0   x"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        },
+        {
+          "label": "F",
+          "rawText": "[visual option F; transcription required]"
+        },
+        {
+          "label": "G",
+          "rawText": "[visual option G; transcription required]"
+        },
+        {
+          "label": "H",
+          "rawText": "[visual option H; transcription required]"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Note that none of these graphs have scales on.\nA key question is what happens to y when x is large and positive and when x is large and\nnegative.\n                             2100\nIf x = 100, say, then y =           . Since 2100 is a very large positive number, this fraction is\n                           1 + 2100\nalmost exactly 1. This excludes graphs B and C, where the value of y increases towards infinity.\nIt also excludes graphs D and E, where the value of y tends towards 0. We are therefore left\nwith graphs A and F.\nOne way to distinguish between A and F is to compare the value at x = 0 with the value when\nx is large. When x = 0, we have y = 12 . Since 12 < 1 and y is close to 1 when x is large, graph F\nis not possible, so the answer is graph A.\n                                                                                    2−100\nAlternatively, we can consider what happens when x = −100, say. Then y =                    . Since\n                                                                                  1 + 2−100\n2−100 is a tiny positive number, very close to 0, this fraction is almost exactly 0. This excludes\nall of the graphs except for A and B; combining this with our earlier observations shows that\nthe correct graph is A.\n\n\n\n\nVersion 1.0, April 2021                                                                     Page 7\n\n                                           © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required",
+          "option-count-review"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q06",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 6,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "6   The function f(x) is deﬁned for all real values of x.\n\n    Which of the following conditions on f(x) is/are necessary to ensure that\n                                  \u0004 0            \u0004 5\n                                      f(x) dx =      f(x) dx\n                                     −5            0\n\n\n\n\n        Condition I:     f(x) = f(−x) for −5 ≤ x ≤ 5\n        Condition II:    f(x) = c for −5 ≤ x ≤ 5, where c is a constant\n        Condition III: f(x) = −f(−x) for −5 ≤ x ≤ 5\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                             8"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The function f(x) is deﬁned for all real values of x.\n\n    Which of the following conditions on f(x) is/are necessary to ensure that\n                                  A 0            A 5\n                                      f(x) dx =      f(x) dx\n                                     −5            0\n\n\n\n\n        Condition I:     f(x) = f(−x) for −5 ≤ x ≤ 5\n        Condition II:    f(x) = c for −5 ≤ x ≤ 5, where c is a constant\n        Condition III: f(x) = −f(−x) for −5 ≤ x ≤ 5"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "If we think about the integrals as meaning ‘the (signed) area under the graph of y = f(x)\nbetween x = −5 and x = 0’ and the same between x = 0 and x = 5, we realise that none of\nthese conditions is necessary (though the first two conditions are actually sufficient).\nTo show fully that a condition is not necessary, we need to find an example of a function for\nwhich the integral equation is satisfied but for which the condition is not.\nAn example of a function which satisfies the integral equation but does not satisfy conditions II\nor III is the function f(x) = x2 .\nAn example of a function which satisfies the integral condition but does not satisfy condition I\nis f(x) = sin2πx, which has 5 full periods in each of the ranges −5 ≤ x ≤ 0 and 0 ≤ x ≤ 5, so\neach of the integrals is equal to 0, but it is not the case that f(x) = f(−x) for −5 ≤ x ≤ 5.\nTherefore the correct option is A.\n\n\n\n\nVersion 1.0, April 2021                                                                   Page 8\n\n                                          © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            8
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q07",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 7,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "7   Consider the following conditions on a parallelogram P QRS, labelled\n    anticlockwise:\n\n        I    length of P Q = length of QR\n        II   The diagonal P R intersects the diagonal QS at right angles\n        III ∠P QR = ∠QRS\n\n    Which of these conditions is/are individually suﬃcient for the parallelogram P QRS\n    to be a square?\n\n\n               Condition I is          Condition II is         Condition III is\n                 suﬃcient                suﬃcient                suﬃcient\n       A           yes                      yes                      yes\n       B           yes                      yes                      no\n       C           yes                      no                       yes\n       D           yes                      no                       no\n       E            no                      yes                      yes\n       F            no                      yes                      no\n       G            no                      no                       yes\n       H            no                      no                       no\n\n\n\n\n                                            9"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following conditions on a parallelogram P QRS, labelled\n    anticlockwise:\n\n        I    length of P Q = length of QR\n        II   The diagonal P R intersects the diagonal QS at right angles\n        III ∠P QR = ∠QRS\n\n    Which of these conditions is/are individually suﬃcient for the parallelogram P QRS\n    to be a square?\n\n\n               Condition I is          Condition II is         Condition III is\n                 suﬃcient                suﬃcient                suﬃcient"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "yes                      yes                      yes"
+        },
+        {
+          "label": "B",
+          "rawText": "yes                      yes                      no"
+        },
+        {
+          "label": "C",
+          "rawText": "yes                      no                       yes"
+        },
+        {
+          "label": "D",
+          "rawText": "yes                      no                       no"
+        },
+        {
+          "label": "E",
+          "rawText": "no                      yes                      yes"
+        },
+        {
+          "label": "F",
+          "rawText": "no                      yes                      no"
+        },
+        {
+          "label": "G",
+          "rawText": "no                      no                       yes"
+        },
+        {
+          "label": "H",
+          "rawText": "no                      no                       no"
+        }
+      ],
+      "correctAnswer": "H",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "To show that a condition is sufficient, we must explain why having the condition means that\nthe parallelogram must be a square. To show that a condition is not sufficient, we must find an\nexample of a parallelogram that satisfies the condition but is not a square.\nFor condition I, if P QRS is a rhombus that is not a square, then it satisfies the condition but\nis not a square. So condition I is not sufficient.\nFor condition II, the same example works: the diagonals of a rhombus intersect at right angles\neven when the rhombus is not a square.\nFor condition III, we know that the adjacent angles ∠P QR and ∠QRS sum to 180◦ , so if\ncondition III is satisfied, they must each be 90◦ , a right angle. But a rectangle that is not a\nsquare satisfies this condition and is a parallelogram.\nTherefore none of these conditions is sufficient, and the correct option is H.\n\n\n\n\nVersion 1.0, April 2021                                                                  Page 9\n\n                                           © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q08",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 8,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "8   A student is asked to prove whether the following statement (∗) is true or false:\n\n         (∗) For all real numbers a and b, |a + b| < |a| + |b|\n\n    The student’s proof is as follows:\n\n         Statement (∗) is false. A counterexample is a = 3, b = 4, as |3 + 4| = 7\n         and |3| + |4| = 7, but 7 < 7 is false.\n\n    Which of the following best describes the student’s proof?\n\n    A The statement (∗) is true, and the student’s proof is not correct.\n\n    B The statement (∗) is false, but the student’s proof is not correct: the\n      counterexample is not valid.\n\n    C The statement (∗) is false, but the student’s proof is not correct: the student\n      needs to give all the values of a and b where |a + b| < |a| + |b| is false.\n\n    D The statement (∗) is false, but the student’s proof is not correct: the student\n      should have instead stated that for all real numbers a and b, |a + b| ≤ |a| + |b|.\n\n    E The statement (∗) is false, and the student’s proof is fully correct.\n\n\n\n\n                                            10"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A student is asked to prove whether the following statement (∗) is true or false:\n\n         (∗) For all real numbers a and b, |a + b| < |a| + |b|\n\n    The student’s proof is as follows:\n\n         Statement (∗) is false. A counterexample is a = 3, b = 4, as |3 + 4| = 7\n         and |3| + |4| = 7, but 7 < 7 is false.\n\n    Which of the following best describes the student’s proof?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "The statement (∗) is true, and the student’s proof is not correct."
+        },
+        {
+          "label": "B",
+          "rawText": "The statement (∗) is false, but the student’s proof is not correct: the\n      counterexample is not valid."
+        },
+        {
+          "label": "C",
+          "rawText": "The statement (∗) is false, but the student’s proof is not correct: the student\n      needs to give all the values of a and b where |a + b| < |a| + |b| is false."
+        },
+        {
+          "label": "D",
+          "rawText": "The statement (∗) is false, but the student’s proof is not correct: the student\n      should have instead stated that for all real numbers a and b, |a + b| ≤ |a| + |b|."
+        },
+        {
+          "label": "E",
+          "rawText": "The statement (∗) is false, and the student’s proof is fully correct."
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "To prove that a ‘for all’ statement is true, it is necessary to show that the formula holds for every\nchoice of the variables. On the other hand, to show that it is false, it is sufficient to just find a\nsingle counterexample, because that shows that it is not true for all choices of the variables.\nThis student has provided a correct counterexample (and it is easy to check that their arithmetic\nis correct). Therefore the student has correctly shown that (∗) is false, and the correct option\nis E.\nOne can also observe that ‘for all real numbers a and b, |a + b| ≤ |a| + |b|’ is a true statement,\nbut noting that is different from showing that (∗) is false.\n\n\n\n\nVersion 1.0, April 2021                                                                     Page 10\n\n                                            © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q09",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 9,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "9   A student wishes to evaluate the function f(x) = x sin x, where x is in radians, but\n    has a calculator that only works in degrees.\n\n    What could the student type into their calculator to correctly evaluate f(4) ?\n\n    A (π × 4 ÷ 180) × sin(4)\n\n    B (π × 4 ÷ 180) × sin(π × 4 ÷ 180)\n\n    C 4 × sin(π × 4 ÷ 180)\n\n    D (180 × 4 ÷ π) × sin(4)\n\n    E (180 × 4 ÷ π) × sin(180 × 4 ÷ π)\n\n    F 4 × sin(180 × 4 ÷ π)\n\n\n\n\n                                            11"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A student wishes to evaluate the function f(x) = x sin x, where x is in radians, but\n    has a calculator that only works in degrees.\n\n    What could the student type into their calculator to correctly evaluate f(4) ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "(π × 4 ÷ 180) × sin(4)"
+        },
+        {
+          "label": "B",
+          "rawText": "(π × 4 ÷ 180) × sin(π × 4 ÷ 180)"
+        },
+        {
+          "label": "C",
+          "rawText": "4 × sin(π × 4 ÷ 180)"
+        },
+        {
+          "label": "D",
+          "rawText": "(180 × 4 ÷ π) × sin(4)"
+        },
+        {
+          "label": "E",
+          "rawText": "(180 × 4 ÷ π) × sin(180 × 4 ÷ π)"
+        },
+        {
+          "label": "F",
+          "rawText": "4 × sin(180 × 4 ÷ π)"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The student wishes to evaluate f(4). Writing 4 rad to explicitly indicate radians, this becomes\n\n                               f(4) = 4 sin(4 rad) = 4 × sin(4 rad).\n\nNow\n                                          π rad = 180◦ ,\nso dividing by π gives\n                                                    180◦\n                                          1 rad =        .\n                                                     π\nMultiplying this by 4 then gives\n                                                  4 × 180◦\n                                        4 rad =            .\n                                                     π\nTherefore the student could type into their calculator\n\n                                      4 × sin(4 × 180 ÷ π)\n\nwhich is equivalent to the calculation of F.\n\n\n\n\nVersion 1.0, April 2021                                                                 Page 11\n\n                                           © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q10",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 10,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "10   The real numbers a, b, c and d satisfy both\n\n                                      0<a+b<c+d\n\n     and\n                                      0<a+c<b+d\n\n     Which of the following inequalities must be true?\n\n           I    a<d\n           II   b<c\n           III a + b + c + d > 0\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                            12"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The real numbers a, b, c and d satisfy both\n\n                                      0<a+b<c+d\n\n     and\n                                      0<a+c<b+d\n\n     Which of the following inequalities must be true?\n\n           I    a<d\n           II   b<c\n           III a + b + c + d > 0"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "One result about inequalities is that if p < q and r < s, then p + r < q + s. This is because\n\n                                     p+r <q+r <q+s\n\nwhere the first inequality follows by adding r to p < q and the second follows by adding q to\nr < s.\nSince we have a + b < c + d and a + c < b + d, we can therefore add these to get\n\n                                    2a + b + c < b + c + 2d.\n\nSubtracting b + c from both sides gives 2a < 2d, so a < d. Hence I must be true.\nA similar approach does not seem to work to show b < c, which suggests that perhaps we should\nlook for a counterexample. If d is much larger than a, then the values of b and c should not\nmake much of a difference to the inequality if they are both small. So let us try a = 1, d = 100,\nb = 2, c = 1. Then we do indeed have 0 < 1 + 2 < 1 + 100 and 0 < 1 + 1 < 2 + 100, so the first\ntwo inequalities hold but b > c. Therefore II might not be true.\nFor III, we note that a + b > 0 and c + d > a + b > 0, so adding a + b > 0 and c + d > 0 gives\na + b + c + d > 0, and thus III must be true.\nThe correct option is F.\n\n\n\n\nVersion 1.0, April 2021                                                                  Page 12\n\n                                          © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q11",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 11,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "11   A spiral line is drawn as shown.\n\n                                              y\n                                              5\n\n                                              4\n\n                                              3\n\n                                              2\n\n                                              1\n\n\n                   −5   −4   −3   −2    −1        0   1   2    3    4   5 x\n                                             −1\n\n                                             −2\n\n                                             −3\n\n                                             −4\n\n                                             −5\n\n\n     This spiral pattern continues indeﬁnitely.\n\n     Which one of the following points is not on the spiral line?\n\n     A (99, 100)\n\n     B (99, −100)\n\n     C (−99, 100)\n\n     D (−99, −100)\n\n     E (100, 99)\n\n     F (100, −99)\n\n     G (−100, 99)\n\n     H (−100, −99)\n\n\n\n\n                                              13"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A spiral line is drawn as shown.\n\n                                              y\n                                              5\n\n                                              4\n\n                                              3\n\n                                              2\n\n                                              1\n\n\n                   −5   −4   −3   −2    −1        0   1   2    3    4   5 x\n                                             −1\n\n                                             −2\n\n                                             −3\n\n                                             −4\n\n                                             −5\n\n\n     This spiral pattern continues indeﬁnitely.\n\n     Which one of the following points is not on the spiral line?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "(99, 100)"
+        },
+        {
+          "label": "B",
+          "rawText": "(99, −100)"
+        },
+        {
+          "label": "C",
+          "rawText": "(−99, 100)"
+        },
+        {
+          "label": "D",
+          "rawText": "(−99, −100)"
+        },
+        {
+          "label": "E",
+          "rawText": "(100, 99)"
+        },
+        {
+          "label": "F",
+          "rawText": "(100, −99)"
+        },
+        {
+          "label": "G",
+          "rawText": "(−100, 99)"
+        },
+        {
+          "label": "H",
+          "rawText": "(−100, −99)"
+        }
+      ],
+      "correctAnswer": "G",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "From the nature of the pattern, we see that it sort-of repeats every 2 units along each axis. So\nlet us simplify this question by replacing 99 and 100 by 3 and 4 (an odd number and the even\nnumber one more than it).\nLooking at the portion of the graph we are given, we see the points (3, 4) and (4, 3) are both\non the spiral (top right), (3, −4) and (4, −3) are too (bottom right), (−4, −3) and (−3, −4) are\nboth on the bottom left and if we continue the line at the top, (−3, 4) is at the top left. However\n(−4, 3) is missed out: that is the gap at the end of one ‘loop’ as the spiral heads out to form\nthe next ‘loop’.\nTherefore in the case of 99 and 100, (−100, 99) will be missed, which is option G.\n\n\n\n\nVersion 1.0, April 2021                                                                    Page 13\n\n                                           © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q12",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 12,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "12   Which one of A–F correctly completes the following statement?\n\n           Given that a < b, and f(x) > 0 for all x with a < x < b, the trapezium rule\n                                        \u0005b\n           produces an overestimate for a f(x) dx . . .\n\n     A . . . if f \u0003 (x) > 0 and f \u0003\u0003 (x) < 0 for all x with a < x < b\n\n     B . . . only if f \u0003 (x) > 0 and f \u0003\u0003 (x) < 0 for all x with a < x < b\n\n     C . . . if and only if f \u0003 (x) > 0 and f \u0003\u0003 (x) < 0 for all x with a < x < b\n\n     D . . . if f \u0003 (x) < 0 and f \u0003\u0003 (x) > 0 for all x with a < x < b\n\n     E . . . only if f \u0003 (x) < 0 and f \u0003\u0003 (x) > 0 for all x with a < x < b\n\n     F . . . if and only if f \u0003 (x) < 0 and f \u0003\u0003 (x) > 0 for all x with a < x < b\n\n\n\n\n                                                14"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Which one of A–F correctly completes the following statement?\n\n           Given that a < b, and f(x) > 0 for all x with a < x < b, the trapezium rule\n                                        Bb\n           produces an overestimate for a f(x) dx . . ."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": ". . . if f  (x) > 0 and f  (x) < 0 for all x with a < x < b"
+        },
+        {
+          "label": "B",
+          "rawText": ". . . only if f  (x) > 0 and f  (x) < 0 for all x with a < x < b"
+        },
+        {
+          "label": "C",
+          "rawText": ". . . if and only if f  (x) > 0 and f  (x) < 0 for all x with a < x < b"
+        },
+        {
+          "label": "D",
+          "rawText": ". . . if f  (x) < 0 and f  (x) > 0 for all x with a < x < b"
+        },
+        {
+          "label": "E",
+          "rawText": ". . . only if f  (x) < 0 and f  (x) > 0 for all x with a < x < b"
+        },
+        {
+          "label": "F",
+          "rawText": ". . . if and only if f  (x) < 0 and f  (x) > 0 for all x with a < x < b"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The trapezium rule can produce an overestimate even if the function’s gradient goes from neg-\native to positive, for example with the function f(x) = x2 + 1 between x = −1 and x = 1:\n\n                                                   y\n\n\n\n\n                                                                      x\n                                 −1            0                1\n\n\nTherefore neither the condition f 0 (x) > 0 for all x with a < x < b nor the condition f 0 (x) < 0\nfor all x with a < x < b is necessary for the trapezium rule to produce an overestimate. This\nrejects the ‘only if’ options (B, C, E, F), leaving us with only A and D.\nThe above quadratic can also be used to help distinguish between these two options. We have\nf 0 (x) = 2x and f 00 (x) = 2. Thus for −1 < x < 0, f 0 (x) < 0 and f 00 (x) > 0 and the trapezium rule\n(with one strip) gives an overestimate. So D appears plausible.\nOn the other hand, we could reflect the quadratic to change the sign of f 00 (x): consider the\nfunction f(x) = 1 − x2 .\n\n                                                   y\n\n\n\n\n                                                                      x\n                                 −1            0                1\n\n\nWe now have f 0 (x) = −2x and f 00 (x) = −2. So when −1 < x < 0, we have f 0 (x) > 0 and\nf 00 (x) < 0, yet the trapezium rule (with one strip) produces an underestimate. This shows that\nA cannot be correct.\nBy elimination, the correct option must be D.\nIt is also possible to justify this: a function with f 00 (x) > 0 is ‘bending upwards’ (the technical\nterm is convex ). Any time we draw a chord between two points on the graph, the chord will lie\nabove the graph (except at the endpoints), so the trapezium rule estimate will be an overestimate\nof the integral. In fact, this argument makes no assumptions about the sign of either f(x) or of\nf 0 (x); having f 00 (x) > 0 for a < x < b is sufficient for the trapezium rule to give an overestimate\n(but it is not necessary).\n\n\nVersion 1.0, April 2021                                                                       Page 14\n\n                                             © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            14
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            14
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q13",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 13,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "13   f(x) is a function for which\n                            \u0004 3            \u0004 3           \u0004 1\n                                \u0006    \u00072\n                                 f(x) dx +     f(x) dx =     f(x) dx\n                              0                   0       0\n\n\n\n     Which of the following claims about f(x) is/are necessarily true?\n\n             I    f(x) ≤ 0 for some x with 1 ≤ x ≤ 3\n                  \u00053               \u00051\n             II   0\n                       f(x) dx ≤   0\n                                        f(x) dx\n\n     A neither of them\n\n     B I only\n\n     C II only\n\n     D I and II\n\n\n\n\n                                                  15"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "f(x) is a function for which\n                            A 3            A 3           A 1\n                                C    D2\n                                 f(x) dx +     f(x) dx =     f(x) dx\n                              0                   0       0\n\n\n\n     Which of the following claims about f(x) is/are necessarily true?\n\n             I    f(x) ≤ 0 for some x with 1 ≤ x ≤ 3\n                  B3               B1\n             II   0\n                       f(x) dx ≤   0\n                                        f(x) dx"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "neither of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "I and II"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "This \u0001question is about inequalities. To begin with, the only thing that we Rknow for certain\n                                                                                          R 3 is that\n       2                                                                      1\n f(x) ≥ 0 for all x, as it is the square of a real number. It follows that 0 f(x) dx ≥ 0 f(x) dx,\n                                             R3               R1\nas we are adding a non-negative number to 0 f(x) dx to get 0 f(x) dx. Therefore II is necessarily\ntrue.\nLet us now take II and rewrite the integral from 0 to 3 as the sum of the integrals from 0 to 1\nand from 1 to 3; this is so that we can match the integral on the right hand side. We obtain:\n                              Z 1           Z 3           Z 1\n                                  f(x) dx +     f(x) dx ≤     f(x) dx\n                                0              1            0\n\nand we can now subtract the integral from 0 to 1 to get\n                                       Z 3\n                                           f(x) dx ≤ 0.\n                                           1\n\nSince the integral is negative or zero, the function itself must be so somewhere between 1 and 3;\nif it were positive throughout the interval, the integral would be positive. Therefore condition I\nmust also be true.\nHence the correct answer is option D.\n\n\n\n\nVersion 1.0, April 2021                                                                     Page 15\n\n                                            © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            15
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            15
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q14",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 14,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "14   An arithmetic sequence T has ﬁrst term a and common diﬀerence d, where a and d\n     are non-zero integers.\n\n     Property P is:\n\n             For some positive integer m, the sum of the ﬁrst m terms of the sequence\n             is equal to the sum of the ﬁrst 2m terms of the sequence.\n\n     For example, when a = 11 and d = −2, the sequence T has property P, because\n\n                      11 + 9 + 7 + 5 = 11 + 9 + 7 + 5 + 3 + 1 + (−1) + (−3)\n\n     i.e. the sum of the ﬁrst 4 terms equals the sum of the ﬁrst 8 terms.\n\n     Which of the following statements is/are true?\n\n         I     For T to have property P, it is suﬃcient that ad < 0.\n         II For T to have property P, it is necessary that d is even.\n\n     A neither of them\n\n     B I only\n\n     C II only\n\n     D I and II\n\n\n\n\n                                             16"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "An arithmetic sequence T has ﬁrst term a and common diﬀerence d, where a and d\n     are non-zero integers.\n\n     Property P is:\n\n             For some positive integer m, the sum of the ﬁrst m terms of the sequence\n             is equal to the sum of the ﬁrst 2m terms of the sequence.\n\n     For example, when a = 11 and d = −2, the sequence T has property P, because\n\n                      11 + 9 + 7 + 5 = 11 + 9 + 7 + 5 + 3 + 1 + (−1) + (−3)\n\n     i.e. the sum of the ﬁrst 4 terms equals the sum of the ﬁrst 8 terms.\n\n     Which of the following statements is/are true?\n\n         I     For T to have property P, it is suﬃcient that ad < 0.\n         II For T to have property P, it is necessary that d is even."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "neither of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "I and II"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Approach 1: direct reasoning\nWe can see from the example exactly what is needed for a sequence T to have property P: the\nsum of the terms from the (m + 1)th term to the (2m)th term must be zero.\nConsider now the two statements.\n\nI    We will have ad < 0 if a > 0 and d < 0. But if |d| is large enough, then the second term will\n     be negative and there is no hope of a sum of terms giving zero. For example, the sequence\n     1, −2, −5, . . . has ad = 1(−2) = −2 < 0, but does not have property P. So this statement\n     is false.\n\nII   In the given example, d is even and m is also even. But if m is odd, we would need the\n     middle term of the second half to be zero, and then it does not matter whether d is even\n     or odd, for example in the sequence (and this was constructed by working backwards): 4,\n     3, 2, 1, 0, −1, . . . , which has property P taking m = 3. An even more extreme example is\n     the sequence 1, 0, . . . , where d = −1 again and m = 1. Therefore this statement is false.\n\nHence the correct option is A.\n\nApproach 2: algebraic approach\nThe sum of the first m and the first 2m terms of the sequence are given by\n\n                                     Sm = 12 m(2a + (m − 1)d)\n                                    S2m = 12 (2m)(2a + (2m − 1)d)\n\nand these are equal if and only if\n                          1                    1\n                          2 m(2a + (m − 1)d) = 2 (2m)(2a + (2m − 1)d).\n\nDividing both sides by 21 m gives\n\n                               2a + (m − 1)d = 2(2a + (2m − 1)d).\n\nExpanding the brackets and rearranging gives\n\n                                         2a + (3m − 1)d = 0.                                  (∗)\n\nI    The equation (∗) can be rearranged to make m the subject, giving\n                                              \u0012        \u0013\n                                            1   2a\n                                       m=      − +1 .\n                                            3    d\n\n     There is no reason why this should be an integer whenever ad < 0. For example, taking\n     a = 1 and d = −5 gives m = 31 × 75 which is not an integer. Therefore this statement is\n     false.\n\nII   We can rearrange (∗) to make d the subject:\n                                                      2a\n                                              d=−\n                                                    3m − 1\n\n\nVersion 1.0, April 2021                                                                   Page 16\n\n                                             © UCLES 2021\n\f\nTest of Mathematics for University Admission, 2020 Paper 2 Solutions\n\n\n    but it is actually more helpful to rearrange it as\n                                                          2a\n                                           3m − 1 = −        .\n                                                           d\n    To show that the statement is true, we need to show that whenever we have integer values\n    for a, d and m, d will be even; to show that the statement is false, we need to find an\n    example where d is odd. If we take d = 1, we need a value of a for which −2a is one less\n    than a (positive) multiple of 3; −2a = 2 and −2a = 8 both work, giving a = −1 and a = −4\n    respectively. Similarly, if we take d = 3, we need a value of a for which − 2a\n                                                                                 3 is one less than\n    a (positive) multiple of 3; here, −2a = 2 × 3 = 6 would work, giving a = −3.\n    Any one of these counterexamples would show that this statement is false.\n\nAgain, we see that the correct option is A.\n\n\n\n\nVersion 1.0, April 2021                                                                    Page 17\n\n                                           © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            16
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            16,
+            17
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q15",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 15,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "15   Which one of the following is a necessary and suﬃcient condition for\n                                                   √\n                                      \bn\n                                              kπ     3\n                                          sin    =\n                                      k=1\n                                               3    2\n\n     to be true?\n\n     A n=1\n\n     B n is a multiple of 3\n\n     C n is a multiple of 6\n\n     D n is 1 more than a multiple of 3\n\n     E n is 1 more than a multiple of 6\n\n     F n is 1 more than a multiple of 6 or n is 2 more than a multiple of 6\n\n\n\n\n                                           17"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Which one of the following is a necessary and suﬃcient condition for\n                                                   √\n                                      En\n                                              kπ     3\n                                          sin    =\n                                      k=1\n                                               3    2\n\n     to be true?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "n=1"
+        },
+        {
+          "label": "B",
+          "rawText": "n is a multiple of 3"
+        },
+        {
+          "label": "C",
+          "rawText": "n is a multiple of 6"
+        },
+        {
+          "label": "D",
+          "rawText": "n is 1 more than a multiple of 3"
+        },
+        {
+          "label": "E",
+          "rawText": "n is 1 more than a multiple of 6"
+        },
+        {
+          "label": "F",
+          "rawText": "n is 1 more than a multiple of 6 or n is 2 more than a multiple of 6"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "It\n√ is very helpful to write out the values of the summands (the terms being added) in terms of\n   3 and similar, and then work out the first few values of the sum.\n\n             k            1     2      3      4      5      6    7     8      9      10    ...\n\n             kπ           π     2π            4π     5π          7π    8π           10π\n              3           3      3     π       3      3     2π    3     3    3π      3     ...\n                          √    √              √      √           √    √              √\n                           3     3\n          sin( kπ\n                3 )       2     2      0     − 23   − 23    0    2\n                                                                  3\n                                                                       2\n                                                                        3\n                                                                              0     − 23   ...\n      Pn                  √     √      √      √                  √     √      √      √\n                           3\n                 kπ\n         k=1 sin( 3 )     2    2 23   2 23    2\n                                               3\n                                                     0      0    2\n                                                                  3\n                                                                      2 23   2 23    2\n                                                                                      3\n                                                                                           ...\n\n                                                                       √\nWe can see that the sum repeats every 6 steps, and that it equals 23 twice in every cycle of 6,\nspecifically when n = 1, 4, 7, 10, . . . . This sequence of n values are the numbers which are\n1 more than a multiple of 3, and so the correct option is D.\n\n\n\n\nVersion 1.0, April 2021                                                                      Page 18\n\n                                             © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            17
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            18
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q16",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 16,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "16   The Fundamental Theorem of Calculus (FTC) tells us that for any polynomial f :\n\n                                         d\n                                             \u0006\u0005 x          \u0007\n                                        dx     0\n                                                    f(t) dt = f(x)\n\n\n                           d\n                               \u0006\u0005 2x 2 \u0007\n     A student calculates dx     x\n                                    t dt as follows:\n\n                \u0005 2x 2      \u0005 2x 2      \u0005x 2\n         (I)     x\n                    t  dt =  0\n                                t  dt −  0\n                                           t dt\n\n\n                         d\n                               \u0006\u0005 x 2 \u0007\n         (II)   By FTC, dx       0\n                                   t dt = x2\n\n\n                        d\n                               \u0006\u0005 2x 2 \u0007\n         (III) By FTC, dx        0\n                                    t dt = (2x)2 = 4x2\n\n                        \u0006\u0005 2x 2 \u0007\n         (IV)       d\n                So dx     x\n                             t dt = 4x2 − x2\n\n\n                        d\n                            \u0006\u0005 2x 2 \u0007\n         (V)    giving dx     x\n                                 t dt = 3x2\n\n\n     Which of the following best describes the student’s calculation?\n\n     A The calculation is completely correct.\n\n     B The calculation is incorrect, and the ﬁrst error occurs on line (I).\n\n     C The calculation is incorrect, and the ﬁrst error occurs on line (II).\n\n     D The calculation is incorrect, and the ﬁrst error occurs on line (III).\n\n     E The calculation is incorrect, and the ﬁrst error occurs on line (IV).\n\n     F The calculation is incorrect, and the ﬁrst error occurs on line (V).\n\n\n\n\n                                                    18"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The Fundamental Theorem of Calculus (FTC) tells us that for any polynomial f :\n\n                                         d\n                                             CB x          D\n                                        dx     0\n                                                    f(t) dt = f(x)\n\n\n                           d\n                               CB 2x 2 D\n     A student calculates dx     x\n                                    t dt as follows:\n\n                B 2x 2      B 2x 2      Bx 2\n         (I)     x\n                    t  dt =  0\n                                t  dt −  0\n                                           t dt\n\n\n                         d\n                               CB x 2 D\n         (II)   By FTC, dx       0\n                                   t dt = x2\n\n\n                        d\n                               CB 2x 2 D\n         (III) By FTC, dx        0\n                                    t dt = (2x)2 = 4x2\n\n                        CB 2x 2 D\n         (IV)       d\n                So dx     x\n                             t dt = 4x2 − x2\n\n\n                        d\n                            CB 2x 2 D\n         (V)    giving dx     x\n                                 t dt = 3x2\n\n\n     Which of the following best describes the student’s calculation?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "The calculation is completely correct."
+        },
+        {
+          "label": "B",
+          "rawText": "The calculation is incorrect, and the ﬁrst error occurs on line (I)."
+        },
+        {
+          "label": "C",
+          "rawText": "The calculation is incorrect, and the ﬁrst error occurs on line (II)."
+        },
+        {
+          "label": "D",
+          "rawText": "The calculation is incorrect, and the ﬁrst error occurs on line (III)."
+        },
+        {
+          "label": "E",
+          "rawText": "The calculation is incorrect, and the ﬁrst error occurs on line (IV)."
+        },
+        {
+          "label": "F",
+          "rawText": "The calculation is incorrect, and the ﬁrst error occurs on line (V)."
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can check whether the calculation stands any chance of being correct by checking whether\nline (V) is correct. We can work out the integral directly:\n                                \u0012Z 2x      \u0013\n                              d         2        d \u0010\u0002 1 3 \u00032x \u0011\n                                       t dt =            t\n                             dx    x            dx 3 x\n                                                 d 1\n                                                       (2x)3 − 13 x3\n                                                                     \u0001\n                                             =       3\n                                                dx\n                                                 d 7 3\u0001\n                                             =         x\n                                                dx 3\n                                             = 7x2\n\nSo an error has certainly been introduced somewhere.\nFrom this, it is clear that line (IV) is also incorrect.\n                        Rb          Rc           Rc\nLine (I) is correct, as a f(t) dt + b f(t) dt = a f(t) dt for all functions f(t) and real numbers a,\nb and c.\nTherefore the error must lie in line (II) or (III). We can work out the left hand sides of the\nequations explicitly as we did for line (V):\n                                      \u0012Z x     \u0013\n                                   d         2       d \u0002 1 3 \u0003x \u0001\n                                           t dt =         t\n                                  dx     0          dx 3 0\n                                                     d 1 3\n                                                 =       x )\n                                                    dx 3\n                                                 = x2\n\nso line (II) is correct. However,\n                                         \u0012Z 2x          \u0013\n                                     d           2             d \u0010\u0002 1 3 \u00032x \u0011\n                                                 t dt       =        t\n                                    dx     0                  dx 3 0\n                                                               d 8 3\u0001\n                                                            =      x\n                                                              dx 3\n                                                            = 8x2\n\nso line (III) is incorrect. Hence the correct option is D.\nThe reason for the error is that the fundamental theorem of calculus is stated for the case where\nthe upper limit is x; if the\n                          R 2xupper\u0001limit is 2x, then the integral grows twice as fast as x increases,\n                      d\nso we actually have dx 0 t dt = 2(2x) = 8x2 .\n                               2              2\n\n\n\n\nVersion 1.0, April 2021                                                                      Page 19\n\n                                                 © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            18
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            19
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q17",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 17,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "17   A set of six distinct integers is split into two sets of three.\n\n     The ﬁrst set of three integers has a mean of 10 and a median of 8.\n\n     The second set of three integers has a mean of 12 and a median of 9.\n\n     What is the smallest possible range of the set of all six integers?\n\n     A 8\n\n     B 10\n\n     C 11\n\n     D 12\n\n     E 14\n\n     F 15\n\n\n\n\n                                               19"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A set of six distinct integers is split into two sets of three.\n\n     The ﬁrst set of three integers has a mean of 10 and a median of 8.\n\n     The second set of three integers has a mean of 12 and a median of 9.\n\n     What is the smallest possible range of the set of all six integers?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "8"
+        },
+        {
+          "label": "B",
+          "rawText": "10"
+        },
+        {
+          "label": "C",
+          "rawText": "11"
+        },
+        {
+          "label": "D",
+          "rawText": "12"
+        },
+        {
+          "label": "E",
+          "rawText": "14"
+        },
+        {
+          "label": "F",
+          "rawText": "15"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let us write the six integers as two sets of three, each set in increasing order:\n\n                                         a, 8, b    c, 9, d\n\nWe know the middle integers are 8 and 9 because these are the medians.\nThe first set of three has a mean of 10 and so they must sum to 3 × 10 = 30, therefore a + b = 22.\nLikewise, the second set sums to 36 and so c + d = 27.\nWe also know that a ≤ 8 ≤ b and c ≤ 9 ≤ d.\nHere are tables of some of the possibilities for a and b and for c and d; the two tables are\nindependent of each other:\n\n                                     a     b           c    d\n                                     8    14           9   18\n                                     7    15           8   19\n                                     6    16           7   20\n                                     5    17           6   21\n                                     4    18           5   22\n                                     3    19           4   23\n\nThe range of the set of all six integers is the larger of b and d minus the smaller of a and c.\nAs all six integers are distinct, we cannot have a = 8 or c = 9 or c = 8. We also want b and d\nto be as small as possible while a and c are as large as possible to get a small range.\nLet us try a = 7, b = 15. Then we cannot have c = 7, so we try c = 6, d = 21. This gives a\nrange of 21 − 6 = 15.\nIf we now try a = 6, b = 16, we can take c = 7, d = 20, and this gives a range of 20 − 6 = 14,\nwhich is smaller.\nIf we next try a = 5, b = 17, we can again take c = 7, d = 20, but now the range has grown\nto 20 − 5 = 15 again. And if we go smaller with the choice of a, say a = 4, b = 18, then the\nsmallest range we can obtain becomes even larger: 20 − 4 = 16. The range will keep growing as\nwe take smaller values for a.\nSo the smallest possible range is 14, which is option E.\n\n\n\n\nVersion 1.0, April 2021                                                                   Page 20\n\n                                            © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            19
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            20
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q18",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 18,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "18   In this question, f(x) = ax3 + bx2 + cx + d and g(x) = px3 + qx2 + rx + s are cubic\n     polynomials.\n\n     If f (x) − g(x) > 0 for every real x, which of the following is/are necessarily true?\n\n         I    a>p\n         II   if b = q then c = r\n         III d > s\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                             20"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "In this question, f(x) = ax3 + bx2 + cx + d and g(x) = px3 + qx2 + rx + s are cubic\n     polynomials.\n\n     If f (x) − g(x) > 0 for every real x, which of the following is/are necessarily true?\n\n         I    a>p\n         II   if b = q then c = r\n         III d > s"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "G",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let us write f(x) − g(x) explicitly:\n\nf(x) − g(x) = (ax3 + bx2 + cx + d) − (px3 + qx2 + rx + s) = (a − p)x3 + (b − q)x2 + (c − r)x + (d − s).\n\nWe are given that this cubic is positive for every real x. But a cubic always crosses the x-axis!\nThe only way to reconcile this is if the cubic f(x)−g(x) is not actually a cubic, because a−p = 0.\nSo we have a − p = 0 and statement I is false. We can also now write\n\n                           f(x) − g(x) = (b − q)x2 + (c − r)x + (d − s).\n\nIf this function is always positive, then there are two possibilities: either b − q is nonzero and\nthe quadratic has a negative discriminant, or b − q = 0 and this is not actually a quadratic. The\nsecond option looks quite like statement II: if b − q = 0, that is, b = q, then we have\n\n                                  f(x) − g(x) = (c − r)x + (d − s).\n\nSince a linear function always crosses the x-axis, this cannot be always positive unless c − r = 0,\nin which case the function is actually just the constant f(x) − g(x) = (d − s). (To be more\nprecise, this is still a linear function, just with zero x coefficient.) Therefore, if f(x) − g(x) > 0\nfor all real x, it follows that if b = q, then c = r, and so statement II is true.\nWe have reached the end of this line of reasoning, and we have not stumbled upon anything that\nlooks like statement III. But d and s are the constant coefficients in the polynomials f and g, so\nif we take x = 0, we have f(0) = d and g(0) = s. Since f(0) − g(0) > 0, this shows that d − s > 0,\nor d > s, hence statement III is true.\nThe correct option is G.\n\n\n\n\nVersion 1.0, April 2021                                                                       Page 21\n\n                                             © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            20
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            21
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q19",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 19,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "19   Nine people are sitting in the squares of a 3 by 3 grid, one in each square, as shown.\n     Two people are called neighbours if they are sitting in squares that share a side.\n     (People in diagonally adjacent squares, which only have a point in common, are not\n     called neighbours.)\n\n\n\n\n     Each of the nine people in the grid is either a truth-teller who always tells the truth,\n     or a liar who always lies.\n\n     Every person in the grid says: ‘My neighbours are all liars’.\n\n     Given only this information, what are the smallest number and the largest number\n     of people who could be telling the truth?\n\n\n\n                 smallest                   largest\n      A             1                          4\n      B             2                          4\n      C             2                          5\n      D             3                          4\n      E             3                          5\n      F             4                          4\n      G             4                          5\n      H             5                          5\n\n\n\n\n                                             21"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Nine people are sitting in the squares of a 3 by 3 grid, one in each square, as shown.\n     Two people are called neighbours if they are sitting in squares that share a side.\n     (People in diagonally adjacent squares, which only have a point in common, are not\n     called neighbours.)\n\n\n\n\n     Each of the nine people in the grid is either a truth-teller who always tells the truth,\n     or a liar who always lies.\n\n     Every person in the grid says: ‘My neighbours are all liars’.\n\n     Given only this information, what are the smallest number and the largest number\n     of people who could be telling the truth?\n\n\n\n                 smallest                   largest"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "1                          4"
+        },
+        {
+          "label": "B",
+          "rawText": "2                          4"
+        },
+        {
+          "label": "C",
+          "rawText": "2                          5"
+        },
+        {
+          "label": "D",
+          "rawText": "3                          4"
+        },
+        {
+          "label": "E",
+          "rawText": "3                          5"
+        },
+        {
+          "label": "F",
+          "rawText": "4                          4"
+        },
+        {
+          "label": "G",
+          "rawText": "4                          5"
+        },
+        {
+          "label": "H",
+          "rawText": "5                          5"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The person in the centre gives us a lot of information. If they are a truth-teller, then all four\nneighbours are liars, but if they are a liar, then at least one neighbour is a truth-teller. Since\nwe are only interested in the number of truth-tellers and not their positions, we can assume the\nperson directly ‘above’ them is a truth-teller. So we have these two possibilities (where T means\ntruth-teller and L means liar):\n\n\n                            L                                       T\n\n\n                     L      T       L                               L\n\n\n                            L\n\n\n\nIn the first possibility, each corner position has two neighbours, both of whom are liars, so they\nmust be occupied by truth-tellers. In the second possibility, the top two corners must be liars,\ngiving these possibilities:\n\n\n                     T      L       T                           L   T       L\n\n\n                     L      T       L                               L\n\n\n                     T      L       T\n\n                     Case 1: 5 T, 4 L\n\nIn the right-hand possibility, the corner liars already have one neighbour who is a truth-teller,\nso the other neighbour could be either a truth-teller or a liar. This gives four possibilities for\nthe left side and right side people: both liars, both truth-tellers or one of each in either order.\nBy reflecting the grid, we only need to consider one case of one liar, one truth-teller, so we now\nhave these three possible ways of continuing the grid:\n\n\n       L       T      L                  L        T         L              L      T      L\n\n\n       L       L      L                  T        L         T              L      L      T\n\n\n\n\nEvery truth-teller is surrounded by liars, and every liar must have at least one truth-teller as a\nneighbour, so we can fill in some of the bottom row in each of these three possibilities:\n\n\n\n\nVersion 1.0, April 2021                                                                    Page 22\n\n                                             © UCLES 2021\n\f\nTest of Mathematics for University Admission, 2020 Paper 2 Solutions\n\n\n\n       L       T      L                 L        T         L            L      T       L\n\n\n       L       L      L                T         L         T            L       L      T\n\n\n       T              T                 L                  L            T              L\n\n\n\nWe can now fill in the final square in each of these, and check that the three people in the\nbottom row are consistent with the rules:\n\n\n       L       T      L                 L        T         L            L      T       L\n\n\n       L       L      L                T         L         T            L       L      T\n\n\n       T       L      T                 L        T         L            T       L      L\n\n       Case 2: 3 T, 6 L                Case 3: 4 T, 5 L                 Case 4: 3 T, 6 L\n\nWe therefore have four cases. The smallest number of truth-tellers is in cases 2 and 4, with\n3 truth-tellers, and the largest number is in case 1 with 5 truth-tellers. Therefore the correct\noption is E.\n\n\n\n\nVersion 1.0, April 2021                                                                 Page 23\n\n                                            © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            21
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            22,
+            23
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2020-p2-q20",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2020-p2",
+      "edition": "2020",
+      "paper": 2,
+      "questionNumber": 20,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "20   x is a real number and f is a function.\n\n     Given that exactly one of the following statements is true, which one is it?\n\n     A x ≥ 0 only if f(x) < 0\n\n     B x < 0 if f(x) ≥ 0\n\n     C x ≥ 0 only if f(x) ≥ 0\n\n     D f(x) < 0 if x < 0\n\n     E f(x) ≥ 0 only if x ≥ 0\n\n     F f(x) ≥ 0 if and only if x < 0\n\n\n\n\n                                               22"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "x is a real number and f is a function.\n\n     Given that exactly one of the following statements is true, which one is it?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "x ≥ 0 only if f(x) < 0"
+        },
+        {
+          "label": "B",
+          "rawText": "x < 0 if f(x) ≥ 0"
+        },
+        {
+          "label": "C",
+          "rawText": "x ≥ 0 only if f(x) ≥ 0"
+        },
+        {
+          "label": "D",
+          "rawText": "f(x) < 0 if x < 0"
+        },
+        {
+          "label": "E",
+          "rawText": "f(x) ≥ 0 only if x ≥ 0"
+        },
+        {
+          "label": "F",
+          "rawText": "f(x) ≥ 0 if and only if x < 0"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "It is helpful to write all six statements as ‘if . . . then’ statements:\n\nA if x ≥ 0 then f(x) < 0\n\nB if f(x) ≥ 0 then x < 0\n\nC if x ≥ 0 then f(x) ≥ 0\n\nD if x < 0 then f(x) < 0\n\nE if f(x) ≥ 0 then x ≥ 0\n\nF if x < 0 then f(x) ≥ 0 and if f(x) ≥ 0 then x < 0\n\nIf F is true, then B is also true, so F is false.\nLet us suppose that A is true. Then its contrapositive is also true. The contrapositive of A is:\nif f(x) ≥ 0 then x < 0, which is statement B. So A and B are either both true or both false.\nSince exactly one statement is true, A and B must both be false.\nSimilarly, D and E are contrapositives of each other, so they must both be false as well.\nThe only statement left is C, so that must be true.\nFurthermore, C contradicts A, so A (and B) must be false; C is independent of D (knowing that\nC is true does not give any information about whether D is true or false), and C contradicts F,\nso F must be false.\nTherefore having C true and the other five statements false is consistent; the function f(x) = |x|\nis an example of a function for which C is true and the other five statements are false.\n\n\n\n\nVersion 1.0, April 2021                                                                   Page 24\n\n                                             © UCLES 2021\n\f\nThis document was initially designed for print and as such does not reach accessibility standard\nWCAG 2.1 in a number of ways including missing text alternatives and missing document structure.\n\n\n\nIf you need this document in a different format please email\nadmissionstesting@cambridgeassessment.org.uk telling us your name, email address and\nrequirements and we will respond within 15 working days.\n\n\n\nThis document contains maths equations and symbols which at present we are not able to produce\nadequately for accessibility. We are working to improve this.\n\n\n\n\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur range of research-based admissions tests connects schools, universities, governments\nand employers to the most suitable applicants around the world.\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\nAdmissions tests support: www.admissionstesting.org/help\n\n\n\n\n                                           © UCLES 2021"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2020-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+          "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+          "pages": [
+            22
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2020-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+          "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+          "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+          "pages": [
+            24,
+            25
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    }
+  ]
+}

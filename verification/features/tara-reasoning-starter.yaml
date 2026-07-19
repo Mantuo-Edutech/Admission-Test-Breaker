@@ -1,0 +1,81 @@
+schemaVersion: 1
+feature:
+  id: tara-reasoning-starter
+  title: Original TARA reasoning starter diagnostic
+  status: partial
+  userOutcome: >-
+    A student can see the current three-part TARA structure and complete a free,
+    native ten-question Critical Thinking and Problem Solving starter without
+    leaving the website.
+
+run:
+  packageScript: verify:tara-starter
+
+claims:
+  - id: current-2027-structure
+    status: verified
+    statement: >-
+      The versioned assessment registry now includes the current 2027 TARA format:
+      22 Critical Thinking questions, 22 Problem Solving questions and one Writing
+      Task selected from three prompts, each module lasting 40 minutes.
+    artifacts:
+      - content/exams/assessment-structures.json
+      - src/features/practice/catalog/assessment-registry.ts
+      - tests/features/practice/catalog/assessment-registry.test.ts
+    automatedChecks:
+      - verify:tara-starter
+      - typecheck
+
+  - id: original-reasoning-dataset
+    status: verified
+    statement: >-
+      Ten Mantou-original questions cover five Critical Thinking and five Problem
+      Solving families. The paper is labelled teaching-preview, uses SHA-pinned
+      Specification and Question Guide anchors for scope only, and contains no
+      TARA, BMAT or TSA source-PDF blocks.
+    artifacts:
+      - content/tara/original-practice/reasoning-starter-v1.json
+      - src/features/practice/content/tara-reasoning-starter.ts
+      - tests/features/practice/content/tara-reasoning-starter.test.ts
+    automatedChecks:
+      - verify:tara-starter
+      - verify:official-research
+      - typecheck
+
+  - id: native-entry-and-session
+    status: verified
+    statement: >-
+      TARA has a dedicated internal practice-library route, contextual navigation
+      and a direct start action. The shared kernel records answers, timing, marking,
+      submission, factual results and question feedback for the original starter.
+    artifacts:
+      - src/features/catalog/pages/AssessmentPracticeLibraryPage.tsx
+      - src/features/navigation/components/SiteHeader.tsx
+      - src/app/routes.tsx
+      - src/features/practice/content/practice-paper-registry.ts
+      - tests/app/multi-exam-practice-library.test.tsx
+      - tests/app/practice-page.test.tsx
+    automatedChecks:
+      - verify:tara-starter
+      - verify:content-products
+      - build
+
+boundaries:
+  - This is a Mantou-original reasoning starter, not an official TARA paper or a claim of official-equivalent difficulty.
+  - This ten-question starter is not itself a complete module and is not converted to the official 1–9 scale; separate 22-question Critical Thinking and Problem Solving full mocks now ship under tara-full-reasoning-mocks.
+  - The separate Writing Task teaching preview now ships under tara-lnat-writing-practice; calibrated human feedback remains outside this reasoning starter.
+  - Independent reasoning-teacher, bilingual terminology and phone/tablet/desktop visual review remain before final publication status.
+
+manualChecks:
+  - id: independent-reasoning-review
+    status: pending
+    evidence: A separate TARA/TSA reasoning teacher must verify wording, distractors, taxonomy, answer keys and difficulty spread.
+    viewports:
+      - content
+  - id: browser-device-review
+    status: pending
+    evidence: Automated component, type and production-build checks pass; desktop, tablet and phone visual review remains explicit.
+    viewports:
+      - desktop
+      - tablet
+      - phone

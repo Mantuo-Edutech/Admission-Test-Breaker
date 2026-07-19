@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16   The Fundamental Theorem of Calculus (FTC) tells us that for any polynomial f :\n\n                                         d\n                                             \u0006\u0005 x          \u0007\n                                        dx     0\n                                                    f(t) dt = f(x)\n\n\n                           d\n                               \u0006\u0005 2x 2 \u0007\n     A student calculates dx     x\n                                    t dt as follows:\n\n                \u0005 2x 2      \u0005 2x 2      \u0005x 2\n         (I)     x\n                    t  dt =  0\n                                t  dt −  0\n                                           t dt\n\n\n                         d\n                               \u0006\u0005 x 2 \u0007\n         (II)   By FTC, dx       0\n                                   t dt = x2\n\n\n                        d\n                               \u0006\u0005 2x 2 \u0007\n         (III) By FTC, dx        0\n                                    t dt = (2x)2 = 4x2\n\n                        \u0006\u0005 2x 2 \u0007\n         (IV)       d\n                So dx     x\n                             t dt = 4x2 − x2\n\n\n                        d\n                            \u0006\u0005 2x 2 \u0007\n         (V)    giving dx     x\n                                 t dt = 3x2\n\n\n     Which of the following best describes the student’s calculation?\n\n     A The calculation is completely correct.\n\n     B The calculation is incorrect, and the ﬁrst error occurs on line (I).\n\n     C The calculation is incorrect, and the ﬁrst error occurs on line (II).\n\n     D The calculation is incorrect, and the ﬁrst error occurs on line (III).\n\n     E The calculation is incorrect, and the ﬁrst error occurs on line (IV).\n\n     F The calculation is incorrect, and the ﬁrst error occurs on line (V).\n\n\n\n\n                                                    18"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The Fundamental Theorem of Calculus (FTC) tells us that for any polynomial f :\n\n                                         d\n                                             CB x          D\n                                        dx     0\n                                                    f(t) dt = f(x)\n\n\n                           d\n                               CB 2x 2 D\n     A student calculates dx     x\n                                    t dt as follows:\n\n                B 2x 2      B 2x 2      Bx 2\n         (I)     x\n                    t  dt =  0\n                                t  dt −  0\n                                           t dt\n\n\n                         d\n                               CB x 2 D\n         (II)   By FTC, dx       0\n                                   t dt = x2\n\n\n                        d\n                               CB 2x 2 D\n         (III) By FTC, dx        0\n                                    t dt = (2x)2 = 4x2\n\n                        CB 2x 2 D\n         (IV)       d\n                So dx     x\n                             t dt = 4x2 − x2\n\n\n                        d\n                            CB 2x 2 D\n         (V)    giving dx     x\n                                 t dt = 3x2\n\n\n     Which of the following best describes the student’s calculation?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "The calculation is completely correct."
+    },
+    {
+      "label": "B",
+      "rawText": "The calculation is incorrect, and the ﬁrst error occurs on line (I)."
+    },
+    {
+      "label": "C",
+      "rawText": "The calculation is incorrect, and the ﬁrst error occurs on line (II)."
+    },
+    {
+      "label": "D",
+      "rawText": "The calculation is incorrect, and the ﬁrst error occurs on line (III)."
+    },
+    {
+      "label": "E",
+      "rawText": "The calculation is incorrect, and the ﬁrst error occurs on line (IV)."
+    },
+    {
+      "label": "F",
+      "rawText": "The calculation is incorrect, and the ﬁrst error occurs on line (V)."
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can check whether the calculation stands any chance of being correct by checking whether\nline (V) is correct. We can work out the integral directly:\n                                \u0012Z 2x      \u0013\n                              d         2        d \u0010\u0002 1 3 \u00032x \u0011\n                                       t dt =            t\n                             dx    x            dx 3 x\n                                                 d 1\n                                                       (2x)3 − 13 x3\n                                                                     \u0001\n                                             =       3\n                                                dx\n                                                 d 7 3\u0001\n                                             =         x\n                                                dx 3\n                                             = 7x2\n\nSo an error has certainly been introduced somewhere.\nFrom this, it is clear that line (IV) is also incorrect.\n                        Rb          Rc           Rc\nLine (I) is correct, as a f(t) dt + b f(t) dt = a f(t) dt for all functions f(t) and real numbers a,\nb and c.\nTherefore the error must lie in line (II) or (III). We can work out the left hand sides of the\nequations explicitly as we did for line (V):\n                                      \u0012Z x     \u0013\n                                   d         2       d \u0002 1 3 \u0003x \u0001\n                                           t dt =         t\n                                  dx     0          dx 3 0\n                                                     d 1 3\n                                                 =       x )\n                                                    dx 3\n                                                 = x2\n\nso line (II) is correct. However,\n                                         \u0012Z 2x          \u0013\n                                     d           2             d \u0010\u0002 1 3 \u00032x \u0011\n                                                 t dt       =        t\n                                    dx     0                  dx 3 0\n                                                               d 8 3\u0001\n                                                            =      x\n                                                              dx 3\n                                                            = 8x2\n\nso line (III) is incorrect. Hence the correct option is D.\nThe reason for the error is that the fundamental theorem of calculus is stated for the case where\nthe upper limit is x; if the\n                          R 2xupper\u0001limit is 2x, then the integral grows twice as fast as x increases,\n                      d\nso we actually have dx 0 t dt = 2(2x) = 8x2 .\n                               2              2\n\n\n\n\nVersion 1.0, April 2021                                                                      Page 19\n\n                                                 © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

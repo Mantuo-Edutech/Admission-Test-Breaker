@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13   Find the coeﬃcient of x2 y 4 in the expansion of (1 + x + y 2 )7\n\n     A 6\n\n     B 10\n\n     C 21\n\n     D 35\n\n     E 105\n\n     F 210\n\n\n\n\n                                               15"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the coeﬃcient of x2 y 4 in the expansion of (1 + x + y 2 )7"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "6"
+    },
+    {
+      "label": "B",
+      "rawText": "10"
+    },
+    {
+      "label": "C",
+      "rawText": "21"
+    },
+    {
+      "label": "D",
+      "rawText": "35"
+    },
+    {
+      "label": "E",
+      "rawText": "105"
+    },
+    {
+      "label": "F",
+      "rawText": "210"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We have not learnt a “trinomial theorem” for expanding expressions like (1 + x + y 2 )7 , so instead\nwe treat it as a binomial expression. If we write it as (1 + (x + y 2 ))7 , we will then have a series of\ncomplicated expressions like (x+y 2 )3 that we have to handle. But if we write it as (x+(1+y 2 ))7 ,\nwe will be separating the x’s and the y’s, which is much simpler for our needs.\nWe have\n\n               (1 + x + y 2 )7 = (x + (1 + y 2 ))7\n                                      \u0012 \u0013                       \u0012 \u0013\n                                  7     7 6        2             7 2\n                               =x +        x (1 + y ) + · · · +      x (1 + y 2 )5 + · · ·\n                                        1                        5\n\nso we need only consider the x2 term; note also that 75 = 72 = 7×6                         2\n                                                             \u0001     \u0001\n                                                                         2 = 21. So the x term is\n   2      2 5\n21x (1 + y ) .\nWe next want the y 4 term of (1 + y 2 )5 , so we expand this too using the binomial theorem:\n                                               \u0012 \u0013      \u0012 \u0013\n                                     2 5         5 2      5 4\n                               (1 + y ) = 1 +      y +       y + ···\n                                                 1        2\n\nso the y 4 term is 52 y 4 = 10y 4 .\n                     \u0001\n\nTherefore the x2 y 4 term is 21x2 × 10y 4 = 210x2 y 4 , and the coefficient is 210; this is option F.\n\n\n\n\nVersion 1.0, April 2021                                                                         Page 15\n\n                                              © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

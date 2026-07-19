@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q06",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 6,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "6\n\n6.     The area of a rectangle is measured to be 5600 cm correct to 2 significant figures.\n\n       The width of the rectangle is measured to be 80 cm correct to the nearest centimetre.\n\n       Which one of the following expressions gives the greatest possible height of the\n       rectangle?\n\n\n       A       70.5 cm\n\n       B       75 cm\n\n\n       C             cm\n\n\n       D             cm\n                 .\n\n\n       E             cm\n\n\n       F             cm\n                 .\n\n\n\n\n© UCLES 2017"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "6.     The area of a rectangle is measured to be 5600 cm correct to 2 significant figures.\n\n       The width of the rectangle is measured to be 80 cm correct to the nearest centimetre.\n\n       Which one of the following expressions gives the greatest possible height of the\n       rectangle?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "70.5 cm"
+    },
+    {
+      "label": "B",
+      "rawText": "75 cm"
+    },
+    {
+      "label": "C",
+      "rawText": "cm"
+    },
+    {
+      "label": "D",
+      "rawText": "cm\n                 ."
+    },
+    {
+      "label": "E",
+      "rawText": "cm"
+    },
+    {
+      "label": "F",
+      "rawText": "cm\n                 .\n\n\n\n\n© UCLES 2017"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The area of the rectangle is height times width, so\n                                                     area\n                                         height =          .\n                                                     width\nTo obtain the greatest possible height, we require the greatest possible area and the least possible\nwidth. The upper bound for the area is 5650 cm, and the lower bound for the height is 79.5 cm,\nso the greatest possible height is 5650\n                                   79.5 cm, which is option F.\n\n\n\n\n                                                 9\n                                                                                       © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -59,7 +59,7 @@ export function createPreparationProfile(
   if (!/^20\d{2}$/.test(input.entryCycle)) {
     throw new Error("Entry cycle must be a four-digit year beginning with 20");
   }
-  if (input.curriculumSystem !== "caie" && input.curriculumSystem !== "pearson-ial") {
+  if (!["caie", "pearson-ial", "ib", "ap"].includes(input.curriculumSystem)) {
     throw new Error("Curriculum system is unsupported");
   }
   if (!experienceValues.has(input.experience)) {

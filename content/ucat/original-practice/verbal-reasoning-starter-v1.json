@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "id": "ucat-verbal-reasoning-starter-v1",
+  "exam": "UCAT",
+  "edition": "Verbal Reasoning Starter · Original v1",
+  "sectionLabel": "Verbal Reasoning Starter",
+  "sectionLabelZh": "文字推理 · 满托原创短诊断",
+  "durationMinutes": 6,
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本练习依据 UCAT 公开能力与界面范围独立命题，不复制或改写 UCAT 官方 Question Bank、Practice Test 或解析。",
+  "sourceAnchors": [
+    {
+      "id": "ucat-2026-flyer",
+      "localPath": "content/official/raw/ucat/flyer-2026.pdf",
+      "sha256": "d41aced66344051a8e81173ee2a093126dc3c20e213602cad55778b85e16b367",
+      "usedFor": "current four-subtest identity and cycle boundary only"
+    },
+    {
+      "id": "ucat-preparation-plan",
+      "localPath": "content/official/raw/ucat/prep-plan-5.pdf",
+      "sha256": "136e3775e77f03fef4baab5bcb85a0affaba74d240981748c9cc1474cfdbf7b9",
+      "usedFor": "official practice sequence terminology only"
+    }
+  ],
+  "passages": [
+    {
+      "id": "fog-collectors",
+      "title": "Fog collectors",
+      "content": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Fog collectors use vertical mesh to intercept tiny airborne water droplets. In a twelve-week project, researchers compared a fine mesh with a coarser mesh at two coastal sites. On an exposed ridge, the fine mesh captured more water per square metre before maintenance was considered. At the lower site, however, salt and dust blocked the fine mesh more quickly. Because it required frequent cleaning, the fine mesh delivered less usable water there than the coarse mesh." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Both designs fed covered storage tanks. The researchers measured water entering the tanks but did not measure losses during later distribution to homes. The trial ran in spring and neither design was tested in winter. The team concluded that mesh choice should take account of local wind, airborne particles and the staff time available for maintenance, rather than relying only on a headline capture rate." }] }
+      ]
+    },
+    {
+      "id": "museum-digitisation",
+      "title": "A museum digitisation project",
+      "content": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A regional museum holds about 20,000 objects. Over two years it created online records for 800 objects, selecting items that were fragile, frequently requested or difficult to display. Online views rose steadily while physical visits remained close to their previous level. In a voluntary website survey, 60 per cent of respondents said that they lived outside the region." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Scanning was only one part of the work. Each record also required a description, rights checks and links to related material. Trained volunteers drafted some descriptions, but a curator checked every record before publication. A donor funded the first two years. The museum has not yet announced whether the same level of funding will continue. Staff regard the project as a useful way to widen access, but they do not claim that an online record can replace examining every object in person." }] }
+      ]
+    },
+    {
+      "id": "street-trees",
+      "title": "Street trees and summer temperature",
+      "content": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Researchers monitored twenty city streets for three summers. Ten streets received new trees and ten did not. By the third summer, sensors on the planted streets recorded an average midday temperature 1.2°C lower than sensors on the comparison streets. Average night-time temperatures did not differ. Eighty-eight per cent of the new trees survived to the end of the study." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "The streets were matched for width and traffic, but they were not assigned randomly: trees could be planted only where underground utilities left enough space. The researchers therefore warned that unmeasured differences might remain. Trees were irrigated during the first two summers; rainfall was typical in the third. The study did not include a severe drought, and the average cooling figure does not mean that every planted street was cooler on every day." }] }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ucat-verbal-reasoning-starter-v1-q01", "number": 1, "sourcePage": 1, "passageId": "fog-collectors",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "On the exposed ridge, the fine mesh captured more water per square metre before maintenance was considered." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "True" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "False" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Can't Tell" }] }] }
+      ],
+      "correctAnswer": "A", "knowledgeTags": ["ucat-vr-explicit-information"], "skillTags": ["locate", "true-false-cant-tell"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-verbal-reasoning-starter-v1-q02", "number": 2, "sourcePage": 1, "passageId": "fog-collectors",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The coarse mesh delivered more usable water than the fine mesh at both trial sites." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "True" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "False" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Can't Tell" }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["ucat-vr-contradiction"], "skillTags": ["contradiction", "true-false-cant-tell"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-verbal-reasoning-starter-v1-q03", "number": 3, "sourcePage": 1, "passageId": "fog-collectors",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "In winter, the coarse mesh would deliver more water than the fine mesh at the lower site." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "True" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "False" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Can't Tell" }] }] }
+      ],
+      "correctAnswer": "C", "knowledgeTags": ["ucat-vr-insufficient-information"], "skillTags": ["insufficient-information", "true-false-cant-tell"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-verbal-reasoning-starter-v1-q04", "number": 4, "sourcePage": 1, "passageId": "fog-collectors",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which conclusion is best supported by the passage?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Fine mesh should always be chosen because its openings are smaller." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Distribution losses were greater at the exposed ridge." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Fog collection can supply every household throughout the year." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The most suitable mesh can depend on local conditions and maintenance capacity." }] }] }
+      ],
+      "correctAnswer": "D", "knowledgeTags": ["ucat-vr-conclusion"], "skillTags": ["best-supported-conclusion"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-verbal-reasoning-starter-v1-q05", "number": 5, "sourcePage": 2, "passageId": "museum-digitisation",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The museum created online records for every object in its collection." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "True" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "False" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Can't Tell" }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["ucat-vr-quantity-check"], "skillTags": ["quantity", "contradiction"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-verbal-reasoning-starter-v1-q06", "number": 6, "sourcePage": 2, "passageId": "museum-digitisation",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some people who viewed the museum website lived outside the museum's region." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "True" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "False" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Can't Tell" }] }] }
+      ],
+      "correctAnswer": "A", "knowledgeTags": ["ucat-vr-inference"], "skillTags": ["safe-inference", "survey"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-verbal-reasoning-starter-v1-q07", "number": 7, "sourcePage": 2, "passageId": "museum-digitisation",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The museum will receive the same level of donor funding for a third year." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "True" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "False" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Can't Tell" }] }] }
+      ],
+      "correctAnswer": "C", "knowledgeTags": ["ucat-vr-future-claim"], "skillTags": ["future-claim", "insufficient-information"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-verbal-reasoning-starter-v1-q08", "number": 8, "sourcePage": 2, "passageId": "museum-digitisation",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which statement best summarises the passage?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Digitisation eliminated the need for curators and physical visits." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The project reduced physical visits to the museum." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Volunteer descriptions were published without any review." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Selective digitisation widened access but required continuing expert work and funding." }] }] }
+      ],
+      "correctAnswer": "D", "knowledgeTags": ["ucat-vr-summary"], "skillTags": ["summary", "synthesis"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-verbal-reasoning-starter-v1-q09", "number": 9, "sourcePage": 3, "passageId": "street-trees",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Average night-time temperature did not differ between the planted and comparison streets." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "True" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "False" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Can't Tell" }] }] }
+      ],
+      "correctAnswer": "A", "knowledgeTags": ["ucat-vr-comparison"], "skillTags": ["comparison", "locate"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-verbal-reasoning-starter-v1-q10", "number": 10, "sourcePage": 3, "passageId": "street-trees",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every newly planted tree survived until the end of the study." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "True" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "False" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Can't Tell" }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["ucat-vr-proportion"], "skillTags": ["proportion", "contradiction"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-verbal-reasoning-starter-v1-q11", "number": 11, "sourcePage": 3, "passageId": "street-trees",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The planted streets would remain cooler during a severe drought without irrigation." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "True" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "False" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Can't Tell" }] }] }
+      ],
+      "correctAnswer": "C", "knowledgeTags": ["ucat-vr-extrapolation"], "skillTags": ["extrapolation", "insufficient-information"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-verbal-reasoning-starter-v1-q12", "number": 12, "sourcePage": 3, "passageId": "street-trees",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which conclusion is most justified by the study as described?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Trees reduced temperature on every planted street at every time of day." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Underground utilities have no relationship to street temperature." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The study proves identical effects in all cities and climates." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Tree planting was associated with lower average midday temperature, but non-random allocation limits causal certainty." }] }] }
+      ],
+      "correctAnswer": "D", "knowledgeTags": ["ucat-vr-study-limit"], "skillTags": ["study-design", "qualified-conclusion"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/verbal-reasoning-starter-v1.json"
+    }
+  ]
+}

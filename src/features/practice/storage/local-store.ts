@@ -10,18 +10,17 @@ import {
   asUserId,
   assertCanonicalUtcTimestamp,
 } from "../../../platform/shared/ids.js";
-import {
-  TMUA_2023_P1_QUESTION_COUNT,
-  type PracticeSession,
-} from "../domain/session.js";
+import type { PracticeSession } from "../domain/session.js";
 import type {
   PracticeSessionStore,
   SessionLoadResult,
   SessionSaveResult,
 } from "./store.js";
+import type { PracticeHistoryArchive } from "../history/store.js";
 
-export const PRACTICE_SESSION_STORAGE_KEY = "tmua:practice:current:v1";
-const corruptKeyPrefix = "tmua:practice:corrupt:";
+export const PRACTICE_SESSION_STORAGE_KEY = "admission-test-breaker:practice:current:v1";
+const LEGACY_PRACTICE_SESSION_STORAGE_KEY = "tmua:practice:current:v1";
+const corruptKeyPrefix = "admission-test-breaker:practice:corrupt:";
 
 const sessionFields = new Set([
   "schemaVersion",
@@ -120,11 +119,11 @@ function actorsEqual(left: ActorRef, right: ActorRef): boolean {
   return false;
 }
 
-const paperIdPattern = /^tmua-(?:specimen|practice-2016|20\d{2})-p[12]$/u;
+const paperIdPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
 
 function assertQuestionId(value: string, paperId: string, label: string): void {
   const expectedPrefix = `${paperId}-q`;
-  if (!value.startsWith(expectedPrefix) || !/^(?:0[1-9]|1\d|20)$/u.test(value.slice(expectedPrefix.length))) {
+  if (!value.startsWith(expectedPrefix) || !/^(?:0[1-9]|[1-9]\d)$/u.test(value.slice(expectedPrefix.length))) {
     throw new Error(`${label} does not belong to ${paperId}`);
   }
 }
@@ -134,7 +133,11 @@ function parseAnswers(value: unknown, paperId: string): Record<string, string> {
   const answers: Record<string, string> = {};
   for (const [questionId, answer] of Object.entries(value)) {
     assertQuestionId(questionId, paperId, "Answer question ID");
-    if (typeof answer !== "string" || !/^[A-Z]$/.test(answer)) {
+    if (
+      typeof answer !== "string" ||
+      answer.trim().length === 0 ||
+      answer.length > 20_000
+    ) {
       throw new Error(`Answer for ${questionId} is invalid`);
     }
     answers[questionId] = answer;
@@ -208,7 +211,7 @@ function parseEvents(
   return rebuilt;
 }
 
-function parseSession(value: unknown): PracticeSession {
+export function parseStoredPracticeSession(value: unknown): PracticeSession {
   assertRecord(value, "Practice session");
   if (value.schemaVersion !== 2) {
     throw new UnsupportedSessionError("Practice session schema is unsupported");
@@ -246,7 +249,7 @@ function parseSession(value: unknown): PracticeSession {
   if (
     !Number.isInteger(value.currentQuestion) ||
     (value.currentQuestion as number) < 1 ||
-    (value.currentQuestion as number) > TMUA_2023_P1_QUESTION_COUNT
+    (value.currentQuestion as number) > 99
   ) {
     throw new Error("currentQuestion is invalid");
   }
@@ -310,12 +313,13 @@ export class LocalPracticeSessionStore implements PracticeSessionStore {
   constructor(
     private readonly storage: Storage,
     private readonly now: () => Date = () => new Date(),
+    private readonly history?: PracticeHistoryArchive,
   ) {}
 
   async loadCurrent(): Promise<SessionLoadResult> {
     let raw: string | null;
     try {
-      raw = this.storage.getItem(PRACTICE_SESSION_STORAGE_KEY);
+      raw = this.storage.getItem(PRACTICE_SESSION_STORAGE_KEY) ?? this.storage.getItem(LEGACY_PRACTICE_SESSION_STORAGE_KEY);
     } catch {
       return { session: this.memorySession, issue: null };
     }
@@ -325,7 +329,7 @@ export class LocalPracticeSessionStore implements PracticeSessionStore {
     }
 
     try {
-      const session = parseSession(JSON.parse(raw) as unknown);
+      const session = parseStoredPracticeSession(JSON.parse(raw) as unknown);
       this.memorySession = session;
       return { session, issue: null };
     } catch (error) {
@@ -340,11 +344,13 @@ export class LocalPracticeSessionStore implements PracticeSessionStore {
 
   async save(session: PracticeSession): Promise<SessionSaveResult> {
     const serialized = JSON.stringify(session);
-    parseSession(JSON.parse(serialized) as unknown);
+    parseStoredPracticeSession(JSON.parse(serialized) as unknown);
     this.memorySession = session;
+    await this.history?.record(session);
 
     try {
       this.storage.setItem(PRACTICE_SESSION_STORAGE_KEY, serialized);
+      this.storage.removeItem(LEGACY_PRACTICE_SESSION_STORAGE_KEY);
       return { persisted: true };
     } catch {
       return { persisted: false };
@@ -355,6 +361,7 @@ export class LocalPracticeSessionStore implements PracticeSessionStore {
     this.memorySession = null;
     try {
       this.storage.removeItem(PRACTICE_SESSION_STORAGE_KEY);
+      this.storage.removeItem(LEGACY_PRACTICE_SESSION_STORAGE_KEY);
     } catch {
       // Memory state is still cleared when browser persistence is unavailable.
     }
@@ -369,6 +376,7 @@ export class LocalPracticeSessionStore implements PracticeSessionStore {
     }
     try {
       this.storage.removeItem(PRACTICE_SESSION_STORAGE_KEY);
+      this.storage.removeItem(LEGACY_PRACTICE_SESSION_STORAGE_KEY);
     } catch {
       // Loading still returns an issue and never trusts the malformed record.
     }

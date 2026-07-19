@@ -1,33 +1,62 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { Download, ShieldCheck, X } from "lucide-react";
+import { useEffect, useRef } from "react";
 
-export type WechatAccessTarget = "mock-library" | "review-notes";
+export type WechatAccessTarget =
+  | "past-paper-library"
+  | "published-learning-materials"
+  | "review-notes"
+  | "deep-review";
 
 interface WechatAccessDialogProps {
   open: boolean;
   target: WechatAccessTarget;
+  examName?: "TMUA" | "ESAT" | "TARA" | "LNAT" | "UCAT" | "英国升学考试";
   onOpenChange(open: boolean): void;
+  onOpened?(): void;
 }
 
 const ACCESS_TARGETS: Readonly<
   Record<WechatAccessTarget, { name: string; requestLabel: string }>
 > = {
-  "mock-library": {
-    name: "完整模考",
-    requestLabel: "完整模考",
+  "published-learning-materials": {
+    name: "已发布复习资料",
+    requestLabel: "六周训练计划或逐题解析",
   },
   "review-notes": {
     name: "完整版复习笔记",
     requestLabel: "复习笔记",
+  },
+  "deep-review": {
+    name: "逐题深度解析",
+    requestLabel: "逐题深度解析邀请码",
+  },
+  "past-paper-library": {
+    name: "历年真题题库",
+    requestLabel: "历年真题题库",
   },
 };
 
 export function WechatAccessDialog({
   open,
   target,
+  examName = "TMUA",
   onOpenChange,
+  onOpened,
 }: WechatAccessDialogProps) {
   const accessTarget = ACCESS_TARGETS[target];
+  const reportedOpen = useRef(false);
+
+  useEffect(() => {
+    if (!open) {
+      reportedOpen.current = false;
+      return;
+    }
+    if (!reportedOpen.current) {
+      reportedOpen.current = true;
+      onOpened?.();
+    }
+  }, [onOpened, open]);
 
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
@@ -62,7 +91,7 @@ export function WechatAccessDialog({
             <div className="wechat-access-dialog__steps">
               <p>添加后这样发送</p>
               <ol>
-                <li><span>01</span><strong>发送关键词「TMUA」</strong></li>
+                <li><span>01</span><strong>发送关键词「{examName}」</strong></li>
                 <li><span>02</span><strong>说明需要「{accessTarget.requestLabel}」</strong></li>
                 <li><span>03</span><strong>冰冰会确认当前可获取的版本</strong></li>
               </ol>

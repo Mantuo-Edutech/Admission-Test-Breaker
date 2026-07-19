@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "id": "ucat-quantitative-reasoning-starter-v1",
+  "exam": "UCAT",
+  "edition": "Quantitative Reasoning Starter · Original v1",
+  "sectionLabel": "Quantitative Reasoning Starter",
+  "sectionLabelZh": "数量推理 · 满托原创短诊断",
+  "durationMinutes": 8,
+  "deliveryMode": "structured",
+  "responseMode": "choice",
+  "calculator": "basic",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本练习依据 UCAT 公开分测验与工具范围独立命题，不复制或改写官方 Question Bank、Practice Test、数据表或解析。",
+  "sourceAnchors": [
+    {
+      "id": "ucat-format-snapshot",
+      "localPath": "content/official/raw/pages/ucat-format.html",
+      "sha256": "9aa4a93bddcc62bf53c6196f2b38ac40240a1f781154590c772c68f179d52dbf",
+      "usedFor": "current Quantitative Reasoning identity and timing boundary only"
+    },
+    {
+      "id": "ucat-tools-snapshot",
+      "localPath": "content/official/raw/pages/ucat-tools.html",
+      "sha256": "a659bedc40b1a603cb755e75121a19a633889d2aab62b66d62378e804f7b8c7c",
+      "usedFor": "basic calculator availability boundary only"
+    }
+  ],
+  "passages": [
+    {
+      "id": "clinic-activity",
+      "title": "Clinic activity",
+      "content": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "The table shows one day's booked appointments. Treat all percentages as exact." }] },
+        {
+          "kind": "table",
+          "caption": "Booked appointments and consultation time",
+          "headers": ["Clinic", "Booked", "No-show rate", "Average consultation"],
+          "rows": [
+            ["North", "160", "12.5%", "18 min"],
+            ["Central", "180", "10%", "15 min"],
+            ["West", "140", "5%", "20 min"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pharmacy-stock",
+      "title": "Pharmacy stock",
+      "content": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "All quantities are packs. Closing stock equals opening stock plus packs received, minus packs issued and damaged." }] },
+        {
+          "kind": "table",
+          "caption": "Weekly stock movement",
+          "headers": ["Item", "Opening", "Received", "Issued", "Damaged"],
+          "rows": [
+            ["A", "480", "240", "515", "5"],
+            ["B", "350", "180", "402", "8"],
+            ["C", "625", "0", "540", "10"],
+            ["D", "290", "330", "500", "20"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mobile-clinic-routes",
+      "title": "Mobile clinic routes",
+      "content": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Distance is one way. Fuel cost applies to every kilometre of the round trip, while each toll is paid once for the complete round trip." }] },
+        {
+          "kind": "table",
+          "caption": "Route distance, time and direct cost",
+          "headers": ["Route", "One-way distance", "Outward time", "Return time", "Fuel per km", "Round-trip toll"],
+          "rows": [
+            ["A", "84 km", "70 min", "80 min", "£0.16", "£6"],
+            ["B", "72 km", "65 min", "75 min", "£0.18", "£2"],
+            ["C", "96 km", "80 min", "85 min", "£0.14", "£0"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health-study",
+      "title": "Health study participants",
+      "content": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "An adverse event count records participants with at least one event during the study." }] },
+        {
+          "kind": "table",
+          "caption": "Twelve-week study outcomes",
+          "headers": ["Age group", "Started", "Completed", "Adverse event"],
+          "rows": [
+            ["18–29", "120", "102", "18"],
+            ["30–49", "160", "136", "20"],
+            ["50–69", "100", "82", "17"]
+          ]
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ucat-quantitative-reasoning-starter-v1-q01", "number": 1, "sourcePage": 1, "passageId": "clinic-activity",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "How many patients were expected to attend the North clinic?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "136" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "140" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "142" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "144" }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["ucat-qr-percentage-decrease"], "skillTags": ["percentage", "one-step"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-quantitative-reasoning-starter-v1-q02", "number": 2, "sourcePage": 1, "passageId": "clinic-activity",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "If every expected attendee at Central receives one consultation, how many consultation hours are scheduled?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "36 hours" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "39 hours" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "40.5 hours" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "45 hours" }] }] }
+      ],
+      "correctAnswer": "C", "knowledgeTags": ["ucat-qr-time-conversion"], "skillTags": ["percentage", "minutes-to-hours"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-quantitative-reasoning-starter-v1-q03", "number": 3, "sourcePage": 1, "passageId": "clinic-activity",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "West increases booked appointments by 10% and keeps the same no-show rate. How many additional patients are expected to attend?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "12.6" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "13.3" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "14.0" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "14.7" }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["ucat-qr-percentage-increase"], "skillTags": ["successive-percentage", "difference"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-quantitative-reasoning-starter-v1-q04", "number": 4, "sourcePage": 2, "passageId": "pharmacy-stock",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "What was the total closing stock across all four items?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "395 packs" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "445 packs" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "475 packs" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "495 packs" }] }] }
+      ],
+      "correctAnswer": "D", "knowledgeTags": ["ucat-qr-inventory-balance"], "skillTags": ["multi-row-table", "balance"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-quantitative-reasoning-starter-v1-q05", "number": 5, "sourcePage": 2, "passageId": "pharmacy-stock",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Packs issued for item C were what percentage of the packs available for item C before any issue or damage?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "84.8%" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "85.0%" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "86.4%" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "88.0%" }] }] }
+      ],
+      "correctAnswer": "C", "knowledgeTags": ["ucat-qr-percentage-of-total"], "skillTags": ["percentage", "denominator-choice"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-quantitative-reasoning-starter-v1-q06", "number": 6, "sourcePage": 3, "passageId": "mobile-clinic-routes",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the total direct cost of one round trip on route A?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "£30.88" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "£32.88" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "£33.76" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "£38.88" }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["ucat-qr-multi-step-cost"], "skillTags": ["round-trip", "cost"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-quantitative-reasoning-starter-v1-q07", "number": 7, "sourcePage": 3, "passageId": "mobile-clinic-routes",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "What was the average outward speed on route B, to the nearest 0.1 km/h?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "60.0 km/h" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "64.8 km/h" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "66.5 km/h" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "72.0 km/h" }] }] }
+      ],
+      "correctAnswer": "C", "knowledgeTags": ["ucat-qr-speed"], "skillTags": ["rate", "time-conversion"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-quantitative-reasoning-starter-v1-q08", "number": 8, "sourcePage": 3, "passageId": "mobile-clinic-routes",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "For route C, what is the direct cost per hour of total journey time, to the nearest penny?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "£9.77 per hour" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "£10.18 per hour" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "£16.29 per hour" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "£19.55 per hour" }] }] }
+      ],
+      "correctAnswer": "A", "knowledgeTags": ["ucat-qr-rate-per-time"], "skillTags": ["cost-rate", "multi-step"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-quantitative-reasoning-starter-v1-q09", "number": 9, "sourcePage": 4, "passageId": "health-study",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "What percentage of all participants completed the study, to one decimal place?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "82.5%" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "83.3%" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "84.2%" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "85.0%" }] }] }
+      ],
+      "correctAnswer": "C", "knowledgeTags": ["ucat-qr-weighted-percentage"], "skillTags": ["aggregate", "percentage"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json"
+    },
+    {
+      "id": "ucat-quantitative-reasoning-starter-v1-q10", "number": 10, "sourcePage": 4, "passageId": "health-study",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the difference between the highest and lowest adverse-event rates, in percentage points?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "2.5 percentage points" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "4.5 percentage points" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "5.0 percentage points" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "6.5 percentage points" }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["ucat-qr-percentage-points"], "skillTags": ["compare-rates", "percentage-points"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/quantitative-reasoning-starter-v1.json"
+    }
+  ]
+}

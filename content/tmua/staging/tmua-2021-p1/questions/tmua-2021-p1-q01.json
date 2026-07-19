@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q01",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 1,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "1   Two circles have the same radius.\n\n    The centre of one circle is (–2, 1).\n\n    The centre of the other circle is (3, –2).\n\n    The circles intersect at two distinct points.\n\n    What is the equation of the straight line through the two points at which the circles\n    intersect?\n\n    A 3x − 5y = 4\n\n    B 3x + 5y = −1\n\n    C 5x − 3y = −4\n\n    D 5x − 3y = −1\n\n    E 5x − 3y = 1\n\n    F 5x − 3y = 4\n\n    G 5x + 3y = 1\n\n\n\n\n                                                 \u0016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Two circles have the same radius.\n\n    The centre of one circle is (–2, 1).\n\n    The centre of the other circle is (3, –2).\n\n    The circles intersect at two distinct points.\n\n    What is the equation of the straight line through the two points at which the circles\n    intersect?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "3x − 5y = 4"
+    },
+    {
+      "label": "B",
+      "rawText": "3x + 5y = −1"
+    },
+    {
+      "label": "C",
+      "rawText": "5x − 3y = −4"
+    },
+    {
+      "label": "D",
+      "rawText": "5x − 3y = −1"
+    },
+    {
+      "label": "E",
+      "rawText": "5x − 3y = 1"
+    },
+    {
+      "label": "F",
+      "rawText": "5x − 3y = 4"
+    },
+    {
+      "label": "G",
+      "rawText": "5x + 3y = 1"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Approach 1: using the equations of the circles\nWe can find the equation by solving the equations of the circles simultaneously.\nThe equations are\n\n                                       (x + 2)2 + (y − 1)2 = r2\n                                       (x − 3)2 + (y + 2)2 = r2\n\n(We do not know the radius, so we have called it r; we are given that both circles have the same\nradius.)\nWe can expand the brackets to give\n\n                                   x2 + 4x + 4 + y 2 − 2y + 1 = r2\n                                   x2 − 6x + 9 + y 2 + 4y + 4 = r2\n\nSubtracting these equations then gives an equation which must be satisfied by any points lying\non both circles:\n                                       10x − 6y − 8 = 0\nwhich simplifies to 5x − 3y = 4, and so the answer is F.\n\nApproach 2: using geometry\nThe circles have the same radius, so by symmetry, the straight line through the two points of\nintersection must be the perpendicular bisector of the line segment joining the two circle centres,\nas shown in this diagram:\n\n\n\n\nIn our case, the two centres are at (−2, 1) and (3, −2), so the midpoint is as ( 21 , − 12 ). The gradient\n                                      −2−1\nof the line joining the centres is 3−(−2)    = − 35 . Therefore the gradient of the perpendicular\nbisector is 53 , and it has equation\n\n                                         y − (− 12 ) = 35 (x − 12 )\n\nMultiplying by 3 gives\n                                          3y + 23 = 5(x − 12 )\nwhich rearranges to give\n                                              5x − 3y = 4\nwhich is option F.\n\n\nVersion 1.0, March 2022                                                                           Page 3"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        3
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

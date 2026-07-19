@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "20   The functions f1 to f5 are defined on the real numbers by\n\n                                      f1(x) ൌ cos x\n                                      f2(x) ൌ sin (cos x)\n                                      f3(x) ൌ cos (sin (cos x))\n                                      f4(x) ൌ sin (cos (sin (cos x)))\n                                      f5(x) ൌ cos (sin (cos (sin (cos x))))\n\n     where all numbers are taken to be in radians.\n\n     These functions have maximum values m 1, m 2, m 3, m 4 and m 5 , respectively.\n\n     Which one of the following statements is true?\n\n     A   m 1, m 2, m 3, m 4 and m 5 are all equal to 1\n\n     B   0 < m5 < m4 < m3 < m2 < m1 ൌ 1\n\n     C   m 1 ൌ m 3 ൌ m 5 ൌ 1 and 0 < m 2 ൌ m 4 < 1\n\n     D   m 1 ൌ m 3 ൌ m 5 ൌ 1 and 0 < m 4 < m 2 < 1\n\n     E   m 1 ൌ m 3 ൌ 1 and 0 < m 2 ൌ m 4 < 1 and 0 < m 5 < 1\n\n     F   m 1 ൌ m 3 ൌ 1 and 0 < m 4 < m 2 < 1 and 0 < m 5 < 1\n\n\n\n\n                                                         22"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The functions f1 to f5 are defined on the real numbers by\n\n                                      f1(x) ൌ cos x\n                                      f2(x) ൌ sin (cos x)\n                                      f3(x) ൌ cos (sin (cos x))\n                                      f4(x) ൌ sin (cos (sin (cos x)))\n                                      f5(x) ൌ cos (sin (cos (sin (cos x))))\n\n     where all numbers are taken to be in radians.\n\n     These functions have maximum values m 1, m 2, m 3, m 4 and m 5 , respectively.\n\n     Which one of the following statements is true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "m 1, m 2, m 3, m 4 and m 5 are all equal to 1"
+    },
+    {
+      "label": "B",
+      "rawText": "0 < m5 < m4 < m3 < m2 < m1 ൌ 1"
+    },
+    {
+      "label": "C",
+      "rawText": "m 1 ൌ m 3 ൌ m 5 ൌ 1 and 0 < m 2 ൌ m 4 < 1"
+    },
+    {
+      "label": "D",
+      "rawText": "m 1 ൌ m 3 ൌ m 5 ൌ 1 and 0 < m 4 < m 2 < 1"
+    },
+    {
+      "label": "E",
+      "rawText": "m 1 ൌ m 3 ൌ 1 and 0 < m 2 ൌ m 4 < 1 and 0 < m 5 < 1"
+    },
+    {
+      "label": "F",
+      "rawText": "m 1 ൌ m 3 ൌ 1 and 0 < m 4 < m 2 < 1 and 0 < m 5 < 1"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We note that we can rewrite each of the functions f2 to f5 in terms of the previous function:\n\n                                         f1 (x) = cos x\n                                         f2 (x) = sin f1 (x)\n                                         f3 (x) = cos f2 (x)\n                                         f4 (x) = sin f3 (x)\n                                         f5 (x) = cos f4 (x)\n\nSince f1 (x) = cos x is periodic with period 2π, each of the other functions also repeats every 2π\n(though it may have a shortest period less than this), and so we only need to consider 0 ≤ x ≤ 2π.\n(We could actually restrict ourselves to 0 ≤ x ≤ π, as the values of cos x in the range π < x ≤ 2π\nare a repeat of the values in the range 0 ≤ x ≤ π, but we will draw a complete period anyway.)\nSketching the graph of each of these functions is the most straightforward way to proceed. We\nnote first a result that we will need later: π ≈ 3.14 so π2 ≈ 1.6 and hence sin 1 < sin π2 = 1.\nA sketch of f1 (x) = cos x is straightforward:\n\n                                 y\n\n                             1\n\n\n\n                                                                     x\n                             0\n\n\n\n                           −1\n\n\n\nWe see that m1 = 1, and the minimum value taken is −1. Now f2 (x) = sin f1 (x), so this goes\nbetween − sin 1 and sin 1, with roots where f1 (x) = 0; recall that sin 1 < 1:\n\n                                 y\n\n                             1\n\n\n\n                                                                     x\n                             0\n\n\n\n                           −1\n\n\n\nWe see that m2 = sin 1 < 1, and the minimum value taken is − sin 1.\n\n\nVersion 1.0, July 2023                                                                    Page 23\n\f\nTest of Mathematics for University Admission, 2022 Paper 2 Solutions\n\n\nNow f3 (x) = cos f2 (x). When f2 (x) = 0, f3 (x) = 1, so f3 (x) has a maximum of 1 at x = π2 and at\nx = 3π                                                         π           π\n     2 . But f3 (x) never reaches 0 as f2 (x) never reaches 2 ≈ 1.6 or − 2 ≈ −1.6. Therefore the\ngraph looks something like this:\n\n                                  y\n\n                              1\n\n\n\n                                                                          x\n                              0\n\n\n\n                            −1\n\n\nTherefore m3 = 1, and the minimum value taken is cos(sin 1).\nNext, f4 (x) = sin f3 (x), so this will be an oscillating curve going between sin(cos(sin 1)) and sin 1:\n\n                                  y\n\n                              1\n\n\n\n                                                                          x\n                              0\n\n\n\n                            −1\n\n\nThus m4 = sin 1.\nFinally, f5 (x) = cos f4 (x), so this will be an oscillating curve going between cos(sin 1) and\ncos(sin(cos(sin 1))):\n\n                                  y\n\n                              1\n\n\n\n                                                                          x\n                              0\n\n\n\n                            −1\n\n\n\nVersion 1.0, July 2023                                                                         Page 24\n\f\nTest of Mathematics for University Admission, 2022 Paper 2 Solutions\n\n\nTo summarise, we have m1 = m3 = 1, m2 = m4 = sin 1 and m5 = cos(sin(cos(sin 1))), and the\ncorrect option is E.\nIt is also interesting to note from these accurate graphs that the subsequent functions are getting\nflatter and flatter and seem to be tending to a straight line (though the limiting value is different\nin the functions fn where n is even and those where n is odd).\n\n\n\n\nVersion 1.0, July 2023                                                                      Page 25"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        23,
+        24,
+        25
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

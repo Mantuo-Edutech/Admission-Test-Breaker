@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "15   Find the real non-zero solution to the equation\n                                              x\n                                           2(9 )     1\n                                             (3 x) =\n                                           8         4\n\n     A log3 2\n\n     B 2 log3 2\n\n     C 1\n\n     D 2\n\n     E log2 3\n\n     F 2 log2 3\n\n\n\n\n                                            17"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the real non-zero solution to the equation\n                                              x\n                                           2(9 )     1\n                                             (3 x) =\n                                           8         4"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "log3 2"
+    },
+    {
+      "label": "B",
+      "rawText": "2 log3 2"
+    },
+    {
+      "label": "C",
+      "rawText": "1"
+    },
+    {
+      "label": "D",
+      "rawText": "2"
+    },
+    {
+      "label": "E",
+      "rawText": "log2 3"
+    },
+    {
+      "label": "F",
+      "rawText": "2 log2 3"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We look to see how we can simplify this problem. First, the powers are 9x and 3x . We can write\n9x = (32 )x = 32x = (3x )2 , but it is not clear how this will help. But without a better idea, let\nus go with it, and write u = 3x , so the question becomes\n                                                2\n                                            2(u )  1\n                                                  = .\n                                             8u    4\nNext, let us write everything as powers of 2, giving\n                                                2\n                                           2(u )   1\n                                              3u\n                                                 = 2.\n                                            2     2\nTherefore\n                                            2\n                                          2u −3u = 2−2\nso we require\n                                          u2 − 3u = −2.\nWe can rearrange this quadratic to give u2 − 3u + 2 = 0, so (u − 1)(u − 2) = 0 giving u = 1 or\nu = 2. Thus 3x = 1 or 3x = 2, giving two possibilities: x = 0 or x = log3 2.\nThe question explicitly says “find the real non-zero solution”, so the correct answer is option A.\n\n\n\n\nc UCLES                                                                                    Page 17"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        17
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

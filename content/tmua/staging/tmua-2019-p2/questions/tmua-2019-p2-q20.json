@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "20   When the graph of the function y = f(x), deﬁned on the real numbers, is reﬂected in\n     the y-axis and then translated by 2 units in the negative x-direction, the result is the\n     graph of the function y = g(x).\n\n     When the graph of the same function y = f(x) is translated by 2 units in the\n     negative x-direction and then reﬂected in the y-axis, the result is the graph of the\n     function y = h(x).\n\n     Which one of the following conditions on y = f(x) is necessary and suﬃcient for\n     the functions g(x) and h(x) to be identical?\n\n     A f(x) = f(x + 2) for all x\n\n     B f(x) = f(x + 4) for all x\n\n     C f(x) = f(x + 8) for all x\n\n     D f(x) = f(−x) for all x\n\n     E f(x) = f(2 − x) for all x\n\n     F f(x) = f(4 − x) for all x\n\n     G f(x) = f(8 − x) for all x\n\n\n\n\n                                             22"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "When the graph of the function y = f(x), deﬁned on the real numbers, is reﬂected in\n     the y-axis and then translated by 2 units in the negative x-direction, the result is the\n     graph of the function y = g(x).\n\n     When the graph of the same function y = f(x) is translated by 2 units in the\n     negative x-direction and then reﬂected in the y-axis, the result is the graph of the\n     function y = h(x).\n\n     Which one of the following conditions on y = f(x) is necessary and suﬃcient for\n     the functions g(x) and h(x) to be identical?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "f(x) = f(x + 2) for all x"
+    },
+    {
+      "label": "B",
+      "rawText": "f(x) = f(x + 4) for all x"
+    },
+    {
+      "label": "C",
+      "rawText": "f(x) = f(x + 8) for all x"
+    },
+    {
+      "label": "D",
+      "rawText": "f(x) = f(−x) for all x"
+    },
+    {
+      "label": "E",
+      "rawText": "f(x) = f(2 − x) for all x"
+    },
+    {
+      "label": "F",
+      "rawText": "f(x) = f(4 − x) for all x"
+    },
+    {
+      "label": "G",
+      "rawText": "f(x) = f(8 − x) for all x"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Commentary: It could be helpful for this question to take a piece of paper and physically\n      move it around following the given instructions to get a feel for what’s going on. This\n      suggests that we may be looking for a periodic function.\n      We could then try to see what happens with a sine or cosine function, but these turn\n      out to have too much symmetry, and could lead us to the wrong answer. A tan graph is\n      periodic, but does not have line symmetry, so is likely to be better for our needs.\n      With all of this, though, we might still get ourselves in quite a muddle, so beginning with\n      an algebraic approach is likely to be more successful.\n\nWhen we reflect the graph of y = f(x) in the y-axis, we obtain the graph of y = f(−x). When\nwe translate this by 2 units in the negative x-direction, we obtain the graph of y = f(−(x + 2)),\nso g(x) = f(−(x + 2)) = f(−x − 2).\nSimilarly, when we translate the graph of y = f(x) by 2 units in the negative x-direction, we\nobtain the graph of y = f(x + 2). When we reflect this in the y-axis, we obtain the graph of\ny = f(−x + 2), so h(x) = f(−x + 2).\nIf the functions g(x) and h(x) are identical, then we require\n\n                                f(−x − 2) = f(−x + 2) for all x.\n\nThis is quite close to what we want, so let us let u = −x − 2, so that −x + 2 = u + 4. Then the\nabove becomes\n                                   f(u) = f(u + 4) for all u,\nwhich is option B, just with x replaced by u.\nThis means that the function is periodic with a period of 4 (though it may have a smaller period\nsuch as 2 or 71 , as long as it repeats every 4).\n\n\n\n\nc UCLES                                                                                  Page 25"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        25
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

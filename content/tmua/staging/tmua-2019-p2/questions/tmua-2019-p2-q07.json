@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q07",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 7,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "7   For which one of the following statements can the fact that 122 + 162 = 202 be used\n    to produce a counterexample?\n\n    A If a, b and c are positive integers which satisfy the equation a2 + b2 = c2 , and the\n      three numbers have no common divisor, then two of them are odd and the other\n      is even.\n\n    B The equation a4 + b2 = c2 has no solutions for which a, b and c are positive\n      integers.\n\n    C The equation a4 + b4 = c4 has no solutions for which a, b and c are positive\n      integers.\n\n    D If a, b and c are positive integers which satisfy the equation a2 + b2 = c2 , then\n      one is the arithmetic mean of the other two.\n\n\n\n\n                                             9"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "For which one of the following statements can the fact that 122 + 162 = 202 be used\n    to produce a counterexample?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "If a, b and c are positive integers which satisfy the equation a2 + b2 = c2 , and the\n      three numbers have no common divisor, then two of them are odd and the other\n      is even."
+    },
+    {
+      "label": "B",
+      "rawText": "The equation a4 + b2 = c2 has no solutions for which a, b and c are positive\n      integers."
+    },
+    {
+      "label": "C",
+      "rawText": "The equation a4 + b4 = c4 has no solutions for which a, b and c are positive\n      integers."
+    },
+    {
+      "label": "D",
+      "rawText": "If a, b and c are positive integers which satisfy the equation a2 + b2 = c2 , then\n      one is the arithmetic mean of the other two."
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We work through these in turn:\n\nA A counterexample here is a case for which the antecedent (the ‘if’ part) is true but the\n  consequent (the ‘then’ part) is false. In this case, taking a = 12, b = 16, c = 20 to match\n  122 + 162 = 202 does not satisfy the antecedent, as they do have a common divisor of 4.\n  Even if we were to divide all three by 4 to get 32 + 42 = 52 , we would still not have a\n  counterexample, as two of them are odd and the other is even. (The statement is actually\n  true, so there are no counterexamples.)\n\nB A counterexample in this case is an example to show that there is a solution. Since 16 = 42 ,\n  we can rewrite 122 + 162 = 202 as 44 + 122 = 202 , so this does provide a counterexample.\n\nC Since neither 12 nor 20 is a perfect square, we cannot use this fact to obtain a counterexample.\n  (And that is quite a relief, since Fermat proved that this statement is true! It is the simplest\n  case of Fermat’s Last Theorem.)\n\nD We note that 122 + 162 = 202 satisfies the antecedent, but as 16 is the arithmetic mean of 12\n  and 20, this does not provide a counterexample. (The statement is false, and a counterex-\n  ample is 52 + 122 = 132 .)\n\nThe correct answer is therefore B.\n\n\n\n\nc UCLES                                                                                    Page 9"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

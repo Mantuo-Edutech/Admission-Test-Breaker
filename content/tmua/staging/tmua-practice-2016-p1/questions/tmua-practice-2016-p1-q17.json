@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "ͳ͹\u0003       \u0003\u0003\u0003\u0003\n        \u0003\n        \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003‫ ݕ‬ൌ ሺͳ ൅ ʹ  ‫ݔ‬ሻ  ʹ‫ Ͳ\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003ݔ‬൏ ‫ ݔ‬൏ ߨ\u0003\u0003\u0003\n        \u0003\n        \u0017\u0003 \u0003\u0003\u0003\u0003\u0003‫\u0003\u0003\u0003\u0003ݕ\u0003 \u0003\u0003ݔ‬\n        \u0003\n        \u0003\n                               గ   ଶగ       ଷగ\n        \u0004\u0003 Ͳ ൏ ‫ ݔ‬൏ ସ , ଷ ൏ ‫ ݔ‬൏ ସ\n        \u0003                      గ   ଷగ\n        \u0005\u0003 Ͳ ൏ ‫ ݔ‬൏ ସ , ସ ൏ ‫ ݔ‬൏ ߨ\n        \u0003                      ଶగ ଷగ\n        \u0006\u0003 Ͳ ൏ ‫ ݔ‬൏ ଷ , ସ ൏ ‫ ݔ‬൏ ߨ\n        \u0003       గ              ଶగ ଷగ\n        \u0007\u0003 ସ ൏ ‫ ݔ‬൏ ଷ , ସ ൏ ‫ ݔ‬൏ ߨ\n        \u0003     గ        ଶగ\n        \b\u0003    ସ\n                  ൏‫ݔ‬൏ ଷ\n        \u0003     గ        ଷగ\n          \u0003   ସ\n                ൏‫ݔ‬൏ ସ\n\n\n\n\n                       ଵି௫"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "\n        \n        ‫ ݕ‬ൌ ሺ1 ൅ 2  ‫ݔ‬ሻ  2‫ 0ݔ‬൏ ‫ ݔ‬൏ ߨ\n        \n         ‫ݕ ݔ‬\n        \n        \n                               గ   ଶగ       ଷగ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0 ൏ ‫ ݔ‬൏ ସ , ଷ ൏ ‫ ݔ‬൏ ସ\n                              గ   ଷగ"
+    },
+    {
+      "label": "B",
+      "rawText": "0 ൏ ‫ ݔ‬൏ ସ , ସ ൏ ‫ ݔ‬൏ ߨ\n                              ଶగ ଷగ"
+    },
+    {
+      "label": "C",
+      "rawText": "0 ൏ ‫ ݔ‬൏ ଷ , ସ ൏ ‫ ݔ‬൏ ߨ\n               గ              ଶగ ଷగ"
+    },
+    {
+      "label": "D",
+      "rawText": "ସ ൏ ‫ ݔ‬൏ ଷ , ସ ൏ ‫ ݔ‬൏ ߨ\n             గ        ଶగ"
+    },
+    {
+      "label": "E",
+      "rawText": "ସ\n                  ൏‫ݔ‬൏ ଷ\n             గ        ଷగ\n             ସ\n                ൏‫ݔ‬൏ ସ\n\n\n\n\n                       ଵି௫"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The formula for y is the product of two factors, namely 1 + 2 cos x and cos 2x. The whole\nexpression is negative when one of the two factors is positive and the other is negative. The\nfactors change sign when they cross a point where the factor is zero, and we can find these\npoints:\n\n•    1 + 2 cos x = 0 when cos x = − 21 , which is when x = 2π\n                                                            3 (within the range 0 < x < π).\n\n•    cos 2x = 0 when x = π4 and when x = 3π\n                                          4 .\n\n\nWe can now make a table showing the signs of the two factors in the different parts of the\ninterval 0 < x < π. (This is a useful technique in general.)\n\n\n                                     π                     2π                      3π\n               0 < x < π4   x = π4         2π\n                                     4 <x< 3      x = 2π\n                                                       3\n                                                                  3π\n                                                            3 <x< 4      x = 3π\n                                                                              4     4 <x<π\n 1 + 2 cos x       +          +         +            0         −           −           −\n   cos 2x          +          0         −           −          −            0          +\n     y             +          0         −            0         +            0          −\n\nTherefore y is negative when π4 < x < 2π\n                                       3 and when 4 < x < π, and so the answer is D.\n                                                  3π\n\n\n\n\n                                             20\n                                                                                   © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        20
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

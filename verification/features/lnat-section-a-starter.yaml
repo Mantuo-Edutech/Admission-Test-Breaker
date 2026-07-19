@@ -1,0 +1,83 @@
+schemaVersion: 1
+feature:
+  id: lnat-section-a-starter
+  title: Original LNAT Section A passage-based starter
+  status: partial
+  userOutcome: >-
+    A student can read three original argumentative passages and answer twelve
+    four-option reasoning questions in a responsive, timed native session without
+    leaving the website.
+
+run:
+  packageScript: verify:lnat-starter
+
+claims:
+  - id: original-passage-dataset
+    status: verified
+    statement: >-
+      Three Mantou-original English passages and twelve questions cover conclusion,
+      argument role, inference, evidence, bias, principle and analogy skills. The
+      paper is labelled teaching-preview and uses two SHA-pinned official assets
+      for scope and interaction reference only.
+    artifacts:
+      - content/lnat/original-practice/section-a-starter-v1.json
+      - src/features/practice/content/lnat-section-a-starter.ts
+      - tests/features/practice/content/lnat-section-a-starter.test.ts
+    automatedChecks:
+      - verify:lnat-starter
+      - verify:official-research
+      - typecheck
+
+  - id: reusable-passage-practice-model
+    status: verified
+    statement: >-
+      The public practice model stores passages once and links questions by stable
+      passage ID. Validation rejects missing or duplicate passage references and
+      source-PDF passage blocks in structured products.
+    artifacts:
+      - src/features/practice/content/types.ts
+      - src/features/practice/content/validate.ts
+      - src/features/practice/components/QuestionCard.tsx
+      - src/features/practice/pages/PracticePage.tsx
+      - tests/features/practice/content/lnat-section-a-starter.test.ts
+    automatedChecks:
+      - verify:lnat-starter
+      - typecheck
+      - build
+
+  - id: responsive-split-reading-session
+    status: verified
+    statement: >-
+      Desktop uses a contained passage-and-question split view; tablet and phone
+      collapse to sequential reading. The shared session records answers, timing,
+      marking, submission, factual results and question feedback.
+    artifacts:
+      - src/features/practice/components/QuestionCard.tsx
+      - src/features/practice/pages/PracticePage.tsx
+      - src/styles/practice.css
+      - tests/app/practice-page.test.tsx
+      - tests/app/multi-exam-practice-library.test.tsx
+    automatedChecks:
+      - verify:lnat-starter
+      - build
+
+boundaries:
+  - This is a Mantou-original teaching preview, not an official LNAT paper or a claim of official-equivalent calibration.
+  - Three passages and twelve questions are not a complete 12-passage, 42-question, 95-minute Section A.
+  - Official practice papers remain internal research assets pending separate republication-rights review and are not exposed in the browser bundle.
+  - The separate Section B writing teaching preview now ships under tara-lnat-writing-practice; calibrated human feedback remains outside this Section A starter.
+  - Independent LNAT teacher, English-language, distractor and phone/tablet/desktop visual review remain before final publication status.
+
+manualChecks:
+  - id: independent-lnat-review
+    status: pending
+    evidence: A separate LNAT teacher must verify passage quality, construct coverage, distractors, answer keys and difficulty spread.
+    viewports:
+      - content
+  - id: browser-device-review
+    status: pending
+    evidence: Automated component, type and production-build checks pass; desktop, tablet and phone visual review remains explicit.
+    viewports:
+      - desktop
+      - tablet
+      - phone

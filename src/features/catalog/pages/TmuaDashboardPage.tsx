@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react";
 import {
   BookOpenCheck,
-  Clock3,
   FileText,
-  GraduationCap,
   LibraryBig,
   Map,
 } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import type { AppServices } from "../../../app/dependencies.js";
 import { isGuestSpaceOwner } from "../../../platform/learning-space/domain.js";
 import { ProfileRequiredState } from "../../preparation-profile/components/ProfileRequiredState.js";
 import { usePreparationProfileContext } from "../../preparation-profile/hooks/usePreparationProfileContext.js";
-import { createPracticeSession } from "../../practice/domain/session.js";
 import type { PracticeSession } from "../../practice/domain/session.js";
 import { TmuaPageHeader } from "../components/TmuaPageHeader.js";
 
@@ -21,10 +18,8 @@ interface TmuaDashboardPageProps {
 }
 
 export function TmuaDashboardPage({ services }: TmuaDashboardPageProps) {
-  const navigate = useNavigate();
   const { loading, guestSpace, profile, issue } = usePreparationProfileContext(services);
   const [recoverable, setRecoverable] = useState<PracticeSession | null>(null);
-  const [starting, setStarting] = useState(false);
 
   useEffect(() => {
     if (guestSpace === null) return;
@@ -34,8 +29,14 @@ export function TmuaDashboardPage({ services }: TmuaDashboardPageProps) {
       const belongsToGuest =
         result.session?.learningSpaceId === guestSpace.id &&
         isGuestSpaceOwner(guestSpace, result.session.startedBy);
+      const belongsToAuthenticatedStudent =
+        result.session?.learningSpaceId.startsWith("lsp_") === true &&
+        result.session.startedBy.kind === "student";
       setRecoverable(
-        result.session?.status === "active" && belongsToGuest ? result.session : null,
+        result.session?.status === "active" &&
+          (belongsToGuest || belongsToAuthenticatedStudent)
+          ? result.session
+          : null,
       );
     });
     return () => {
@@ -52,31 +53,14 @@ export function TmuaDashboardPage({ services }: TmuaDashboardPageProps) {
     );
   }
   if (profile === null || guestSpace === null) return <ProfileRequiredState issue={issue} />;
-  const activeGuestSpace = guestSpace;
-
-  async function startSession() {
-    setStarting(true);
-    const session = createPracticeSession({
-      id: services.ids.sessionId(),
-      learningSpaceId: activeGuestSpace.id,
-      actor: { kind: "guest", actorId: activeGuestSpace.ownerActorId },
-      startedAt: services.now().toISOString(),
-      eventId: services.ids.eventId(),
-    });
-    const result = await services.store.save(session);
-    navigate("/practice/tmua-2023-p1", {
-      state: result.persisted ? undefined : { recoveryWarning: true },
-    });
-  }
-
   return (
     <main className="tmua-stage-page tmua-dashboard-page">
-      <TmuaPageHeader backTo="/exams/tmua" backLabel="TMUA 考试介绍" />
+      <TmuaPageHeader />
       <section className="tmua-stage-hero tmua-dashboard-hero page-shell">
         <div>
           <p className="eyebrow">你的 TMUA 准备首页</p>
-          <h1>下一步：完成一套在线真题</h1>
-          <p>建议先从已经完成逐题在线排版的 2023 Paper 1 开始；历年真题页另有 17 套原卷可练习。</p>
+          <h1>下一步：先做 30 分钟能力诊断</h1>
+          <p>先用 8 道原创题观察知识、推理与节奏，不消耗历年真题；之后再根据真实表现选择主题训练或完整试卷。</p>
         </div>
         <Link to="/exams/tmua/profile">修改课程信息</Link>
       </section>
@@ -87,26 +71,17 @@ export function TmuaDashboardPage({ services }: TmuaDashboardPageProps) {
             <BookOpenCheck aria-hidden="true" />
             <span>推荐下一步</span>
           </div>
-          <p className="tmua-dashboard-card__fact">20 道已核验 · 75 分钟 · 不可使用计算器</p>
-          <h2>2023 Paper 1 完整练习</h2>
-          <p>完成整套试卷，查看正确率、每题用时和作答记录。记录保存在当前设备。</p>
+          <p className="tmua-dashboard-card__fact">8 道满托原创 · 30 分钟 · 不可使用计算器</p>
+          <h2>TMUA 起点能力诊断<span>TMUA Starting Diagnostic</span></h2>
+          <p>覆盖代数、二次方程、坐标几何、数列、三角、微积分、数学逻辑和反例；只报告实际作答证据。</p>
           {recoverable === null ? (
-            <button
-              className="button button--primary"
-              type="button"
-              disabled={starting}
-              onClick={() => void startSession()}
-            >
-              {starting ? "正在准备试卷…" : "开始完整练习"}
-            </button>
+            <Link className="button button--primary" to="/practice/tmua-diagnostic-v1">
+              开始 30 分钟诊断
+            </Link>
           ) : (
-            <button
-              className="button button--primary"
-              type="button"
-              onClick={() => navigate("/practice/tmua-2023-p1")}
-            >
-              继续练习 · {Object.keys(recoverable.answers).length} / 20
-            </button>
+            <Link className="button button--primary" to={`/practice/${recoverable.paperId}`}>
+              继续当前练习 · {Object.keys(recoverable.answers).length} 道已作答
+            </Link>
           )}
         </article>
       </section>
@@ -132,24 +107,14 @@ export function TmuaDashboardPage({ services }: TmuaDashboardPageProps) {
         </article>
 
         <article className="tmua-dashboard-card">
-          <div className="tmua-dashboard-card__meta"><FileText aria-hidden="true" /><span>分批整理</span></div>
-          <h2>模考与复习资料</h2>
-          <p>获取完整模考，以及按课程体系整理的复习资料。</p>
-          <Link className="button button--secondary" to="/exams/tmua/resources">查看模考与资料</Link>
+          <div className="tmua-dashboard-card__meta"><FileText aria-hidden="true" /><span>4 项真实资料</span></div>
+          <h2>复习笔记与逐题解析</h2>
+          <p>打开基础笔记；邀请码可解锁六周训练计划和 Early Specimen Paper 1 逐题解析。</p>
+          <Link className="button button--secondary" to="/exams/tmua/resources">查看题库与学习资料</Link>
         </article>
         </div>
       </section>
 
-      <section className="tmua-dashboard-upcoming page-shell" aria-labelledby="tmua-dashboard-upcoming-title">
-        <div>
-          <p className="eyebrow">正在准备</p>
-          <h2 id="tmua-dashboard-upcoming-title">达到审核标准后再开放</h2>
-        </div>
-        <ul>
-          <li><Clock3 aria-hidden="true" /><span><strong>30 分钟能力诊断</strong>原创固定题正在独立审核</span></li>
-          <li><GraduationCap aria-hidden="true" /><span><strong>院校与专业要求</strong>按申请年份核验官方来源</span></li>
-        </ul>
-      </section>
     </main>
   );
 }

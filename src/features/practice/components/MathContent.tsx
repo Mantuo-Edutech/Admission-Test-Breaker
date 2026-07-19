@@ -1,4 +1,5 @@
 import katex from "katex";
+import "katex/dist/katex.min.css";
 import type {
   InlineRun,
   QuestionBlock,
@@ -54,6 +55,28 @@ function BlockContent({ block }: { block: QuestionBlock }) {
       />
     ) : (
       <pre className="math-fallback">{block.tex}</pre>
+    );
+  }
+
+  if (block.kind === "table") {
+    return (
+      <div className="question-data-table-wrap">
+        <table className="question-data-table">
+          <caption>{block.caption}</caption>
+          <thead>
+            <tr>{block.headers.map((header) => <th key={header} scope="col">{header}</th>)}</tr>
+          </thead>
+          <tbody>
+            {block.rows.map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                {row.map((cell, cellIndex) => cellIndex === 0
+                  ? <th key={cellIndex} scope="row">{cell}</th>
+                  : <td key={cellIndex}>{cell}</td>)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     );
   }
 

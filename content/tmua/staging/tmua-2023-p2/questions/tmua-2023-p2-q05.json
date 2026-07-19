@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q05",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 5,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "5   Consider the two statements\n\n           R:   k is an integer multiple of π\n                  k\n           S:    ∫ sin 2 x dx = 0\n                  0\n\n\n    Which of the following statements is true?\n\n    A   R is necessary and sufficient for S.\n\n    B   R is necessary but not sufficient for S.\n\n    C   R is sufficient but not necessary for S.\n\n    D   R is not necessary and not sufficient for S.\n\n\n\n\n                                                 7"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the two statements\n\n           R:   k is an integer multiple of π\n                  k\n           S:    ∫ sin 2 x dx = 0\n                  0\n\n\n    Which of the following statements is true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "R is necessary and sufficient for S."
+    },
+    {
+      "label": "B",
+      "rawText": "R is necessary but not sufficient for S."
+    },
+    {
+      "label": "C",
+      "rawText": "R is sufficient but not necessary for S."
+    },
+    {
+      "label": "D",
+      "rawText": "R is not necessary and not sufficient for S."
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The graph of y = sin 2x is periodic with period π: it is the graph of y = sin x stretched by a\nfactor of 21 in the x-direction:\n\n                                                 y\n                                             1\n\n\n                                                                  x\n                                             0\n\n\n                                           −1\n\n\n                                             Rk\nSo if R is true, we see from the graph that 0 sin 2x dx = 0 as the areas above and below the\nx-axis cancel. Thus R is sufficient for S.\n               Rk\nConversely, if 0 sin 2x dx = 0, the areas above and below the x-axis must cancel. We can see\nfrom the graph that the only way to achieve this is if k is a multiple of π, so that we have an\nexact number of periods of y = sin 2x. (The integral increases as k increases from 0 to π2 , and\nthen decreases back to 0 as k increases from π2 to π, and the same happens in every period.)\nTherefore S implies R, or R is necessary for S.\nIt follows that the correct answer is option A: R is necessary and sufficient for S.\n\n\n\n\nVersion 1.0, September 2023                                                              Page 7"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        7
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

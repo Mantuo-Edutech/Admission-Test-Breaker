@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "17   A student answered the following question:\n\n                     a and b are non-zero real numbers.\n\n                     Prove that the equation x 3 + a x 2 + b ൌ 0 has three distinct real roots if\n                         §     4 a\n                                   3\n                                     ·\n                     27b ¨ b +         <0\n                         ©      27 ¸¹\n\n\n     Here is the student’s solution:\n\n                                                         dy\n           I     We differentiate y ൌ x 3 + a x 2 + b to get      2\n                                                            ൌ 3x + 2a x ൌ x (3x + 2a)\n                                                         dx\n                         dy                                                        § 2a         3\n                                                                                                  ·\n                 Solving    ൌ 0 shows that the stationary points are at (0, b) and ¨ –  , b + 4a ¸\n                         dx                                                        © 3        27 ¹\n\n                         §       3\n                                   ·                          3\n           II    If 27b ¨ b + 4 a ¸ < 0, then b and b + 4 a must have opposite signs, and so one of\n                         ©     27 ¹                         27\n                 the stationary points is above the x-axis and one is below.\n\n           III   If the cubic has three distinct real roots, then one of the stationary points is above the\n                 x-axis and one is below.\n\n                              §     4 a\n                                        3\n                                          ·\n           IV    Hence if 27b ¨ b +         < 0, then the equation has three distinct real roots.\n                              ©     27 ¸¹\n\n\n     Which one of the following options best describes the student’s solution?\n\n     A   It is a completely correct solution.\n\n     B   The student has instead proved the converse of the statement in the question.\n\n     C   The solution is wrong, because the student should have stated step II after step III.\n\n     D   The solution is wrong, because the student should have shown the converse of the result in\n         step II.\n\n     E   The solution is wrong, because the student should have shown the converse of the result in\n         step III.\n\n\n\n\n                                                    19"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A student answered the following question:\n\n                     a and b are non-zero real numbers.\n\n                     Prove that the equation x 3 + a x 2 + b ൌ 0 has three distinct real roots if\n                         §     4 a\n                                   3\n                                     ·\n                     27b ¨ b +         <0\n                         ©      27 ¸¹\n\n\n     Here is the student’s solution:\n\n                                                         dy\n           I     We differentiate y ൌ x 3 + a x 2 + b to get      2\n                                                            ൌ 3x + 2a x ൌ x (3x + 2a)\n                                                         dx\n                         dy                                                        § 2a         3\n                                                                                                  ·\n                 Solving    ൌ 0 shows that the stationary points are at (0, b) and ¨ –  , b + 4a ¸\n                         dx                                                        © 3        27 ¹\n\n                         §       3\n                                   ·                          3\n           II    If 27b ¨ b + 4 a ¸ < 0, then b and b + 4 a must have opposite signs, and so one of\n                         ©     27 ¹                         27\n                 the stationary points is above the x-axis and one is below.\n\n           III   If the cubic has three distinct real roots, then one of the stationary points is above the\n                 x-axis and one is below.\n\n                              §     4 a\n                                        3\n                                          ·\n           IV    Hence if 27b ¨ b +         < 0, then the equation has three distinct real roots.\n                              ©     27 ¸¹\n\n\n     Which one of the following options best describes the student’s solution?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "It is a completely correct solution."
+    },
+    {
+      "label": "B",
+      "rawText": "The student has instead proved the converse of the statement in the question."
+    },
+    {
+      "label": "C",
+      "rawText": "The solution is wrong, because the student should have stated step II after step III."
+    },
+    {
+      "label": "D",
+      "rawText": "The solution is wrong, because the student should have shown the converse of the result in\n         step II."
+    },
+    {
+      "label": "E",
+      "rawText": "The solution is wrong, because the student should have shown the converse of the result in\n         step III."
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Considering the offered options, the focus is on the order of the steps and whether the steps prove\nwhat they should be proving; there is no requirement for us to check the algebraic calculations\nthemselves.\n                                        4a3\n                                  \u0012         \u0013\nThe task is to prove that if 27b b +           < 0, then x3 + ax2 + b = 0 has three distinct real\n                                        27\nroots.\nIn step I, the student finds the stationary points of y = x3 + ax2 + b.\n                                                 4a3\n                                           \u0012         \u0013\nIn step II, the student assumes that 27b b +            < 0, which is the correct thing to do to\n                                                 27\nprove an ‘if . . . then’ statement.\nIn step III, the student says ‘if the cubic has three distinct real roots then . . . ’, which is correct\nbut is not useful: we know that one of the stationary points is above the x-axis and the other is\nbelow and we wish to deduce that the cubic has three distinct real roots.\nIn step IV, the student uses the result of II and the result ‘if one of the stationary points is\nabove the x-axis and one is below, then the equation has three distinct real roots’, which is the\nconverse of the statement in step III.\nTherefore the correct option is E: the student should have shown the converse of the result in\nstep III.\n\n\n\n\nVersion 1.0, July 2023                                                                         Page 19"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

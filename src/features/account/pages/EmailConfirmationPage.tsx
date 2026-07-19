@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { CheckCircle2, LoaderCircle, TriangleAlert } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { AppServices } from "../../../app/dependencies.js";
+import { funnelExamFromPackageIds } from "../../product-funnel/domain.js";
 import { AccountPageHeader } from "../components/AccountPageHeader.js";
+import { safeInternalReturnPath } from "../domain.js";
 
 interface EmailConfirmationPageProps {
   services: AppServices;
@@ -13,6 +15,7 @@ type ConfirmationState = "working" | "complete" | "error";
 export function EmailConfirmationPage({ services }: EmailConfirmationPageProps) {
   const [state, setState] = useState<ConfirmationState>("working");
   const [message, setMessage] = useState("正在确认邮箱并解锁内容…");
+  const [returnTo, setReturnTo] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
@@ -30,8 +33,18 @@ export function EmailConfirmationPage({ services }: EmailConfirmationPageProps) 
         await account.completeEmailConfirmation(code);
         const inviteCode = services.pendingInvite?.load() ?? null;
         if (inviteCode !== null) {
-          await account.redeemInvite(inviteCode);
+          const pendingReturn = safeInternalReturnPath(services.pendingInvite?.loadReturnTo());
+          const access = await account.redeemInvite(inviteCode);
+          const examId = funnelExamFromPackageIds(access.packageIds);
+          if (examId !== null) {
+            void services.funnel?.track({
+              eventType: "invite_redeemed",
+              examId,
+              contextCode: "email-confirmation",
+            });
+          }
           services.pendingInvite?.clear();
+          if (active) setReturnTo(pendingReturn);
         }
         if (active) {
           setState("complete");
@@ -59,7 +72,7 @@ export function EmailConfirmationPage({ services }: EmailConfirmationPageProps) 
         <h1>{state === "complete" ? "解锁完成" : state === "error" ? "未能完成确认" : "正在完成账号设置"}</h1>
         <p>{message}</p>
         {state !== "working" && (
-          <Link className="button button--primary" to={state === "complete" ? "/exams/tmua/resources" : "/login"}>
+          <Link className="button button--primary" to={state === "complete" ? returnTo ?? "/access/complete" : "/login"}>
             {state === "complete" ? "查看已解锁内容" : "返回登录"}
           </Link>
         )}

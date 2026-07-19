@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "ͳͷ\u0003     \u0017\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003‫ ݕ‬ൌ ሺʹ‫ ݔ‬൅ ܽሻሺ‫ ݔ‬െ ʹܽሻଶ \u0003\u0003\u0003\u0003\n        \u0003‫ ݔ‬ൌ ͳǡ\u0003\u0003ܽ\u0003ǡ\u0003\u0003\n        \u0003\n        \u0003\n              Ͷͻ\n        \u0004\u0003 െ \u0003\n               Ͷ\n        \u0003\n        \u0005\u0003 െͺ\u0003\n        \u0003     ʹͷ\n        \u0006\u0003 െ \u0003\n               Ͷ\n        \u0003   ͹\n        \u0007\u0003 \u0003\n            Ͷ\n        \u0003   Ͷ͹\n        \b\u0003     \u0003"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": " ‫ ݕ‬ൌ ሺ2‫ ݔ‬൅ ܽሻሺ‫ ݔ‬െ 2ܽሻଶ \n        ‫ ݔ‬ൌ 1ǡܽǡ\n        \n        \n              49"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "െ \n               4"
+    },
+    {
+      "label": "B",
+      "rawText": "െ8\n             25"
+    },
+    {
+      "label": "C",
+      "rawText": "െ \n               4\n           7"
+    },
+    {
+      "label": "D",
+      "rawText": "4\n           47"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We start by expanding the brackets to get\n\n                   y = (2x + a)(x2 − 4ax + 4a2 ) = 2x3 − 7ax2 + 4a2 x + 8a3\n\nso the derivative is given by\n                                       dy\n                                          = 6x2 − 14ax + 4a2 .\n                                       dx\nTherefore at x = 1, the gradient is 6 − 14a + 4a2 . To find the least possible value of this as\na varies, we can either differentiate this expression with respect to a or complete the square.\nThe latter approach gives\n\n                                4a2 − 14a + 6 = 4(a2 − 72 a) + 6\n                                              = 4 (a − 74 )2 − ( 74 )2 + 6\n                                                                      \u0001\n\n                                              = 4(a − 47 )2 − 49\n                                                              4 +6\n                                              = 4(a − 47 )2 − 25\n                                                              4\n\nso the minimum value is − 25\n                          4 and the answer is C.\n\n\n\n\n                                                  18\n                                                                                   © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

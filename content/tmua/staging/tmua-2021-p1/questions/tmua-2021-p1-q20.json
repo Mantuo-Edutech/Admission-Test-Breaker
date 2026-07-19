@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "20   Find the length of the curve with equation\n\n\n                        2 log10 (x − y) = log10 (2 − 2x) + log10 (y + 5)\n\n     A 5\n\n     B 10\n\n     C 15\n\n     D 3π\n\n     E 9π\n\n     F 12π\n\n\n\n\n                                            \u0015\u0015"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the length of the curve with equation\n\n\n                        2 log10 (x − y) = log10 (2 − 2x) + log10 (y + 5)"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "5"
+    },
+    {
+      "label": "B",
+      "rawText": "10"
+    },
+    {
+      "label": "C",
+      "rawText": "15"
+    },
+    {
+      "label": "D",
+      "rawText": "3π"
+    },
+    {
+      "label": "E",
+      "rawText": "9π"
+    },
+    {
+      "label": "F",
+      "rawText": "12π"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can combine the logarithms on the right and rearrange the left hand side to give\n\n                           log10 (x − y)2 = log10 (2 − 2x)(y + 5)\n                                                                  \u0001\n\n\nand so\n                                   (x − y)2 = (2 − 2x)(y + 5).\nExpanding the brackets gives\n\n                              x2 − 2xy + y 2 = 2y + 10 − 2xy − 10x\n\nwhich rearranges to\n                                    x2 + y 2 + 10x − 2y = 10.\nCompleting the squares gives\n                                    (x + 5)2 + (y − 1)2 = 36\nwhich is a circle with centre (−5, 1) and radius 6.\nThe obvious answer is therefore 12π, but we must take care: does every point on the circle satisfy\nthe original equation? The manipulations we have performed make assumptions; in particular,\nfor the logarithms to be defined, we require x − y > 0, 2 − 2x > 0 and y + 5 > 0, which we can\nrearrange to\n                              x > y,     x<1       and     y > −5\nLet us sketch the circle and these three inequalities. Here is the circle with two points on the\ncircumference marked:\n\n                                                         y\n\n\n\n\n                                        (−5, 1)\n                                                             (1, 1)   x\n\n\n\n\n                                       (−5, −5)\n\n\nThe restriction x < 1 holds for all of the points on the circle except for the single point (1, 1),\nand the restriction y > −5 holds everywhere except for (−5, −5). The restriction x > y is more\nsignificant for us. We can draw the line x = y on our sketch:\n\n\n\n\nVersion 1.0, March 2022                                                                    Page 23\n\f\nTest of Mathematics for University Admission, 2021 Paper 1 Solutions\n\n\n                                                           y\n\n\n\n\n                                         (−5, 1)\n                                                               (1, 1)   x\n\n\n\n\n                                              (−5, −5)\n\n\nThe region x > y is below this line, and we see that only part of the circle is included in the\nregion. Since the points of intersection of the line x = y with the circle are at (1, 1) and (−5, −5),\nit is clear that exactly one quarter of the circle lies in the region x > y. Therefore the length of\nthe curve with the given equation is 14 of the circumference of the circle, that is, 41 × 12π = 3π,\nand the correct option is D.\n\n\n\n\nVersion 1.0, March 2022                                                                      Page 24\n\f\nThis document was initially designed for print and as such does not reach accessibility standard\nWCAG 2.1 in a number of ways including missing text alternatives and missing document structure.\n\n\n\nIf you need this document in a different format please email\nadmissionstesting@cambridgeassessment.org.uk telling us your name, email address and\nrequirements and we will respond within 15 working days.\n\n\n\nThis document contains maths equations and symbols which at present we are not able to produce\nadequately for accessibility. We are working to improve this.\n\n\n\n\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support: admissionstesting.org/help"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        23,
+        24,
+        25
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

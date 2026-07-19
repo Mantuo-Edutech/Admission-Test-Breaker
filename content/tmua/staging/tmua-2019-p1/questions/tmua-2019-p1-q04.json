@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q04",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 4,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "4   The sequence xn is given by:\n\n                                    x1 = 10\n\n                                            √\n                                   xn+1 =       xn for n ≥ 1\n\n\n    What is the value of x100 ?\n                    c       c\n    [Note that ab means a(b ) ]\n\n            99\n    A 102\n            100\n    B 102\n            −99\n    C 102\n            −100\n    D 102\n             99\n    E 10−2\n             100\n    F 10−2\n             −99\n    G 10−2\n             −100\n    H 10−2\n\n\n\n\n                                            6"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The sequence xn is given by:\n\n                                    x1 = 10\n\n                                            √\n                                   xn+1 =       xn for n ≥ 1\n\n\n    What is the value of x100 ?\n                    c       c\n    [Note that ab means a(b ) ]\n\n            99"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "102\n            100"
+    },
+    {
+      "label": "B",
+      "rawText": "102\n            −99"
+    },
+    {
+      "label": "C",
+      "rawText": "102\n            −100"
+    },
+    {
+      "label": "D",
+      "rawText": "102\n             99"
+    },
+    {
+      "label": "E",
+      "rawText": "10−2\n             100"
+    },
+    {
+      "label": "F",
+      "rawText": "10−2\n             −99"
+    },
+    {
+      "label": "G",
+      "rawText": "10−2\n             −100"
+    },
+    {
+      "label": "H",
+      "rawText": "10−2"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We work out the first few terms, writing them in the form of the given options:\n\n\n\n                         x1 = 10\n                              √       1       −1\n                         x2 = 10 = 10 2 = 102\n                                           −1 \u0001 1\n                              p                        −1 1      −2\n                         x3 = 102−1 = 102       2\n                                                  = 102 × 2 = 102\n                                                         −99\nAs this pattern continues, we will end up with x100 = 102      , which is option C.\n\n\n\n\nc UCLES                                                                               Page 6"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

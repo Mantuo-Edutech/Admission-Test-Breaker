@@ -1,0 +1,59 @@
+schemaVersion: 1
+feature:
+  id: tmua-original-diagnostic
+  title: TMUA 30 分钟原创起点能力诊断
+  status: partial
+  userOutcome: 学生填写课程信息后，可以先完成一套不消耗历年真题的 8 道、30 分钟在线诊断，再决定如何进入主题训练或完整试卷。
+run:
+  packageScript: verify:tmua-diagnostic
+claims:
+  - id: eight-question-original-dataset
+    status: verified
+    statement: 8 道满托原创固定题覆盖代数、二次方程、坐标几何、数列、三角、微积分、数学逻辑与反例；答案、题号、标签和两份本地 SHA 固定官方范围依据均通过独立机器校验，不含历年真题 PDF 或题面块。
+    artifacts:
+      - content/tmua/original-practice/diagnostic-v1.json
+      - src/features/practice/content/tmua-diagnostic-v1.ts
+      - tests/features/practice/content/tmua-diagnostic-v1.test.ts
+    automatedChecks:
+      - verify:tmua-diagnostic
+      - verify:learning-record
+  - id: profile-first-native-journey
+    status: verified
+    statement: TMUA 准备首页在课程档案之后优先推荐 30 分钟诊断；诊断说明、统一资料馆与共享练习内核均有真实入口，支持计时、保存、标记、提交、基础答案和学习记录，不再显示“即将开放”或审核占位页。
+    artifacts:
+      - src/features/catalog/pages/TmuaDashboardPage.tsx
+      - src/features/catalog/pages/TmuaDiagnosticPage.tsx
+      - src/features/practice/content/practice-paper-registry.ts
+      - content/products/catalog.json
+      - tests/app/tmua-hub-page.test.tsx
+    automatedChecks:
+      - verify:tmua-diagnostic
+      - verify:content-products
+      - build
+  - id: honest-diagnostic-boundary
+    status: verified
+    statement: 页面只展示原始正确率、答案、用时与实际作答记录，明确不换算官方分数、百分位、录取概率或成熟 Benchmark。
+    artifacts:
+      - src/features/catalog/pages/TmuaDiagnosticPage.tsx
+      - src/features/practice/pages/ResultsPage.tsx
+      - tests/app/results-page.test.tsx
+    automatedChecks:
+      - verify:tmua-diagnostic
+      - test
+boundaries:
+  - 本卷是满托原创教学预览，不是官方 TMUA 试卷，也不声称与官方难度等值。
+  - 8 道题只能形成起点证据，不能代表完整知识覆盖、最终能力、官方分数或录取结果。
+  - 学科措辞、干扰项难度和真实学生完成时间仍需独立 TMUA 教师终审及封闭样本标定，完成前保持 teaching-preview。
+manualChecks:
+  - id: independent-mathematics-review
+    status: pending
+    evidence: 由未参与命题的 TMUA 数学教师逐题核对答案、措辞、干扰项、难度分布与无计算器可行性。
+    viewports:
+      - content
+  - id: real-student-timing-calibration
+    status: pending
+    evidence: 由封闭学生样本完成并检查中位完成时间、弃题点和题目区分度；样本不足时不发布 Benchmark。
+    viewports:
+      - desktop
+      - tablet
+      - phone

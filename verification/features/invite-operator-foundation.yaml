@@ -1,0 +1,111 @@
+schemaVersion: 1
+feature:
+  id: invite-operator-foundation
+  title: Bingbing least-privilege invite operations
+  status: partial
+  userOutcome: >-
+    A founder-approved Bingbing account can issue a finite invite for a real published
+    product, list and revoke only the codes it created, and retain an audit trail
+    without gaining access to student identities, profiles, answers or learning data.
+
+run:
+  packageScript: verify:invite-operations
+
+claims:
+  - id: explicit-revocable-operator-grant
+    status: verified
+    statement: >-
+      Service role can grant or revoke an invite-manager capability for an existing
+      authenticated account. Ordinary students cannot grant themselves the role, and
+      revocation immediately removes all operator RPC access.
+    artifacts:
+      - supabase/migrations/20260719170000_invite_operator_workflow.sql
+      - supabase/tests/database/invite_operator_workflow.test.sql
+    automatedChecks:
+      - verify:supabase-contracts
+      - verify:supabase
+
+  - id: published-finite-invites-only
+    status: verified
+    statement: >-
+      The operator package picker exposes only active packages with published entitled
+      resources. Operator codes require an expiry and finite entitlement duration,
+      cap redemptions at 20, reject obvious contact details in references and return
+      plaintext exactly once.
+    artifacts:
+      - supabase/migrations/20260719170000_invite_operator_workflow.sql
+      - scripts/verify-supabase-local.ts
+    automatedChecks:
+      - verify:supabase-contracts
+      - verify:supabase
+
+  - id: own-invites-only-with-private-audit
+    status: verified
+    statement: >-
+      Operators can list and revoke only invites whose created_by matches auth.uid().
+      A second operator receives no record and cannot infer whether another invite
+      exists. Audit events record grant, issue, revoke and role revocation without
+      plaintext codes or student identities. A bounded cross-operator audit RPC is
+      executable only by service role for founder-approved incident review.
+    artifacts:
+      - supabase/migrations/20260719170000_invite_operator_workflow.sql
+      - supabase/tests/database/invite_operator_workflow.test.sql
+      - scripts/verify-supabase-local.ts
+    automatedChecks:
+      - verify:supabase-contracts
+      - verify:supabase
+
+  - id: learner-domain-remains-isolated
+    status: verified
+    statement: >-
+      An invite operator remains an ordinary authenticated learner for every other
+      table. Database tests prove the account still sees only its own app user and no
+      student entitlement rows; no learner table receives a new authenticated grant.
+    artifacts:
+      - supabase/migrations/20260719170000_invite_operator_workflow.sql
+      - supabase/tests/database/invite_operator_workflow.test.sql
+      - tests/architecture/supabase-contracts.test.ts
+    automatedChecks:
+      - verify:supabase-contracts
+      - verify:supabase
+
+  - id: own-record-private-operator-page
+    status: verified
+    statement: >-
+      The private operations route first verifies the signed-in account and active
+      operator capability, then offers only the published-package picker and own-record
+      issue, list, audit and revoke actions. A normal student fails closed; plaintext
+      code appears only in the successful in-memory response and the UI never requests
+      student identity or learner data.
+    artifacts:
+      - src/features/invite-operations/domain.ts
+      - src/features/invite-operations/supabase-invite-operations-service.ts
+      - src/features/invite-operations/pages/InviteOperationsPage.tsx
+      - tests/features/invite-operations/invite-operations.test.ts
+      - tests/app/invite-operations-page.test.tsx
+      - tests/app/account-lifecycle.test.tsx
+      - docs/architecture/decisions/2026-07-19-own-invite-operator-page.md
+    automatedChecks:
+      - verify:invite-operations
+      - typecheck
+      - build
+
+boundaries:
+  - The local product deliberately uses an own-record queue; a shared queue requires a separate approved scope and authorization design.
+  - Revoking a code prevents future redemption; it does not silently revoke entitlements already granted to a student.
+  - Production still requires Bingbing to create and verify a real account, founder-approved role bootstrap, MFA, a production-domain drill and a private incident owner.
+  - Operators receive redemption counts only; student identity lookup and learning-data access are intentionally outside this role.
+
+manualChecks:
+  - id: production-bingbing-bootstrap-and-revocation-drill
+    status: pending
+    evidence: Grant the real verified Bingbing account in production, issue and revoke a one-use code, prove a normal student and second operator are denied, then revoke and re-grant the operator role with retained audit evidence.
+    viewports:
+      - production-operations
+  - id: private-operator-page-responsive-and-accessibility-review
+    status: pending
+    evidence: Review the signed-out, denied, empty, issued-code, populated-ledger and revoke states on desktop, iPad and phone with keyboard and screen reader; record that the one-time-code warning and no-student-data boundary are understood.
+    viewports:
+      - 1440x900
+      - 768x1024
+      - 390x844

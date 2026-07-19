@@ -1,0 +1,1880 @@
+{
+  "schemaVersion": 1,
+  "bundleType": "question-import",
+  "id": "tmua-2018-p1-extraction-v1",
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "generatedAt": "2026-07-17T07:00:00.000Z",
+  "generatedBy": "tmua-extraction-cli",
+  "sourceDocumentIds": {
+    "question": "tmua-official-2018-paper-1",
+    "answerKey": "tmua-official-2018-answer-key",
+    "workedSolution": "tmua-official-2018-paper-1-worked-solutions"
+  },
+  "questionCount": 20,
+  "publishableQuestionCount": 0,
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q01",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 1,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "1   Find the value of\n\n                        \u0002 4\n                              3 − 2x\n                                √ dx\n                         1     x x\n\n    A     − 13\n             2\n\n    B     − 85\n            16\n\n    C     − 13\n             8\n\n    D     −1\n\n    E     − 14\n          7\n    F     4\n\n    G    7\n\n\n\n\n                              3"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the value of\n\n                         4\n                              3 − 2x\n                                √ dx\n                         1     x x"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "− 13\n             2"
+        },
+        {
+          "label": "B",
+          "rawText": "− 85\n            16"
+        },
+        {
+          "label": "C",
+          "rawText": "− 13\n             8"
+        },
+        {
+          "label": "D",
+          "rawText": "−1"
+        },
+        {
+          "label": "E",
+          "rawText": "− 14\n          7"
+        },
+        {
+          "label": "F",
+          "rawText": "4"
+        },
+        {
+          "label": "G",
+          "rawText": "7"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We write the integrand (the thing being integrated) in terms of powers of x and split up the\nfraction in order to be able to compute the integral:\n                      Z 4             Z 4\n                          3 − 2x          3 − 2x\n                            √ dx =               3   dx\n                       1   x x          1     x2\n                                      Z 4\n                                                  3        1\n                                    =     3x− 2 − 2x− 2 dx\n                                        1\n                                      \"       1        1\n                                                         #4\n                                        3x− 2       2x 2\n                                    =            − 1\n                                        (− 12 )      2     1\n                                                1       1 \u00034\n                                             −2\n                                      \u0002\n                                    = −6x − 4x 1        2\n\n\n                                  = (−6 × 12 − 4 × 2) − (−6 × 1 − 4 × 1)\n                                  = −11 − (−10)\n                                  = −1\n\nso the correct answer is D.\n\n\n\n\nVersion 1.0, April 2019                                                              Page 3\n\n                                                                                © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q02",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 2,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "2   An arithmetic progression has ﬁrst term a and common diﬀerence d.\n\n    The sum of the ﬁrst 5 terms is equal to the sum of the ﬁrst 8 terms.\n\n    Which one of the following expresses the relationship between a and d ?\n\n    A a = − 38\n            3\n               d\n\n    B a = −7d\n\n    C a = −6d\n\n    D a = 6d\n\n    E   a = 7d\n\n    F   a = 38\n             3\n               d\n\n\n\n\n                                           4"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "An arithmetic progression has ﬁrst term a and common diﬀerence d.\n\n    The sum of the ﬁrst 5 terms is equal to the sum of the ﬁrst 8 terms.\n\n    Which one of the following expresses the relationship between a and d ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "a = − 38\n            3\n               d"
+        },
+        {
+          "label": "B",
+          "rawText": "a = −7d"
+        },
+        {
+          "label": "C",
+          "rawText": "a = −6d"
+        },
+        {
+          "label": "D",
+          "rawText": "a = 6d"
+        },
+        {
+          "label": "E",
+          "rawText": "a = 7d"
+        },
+        {
+          "label": "F",
+          "rawText": "a = 38\n             3\n               d"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "One approach is to use the formulae for the sum of the first 5 and the first 8 terms (that is,\nSn = 12 n(2a + (n − 1)d)).\nWe have\n\n\n\n                               S5 = 12 × 5(2a + 4d) = 52 (2a + 4d)\n                               S8 = 12 × 8(2a + 7d) = 4(2a + 7d)\n\nThese are equal, so we have\n                                     5\n                                     2 (2a + 4d) = 4(2a + 7d)\n\nWe want to rearrange this to get a formula in the form a = · · · , so we multiply both sides by 2,\nexpand the brackets and collect like terms:\n\n                                         5(2a + 4d) = 8(2a + 7d)\n                                ⇐⇒        10a + 20d = 16a + 56d\n                                ⇐⇒              −6a = 36d\n                                ⇐⇒                 a = −6d\n\nso the answer is C.\nAn alternative approach is to note that the difference between the sum of the first 5 and the\nsum of the first 8 terms equals the sum of the 6th, 7th and 8th terms. (This is because S5 =\nu1 + u2 + · · · + u5 while S8 = u1 + u2 + · · · + u5 + u6 + u7 + u8 , where we have written the\nsequence as u1 , u2 , . . . .) Since the two sums S5 and S8 are equal, the sum of the 6th, 7th and\n8th terms must be zero. This gives\n\n                               (a + 5d) + (a + 6d) + (a + 7d) = 0\n\nExpanding and collecting like terms gives 3a + 18d = 0, so a = −6d, as before.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 4\n\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q03",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 3,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "3   Find the shortest distance between the two circles with equations:\n\n\n                                  (x + 2)2 + (y − 3)2 = 18\n\n                                  (x − 7)2 + (y + 6)2 = 2\n\n    A 0\n\n    B 4\n\n    C 16\n       √\n    D 2 2\n       √\n    E 5 2\n\n\n\n\n                                           5"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the shortest distance between the two circles with equations:\n\n\n                                  (x + 2)2 + (y − 3)2 = 18\n\n                                  (x − 7)2 + (y + 6)2 = 2"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0"
+        },
+        {
+          "label": "B",
+          "rawText": "4"
+        },
+        {
+          "label": "C",
+          "rawText": "16\n       √"
+        },
+        {
+          "label": "D",
+          "rawText": "2 2\n       √"
+        },
+        {
+          "label": "E",
+          "rawText": "5 2"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "√   √\nThe first circle has centre (−2, 3) and radius 18 = 3 2\n                                                √\nThe second circle has centre (7, −6) and radius 2\nIt would help to draw a quick sketch of the situation.\n\n                                                 y\n\n\n\n\n                                (−2, 3)\n\n\n                                                                        x\n\n\n\n\n                                                              (7, −6)\n\n\n\n\nIt seems clear from the sketch that to find the shortest distance between the circles, we should\ndraw a line between their centres and find the length of the segment which lies outside both of\nthem:\n\n                                                 y\n\n\n\n\n                                (−2, 3)\n\n\n                                                                        x\n\n\n\n\n                                                              (7, −6)\n\n\n\n\nThe distance between the centres is\n                          p                              √            √\n                            ((−2) − 7)2 + (3 − (−6))2 = 81 + 81 = 9 2\n                                      √       √\nand if we subtract the two √  radii\n                                  √ (3  2\n                                        √ and  √2) for the parts of the line which lie within the\ncircles, we are left with 9 2 − 3 2 − 2 = 5 2. The correct answer is E.\nThis can also be proved by taking an arbitrary point on each of the circles, finding the distance\nbetween them and then minimising this, but that is far more complicated than needed.\n\n\nVersion 1.0, April 2019                                                                   Page 5\n\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q04",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 4,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "4   Consider the simultaneous equations\n\n\n\n                                       3x2 + 2xy = 4\n\n                                            x+y =a\n\n\n    where a is a real constant.\n\n    Find the complete set of values of a for which the equations have two distinct real\n    solutions for x.\n\n    A There are no values of a.\n\n    B −2 < a < 2\n\n    C −1 < a < 1\n\n    D a=0\n\n    E   a < −1 or a > 1\n\n    F   a < −2 or a > 2\n\n    G All real values of a\n\n\n\n\n                                            6"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the simultaneous equations\n\n\n\n                                       3x2 + 2xy = 4\n\n                                            x+y =a\n\n\n    where a is a real constant.\n\n    Find the complete set of values of a for which the equations have two distinct real\n    solutions for x."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "There are no values of a."
+        },
+        {
+          "label": "B",
+          "rawText": "−2 < a < 2"
+        },
+        {
+          "label": "C",
+          "rawText": "−1 < a < 1"
+        },
+        {
+          "label": "D",
+          "rawText": "a=0"
+        },
+        {
+          "label": "E",
+          "rawText": "a < −1 or a > 1"
+        },
+        {
+          "label": "F",
+          "rawText": "a < −2 or a > 2"
+        },
+        {
+          "label": "G",
+          "rawText": "All real values of a"
+        }
+      ],
+      "correctAnswer": "G",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can solve the equations to find x by substituting for y.\nThe second equation gives y = a − x, so the first equation becomes\n\n                                       3x2 + 2x(a − x) = 4\n\nThis rearranges to\n                                        x2 + 2ax − 4 = 0\nand the discriminant of this equation is\n\n                                (2a)2 − 4 × 1 × (−4) = 4a2 + 16\n\nThis is always positive, as 4a2 ⩾ 0 for all real values of a, so there are always two distinct real\nroots, and the correct answer is G.\n\n\n\n\nVersion 1.0, April 2019                                                                     Page 6\n\n                                                                                      © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q05",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 5,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "5   The function f is deﬁned by f(x) = x3 + ax2 + bx + c.\n\n    a, b and c take the values 1, 2 and 3 with no two of them being equal and not\n    necessarily in this order.\n\n    The remainder when f(x) is divided by (x + 2) is R.\n\n    The remainder when f(x) is divided by (x + 3) is S.\n\n    What is the largest possible value of R − S ?\n\n    A −26\n\n    B 5\n\n    C 7\n\n    D 17\n\n    E   29\n\n\n\n\n                                            7"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The function f is deﬁned by f(x) = x3 + ax2 + bx + c.\n\n    a, b and c take the values 1, 2 and 3 with no two of them being equal and not\n    necessarily in this order.\n\n    The remainder when f(x) is divided by (x + 2) is R.\n\n    The remainder when f(x) is divided by (x + 3) is S.\n\n    What is the largest possible value of R − S ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "−26"
+        },
+        {
+          "label": "B",
+          "rawText": "5"
+        },
+        {
+          "label": "C",
+          "rawText": "7"
+        },
+        {
+          "label": "D",
+          "rawText": "17"
+        },
+        {
+          "label": "E",
+          "rawText": "29"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "For this question, we make use of the remainder theorem: the remainder when f(x) is divided\nby (x − a) is f(a).\nIn this case, we take a = −2 and a = −3, so\n\n                                           f(−2) = R\n                                           f(−3) = S\n\nSubstituting these into the given formula for f(x) gives\n\n                                f(−2) = −8 + 4a − 2b + c = R\n                                f(−3) = −27 + 9a − 3b + c = S\n\nWe want the largest possible value of R − S, so we subtract these two equations to get\n\n                                      19 − 5a + b = R − S\n\nTo get the largest possible value, we want a to be as small as possible and b to be as large as\npossible, so we take a = 1, b = 3 (and then c = 2), giving R − S = 19 − 5 + 3 = 17\nThus the correct answer is D.\n\n\n\n\nVersion 1.0, April 2019                                                                  Page 7\n\n                                                                                   © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            8
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q06",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 6,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "6   Find the number of solutions of the equation\n\n                                     x sin 2x = cos 2x\n\n    with 0 ≤ x ≤ 2π.\n\n    A 0\n\n    B 1\n\n    C 2\n\n    D 3\n\n    E   4\n\n\n\n\n                                           8"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the number of solutions of the equation\n\n                                     x sin 2x = cos 2x\n\n    with 0 ≤ x ≤ 2π."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0"
+        },
+        {
+          "label": "B",
+          "rawText": "1"
+        },
+        {
+          "label": "C",
+          "rawText": "2"
+        },
+        {
+          "label": "D",
+          "rawText": "3"
+        },
+        {
+          "label": "E",
+          "rawText": "4"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "This equation has trigonometric functions and an x on its own. Our best bet is to first rearrange\nit to bring all of the trigonometric functions together. We have a sin 2x on one side and a cos 2x\non the other, which suggests that we should divide by cos 2x to obtain tan 2x. This gives\n\n                                           x tan 2x = 1\n\nWe should check, though, that we cannot have cos 2x = 0, so that we are allowed to divide by\nit. If cos 2x = 0, this would require x sin 2x = 0, so either sin 2x = 0, which is impossible if\ncos 2x = 0, or x = 0. But if x = 0, then cos 2x = 1, so this is also impossible. So we cannot\nhave cos 2x = 0.\nReturning to x tan 2x = 1, we can divide by x to get\n                                                      1\n                                           tan 2x =\n                                                      x\nThis equation is not possible to solve exactly. But the question (thankfully) only asks us how\nmany solutions there are in the range 0 ⩽ x ⩽ 2π\nSo we can sketch the graphs of y = tan 2x and y = x1 and see how many times they intersect.\n\n                               y\n\n                           2\n\n\n                           1\n\n                                                                         x\n                               0       π        π         3π        2π\n                                       2                   2\n                          −1\n\n\n                          −2\n\n\n\n\nWe see that the graph of y = x1 intersects every positive branch of y = tan 2x once. Since there\nare four branches of y = tan 2x in the range 0 ⩽ x ⩽ 2π, there are four solutions, so the correct\nanswer is E.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 8\n\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q07",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 7,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "7   The non-zero constant k is chosen so that the coeﬃcients of x6 in the expansions of\n    (1 + kx2 )7 and (k + x)10 are equal.\n\n    What is the value of k ?\n\n        1\n    A   6\n\n    B 6\n        √\n          6\n    C    6\n        √\n    D       6\n        √\n          30\n    E    30\n        √\n    F       30\n\n\n\n\n                                           9"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The non-zero constant k is chosen so that the coeﬃcients of x6 in the expansions of\n    (1 + kx2 )7 and (k + x)10 are equal.\n\n    What is the value of k ?\n\n        1"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "6"
+        },
+        {
+          "label": "B",
+          "rawText": "6\n        √\n          6"
+        },
+        {
+          "label": "C",
+          "rawText": "6\n        √"
+        },
+        {
+          "label": "D",
+          "rawText": "6\n        √\n          30"
+        },
+        {
+          "label": "E",
+          "rawText": "30\n        √"
+        },
+        {
+          "label": "F",
+          "rawText": "30"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can expand these two expressions using the binomial theorem. We look just at the term\ninvolving x6 :\n                                               \u0012 \u0013\n                                                7 4\n                         (1 + kx2 )7 = · · · +       1 (kx2 )3 + · · ·\n                                                3\n                                               7×6×5 3 6\n                                     = ··· +              k x + ···\n                                               3×2×1\n                                     = · · · + 35k 3 x6 + · · ·\n\nand\n                                               \u0012 \u0013\n                                10               10 4 6\n                          (k + x)    = ··· +          k x + ···\n                                                 6\n                                               \u0012 \u0013\n                                                 10 4 6\n                                     = ··· +          k x + ···\n                                                 4\n                                               10 × 9 × 8 × 7 4 6\n                                     = ··· +                     k x + ···\n                                                4×3×2×1\n                                     = · · · + 210k 4 x6 + · · ·\n\nWe therefore need\n                                          35k 3 = 210k 4\n       35     5    1\nso k =     =     = .\n       210    30   6\nThus the correct answer is A.\n\n\n\n\nVersion 1.0, April 2019                                                           Page 9\n\n                                                                             © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q08",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 8,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "8   The sum to inﬁnity of a geometric progression is 6.\n\n    The sum to inﬁnity of the squares of each term in the progression is 12.\n\n    Find the sum to inﬁnity of the cubes of each term in the progression.\n\n    A 8\n\n    B 18\n\n    C 24\n        216\n    D    7\n\n    E   72\n\n    F   216\n\n\n\n\n                                           10"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The sum to inﬁnity of a geometric progression is 6.\n\n    The sum to inﬁnity of the squares of each term in the progression is 12.\n\n    Find the sum to inﬁnity of the cubes of each term in the progression."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "8"
+        },
+        {
+          "label": "B",
+          "rawText": "18"
+        },
+        {
+          "label": "C",
+          "rawText": "24\n        216"
+        },
+        {
+          "label": "D",
+          "rawText": "7"
+        },
+        {
+          "label": "E",
+          "rawText": "72"
+        },
+        {
+          "label": "F",
+          "rawText": "216"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let us write the terms of the GP (geometric progression) as a, ar, ar2 and so on. Then we are\ntold that\n                                                          a\n                             S∞ = a + ar + ar2 + · · · =       =6                         (1)\n                                                         1−r\nWe can rearrange this final equation to a = 6 − 6r if we wish to.\nThe squares of each term are a2 , a2 r2 , a2 r4 , a2 r6 and so on. These themselves form a GP with\nfirst term a2 and common ratio r2 . Therefore, given that their sum is 12, we have for this GP\n\n                                                                a2\n                          S∞ = a2 + a2 r2 + a2 r4 + · · · =          = 12\n                                                              1 − r2\n\n                                            a2\nWe can write this last equation as                   = 12\n                                      (1 + r)(1 − r)\nBut we can now substitute in equation (1) to give\n                                        \u0012       \u0013\n                                            a\n                                      6           = 12\n                                          1+r\n         a\nso that     = 2, or a = 2 + 2r\n       1+r\nThus we have simultaneous equations for a and r:\n\n                                             a = 6 − 6r\n                                             a = 2 + 2r\n\nSubtracting these gives 4 − 8r = 0, so r = 21 and a = 3\nWe can now work out the sum to infinity of the cubes: the sequence of terms becomes a3 , a3 r3 ,\na3 r6 and so on, which as before is a GP; this time the first term is a3 and the common ratio is\nr3 . Hence the sum to infinity is\n\n                                       a3        33        27    216\n                               S∞ =       3\n                                            =       1    =  7  =\n                                      1−r     1 − ( 2 )3   (8)    7\n\nand the correct answer is D.\n\n\n\n\nVersion 1.0, April 2019                                                                   Page 10\n\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q09",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 9,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "9   Find the complete set of values of the constant c for which the cubic equation\n\n\n                                    2x3 − 3x2 − 12x + c = 0\n\n    has three distinct real solutions.\n\n    A −20 < c < 7\n\n    B −7 < c < 20\n\n    C c>7\n\n    D c > −7\n\n    E   c < 20\n\n    F   c < −20\n\n\n\n\n                                            11"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the complete set of values of the constant c for which the cubic equation\n\n\n                                    2x3 − 3x2 − 12x + c = 0\n\n    has three distinct real solutions."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "−20 < c < 7"
+        },
+        {
+          "label": "B",
+          "rawText": "−7 < c < 20"
+        },
+        {
+          "label": "C",
+          "rawText": "c>7"
+        },
+        {
+          "label": "D",
+          "rawText": "c > −7"
+        },
+        {
+          "label": "E",
+          "rawText": "c < 20"
+        },
+        {
+          "label": "F",
+          "rawText": "c < −20"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Commentary: We want the cubic equation 2x3 −3x2 −12x+c = 0 to have three distinct\n      real solutions. We don’t know any techniques for finding the roots of a cubic equation,\n      so we will have to be creative. (Actually, there is a formula, often known as Cardano’s\n      formula, for solving a cubic equation, but you are not expected to know this.)\n      What we do know how to do is to sketch a cubic graph by finding its turning points and\n      y-axis intercept, even if we don’t know the x-axis intercepts, so we will do this.\n\nWe can find the stationary points on the graph of y = 2x3 − 3x2 − 12x + c by differentiating.\nWe have\n                    dy\n                       = 6x2 − 6x − 12 = 6(x2 − x − 2) = 6(x − 2)(x + 1)\n                    dx\n                                                          dy\nso there are stationary points at x = 2 and x = −1 (where dx = 0)\nThese have coordinates\n                                (−1, 7 + c)   and   (2, −20 + c)\nFor the equation 2x3 − 3x2 − 12x + c = 0 to have three distinct real solutions, we need the two\nturning points of the cubic to be on opposite sides of the x-axis, one above it and one below it.\nIt is clear that −20 + c < 7 + c, so we need −20 + c < 0 and 7 + c > 0. The first inequality\nbecomes c < 20 and the second c > −7.\nCombining these, there are three distinct real solutions if and only if −7 < c < 20, which is\noption B.\n\n\n\n\nVersion 1.0, April 2019                                                                  Page 11\n\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q10",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 10,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "10   x and y satisfy |2 − x| ≤ 6 and |y + 2| ≤ 4.\n\n     What is the greatest possible value of |xy| ?\n\n     A 16\n\n     B 24\n\n     C 32\n\n     D 40\n\n     E   48\n\n     F   There is no greatest possible value.\n\n\n\n\n                                                12"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "x and y satisfy |2 − x| ≤ 6 and |y + 2| ≤ 4.\n\n     What is the greatest possible value of |xy| ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "16"
+        },
+        {
+          "label": "B",
+          "rawText": "24"
+        },
+        {
+          "label": "C",
+          "rawText": "32"
+        },
+        {
+          "label": "D",
+          "rawText": "40"
+        },
+        {
+          "label": "E",
+          "rawText": "48"
+        },
+        {
+          "label": "F",
+          "rawText": "There is no greatest possible value."
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We notice that the first inequality involves x only and the second involves y only, so we can\nsolve each inequality separately.\nFor the first one, |2 − x| ⩽ 6, this means that x is at distance at most 6 from 2, so −4 ⩽ x ⩽ 8\nLikewise, the second inequality, |y + 2| ⩽ 4 means that y is at most 4 from −2 (as |y + 2| =\n|y − (−2)|, so it measures the distance of y from −2). So −6 ⩽ y ⩽ 2\nWe can now obtain the greatest possible value of |xy| = |x|.|y| by taking the greatest possible\nvalue of |x|, which is 8, and the greatest possible value of |y|, which is 6, so the greatest possible\nvalue of |xy| is 8 × 6 = 48, which is option E.\n\n\n\n\nVersion 1.0, April 2019                                                                      Page 12\n\n                                                                                         © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q11",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 11,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "11   The line y = mx + 5, where m > 0, is normal to the curve y = 10 − x2 at the\n     point (p, q).\n\n     What is the value of p ?\n         √\n           2\n     A    6\n             √\n     B − 62\n          √\n         3 2\n     C    2\n               √\n     D −322\n       √\n     E   5\n        √\n     F − 5\n\n\n\n\n                                           13"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The line y = mx + 5, where m > 0, is normal to the curve y = 10 − x2 at the\n     point (p, q).\n\n     What is the value of p ?\n         √\n           2"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "6\n             √"
+        },
+        {
+          "label": "B",
+          "rawText": "− 62\n          √\n         3 2"
+        },
+        {
+          "label": "C",
+          "rawText": "2\n               √"
+        },
+        {
+          "label": "D",
+          "rawText": "−322\n       √"
+        },
+        {
+          "label": "E",
+          "rawText": "5\n        √"
+        },
+        {
+          "label": "F",
+          "rawText": "− 5"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can find the equation of the normal to the curve y = 10 − x2 at the point (p, q) as usual.\n                  dy\nThe derivative is    = −2x so at x = p the tangent has gradient −2p. Therefore the normal\n                  dx\n              1\nhas gradient    .\n             2p\nThe tangent and normal both pass through the point (p, 10 − p2 ), which shows that q = 10 − p2 .\nThe normal thus has equation\n                                                        1\n                                  y − (10 − p2 ) =        (x − p)\n                                                       2p\nso rearranging into the form y = mx + c gives\n                                          1    1\n                                    y=      x − + 10 − p2\n                                         2p    2\nWe want this to have the form y = mx + 5 where m > 0, so we have\n                                       1\n                                      − + 10 − p2 = 5.\n                                       2\nRearranging thus gives\n                                                   9\n                                            p2 =\n                                                   2\n                       √\n                3     3 2\nand hence p = ± √ = ±\n                 2     2\n                                            √\n           1                               3 2\nSince m =    > 0 we must have p > 0 so p =\n          2p                                2\nThe correct answer is C.\n\n\n\n\nVersion 1.0, April 2019                                                                 Page 13\n\n                                                                                    © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            14
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q12",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 12,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "12   A curve has equation y = f(x), where\n\n                                f(x) = x(x − p)(x − q)(r − x)\n\n     with 0 < p < q < r.\n\n     You are given that:\n                                       \u0002 r\n                                             f(x) dx = 0\n                                        0\n                                       \u0002 q\n                                             f(x) dx = −2\n                                        0\n                                       \u0002 r\n                                             f(x) dx = −3\n                                        p\n\n\n\n\n     What is the total area enclosed by the curve and the x-axis for 0 ≤ x ≤ r ?\n\n     A 0\n\n     B 1\n\n     C 4\n\n     D 5\n\n     E   6\n\n     F   10\n\n\n\n\n                                              14"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A curve has equation y = f(x), where\n\n                                f(x) = x(x − p)(x − q)(r − x)\n\n     with 0 < p < q < r.\n\n     You are given that:\n                                        r\n                                             f(x) dx = 0\n                                        0\n                                        q\n                                             f(x) dx = −2\n                                        0\n                                        r\n                                             f(x) dx = −3\n                                        p\n\n\n\n\n     What is the total area enclosed by the curve and the x-axis for 0 ≤ x ≤ r ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0"
+        },
+        {
+          "label": "B",
+          "rawText": "1"
+        },
+        {
+          "label": "C",
+          "rawText": "4"
+        },
+        {
+          "label": "D",
+          "rawText": "5"
+        },
+        {
+          "label": "E",
+          "rawText": "6"
+        },
+        {
+          "label": "F",
+          "rawText": "10"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "This curve intercepts the x-axis at 0, p, q and r. As the leading power of x is −x4 , the curve\ntends to −∞ as x gets very large (both positive and negative), and so the curve looks something\nlike this:\n\n                              y\n\n\n\n\n                                  A                        C\n                                                                              x\n                              0           p         q           r\n                                              B\n\n\n\n\nWe have labelled the three areas as A, B and C, and we want to know the value of A + B + C.\nWe can then write the three integrals we have been given in terms of these, referring to the\nsketch:\n                               Z r\n                                    f(x) dx = A − B + C = 0                              (1)\n                                 0\n                               Z q\n                                    f(x) dx = A − B = −2                                 (2)\n                               Z0 r\n                                    f(x) dx = −B + C = −3                                (3)\n                                      p\n\n\nSubtracting (3) from (1) gives A = 3, from which (2) gives B = 5 and so C = 2. Therefore\nA + B + C = 10, hence the correct option is F.\n\n      Commentary: Although our sketch turns out to be not very accurate, it was sufficient\n      to help us understand what was going on and to solve the problem. This is what we seek\n      from sketches: they should be good enough to give us insight, but they do not need to be\n      perfect.\n      Incidentally, there do exist values of p, q and r which make the statements of this question\n      true, namely p = 1.25, q = 3.16 and r = 4.25, correct to two decimal places.\n\n\n\n\nVersion 1.0, April 2019                                                                   Page 14\n\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            14
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            15
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q13",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 13,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "13   The function f(x) has derivative f \u0003 (x).\n\n     The diagram below shows the graph of y = f \u0003 (x).\n\n     Which point corresponds to a local minimum of f(x) ?\n\n\n                                              y\n\n\n                                                           E\n                      y = f ' (x)\n\n                                                       D\n\n\n\n\n                     A                    C                    F   x\n\n\n\n                               B\n\n\n\n\n                                                  15"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The function f(x) has derivative f  (x).\n\n     The diagram below shows the graph of y = f  (x).\n\n     Which point corresponds to a local minimum of f(x) ?\n\n\n                                              y\n\n\n                                                           E\n                      y = f ' (x)\n\n                                                       D"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        },
+        {
+          "label": "F",
+          "rawText": "[visual option F; transcription required]"
+        },
+        {
+          "label": "G",
+          "rawText": "[visual option G; transcription required]"
+        },
+        {
+          "label": "H",
+          "rawText": "[visual option H; transcription required]"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "A local minimum of f(x) occurs where the gradient is 0 at the point, is negative immediately to\nthe left of the point and is positive immediately to its right.\nSo on the graph of f 0 (x), this will be at a point where f 0 (x) = 0, and f 0 (x) is increasing from\nnegative to positive at that point. The only such point on the graph given is C.\n\nThe behaviour of f(x) at all of the labelled points is as follows:\n\nA Changing from positive to negative gradient, so a local maximum.\n\nB A local minimum of the gradient, so a non-stationary point of inflection. If walking along\n  the curve, one would stop turning to the right and start turning to the left.\n\nC Changing from negative to positive gradient, so a local minimum.\n\nD This point, where x = 0, has no particular relevance to the shape of f(x).\n\nE A local maximum of the gradient, so a non-stationary point of inflection. If walking along\n  the curve, one would stop turning to the left and start turning to the right.\n\nF A local minimum of the gradient at a point of zero gradient, so a stationary point of inflection.\n  If walking along the curve, one would stop turning to the right and start turning to the left.\n\n\n\n\nVersion 1.0, April 2019                                                                     Page 15\n\n                                                                                        © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            15
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            16
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required",
+          "option-count-review"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q14",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 14,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "14   The line y = mx + 4 passes through the points (3, log2 p) and (log2 p, 4).\n\n     What are the possible values of p ?\n\n     A p = 1 and p = 4\n\n     B p = 1 and p = 16\n\n     C p = 14 and p = 4\n\n     D p = 14 and p = 64\n             1\n     E   p = 64 and p = 4\n             1\n     F   p = 64 and p = 16\n\n\n\n\n                                             16"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The line y = mx + 4 passes through the points (3, log2 p) and (log2 p, 4).\n\n     What are the possible values of p ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "p = 1 and p = 4"
+        },
+        {
+          "label": "B",
+          "rawText": "p = 1 and p = 16"
+        },
+        {
+          "label": "C",
+          "rawText": "p = 14 and p = 4"
+        },
+        {
+          "label": "D",
+          "rawText": "p = 14 and p = 64\n             1"
+        },
+        {
+          "label": "E",
+          "rawText": "p = 64 and p = 4\n             1"
+        },
+        {
+          "label": "F",
+          "rawText": "p = 64 and p = 16"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "There are a variety of different ways to approach this question. The following is probably the\nsimplest.\nWe can substitute the coordinates of the points into the equation of the line to obtain\n\n                                      log2 p = 3m + 4\n                                           4 = m log2 p + 4\n\nThe second equation gives m log2 p = 0, so either m = 0 or log2 p = 0, so either m = 0 or p = 1.\nIf m = 0, then the first equation gives log2 p = 4, so p = 16\nIf log2 p = 0, so p = 1, then the first equation gives 3m + 4 = 0, which has a solution.\nSo there are two possible values of p, namely 1 and 16. Hence the answer is B.\n\n      Commentary: You might find it helpful to write q (for example) in place of log2 p, so\n      that the equations become\n\n                                           q = 3m + 4\n                                           4 = mq + 4\n\n      This makes their structure much more obvious.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 16\n\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            16
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            17
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q15",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 15,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "15   Find the sum of the real solutions of the equation:\n\n                                          √\n                                    3x − ( 3)x+4 + 20 = 0\n\n     A 1\n\n     B 4\n\n     C 9\n\n     D log3 20\n\n     E   2 log3 20\n\n     F   4 log3 20\n\n\n\n\n                                            17"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the sum of the real solutions of the equation:\n\n                                          √\n                                    3x − ( 3)x+4 + 20 = 0"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "1"
+        },
+        {
+          "label": "B",
+          "rawText": "4"
+        },
+        {
+          "label": "C",
+          "rawText": "9"
+        },
+        {
+          "label": "D",
+          "rawText": "log3 20"
+        },
+        {
+          "label": "E",
+          "rawText": "2 log3 20"
+        },
+        {
+          "label": "F",
+          "rawText": "4 log3 20"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "√ \u00012\nWe note that 3 =    3 .\n                   √ \u0001x\nSo if we write y =   3 , the equation becomes\n                                             √ \u00014\n                                      y2 −    3 y + 20 = 0\n\nor\n                                        y 2 − 9y + 20 = 0\nThis factorises to give (y − 4)(y − 5) = 0 so either y = 4 or y = 5\n                      1 \u0001x    1            1           1\nWe can write y = 3 2 = 3 2 x so either 3 2 x = 4 or 3 2 x = 5\nWe can now take logs to base 3 to obtain\n                                  1                   1\n                                  2 x = log3 4   or   2 x = log3 5\n\nso\n                                  x = 2 log3 4   or   x = 2 log3 5\n\nThe question has asked for the sum of the real solutions of the equation. Both of these are real,\nso we can add them to get 2 log3 4 + 2 log3 5 = 2 log3 20 using the log rule log ab = log a + log b\nHence the answer is E.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 17\n\n                                                                                      © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            17
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            18
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q16",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 16,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "16   The curve C has equation y = x2 + bx + 2, where b ≥ 0.\n\n     Find the value of b that minimises the distance between the origin and the\n     stationary point of the curve C.\n\n     A b=0\n\n     B b=1\n\n     C b=2\n             √\n     D b = 26\n          √\n     E b= 2\n          √\n     F b= 6\n\n\n\n\n                                            18"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The curve C has equation y = x2 + bx + 2, where b ≥ 0.\n\n     Find the value of b that minimises the distance between the origin and the\n     stationary point of the curve C."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "b=0"
+        },
+        {
+          "label": "B",
+          "rawText": "b=1"
+        },
+        {
+          "label": "C",
+          "rawText": "b=2\n             √"
+        },
+        {
+          "label": "D",
+          "rawText": "b = 26\n          √"
+        },
+        {
+          "label": "E",
+          "rawText": "b= 2\n          √"
+        },
+        {
+          "label": "F",
+          "rawText": "b= 6"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We first need to find the stationary point of the curve C. We can do this either by differentiating\nor, as the equation is a quadratic, by completing the square.\nBy differentiating, we have\n                                                dy\n                                                   = 2x + b\n                                                dx\n     dy\nso      = 0 if and only if x = − 12 b, and so\n     dx\n                                 y = (− 21 b)2 + b(− 21 b) + 2 = 2 − 14 b2\n\nAlternatively, we can complete the square to give y = (x + 21 b)2 − 14 b2 + 2, and so the stationary\npoint is at (− 12 b, 2 − 14 b2 ).\nThe distance of this point from the origin is then given by\n           q                             q                               q\n              (− 21 b)2 + (2 − 14 b2 )2 = 14 b2 + 4 − 4( 14 b2 ) + 16\n                                                                   1 4     1 4\n                                                                      b = 16 b − 34 b2 + 4\n\nTo minimise this square root, we can minimise the expression inside the square root. This is a\n                            1\nfunction of B = b2 , namely 16 B 2 − 34 B + 4, so we can minimise this.\n\n        Commentary: If a quartic is actually a quadratic in the variable squared, it is usually\n        much easier to work with the quadratic than the quartic.\n\nWe can minimise this by completing the square or differentiating, as before. We can start by\n                       1                                1\ntaking out a factor of 16 so we are trying to minimise 16 (B 2 − 12B) + 4. (There’s no need to\nthink about the 4 at the end: this additional term does not change the value of b or B at which\nthe function is minimised.)\nWe therefore wish√to minimise B 2 − 12B = (B − 6)2 − 36 so B = 6 gives the minimum value, so\nb2 = 6 giving b = 6 (as b ⩾ 0), hence the answer is F.\n\n        Commentary: We could have gone ahead and differentiated the whole square root\n        expression for distance, if we know the chain rule. But that’s more effort than needed.\n        Similarly, we could have differentiated the expression as a quartic, but again that is more\n        complex than required. It is almost always worth spending a moment thinking how to\n        make the problem a little easier before diving into algebra and calculations.\n\n\n\n\nVersion 1.0, April 2019                                                                          Page 18\n\n                                                                                             © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            18
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            19
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q17",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 17,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "17   There are two sets of data: the mean of the ﬁrst set is 15, and the mean of the\n     second set is 20.\n\n     One of the pieces of data from the ﬁrst set is exchanged with one of the pieces of\n     data from the second set.\n\n     As a result, the mean of the ﬁrst set of data increases from 15 to 16, and the mean of\n     the second set of data decreases from 20 to 17.\n\n     What is the mean of the set made by combining all the data?\n\n     A 16 14\n\n     B 16 13\n\n     C 16 12\n\n     D 16 23\n\n     E   16 34\n\n\n\n\n                                            19"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "There are two sets of data: the mean of the ﬁrst set is 15, and the mean of the\n     second set is 20.\n\n     One of the pieces of data from the ﬁrst set is exchanged with one of the pieces of\n     data from the second set.\n\n     As a result, the mean of the ﬁrst set of data increases from 15 to 16, and the mean of\n     the second set of data decreases from 20 to 17.\n\n     What is the mean of the set made by combining all the data?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "16 14"
+        },
+        {
+          "label": "B",
+          "rawText": "16 13"
+        },
+        {
+          "label": "C",
+          "rawText": "16 12"
+        },
+        {
+          "label": "D",
+          "rawText": "16 23"
+        },
+        {
+          "label": "E",
+          "rawText": "16 34"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "It is not obvious how to begin this question – there are lots of wordy descriptions. We also don’t\nknow how many pieces of data there are in each of the two sets.\nSo let’s try naming things.\nLet the first set of data have n pieces of data, and the second set have m pieces of data.\nSince the mean of the first set of data is 15, the sum of the data is 15n.\nLikewise, the sum of the second set of data is 20m.\nWhen we exchange one piece of data from the first set with one piece of data from the second\nset, the overall total stays the same, but the totals of the two sets change. We are told what\nhappens to the means, so the total of the first set is now 16n and of the second set is 17m.\nSince the overall total is the same, we have\n\n                                    15n + 20m = 16n + 17m\n\nWe can simplify this to give n = 3m\nTherefore the overall total is 15n + 20m = 45m + 20m = 65m and there are n + m = 4m pieces\nof data.\n                                              65m    65\nThus the mean of the combined set of data is       =    = 16 14 and the answer is A.\n                                              4m     4\n\n      Commentary: At the end of this, we are still no wiser about how many pieces of data\n      there were to begin with. All we know is that the first set contains three times as many\n      as the second set.\n\n\n\n\nVersion 1.0, April 2019                                                                   Page 19\n\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            19
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            20
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q18",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 18,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "18   What is the smallest positive value of a for which the line x = a is a line of\n     symmetry of the graph of y = sin (2x − 4π3\n                                                )?\n\n         π\n     A   12\n\n         5π\n     B   12\n\n         7π\n     C   12\n\n         11π\n     D    12\n\n         19π\n     E    12\n\n\n\n\n                                             20"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "What is the smallest positive value of a for which the line x = a is a line of\n     symmetry of the graph of y = sin (2x − 4π3\n                                                )?\n\n         π"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "12\n\n         5π"
+        },
+        {
+          "label": "B",
+          "rawText": "12\n\n         7π"
+        },
+        {
+          "label": "C",
+          "rawText": "12\n\n         11π"
+        },
+        {
+          "label": "D",
+          "rawText": "12\n\n         19π"
+        },
+        {
+          "label": "E",
+          "rawText": "12"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The lines of symmetry of a sine or cosine graph (that is, something of the form sin(kx + θ) + c\nor cos(kx + θ) + c) are at the x-values where the sine or cosine equals ±1. So in this case, if we\nsolve sin(2x − 4π\n                3 ) = ±1 we will find the lines of symmetry.\nWe solve each of them separately.\nWe have sin θ = 1 when θ = π2 + 2nπ (for any integer n), so in this case, this gives\n\n                                           2x − 4π   π\n                                                 3 = 2 + 2nπ\n                                 ⇐⇒             2x = 11π\n                                                      6 + 2nπ\n                                 ⇐⇒               x = 11π\n                                                       12 + nπ\n\nSo the smallest positive value of x with sin(2x − 4π              11π\n                                                   3 ) = 1 is x = 12\nIn the second case, we have sin θ = −1 when θ = − π2 + 2nπ (for any integer n), so in this case,\nthis gives\n\n                                           2x − 4π     π\n                                                 3 = − 2 + 2nπ\n                                 ⇐⇒             2x = 5π\n                                                      6 + 2nπ\n                                 ⇐⇒               x = 5π\n                                                      12 + nπ\n\nSo the smallest positive value of x with sin(2x − 4π               5π\n                                                   3 ) = −1 is x = 12\nThis is smaller than 11π                  5π\n                      12 so the answer is 12 , which is option B.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 20\n\n                                                                                       © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            20
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            21
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q19",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 19,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "19   A triangle ABC is to be drawn with AB = 10cm, BC = 7cm and the angle at A\n     equal to θ, where θ is a certain speciﬁed angle.\n\n     Of the two possible triangles that could be drawn, the larger triangle has three times\n     the area of the smaller one.\n\n     What is the value of cos θ ?\n\n         5\n     A   7\n\n         151\n     B   200\n          √\n         2 2\n     C    5\n         √\n             17\n     D       5\n         √\n             51\n     E       8\n         √\n             34\n     F       8\n\n\n\n\n                                            21"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A triangle ABC is to be drawn with AB = 10cm, BC = 7cm and the angle at A\n     equal to θ, where θ is a certain speciﬁed angle.\n\n     Of the two possible triangles that could be drawn, the larger triangle has three times\n     the area of the smaller one.\n\n     What is the value of cos θ ?\n\n         5"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "7\n\n         151"
+        },
+        {
+          "label": "B",
+          "rawText": "200\n          √\n         2 2"
+        },
+        {
+          "label": "C",
+          "rawText": "5\n         √\n             17"
+        },
+        {
+          "label": "D",
+          "rawText": "5\n         √\n             51"
+        },
+        {
+          "label": "E",
+          "rawText": "8\n         √\n             34"
+        },
+        {
+          "label": "F",
+          "rawText": "8"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "This questions calls for a sketch. We draw AB = 10, a line from A at an angle θ to AB (though\nwe do not know what θ is), and a circular arc centred on B with radius 7.\n\n\n                                                                           C2\n\n\n\n\n                                                                        7\n                                  C1\n\n\n                           θ                      7\n                     A                      10                      B\n\n\nThe sketch shows the two triangles which could be formed subject to these conditions, with the\nthird vertex being at C1 or C2 .\nOne approach, hinted at by the instruction to find cos θ, is to use the cosine rule.\nIn the triangle ABC1 , we have\n\n                                72 = (AC1 )2 + 102 − 2(AC1 )10 cos θ                            (1)\n\nwhile in the triangle ABC2 , we have\n\n                                72 = (AC2 )2 + 102 − 2(AC2 )10 cos θ                            (2)\n\nUnfortunately, we do not know either AC1 or AC2 . We do, however, know that the larger\ntriangle has three times the area of the smaller one. Taking AC1 or AC2 as the base of the\ntriangle, the perpendicular height is from B to the line AC2 , and is the same for both triangles.\nSo AC2 = 3(AC1 )\nWe can now substitute this into equation (2) to get\n\n                               72 = 9(AC1 )2 + 102 − 6(AC1 )10 cos θ\n\nSubtracting equation (1) then gives\n\n                                    0 = 8(AC1 )2 − 40(AC1 ) cos θ\n\nso dividing by 8AC1 , we have AC1 = 5 cos θ.\nWe can now substitute this back into equation (1) to get\n\n                               72 = (5 cos θ)2 + 102 − 20(5 cos θ) cos θ\n\nso\n                                  49 = 25 cos2 θ + 100 − 100 cos2 θ\n\n\n\nVersion 1.0, April 2019                                                                    Page 21\n\n                                                                                       © UCLES 2019\n\f\nTest of Mathematics for University Admission, 2018 Paper 1 Solutions\n\n\nwhich simplifies to\n                                           75 cos2 θ = 51\n                                       √\n              51   17                  17\nso cos2 θ =      =    giving cos θ =      (as cos θ > 0)\n              75   25                  5\n\nThere is an alternative approach which does not use the cosine rule.\nIf we drop a perpendicular from B to the line AC2 , and let x = AC1 , our diagram becomes:\n\n\n                                                                   C2\n\n\n\n                                                     D\n\n\n                                                                   7\n                                 C1\n                           x\n                            θ                    7\n                      A                    10                  B\n\n\nNow D is midway between C1 and C2 by symmetry (or by using the “RHS” congruency rule on\nthe triangles BDC1 and BDC2 ), so C1 D = DC2 .\nAlso, the area of the triangle ABC1 is 21 (AC1 )(BD) and the area of the triangle ABC2 is\n1\n2 (AC2 )(BD)\nSince the larger triangle has three times the area of the smaller one, AC2 = 3(AC1 ) (as before).\nSo AC2 = 3x, hence C1 C2 = 2x, and C1 D = DC2 = x\nWe can now apply Pythagoras to BDC1 and BDA. We obtain, respectively,\n\n                                           x2 + (BD)2 = 72\n                                       (2x)2 + (BD)2 = 102\n\nSubtracting gives 3x2 = 51, so x2 = 17\n                                      √\n               AD   2x                  17\nSince cos θ =     =    we get cos θ =      as before.\n               AB   10                 5\n                                √        √\nThis also easily\n            √ shows √that BD = 32 = 4 2 and that the area of the two triangles ABC1 and\nABC2 are 2 34 and 6 34.\n\n\n\n\nVersion 1.0, April 2019                                                                  Page 22\n\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            21
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            22,
+            23
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2018-p1-q20",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2018-p1",
+      "edition": "2018",
+      "paper": 1,
+      "questionNumber": 20,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "20   Find the value of\n\n         sin2 0◦ + sin2 1◦ + sin2 2◦ + sin2 3◦ + · · · + sin2 87◦ + sin2 88◦ + sin2 89◦ + sin2 90◦\n\n     A 0.5\n\n     B 1\n\n     C 1.5\n\n     D 45\n\n     E    45.5\n\n     F    46\n\n\n\n\n                                           \b\u0011\u0007\u0003\u0012 \u0003\u0017\b\u0016\u0017\n\n\n\n                                                  22"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the value of\n\n         sin2 0◦ + sin2 1◦ + sin2 2◦ + sin2 3◦ + · · · + sin2 87◦ + sin2 88◦ + sin2 89◦ + sin2 90◦"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0.5"
+        },
+        {
+          "label": "B",
+          "rawText": "1"
+        },
+        {
+          "label": "C",
+          "rawText": "1.5"
+        },
+        {
+          "label": "D",
+          "rawText": "45"
+        },
+        {
+          "label": "E",
+          "rawText": "45.5"
+        },
+        {
+          "label": "F",
+          "rawText": "46\n\n\n\n\n                                           ED E"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "This reminds us of adding the terms of an arithmetic series. One way to do so is to write out\nthe series twice, once forwards and once backwards, and then add corresponding pairs of terms\ntogether. If we do that here, we obtain\n\n               S = sin2 0◦ + sin2 1◦ + sin2 2◦ + · · · + sin2 88◦ + sin2 89◦ + sin2 90◦\n               S = sin2 90◦ + sin2 89◦ + sin2 88◦ + · · · + sin2 2◦ + sin2 1◦ + sin2 0◦\n\nso that\n            2S = (sin2 0◦ + sin2 90◦ ) + (sin2 1◦ + sin2 89◦ ) + · · · + (sin2 90◦ + sin2 0◦ )\nNow we know that sin2 x + cos2 x = 1 for all x, and since sin(90◦ − x) = cos x (by, for example,\nthinking about a right-angled triangle or by looking at the graphs of the functions), we can\nrewrite this sum as\n\n            2S = (sin2 0◦ + cos2 0◦ ) + (sin2 1◦ + cos2 1◦ ) + · · · + (sin2 90◦ + cos2 90◦ )\n                = 1 + 1 + ··· + 1\n                = 91\n\n(since there are 91 terms), therefore S = 45.5, which is option E.\n\n\n\n\nVersion 1.0, April 2019                                                                             Page 23\n\n                                                                                                © UCLES 2019\n\f\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support:\nadmissionstesting.org/help"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2018-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+          "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+          "pages": [
+            22
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2018-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+          "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+          "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+          "pages": [
+            24,
+            25
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    }
+  ]
+}

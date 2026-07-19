@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q07",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 7,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "7   Consider the following conditions on a parallelogram P QRS, labelled\n    anticlockwise:\n\n        I    length of P Q = length of QR\n        II   The diagonal P R intersects the diagonal QS at right angles\n        III ∠P QR = ∠QRS\n\n    Which of these conditions is/are individually suﬃcient for the parallelogram P QRS\n    to be a square?\n\n\n               Condition I is          Condition II is         Condition III is\n                 suﬃcient                suﬃcient                suﬃcient\n       A           yes                      yes                      yes\n       B           yes                      yes                      no\n       C           yes                      no                       yes\n       D           yes                      no                       no\n       E            no                      yes                      yes\n       F            no                      yes                      no\n       G            no                      no                       yes\n       H            no                      no                       no\n\n\n\n\n                                            9"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following conditions on a parallelogram P QRS, labelled\n    anticlockwise:\n\n        I    length of P Q = length of QR\n        II   The diagonal P R intersects the diagonal QS at right angles\n        III ∠P QR = ∠QRS\n\n    Which of these conditions is/are individually suﬃcient for the parallelogram P QRS\n    to be a square?\n\n\n               Condition I is          Condition II is         Condition III is\n                 suﬃcient                suﬃcient                suﬃcient"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "yes                      yes                      yes"
+    },
+    {
+      "label": "B",
+      "rawText": "yes                      yes                      no"
+    },
+    {
+      "label": "C",
+      "rawText": "yes                      no                       yes"
+    },
+    {
+      "label": "D",
+      "rawText": "yes                      no                       no"
+    },
+    {
+      "label": "E",
+      "rawText": "no                      yes                      yes"
+    },
+    {
+      "label": "F",
+      "rawText": "no                      yes                      no"
+    },
+    {
+      "label": "G",
+      "rawText": "no                      no                       yes"
+    },
+    {
+      "label": "H",
+      "rawText": "no                      no                       no"
+    }
+  ],
+  "correctAnswer": "H",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "To show that a condition is sufficient, we must explain why having the condition means that\nthe parallelogram must be a square. To show that a condition is not sufficient, we must find an\nexample of a parallelogram that satisfies the condition but is not a square.\nFor condition I, if P QRS is a rhombus that is not a square, then it satisfies the condition but\nis not a square. So condition I is not sufficient.\nFor condition II, the same example works: the diagonals of a rhombus intersect at right angles\neven when the rhombus is not a square.\nFor condition III, we know that the adjacent angles ∠P QR and ∠QRS sum to 180◦ , so if\ncondition III is satisfied, they must each be 90◦ , a right angle. But a rectangle that is not a\nsquare satisfies this condition and is a parallelogram.\nTherefore none of these conditions is sufficient, and the correct option is H.\n\n\n\n\nVersion 1.0, April 2021                                                                  Page 9\n\n                                           © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

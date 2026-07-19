@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                  \u0003\n                                                  \u0003\n                                                  \u0003\n\n͵\u0003     \u0004\u0003\u0003݈ \u0003\u0003‫ ݕ‬ൌ ͸ െ ʹ‫\u0003ݔ‬\n       \u0003\n       \u0004\u0003 \u0003\u0003\u0003 \u0003\u0003݈\u0003\u0003\u0003\u0003\u0003\u0003ሺെ͸ǡ ͲሻǤ\u0003\u0003\n       \u0003\n         \u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003\u0003\u0003\u0003\u0003\u0003‫ݔ‬ǦǤ\u0003\n\u0003      \u0003\n\u0003            ͳ\n       A   ͳ͸ \u0003\n             ͷ\n\u0003      B   ͳͺ\u0003\n\u0003            ͵\n       C   ʹͳ \u0003\n             ͷ\n\u0003      D   ʹ͹\u0003\n\u0003            ͳ\n       E   ͶͲ \u0003\n             ʹ\n\u0003\n\n\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u0018                                  >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A݈ ‫ ݕ‬ൌ 6 െ 2‫ݔ‬\n       \n       A  ݈ሺെ6ǡ 0ሻǤ\n       \n          ‫ݔ‬ǦǤ\n      \n            1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "16 \n             5"
+    },
+    {
+      "label": "B",
+      "rawText": "18\n            3"
+    },
+    {
+      "label": "C",
+      "rawText": "21 \n             5"
+    },
+    {
+      "label": "D",
+      "rawText": "27\n            1"
+    },
+    {
+      "label": "E",
+      "rawText": "40 \n             2\n\n\n\n\n\n\n\n\n\n8&/(6                                                                        >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "It is always worth drawing a sketch for questions like this, to ensure that we know what area is\nbeing referred to.\nThe line l has a negative gradient, and passes through the point (0, 6); it also intersects the\nx-axis at (3, 0). So the sketch looks something like this:\n\n                                                      y\n\n                                                      6\n\n                                                                      l0\n\n\n\n                                                                           x\n                                −6                    0      3\n                                                                  l\n\n\nWe see therefore that the required area is a triangle with base length along the x-axis of 3−(−6) =\n9. Thus to find the area we only need to find the y-coordinate of the point of intersection of the\ntwo lines.\nThe equation of the second line, l0 , can be given by y − y1 = m(x − x1 ): its gradient is the\ngradient perpendicular to −2, which is 21 , and it passes through (−6, 0), so it has equation\n\n                                     l0 : y − 0 = 12 (x − (−6))\n\nwhich simplifies to y = 12 x + 3. We can find the coordinates of intersection by solving the\nequations of l and l0 simultaneously. Substituting for y, we get\n\n                                         6 − 2x = 12 x + 3\n\nso 52 x = 3, or x = 65 . This looks plausible from the sketch. We then get y = 12 x + 3 = 18\n                                                                                          5 (and\nwe can check that the equation of l gives the same y-value). Thus the area of the triangle is\n                                      1       18  81     1\n                                      2 × 9 × 5 = 5 = 16 5\n\nand the correct answer is A.\n\n\n\n\nVersion 1.1, March 2019                                                                     Page 5\n\n                                                                                      © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

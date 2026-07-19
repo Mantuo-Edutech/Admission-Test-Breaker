@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q14",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 14,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                  \u0003\n                                                  \u0003\n                                                  \u0003\n\nͳͶ\u0003    \u0017\u0003\u0003\u0003\u0003\u0003\u0003\n       \u0003                                 \u0003\n       \u0003                                 \u0003\u0003\u0003\u0003ʹ௫ ൅ ͵ ൈ ʹ௬ ൌ ͵\u0003\n       \u0003\n       \u0003                                 ʹଶ௫ െ ͻ ൈ ʹଶ௬ ൌ ͸\u0003\n       \u0003\n       \u0003‫ ݔ‬ൌ ‫݌‬ǡ ‫ ݕ‬ൌ ‫ݍ‬Ǥ\u0003\n       \u0003\n         \u0003\u0003\u0003\u0003‫ ݌‬െ ‫\u0003ݍ‬\n\u0003      \u0003\n\u0003           ͷ\n       A      \u0003\n           ͳʹ\n\n\u0003          ͹\n       B    \u0003\n           ͵\n\n\u0003                   ͷ\n       C    ଶ      \u0003\n                   ͳʹ\n\n\u0003               ͹\n       D    ଶ \u0003\n                ͵\n\n\u0003\n       E    ଶ \u0003ͻ\u0003\n\n\u0003\n       F    ଶ \u0003ͳͷ\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0014\u0019"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "\n                                        \n                                        2௫ ൅ 3 ൈ 2௬ ൌ 3\n       \n                                        2ଶ௫ െ 9 ൈ 2ଶ௬ ൌ 6\n       \n       ‫ ݔ‬ൌ ‫݌‬ǡ ‫ ݕ‬ൌ ‫ݍ‬Ǥ\n       \n         ‫ ݌‬െ ‫ݍ‬\n      \n           5"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "12\n\n          7"
+    },
+    {
+      "label": "B",
+      "rawText": "3\n\n                   5"
+    },
+    {
+      "label": "C",
+      "rawText": " ଶ      \n                   12\n\n               7"
+    },
+    {
+      "label": "D",
+      "rawText": " ଶ \n                3"
+    },
+    {
+      "label": "E",
+      "rawText": " ଶ 9"
+    },
+    {
+      "label": "F",
+      "rawText": " ଶ 15\n\n\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The equations involve 2x and 22x = (2x )2 , so we write a = 2x ; likewise we write b = 2y , and so\nour equations become:\n\n                                            a + 3b = 3\n                                          a − 9b2 = 6\n                                           2\n\n\nThe first equation gives a = 3 − 3b, which we can substitute into the second equation to obtain\n\n                                       (3 − 3b)2 − 9b2 = 6\n\nwhich expands to 9 − 18b = 6, and hence b = 16 and a = 52\nAnother way to solve these simultaneous equations is to note that the second one can be written\nas (a + 3b)(a − 3b) = 6, using the identity for the difference of two squares. Since a + 3b = 3,\nthis gives a − 3b = 2, from which we can again deduce a and b.\nWe can now find x and y:\n\n                                     x = log2 a = log2 25 = p\n                                     y = log2 b = log2 16 = q\n\nand hence                                              \u0012         \u0013\n                                      5      1             5 1\n                          p − q = log2 − log2 = log2        ÷        = log2 15\n                                      2      6             2 6\n\nThus the correct answer is F.\n\n\n\n\nVersion 1.1, March 2019                                                                   Page 17\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

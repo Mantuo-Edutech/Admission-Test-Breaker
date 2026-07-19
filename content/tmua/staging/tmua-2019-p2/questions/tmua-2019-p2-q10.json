@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q10",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 10,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "10   P QRS is a quadrilateral, labelled anticlockwise.\n\n     Which one of the following is a necessary but not suﬃcient condition for P QRS\n     to be a parallelogram?\n\n     A P Q = SR and P S is parallel to QR\n\n     B P Q = SR and P Q is parallel to SR\n\n     C P Q = QR = SR = P S\n\n     D P R = QS\n\n\n\n\n                                             12"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "P QRS is a quadrilateral, labelled anticlockwise.\n\n     Which one of the following is a necessary but not suﬃcient condition for P QRS\n     to be a parallelogram?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "P Q = SR and P S is parallel to QR"
+    },
+    {
+      "label": "B",
+      "rawText": "P Q = SR and P Q is parallel to SR"
+    },
+    {
+      "label": "C",
+      "rawText": "P Q = QR = SR = P S"
+    },
+    {
+      "label": "D",
+      "rawText": "P R = QS"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We sketch a quadrilateral for ease of reference.\n\n                                                                R\n\n                               S\n\n\n                                       P                 Q\n\n\nA The sides P Q and SR are equal in length, which is certainly necessary if P QRS is a par-\n  allelogram, and P S being parallel to QR is also necessary. If these are both the case, then\n  on first glance it may seem that P QRS must be a parallelogram. However, if we draw two\n  parallel lines and ask how we can join them with two equal-length sides. We discover there\n  are two ways:\n\n                   S                       R       S                                R\n\n\n\n\n               P                   Q                     P                  Q\n\n\n   So this condition is necessary but not sufficient.\n\nB As before, P Q = SR is necessary, and P Q being parallel to SR is obviously necessary, so\n  the whole condition is necessary.\n   Unlike in the previous part, though, this is also sufficient: if two sides of the quadrilateral\n   are both equal and parallel, the remaining two sides must also be equal and parallel. (This\n   may seem obvious, and it can be proven using geometric or vector methods; see below for\n   details.)\n\nC This condition is not necessary, as not all four sides of a parallelogram need to be the same\n  length. It does mean that the parallelogram is a rhombus, so it is a sufficient condition.\n\nD The diagonals of a parallelogram need not be equal in length, so this is not a necessary\n  condition. It is also not sufficient.\n\nThe correct answer is therefore A.\n\nWe now give two proofs that condition B is sufficient, that is, if P Q = SR and P Q is parallel\nto SR, then P QRS is a parallelogram.\n                                                                        −−→   −→\nWe first give a vector proof. Since P Q = SR and they are parallel, P Q = SR; we call this\n              −→\nvector a. Let P S = b, as shown in this diagram:\n\n\n\n\nc UCLES                                                                                   Page 12\n\f\nTest of Mathematics for University Admission, 2019 Paper 2 Solutions\n\n\n                                          S       a       R\n\n                                      b\n\n\n                                  P           a       Q\n\n\nThen\n                        −−→ −−→ −→ −→\n                        QR = QP + P S + SR = (−a) + b + a = b\n   −−→ −→\nso QR = P S, showing that P S and QR are equal and parallel, and thus P QRS is a parallelo-\ngram.\n\nAnd here is a geometric approach. We are given that P Q = RS and that they are parallel.\nDraw in the diagonal QS, as shown.\n\n                                          S               R\n\n\n\n\n                                  P                   Q\n\n\nThen ∠P QS = ∠RSQ as they are alternating angles.\nTherefore triangles P QS and RSQ are congruent by side-angle-side, as P Q = RS (given),\nQS = SQ (common side) and ∠P QS = ∠RSQ.\nThus ∠QSP = ∠SQR, so SP is parallel to QR (by alternating angles) and P S = RQ.\nHence P QRS is a parallelogram.\n\n\n\n\nc UCLES                                                                            Page 13"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        12,
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

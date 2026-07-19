@@ -1,0 +1,47 @@
+schemaVersion: 1
+feature:
+  id: ucat-decision-making-full-mock
+  title: Original full-length UCAT Decision Making mock
+  status: partial
+  userOutcome: A student can complete thirty-five original Decision Making questions in a 37-minute native session with mixed single-answer and five-statement interaction, a basic calculator, private autosave, raw results and learning history.
+run:
+  packageScript: verify:ucat-decision-full-mock
+claims:
+  - id: current-full-length-decision-structure
+    status: verified
+    statement: The Mantou-original dataset contains 35 questions in 37 minutes, including six five-statement items scored by the existing 2/1/0 raw-mark rule and twenty-nine four-option items across all eight published Decision Making knowledge families.
+    artifacts:
+      - content/ucat/original-practice/decision-making-full-mock-v1.json
+      - src/features/practice/content/ucat-decision-making-full-mock.ts
+      - tests/features/practice/content/ucat-decision-making-full-mock.test.ts
+    automatedChecks:
+      - verify:ucat-decision-full-mock
+      - typecheck
+  - id: responsive-route-only-decision-delivery
+    status: verified
+    statement: The full dataset is a route-only chunk and reuses the profile gate, table renderer, statement-set controls, calculator, timer, autosave, factual raw result and private learning record without exposing official source files.
+    artifacts:
+      - src/features/practice/content/practice-paper-registry.ts
+      - src/features/practice/pages/PracticeRoutePage.tsx
+      - tests/e2e/ucat-decision-making-full-mock.spec.ts
+    automatedChecks:
+      - verify:ucat-decision-full-mock
+      - verify:web-performance
+      - build
+boundaries:
+  - This is Mantou-original teaching-preview content, not an official UCAT Question Bank or an official-equivalent difficulty claim.
+  - The result is a raw mark out of 41 under this paper's six multiple-statement items; no 300–900 conversion, percentile, university benchmark or admission probability is inferred.
+  - Official UCAT preparation assets remain internal research sources and are not delivered to the browser.
+manualChecks:
+  - id: independent-ucat-decision-full-mock-review
+    status: pending
+    evidence: A separate UCAT Decision Making reviewer must verify every rule set, statistical calculation, syllogism, argument, distractor, answer key and difficulty spread.
+    viewports: [content]
+  - id: full-decision-student-timing-pilot
+    status: pending
+    evidence: Real students must complete the 37-minute session to calibrate reasoning load and pacing without deriving an official scale score.
+    viewports: [student]
+  - id: full-decision-browser-device-review
+    status: pending
+    evidence: Desktop, tablet and phone review must verify all tables, five-statement sets, calculator, response persistence, timer and no horizontal overflow.
+    viewports: [desktop, tablet, phone]

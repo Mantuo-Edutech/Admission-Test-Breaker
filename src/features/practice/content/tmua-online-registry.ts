@@ -1,17 +1,32 @@
 import rawManifest from "../../../../content/tmua/online-papers.json" with { type: "json" };
+import { TMUA_2017_P1 } from "./tmua-2017-p1.js";
+import { TMUA_2017_P2 } from "./tmua-2017-p2.js";
+import { TMUA_2018_P1 } from "./tmua-2018-p1.js";
+import { TMUA_2018_P2 } from "./tmua-2018-p2.js";
+import { TMUA_2019_P1 } from "./tmua-2019-p1.js";
+import { TMUA_2019_P2 } from "./tmua-2019-p2.js";
+import { TMUA_2020_P1 } from "./tmua-2020-p1.js";
+import { TMUA_2020_P2 } from "./tmua-2020-p2.js";
+import { TMUA_2021_P1 } from "./tmua-2021-p1.js";
+import { TMUA_2021_P2 } from "./tmua-2021-p2.js";
+import { TMUA_2022_P1 } from "./tmua-2022-p1.js";
+import { TMUA_2022_P2 } from "./tmua-2022-p2.js";
 import { TMUA_2023_P1 } from "./tmua-2023-p1.js";
+import { TMUA_2023_P2 } from "./tmua-2023-p2.js";
+import { TMUA_PRACTICE_2016_P1 } from "./tmua-practice-2016-p1.js";
+import { TMUA_PRACTICE_2016_P2 } from "./tmua-practice-2016-p2.js";
+import { TMUA_SPECIMEN_P1 } from "./tmua-specimen-p1.js";
+import { TMUA_SPECIMEN_P2 } from "./tmua-specimen-p2.js";
 import type { PracticePaper, PracticeQuestion, QuestionBlock } from "./types.js";
 import { validatePracticePaper } from "./validate.js";
 
-export interface TmuaOnlinePaperRecord {
+interface TmuaOnlinePaperRecordBase {
   readonly id: string;
   readonly edition: string;
   readonly label: string;
   readonly paper: 1 | 2;
   readonly durationMinutes: 75;
   readonly questionCount: 20;
-  readonly deliveryMode: "source-pdf-answer-sheet";
-  readonly publicDocumentPath: string;
   readonly sourceQuestionPath: string;
   readonly sourceAnswerPath: string;
   readonly questionSourceSha256: string;
@@ -21,6 +36,17 @@ export interface TmuaOnlinePaperRecord {
   readonly answerLabels: "ABCDEFGH";
   readonly reviewStatus: "source-and-answer-verified";
 }
+
+export type TmuaOnlinePaperRecord = TmuaOnlinePaperRecordBase & (
+  | {
+      readonly deliveryMode: "structured";
+      readonly publicDocumentPath: null;
+    }
+  | {
+      readonly deliveryMode: "source-pdf-answer-sheet";
+      readonly publicDocumentPath: string;
+    }
+);
 
 interface TmuaOnlinePaperManifest {
   readonly schemaVersion: 1;
@@ -61,9 +87,12 @@ function parseManifest(value: unknown): TmuaOnlinePaperManifest {
       (candidate.paper !== 1 && candidate.paper !== 2) ||
       candidate.durationMinutes !== 75 ||
       candidate.questionCount !== 20 ||
-      candidate.deliveryMode !== "source-pdf-answer-sheet" ||
-      typeof candidate.publicDocumentPath !== "string" ||
-      !candidate.publicDocumentPath.startsWith("/papers/tmua/") ||
+      (candidate.deliveryMode !== "structured" &&
+        candidate.deliveryMode !== "source-pdf-answer-sheet") ||
+      (candidate.deliveryMode === "structured"
+        ? candidate.publicDocumentPath !== null
+        : typeof candidate.publicDocumentPath !== "string" ||
+          !candidate.publicDocumentPath.startsWith("/papers/tmua/")) ||
       typeof candidate.sourceQuestionPath !== "string" ||
       typeof candidate.sourceAnswerPath !== "string" ||
       typeof candidate.questionSourceSha256 !== "string" ||
@@ -109,7 +138,7 @@ function answerOption(label: string) {
 }
 
 function sourcePdfQuestion(
-  paper: TmuaOnlinePaperRecord,
+  paper: TmuaOnlinePaperRecord & { deliveryMode: "source-pdf-answer-sheet" },
   questionNumber: number,
 ): PracticeQuestion {
   const sourceBlock: QuestionBlock = {
@@ -133,7 +162,9 @@ function sourcePdfQuestion(
   };
 }
 
-function sourcePdfPaper(record: TmuaOnlinePaperRecord): PracticePaper {
+function sourcePdfPaper(
+  record: TmuaOnlinePaperRecord & { deliveryMode: "source-pdf-answer-sheet" },
+): PracticePaper {
   return {
     id: record.id,
     exam: "TMUA",
@@ -150,11 +181,36 @@ function sourcePdfPaper(record: TmuaOnlinePaperRecord): PracticePaper {
 export const TMUA_ONLINE_PAPER_MANIFEST = parseManifest(rawManifest);
 export const TMUA_ONLINE_PAPERS = TMUA_ONLINE_PAPER_MANIFEST.papers;
 
+const structuredPapers = new Map<string, PracticePaper>([
+  [TMUA_SPECIMEN_P1.id, TMUA_SPECIMEN_P1],
+  [TMUA_SPECIMEN_P2.id, TMUA_SPECIMEN_P2],
+  [TMUA_PRACTICE_2016_P1.id, TMUA_PRACTICE_2016_P1],
+  [TMUA_PRACTICE_2016_P2.id, TMUA_PRACTICE_2016_P2],
+  [TMUA_2017_P1.id, TMUA_2017_P1],
+  [TMUA_2017_P2.id, TMUA_2017_P2],
+  [TMUA_2018_P1.id, TMUA_2018_P1],
+  [TMUA_2018_P2.id, TMUA_2018_P2],
+  [TMUA_2019_P1.id, TMUA_2019_P1],
+  [TMUA_2019_P2.id, TMUA_2019_P2],
+  [TMUA_2020_P1.id, TMUA_2020_P1],
+  [TMUA_2020_P2.id, TMUA_2020_P2],
+  [TMUA_2021_P1.id, TMUA_2021_P1],
+  [TMUA_2021_P2.id, TMUA_2021_P2],
+  [TMUA_2022_P1.id, TMUA_2022_P1],
+  [TMUA_2022_P2.id, TMUA_2022_P2],
+  [TMUA_2023_P1.id, TMUA_2023_P1],
+  [TMUA_2023_P2.id, TMUA_2023_P2],
+]);
+
 const practicePapers = new Map<string, PracticePaper>(
-  TMUA_ONLINE_PAPERS.map((record) => [
-    record.id,
-    record.id === TMUA_2023_P1.id ? TMUA_2023_P1 : sourcePdfPaper(record),
-  ]),
+  TMUA_ONLINE_PAPERS.map((record) => {
+    const structured = structuredPapers.get(record.id);
+    if (structured !== undefined) return [record.id, structured];
+    if (record.deliveryMode !== "source-pdf-answer-sheet") {
+      throw new Error(`Structured manifest entry has no native content: ${record.id}`);
+    }
+    return [record.id, sourcePdfPaper(record)];
+  }),
 );
 
 for (const paper of practicePapers.values()) {

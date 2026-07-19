@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q05",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 5,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "5   The curve S has equation\n\n\n                                      y = px2 + 6x − q\n\n    where p and q are constants.\n\n    S has a line of symmetry at x = − 14 and touches the x-axis at exactly one point.\n\n    What is the value of p + 8q ?\n\n    A 6\n\n    B 18\n\n    C 21\n\n    D 25\n\n    E 38\n\n\n\n\n                                            7"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The curve S has equation\n\n\n                                      y = px2 + 6x − q\n\n    where p and q are constants.\n\n    S has a line of symmetry at x = − 14 and touches the x-axis at exactly one point.\n\n    What is the value of p + 8q ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "6"
+    },
+    {
+      "label": "B",
+      "rawText": "18"
+    },
+    {
+      "label": "C",
+      "rawText": "21"
+    },
+    {
+      "label": "D",
+      "rawText": "25"
+    },
+    {
+      "label": "E",
+      "rawText": "38"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The line of symmetry can be determined by completing the square of the right hand side of the\ngiven equation for S:\n\n                              px2 + 6x − q = p(x2 + p6 x) − q\n                                              \u0010       3 \u00012    9\u0011\n                                           =p x+           − 2 −q\n                                                      p       p\n                                                   3 \u00012 9\n                                           =p x+         − −q\n                                                   p        p\n\n\nso the line of symmetry is at x = − p3 . Therefore − p3 = − 41 , giving p = 12.\nThe curve touches the x-axis at exactly one point, so we must also have − p9 − q = 0, giving\nq = − p9 = − 12\n             9\n                = − 34 .\nTherefore p + 8q = 12 − 6 = 6, which is option A.\n\n\n\n\nVersion 1.0, April 2021                                                               Page 7\n\n                                            © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        7
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

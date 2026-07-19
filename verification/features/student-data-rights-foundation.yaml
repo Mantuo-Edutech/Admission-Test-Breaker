@@ -1,0 +1,67 @@
+schemaVersion: 1
+feature:
+  id: student-data-rights-foundation
+  title: Student-readable privacy and self-service data rights foundation
+  status: partial
+  userOutcome: >-
+    A signed-in student can understand the current data boundary, export a
+    machine-readable copy and permanently delete the authenticated account
+    after password re-verification, without granting Mantou access.
+
+run:
+  packageScript: verify
+
+claims:
+  - id: student-readable-privacy
+    status: verified
+    statement: >-
+      A bilingual in-site privacy page explains collected and deliberately
+      uncollected data, purposes, default visibility, Guest/account storage,
+      export, deletion and the remaining production/legal-review boundary.
+    artifacts:
+      - src/features/data-rights/pages/PrivacyPage.tsx
+      - docs/legal/STUDENT_PRIVACY_AND_DATA_RIGHTS_FOUNDATION.md
+      - tests/app/account-lifecycle.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+
+  - id: authenticated-export-and-deletion
+    status: verified
+    statement: >-
+      Only an authenticated student can export the current Learner Space.
+      Schema v4 includes exam-specific background profiles plus collaboration
+      invitations, grants, artifacts and audit events without code digests.
+      Account deletion requires current-password re-verification, cascades
+      through private learner records and clears the anonymous local funnel
+      cache; another student's data is excluded.
+    artifacts:
+      - src/features/data-rights/domain.ts
+      - src/features/data-rights/supabase-data-rights-service.ts
+      - src/features/account/pages/AccountPage.tsx
+      - supabase/migrations/20260718172000_student_data_rights.sql
+      - supabase/migrations/20260719211000_collaboration_data_export.sql
+      - supabase/tests/database/private_account_rls.test.sql
+      - scripts/verify-supabase-local.ts
+      - tests/features/data-rights/supabase-data-rights-service.test.ts
+    automatedChecks:
+      - test
+      - typecheck
+      - verify:supabase-contracts
+      - verify:supabase
+
+boundaries:
+  - This is a privacy-by-design implementation foundation, not legal advice or a final statutory privacy notice.
+  - The production controller identity, data-rights email, lawful bases, DPIA, hosting region, subprocessors, transfer mechanism and exact backup-retention period remain pending.
+  - Correction, restriction, objection, representative requests, complaint handling and deletion propagation into production backups still require an operating workflow.
+  - The migrations pass local Supabase tests but have not been deployed to a Mantou production project.
+
+manualChecks:
+  - id: privacy-language-and-deletion-review
+    status: pending
+    evidence: Review the layered notice and destructive flow with students in different age bands and qualified UK privacy counsel before Beta.
+    viewports:
+      - 1440x900
+      - 768x1024
+      - 390x844

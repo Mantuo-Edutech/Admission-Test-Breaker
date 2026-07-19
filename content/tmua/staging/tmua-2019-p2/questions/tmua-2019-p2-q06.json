@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q06",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 6,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "6   A student attempts to solve the equation\n\n                                 cos x + sin x tan x = 2 sin x − 1\n\n    in the range 0 ≤ x ≤ 2π.\n\n    The student’s attempt is as follows:\n\n        cos x + sin x tan x = 2 sin x − 1\n\n\n        So   cos x − sin x + sin x tan x − sin x = −1                         (I)\n\n\n        So   (sin x − cos x)(tan x − 1) = −1                                  (II)\n\n\n        So   sin x − cos x = −1 or tan x − 1 = −1                             (III)\n\n\n        So   (sin x − cos x)2 = 1 or tan x = 0                                (IV)\n\n\n        So   2 sin x cos x = 0 or tan x = 0                                   (V)\n\n\n        So   x = 0, π2 , π, 3π\n                             2\n                               , 2π                                           (VI)\n\n\n\n    Which of the following best describes this attempt?\n\n    A It is completely correct\n\n    B It is incorrect, and the ﬁrst error occurs on line (I)\n\n    C It is incorrect, and the ﬁrst error occurs on line (II)\n\n    D It is incorrect, and the ﬁrst error occurs on line (III)\n\n    E It is incorrect, and the ﬁrst error is that extra solutions were introduced on\n      line (IV)\n\n    F It is incorrect, and the ﬁrst error is that extra solutions were introduced on\n      line (V)\n\n    G It is incorrect, and the ﬁrst error is not eliminating the values where tan x is\n      undeﬁned on line (VI)\n\n\n\n                                               8"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A student attempts to solve the equation\n\n                                 cos x + sin x tan x = 2 sin x − 1\n\n    in the range 0 ≤ x ≤ 2π.\n\n    The student’s attempt is as follows:\n\n        cos x + sin x tan x = 2 sin x − 1\n\n\n        So   cos x − sin x + sin x tan x − sin x = −1                         (I)\n\n\n        So   (sin x − cos x)(tan x − 1) = −1                                  (II)\n\n\n        So   sin x − cos x = −1 or tan x − 1 = −1                             (III)\n\n\n        So   (sin x − cos x)2 = 1 or tan x = 0                                (IV)\n\n\n        So   2 sin x cos x = 0 or tan x = 0                                   (V)\n\n\n        So   x = 0, π2 , π, 3π\n                             2\n                               , 2π                                           (VI)\n\n\n\n    Which of the following best describes this attempt?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "It is completely correct"
+    },
+    {
+      "label": "B",
+      "rawText": "It is incorrect, and the ﬁrst error occurs on line (I)"
+    },
+    {
+      "label": "C",
+      "rawText": "It is incorrect, and the ﬁrst error occurs on line (II)"
+    },
+    {
+      "label": "D",
+      "rawText": "It is incorrect, and the ﬁrst error occurs on line (III)"
+    },
+    {
+      "label": "E",
+      "rawText": "It is incorrect, and the ﬁrst error is that extra solutions were introduced on\n      line (IV)"
+    },
+    {
+      "label": "F",
+      "rawText": "It is incorrect, and the ﬁrst error is that extra solutions were introduced on\n      line (V)"
+    },
+    {
+      "label": "G",
+      "rawText": "It is incorrect, and the ﬁrst error is not eliminating the values where tan x is\n      undeﬁned on line (VI)"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The following is just one approach to checking an argument.\nWe start by checking the final solutions on line (VI). x = 0 makes the LHS (left hand side) equal 1\nbut the RHS (right hand side) equal −1, so the attempt cannot be correct. Furthermore, this\nis not a value of x for which tan x is undefined, so G is not the correct answer. We must then\nidentify where the error arose.\nWe can now test the incorrect solution x = 0 at various stages of the argument to see where\nthings first go wrong. Rather than working line-by-line, we start about half way through to see\nwhether the mistake happens in the first half of the argument or the second half; this is a little\nmore efficient.\nLet us try the incorrect solution x = 0 in line (III) (which is midway between (I) and (V)): this\ngives −1 = −1 or −1 = −1, so x = 0 is valid at this point. This tells us that the error must\noccur on line (I), (II) or (III).\nOn line (I), x = 0 gives 1 = −1, while on line (II), x = 0 gives (−1) × (−1) = −1. So it is most\nlikely that the first error occurs on line (III).\nWe check the algebra on line (I): all that has happened is that 2 sin x has been subtracted from\nboth sides, so this is correct.\nWe likewise check the algebra on line (II): by multiplying out the brackets, we get the equation\non line (I), so this is correct. (We might be concerned about the case cos x = 0 here, but this is\nnot possible on either line (I) or line (II) because of the tan x terms on each line.)\nFinally, we are left with line (III). The implication here is that because two numbers multiply\nto give −1, one of them must be −1. This would be true if we were dealing with integers, but\nwe are not, so this is an invalid implication.\nThe correct solution is therefore D: the first error occurs on line (III).\n\n\n\n\nc UCLES                                                                                     Page 8"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

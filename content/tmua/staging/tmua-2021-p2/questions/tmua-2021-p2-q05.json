@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q05",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 5,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "5   On which line is the ﬁrst error in the following argument?\n\n    A sin2 x + cos2 x = 1 for all values of x.\n                         \u0005\n    B Therefore cos x = 1 − sin2 x for all values of x.\n                              \u0005\n    C Hence 1 + cos x = 1 + 1 − sin2 x for all values of x.\n                            \u0003     \u0005            \u00042\n    D Thus (1 + cos x)2 = 1 + 1 − sin2 x for all values of x.\n\n    E Substituting x = π gives 0 = 4.\n\n\n\n\n                                            7"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "On which line is the ﬁrst error in the following argument?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "sin2 x + cos2 x = 1 for all values of x."
+    },
+    {
+      "label": "B",
+      "rawText": "B Therefore cos x = 1 − sin2 x for all values of x.\n                              B"
+    },
+    {
+      "label": "C",
+      "rawText": "Hence 1 + cos x = 1 + 1 − sin2 x for all values of x.\n                                 B            A2"
+    },
+    {
+      "label": "D",
+      "rawText": "Thus (1 + cos x)2 = 1 + 1 − sin2 x for all values of x."
+    },
+    {
+      "label": "E",
+      "rawText": "Substituting x = π gives 0 = 4."
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Line A is a known identity, so this is fine.\nLine B rearranges the identity to get cos2 x = 1 − sin2 x and then takes the square root of both\nsides. However, when we take the square root, we always get the positive (or zero) root, but\ncos x is negative for some values of x. So this is where the error is introduced.\nAnother way of seeing this is to start with the nonsensical 0 = 4 of line E, and substitute x = π\nin each line to find the first one which fails; it is, indeed, line B, as this gives −1 = 1.\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 7"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        7
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                        \u0003\n                                                        \u0003\n                                                        \u0003\n\nͳͻ\u0003    \u0017\u0003\u0003\u0003\u0003\u0003\u0003\u0003‫ ݔ‬ଶ ൅ ܾ‫ ݔ‬൅ ܿ ൏ Ͳ\u0003\u0003\u0003\u0003‫ ݌‬൏ ‫ ݔ‬൏ ‫\u0003ݍ‬\n\n       \u0003ܾǡ\u0003ܿǡ\u0003‫ ܿ\u0003\u0003 \u0003\u0003\u0003ݍ\u0003\u0003݌‬൏ ͲǤ\u0003\n\n           \u0003\u0003\u0003‫݌‬ǡ\u0003‫ܿ\u0003\u0003ݍ‬ǡ\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003‫ ݔ‬ଶ ൅ ܾܿ‫ ݔ‬൅ ܿ ଷ ൏ Ͳ\u0003ǫ\u0003\n\u0003      \u0003\n\u0003             ‫݌‬    ‫ݍ‬\n       A        ൏‫ݔ‬൏ \u0003\n              ܿ    ܿ\n\n\u0003             ‫ݍ‬    ‫݌‬\n       B        ൏‫ݔ‬൏ \u0003\n              ܿ    ܿ\n\n\u0003      C      ‫ ܿ݌‬൏ ‫ ݔ‬൏ ‫\u0003ܿݍ‬\n\n\u0003      D      ‫ ܿݍ‬൏ ‫ ݔ‬൏ ‫\u0003ܿ݌‬\n\n\u0003      E      ‫ ܿ݌‬ଶ ൏ ‫ ݔ‬൏ ‫ ܿݍ‬ଶ \u0003\n\n\u0003      F      ‫ ܿݍ‬ଶ ൏ ‫ ݔ‬൏ ‫ ܿ݌‬ଶ \u0003\n\n\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                          \u0015\u0014                                       >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "‫ ݔ‬ଶ ൅ ܾ‫ ݔ‬൅ ܿ ൏ 0‫ ݌‬൏ ‫ ݔ‬൏ ‫ݍ‬\n\n       ܾǡܿǡ‫ ܿ ݍ݌‬൏ 0Ǥ\n\n           ‫݌‬ǡ‫ܿݍ‬ǡ‫ ݔ‬ଶ ൅ ܾܿ‫ ݔ‬൅ ܿ ଷ ൏ 0ǫ\n      \n             ‫݌‬    ‫ݍ‬"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "൏‫ݔ‬൏ \n              ܿ    ܿ\n\n             ‫ݍ‬    ‫݌‬"
+    },
+    {
+      "label": "B",
+      "rawText": "൏‫ݔ‬൏ \n              ܿ    ܿ"
+    },
+    {
+      "label": "C",
+      "rawText": "‫ ܿ݌‬൏ ‫ ݔ‬൏ ‫ܿݍ‬"
+    },
+    {
+      "label": "D",
+      "rawText": "‫ ܿݍ‬൏ ‫ ݔ‬൏ ‫ܿ݌‬"
+    },
+    {
+      "label": "E",
+      "rawText": "‫ ܿ݌‬ଶ ൏ ‫ ݔ‬൏ ‫ ܿݍ‬ଶ"
+    },
+    {
+      "label": "F",
+      "rawText": "‫ ܿݍ‬ଶ ൏ ‫ ݔ‬൏ ‫ ܿ݌‬ଶ \n\n\n\n\n\n\n\n\n8&/(6                                                                                 >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can sketch the graph of y = x2 + bx + c. It intersects the x-axis at p and q, and intersects\nthe y-axis at c < 0. So the graph must look like this:\n\n                                                     y\n\n\n\n\n                                                                             x\n                                   p                 0                q\n\n\n\n\nHowever, the vertex might be either side of the y-axis.\nTo solve the inequality x2 + bcx + c3 < 0, we need to find where this equals zero. We can use\nthe quadratic formula for this: x2 + bcx + c3 = 0 when\n                                               p\n                                       −bc ± (bc)2 − 4c3\n                                   x=\n                                                p2\n                                        1\n                                     = 2 (−bc ± b2 c2 − 4c3 )\n                                                p\n                                     = 12 c(−b ± b2 − 4c)\n\nGoing back to the original quadratic, we can solve it to find p and q in terms of b and c:\n                                                  p\n                                   p, q = 12 (−b ± b2 − 4c)\n\nComparing these, we see that the roots of x2 + bcx + c3 are pc and qc in some order. So the\nsolution is C or D.\nTo distinguish between these possibilities, we need to know which is the larger of pc and qc.\nNote that we were told that c < 0. Since p < q, it follows that pc > qc, and so the answer is D.\nIt turns out that we didn’t actually need our graph sketch.\n\nA somewhat less obvious approach to this question is as follows.\nWe can divide the second inequality by c2 > 0, so x2 + bcx + c3 < 0 is equivalent to\n\n                                           x2 bx\n                                              +   +c<0\n                                           c2   c\nor                                     \u0010 x \u00112        \u0010x\u0011\n                                                +b    +c<0\n                                        c          c\nThis is the same as our original inequality, just with x replaced by xc , so its solution is p < xc < q.\nMultiplying this by c < 0 then gives the solution pc > x > qc.\n\n\n\n\nVersion 1.1, March 2019                                                                        Page 23\n\n                                                                                           © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        24
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

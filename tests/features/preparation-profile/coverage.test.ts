@@ -21,7 +21,7 @@ describe("zero-token TMUA course coverage mapping", () => {
   it("maps CAIE Pure Mathematics 1 without inventing logarithm or reasoning coverage", () => {
     const report = buildCourseCoverageReport(caieProfile(["p1"]));
 
-    expect(report.mappingVersion).toBe("2026-07-14.1");
+    expect(report.mappingVersion).toBe("2026-07-19.2");
     expect(report.directCount).toBe(7);
     expect(report.relatedCount).toBe(0);
     expect(report.notEvidencedFoundationHours).toEqual({ min: 9, max: 14 });
@@ -95,5 +95,78 @@ describe("zero-token TMUA course coverage mapping", () => {
     expect(report.directCount).toBe(0);
     expect(report.relatedCount).toBe(0);
     expect(report.notEvidencedCount).toBe(10);
+  });
+
+  it("maps completed IB AA topics directly while keeping Paper 2 logic as a gap check", () => {
+    const report = buildCourseCoverageReport(createPreparationProfile({
+      guestSpaceId: "gsp_ib-aa-coverage",
+      exam: "TMUA",
+      entryCycle: "2027",
+      curriculumSystem: "ib",
+      selections: [{
+        qualificationId: "ib-aa-hl-first-assessment-2021",
+        unitIds: ["number-algebra", "functions", "geometry-trigonometry", "calculus"],
+      }],
+      experience: "sampled",
+      createdAt: "2026-07-19T00:00:00.000Z",
+      updatedAt: "2026-07-19T00:00:00.000Z",
+    }));
+
+    expect(report.domains.find((domain) => domain.id === "algebra-and-functions"))
+      .toMatchObject({
+        status: "direct",
+        evidence: expect.arrayContaining([expect.stringContaining("Analysis & Approaches HL")]),
+      });
+    expect(report.domains.find((domain) => domain.id === "integration"))
+      .toMatchObject({ status: "direct" });
+    expect(report.domains.find((domain) => domain.id === "mathematical-reasoning"))
+      .toMatchObject({ status: "not-evidenced" });
+  });
+
+  it("treats IB AI as related evidence because TMUA requires exact non-calculator transfer", () => {
+    const report = buildCourseCoverageReport(createPreparationProfile({
+      guestSpaceId: "gsp_ib-ai-coverage",
+      exam: "TMUA",
+      entryCycle: "2027",
+      curriculumSystem: "ib",
+      selections: [{
+        qualificationId: "ib-ai-hl-first-assessment-2021",
+        unitIds: ["functions", "geometry-trigonometry", "calculus"],
+      }],
+      experience: "sampled",
+      createdAt: "2026-07-19T00:00:00.000Z",
+      updatedAt: "2026-07-19T00:00:00.000Z",
+    }));
+
+    expect(report.directCount).toBe(0);
+    expect(report.domains.find((domain) => domain.id === "trigonometry"))
+      .toMatchObject({ status: "related" });
+    expect(report.domains.find((domain) => domain.id === "integration"))
+      .toMatchObject({ status: "related" });
+  });
+
+  it("combines AP Precalculus and Calculus without inventing geometry or formal-logic coverage", () => {
+    const report = buildCourseCoverageReport(createPreparationProfile({
+      guestSpaceId: "gsp_ap-coverage",
+      exam: "TMUA",
+      entryCycle: "2027",
+      curriculumSystem: "ap",
+      selections: [
+        { qualificationId: "ap-precalculus-effective-fall-2026", unitIds: ["u1", "u2", "u3"] },
+        { qualificationId: "ap-calculus-ab-2020-current", unitIds: ["u2", "u5", "u6"] },
+      ],
+      experience: "sampled",
+      createdAt: "2026-07-19T00:00:00.000Z",
+      updatedAt: "2026-07-19T00:00:00.000Z",
+    }));
+
+    expect(report.domains.find((domain) => domain.id === "exponentials-and-logarithms"))
+      .toMatchObject({ status: "direct" });
+    expect(report.domains.find((domain) => domain.id === "differentiation"))
+      .toMatchObject({ status: "direct" });
+    expect(report.domains.find((domain) => domain.id === "coordinate-geometry"))
+      .toMatchObject({ status: "related" });
+    expect(report.domains.find((domain) => domain.id === "mathematical-reasoning"))
+      .toMatchObject({ status: "related" });
   });
 });

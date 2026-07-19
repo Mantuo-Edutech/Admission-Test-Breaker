@@ -39,6 +39,7 @@ export interface CreatePracticeSessionInput {
   startedAt: string;
   eventId: LearningEventId;
   paperId?: string;
+  durationMinutes?: number;
 }
 
 export function questionIdForNumber(
@@ -48,14 +49,12 @@ export function questionIdForNumber(
   if (
     !Number.isInteger(questionNumber) ||
     questionNumber < 1 ||
-    questionNumber > TMUA_2023_P1_QUESTION_COUNT
+    questionNumber > 99
   ) {
-    throw new Error(
-      `Question number must be between 1 and ${TMUA_2023_P1_QUESTION_COUNT}`,
-    );
+    throw new Error("Question number must be between 1 and 99");
   }
 
-  if (!/^tmua-.+-p[12]$/u.test(paperId)) {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/u.test(paperId)) {
     throw new Error("Practice paper ID is invalid");
   }
   return `${paperId}-q${String(questionNumber).padStart(2, "0")}`;
@@ -65,11 +64,15 @@ export function createPracticeSession(
   input: CreatePracticeSessionInput,
 ): PracticeSession {
   const paperId = input.paperId ?? "tmua-2023-p1";
-  if (!/^tmua-.+-p[12]$/u.test(paperId)) {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/u.test(paperId)) {
     throw new Error("Practice paper ID is invalid");
   }
+  const durationMinutes = input.durationMinutes ?? 75;
+  if (!Number.isInteger(durationMinutes) || durationMinutes < 1 || durationMinutes > 180) {
+    throw new Error("Practice duration must be between 1 and 180 minutes");
+  }
   const deadlineAt = new Date(
-    Date.parse(input.startedAt) + TMUA_2023_P1_DURATION_MS,
+    Date.parse(input.startedAt) + durationMinutes * 60 * 1_000,
   ).toISOString();
 
   const appended = appendLearningEvent([], {

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "2   Given that tan θ = 2 and 180◦ < θ < 360◦ , ﬁnd the value of cos θ\n\n         √\n    A       3\n          √\n    B   − 3\n          √\n            3\n    C\n           2\n          √\n            3\n    D   −\n           2\n          √\n            5\n    E\n           5\n          √\n            5\n    F   −\n           5\n           √\n          2 5\n    G\n            5\n           √\n          2 5\n    H   −\n            5\n\n\n\n\n                                           4"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Given that tan θ = 2 and 180◦ < θ < 360◦ , ﬁnd the value of cos θ\n\n         √"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "3\n          √"
+    },
+    {
+      "label": "B",
+      "rawText": "− 3\n          √\n            3"
+    },
+    {
+      "label": "C",
+      "rawText": "2\n          √\n            3"
+    },
+    {
+      "label": "D",
+      "rawText": "−\n           2\n          √\n            5"
+    },
+    {
+      "label": "E",
+      "rawText": "5\n          √\n            5"
+    },
+    {
+      "label": "F",
+      "rawText": "−\n           5\n           √\n          2 5"
+    },
+    {
+      "label": "G",
+      "rawText": "5\n           √\n          2 5"
+    },
+    {
+      "label": "H",
+      "rawText": "−\n            5"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "In the range 180◦ < θ < 360◦ , we have that tan θ > 0 when 180◦ < θ < 270◦ . In this smaller\nrange, cos θ < 0.\nNext, in the range 0◦ < θ0 < 90◦ , if tan θ0 = 2, we can sketch a right-angled triangle with this\nangle:\n\n\n\n\n                                            2\n\n\n\n                                                           θ0\n                                                       1\n\n                                                                            √\n                            √               √                   1            5\nThe hypotenuse has length       22 + 12 =       5, so cos θ0 = √        =      .\n                                                                    5       5\n                                                                √\n                                                                 5\nTherefore for our original angle θ, we have cos θ = −              , which is option F.\n                                                                5\n\n\n\n\nVersion 1.0, April 2021                                                                   Page 4\n\n                                                © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

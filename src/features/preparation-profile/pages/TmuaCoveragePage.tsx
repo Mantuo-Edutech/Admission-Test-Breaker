@@ -54,7 +54,7 @@ export function TmuaCoveragePage({ services }: TmuaCoveragePageProps) {
 
   return (
     <main className="tmua-stage-page tmua-coverage-page">
-      <TmuaPageHeader backTo="/exams/tmua/profile" backLabel="课程信息" />
+      <TmuaPageHeader />
       <section className="tmua-stage-hero page-shell">
         <p className="eyebrow">第 2 步 · Knowledge Mapping</p>
         <h1>

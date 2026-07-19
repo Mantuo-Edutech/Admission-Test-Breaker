@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "2   (2x + 1) and (x − 2) are factors of 2x3 + px2 + q\n\n    What is the value of 2p + q ?\n\n    A −10\n\n    B − 38\n        5\n\n    C − 22\n        3\n\n    D     22\n          3\n\n    E     38\n          5\n\n    F    10\n\n\n\n\n                                            4"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "(2x + 1) and (x − 2) are factors of 2x3 + px2 + q\n\n    What is the value of 2p + q ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−10"
+    },
+    {
+      "label": "B",
+      "rawText": "− 38\n        5"
+    },
+    {
+      "label": "C",
+      "rawText": "− 22\n        3"
+    },
+    {
+      "label": "D",
+      "rawText": "22\n          3"
+    },
+    {
+      "label": "E",
+      "rawText": "38\n          5"
+    },
+    {
+      "label": "F",
+      "rawText": "10"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can use the factor theorem here. If we write f(x) = 2x3 + px2 + q, then the question tells us\nthat f(− 21 ) = 0 and f(2) = 0. Substituting these in gives\n\n                                       − 14 + 41 p + q = 0\n                                        16 + 4p + q = 0\n\nWe can subtract the first equation from the second to cancel the qs, giving\n                                          65  15\n                                          4 + 4 p=0\n\nso p = − 65    13                             48   52  4\n         15 = − 3 . Therefore q = −16 − 4p = − 3 + 3 = 3 .\n                                4    22\nIt follows that 2p + q = − 26\n                            3 + 3 = − 3 , which is option C.\n\n\n\n\nVersion 1.0, April 2021                                                                  Page 4\n\n                                          © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

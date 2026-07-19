@@ -1,0 +1,4 @@
+{
+  "release": "${APP_RELEASE}",
+  "environment": "${APP_ENVIRONMENT}"
+}

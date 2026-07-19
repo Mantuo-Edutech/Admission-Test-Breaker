@@ -25,16 +25,15 @@ claims:
       - verify:tmua-online-papers
       - typecheck
 
-  - id: audited-original-paper-assets
+  - id: no-complete-pdf-delivery
     status: verified
     statement: >-
-      Every browser-served original PDF matches the SHA-256 recorded for its
-      imported question source; automatic OCR drafts are not substituted for
-      the mathematical source pages.
+      All 18 papers use native structured delivery, expose no complete PDF path,
+      and automatic extraction drafts cannot be published directly.
     artifacts:
-      - public/papers/tmua/tmua-specimen-p1.pdf
-      - public/papers/tmua/tmua-practice-2016-p1.pdf
-      - public/papers/tmua/tmua-2022-p2.pdf
+      - src/features/practice/content/tmua-specimen-p1.ts
+      - src/features/practice/content/tmua-practice-2016-p1.ts
+      - src/features/practice/content/tmua-2022-p2.ts
       - tests/features/practice/content/online-papers.test.ts
     automatedChecks:
       - verify:tmua-online-papers
@@ -42,11 +41,10 @@ claims:
   - id: shared-evidence-safe-runtime
     status: verified
     statement: >-
-      Native and PDF-backed papers use the same session, answer, mark, timing,
-      submission and scoring runtime while keeping question IDs scoped to the
-      selected paper.
+      All native papers open directly on question 1 and use the same session,
+      answer, mark, timing, submission and scoring runtime while keeping question
+      IDs scoped to the selected paper.
     artifacts:
-      - src/features/practice/pages/PracticeLaunchPage.tsx
       - src/features/practice/pages/PracticePage.tsx
       - src/features/practice/pages/ResultsPage.tsx
       - src/features/practice/domain/session.ts
@@ -58,16 +56,39 @@ claims:
       - typecheck
       - build
 
+  - id: native-content-delivery-policy
+    status: verified
+    statement: >-
+      All 18 TMUA papers use semantic question blocks, KaTeX and safe
+      repository-owned SVG figures where needed; structured papers reject PDF
+      blocks and remove stale complete-PDF assets from the public build.
+    artifacts:
+      - src/features/practice/content/tmua-2022-p1.ts
+      - src/features/practice/content/tmua-practice-2016-p1.ts
+      - src/features/practice/content/tmua-specimen-p2.ts
+      - src/features/practice/content/tmua-2023-p1.ts
+      - src/features/practice/content/tmua-2023-p2.ts
+      - src/features/practice/content/validate.ts
+      - public/questions/tmua-2022-p1/q04.svg
+      - public/questions/tmua-2022-p1/q17.svg
+      - tests/features/practice/content/tmua-2022-p1.test.ts
+      - tests/features/practice/content/paper.test.ts
+      - tests/features/practice/content/tmua-2023-p2.test.ts
+    automatedChecks:
+      - verify:tmua-online-papers
+      - test
+      - build
+
 boundaries:
   - The current sessions are stored in the local Guest Space, not the cloud learner-space tables.
-  - Seventeen papers preserve the original PDF rather than claiming native formula and figure structure.
-  - Source-PDF questions do not yet include reviewed knowledge tags or worked explanations.
+  - Early Specimen Paper 1 now includes a separately entitled 20-question worked review; the other 17 papers do not yet include complete worked explanations or final teacher-authored knowledge tagging.
+  - Public static assets in the local preview are not production DRM; private per-question delivery, rate limits, watermarking and access audit remain required before launch.
   - The 30-minute original diagnostic, mock papers and review notes are separate deliverables.
 
 manualChecks:
-  - id: embedded-pdf-responsive-review
+  - id: native-and-migration-responsive-review
     status: pending
-    evidence: Review original-PDF practice at desktop, tablet and phone sizes in the browser.
+    evidence: Review the 18 native papers at desktop, tablet and phone sizes in the browser.
     viewports:
       - 1440x900
       - 768x1024

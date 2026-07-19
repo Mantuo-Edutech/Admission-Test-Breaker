@@ -1,4 +1,4 @@
-import { LibraryBig } from "lucide-react";
+import { ArrowUpRight, BookOpenText, LibraryBig } from "lucide-react";
 import { Link } from "react-router-dom";
 import { TmuaPageHeader } from "../components/TmuaPageHeader.js";
 import { TMUA_ONLINE_PAPERS } from "../../practice/content/tmua-online-registry.js";
@@ -9,7 +9,7 @@ const onlinePaperById = new Map(TMUA_ONLINE_PAPERS.map((paper) => [paper.id, pap
 export function TmuaPastPapersPage() {
   return (
     <main className="tmua-stage-page tmua-past-papers-page">
-      <TmuaPageHeader backTo="/exams/tmua" backLabel="TMUA 首页" />
+      <TmuaPageHeader />
       <section className="tmua-stage-hero page-shell">
         <p className="eyebrow">TMUA 历年真题</p>
         <h1>
@@ -21,70 +21,74 @@ export function TmuaPastPapersPage() {
 
       <section className="tmua-archive page-shell" aria-labelledby="tmua-archive-title">
         <header className="section-heading">
-          <p>完整目录 · Collection Status</p>
-          <h2 id="tmua-archive-title">18 套试卷全部可以开始练习</h2>
-          <span>2023 Paper 1 已完成逐题在线排版；其余试卷使用原版 PDF 与在线答题卡，避免公式转写失真。</span>
+          <p>完整题库 · COMPLETE LIBRARY</p>
+          <h2 id="tmua-archive-title">九个版本，十八套完整试卷</h2>
+          <span>每套 20 题。选择 Paper 1 或 Paper 2 后，直接进入第 1 题。</span>
         </header>
 
-        <dl className="tmua-archive__summary" aria-label="TMUA 历年真题收录概况">
+        <dl className="tmua-archive__summary" aria-label="TMUA 在线题库概况">
           <div>
-            <dt>试卷收录</dt>
+            <dt>年份与版本</dt>
             <dd>
-              <strong>{TMUA_PUBLIC_SUMMARY.paperCount} / {TMUA_PUBLIC_SUMMARY.paperCount}</strong>
-              <span>全部已收录</span>
+              <strong>{TMUA_PUBLIC_SUMMARY.editions.length}</strong>
+              <span>Early Specimen、2016 Practice 与 2017—2023</span>
             </dd>
           </div>
           <div>
-            <dt>在线试卷</dt>
+            <dt>完整试卷</dt>
             <dd>
-              <strong>{TMUA_ONLINE_PAPERS.length} / {TMUA_PUBLIC_SUMMARY.paperCount}</strong>
-              <span>全部可练习</span>
+              <strong>{TMUA_ONLINE_PAPERS.length}</strong>
+              <span>Paper 1 与 Paper 2 各九套</span>
             </dd>
           </div>
           <div>
             <dt>在线题目</dt>
             <dd>
-              <strong>{TMUA_PUBLIC_SUMMARY.questionShellCount} / {TMUA_PUBLIC_SUMMARY.questionShellCount}</strong>
-              <span>全部可作答与评分</span>
+              <strong>{TMUA_PUBLIC_SUMMARY.questionShellCount}</strong>
+              <span>全部逐题排版、可作答与评分</span>
             </dd>
           </div>
         </dl>
 
-        <div className="tmua-archive__table-wrap">
-          <table aria-label="TMUA 历年真题资料馆">
-            <thead>
-              <tr><th>版本</th><th>试卷</th><th>资料状态</th><th>在线练习</th><th>操作</th></tr>
-            </thead>
-            <tbody>
-              {TMUA_PUBLIC_SUMMARY.editions.flatMap((edition) =>
-                edition.papers.map((paper, paperIndex) => {
+        <ol className="tmua-paper-shelf" aria-label="TMUA 九个年份与版本">
+          {TMUA_PUBLIC_SUMMARY.editions.map((edition, editionIndex) => (
+            <li key={edition.id} className="tmua-paper-edition">
+              <header>
+                <div>
+                  <span className="tmua-paper-edition__index">
+                    {String(editionIndex + 1).padStart(2, "0")}
+                  </span>
+                  <BookOpenText aria-hidden="true" />
+                </div>
+                <p>2 PAPERS · 40 QUESTIONS</p>
+                <h3>{edition.label}</h3>
+              </header>
+              <div className="tmua-paper-edition__papers">
+                {edition.papers.map((paper) => {
                   const paperId = `tmua-${edition.id}-p${paper.paper}`;
                   const onlinePaper = onlinePaperById.get(paperId);
                   if (onlinePaper === undefined) return null;
-                  const structured = paperId === "tmua-2023-p1";
                   return (
-                    <tr key={`${edition.id}-paper-${paper.paper}`}>
-                      {paperIndex === 0 && <th scope="rowgroup" rowSpan={2}>{edition.label}</th>}
-                      <th scope="row">Paper {paper.paper}</th>
-                      <td><span className="archive-stage archive-stage--collected">已收录</span></td>
-                      <td>
-                        <span className="archive-stage archive-stage--published">
-                          {structured ? "逐题在线" : "原卷 + 在线答题卡"}
-                        </span>
-                      </td>
-                      <td>
-                        <Link to={`/practice/${onlinePaper.id}/start`}>开始练习</Link>
-                      </td>
-                    </tr>
+                    <Link
+                      key={paperId}
+                      to={`/practice/${onlinePaper.id}`}
+                      aria-label={`${edition.label} Paper ${paper.paper}，20 题，开始练习`}
+                    >
+                      <span>
+                        <strong>Paper {paper.paper}</strong>
+                        <small>20 题 · 75 分钟</small>
+                      </span>
+                      <ArrowUpRight aria-hidden="true" />
+                    </Link>
                   );
-                }),
-              )}
-            </tbody>
-          </table>
-        </div>
+                })}
+              </div>
+            </li>
+          ))}
+        </ol>
         <p className="tmua-archive__note">
           <LibraryBig aria-hidden="true" />
-          所有练习均使用已收录原卷和官方答案。原卷模式会把 PDF 直接嵌入页面，作答记录仍保存在你的学习空间。
+          全部试卷使用 KaTeX 公式与独立 SVG 图形，并经过题面、选项、答案三项核验；作答、标记、计时和评分都在系统内完成。
         </p>
       </section>
     </main>

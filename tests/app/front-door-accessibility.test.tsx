@@ -54,7 +54,7 @@ describe("public exam front-door accessibility", () => {
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
     const selector = screen.getByRole("region", { name: "你正在准备哪一项考试？" });
     const links = within(selector).getAllByRole("link");
-    expect(links).toHaveLength(4);
+    expect(links).toHaveLength(5);
     links.forEach((link) => {
       expect(link).toHaveAttribute("href");
       expect(link).not.toHaveAttribute("tabindex", "-1");
@@ -62,15 +62,20 @@ describe("public exam front-door accessibility", () => {
     expectNamedControlsAndImages(container);
   });
 
-  it("expresses unopened exams in text without a misleading training action", async () => {
+  it("gives ESAT an internal programme selector without implying an online question bank", async () => {
     const router = createAppRouter(["/exams/esat"], services);
     const { container } = render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { level: 1, name: "ESAT" });
+    await screen.findByRole("heading", {
+      level: 1,
+      name: /先选专业.*COURSE-TO-MODULE PLANNER/u,
+    });
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
-    expect(screen.getByText("建设中")).toBeInTheDocument();
+    expect(screen.queryByText("建设中")).not.toBeInTheDocument();
+    expect(screen.getByLabelText("学校")).toBeInTheDocument();
+    expect(screen.getByLabelText("专业")).toBeInTheDocument();
+    expect(container.querySelector('a[href^="http"]')).not.toBeInTheDocument();
     expect(screen.queryByRole("link", { name: /开始|训练/u })).not.toBeInTheDocument();
-    expect(screen.queryByRole("button")).not.toBeInTheDocument();
     expectNamedControlsAndImages(container);
   });
 

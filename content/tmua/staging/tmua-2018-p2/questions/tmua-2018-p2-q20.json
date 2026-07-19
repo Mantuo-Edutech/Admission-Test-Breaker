@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "√          √\n20   It is given that the equation       x+p+       x = p has at least one real solution for x,\n     where p is a real constant.\n\n     What is the complete set of possible values for p ?\n\n     A p = 0 or p = 1\n\n     B p = 0 or p ≥ 1\n\n     C p ≥ −x\n           √\n     D p≥ x\n\n     E p≥0\n\n     F p≥1\n\n\n\n\n                                          \b\u0011\u0007\u0003\u0012 \u0003\u0017\b\u0016\u0017\n\n\n\n                                                22"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "√          √\n20   It is given that the equation       x+p+       x = p has at least one real solution for x,\n     where p is a real constant.\n\n     What is the complete set of possible values for p ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "p = 0 or p = 1"
+    },
+    {
+      "label": "B",
+      "rawText": "p = 0 or p ≥ 1"
+    },
+    {
+      "label": "C",
+      "rawText": "p ≥ −x\n           √"
+    },
+    {
+      "label": "D",
+      "rawText": "p≥ x"
+    },
+    {
+      "label": "E",
+      "rawText": "p≥0"
+    },
+    {
+      "label": "F",
+      "rawText": "p≥1\n\n\n\n\n                                          ED E"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "An algebraic approach\n\nWe can manipulate the equation algebraically. We could square it immediately, but it is probably\nsimpler to first move one of the square roots to the other side so that there is only one square\n                          √             √\nroot on each side, that is x + p = p − x\nWe can now square this to obtain\n                                                        √\n                                         x + p = p2 − 2p x + x\n     √\nso 2p x = p2 − p\n                                         √\nIf p 6= 0, we can divide by p to obtain 2 x = p − 1. Since the left side of this must be positive,\nthere will be a solution as long as p ⩾ 1.\nWe also need to check that when p ⩾ 1, the solution obtained does satisfy the original equation.\n         √\nWe have x = 12 (p − 1) so x = 41 (p − 1)2 . Then the left side of the original equation becomes\n     q                     q                 q                 q\n         1        2            1        2        1        2        1        2  1           1\n         4 (p − 1) + p +       4 (p − 1) =       4 (p + 1) +       4 (p − 1) = 2 (p + 1) + 2 (p − 1) = p\n\nand so this is a real solution.\n                                                                                   √      √\nFinally, when p = 0 (which we excluded earlier), the equation becomes                  x + x = 0, which has\nthe solution x = 0.\nThus the correct option is B.\n\n\nA graphical approach\n                              √         √                 √\nWe can sketch the graph y = x + p + x. We know that x is an increasing function, defined\n                                                                 √\nfor x ⩾ 0, taking only non-negative values. It follows that y = x + p is also an increasing\n                                                        √\nfunction, defined for x ⩾ −p, being a translation of y = x by p in the negative x-direction.\nHere is a sketch of the two graphs for some p > 0:\n\n                                                 y\n\n\n\n\n                                                                              x\n\n\n\nClearly, there cannot be a solution for p < 0, as the left hand side is never negative. For p ⩾ 0,\nthe function on the left hand side is defined for all x ⩾ 0, and is increasing towards infinity. So\n                                                                  √\nthe smallest value the function takes is when x = 0, which is p, and it takes on every value\n                                                                                  √\nlarger than this. So there will be a solution to the original equation whenever p ⩽ p, which is\nwhenever p ⩽ p2 , that is p2 − p ⩾ 0 or p(p − 1) ⩾ 0. This holds for p ⩽ 0 and p ⩾ 1. Since we\nalso require p ⩾ 0, there is a solution for p = 0 and for all p ⩾ 1.\nHence the correct option is B.\n\n\nVersion 1.0, April 2019                                                                              Page 24"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        24
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

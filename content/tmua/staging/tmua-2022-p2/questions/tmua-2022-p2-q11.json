@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11                                                    S\n\n                                                          z\n                                             x                x\n                                  P                                  R\n                                                      O\n\n\n\n                                                          y\n\n\n\n\n                                                      Q\n\n     The diagram shows a kite PQRS whose diagonals meet at O.\n\n            OP ൌ x\n            OQ ൌ y\n            OR ൌ x\n            OS ൌ z\n\n     Which of the following is necessary and sufficient for angle SPQ to be a right angle?\n\n     A   xൌyൌz\n\n     B   2x ൌ y + z\n\n     C   x 2 ൌ yz\n\n     D   yൌz\n\n     E   y2 ൌ x2 + z2\n\n\n\n\n                                                 13"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "S\n\n                                                          z\n                                             x                x\n                                  P                                  R\n                                                      O\n\n\n\n                                                          y\n\n\n\n\n                                                      Q\n\n     The diagram shows a kite PQRS whose diagonals meet at O.\n\n            OP ൌ x\n            OQ ൌ y\n            OR ൌ x\n            OS ൌ z\n\n     Which of the following is necessary and sufficient for angle SPQ to be a right angle?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "xൌyൌz"
+    },
+    {
+      "label": "B",
+      "rawText": "2x ൌ y + z"
+    },
+    {
+      "label": "C",
+      "rawText": "x 2 ൌ yz"
+    },
+    {
+      "label": "D",
+      "rawText": "yൌz"
+    },
+    {
+      "label": "E",
+      "rawText": "y2 ൌ x2 + z2"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The angle SP Q is a right angle if and only if the triangle SP Q satisfies Pythagoras’s theorem,\nthat is, if and only if\n                                      SP 2 + P Q2 = SQ2 .\nSince P QRS is a kite, its diagonals intersect at right angles, so both SOP and P OQ are right-\nangled triangles. Therefore, again by Pythagoras,\n\n                                        SP 2 = x2 + z 2\n                                        P Q2 = x2 + y 2 .\n\nSubstituting this, along with SQ = y + z, into the above equation gives the following necessary\nand sufficient condition for angle SP Q to be a right angle:\n\n                                 x2 + z 2 + x2 + y 2 = (y + z)2 .\n\nExpanding and simplifying, this is equivalent to\n\n                                           2x2 = 2yz\n\nor x2 = yz.\nTherefore option C gives a necessary and sufficient condition.\n(One should also check that none of the others are necessary and sufficient; we could take x = 2,\ny = 4, z = 1: this satisfies option C but none of the others.)\n\n\n\n\nVersion 1.0, July 2023                                                                   Page 13"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

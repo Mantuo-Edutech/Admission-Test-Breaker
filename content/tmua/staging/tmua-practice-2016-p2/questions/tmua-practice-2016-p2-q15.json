@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "ͳͷ\u0003   \u0006\u0003\u0003 \u0003\u0003݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬ଶ െ ʹ‫ ݔ݌‬൅ ‫\u0003\u0003\u0003ݍ‬ǣ\u0003\n\n               ሺȗሻ\u0003݂ሺ‫ݔ‬ሻ ൌ Ͳ\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003\u0003\u0003ʹ\u0003\u0003\u0003\u0003ͶǤ\u0003\n\n      \u001a \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003ሺȗሻ\u0003\u0003ǫ\u0003\n      \u0003\n      \u0003\n      \u0004\u0003 \u0003‫ ݍ‬൏ ‫݌‬ଶ ൏ ‫ ݍ‬൅ Ͷ\u0003\n      \u0003\n      \u0005\u0003 \u0003ඥ‫ ݍ‬൅ ͳ ൏ ‫ ݌‬൏ ඥ‫ ݍ‬൅ Ͷ\u0003\n      \u0003\n      \u0006\u0003 \u0003‫ ݍ‬െ ͵ ൑ ‫݌‬ଶ െ Ͷ ൑ ‫\u0003ݍ‬\n      \u0003\n      \u0007\u0003 \u0003‫ ݍ‬൏ ‫݌‬ଶ െ ͳ ൏ ‫ ݍ‬൅ ͵\u0003\n      \u0003\n      \b\u0003 \u0003‫ ݍ‬െ ʹ ൏ ‫݌‬ଶ െ ͵ ൏ ‫ ݍ‬൅ ʹ\u0003\n\n\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "C ݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬ଶ െ 2‫ ݔ݌‬൅ ‫ݍ‬ǣ\n\n               ሺȗሻ݂ሺ‫ݔ‬ሻ ൌ 0 24Ǥ\n\n       ሺȗሻǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "‫ ݍ‬൏ ‫݌‬ଶ ൏ ‫ ݍ‬൅ 4"
+    },
+    {
+      "label": "B",
+      "rawText": "ඥ‫ ݍ‬൅ 1 ൏ ‫ ݌‬൏ ඥ‫ ݍ‬൅ 4"
+    },
+    {
+      "label": "C",
+      "rawText": "‫ ݍ‬െ 3 ൑ ‫݌‬ଶ െ 4 ൑ ‫ݍ‬"
+    },
+    {
+      "label": "D",
+      "rawText": "‫ ݍ‬൏ ‫݌‬ଶ െ 1 ൏ ‫ ݍ‬൅ 3"
+    },
+    {
+      "label": "E",
+      "rawText": "‫ ݍ‬െ 2 ൏ ‫݌‬ଶ െ 3 ൏ ‫ ݍ‬൅ 2\n\n\n\n\n© UCLES 2016"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We start by finding the roots of f(x) = 0. They are given by the quadratic formula, and are\n                                       p\n                                   2p ± (−2p)2 − 4q         p\n                         r1 , r2 =                    = p ± p2 − q.\n                                            2\n\nThe roots are real if and only if the discriminant is non-negative, so if and only if p2 − q ⩾ 0.\nThe difference between the roots is r2 − r1 = 2 p2 − q, so the condition (∗) is true if and only\n                                                p\n\nif\n\n                                p2 − q ⩾ 0 and 2 < 2\n                                                       p\n                                                           p2 − q < 4\n\nso it is true if and only if\n\n                                 p2 − q ⩾ 0 and 1 <\n                                                      p\n                                                       p2 − q < 2\n\nwhich is true if and only if\n\n                                  p2 − q ⩾ 0 and 1 < p2 − q < 4\n\nThe first condition is implied by the second condition, so both conditions are true if and only if\n1 < p2 −q < 4, which we can rearrange to q+1 < p2 < q+4. Subtracting 1 gives q < p2 −1 < q+3,\nwhich is condition D.\nWe can also show that the other four statements are not true if and only if (∗) is true, as follows.\nStatement A fails, because the left inequality q < p2 is not the same as q < p2 − 1. Statement A\nis true if (∗) is true, but (∗) could be true without statement A being true; in other words\n“statement A is true only if (∗) is true” is false.\nStatement B fails, because this requires p > 0, whereas we could have p < 0; thus, statement B\nis true only if (∗) is true, but “statement B is true if (∗) is true” is false.\nStatement C fails, because this allows for the difference between the roots to be exactly 2 or 4.\nSo statement C is true if (∗) is true, but “statement C is true only if (∗) is true” is false.\nFinally, statement E fails, because the second inequality is equivalent to p2 − 1 < q + 4, so\nsimilarly to statement A, statement E is true if (∗) is true, but “statement E is true only if (∗) is\ntrue” is false.\nSo the correct option is D.\n\n\n\n\n                                                 20\n                                                                                        © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        20
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q04",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 4,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "4   Consider the following conjecture:\n\n            If N is a positive integer that consists of the digit 1 followed by an odd\n            number of 0 digits and then a ﬁnal digit 1, then N is a prime number.\n\n    Here are three numbers:\n\n        I       N = 101 (which is a prime number)\n        II      N = 1001 (which equals 7 × 11 × 13)\n        III N = 10001 (which equals 73 × 137)\n\n    Which of these provide(s) a counterexample to the conjecture?\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                               6"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following conjecture:\n\n            If N is a positive integer that consists of the digit 1 followed by an odd\n            number of 0 digits and then a ﬁnal digit 1, then N is a prime number.\n\n    Here are three numbers:\n\n        I       N = 101 (which is a prime number)\n        II      N = 1001 (which equals 7 × 11 × 13)\n        III N = 10001 (which equals 73 × 137)\n\n    Which of these provide(s) a counterexample to the conjecture?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "A counterexample with have the antecedent (“N is a positive integer that consists of the digit 1\nfollowed by an odd number of 0 digits and then a final digit 1”) true, and the consequent (“N is\na prime number”) false. We can now check each of the three offered values of N :\n\nI    The form of N is correct: there is 1 zero, and 1 is odd, so the antecedent is true. However,\n     the consequent is also true, so this is not a counterexample.\n\nII   The form of N is not correct, as there are 2 zeros, so the antecedent is false. Hence this is\n     not a counterexample.\n\nIII The form of N is correct, as there are 3 zeros, and the consequent is false, as N is not\n    prime. Hence this is a counterexample.\n\nThe correct solution is D.\n\n\n\n\nc UCLES                                                                                    Page 6"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

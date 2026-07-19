@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11   An arithmetic series has n terms, all of which are integers.\n\n     The sum of the series is 20.\n\n     Which of the following statements must be true?\n\n         I    The ﬁrst term of the series is even.\n         II   n is even.\n         III The common diﬀerence is even.\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                             13"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "An arithmetic series has n terms, all of which are integers.\n\n     The sum of the series is 20.\n\n     Which of the following statements must be true?\n\n         I    The ﬁrst term of the series is even.\n         II   n is even.\n         III The common diﬀerence is even."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let the first term of the series be a and the common difference be d, as usual. Therefore we\nhave\n                                     1\n                                     2 n(2a + (n − 1)d) = 20.\n\nMultiplying by 2 gives\n                                     n(2a + (n − 1)d) = 40,\nso we need to find integers n, a and d which satisfy this. We list values of n which are factors\nof 40 and the corresponding value of 2a + (n − 1)d.\n\n                                          n    2a + (n − 1)d\n                                          1       40 = 2a\n                                          2     20 = 2a + d\n                                          4    10 = 2a + 3d\n                                          5     8 = 2a + 4d\n                                          8     5 = 2a + 7d\n                                          10    4 = 2a + 9d\n                                          20   2 = 2a + 19d\n                                          40   1 = 2a + 39d\n\nWith this table to hand, we consider the possibilities for each of the statements.\n\nI    n = 1 gives a = 20, which is even.\n     n = 2 gives 2a + d = 20. If we take d = 2, this gives a = 9, and indeed 9 + 11 = 20, so this\n     statement need not be true.\n\nII   The table shows that we could have n = 1 and a = 20, or n = 5, a = 2, d = 1, giving\n     2 + 3 + 4 + 5 + 6 = 20. So this statement need not be true.\n\nIII The example in the previous part, 2 + 3 + 4 + 5 + 6 = 20 shows that this is not necessarily\n    true.\n\nTherefore the correct answer is A.\n\n\n\n\nc UCLES                                                                                  Page 14"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

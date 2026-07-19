@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q14",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 14,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "14   Three lines are given by the equations:\n\n                                                 ax + by + c = 0\n                                                 bx + cy + a = 0\n                                                 cx + ay + b = 0\n\n     where a, b and c are non-zero real numbers.\n\n     Which one of the following is correct?\n\n     A   If two of the lines are parallel, then all three are parallel.\n\n     B   If two of the lines are parallel, then the third is perpendicular to the other two.\n\n     C   If two of the lines are parallel, then the third is parallel to y = x.\n\n     D   If two of the lines are parallel, then the third is perpendicular to y = x.\n\n     E   If two of the lines are perpendicular, then all three meet at a point.\n\n     F   If two of the lines are perpendicular, then the third is parallel to y = x.\n\n     G   If two of the lines are perpendicular, then the third is perpendicular to y = x.\n\n\n\n\n                                                    16"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Three lines are given by the equations:\n\n                                                 ax + by + c = 0\n                                                 bx + cy + a = 0\n                                                 cx + ay + b = 0\n\n     where a, b and c are non-zero real numbers.\n\n     Which one of the following is correct?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "If two of the lines are parallel, then all three are parallel."
+    },
+    {
+      "label": "B",
+      "rawText": "If two of the lines are parallel, then the third is perpendicular to the other two."
+    },
+    {
+      "label": "C",
+      "rawText": "If two of the lines are parallel, then the third is parallel to y = x."
+    },
+    {
+      "label": "D",
+      "rawText": "If two of the lines are parallel, then the third is perpendicular to y = x."
+    },
+    {
+      "label": "E",
+      "rawText": "If two of the lines are perpendicular, then all three meet at a point."
+    },
+    {
+      "label": "F",
+      "rawText": "If two of the lines are perpendicular, then the third is parallel to y = x."
+    },
+    {
+      "label": "G",
+      "rawText": "If two of the lines are perpendicular, then the third is perpendicular to y = x."
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We rewrite these equations in the form y = mx + c:\n                                                a   c\n                                            y =− x−\n                                                b   b\n                                                b   a\n                                            y =− x−\n                                                c   c\n                                                c   b\n                                            y =− x−\n                                                a   a\n\nSince these equations are cyclically symmetrical (replacing a → b → c → a leaves the set of\nequations unchanged), we may assume the two parallel or perpendicular lines are the first two.\n\nA If the first two lines are parallel, then ab = cb , but this does not imply that ac is equal to these.\n  For example we could have a = 1, b = 2, c = 4 giving ab = cb = 12 but ac = 4.\n\nB The same example shows that the third  \u0001 b \u0001line need \u0001 not be perpendicular to the other two.\n                               a       a               a 2\n  In fact, in this case, since c = − b − c = − b > 0, the third line will always have a\n  negative gradient (namely − ac ), even if the first two also have negative gradients.\n\nC The same example shows that this is not necessarily the case; in fact, as the third line always\n  has a negative gradient, it cannot be parallel to y = x.\n\nD Again, the same example shows that the third line might not have gradient −1.\n\nE If the first two lines are perpendicular, we have − ab − cb = ac = −1, so − ac = 1. It is not\n                                                        \u0001    \u0001\n\n  obvious why the lines should meet at a point, so let us return to this after we have looked at\n  the remaining options.\n\nF This is true: the calculation in E shows that the third line has gradient 1.\n\nG This is false: the third line has gradient 1, not −1.\n\nSo the correct option is F.\nWe still need to eliminate option E. Let us consider an example with a = 1, b = 2; we therefore\nneed c = −1 as − ac = 1. Thus the three lines are\n\n                                              1   −1\n                                          y =− x−\n                                              2    2\n                                               2     1\n                                          y =− x−\n                                              −1    −1\n                                              −1    2\n                                          y =− x−\n                                               1    1\nwhich simplifies to\n\n                                            y = − 12 x + 12\n                                            y = 2x + 1\n                                            y =x−2\n\nThe second and third lines meet at (−3, −5), but the first line passes through (−3, 2), so these\nthree lines do not all meet at a point.\n\n\nVersion 1.0, September 2023                                                                    Page 16"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        16
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

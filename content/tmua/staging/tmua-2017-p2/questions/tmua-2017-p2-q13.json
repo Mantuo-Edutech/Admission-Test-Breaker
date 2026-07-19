@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13     The positive real numbers a × 10−3 , b × 10−2 and c × 10−1 are each in standard form,\n        and\n                               (a × 10−3 ) + (b × 10−2 ) = (c × 10−1 ).\n\n        Which of the following statements (I, II, III, IV) must be true?\n\n               I    a>9\n\n               II   b>9\n\n               III a < c\n\n               IV b < c\n\n        A I only\n\n        B II only\n\n        C I and II only\n\n        D I and III only\n\n        E      I and IV only\n\n        F      II and III only\n\n        G II and IV only\n\n        H I, II, III and IV\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                   \u0014\u0018                                    >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The positive real numbers a × 10−3 , b × 10−2 and c × 10−1 are each in standard form,\n        and\n                               (a × 10−3 ) + (b × 10−2 ) = (c × 10−1 ).\n\n        Which of the following statements (I, II, III, IV) must be true?\n\n               I    a>9\n\n               II   b>9\n\n               III a < c\n\n               IV b < c"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "I only"
+    },
+    {
+      "label": "B",
+      "rawText": "II only"
+    },
+    {
+      "label": "C",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "D",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and IV only"
+    },
+    {
+      "label": "F",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and IV only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II, III and IV\n\n\n\n\n8&/(6                                                                       >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "One way to think about this is to write it as a column addition. If we write a × 10−3 as\n0.00a1 a2 . . . , where a = a1 .a2 a3 . . . (as a decimal expansion), and similarly for the other num-\nbers, the sum becomes:\n                                                0 . 0 0 a1 a2 . . .\n                                             + 0 . 0 b1 b2 b3 . . .\n                                                0 . c1 c2 c3 c4 . . .\n\nWe see that, as c1 ⩾ 1, there must be a carry from the hundredths column to the tenths column,\nand hence b1 = 9, so b ⩾ 9. If b = 9 exactly, then there cannot be a carry; we would just get a\nsum of 0.09a1 a2 . . . in that case. So we must have b > 9, and II must be true.\nThere is no need to have a1 = 9; we could, for example, have a1 = 8 and b2 = 3 and still have a\ncarry. So I is not necessary true.\nComparing a and b to c, we know that 1 ⩽ c < 2, as c1 = 1. We saw that a1 = 8 is possible, so\na > 8 is possible, and a < c (statement III) is not necessarily true.\nWe have already shown that b > 9, so since c < 2, b > c (statement IV) is never true.\nSo the answer is B.\n\n\n\n\nVersion 1.0, April 2019                                                                      Page 15\n\n                                                                                         © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        16
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

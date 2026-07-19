@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "15   It is given that f(x) = x3 + 3qx2 + 2, where q is a real constant.\n\n     The equation f(x) = 0 has 3 distinct real roots.\n\n     Which of the following statements is/are necessarily true?\n\n         I    The equation f(x) + 1 = 0 has 3 distinct real roots.\n         II   The equation f(x + 1) = 0 has 3 distinct real roots.\n         III The equation f(−x) − 1 = 0 has 3 distinct real roots.\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                              17"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "It is given that f(x) = x3 + 3qx2 + 2, where q is a real constant.\n\n     The equation f(x) = 0 has 3 distinct real roots.\n\n     Which of the following statements is/are necessarily true?\n\n         I    The equation f(x) + 1 = 0 has 3 distinct real roots.\n         II   The equation f(x + 1) = 0 has 3 distinct real roots.\n         III The equation f(−x) − 1 = 0 has 3 distinct real roots."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "G",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "This question appears to be related to graph transformations, so we will start with this approach\nand see where it leads.\nThe equation f(x) = 0 has 3 distinct real roots, so y = f(x) intersects the x-axis 3 times.\n\nI    The graph of y = f(x) + 1 is a translation of y = f(x) in the y-direction by 1 unit, which\n     may or may not intersect the x-axis 3 times.\n\nII   The graph of y = f(x + 1) is a translation of y = f(x) in the negative x-direction by 1 unit,\n     so it will still intersect the x-axis 3 times, and hence f(x + 1) = 0 has 3 distinct roots.\n\nIII The graph of y = f(−x) is a reflection of y = f(x) in the y-axis, which still intersects the\n    x-axis 3 times. Then y = f(−x) − 1 is a translation in the negative y-direction by 1 unit,\n    which may or may not intersect the x-axis 3 times.\n\nIt is still not clear whether or not I or III are necessarily true. We will have to identify where\nthe turning points of the graph are to determine this.\nWe have\n                                      f(x) = x3 + 3qx2 + 2\nso\n                                        f 0 (x) = 3x2 + 6qx\nso f 0 (x) = 0 when x = 0 or x == −2q, so the stationary points are at (0, 2) and (−2q, 2 + 4q 3 ).\nAs the graph crosses the x-axis 3 times, the stationary points must lie either side of the x-axis,\nso 2 + 4q 3 < 0.\nTherefore when the graph is translated up by 1 unit, we may have the new stationary point at\n(−2q, 2 + 4q 3 + 1) with 2 + 4q 3 + 1 > 0, but when it is translated down by 1 unit, they will be\nat (0, 1) and (−2q, 2 + 4q 3 − 1), and 2 + 4q 3 − 1 < 0. So there will still be 3 intersections.\nTherefore II and III are necessarily true, and the answer is G.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 18"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q06",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 6,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "͸\u0003    \u0013ǡ\u0003\u0014ǡ\u0003\u0003\u0015\u0003\u0003 \u0003\u0003\u0003\u0003\u0003\u0003Ǥ\u0003\u0003\n\n      \u0017\u0003 \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0013\u0003\u0003͵ͲΨǤ\u0003\u0003\u0003\n\n      \u0017\u0003 \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0014\u0003\u0003ʹͲΨǤ\u0003\u0003\n\n      \u0017\u0003\u0003\u0013ǡ\u0003\u0014ǡ\u0003\u0003\u0015\u0003\u0003 \u0003\u0003\u0003\u0003ͳʹ\u0003ǣ\u0003ͷ\u0003ǣ\u0003͵\u0003 Ǥ\u0003\n\n       \u0003\u0003\u0003\u0003 \u0003ʹͷΨ\u0003\u0003\u0003\u0003\u0003ǡ\u0003\u0003 \u0003\u0003\u0003\n      \u0003\u0003\u0015\u0003\u0003\u0003ǫ\u0003\n      \u0003\n\n      \u0004\u0003      ʹͷΨ\u0003\n      \u0003\n      \u0005\u0003      ʹ͵Ψ\u0003\n      \u0003          ଵ\n      \u0006\u0003      ͳ͵ ଷ Ψ\u0003\u0003\n      \u0003          ଵ\n      \u0007\u0003      ͳͻ ଶ Ψ\u0003\u0003\n      \u0003    ଷ\n      \b\u0003 ͻ ସ Ψ\u0003\u0003\n      \u0003\n          \u0003    \u0003\u0003\u0003\u0003 \u0003\u0003Ǥ\u0003\n      \u0003\n\n\n\n\n© UCLES 2016                                                                              [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "ǡǡ Ǥ\n\n       30ΨǤ\n\n       20ΨǤ\n\n      ǡǡ 12ǣ5ǣ3 Ǥ\n\n        25Ψǡ \n      ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "25Ψ"
+    },
+    {
+      "label": "B",
+      "rawText": "23Ψ\n                ଵ"
+    },
+    {
+      "label": "C",
+      "rawText": "13 ଷ Ψ\n                ଵ"
+    },
+    {
+      "label": "D",
+      "rawText": "19 ଶ Ψ\n          ଷ"
+    },
+    {
+      "label": "E",
+      "rawText": "9 ସ Ψ\n      \n               Ǥ\n      \n\n\n\n\n© UCLES 2016                                                                              [Turn over"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can either work in fractions or percentages. This solution works in fractions.\nThe fraction of red paint in P is 10\n                                  3\n                                     and in Q is 51 . Let the fraction of red paint in R be x.\nThe combination is in the ratio 12 : 5 : 3, with 14 red paint, so the composition is as follows:\n\n\n                                    Paint   Volume       Red\n                                      P        12           3\n                                                       12 × 10\n                                      Q         5       5 × 51\n                                      R         3        3x\n                                    total      20      20 × 14\n\nWe can now sum the individual red amounts, giving:\n\n                                      3         1\n                                 12 × 10 +5×      + 3x = 20 × 14\n                                                5\n\n   5 + 3x = 5, giving 3x = 5 = 40%, so x = 13 3 %.\nso 23                      2                  1\n\nThe correct answer is C.\n\n\n\n\n                                                 9\n                                                                                       © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

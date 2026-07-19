@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "17   There are two sets of data: the mean of the ﬁrst set is 15, and the mean of the\n     second set is 20.\n\n     One of the pieces of data from the ﬁrst set is exchanged with one of the pieces of\n     data from the second set.\n\n     As a result, the mean of the ﬁrst set of data increases from 15 to 16, and the mean of\n     the second set of data decreases from 20 to 17.\n\n     What is the mean of the set made by combining all the data?\n\n     A 16 14\n\n     B 16 13\n\n     C 16 12\n\n     D 16 23\n\n     E   16 34\n\n\n\n\n                                            19"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "There are two sets of data: the mean of the ﬁrst set is 15, and the mean of the\n     second set is 20.\n\n     One of the pieces of data from the ﬁrst set is exchanged with one of the pieces of\n     data from the second set.\n\n     As a result, the mean of the ﬁrst set of data increases from 15 to 16, and the mean of\n     the second set of data decreases from 20 to 17.\n\n     What is the mean of the set made by combining all the data?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "16 14"
+    },
+    {
+      "label": "B",
+      "rawText": "16 13"
+    },
+    {
+      "label": "C",
+      "rawText": "16 12"
+    },
+    {
+      "label": "D",
+      "rawText": "16 23"
+    },
+    {
+      "label": "E",
+      "rawText": "16 34"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "It is not obvious how to begin this question – there are lots of wordy descriptions. We also don’t\nknow how many pieces of data there are in each of the two sets.\nSo let’s try naming things.\nLet the first set of data have n pieces of data, and the second set have m pieces of data.\nSince the mean of the first set of data is 15, the sum of the data is 15n.\nLikewise, the sum of the second set of data is 20m.\nWhen we exchange one piece of data from the first set with one piece of data from the second\nset, the overall total stays the same, but the totals of the two sets change. We are told what\nhappens to the means, so the total of the first set is now 16n and of the second set is 17m.\nSince the overall total is the same, we have\n\n                                    15n + 20m = 16n + 17m\n\nWe can simplify this to give n = 3m\nTherefore the overall total is 15n + 20m = 45m + 20m = 65m and there are n + m = 4m pieces\nof data.\n                                              65m    65\nThus the mean of the combined set of data is       =    = 16 14 and the answer is A.\n                                              4m     4\n\n      Commentary: At the end of this, we are still no wiser about how many pieces of data\n      there were to begin with. All we know is that the first set contains three times as many\n      as the second set.\n\n\n\n\nVersion 1.0, April 2019                                                                   Page 19\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        20
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

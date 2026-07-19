@@ -1,10 +1,11 @@
 import { FormEvent, useState } from "react";
 import { KeyRound, LockKeyhole, ShieldCheck } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import type { AppServices } from "../../../app/dependencies.js";
 import {
   inviteCodeLooksValid,
   normalizeInviteCode,
+  safeInternalReturnPath,
 } from "../domain.js";
 import { AccountPageHeader } from "../components/AccountPageHeader.js";
 
@@ -14,12 +15,14 @@ interface InviteAccessPageProps {
 
 export function InviteAccessPage({ services }: InviteAccessPageProps) {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [code, setCode] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [checking, setChecking] = useState(false);
   const account = services.accountAccess;
   const pendingInvite = services.pendingInvite;
   const available = account?.configured === true && pendingInvite !== undefined;
+  const returnTo = safeInternalReturnPath(searchParams.get("returnTo"));
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -42,7 +45,8 @@ export function InviteAccessPage({ services }: InviteAccessPageProps) {
         return;
       }
       pendingInvite.save(normalized);
-      navigate("/register");
+      if (returnTo !== null) pendingInvite.saveReturnTo(returnTo);
+      navigate("/register", { state: returnTo === null ? null : { returnTo } });
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : "邀请码验证失败，请稍后再试");
     } finally {
@@ -58,7 +62,7 @@ export function InviteAccessPage({ services }: InviteAccessPageProps) {
           <p className="eyebrow">内容权限</p>
           <h1>使用邀请码解锁完整内容</h1>
           <p>
-            输入冰冰提供的邀请码。验证通过后注册账号，模考与复习资料会绑定到你的账号。
+            输入冰冰提供的邀请码。验证通过后注册账号，邀请码中列明的已发布资料会绑定到你的账号。
           </p>
           <ul className="account-assurances" aria-label="邀请码说明">
             <li><KeyRound aria-hidden="true" /><span>一个账号保存一份长期练习记录</span></li>
@@ -82,7 +86,7 @@ export function InviteAccessPage({ services }: InviteAccessPageProps) {
               onChange={(event) => setCode(event.target.value)}
               aria-describedby={error === null ? "invite-code-hint" : "invite-code-error"}
               aria-invalid={error !== null}
-              placeholder="例如 MANTUO-TMUA-…"
+              placeholder="例如 MANTUO-XXXX-…"
             />
             {error === null ? (
               <small id="invite-code-hint">短横线和空格不会影响验证。</small>
@@ -94,7 +98,7 @@ export function InviteAccessPage({ services }: InviteAccessPageProps) {
             </button>
           </form>
           <p className="account-card__alternate">
-            已经注册？ <Link to="/login">登录并解锁</Link>
+            已经注册？ <Link to="/login" state={returnTo === null ? undefined : { returnTo }}>登录并解锁</Link>
           </p>
         </div>
       </section>

@@ -1,0 +1,60 @@
+schemaVersion: 1
+feature:
+  id: privacy-safe-product-funnel
+  title: 满托第一方关键转化证据
+  status: partial
+  userOutcome: 学生可以自由完成定位和练习；只有六个关键动作形成匿名站内汇总，学习答案、课程明细、账号和联系方式不会进入运营漏斗。
+run:
+  packageScript: verify:product-funnel
+claims:
+  - id: six-purposeful-actions-only
+    status: verified
+    statement: 漏斗只允许选择考试、完成档案、开始练习、完成练习、主动打开冰冰和邀请码成功六类动作；考试与 context 采用封闭枚举/格式，不接受 URL、邮箱、答案或自由文本。
+    artifacts:
+      - src/features/product-funnel/domain.ts
+      - tests/features/product-funnel/domain.test.ts
+      - src/features/practice/pages/LandingPage.tsx
+      - src/features/practice/pages/PracticePage.tsx
+      - src/features/service-bridge/components/WechatAccessDialog.tsx
+      - src/features/account/pages/RegisterPage.tsx
+    automatedChecks:
+      - verify:product-funnel
+  - id: unlinkable-first-party-journey
+    status: verified
+    statement: 浏览器只建立 session-scoped 随机 Journey ID；事件没有 user_id、邮箱、IP、User-Agent、课程或答案字段，远端失败不会阻断学习并会在下一次有效动作时补送，重复渲染在三秒内幂等去重。
+    artifacts:
+      - src/features/product-funnel/local-first-tracker.ts
+      - src/features/product-funnel/supabase-sink.ts
+      - tests/features/product-funnel/local-first-tracker.test.ts
+      - supabase/migrations/20260719150000_privacy_safe_product_funnel.sql
+    automatedChecks:
+      - verify:product-funnel
+      - verify:supabase-contracts
+  - id: aggregate-only-operations
+    status: verified
+    statement: 匿名与登录浏览器只能调用受校验、限频、幂等的追加 RPC，不能读取任何事件行；只有 service_role 能读取按考试/动作/context 汇总的事件数和独立 Journey 数，并有 90 天清理函数。
+    artifacts:
+      - supabase/migrations/20260719150000_privacy_safe_product_funnel.sql
+      - supabase/tests/database/product_funnel_privacy.test.sql
+      - tests/architecture/supabase-contracts.test.ts
+    automatedChecks:
+      - verify:supabase-contracts
+      - verify:supabase
+  - id: production-funnel-evidence
+    status: partial
+    statement: 本地客户端、数据库、RLS/RPC 与聚合契约已经完成；生产 Supabase 尚未部署该 migration，因此目前没有真实 100 人漏斗数据。
+    artifacts:
+      - content/platform/beta-100-readiness.json
+      - docs/operations/PRODUCTION_BETA_RUNBOOK.md
+    automatedChecks:
+      - beta:audit
+boundaries:
+  - 这是站内产品改进的最小第一方计数，不是广告追踪、用户画像或跨站分析；不能用于推断个人能力、申请结果或服务意愿。
+  - Journey ID 只存在当前浏览器 session，不与 auth user、Learner Space、Guest Space、邮箱或邀请码建立数据库外键，因此不能回答“某个具体学生做过什么”。
+  - 生产上线后必须由运维执行 90 天清理，并只向批准的满托运营身份展示聚合结果；不得开放原始行浏览器。
+manualChecks:
+  - id: production-aggregate-proof
+    status: pending
+    evidence: 在 staging 完成六个动作，使用 service_role 汇总函数确认计数变化，同时证明匿名/学生角色无法读取原始表或汇总函数。
+    viewports:
+      - server

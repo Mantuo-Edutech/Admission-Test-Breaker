@@ -1,0 +1,76 @@
+schemaVersion: 1
+feature:
+  id: tmua-specimen-p1-deep-review
+  title: TMUA Specimen Paper 1 逐题深度解析
+  status: partial
+  userOutcome: 学生免费完成 Early Specimen Paper 1 并查看基础结果；有有效邀请码权限时，结果页显示全部 20 题的解题路径、易错点和下一步训练。
+run:
+  packageScript: verify:entitled-content
+claims:
+  - id: visually-audited-question-source
+    status: verified
+    statement: Specimen Paper 1 的 20 道线上题已逐页对照原 PDF；12 道旧转录错误已修正并由题面基准测试锁定。
+    artifacts:
+      - src/features/practice/content/tmua-specimen-p1.ts
+      - tests/features/practice/content/online-papers.test.ts
+      - content/tmua/staging/tmua-specimen-p1/bundle.json
+    automatedChecks:
+      - verify:tmua-online-papers
+  - id: complete-worked-review-product
+    status: verified
+    statement: 本地版本化资产包含 20 道原创中文教学解读；每题都有主题、方法、核心判断、至少两步推导、结论、易错点和下一步训练，并与官方答案映射及三份来源 SHA-256 一致。
+    artifacts:
+      - content/notes/tmua/specimen-p1-worked-explanations-v1.json
+      - src/features/entitled-content/domain.ts
+      - tests/features/entitled-content/domain.test.ts
+    automatedChecks:
+      - verify:entitled-content
+  - id: server-only-result-delivery
+    status: verified
+    statement: 解析正文通过 Supabase 私有 payload 和 entitlement RPC 交付；未授权、第二用户与撤销后均不可读取，有权限时结果页逐题渲染 20 份解析。
+    artifacts:
+      - supabase/migrations/20260718213000_tmua_specimen_p1_deep_review.sql
+      - src/features/entitled-content/supabase-entitled-content-service.ts
+      - src/features/practice/pages/ResultsPage.tsx
+      - src/features/practice/components/QuestionResultRow.tsx
+      - tests/app/results-page.test.tsx
+      - supabase/tests/database/private_account_rls.test.sql
+      - scripts/verify-supabase-local.ts
+      - scripts/check-private-content-bundle.ts
+    automatedChecks:
+      - verify:entitled-content
+      - verify:supabase
+      - verify:private-content-bundle
+  - id: catalog-linked-conversion-journey
+    status: verified
+    statement: 练习与逐题解析的关系由统一产品目录声明；锁定结果页同时提供冰冰二维码和已有邀请码入口，邀请码验证、注册或登录完成后会安全返回原结果页，不依赖 TMUA 专属页面文案。
+    artifacts:
+      - content/products/catalog.json
+      - src/features/library/content-product-registry.ts
+      - src/features/practice/pages/ResultsPage.tsx
+      - src/features/service-bridge/components/WechatAccessDialog.tsx
+      - src/features/account/storage/pending-invite.ts
+      - src/features/account/pages/InviteAccessPage.tsx
+      - src/features/account/pages/RegisterPage.tsx
+      - src/features/account/pages/LoginPage.tsx
+      - src/features/account/pages/EmailConfirmationPage.tsx
+      - tests/app/results-page.test.tsx
+      - tests/app/account-access-flow.test.tsx
+      - tests/e2e/tmua-deep-review-funnel.spec.ts
+    automatedChecks:
+      - verify:entitled-content
+      - test
+      - verify:e2e
+boundaries:
+  - 目前只有 Early Specimen Paper 1 具有已发布逐题解析；其他试卷不会显示可购买或可解锁承诺。
+  - 基础题目、答案、得分和用时保持免费，解析权限不改变学生对自己学习数据的所有权。
+  - 返回地址只能是当前站内绝对路径；外部 URL、协议相对地址、反斜线与换行会被拒绝，不能把邀请码流程变成开放跳转。
+  - 私有正文不进入 Vite bundle；生产环境仍需部署同一 migration 并重复授权、撤销和跨设备验证。
+manualChecks:
+  - id: responsive-result-review
+    status: pending
+    evidence: 在手机、iPad 和电脑上提交 Specimen Paper 1，检查锁定与解锁结果页、KaTeX 溢出及 20 份解析的阅读节奏。
+    viewports:
+      - 390x844
+      - 768x1024
+      - 1440x900

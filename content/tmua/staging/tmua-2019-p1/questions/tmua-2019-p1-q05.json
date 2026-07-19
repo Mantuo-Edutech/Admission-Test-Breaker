@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q05",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 5,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "5   S is a geometric sequence.\n\n    The sum of the ﬁrst 6 terms of S is equal to 9 times the sum of the ﬁrst 3 terms of S.\n\n    The 7th term of S is 360.\n\n    Find the 1st term of S.\n\n        40\n    A   27\n\n        40\n    B   9\n\n        40\n    C   3\n\n        45\n    D   16\n\n        45\n    E   8\n\n        45\n    F   4\n\n\n\n\n                                            7"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "S is a geometric sequence.\n\n    The sum of the ﬁrst 6 terms of S is equal to 9 times the sum of the ﬁrst 3 terms of S.\n\n    The 7th term of S is 360.\n\n    Find the 1st term of S.\n\n        40"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "27\n\n        40"
+    },
+    {
+      "label": "B",
+      "rawText": "9\n\n        40"
+    },
+    {
+      "label": "C",
+      "rawText": "3\n\n        45"
+    },
+    {
+      "label": "D",
+      "rawText": "16\n\n        45"
+    },
+    {
+      "label": "E",
+      "rawText": "8\n\n        45"
+    },
+    {
+      "label": "F",
+      "rawText": "4"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let the first term of S be a and the common ratio r, as usual.\n                                       a(rn − 1)\nThe sum of the first n terms of S is             , so the second line of the question can be written\n                                         r−1\nas\n                                       a(r6 − 1)     9a(r3 − 1)\n                                                  =\n                                         r−1            r−1\nwhich can be multiplied by (r − 1) and divided by a to give\n\n                                         r6 − 1 = 9(r3 − 1).\n\nWriting R = r3 , this becomes R2 − 1 = 9R − 9, so R2 − 9R + 8 = 0. This factorises to\n(R − 1)(R − 8) = 0, so R = 1 or R = 8, and hence r = 1 or r = 2.\nHowever, if r = 1, then the original equation is not valid; in that case, the sequence is constant,\nthe sum of the first 6 terms is 6a and the sum of the first 3 terms is 3a. We could only have\n6a = 9 × 3a if a = 0, but that is impossible as the 7th term of S is 360. So we must have r = 2.\n                                                                   45\nThe 7th term of S is ar6 , so 360 = 26 a = 64a, and hence a = 360\n                                                              64 = 8 and so the answer is E.\n\n\n\n\nc UCLES                                                                                      Page 7"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        7
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

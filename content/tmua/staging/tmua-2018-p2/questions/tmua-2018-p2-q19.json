@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "19   Three real numbers x, y and z satisfy x > y > z > 1.\n\n     Which one of the following statements must be true?\n\n         2z+1   2x + 2 z\n     A        >\n          2x       2y\n             3x + 3z\n     B 2>\n                3y\n         2 × 5x   5x + 5z\n     C          >\n           5z        5y\n             7x + 7z\n     D 2<\n                7y\n\n\n\n\n                                           21"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Three real numbers x, y and z satisfy x > y > z > 1.\n\n     Which one of the following statements must be true?\n\n         2z+1   2x + 2 z"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": ">\n          2x       2y\n             3x + 3z"
+    },
+    {
+      "label": "B",
+      "rawText": "2>\n                3y\n         2 × 5x   5x + 5z"
+    },
+    {
+      "label": "C",
+      "rawText": ">\n           5z        5y\n             7x + 7z"
+    },
+    {
+      "label": "D",
+      "rawText": "2<\n                7y"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "There are different ways of approaching this question. Given that the question asks which one\nof the statements must be true, it is probably simplest to try to find values which “break” each\nof the inequalities. For each one, we can either multiply through by the denominators first, or\nleave the fractions as fractions.\n\nA We can write this as\n                                        2z−x+1 > 2x−y + 2z−y\n   To make this false, we want the left side small and right side large. But x > y > z, so the\n   left hand side is less than 2. If we then make x − y > 1, the right hand side will be at least 2,\n   and so this statement is not necessarily true. For example, x = 10, y = 5, z = 3 will make\n   the inequality false.\n\nB This becomes 2 > 3x−y + 3z−y . If we take x = 10 and y = 2, then the first term on the right\n  side is 38 so this inequality is not always true.\n\nC Multiplying by 5z 5y gives\n                                       2 × 5x+y > 5x+z + 52z\n   Now 5x+y > 5x+z and 5x+y > 52z so this must be true.\n\nD This is\n                                           2 < 7x−y + 7z−y\n   If x and y are very close, then 7x−y is just greater than 1, and then if z is much smaller\n   than y, 7z−y is close to 0, so the sum will be just greater than 1. So for example, x = 1000,\n   y = 999.99, z = 1.1 will do to show that this statement is not always true.\n\nTherefore the correct option is C.\n\n\n\n\nVersion 1.0, April 2019                                                                     Page 23"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        23
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

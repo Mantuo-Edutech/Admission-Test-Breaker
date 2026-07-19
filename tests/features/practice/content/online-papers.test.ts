@@ -1,4 +1,3 @@
-import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
@@ -28,36 +27,60 @@ describe("complete TMUA online paper registry", () => {
       const paper = getTmuaPracticePaper(record.id);
       expect(paper).not.toBeNull();
       expect(paper?.questions).toHaveLength(20);
+      expect(paper?.questions.map((question) => question.correctAnswer)).toEqual(record.answers);
       expect(validatePracticePaper(paper!)).toEqual([]);
       totalQuestions += paper?.questions.length ?? 0;
     }
     expect(totalQuestions).toBe(360);
   });
 
-  it("keeps the native paper structured and the other 17 tied to exact source pages", () => {
-    expect(getTmuaPracticePaper("tmua-2023-p1")?.deliveryMode).toBe("structured");
-    const pdfBacked = TMUA_ONLINE_PAPERS
-      .filter((record) => record.id !== "tmua-2023-p1")
-      .map((record) => getTmuaPracticePaper(record.id));
-    expect(pdfBacked).toHaveLength(17);
-    expect(pdfBacked.every((paper) => paper?.deliveryMode === "source-pdf-answer-sheet")).toBe(true);
+  it("keeps all 18 papers in native structured delivery", () => {
+    expect(TMUA_ONLINE_PAPERS.every((record) => record.deliveryMode === "structured")).toBe(true);
+    expect(TMUA_ONLINE_PAPERS.every((record) => record.publicDocumentPath === null)).toBe(true);
 
-    const paper = getTmuaPracticePaper("tmua-2022-p2");
-    expect(paper?.questions[0]).toMatchObject({
-      id: "tmua-2022-p2-q01",
-      sourcePage: 3,
-      correctAnswer: "B",
-      prompt: [{ kind: "source-pdf", src: "/papers/tmua/tmua-2022-p2.pdf", page: 3 }],
-    });
+    for (const record of TMUA_ONLINE_PAPERS) {
+      const paper = getTmuaPracticePaper(record.id);
+      expect(paper?.deliveryMode).toBe("structured");
+      expect(
+        paper?.questions.flatMap((question) => question.prompt).every((block) => block.kind !== "source-pdf"),
+      ).toBe(true);
+      expect(paper?.questions.map((question) => question.sourcePage)).toEqual(record.questionPages);
+    }
   });
 
-  it("ships the exact audited PDF bytes referenced by the manifest", async () => {
+  it("does not expose complete source PDFs for any structured paper", async () => {
     for (const record of TMUA_ONLINE_PAPERS) {
-      const bytes = await readFile(resolve("public", record.publicDocumentPath.slice(1)));
-      expect(bytes.subarray(0, 5).toString("ascii")).toBe("%PDF-");
-      expect(createHash("sha256").update(bytes).digest("hex")).toBe(
-        record.questionSourceSha256,
-      );
+      await expect(
+        readFile(resolve("public/papers/tmua", `${record.id}.pdf`)),
+      ).rejects.toMatchObject({ code: "ENOENT" });
     }
+  });
+
+  it("pins the visually audited Specimen Paper 1 transcription to the source PDF", () => {
+    const paper = getTmuaPracticePaper("tmua-specimen-p1");
+    expect(paper).not.toBeNull();
+    const serialized = paper!.questions.map((question) =>
+      JSON.stringify(question).replaceAll("\\\\", "\\"),
+    );
+
+    expect(serialized[2]).toContain("\\frac1{20}");
+    expect(serialized[2]).toContain("\\frac{41}6");
+    expect(paper!.questions[2]!.options.map((option) => option.label)).toEqual(["A", "B", "C", "D", "E"]);
+    expect(serialized[4]).toContain("10^{-y}-1");
+    expect(serialized[6]).toContain("(n-1)^3");
+    expect(serialized[7]).toContain("\\log_{10}\\!\\left(\\frac2{a+2b+3c}\\right)");
+    expect(serialized[9]).toContain("\\frac\\pi4");
+    expect(paper!.questions[10]!.options).toHaveLength(5);
+    expect(serialized[10]).toContain("\\frac{15}4");
+    expect(serialized[11]).toContain("\\frac{x}{2x-3}");
+    expect(serialized[12]).toContain("x^4-4x^3+4x^2-10=0");
+    expect(serialized[13]).toContain("y^b=a^x");
+    expect(serialized[14]).toContain("\\frac13");
+    expect(serialized[15]).toContain("10^{c-2d}");
+    expect(serialized[15]).toContain("125^{c+d}");
+    expect(serialized[17]).toContain("\\sin2x\\ge\\frac12");
+    expect(serialized[18]).toContain("2(1+\\sqrt5)");
+    expect(serialized[19]).toContain('"tex":"x^2"');
+    expect(paper!.questions.every((question) => question.explanationResourceId === "tmua-specimen-p1-worked-explanations-v1")).toBe(true);
   });
 });

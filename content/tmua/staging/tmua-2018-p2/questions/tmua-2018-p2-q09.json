@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "√\n9   Consider the following attempt to solve the equation 4x 2x − 1 = 10x − 5:\n\n\n                              √\n                            4x 2x − 1 = 10x − 5\n                                                                            (I)\n                               √\n                            4x 2x − 1 = 5(2x − 1)\n                                                                            (II)\n                          16x2 (2x − 1) = 25(2x − 1)2\n                                                                            (III)\n                                   16x2 = 25(2x − 1)\n                                                                            (IV)\n                       16x2 − 50x + 25 = 0\n                                                                            (V)\n                       (8x − 5)(2x − 5) = 0\n                                                                            (VI)\n                                                           5        5\n          The solutions of the original equation are x =     and x = .\n                                                           8        2\n\n    Which one of the following is true?\n\n    A The solution is correct.\n\n    B Only one of x = 58 and x = 52 is correct\n      and the error arises as a result of step (II).\n\n    C Only one of x = 58 and x = 52 is correct\n      and the error arises as a result of step (III).\n\n    D Only one of x = 58 and x = 52 is correct\n      and the error arises as a result of step (IV).\n\n    E There is another value of x that satisﬁes the original equation\n      and the error arises as a result of step (II).\n\n    F There is another value of x that satisﬁes the original equation\n      and the error arises as a result of step (III).\n\n    G There is another value of x that satisﬁes the original equation\n      and the error arises as a result of step (IV).\n\n\n\n\n                                              11"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "√\n9   Consider the following attempt to solve the equation 4x 2x − 1 = 10x − 5:\n\n\n                              √\n                            4x 2x − 1 = 10x − 5\n                                                                            (I)\n                               √\n                            4x 2x − 1 = 5(2x − 1)\n                                                                            (II)\n                          16x2 (2x − 1) = 25(2x − 1)2\n                                                                            (III)\n                                   16x2 = 25(2x − 1)\n                                                                            (IV)\n                       16x2 − 50x + 25 = 0\n                                                                            (V)\n                       (8x − 5)(2x − 5) = 0\n                                                                            (VI)\n                                                           5        5\n          The solutions of the original equation are x =     and x = .\n                                                           8        2\n\n    Which one of the following is true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "The solution is correct."
+    },
+    {
+      "label": "B",
+      "rawText": "Only one of x = 58 and x = 52 is correct\n      and the error arises as a result of step (II)."
+    },
+    {
+      "label": "C",
+      "rawText": "Only one of x = 58 and x = 52 is correct\n      and the error arises as a result of step (III)."
+    },
+    {
+      "label": "D",
+      "rawText": "Only one of x = 58 and x = 52 is correct\n      and the error arises as a result of step (IV)."
+    },
+    {
+      "label": "E",
+      "rawText": "There is another value of x that satisﬁes the original equation\n      and the error arises as a result of step (II)."
+    },
+    {
+      "label": "F",
+      "rawText": "There is another value of x that satisﬁes the original equation\n      and the error arises as a result of step (III)."
+    },
+    {
+      "label": "G",
+      "rawText": "There is another value of x that satisﬁes the original equation\n      and the error arises as a result of step (IV)."
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Given the choices, we first check to see what the proposed solutions x = 58 and x = 52 work in\nthe original equation.\n                                    q\nWhen x = 8 the left side is 4 × 8 × 2 × 85 − 1 = 54 and the right side is 10 × 58 − 5 = 54 so this\n             5                  5\n\nis a valid solution.\n                                      q\nWhen x = 2 the left side is 4 × 2 × 2 × 52 − 1 = 20 and the right side is 10 × 25 − 5 = 20 so\n             5                    5\n\nthis is also a valid solution.\nThis therefore eliminates options B, C and D.\nThere may, though, be additional solutions. Let us work through the argument step-by-step,\nlooking for steps which are not reversible; these are often the cause of errors when attempting\nto solve equations.\nStep (I) is just factorising the right hand side, so is fine.\nStep (II) involves squaring. In general, squaring an equation is not reversible, as we do not know\nwhether to take the positive or negative square root when going backwards. However, if we do\nhave a solution to the original equation, it will still be a solution when we square it; the worst\nthat can happen is that we introduce new solutions. Since the two solutions found do work, this\nstep is fine, as is the conclusion (though the author of the attempt should have checked that\nthis is the case).\nStep (III) involves dividing by 2x − 1. But what if this is zero? In that case,qwe would have\nx = 12 . Trying this in the original equation makes the left hand side 4 × 21 ×    2 × 21 − 1 = 0,\nwhile the right side is 10 × 12 − 5 = 0. So x = 12 is another solution.\nThe correct option is therefore F.\n(The remaining steps are rearrangements, and are all valid.)\n\n\n\n\nVersion 1.0, April 2019                                                                   Page 11"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

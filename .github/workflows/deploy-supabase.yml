@@ -1,0 +1,75 @@
+name: Deploy Supabase environment
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Approved target environment
+        required: true
+        type: choice
+        options:
+          - staging
+          - production
+      release_sha:
+        description: Full commit SHA already verified and released as a web image
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.release_sha }}
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.18.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm verify:supabase-contracts
+      - run: pnpm verify:production-platform
+      - name: Link approved Supabase project
+        run: pnpm exec supabase link --project-ref "$SUPABASE_PROJECT_REF" --password "$SUPABASE_DB_PASSWORD"
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+      - name: Show migration plan
+        run: pnpm exec supabase db push --linked --dry-run
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      - name: Apply reviewed migrations
+        run: pnpm exec supabase db push --linked
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      - name: Enforce Auth bot protection
+        run: pnpm supabase:auth-protection:apply
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+          PUBLIC_APP_ORIGIN: ${{ vars.PUBLIC_APP_ORIGIN }}
+      - name: Configure allowed browser origin
+        run: pnpm exec supabase secrets set "ALLOWED_ORIGINS=$PUBLIC_APP_ORIGIN" --project-ref "$SUPABASE_PROJECT_REF"
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+          PUBLIC_APP_ORIGIN: ${{ vars.PUBLIC_APP_ORIGIN }}
+      - name: Deploy invite preview function
+        run: pnpm exec supabase functions deploy invite-preview --project-ref "$SUPABASE_PROJECT_REF"
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+      - name: Record deployment boundary
+        run: |
+          echo "Supabase target: ${{ inputs.environment }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Release: ${{ inputs.release_sha }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Migrations, Auth bot protection and invite-preview were deployed. Production email, remote permission journey and backup evidence must still be attached before Beta approval." >> "$GITHUB_STEP_SUMMARY"

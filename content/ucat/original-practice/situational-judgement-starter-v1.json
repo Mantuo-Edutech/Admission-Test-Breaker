@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "id": "ucat-situational-judgement-starter-v1",
+  "exam": "UCAT",
+  "edition": "Situational Judgement Starter · Original v1",
+  "sectionLabel": "Situational Judgement Starter",
+  "sectionLabelZh": "情境判断 · 满托原创短诊断",
+  "durationMinutes": 5,
+  "deliveryMode": "structured",
+  "responseMode": "choice",
+  "calculator": "none",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本练习依据 UCAT 公开分测验和题型范围独立命题，不复制或改写官方 Question Bank、Practice Test、情境或解析。",
+  "sourceAnchors": [
+    {
+      "id": "ucat-format-snapshot",
+      "localPath": "content/official/raw/pages/ucat-format.html",
+      "sha256": "9aa4a93bddcc62bf53c6196f2b38ac40240a1f781154590c772c68f179d52dbf",
+      "usedFor": "current Situational Judgement identity and partial-credit boundary only"
+    },
+    {
+      "id": "ucat-tutorials-snapshot",
+      "localPath": "content/official/raw/pages/ucat-tutorials.html",
+      "sha256": "f847c156d8c6f31f77dff7edd761251a656ab29a9ab5f8614ca41594ebd9df7d",
+      "usedFor": "ordinal response interaction boundary only"
+    }
+  ],
+  "passages": [
+    {
+      "id": "record-integrity",
+      "title": "An uncertain observation",
+      "content": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "During a clinical placement, a student notices that another student entered a patient's observation after the shift from memory. The student who made the entry now says that one value may be incorrect. The supervising clinician is still on the ward." }] }
+      ]
+    },
+    {
+      "id": "confidentiality-request",
+      "title": "A request from a friend",
+      "content": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A friend messages a student on placement and asks whether a relative has been admitted to the ward. The student has access to the electronic record for placement work but has not been involved in the relative's care." }] }
+      ]
+    },
+    {
+      "id": "teamwork-pressure",
+      "title": "Repeated lateness",
+      "content": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Two students are delivering patient education sessions together. One has arrived late several times, leaving the other to prepare materials alone. Today's session begins in thirty minutes, and all materials are ready." }] }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ucat-situational-judgement-starter-v1-q01", "number": 1, "sourcePage": 1, "passageId": "record-integrity", "responseMode": "ordinal-choice",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Privately ask the other student to check the source, correct the entry immediately if possible, and involve the supervisor if the value cannot be verified." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very appropriate" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Appropriate, but not ideal" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Inappropriate, but not awful" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very inappropriate" }] }] }
+      ],
+      "correctAnswer": "A", "scoring": { "kind": "adjacent-partial", "order": ["A", "B", "C", "D"] }, "knowledgeTags": ["ucat-sjt-record-integrity"], "skillTags": ["patient-safety", "escalation"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/situational-judgement-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/situational-judgement-starter-v1.json"
+    },
+    {
+      "id": "ucat-situational-judgement-starter-v1-q02", "number": 2, "sourcePage": 1, "passageId": "record-integrity", "responseMode": "ordinal-choice",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Ignore the issue because the patient has already left the ward." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very appropriate" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Appropriate, but not ideal" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Inappropriate, but not awful" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very inappropriate" }] }] }
+      ],
+      "correctAnswer": "D", "scoring": { "kind": "adjacent-partial", "order": ["A", "B", "C", "D"] }, "knowledgeTags": ["ucat-sjt-patient-safety"], "skillTags": ["record-risk", "responsibility"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/situational-judgement-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/situational-judgement-starter-v1.json"
+    },
+    {
+      "id": "ucat-situational-judgement-starter-v1-q03", "number": 3, "sourcePage": 1, "passageId": "record-integrity", "responseMode": "ordinal-choice",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Post the other student's name and the clinical details in a student group chat to ask what to do." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very appropriate" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Appropriate, but not ideal" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Inappropriate, but not awful" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very inappropriate" }] }] }
+      ],
+      "correctAnswer": "D", "scoring": { "kind": "adjacent-partial", "order": ["A", "B", "C", "D"] }, "knowledgeTags": ["ucat-sjt-confidentiality"], "skillTags": ["privacy", "digital-conduct"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/situational-judgement-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/situational-judgement-starter-v1.json"
+    },
+    {
+      "id": "ucat-situational-judgement-starter-v1-q04", "number": 4, "sourcePage": 1, "passageId": "record-integrity", "responseMode": "ordinal-choice",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Tell the supervising clinician promptly that an entry may be inaccurate, describing only what is known." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very appropriate" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Appropriate, but not ideal" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Inappropriate, but not awful" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very inappropriate" }] }] }
+      ],
+      "correctAnswer": "A", "scoring": { "kind": "adjacent-partial", "order": ["A", "B", "C", "D"] }, "knowledgeTags": ["ucat-sjt-speaking-up"], "skillTags": ["escalation", "factual-reporting"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/situational-judgement-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/situational-judgement-starter-v1.json"
+    },
+    {
+      "id": "ucat-situational-judgement-starter-v1-q05", "number": 5, "sourcePage": 2, "passageId": "confidentiality-request", "responseMode": "ordinal-choice",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Open the relative's record to find out whether they are on the ward, without telling anyone else." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very appropriate" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Appropriate, but not ideal" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Inappropriate, but not awful" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very inappropriate" }] }] }
+      ],
+      "correctAnswer": "D", "scoring": { "kind": "adjacent-partial", "order": ["A", "B", "C", "D"] }, "knowledgeTags": ["ucat-sjt-access-boundary"], "skillTags": ["need-to-know", "confidentiality"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/situational-judgement-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/situational-judgement-starter-v1.json"
+    },
+    {
+      "id": "ucat-situational-judgement-starter-v1-q06", "number": 6, "sourcePage": 2, "passageId": "confidentiality-request", "responseMode": "ordinal-choice",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Explain that you cannot access or discuss patient information and suggest that the relative contact the ward team directly." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very appropriate" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Appropriate, but not ideal" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Inappropriate, but not awful" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very inappropriate" }] }] }
+      ],
+      "correctAnswer": "A", "scoring": { "kind": "adjacent-partial", "order": ["A", "B", "C", "D"] }, "knowledgeTags": ["ucat-sjt-boundaries"], "skillTags": ["communication", "confidentiality"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/situational-judgement-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/situational-judgement-starter-v1.json"
+    },
+    {
+      "id": "ucat-situational-judgement-starter-v1-q07", "number": 7, "sourcePage": 2, "passageId": "confidentiality-request", "responseMode": "ordinal-choice",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Confirm only that the relative is on the ward, but give no medical details." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very appropriate" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Appropriate, but not ideal" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Inappropriate, but not awful" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very inappropriate" }] }] }
+      ],
+      "correctAnswer": "D", "scoring": { "kind": "adjacent-partial", "order": ["A", "B", "C", "D"] }, "knowledgeTags": ["ucat-sjt-disclosure"], "skillTags": ["admission-status", "confidentiality"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/situational-judgement-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/situational-judgement-starter-v1.json"
+    },
+    {
+      "id": "ucat-situational-judgement-starter-v1-q08", "number": 8, "sourcePage": 3, "passageId": "teamwork-pressure", "responseMode": "ordinal-choice",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Criticise the late student in front of patients before the session begins." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very appropriate" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Appropriate, but not ideal" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Inappropriate, but not awful" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very inappropriate" }] }] }
+      ],
+      "correctAnswer": "D", "scoring": { "kind": "adjacent-partial", "order": ["A", "B", "C", "D"] }, "knowledgeTags": ["ucat-sjt-respect"], "skillTags": ["professionalism", "public-criticism"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/situational-judgement-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/situational-judgement-starter-v1.json"
+    },
+    {
+      "id": "ucat-situational-judgement-starter-v1-q09", "number": 9, "sourcePage": 3, "passageId": "teamwork-pressure", "responseMode": "ordinal-choice",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "After the session, speak privately, ask whether there is a problem, agree responsibilities, and involve the supervisor if reliability threatens patient care." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very appropriate" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Appropriate, but not ideal" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Inappropriate, but not awful" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very inappropriate" }] }] }
+      ],
+      "correctAnswer": "A", "scoring": { "kind": "adjacent-partial", "order": ["A", "B", "C", "D"] }, "knowledgeTags": ["ucat-sjt-teamwork"], "skillTags": ["private-conversation", "proportionate-escalation"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/situational-judgement-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/situational-judgement-starter-v1.json"
+    },
+    {
+      "id": "ucat-situational-judgement-starter-v1-q10", "number": 10, "sourcePage": 3, "passageId": "teamwork-pressure", "responseMode": "ordinal-choice",
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Quietly keep doing all of the other student's preparation indefinitely and tell nobody." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very appropriate" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Appropriate, but not ideal" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Inappropriate, but not awful" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Very inappropriate" }] }] }
+      ],
+      "correctAnswer": "C", "scoring": { "kind": "adjacent-partial", "order": ["A", "B", "C", "D"] }, "knowledgeTags": ["ucat-sjt-constructive-action"], "skillTags": ["teamwork", "addressing-patterns"], "reviewStatus": "verified",
+      "sourceQuestionPath": "content/ucat/original-practice/situational-judgement-starter-v1.json", "sourceAnswerPath": "content/ucat/original-practice/situational-judgement-starter-v1.json"
+    }
+  ]
+}

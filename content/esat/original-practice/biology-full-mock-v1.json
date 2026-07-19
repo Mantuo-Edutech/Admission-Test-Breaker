@@ -1,0 +1,516 @@
+{
+  "schemaVersion": 1,
+  "id": "esat-biology-full-mock-v1",
+  "exam": "ESAT",
+  "edition": "Biology Full Mock · Original v1",
+  "sectionId": "biology",
+  "sectionLabel": "Biology · Original Full-Length Mock",
+  "sectionLabelZh": "生物 · 满托原创完整模考",
+  "durationMinutes": 40,
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本模考依据 ESAT Biology 公开范围独立命题，不复制或改写官方 Guide、ENGAA、NSAA 或其他市场资料题面。",
+  "sourceAnchors": [
+    {
+      "id": "esat-content-specification",
+      "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+      "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+      "usedFor": "27-question, 40-minute format and Biology scope boundary"
+    },
+    {
+      "id": "esat-guide-biology",
+      "localPath": "content/official/raw/esat/ESAT_Guide_Biology_June_2025.pdf",
+      "sha256": "cd5fd84f56ef0e55722841fcbdacb86eec15b0eddd16a05ea56c5d902d9e125b",
+      "usedFor": "B1-B11 terminology and topic coverage only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "esat-biology-full-mock-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which structure is present in a typical bacterial cell but absent from a typical animal cell?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Cell membrane" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Cytoplasm" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Ribosomes" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Circular chromosomal DNA not enclosed in a nucleus" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["bio-cells"],
+      "skillTags": ["prokaryotic-cells", "cell-comparison"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q02",
+      "number": 2,
+      "sourcePage": 2,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which sequence gives the correct order of biological organisation from least complex to most complex?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Tissue → cell → organ → organ system" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Cell → tissue → organ → organ system" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Cell → organ → tissue → organ system" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Organ system → organ → tissue → cell" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["bio-cells"],
+      "skillTags": ["levels-of-organisation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q03",
+      "number": 3,
+      "sourcePage": 3,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Root hair cells can absorb mineral ions from a more dilute soil solution into a more concentrated cell cytoplasm. Which process makes this possible?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Active transport using energy from respiration" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Diffusion down the mineral-ion concentration gradient" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Osmosis of mineral ions through the membrane" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Evaporation from the root surface" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["bio-membranes", "bio-plants"],
+      "skillTags": ["active-transport", "concentration-gradients"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q04",
+      "number": 4,
+      "sourcePage": 4,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A potato cylinder has an initial mass of 5.0 g and a final mass of 4.2 g after immersion in a solution. What is its percentage change in mass?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "+8%" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "-8%" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "-16%" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "+16%" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["bio-membranes"],
+      "skillTags": ["osmosis", "percentage-change"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q05",
+      "number": 5,
+      "sourcePage": 5,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which statement describes mitosis?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It produces four genetically different haploid cells." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It occurs only when gametes are formed." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It produces two daughter cells genetically identical to each other and the parent cell, unless mutation occurs." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It halves the chromosome number in every daughter cell." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["bio-division"],
+      "skillTags": ["mitosis", "cell-cycle"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q06",
+      "number": 6,
+      "sourcePage": 6,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A diploid cell contains 12 chromosomes. How many chromosomes should each normal gamete produced by meiosis contain?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "12" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "24" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["bio-division"],
+      "skillTags": ["meiosis", "chromosome-number"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q07",
+      "number": 7,
+      "sourcePage": 7,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A recessive condition is controlled by allele a. Two unaffected parents have an affected child. Which parental genotypes are consistent with this information?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "AA\text{ and }AA" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "AA\text{ and }Aa" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "aa\text{ and }aa" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "Aa\text{ and }Aa" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["bio-inheritance"],
+      "skillTags": ["monohybrid-cross", "recessive-inheritance"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q08",
+      "number": 8,
+      "sourcePage": 8,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which statement correctly distinguishes genotype from phenotype?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Genotype is an organism's allele combination; phenotype is an observable characteristic influenced by genotype and environment." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Genotype is always visible, whereas phenotype is stored only in DNA." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Genotype means a dominant allele and phenotype means a recessive allele." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Genotype and phenotype are interchangeable terms." }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["bio-inheritance"],
+      "skillTags": ["genotype", "phenotype"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q09",
+      "number": 9,
+      "sourcePage": 9,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "One strand of a DNA molecule has the base sequence AGTC. What is the complementary sequence?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "AGTC" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "UCAG" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "TCAG" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "GACT" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["bio-dna"],
+      "skillTags": ["complementary-bases", "dna-structure"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q10",
+      "number": 10,
+      "sourcePage": 10,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A mutation changes one nucleotide triplet in a gene. Why might the phenotype remain unchanged?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every mutation is repaired before DNA is copied." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The changed triplet may still code for the same amino acid, or the protein change may not alter its function." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Genes do not influence proteins." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Mutations change only the sugar-phosphate backbone and never the bases." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["bio-dna"],
+      "skillTags": ["gene-mutation", "protein-function"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q11",
+      "number": 11,
+      "sourcePage": 11,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which pair of enzymes is used to cut DNA at specific sequences and then join DNA fragments during genetic engineering?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Restriction enzyme, then DNA ligase" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "DNA ligase, then amylase" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Protease, then lipase" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Amylase, then restriction enzyme" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["bio-gene-tech"],
+      "skillTags": ["restriction-enzymes", "dna-ligase"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q12",
+      "number": 12,
+      "sourcePage": 12,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which description of stem-cell potency is correct?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Adult stem cells are always totipotent." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Pluripotent cells can form only one specialised cell type." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Multipotent cells can form a complete organism." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Totipotent cells can develop into a complete multicellular organism." }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["bio-gene-tech"],
+      "skillTags": ["stem-cells", "cell-potency"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q13",
+      "number": 13,
+      "sourcePage": 13,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A population of insects contains heritable variation in body colour. Birds more easily see and eat the lighter insects on dark bark. What is the most likely long-term outcome?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "All insects deliberately become darker during their lives." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Birds cause identical useful mutations in every surviving insect." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Alleles associated with darker colour become more common because darker insects leave more offspring." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Genetic variation disappears before selection occurs." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["bio-variation"],
+      "skillTags": ["natural-selection", "allele-frequency"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q14",
+      "number": 14,
+      "sourcePage": 14,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which characteristic is most clearly influenced by both genetic and environmental variation?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Human blood group" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Human body mass" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The number of chromosomes in a normal human gamete" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Whether a DNA nucleotide contains phosphate" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["bio-variation"],
+      "skillTags": ["genetic-variation", "environmental-variation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q15",
+      "number": 15,
+      "sourcePage": 15,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Why does an enzyme usually catalyse only one reaction or a small group of related reactions?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Its active site has a complementary shape and chemical properties to particular substrate molecules." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It raises the activation energy for every other reaction." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It is permanently used up after binding one substrate." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Its amino-acid sequence changes to match each substrate." }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["bio-enzymes"],
+      "skillTags": ["enzyme-specificity", "active-site"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q16",
+      "number": 16,
+      "sourcePage": 16,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which enzyme-substrate pairing is correct in human digestion?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Amylase digests proteins." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Protease digests lipids." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Lipase digests starch." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Protease digests proteins." }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["bio-enzymes", "bio-animal"],
+      "skillTags": ["digestive-enzymes"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q17",
+      "number": 17,
+      "sourcePage": 17,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which word equation represents anaerobic respiration in human muscle cells?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Glucose + oxygen → carbon dioxide + water" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Lactic acid + oxygen → glucose" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Glucose → lactic acid" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Carbon dioxide + water → glucose + oxygen" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["bio-animal"],
+      "skillTags": ["anaerobic-respiration"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q18",
+      "number": 18,
+      "sourcePage": 18,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which sequence correctly describes the pathway through a simple reflex arc?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Receptor → sensory neurone → relay neurone → motor neurone → effector" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Effector → motor neurone → receptor → sensory neurone" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Receptor → motor neurone → sensory neurone → effector" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Relay neurone → receptor → effector → sensory neurone" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["bio-animal"],
+      "skillTags": ["reflex-arc", "neurones"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q19",
+      "number": 19,
+      "sourcePage": 19,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "During inhalation in a healthy human, which changes occur?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The diaphragm relaxes and thoracic volume decreases." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The diaphragm contracts and flattens, increasing thoracic volume and lowering pressure." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The diaphragm contracts and thoracic pressure rises above atmospheric pressure." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The ribs move down and in, increasing lung volume." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["bio-animal"],
+      "skillTags": ["ventilation", "pressure-volume"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q20",
+      "number": 20,
+      "sourcePage": 20,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which blood component-function pairing is correct?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Platelets — antibody production" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Red blood cells — phagocytosis" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Plasma — blood clot formation" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Red blood cells — oxygen transport" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["bio-animal"],
+      "skillTags": ["blood-components", "oxygen-transport"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q21",
+      "number": 21,
+      "sourcePage": 21,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A person's blood glucose concentration rises after a meal. Which response helps restore it toward the normal range?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The pancreas releases glucagon, causing glucose uptake by cells." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The pituitary releases ADH, causing glycogen breakdown." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The pancreas releases insulin, promoting glucose uptake and conversion to glycogen." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The adrenal glands release adrenaline continuously until glucose reaches zero." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["bio-animal"],
+      "skillTags": ["blood-glucose", "negative-feedback"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q22",
+      "number": 22,
+      "sourcePage": 22,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A dehydrated person releases more ADH. What is the direct effect on the kidneys?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Less water is reabsorbed, producing a larger volume of dilute urine." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "More water is reabsorbed, producing a smaller volume of concentrated urine." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Glucose is secreted into the urine." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Protein filtration through the glomerulus stops completely." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["bio-animal"],
+      "skillTags": ["adh", "water-balance"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q23",
+      "number": 23,
+      "sourcePage": 23,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Why can vaccination provide faster protection when a vaccinated person later encounters the same pathogen?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Memory cells formed after vaccination produce a faster, larger specific immune response." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Vaccines permanently replace all white blood cells with antibodies." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Vaccination makes antibiotics effective against viruses." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Dead pathogens reproduce rapidly and destroy later pathogens." }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["bio-animal"],
+      "skillTags": ["vaccination", "memory-cells"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q24",
+      "number": 24,
+      "sourcePage": 24,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Five randomly placed 0.5 m² quadrats contain 6, 4, 5, 7 and 3 plants. What is the estimated number of these plants in a 40 m² habitat?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "100" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "200" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "400" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "800" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["bio-ecosystems"],
+      "skillTags": ["quadrat-sampling", "population-estimation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q25",
+      "number": 25,
+      "sourcePage": 25,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which sequence best explains how nitrate-rich fertiliser runoff can cause fish deaths in a lake?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Nitrates kill all algae directly, so oxygen concentration rises." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Nitrates stop decomposition, so dead biomass accumulates without respiration." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Nitrates cause fish to photosynthesise faster and exhaust carbon dioxide." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Algal growth increases; shading and decomposition increase, and decomposers use dissolved oxygen." }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["bio-ecosystems"],
+      "skillTags": ["eutrophication", "biodiversity"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q26",
+      "number": 26,
+      "sourcePage": 26,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Light intensity is increased around a plant, but the measured rate of photosynthesis does not change. Which explanation is most likely?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Another factor, such as carbon dioxide concentration or temperature, is limiting the rate." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Photosynthesis is exothermic and rejects additional light." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Oxygen is the only raw material required for photosynthesis." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Plants can photosynthesise only in complete darkness." }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["bio-plants"],
+      "skillTags": ["photosynthesis", "limiting-factors"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    },
+    {
+      "id": "esat-biology-full-mock-v1-q27",
+      "number": 27,
+      "sourcePage": 27,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A potometer records uptake of 3.6 cm³ of water in 15 minutes. What is the average rate of water uptake?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "0.12 cm³ min⁻¹" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "0.24 cm³ min⁻¹" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "4.17 cm³ min⁻¹" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "54 cm³ min⁻¹" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["bio-plants"],
+      "skillTags": ["transpiration", "rate-calculation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-full-mock-v1.json"
+    }
+  ]
+}

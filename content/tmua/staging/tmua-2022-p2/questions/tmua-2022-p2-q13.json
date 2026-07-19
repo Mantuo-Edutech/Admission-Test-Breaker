@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13   Consider the statement (∗) about a real number x:\n\n                    (∗) There exists a real number y such that x – x y + y is negative.\n\n     For how many real values of x is (∗) true?\n\n     A   no values of x\n\n     B   exactly one value of x\n\n     C   exactly two values of x\n\n     D   all except exactly two values of x\n\n     E   all except exactly one value of x\n\n     F   all values of x\n\n\n\n\n                                                  15"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the statement (∗) about a real number x:\n\n                    (∗) There exists a real number y such that x – x y + y is negative.\n\n     For how many real values of x is (∗) true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "no values of x"
+    },
+    {
+      "label": "B",
+      "rawText": "exactly one value of x"
+    },
+    {
+      "label": "C",
+      "rawText": "exactly two values of x"
+    },
+    {
+      "label": "D",
+      "rawText": "all except exactly two values of x"
+    },
+    {
+      "label": "E",
+      "rawText": "all except exactly one value of x"
+    },
+    {
+      "label": "F",
+      "rawText": "all values of x"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "For each fixed value of x, we can think about this expression as being a function of y. We can\nwrite the expression as (1 − x)y + x, which is just my + c where m = 1 − x and c = x. This is\nthe equation of a straight line graph, so it takes every real value, both positive and negative, as\nlong as m 6= 0.\nThe case m = 0 occurs exactly when x = 1, and in this case, the expression becomes (1−1)y+1 =\n1, so it is always 1, for every value of y.\nTherefore (∗) is true for all except exactly one value of x, namely x = 1, and the correct answer\nis option E.\n\n\n\n\nVersion 1.0, July 2023                                                                     Page 15"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

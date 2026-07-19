@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "2   Evaluate\n\n               16           2       16          2\n                 ⎛ 1        ⎞        ⎛ 1        ⎞\n               ∫ ⎜\n               9 ⎝\n                    x\n                      +   x ⎟ dx − ⎜\n                            ⎠\n                                    ∫\n                                   9 ⎝\n                                        x\n                                          −   x ⎟ dx\n                                                ⎠\n\n    A   0\n\n    B   2\n\n    C   4\n\n    D   7\n\n    E   14\n\n    F   28\n\n    G   75\n\n    H   175\n\n\n\n\n                                4"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Evaluate\n\n               16           2       16          2\n                 ⎛ 1        ⎞        ⎛ 1        ⎞\n               ∫ ⎜\n               9 ⎝\n                    x\n                      +   x ⎟ dx − ⎜\n                            ⎠\n                                    ∫\n                                   9 ⎝\n                                        x\n                                          −   x ⎟ dx\n                                                ⎠"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0"
+    },
+    {
+      "label": "B",
+      "rawText": "2"
+    },
+    {
+      "label": "C",
+      "rawText": "4"
+    },
+    {
+      "label": "D",
+      "rawText": "7"
+    },
+    {
+      "label": "E",
+      "rawText": "14"
+    },
+    {
+      "label": "F",
+      "rawText": "28"
+    },
+    {
+      "label": "G",
+      "rawText": "75"
+    },
+    {
+      "label": "H",
+      "rawText": "175"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We first expand the brackets to obtain\n                            Z 16                Z 16\n                                 1                   1\n                                   + 2 + x dx −        − 2 + x dx.\n                             9   x               9   x\n\nSince these integrals have the same limits, we can combine them into a single integral to get\n               Z 16 \u0012          \u0013 \u0012             \u0013 Z 16\n                      1              1\n                        +2+x −         −2+x =          4 dx = 4 × (16 − 9) = 28,\n                9     x              x               9\n\nwhich is option F.\n\nNote that integration of x1 is not on the specification for this test; it is, of course, possible to\nanswer this question by calculating both integrals explicitly and then subtracting, but it is much\nmore work than the solution just presented.\n\n\n\n\nVersion 1.0, September 2023                                                                  Page 4"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

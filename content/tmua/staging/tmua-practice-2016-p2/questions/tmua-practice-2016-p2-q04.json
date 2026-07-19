@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q04",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 4,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "Ͷ\n      \u0003       ͳͳߨ\n          \u0003        \u0003\n               ͸\n\n\n\n\nͶ\u0003     \u0003 \u0003 ǡ\u0003 \u0003 \u0013ǡ\u0003 \u0014ǡ\u0003 \u0015ǡ\u0003 \u0016ǡ\u0003 \u0003 \u0017ǡ\u0003  \u0003 \u0003 \u0003 \u0003 ሺǦሻ\u0003 \u0003 \u0003\n      Ǥ\u0003\u0017\u0003\u0003\u0003\u0003 \u0003\u0003\u0003Ǥ\u0003\n\n      \u0018\u0003\u0013\u0003           \u0017\u0003\u0003 \u0003\u0003\u0003\u0003Ǥ\u0003\n      \u0018\u0003\u0014\u0003           \u0017\u0003\u0003 \u0003\u0003\u0003\u0003Ǥ\u0003\n      \u0018\u0003\u0015\u0003           \u0017\u0003\u0003 \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003Ǥ\u0003\n      \u0018\u0003\u0016\u0003           \u0017\u0003\u0003 \u0003\u0003\u0003\u0003Ǥ\u0003\n      \u0018\u0003\u0017\u0003           \u0017\u0003\u0003 \u0003\u0003\u0003\u0003Ǥ\u0003\n\n      \b \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003Ǥ\u0003\n\n      \u001a \u0003\u0003\u0003ǫ\u0003\n\n\n      \u0004\u0003      \u0018\u0003\u0013\u0003\n      \u0003\n      \u0005\u0003      \u0018\u0003\u0014\u0003\n      \u0003\n      \u0006\u0003      \u0018\u0003\u0015\u0003\n      \u0003\n      \u0007\u0003      \u0018\u0003\u0016\u0003\n      \u0003\n      \b\u0003      \u0018\u0003\u0017\u0003\n\n\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "11ߨ\n                  \n               6\n\n\n\n\n4       ǡ  ǡ ǡ ǡ ǡ  ǡ      ሺǦሻ  \n      Ǥ Ǥ\n\n                  Ǥ\n                  Ǥ\n                  Ǥ\n                  Ǥ\n                  Ǥ\n\n      E  Ǥ\n\n       ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": ""
+    },
+    {
+      "label": "B",
+      "rawText": ""
+    },
+    {
+      "label": "C",
+      "rawText": ""
+    },
+    {
+      "label": "D",
+      "rawText": ""
+    },
+    {
+      "label": "E",
+      "rawText": "\n\n\n\n\n© UCLES 2016"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We work through the possibilities systematically.\n\n•    Urn P’s statement is true, so the urns each contain one or four balls. As Urn Q has a false\n     statement, there cannot be two or four balls in the urns, and so there is one ball in each\n     urn. But then Urn S has a true statement, which is impossible.\n\n•    Urn Q’s statement is true, so the urns each contain two or four balls. As Urn P has a false\n     statement, there cannot be one or four balls in each urn, so there are two balls in each\n     urn. But then Urn S has a true statement, which is impossible.\n\n•    Urn R’s statement is true, so there are three or four balls in each urn. As Urn P’s statement\n     is false, there cannot be four balls in the urn, so there are three balls in each urn. This\n     means that Urn Q, Urn S and Urn T each have a false statement, and therefore this is\n     possible.\n\n•    Urn S’s statement is true, so the urns each contain one or two balls. As Urn P’s statement\n     is false, there cannot be one ball in each urn, so there are two balls in each urn. But then\n     Urn Q has a true statement, which is impossible.\n\n•    Urn T’s statement is true, so the urns each contain one or two balls. But then Urn S’s\n     statement is true, which is impossible.\n\nTherefore the only urn which has a true statement is Urn R, so option C is correct.\n\n\n\n\n                                               7\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        7
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

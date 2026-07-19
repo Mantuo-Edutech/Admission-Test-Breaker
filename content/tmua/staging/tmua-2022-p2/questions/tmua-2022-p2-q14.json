@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q14",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 14,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "14   Consider the two inequalities:\n\n                                              x + 5 < x +11\n\n                                              x +11 < x +1\n\n     Which one of the following is correct?\n\n     A   There is no real number for which both inequalities are true.\n\n     B   There is exactly one real number for which both inequalities are true.\n\n     C   The real numbers for which both inequalities are true form an interval of length 1.\n\n     D   The real numbers for which both inequalities are true form an interval of length 2.\n\n     E   The real numbers for which both inequalities are true form an interval of length 3.\n\n     F   The real numbers for which both inequalities are true form an interval of length 4.\n\n     G The real numbers for which both inequalities are true form an interval of length 5.\n\n\n\n\n                                                  16"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the two inequalities:\n\n                                              x + 5 < x +11\n\n                                              x +11 < x +1\n\n     Which one of the following is correct?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "There is no real number for which both inequalities are true."
+    },
+    {
+      "label": "B",
+      "rawText": "There is exactly one real number for which both inequalities are true."
+    },
+    {
+      "label": "C",
+      "rawText": "The real numbers for which both inequalities are true form an interval of length 1."
+    },
+    {
+      "label": "D",
+      "rawText": "The real numbers for which both inequalities are true form an interval of length 2."
+    },
+    {
+      "label": "E",
+      "rawText": "The real numbers for which both inequalities are true form an interval of length 3."
+    },
+    {
+      "label": "F",
+      "rawText": "The real numbers for which both inequalities are true form an interval of length 4."
+    },
+    {
+      "label": "G",
+      "rawText": "The real numbers for which both inequalities are true form an interval of length 5."
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "To solve this question, we use the fact that |x − a| can be understood as the distance of x from a.\nThe first inequality is true if and only if x is closer to −5 than to −11, i.e., if and only if x > −8.\nThe second inequality is true if and only if x is closer to −11 than to −1, i.e., if and only if\nx < −6.\nTherefore both inequalities are true if and only if −8 < x < −6, which is an interval of length\n2, which is option D.\nOne could also do this question by sketching the graphs of y = |x + 5| and y = |x + 11| and\nworking out where they intersect, and so on. But that requires a lot more work than than the\napproach presented here.\n\n\n\n\nVersion 1.0, July 2023                                                                        Page 16"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        16
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

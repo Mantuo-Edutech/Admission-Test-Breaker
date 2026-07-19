@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q10",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 10,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "10   The ﬁrst seven terms of a sequence of positive integers are:\n\n                                            u1 = 15\n                                            u2 = 21\n                                            u3 = 30\n                                            u4 = 37\n                                            u5 = 44\n                                            u6 = 51\n                                            u7 = 59\n\n\n     Consider the following statement about this sequence:\n\n       (∗) If n is a prime number, then un is a multiple of 3 or un is a multiple\n           of 5.\n\n     What is the smallest value of n that provides a counterexample to (∗)?\n\n     A 1\n\n     B 2\n\n     C 3\n\n     D 4\n\n     E 5\n\n     F 6\n\n     G 7\n\n\n\n\n                                             12"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The ﬁrst seven terms of a sequence of positive integers are:\n\n                                            u1 = 15\n                                            u2 = 21\n                                            u3 = 30\n                                            u4 = 37\n                                            u5 = 44\n                                            u6 = 51\n                                            u7 = 59\n\n\n     Consider the following statement about this sequence:\n\n       (∗) If n is a prime number, then un is a multiple of 3 or un is a multiple\n           of 5.\n\n     What is the smallest value of n that provides a counterexample to (∗)?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "1"
+    },
+    {
+      "label": "B",
+      "rawText": "2"
+    },
+    {
+      "label": "C",
+      "rawText": "3"
+    },
+    {
+      "label": "D",
+      "rawText": "4"
+    },
+    {
+      "label": "E",
+      "rawText": "5"
+    },
+    {
+      "label": "F",
+      "rawText": "6"
+    },
+    {
+      "label": "G",
+      "rawText": "7"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "To be a counterexample, we need the antecedent (the ‘if’ part) to be true but the consequent\n(the ‘then’ part) to be false.\n\n                            n   n is prime   an multiple of 3 or 5\n                            1      false               –\n                            2      true              true\n                            3      true              true\n                            4      false               –\n                            5      true             false\n                            6      false               –\n                            7      true             false\n\nTherefore n = 5 and n = 7 are both counterexamples, and the smallest counterexample is n = 5,\nwhich is option E.\n\n\n\n\nVersion 1.0, March 2022                                                              Page 13"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

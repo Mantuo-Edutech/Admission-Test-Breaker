@@ -1,0 +1,86 @@
+schemaVersion: 1
+feature:
+  id: esat-module-starters
+  title: Original ESAT five-module starter diagnostics
+  status: partial
+  userOutcome: >-
+    After choosing degree programmes, a student sees only the required ESAT
+    modules and can start a free native ten-question diagnostic for Mathematics 1,
+    Mathematics 2, Physics, Chemistry or Biology without leaving the website.
+
+run:
+  packageScript: verify:esat-starter
+
+claims:
+  - id: five-original-scope-mapped-datasets
+    status: verified
+    statement: >-
+      Five versioned local JSON papers provide 50 Mantou-original questions. Each
+      dataset is labelled teaching-preview, cites SHA-pinned official scope anchors
+      for boundary checking only, uses local provenance and contains no source-PDF
+      blocks.
+    artifacts:
+      - content/esat/original-practice/mathematics-1-starter-v1.json
+      - content/esat/original-practice/mathematics-2-starter-v1.json
+      - content/esat/original-practice/physics-starter-v1.json
+      - content/esat/original-practice/chemistry-starter-v1.json
+      - content/esat/original-practice/biology-starter-v1.json
+      - src/features/practice/content/esat-original-starter.ts
+      - tests/features/practice/content/esat-module-starters.test.ts
+    automatedChecks:
+      - verify:esat-starter
+      - verify:esat-assets
+      - typecheck
+
+  - id: shared-native-practice-kernel
+    status: verified
+    statement: >-
+      All five starters are registered in the shared practice kernel and use the
+      same KaTeX rendering, answer changes, marking, active timing, learner storage,
+      submission, factual result and question-feedback pathways as TMUA.
+    artifacts:
+      - src/features/practice/content/esat-starters.ts
+      - src/features/practice/content/practice-paper-registry.ts
+      - src/features/practice/pages/PracticePage.tsx
+      - src/features/practice/pages/ResultsPage.tsx
+      - tests/app/practice-page.test.tsx
+      - tests/app/results-page.test.tsx
+    automatedChecks:
+      - verify:esat-starter
+      - verify:supabase-contracts
+      - build
+
+  - id: programme-filtered-visible-entry
+    status: verified
+    statement: >-
+      The ESAT library requires a programme/module plan, displays exact starter
+      counts only for selected modules and links each card directly to its native
+      diagnostic rather than a PDF or external site.
+    artifacts:
+      - src/features/catalog/pages/EsatPastPapersPage.tsx
+      - tests/app/multi-exam-practice-library.test.tsx
+      - content/products/catalog.json
+    automatedChecks:
+      - verify:esat-starter
+      - verify:content-products
+      - build
+
+boundaries:
+  - These are Mantou-original starter diagnostics, not official ESAT papers or claims of official-equivalent difficulty.
+  - Basic answers and factual results are free; no personalised readiness, percentile or admissions prediction is inferred from ten questions in one module.
+  - Independent subject-teacher, bilingual terminology and phone/tablet/desktop visual review remain before final publication status.
+  - Fifty starter questions do not replace full-length module mocks, historical-paper rights review or China-student Review Notes.
+
+manualChecks:
+  - id: independent-subject-review
+    status: pending
+    evidence: Independent Mathematics, Physics, Chemistry and Biology teachers must verify wording, distractors, difficulty spread and answer keys before final publication.
+    viewports:
+      - content
+  - id: browser-device-review
+    status: pending
+    evidence: Automated component, type, production-build and shared-kernel tests pass; desktop, tablet and phone visual review remains explicit.
+    viewports:
+      - desktop
+      - tablet
+      - phone

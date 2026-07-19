@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q01",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 1,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "ͳ\u0003    Find the value of\n\n                                      ଶ           ସ ଶ\n          \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003‫׬‬ଵ ቀ‫ ݔ‬ଶ െ మ ቁ ‫ݔ‬\n                                                 ௫\n\n\n              Ͷ͵\n      \u0004\u0003\n              ͳͷ\n      \u0003\n      \u0005\u0003 ͵\n      \u0003\n          ͻ͹\n      \u0006\u0003\n          ͳͷ\n      \u0003\n          ͳͲ͵\n      \u0007\u0003\n          ͳͷ\n      \u0003\n          ͳ͸͵\n      \b\u0003\n          ͳͷ\n      \u0003\n        \u0003 ͳͺ"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the value of\n\n                                      ଶ           ସ ଶ\n          ‫׬‬ଵ ቀ‫ ݔ‬ଶ െ మ ቁ ‫ݔ‬\n                                                 ௫\n\n\n              43"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "15"
+    },
+    {
+      "label": "B",
+      "rawText": "3\n      \n          97"
+    },
+    {
+      "label": "C",
+      "rawText": "15\n      \n          103"
+    },
+    {
+      "label": "D",
+      "rawText": "15\n      \n          163"
+    },
+    {
+      "label": "E",
+      "rawText": "15\n      \n         18"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We begin by expanding the brackets, either using the binomial theorem or by multiplying them\nout by hand, to get\n                Z 2\u0012           \u00132          Z 2\n                          24                                16\n                       x + 2        dx =         x4 − 8 +      dx\n                 1        x                 1               x4\n                                           Z 2\n                                      =          x4 − 8 + 16x−4 dx\n                                            1\n                                                             \u00152\n                                                      16x−3\n                                        \u0014 5\n                                          x\n                                      =       − 8x +\n                                           5           −3 1\n                                        \u0012                      \u0013 \u0012          \u0013\n                                          32             16/8      1     16\n                                      =       −8×2−             −    −8−\n                                           5               3       5     3\n                                        31         14\n                                      =      −8+\n                                         5         3\n                                        93 − 120 + 70\n                                      =\n                                               15\n                                        43\n                                      =\n                                        15\nand so the answer is A.\n\n\n\n\n                                                     4\n                                                                                © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

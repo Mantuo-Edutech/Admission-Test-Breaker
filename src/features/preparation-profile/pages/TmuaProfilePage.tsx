@@ -15,18 +15,29 @@ export function TmuaProfilePage({ services }: TmuaProfilePageProps) {
   const navigate = useNavigate();
   const { loading, guestSpace, profile, issue, replaceProfile } =
     usePreparationProfileContext(services);
-  const [profilePersistenceWarning, setProfilePersistenceWarning] = useState(false);
+  const [profilePersistenceWarning, setProfilePersistenceWarning] = useState<
+    "device" | "account" | null
+  >(null);
 
   async function saveProfile(nextProfile: PreparationProfile) {
     const result = await services.profileStore.save(nextProfile);
     replaceProfile(nextProfile);
-    setProfilePersistenceWarning(!result.persisted);
+    setProfilePersistenceWarning(
+      result.persisted ? null : result.issue === "unavailable" ? "account" : "device",
+    );
+    if (result.persisted) {
+      void services.funnel?.track({
+        eventType: "profile_completed",
+        examId: "tmua",
+        contextCode: "course-profile",
+      });
+    }
     return result;
   }
 
   return (
     <main className="tmua-stage-page tmua-profile-page">
-      <TmuaPageHeader backTo="/exams/tmua" backLabel="TMUA 考试介绍" />
+      <TmuaPageHeader />
       <section className="tmua-stage-hero page-shell">
         <p className="eyebrow">第 1 步</p>
         <h1>填写你的课程信息</h1>
@@ -36,7 +47,7 @@ export function TmuaProfilePage({ services }: TmuaProfilePageProps) {
       {loading && (
         <section className="practice-state-page" aria-live="polite">
           <p className="eyebrow">正在读取课程信息</p>
-          <h2>正在打开你的本地课程信息…</h2>
+          <h2>正在打开你的课程信息…</h2>
         </section>
       )}
 
@@ -47,9 +58,11 @@ export function TmuaProfilePage({ services }: TmuaProfilePageProps) {
               之前的课程信息无法安全恢复。它已被隔离，你可以重新填写。
             </div>
           )}
-          {profilePersistenceWarning && (
+          {profilePersistenceWarning !== null && (
             <div className="calm-notice" role="status">
-              档案已保留在当前页面，但浏览器未能把它写入本地存储。
+              {profilePersistenceWarning === "account"
+                ? "课程信息暂时只保留在当前页面，尚未同步到你的账号。请检查网络后重试。"
+                : "档案已保留在当前页面，但浏览器未能把它写入当前设备。"}
             </div>
           )}
           <ProfilePanel

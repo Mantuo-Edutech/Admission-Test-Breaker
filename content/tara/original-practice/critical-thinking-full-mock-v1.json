@@ -1,0 +1,361 @@
+{
+  "schemaVersion": 1,
+  "id": "tara-critical-thinking-full-mock-v1",
+  "exam": "TARA",
+  "edition": "Critical Thinking Full Mock · Original v1",
+  "sectionId": "critical-thinking",
+  "sectionLabel": "Critical Thinking",
+  "sectionLabelZh": "批判思维 · 满托原创完整模考",
+  "durationMinutes": 40,
+  "calculator": "none",
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本练习依据 TARA 公开能力范围独立命题，不复制或改写 TARA、BMAT 或 TSA 的官方题面。",
+  "sourceAnchors": [
+    {
+      "id": "tara-content-specification",
+      "localPath": "content/official/raw/shared/TARA_Content_Specification.pdf",
+      "sha256": "d326e78305aefd999c42953de3024d403f27357ecbc0f3dd562134e8105822cd",
+      "usedFor": "22-question, 40-minute, no-calculator module boundary"
+    },
+    {
+      "id": "tara-question-guide",
+      "localPath": "content/official/raw/shared/TARA_Question_Guide.pdf",
+      "sha256": "afcee1ff9dd35025000cd7c5a4cef804fa31fb3e8870d5748ec8d3ac2c45a6cb",
+      "usedFor": "seven Critical Thinking question-family labels only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q01", "number": 1, "sourcePage": 1,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Many evening laboratory sessions finish after the last campus shuttle. Students then pay for taxis or walk along an unlit road. Extending the shuttle by one hour would require only one additional journey, and a trial journey was usually more than half full. The university should therefore extend the shuttle service during teaching weeks." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which option best expresses the main conclusion?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some laboratory sessions finish late." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Students sometimes pay for taxis." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The road beside the campus is unlit." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The university should extend the shuttle service during teaching weeks." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A trial shuttle was usually more than half full." }] }] }
+      ],
+      "correctAnswer": "D", "knowledgeTags": ["tara-critical-main-conclusion"], "skillTags": ["identifying-main-conclusion"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q02", "number": 2, "sourcePage": 2,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every research proposal that received funding this year named at least one community partner. Proposal H named no community partner." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which conclusion follows from these statements?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Proposal H was not submitted this year." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Proposal H did not receive funding this year." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every proposal with a community partner received funding." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Proposal H was the only proposal without a partner." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Community partners decide which proposals receive funding." }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["tara-critical-inference"], "skillTags": ["drawing-conclusion", "necessary-inference"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q03", "number": 3, "sourcePage": 3,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "The library should install collection lockers outside the main entrance. Students who cannot reach the desk before it closes could collect reserved books later, so the lockers would reduce the number of reservations that are never collected." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which assumption is required by the argument?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every uncollected reservation is for a printed book." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The library desk should never open later." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "At least some students fail to collect reservations because the desk closes before they can arrive, and would use the lockers." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The lockers would hold every book in the library." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Students prefer lockers to speaking to library staff." }] }] }
+      ],
+      "correctAnswer": "C", "knowledgeTags": ["tara-critical-assumption"], "skillTags": ["identifying-assumption", "argument-gap"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q04", "number": 4, "sourcePage": 4,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A college plans to stop selling drinks in disposable cups. It argues that requiring reusable cups will substantially reduce the waste generated by its cafés." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which finding most strengthens the argument?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Disposable cups currently form most of the cafés' non-food waste, and a trial deposit scheme achieved high return rates." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some students buy drinks from cafés outside the college." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The college cafés sell several kinds of tea." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Reusable cups are available in several colours." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The cafés changed coffee supplier last year." }] }] }
+      ],
+      "correctAnswer": "A", "knowledgeTags": ["tara-critical-evidence"], "skillTags": ["assessing-additional-evidence", "strengthen"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q05", "number": 5, "sourcePage": 5,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A voluntary survey conducted at a city cycling festival found that 82% of respondents wanted more cycle lanes. The mayor concludes that 82% of all city residents want more cycle lanes." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the main reasoning error?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The conclusion concerns a city rather than a country." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The survey asked too many people." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The survey gives an exact percentage." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "People attending a cycling festival are unlikely to be representative of all residents." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The mayor does not say how many cycle lanes already exist." }] }] }
+      ],
+      "correctAnswer": "D", "knowledgeTags": ["tara-critical-flaw"], "skillTags": ["detecting-reasoning-errors", "selection-bias"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q06", "number": 6, "sourcePage": 6,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "All members who complete the safety course may use the laboratory without supervision. Mina may use the laboratory without supervision. Therefore, Mina completed the safety course." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which argument uses the same pattern of reasoning?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Anyone with a staff card may enter. Jo has no staff card, so Jo may not enter." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Anyone who passes the course receives a certificate. Lee has a certificate, so Lee passed the course." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "No damaged item is sold. This item is damaged, so it is not sold." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some volunteers are students. Arun is a volunteer, so Arun might be a student." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "If the alarm sounds, we leave. The alarm sounds, so we leave." }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["tara-critical-matching-arguments"], "skillTags": ["matching-arguments", "affirming-consequent"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q07", "number": 7, "sourcePage": 7,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Principle: A public authority should not impose a restriction that is more burdensome than necessary to achieve its legitimate aim." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which action best follows this principle?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "To prevent noise in one room, a library closes every branch for a week." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "To protect one fragile exhibit, a museum permanently bans all visitors." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "To reduce speeding near a school, a council first introduces a clearly marked lower limit on the affected road and monitors compliance." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "To stop one late payment, a council cancels every resident's permit." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "To shorten one queue, a clinic refuses all future appointments." }] }] }
+      ],
+      "correctAnswer": "C", "knowledgeTags": ["tara-critical-applying-principles"], "skillTags": ["applying-principles", "proportionality"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q08", "number": 8, "sourcePage": 8,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "When the local museum introduced free entry on the first Sunday of each month, visits from families doubled. Donations on those Sundays covered most of the lost ticket income, and weekday attendance did not fall. The museum should continue the free Sundays next year." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which statement is the main conclusion?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Family visits doubled on free Sundays." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Donations covered most lost ticket income." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The museum should continue free Sundays next year." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Weekday attendance did not fall." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Museums should always be free." }] }] }
+      ],
+      "correctAnswer": "C", "knowledgeTags": ["tara-critical-main-conclusion"], "skillTags": ["identifying-main-conclusion", "intermediate-reasons"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q09", "number": 9, "sourcePage": 9,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "No article is published in the journal without approval from an editor. Article R was published in the journal." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which conclusion follows?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Article R was approved by an editor." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every approved article is published." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Article R was approved by every editor." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The journal publishes no rejected articles elsewhere." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Article R was the journal's best article." }] }] }
+      ],
+      "correctAnswer": "A", "knowledgeTags": ["tara-critical-inference"], "skillTags": ["drawing-conclusion", "necessary-condition"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q10", "number": 10, "sourcePage": 10,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Starting school later will improve students' concentration in morning lessons because it will give them more sleep." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which assumption is required?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "All students currently arrive late." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A later start would cause at least many students to sleep longer rather than simply go to bed later." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Morning lessons are more important than afternoon lessons." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "No student studies after school." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Teachers prefer later working hours." }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["tara-critical-assumption"], "skillTags": ["identifying-assumption", "causal-link"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q11", "number": 11, "sourcePage": 11,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A city claims that a new footbridge has reduced car journeys into the centre because thousands of people use the bridge each week." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which finding most weakens the claim?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The bridge offers a good view of the river." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some bridge users cross at weekends." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Most bridge users previously reached the centre on foot by a different route rather than by car." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The bridge has lights for night-time use." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The city counted bridge users for four weeks." }] }] }
+      ],
+      "correctAnswer": "C", "knowledgeTags": ["tara-critical-evidence"], "skillTags": ["assessing-additional-evidence", "weaken"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q12", "number": 12, "sourcePage": 12,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A company installed new planning software in January. Output was higher in February than in December. The software must therefore have caused the increase in output." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the main flaw?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It compares two different months." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It assumes output can be measured." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It says the software was installed in January." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It ignores other changes, such as staffing or demand, that could have caused the increase." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It does not name the software." }] }] }
+      ],
+      "correctAnswer": "D", "knowledgeTags": ["tara-critical-flaw"], "skillTags": ["detecting-reasoning-errors", "alternative-causes"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q13", "number": 13, "sourcePage": 13,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Whenever an archive is fully digitised, document retrieval becomes faster. Retrieval from Archive K has not become faster. Therefore, Archive K has not been fully digitised." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which argument has the same structure?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "If a battery is charged, a lamp turns on. The lamp turns on, so the battery is charged." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "If a battery is charged, a lamp turns on. The lamp does not turn on, so the battery is not charged." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some charged batteries power lamps. This lamp is powered, so its battery may be charged." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "No empty battery powers a lamp. This battery is empty, so the lamp is off." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The lamp is off because the switch is open." }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["tara-critical-matching-arguments"], "skillTags": ["matching-arguments", "modus-tollens"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q14", "number": 14, "sourcePage": 14,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Principle: A promise should be broken only when keeping it would create a serious and preventable risk of harm." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which case most clearly justifies breaking a promise under this principle?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A student skips a promised meeting because a new film is showing." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A friend arrives late because the bus is crowded." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A researcher postpones a promised email because it is inconvenient to write." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "An off-duty paramedic misses a promised dinner after stopping to treat a person with a life-threatening injury." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A musician cancels a rehearsal to rest before a holiday." }] }] }
+      ],
+      "correctAnswer": "D", "knowledgeTags": ["tara-critical-applying-principles"], "skillTags": ["applying-principles", "necessary-condition"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q15", "number": 15, "sourcePage": 15,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Students often buy books that later disappear from revised reading lists. Departments already approve most modules months before teaching begins, so publishing provisional lists earlier would let students borrow or compare prices. Minor changes could be clearly marked. Universities should publish provisional reading lists as soon as modules are approved." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which option states the main conclusion?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Students sometimes buy books unnecessarily." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Universities should publish provisional reading lists once modules are approved." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every reading list should remain unchanged." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Students should buy rather than borrow books." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Departments approve all modules at the same time." }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["tara-critical-main-conclusion"], "skillTags": ["identifying-main-conclusion", "recommendation"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q16", "number": 16, "sourcePage": 16,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every bronze medal in the display cabinet has a catalogue label. No object with a catalogue label is discarded. Medal M is a bronze medal in the display cabinet." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which conclusion follows?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Only bronze medals have catalogue labels." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every object in the cabinet is bronze." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Medal M is the oldest object in the cabinet." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Medal M is not discarded." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "No bronze medal has ever been discarded." }] }] }
+      ],
+      "correctAnswer": "D", "knowledgeTags": ["tara-critical-inference"], "skillTags": ["drawing-conclusion", "linked-conditions"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q17", "number": 17, "sourcePage": 17,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A six-month trial of community fridges in two neighbourhoods reduced the amount of edible food thrown away there. Expanding the scheme across the city will therefore reduce city-wide edible food waste." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which assumption is required?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Community fridges eliminate every kind of waste." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The trial neighbourhoods produced more waste than the rest of the city." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The scheme can operate elsewhere in sufficiently similar conditions to produce at least some comparable reduction." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "No resident travels between neighbourhoods." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "All food waste is produced by households." }] }] }
+      ],
+      "correctAnswer": "C", "knowledgeTags": ["tara-critical-assumption"], "skillTags": ["identifying-assumption", "generalisation"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q18", "number": 18, "sourcePage": 18,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A clinic claims that text-message reminders reduce missed appointments." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which finding provides the strongest support?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "In a randomised trial, otherwise similar patients who received reminders missed fewer appointments than those who did not." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Most patients own a mobile phone." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The clinic also sends appointment letters." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some reminders contain the clinic address." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Appointments vary in length." }] }] }
+      ],
+      "correctAnswer": "A", "knowledgeTags": ["tara-critical-evidence"], "skillTags": ["assessing-additional-evidence", "controlled-comparison"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q19", "number": 19, "sourcePage": 19,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every winner of last year's piano competition practised daily. Ava practises daily, so Ava will win this year's competition." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the main flaw?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It assumes that competitions have winners." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It compares piano with another instrument." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It ignores that Ava practises daily." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It assumes nobody won last year." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It treats a condition shared by previous winners as sufficient to guarantee that Ava wins." }] }] }
+      ],
+      "correctAnswer": "E", "knowledgeTags": ["tara-critical-flaw"], "skillTags": ["detecting-reasoning-errors", "sufficient-necessary"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q20", "number": 20, "sourcePage": 20,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "No room designated as silent permits group discussion. Room R12 permits group discussion. Therefore, R12 is not designated as silent." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which argument follows the same pattern?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "All red files are confidential. This file is confidential, so it is red." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "No electric vehicle emits exhaust while driving. This vehicle emits exhaust while driving, so it is not electric." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some trains are late. This service is a train, so it is late." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "No glass is flexible. This object is not glass, so it is flexible." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "All members vote. Kai is not a member, so Kai does not vote." }] }] }
+      ],
+      "correctAnswer": "B", "knowledgeTags": ["tara-critical-matching-arguments"], "skillTags": ["matching-arguments", "contrapositive"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q21", "number": 21, "sourcePage": 21,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Principle: When a shared public resource is scarce, priority should go to people with the greatest need who lack an adequate alternative." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which allocation best applies this principle?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The only accessible community vehicle is reserved first for a mobility-impaired resident who cannot use the regular bus." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A meeting room is given to the group that booked most often last year, although several other rooms are empty." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A scarce textbook is lent first to the student who already owns the same edition." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A clinic appointment is allocated by alphabetical order without considering urgency." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A grant is awarded to the organisation with the largest advertising budget." }] }] }
+      ],
+      "correctAnswer": "A", "knowledgeTags": ["tara-critical-applying-principles"], "skillTags": ["applying-principles", "priority-rule"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1-q22", "number": 22, "sourcePage": 22,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Only manuscripts with complete citations are sent for external review. Manuscript K has been sent for external review." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which conclusion follows?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every manuscript with complete citations is accepted." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Manuscript K will be accepted." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Manuscript K has complete citations." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Manuscript K is the only manuscript sent for review." }] }] },
+        { "label": "E", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "External reviewers check only citations." }] }] }
+      ],
+      "correctAnswer": "C", "knowledgeTags": ["tara-critical-inference"], "skillTags": ["drawing-conclusion", "only-if"], "reviewStatus": "verified", "sourceQuestionPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json", "sourceAnswerPath": "content/tara/original-practice/critical-thinking-full-mock-v1.json"
+    }
+  ]
+}

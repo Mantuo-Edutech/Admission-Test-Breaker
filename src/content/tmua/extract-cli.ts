@@ -22,6 +22,15 @@ interface ExtractCliOptions {
   generatedAt: string;
 }
 
+interface OnlinePaperPageMap {
+  id: string;
+  questionPages: number[];
+}
+
+interface OnlinePaperPageMapManifest {
+  papers: OnlinePaperPageMap[];
+}
+
 function parseOptions(
   args: string[],
   context: { cwd: string; env: Record<string, string | undefined>; now(): Date },
@@ -96,15 +105,24 @@ export async function extractPaper(
   context: { cwd: string; env: Record<string, string | undefined>; now(): Date },
 ): Promise<string> {
   const options = parseOptions(args, context);
-  const [manifest, papers, officialResources] = await Promise.all([
+  const [manifest, papers, officialResources, onlinePaperManifest] = await Promise.all([
     readJson<CorpusManifest>(join(options.cwd, "content/tmua/corpus-manifest.json")),
     readJson<PaperRecord[]>(join(options.cwd, "content/tmua/past-papers/index.json")),
     readJson<OfficialResourceRecord[]>(
       join(options.cwd, "content/tmua/official-resource-registry.json"),
     ),
+    readJson<OnlinePaperPageMapManifest>(
+      join(options.cwd, "content/tmua/online-papers.json"),
+    ),
   ]);
   const paper = papers.find((candidate) => candidate.id === options.paperId);
   if (paper === undefined) throw new Error(`Unknown paper ID: ${options.paperId}`);
+  const onlinePaper = onlinePaperManifest.papers.find(
+    (candidate) => candidate.id === options.paperId,
+  );
+  if (onlinePaper === undefined) {
+    throw new Error(`Missing audited question page map: ${options.paperId}`);
+  }
 
   const questionSource = descriptor(paper.questionSourceId, manifest, officialResources);
   const answerSource = descriptor(paper.answerSourceId, manifest, officialResources);
@@ -124,6 +142,7 @@ export async function extractPaper(
     answerSource,
     workedSolutionSource,
     questionPages,
+    questionPageMap: onlinePaper.questionPages,
     answerPages,
     workedSolutionPages,
     generatedAt: options.generatedAt,

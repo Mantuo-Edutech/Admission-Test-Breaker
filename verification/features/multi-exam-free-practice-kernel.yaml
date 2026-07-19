@@ -1,0 +1,119 @@
+schemaVersion: 1
+feature:
+  id: multi-exam-free-practice-kernel
+  title: Shared free-practice kernel with exam-specific adapters
+  status: partial
+  userOutcome: >-
+    TMUA, ESAT, TARA, LNAT and UCAT share one versioned practice-session contract,
+    while each exam keeps its own section count, timing, response mode and
+    calculator rule. Questions, answer keys and factual session results remain
+    public; worked explanations and personalised interpretation use separate
+    exam-scoped entitlements.
+
+run:
+  packageScript: verify
+
+claims:
+  - id: versioned-assessment-structure
+    status: verified
+    statement: >-
+      A runtime-validated local registry defines the official section structure
+      for TMUA, ESAT, TARA, LNAT and UCAT instead of hard-coding one 20-question,
+      75-minute paper throughout the practice engine.
+    artifacts:
+      - content/exams/assessment-structures.json
+      - src/features/practice/catalog/assessment-registry.ts
+      - tests/features/practice/catalog/assessment-registry.test.ts
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+
+  - id: shared-session-and-response-adapters
+    status: verified
+    statement: >-
+      The session accepts exam-specific paper IDs and durations, migrates the
+      previous TMUA browser key, and records single-choice, multi-choice or essay
+      response representations through explicit adapters. This verifies domain
+      storage capability, not that every specialist UI has shipped.
+    artifacts:
+      - src/features/practice/domain/session.ts
+      - src/features/practice/storage/local-store.ts
+      - src/features/practice/catalog/response-adapters.ts
+      - tests/features/practice/domain/session.test.ts
+      - tests/features/practice/storage/local-store.test.ts
+      - tests/features/practice/catalog/response-adapters.test.ts
+    automatedChecks:
+      - test
+      - typecheck
+
+  - id: public-practice-entitled-review-boundary
+    status: verified
+    statement: >-
+      Attempt access, answer keys and factual results are public policy; worked
+      explanations and personalised interpretation are separate entitled,
+      server-only resource kinds with exam-scoped packages.
+    artifacts:
+      - src/features/practice/pages/ResultsPage.tsx
+      - supabase/migrations/20260717170000_multi_exam_practice_access.sql
+      - supabase/seed.sql
+      - tests/app/results-page.test.tsx
+      - tests/architecture/supabase-contracts.test.ts
+    automatedChecks:
+      - test
+      - verify:supabase-contracts
+      - typecheck
+
+  - id: exam-specific-library-routes
+    status: partial
+    statement: >-
+      ESAT, TARA, LNAT and UCAT expose internal section libraries and truthful access
+      boundaries. ESAT now links five ten-question Mantou-original module
+      teaching previews into the native practice kernel; TARA links a ten-question
+      Mantou-original Critical Thinking and Problem Solving starter; LNAT links a
+      three-passage, twelve-question original Section A starter with reusable
+      passage rendering. UCAT links four separate original native starters:
+      passage-based Verbal Reasoning, table-and-calculator Quantitative Reasoning,
+      mixed five-statement Decision Making and partial-credit Situational Judgement.
+    artifacts:
+      - src/features/catalog/pages/EsatPastPapersPage.tsx
+      - src/features/catalog/pages/AssessmentPracticeLibraryPage.tsx
+      - content/esat/original-practice/mathematics-1-starter-v1.json
+      - content/esat/original-practice/mathematics-2-starter-v1.json
+      - content/esat/original-practice/physics-starter-v1.json
+      - content/esat/original-practice/chemistry-starter-v1.json
+      - content/esat/original-practice/biology-starter-v1.json
+      - content/tara/original-practice/reasoning-starter-v1.json
+      - verification/features/tara-reasoning-starter.yaml
+      - content/lnat/original-practice/section-a-starter-v1.json
+      - verification/features/lnat-section-a-starter.yaml
+      - content/ucat/original-practice/verbal-reasoning-starter-v1.json
+      - verification/features/ucat-verbal-reasoning-starter.yaml
+      - content/ucat/original-practice/quantitative-reasoning-starter-v1.json
+      - verification/features/ucat-quantitative-reasoning-starter.yaml
+      - content/ucat/original-practice/decision-making-starter-v1.json
+      - content/ucat/original-practice/situational-judgement-starter-v1.json
+      - verification/features/ucat-specialist-starters.yaml
+      - src/features/navigation/components/SiteHeader.tsx
+      - src/app/routes.tsx
+      - tests/app/multi-exam-practice-library.test.tsx
+      - tests/app/site-navigation.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+
+boundaries:
+  - TMUA is currently the only exam with a complete archived native-paper corpus; ESAT has five ten-question Mantou-original module teaching previews, TARA has reasoning and writing previews, LNAT has Section A and B previews, and UCAT has four specialist teaching previews totalling forty original questions.
+  - TARA Writing Task and LNAT Section B share an autosaved essay editor and factual submission result. UCAT Quantitative Reasoning has validated data tables and a calculator; Decision Making has complete five-statement responses with 2/1/0 raw scoring; Situational Judgement has ordered responses with exact/adjacent partial credit. Human writing marking, independent content review, official scaling and complete-length mocks remain separate.
+  - An entitlement proves package access only; deep-review content stays unavailable until its resource is separately reviewed and published.
+  - Structural facts from official sites do not grant permission to copy or commercially republish official questions.
+
+manualChecks:
+  - id: cross-exam-practice-responsive-review
+    status: pending
+    evidence: Review module cards, free-versus-paid boundary and TMUA result entitlement states on desktop, tablet and phone.
+    viewports:
+      - 1440x900
+      - 768x1024
+      - 390x844

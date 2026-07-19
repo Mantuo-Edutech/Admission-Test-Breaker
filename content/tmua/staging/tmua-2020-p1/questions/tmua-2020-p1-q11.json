@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11   The quadratic function shown passes through (2, 0) and (q, 0), where q > 2.\n\n              y\n\n\n\n\n                  R\n                                                  x\n                      2                  q\n                             S\n\n\n\n\n     What is the value of q such that the area of region R equals the area of region S ?\n\n         √\n     A        6\n\n     B 3\n\n     C   18\n          5\n\n     D 4\n\n     E 6\n\n     F   33\n          5\n\n\n\n\n                                             13"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The quadratic function shown passes through (2, 0) and (q, 0), where q > 2.\n\n              y\n\n\n\n\n                  R\n                                                  x\n                      2                  q\n                             S\n\n\n\n\n     What is the value of q such that the area of region R equals the area of region S ?\n\n         √"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "6"
+    },
+    {
+      "label": "B",
+      "rawText": "3"
+    },
+    {
+      "label": "C",
+      "rawText": "18\n          5"
+    },
+    {
+      "label": "D",
+      "rawText": "4"
+    },
+    {
+      "label": "E",
+      "rawText": "6"
+    },
+    {
+      "label": "F",
+      "rawText": "33\n          5"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "At first sight, it seems that there may not be enough information to answer the question, as\nwe only know two points on the quadratic. But if we stretch the graph parallel to the y-axis,\nthough we modify the quadratic, we will not change q, and the areas of R and S will remain\nequal. So let us proceed. For simplicity, we will write R and S for the areas of these regions.\nThe quadratic has equation y = k(x − 2)(x − q). By the above comments, we may as well take\nk = 1; if we leave k in the equation, the areas will each be multiplied by k, and when we equate\nthem, we can then divide by k.\nThe area of R is\n                                           Z 2\n                                    R=           (x − 2)(x − q) dx\n                                            0\n                                           Z 2\n                                       =     x2 − (q + 2)x + 2q dx\n                                          0\n                                                                   \u00032\n                                       = 31 x3 − 12 (q + 2)x2 + 2qx 0\n                                        \u0002\n\n                                       = 38 − 2(q + 2) + 4q\n                                       = 2q − 43\n\nThe area of S is as follows; note that the integral is negative, so we have to negate the integral\nto obtain the area.\n                             Z q\n                      S=−         (x − 2)(x − q) dx\n                             Z2 q\n                        =−        x2 − (q + 2)x + 2q dx\n                            \u00022                            \u0003q\n                        = − 31 x3 − 21 (q + 2)x2 + 2qx 2\n                        = − 13 q 3 − 12 (q + 2)q 2 + 2q 2 + 83 − 2(q + 2) + 4q\n                                                         \u0001                     \u0001\n\n                        = − − 61 q 3 + q 2 + 2q − 34 )\n                                           \u0001\n\n                          = 16 q 3 − q 2 + 2q − 43\n\nAs R = S, we have\n                                       2q − 34 = 16 q 3 − q 2 + 2q − 43\nand therefore 16 q 3 − q 2 = 0. As q > 2, we cannot have q = 0, so we can divide by q 2 to give\n1\n6 q − 1 = 0. It follows that q = 6, which is option E.\n\n\nYou may have noticed that the value of the integral at x = 2 appeared in both expressions\nand then cancelled out when we equated them. Another way to think about this is that as the\nintegral from 0 to 2 is positive and the integral from 2 to q is negative, then if the areas R and S\nare the same, we must have the integral from 0 to q equal to 0. So we could have calculated:\n                                       Z q\n                                   0=       (x − 2)(x − q) dx\n                                       Z0 q\n                                    =       x2 − (q + 2)x + 2q dx\n                                       \u00020                        \u0003q\n                                    = 31 x3 − 21 (q + 2)x2 + 2qx 0\n                                       = − 16 q 3 + q 2\ngiving q = 6 as before.\n\n\nVersion 1.0, April 2021                                                                     Page 13\n\n                                                  © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

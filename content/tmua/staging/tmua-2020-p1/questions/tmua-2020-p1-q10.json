@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q10",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 10,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "10   The following sequence of transformations is applied to the curve y = 4x2\n                             \u0002 \u0003\n                                3\n           1. Translation by\n                               −5\n\n           2. Reﬂection in the x-axis\n\n           3. Stretch parallel to the x-axis with scale factor 2\n\n     What is the equation of the resulting curve?\n\n     A y = −x2 + 12x − 31\n\n     B y = −x2 + 12x − 41\n\n     C y=     x2 + 12x + 31\n\n     D y=     x2 + 12x + 41\n\n     E y = −16x2 + 48x − 31\n\n     F y = −16x2 + 48x − 41\n\n     G y=     16x2 − 48x + 31\n\n     H y=     16x2 − 48x + 41\n\n\n\n\n                                             12"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The following sequence of transformations is applied to the curve y = 4x2\n                              \n                                3\n           1. Translation by\n                               −5\n\n           2. Reﬂection in the x-axis\n\n           3. Stretch parallel to the x-axis with scale factor 2\n\n     What is the equation of the resulting curve?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "y = −x2 + 12x − 31"
+    },
+    {
+      "label": "B",
+      "rawText": "y = −x2 + 12x − 41"
+    },
+    {
+      "label": "C",
+      "rawText": "y=     x2 + 12x + 31"
+    },
+    {
+      "label": "D",
+      "rawText": "y=     x2 + 12x + 41"
+    },
+    {
+      "label": "E",
+      "rawText": "y = −16x2 + 48x − 31"
+    },
+    {
+      "label": "F",
+      "rawText": "y = −16x2 + 48x − 41"
+    },
+    {
+      "label": "G",
+      "rawText": "y=     16x2 − 48x + 31"
+    },
+    {
+      "label": "H",
+      "rawText": "y=     16x2 − 48x + 41"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The most straightforward way to answer this question is by performing the transformations to\nthe formula in the standard way. An alternative approach is to sketch the graphs, but then it is\nnot immediately clear how we would determine the resulting formula.\nWe start with y = 4x2 .\n\n1. Translating it right by 3 transforms the curve into y = 4(x − 3)2 . Then translating it down\n   by 5 transforms it into y = 4(x − 3)2 − 5.\n\n2. Reflecting it in the x-axis (the horizontal axis!) replaces y by −y, or equivalently replaces\n   y = f(x) by y = −f(x), giving y = −4(x − 3)2 + 5.\n\n3. Stretching it parallel to the x-axis with scale factor 2 replaces x by x2 , giving y = −4( x2 −3)2 +5.\n\n                                                                  2\nWe can now expand the resulting formula, to give y = −4( x4 − 3x + 9) + 5 = −x2 + 12x − 31,\nwhich is option A.\n\n\n\n\nVersion 1.0, April 2021                                                                         Page 12\n\n                                              © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

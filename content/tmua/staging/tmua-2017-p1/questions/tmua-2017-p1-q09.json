@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                  \u0003\n                                                  \u0003\n                                                  \u0003\n\nͻ\u0003     \u0004\u0003  \u0003\u0003\u0003‫ ݔ‬ଶ ൅ ‫ ݕ‬ଶ െ ͳͺ‫ ݔ‬െ ʹʹ‫ ݕ‬൅ ͳ͹ͺ ൌ Ͳ\u0003\n\n       \u0004\u0003\u0003\u0003\u0003\u0003\u0003\u0003  \u0003\u0003\u0003\u0003 \u0003\u0003\u0003\u0003 \u0003\u0003\n         Ǥ\u0003\n\n       \u001a\u0003\u0003\u0003\u0003\u0003\u0003ǫ\u0003\n\u0003      \u0003\n\u0003      A   ͸\u0003\n\u0003      B   ͸ξ͵\u0003\n\u0003      C   ͳͺ\u0003\n\u0003      D   ͳͺξ͵\u0003\n\u0003      E   ͵͸\u0003\n\u0003      F   ͵͸ξ͵\n\u0003      G   Ͷͺ\u0003\n\u0003      H   Ͷͺξ͵\u0003\n\u0003\n\n\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                     \u0014\u0014                                     >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A  ‫ ݔ‬ଶ ൅ ‫ ݕ‬ଶ െ 18‫ ݔ‬െ 22‫ ݕ‬൅ 178 ൌ 0\n\n       A    \n         Ǥ\n\n       ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "6"
+    },
+    {
+      "label": "B",
+      "rawText": "6ξ3"
+    },
+    {
+      "label": "C",
+      "rawText": "18"
+    },
+    {
+      "label": "D",
+      "rawText": "18ξ3"
+    },
+    {
+      "label": "E",
+      "rawText": "36"
+    },
+    {
+      "label": "F",
+      "rawText": "36ξ3"
+    },
+    {
+      "label": "G",
+      "rawText": "48"
+    },
+    {
+      "label": "H",
+      "rawText": "48ξ3\n\n\n\n\n\n\n\n\n\n8&/(6                                                                          >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We clearly need to work out the radius of the circle to get anywhere on this problem. We can\ndo this by completing the square. The equation of the circle, x2 + y 2 − 18x − 22y + 178 = 0,\nbecomes\n                          (x − 9)2 − 92 + (y − 11)2 − 112 + 178 = 0\nWith a little bit of arithmetic, we can rearrange this to give\n\n                                        (x − 9)2 + (y − 11)2 = 24\n                                    √\nso the circle has a radius of r =       24\nWe now need to work out the area of the inscribed regular hexagon. We sketch the hexagon and\nits diameters:\n\n\n\n\nIt is clear from the sketch (and even from a not-very-precise sketch) that the hexagon is composed\nof six triangles, each of which is equilateral and has side length equal to the circle’s radius r.\nWe can work out the area of one of the triangles either using Pythagoras’s Theorem or using\nthe formula 12 ab sin C for the area of a triangle.\n                                                               √\nThe trigonometric formula 12 ab sin C gives 12 r2 sin 60◦ = 43 r2 . Substituting r2 = 24 then gives\n                          √                                                  √\neach triangle an area of 6 3, and so the whole hexagon has an area of 36 3, which is option F.\nAlternatively we can proceed using Pythagoras’s Theorem. If the height of the triangle is h,\nthen we have:\n\n\n                                                          r\n                                                      h\n\n                                                       1\n                                                       2r\n\n                                             √                                     √\n                                              3                                      3 2\nTherefore h2 = r2 − ( 12 r)2 giving h =      2  r and the triangle has area 1\n                                                                            2 rh = 4 r as before.\n\n\n\n\nVersion 1.1, March 2019                                                                       Page 12\n\n                                                                                         © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11   A student attempts to solve the following problem, where a and b are non-zero real\n     numbers:\n\n       Show that if a2 − 4b3 ≥ 0 then there exist real numbers x and y such that\n       a = xy(x + y) and b = xy.\n\n     Consider the following attempt:\n\n         (x − y)2 ≥ 0                                                          (I)\n\n\n         so x2 + y 2 − 2xy ≥ 0                                                 (II)\n\n\n         so (x + y)2 − 4xy ≥ 0                                                 (III)\n\n\n         so x2 y 2 (x + y)2 − 4x3 y 3 ≥ 0                                      (IV)\n\n\n         so a2 − 4b3 ≥ 0                                                       (V)\n\n     Which of the following best describes this attempt?\n\n     A It is completely correct.\n\n     B It is incorrect, but it would be correct if written in the reverse order.\n\n     C It is incorrect, but the student has correctly proved the converse.\n\n     D It is incorrect because there is an error in line (II).\n\n     E It is incorrect because there is an error in line (III).\n\n     F It is incorrect because there is an error in line (IV).\n\n\n\n\n                                              13"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A student attempts to solve the following problem, where a and b are non-zero real\n     numbers:\n\n       Show that if a2 − 4b3 ≥ 0 then there exist real numbers x and y such that\n       a = xy(x + y) and b = xy.\n\n     Consider the following attempt:\n\n         (x − y)2 ≥ 0                                                          (I)\n\n\n         so x2 + y 2 − 2xy ≥ 0                                                 (II)\n\n\n         so (x + y)2 − 4xy ≥ 0                                                 (III)\n\n\n         so x2 y 2 (x + y)2 − 4x3 y 3 ≥ 0                                      (IV)\n\n\n         so a2 − 4b3 ≥ 0                                                       (V)\n\n     Which of the following best describes this attempt?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "It is completely correct."
+    },
+    {
+      "label": "B",
+      "rawText": "It is incorrect, but it would be correct if written in the reverse order."
+    },
+    {
+      "label": "C",
+      "rawText": "It is incorrect, but the student has correctly proved the converse."
+    },
+    {
+      "label": "D",
+      "rawText": "It is incorrect because there is an error in line (II)."
+    },
+    {
+      "label": "E",
+      "rawText": "It is incorrect because there is an error in line (III)."
+    },
+    {
+      "label": "F",
+      "rawText": "It is incorrect because there is an error in line (IV)."
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We start by checking that each step works.\nLine (II) follows from line (I) by expanding the brackets.\nThe algebraic expression in line (III) expands as x2 + 2xy + y 2 − 4xy, so it follows from line (II).\nLine (IV) follows from line (III) by multiplying by x2 y 2 . Since x2 y 2 ≥ 0, the inequality keeps\nthe same direction, so this is a valid deduction.\nHowever, how does line (V) follow from line (IV)? It assumes that a = xy(x + y) and b = xy in\norder to make the deduction.\nThis argument has therefore shown that if a = xy(x + y) and b = xy, then a2 − 4b3 ≥ 0, or\neven more explicitly: if there exist real numbers x and y such that a = xy(x + y) and b = xy,\nthen a2 − 4b3 ≥ 0. However, the problem posed is the converse: ‘show that if a2 − 4b3 ≥ 0, then\nthere exist real numbers x and y such that a = xy(x + y) and b = xy.\nSo this attempt has proved the converse, though the argument would have been slightly better\npresented if the student had explicitly stated ‘assume that x and y are real numbers with\na = xy(x + y) and b = xy’.\nThe correct option is therefore C.\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 14"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q07",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 7,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "7   Sequence 1 is an arithmetic progression with ﬁrst term 11 and common diﬀerence 3.\n\n    Sequence 2 is an arithmetic progression with ﬁrst term 2 and common diﬀerence 5.\n\n    Some numbers that appear in Sequence 1 also appear in Sequence 2. Let N be the\n    20th such number.\n\n    What is the remainder when N is divided by 7 ?\n\n    A 0\n\n    B 1\n\n    C 2\n\n    D 3\n\n    E 4\n\n    F 5\n\n    G 6\n\n\n\n\n                                          9"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Sequence 1 is an arithmetic progression with ﬁrst term 11 and common diﬀerence 3.\n\n    Sequence 2 is an arithmetic progression with ﬁrst term 2 and common diﬀerence 5.\n\n    Some numbers that appear in Sequence 1 also appear in Sequence 2. Let N be the\n    20th such number.\n\n    What is the remainder when N is divided by 7 ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0"
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "2"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "4"
+    },
+    {
+      "label": "F",
+      "rawText": "5"
+    },
+    {
+      "label": "G",
+      "rawText": "6"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can list the terms of the two sequences to get a feeling for what is going on:\nSequence 1: 11, 14, 17, 20, 23, 26, 29, 32, 35, 38, . . .\nSequence 2: 2, 7, 12, 17, 22, 27, 32, 37, 42, . . .\nWe see that the first two common terms are 17 and 32; the next will be 47, and the common\nterms are forming an arithmetic progression with first term 17 and common difference 15. (Note\nthat 15 is the lowest common multiple of 3 and 5.)\nTherefore the 20th such number, N is 17 + 19 × 15 = 17 + 285 = 302. Finally, dividing 302 by 7\ngives 43 remainder 1, so the answer is B.\n\n\n\n\nVersion 1.0, April 2019                                                                Page 9"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

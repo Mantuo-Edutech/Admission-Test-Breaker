@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q06",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 6,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "6   The function f(x) is deﬁned for all real values of x.\n\n    Which of the following conditions on f(x) is/are necessary to ensure that\n                                  \u0004 0            \u0004 5\n                                      f(x) dx =      f(x) dx\n                                     −5            0\n\n\n\n\n        Condition I:     f(x) = f(−x) for −5 ≤ x ≤ 5\n        Condition II:    f(x) = c for −5 ≤ x ≤ 5, where c is a constant\n        Condition III: f(x) = −f(−x) for −5 ≤ x ≤ 5\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                             8"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The function f(x) is deﬁned for all real values of x.\n\n    Which of the following conditions on f(x) is/are necessary to ensure that\n                                  A 0            A 5\n                                      f(x) dx =      f(x) dx\n                                     −5            0\n\n\n\n\n        Condition I:     f(x) = f(−x) for −5 ≤ x ≤ 5\n        Condition II:    f(x) = c for −5 ≤ x ≤ 5, where c is a constant\n        Condition III: f(x) = −f(−x) for −5 ≤ x ≤ 5"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "If we think about the integrals as meaning ‘the (signed) area under the graph of y = f(x)\nbetween x = −5 and x = 0’ and the same between x = 0 and x = 5, we realise that none of\nthese conditions is necessary (though the first two conditions are actually sufficient).\nTo show fully that a condition is not necessary, we need to find an example of a function for\nwhich the integral equation is satisfied but for which the condition is not.\nAn example of a function which satisfies the integral equation but does not satisfy conditions II\nor III is the function f(x) = x2 .\nAn example of a function which satisfies the integral condition but does not satisfy condition I\nis f(x) = sin2πx, which has 5 full periods in each of the ranges −5 ≤ x ≤ 0 and 0 ≤ x ≤ 5, so\neach of the integrals is equal to 0, but it is not the case that f(x) = f(−x) for −5 ≤ x ≤ 5.\nTherefore the correct option is A.\n\n\n\n\nVersion 1.0, April 2021                                                                   Page 8\n\n                                          © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

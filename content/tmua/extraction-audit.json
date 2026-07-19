@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "exam": "TMUA",
+  "generatedAt": "2026-07-17T07:00:00.000Z",
+  "scope": "remaining-source-pdf-papers",
+  "paperCount": 16,
+  "questionCount": 320,
+  "completeDraftPaperCount": 16,
+  "completeDraftQuestionCount": 320,
+  "publishableQuestionCount": 0,
+  "reviewWarnings": {
+    "mathTranscriptionRequired": 320,
+    "visualOptionTranscriptionRequired": 29,
+    "optionCountReview": 13,
+    "pdfFontMappingAnomaly": 72
+  },
+  "papers": [
+    "tmua-specimen-p1",
+    "tmua-specimen-p2",
+    "tmua-practice-2016-p1",
+    "tmua-practice-2016-p2",
+    "tmua-2017-p1",
+    "tmua-2017-p2",
+    "tmua-2018-p1",
+    "tmua-2018-p2",
+    "tmua-2019-p1",
+    "tmua-2019-p2",
+    "tmua-2020-p1",
+    "tmua-2020-p2",
+    "tmua-2021-p1",
+    "tmua-2021-p2",
+    "tmua-2022-p2",
+    "tmua-2023-p2"
+  ]
+}

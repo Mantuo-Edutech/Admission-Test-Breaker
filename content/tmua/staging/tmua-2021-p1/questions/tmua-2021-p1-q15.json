@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "15   The diagram shows the graph of y = f(x).\n\n      y\n\n\n     1\n\n\n\n     0                                                                x\n          0          1       2          3                 4\n\n     The graph consists of alternating straight-line segments of gradient 1 and −1 and\n     continues in this way for all values of x.\n\n     The function g is deﬁned as\n\n\n                                                 \u0004\n                                                 10\n                                                                  \b\n                                     g(x) =            f 2r−1 x\n                                                 r=1\n\n\n     Find the value of\n\n                                            \u0002 1\n                                                  g(x) dx\n                                             0\n\n\n              1023\n     A\n              1024\n              1023\n     B\n               512\n     C 5\n\n     D 10\n              55\n     E\n               2\n     F 55\n\n\n\n\n                                                 \u0014\u001a"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The diagram shows the graph of y = f(x).\n\n      y\n\n\n     1\n\n\n\n     0                                                                x\n          0          1       2          3                 4\n\n     The graph consists of alternating straight-line segments of gradient 1 and −1 and\n     continues in this way for all values of x.\n\n     The function g is deﬁned as\n\n\n                                                 A\n                                                 10\n                                                                  E\n                                     g(x) =            f 2r−1 x\n                                                 r=1\n\n\n     Find the value of\n\n                                             1\n                                                  g(x) dx\n                                             0\n\n\n              1023"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "1024\n              1023"
+    },
+    {
+      "label": "B",
+      "rawText": "512"
+    },
+    {
+      "label": "C",
+      "rawText": "5"
+    },
+    {
+      "label": "D",
+      "rawText": "10\n              55"
+    },
+    {
+      "label": "E",
+      "rawText": "2"
+    },
+    {
+      "label": "F",
+      "rawText": "55"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can write the integral out in full by substituting the value of g(x):\n         Z 1                  10\n                           Z 1X\n               g(x) dx =            f(2r−1 x) dx\n          0                 0 r=1\n                           Z 1\n                      =     f(20 x) + f(21 x) + f(22 x) + · · · + f(29 x) dx\n                            0\n                        Z 1              Z 1                Z 1                      Z 1\n                               0                 1                  2\n                      =     f(2 x) dx +       f(2 x) dx +        f(2 x) dx + · · · +     f(29 x) dx\n                            0                  0             0                       0\n\n\nSo we can calculate the integral of g(x) if we can calculate the integral of each f(2r−1 x).\n     R1               R1\nNow 0 f(20 x) dx = 0 f(x) dx is just the area under the graph of y = f(x) between x = 0 and\nx = 1, which is 21 (it is a right angled triangle with base and height both 1).\n             R1\nTo work out 0 f(2x) dx, we consider the graph of y = f(2x). This is the graph of y = f(x) scaled\nby a factor of 1/2 in the x-direction, so looks like this:\n\n                                                   y\n                                           1\n\n\n                                                                  x\n                                                   0          1\n\nThe area between x = 0 and x = 1 is again 21 .\nThe graph of y = f(22 x) between x = 0 and x = 1 consists of two triangles:\n\n                                                   y\n                                           1\n\n\n                                                                  x\n                                                   0          1\n\nHelpfully, the area under this graph is still 12 : this is perhaps easiest to see by noticing that we\ncan draw a rectangle (actually a square) around the graph:\n\n                                                   y\n                                           1\n\n\n                                                                  x\n                                                   0          1\n\nIn each rectangular slice, half of the area is below the graph and half is above, so the total area\nbelow the graph is 12 .\nThis same reasoning will apply for each of the functions f(2r−1 x), and so the total area is\n10 × 21 = 5, which is option C.\n\n\n\nVersion 1.0, March 2022                                                                               Page 18"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

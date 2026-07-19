@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0004b\n13   A student approximates the integral a sin2 x dx using the trapezium rule with\n     4 strips. The resulting approximation is an overestimate.\n\n     Which of the following is/are necessarily true?\n                                           \u0004 −a\n         I   If the student approximates    −b\n                                                  sin2 x dx in the same way, the result\n             will be an overestimate.\n                                           \u0004b\n         II If the student approximates     a\n                                                cos2 x dx in the same way, the result\n            will be an underestimate.\n\n     A neither of them\n\n     B I only\n\n     C II only\n\n     D I and II\n\n\n\n\n                                                15"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Ab\n13   A student approximates the integral a sin2 x dx using the trapezium rule with\n     4 strips. The resulting approximation is an overestimate.\n\n     Which of the following is/are necessarily true?\n                                           A −a\n         I   If the student approximates    −b\n                                                  sin2 x dx in the same way, the result\n             will be an overestimate.\n                                           Ab\n         II If the student approximates     a\n                                                cos2 x dx in the same way, the result\n            will be an underestimate."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "neither of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "I and II"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "It will help us to draw a sketch of this situation, remembering that we do not know that values\nof a and b. The exact shape of the graph does not matter; the only thing that is important for\nthis question is that it is symmetrical about the y-axis, since sin2 (−x) = (− sin x)2 = sin2 x.\n\n                                                  y\n\n\n                                                                                                x\n                                                             a                         b\n\n\n\n                                                                                      R −a   2\nI    We can now add to our sketch the trapezium rule calculation for the integral      −b sin x dx:\n\n\n                                                      y\n\n\n                                                                                                    x\n            −b                        −a                         a                         b\n\n\n\n\n     We see that the strips are just a reflection of the original 4 strips. Since the original\n     approximation was an overestimate, this approximation is also an overestimate.\n\nII   We note that cos2 x is related to sin2 x by the identity sin2 x + cos2 x = 1, so cos2 x =\n     1 − sin2 x. Thus the graph of y = cos2 x is a reflection of the graphR of y = sin2 x in the line\n                                                                            b\n     y = 21 (why?). Therefore the sketch of the graph and trapezia for a cos2 x dx is:\n\n                                                      y\n\n\n                                                                                                    x\n                                                                 a                         b\n\n\n\n\n     Since cos2 x = 1 − sin2 x, we can also draw on the original trapezia, coming down from the\n     line y = 1:\n\n                                                      y\n\n\n                                                                                                    x\n                                                                 a                         b\n\n\n\n\nc UCLES                                                                                        Page 16\n\f\nTest of Mathematics for University Admission, 2019 Paper 2 Solutions\n\n\n                                                                                  Rb\n    We can see from this sketch that the blue and red trapezia exactly sum to a sin2 x dx +\n    Rb    2\n     a cos x dx; since the blue trapezia give an overestimate, the red ones must give an under-\n    estimate.\n    Hence this statement is also necessarily true.\n\nTherefore the correct answer is D.\n\n\n\n\nc UCLES                                                                                Page 17"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        16,
+        17
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

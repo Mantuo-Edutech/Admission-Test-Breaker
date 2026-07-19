@@ -76,10 +76,9 @@ describe("TMUA corpus independent release gate", () => {
   it("blocks a false published paper", async () => {
     expect(
       await issueCodes((artifacts) => {
-        const paper = artifacts.papers.find(
-          (candidate) => candidate.id === "tmua-2022-p1",
-        );
+        const paper = artifacts.papers[0];
         if (paper !== undefined) {
+          paper.id = "tmua-unapproved-p1";
           paper.contentStage = "published";
           paper.onlineQuestionCount = 20;
         }

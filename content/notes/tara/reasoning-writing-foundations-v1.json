@@ -1,0 +1,511 @@
+{
+  "schemaVersion": 1,
+  "id": "tara-reasoning-writing-foundations-v1",
+  "version": "0.1.0",
+  "publicationStatus": "teaching-preview",
+  "examId": "tara",
+  "examCycle": "October 2026 and January 2027 assessment",
+  "titleZh": "TARA 推理与写作起点复习笔记",
+  "titleEn": "TARA Reasoning and Writing Starting Review Notes",
+  "subtitleZh": "把批判思维、问题解决、限时写作和中英论证术语放进同一条可练习的路径。",
+  "subtitleEn": "A structured starting path through critical thinking, problem solving, timed writing and argument language.",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本笔记依据 TARA Content Specification 与 Question Guide 核对考试结构、题型名称和知识边界；方法、双语解释、例题和复盘问题均为满托独立创作，不复制或改写官方题面与讲解。官方原件仅保存在内部研究区，不能从本站下载。",
+  "scope": {
+    "includedZh": "覆盖三项考试模块、Critical Thinking 七类能力、Problem Solving 三类能力、Writing Task 三问结构，以及中国学生最常见的中英论证表达迁移；包含 12 套方法、4 道满托原创逐步例题和 12 组主动回忆。",
+    "includedEn": "A top-level map of all three modules, the seven Critical Thinking skills, three Problem Solving skills, the three-part Writing Task and an EAL argument-language bridge.",
+    "remainingZh": "这不是完整教材或正式模考。七类批判思维的逐类题组、数学 Appendix 细颗粒复习、完整写作范文与人工 rubric、下载版，以及独立推理/写作教师、双语、相似度、学生理解和真实设备终审仍待完成。"
+  },
+  "officialAnchors": [
+    {
+      "id": "tara-content-specification-2026",
+      "title": "TARA Content Specification",
+      "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/08142350/TARA_Content_Specification.pdf",
+      "localPath": "content/official/raw/shared/TARA_Content_Specification.pdf",
+      "sha256": "d326e78305aefd999c42953de3024d403f27357ecbc0f3dd562134e8105822cd",
+      "usedForZh": "核对三模块结构、每模块 40 分钟、22+22 道选择题、750 词限制、工具限制与事实型计分边界。"
+    },
+    {
+      "id": "tara-question-guide-2026",
+      "title": "TARA Question Guide",
+      "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/08142344/TARA_Question_Guide.pdf",
+      "localPath": "content/official/raw/shared/TARA_Question_Guide.pdf",
+      "sha256": "afcee1ff9dd35025000cd7c5a4cef804fa31fb3e8870d5748ec8d3ac2c45a6cb",
+      "usedForZh": "核对 Critical Thinking 七类能力、Problem Solving 三类能力、Writing Task 三问结构与 Appendix 数学范围。"
+    }
+  ],
+  "examFacts": [
+    {
+      "labelZh": "三个模块",
+      "labelEn": "Three modules",
+      "valueZh": "所有考生完成 Critical Thinking、Problem Solving 和 Writing Task。",
+      "valueEn": "Every candidate takes all three modules."
+    },
+    {
+      "labelZh": "独立计时",
+      "labelEn": "Separate timing",
+      "valueZh": "每个模块 40 分钟；提前结束的时间不能转移到下一模块。",
+      "valueEn": "Each module has 40 minutes and unused time does not carry over."
+    },
+    {
+      "labelZh": "推理题",
+      "labelEn": "Reasoning questions",
+      "valueZh": "Critical Thinking 与 Problem Solving 各 22 道、每题五选一、答错不倒扣。",
+      "valueEn": "Each reasoning module has 22 five-option questions with no negative marking."
+    },
+    {
+      "labelZh": "写作任务",
+      "labelEn": "Writing Task",
+      "valueZh": "三题选一，最多 750 词；写作不由考试方统一打分，而是发送给参与院校。",
+      "valueEn": "Choose one of three prompts, write no more than 750 words, and the response is shared with participating universities."
+    },
+    {
+      "labelZh": "工具限制",
+      "labelEn": "Tools",
+      "valueZh": "全程不得使用计算器或词典；系统会提供可擦写草稿册。",
+      "valueEn": "Calculators and dictionaries are not permitted; an erasable booklet is provided."
+    }
+  ],
+  "curriculumBridges": [
+    {
+      "curriculum": "A-Level / IAL",
+      "status": "partial",
+      "statusZh": "学科能力可迁移，题型仍需专练",
+      "likelyCoveredZh": [
+        "数学与进阶数学可迁移比例、百分数、图表、简单代数和分步计算。",
+        "历史、经济、政治、英语等论证型学科可迁移证据组织与段落论证。"
+      ],
+      "confirmZh": [
+        "能否在 40 分钟内稳定识别主结论、隐含假设和推理错误。",
+        "能否不用计算器完成 Relevant Selection、Finding Procedures 与 Identifying Similarity。",
+        "能否在英文写作中同时完成释义、反方论证和本人立场。"
+      ],
+      "firstActionZh": "先用本页方法看懂三类模块，再完成 20 分钟推理短诊断和一轮 40 分钟写作。"
+    },
+    {
+      "curriculum": "IB Diploma",
+      "status": "partial",
+      "statusZh": "研究与论证经验可迁移",
+      "likelyCoveredZh": [
+        "TOK、Extended Essay 与 Group 3/Language A 科目有助于区分 claim、reason、evidence 和 counterargument。",
+        "IB Mathematics 可迁移比例、数据、图表与基础建模。"
+      ],
+      "confirmZh": [
+        "TOK 的开放讨论不能替代五选一题所要求的唯一可支持结论。",
+        "是否能压缩背景说明，在 750 词内把三个写作要求全部回答。",
+        "是否熟悉无计算器的快速算术和单位检查。"
+      ],
+      "firstActionZh": "把熟悉的论证框架改写成结论-理由-假设图，再用选项边界训练不过度推断。"
+    },
+    {
+      "curriculum": "AP / US High School",
+      "status": "partial",
+      "statusZh": "阅读写作基础可迁移",
+      "likelyCoveredZh": [
+        "AP English Language、History 与社会科学课程可迁移 rhetorical claim、evidence 和 qualification。",
+        "Precalculus、Statistics 等课程可迁移比例、平均数、表格和基础概率。"
+      ],
+      "confirmZh": [
+        "英文修辞分析是否能转换为严格的逻辑支持关系，而不是评价文章是否有说服力。",
+        "是否熟悉英式题目中的 assumption、flaw、principle 和 cannot be concluded。",
+        "是否能在没有计算器和拼写检查的条件下保持速度。"
+      ],
+      "firstActionZh": "先建立中英题干动词表，再用短段落练习“文本明确支持到哪一步”。"
+    },
+    {
+      "curriculum": "其他课程体系 / Other curricula",
+      "status": "partial",
+      "statusZh": "不依赖特定学科，但要验证基础",
+      "likelyCoveredZh": [
+        "日常阅读、基础算术和学校写作都可作为起点；TARA 不要求专业学科知识。",
+        "中文议论文中的观点、理由、例证和让步可以迁移为英文论证骨架。"
+      ],
+      "confirmZh": [
+        "是否掌握分数、百分数、平均数、时间、单位、面积和图表等 Appendix 基础。",
+        "是否能区分理由、结论、假设、反例和无关信息。",
+        "是否能用简洁英文表达限定条件，而不是逐句翻译中文。"
+      ],
+      "firstActionZh": "先完成 Problem Solving Appendix 自查，再用本页四个模块建立最小可执行方法。"
+    }
+  ],
+  "modules": [
+    {
+      "id": "tara-critical-thinking",
+      "number": "01",
+      "titleZh": "批判思维",
+      "titleEn": "Critical Thinking",
+      "summaryZh": "不是判断观点是否符合常识，而是精确判断理由、结论、隐含假设和支持关系。",
+      "learningOutcomes": [
+        "画出理由、次结论与主结论的支持方向。",
+        "对七类题先识别任务，再逐项检查证据边界。",
+        "避免把个人立场或外部知识带入选项判断。"
+      ],
+      "knowledgeUnits": [
+        { "id": "tara-ct-main-conclusion", "code": "CT1", "labelZh": "识别主结论", "labelEn": "Identifying the Main Conclusion" },
+        { "id": "tara-ct-drawing-conclusion", "code": "CT2", "labelZh": "推出可支持结论", "labelEn": "Drawing a Conclusion" },
+        { "id": "tara-ct-assumption", "code": "CT3", "labelZh": "识别隐含假设", "labelEn": "Identifying an Assumption" },
+        { "id": "tara-ct-additional-evidence", "code": "CT4", "labelZh": "评估新增证据的影响", "labelEn": "Assessing the Impact of Additional Evidence" },
+        { "id": "tara-ct-reasoning-errors", "code": "CT5", "labelZh": "发现推理错误", "labelEn": "Detecting Reasoning Errors" },
+        { "id": "tara-ct-matching-arguments", "code": "CT6", "labelZh": "匹配论证结构", "labelEn": "Matching Arguments" },
+        { "id": "tara-ct-applying-principles", "code": "CT7", "labelZh": "应用原则", "labelEn": "Applying Principles" }
+      ],
+      "methods": [
+        {
+          "nameZh": "先找作者要你接受的句子",
+          "nameEn": "Find the claim the author wants accepted",
+          "signalZh": "题目要求 main conclusion，文章中同时出现事实、评价和建议。",
+          "methodZh": "逐句问“其他句子是在支持它，还是它在支持其他句子？”主结论是支持箭头最终指向的命题，不一定在末句。",
+          "checkZh": "把候选结论前加 therefore；其余主要信息能否成为接受它的理由？"
+        },
+        {
+          "nameZh": "用否定测试找必要假设",
+          "nameEn": "Use the negation test for assumptions",
+          "signalZh": "理由与结论之间像是少了一步，题目问 underlying assumption。",
+          "methodZh": "把每个候选项准确否定；若否定后理由仍可能支持结论，它不是必要桥梁。若论证明显断裂，它更可能是所需假设。",
+          "checkZh": "不要选“作者可能同意”的大背景，只选结论必须依赖的那一步。"
+        },
+        {
+          "nameZh": "把支持强度和观点好坏分开",
+          "nameEn": "Separate evidential impact from personal agreement",
+          "signalZh": "题目加入新证据，或要求找 flaw、matching argument、principle。",
+          "methodZh": "先写抽象骨架：如果 R，则 C；再判断新信息改变 R 的可信度、R 到 C 的连接，还是只改变情绪与背景。",
+          "checkZh": "答案必须改变论证关系，而不是仅与主题相关或符合你的常识。"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "tara-ct-original-library-hours",
+          "titleZh": "满托原创例题：周日开放的主结论与假设",
+          "titleEn": "Mantou Original: Sunday Opening Conclusion and Assumption",
+          "problemZh": "某大学图书馆在考试月试行周日开放。周日平均有 180 名学生到馆，且现有安保班次无需增加。校方因此应在整个学期保持周日开放。请指出主结论，并写出一个结论所依赖的合理假设。",
+          "problemEn": "A university library trialled Sunday opening during exams. It attracted 180 students on average and required no extra security shift. Identify the main conclusion and one necessary assumption behind keeping Sunday opening all term.",
+          "steps": [
+            {
+              "labelZh": "第 1 步：区分证据与行动主张",
+              "bodyZh": "“180 名学生”和“无需增加安保班次”是理由；作者最终希望校方采取的行动是整个学期保持周日开放。"
+            },
+            {
+              "labelZh": "第 2 步：检查从考试月到整个学期的跳跃",
+              "bodyZh": "理由只观察了考试月。若平时周日需求显著更低，试行结果就不足以支持全年级别的安排。"
+            },
+            {
+              "labelZh": "第 3 步：用否定测试",
+              "bodyZh": "否定“考试月的周日需求能够代表学期其他周日”后，180 人的数据不能再直接支持整学期开放，因此这是关键假设之一。"
+            }
+          ],
+          "answerZh": "主结论：校方应在整个学期保持图书馆周日开放。合理假设：考试月观察到的周日使用需求对学期其他时段具有足够代表性。",
+          "trapZh": "把“周日平均有 180 人”当作主结论，或补入“学生喜欢图书馆”等不必要背景。"
+        }
+      ],
+      "activeRecall": [
+        {
+          "promptZh": "主结论和次结论的区别是什么？",
+          "promptEn": "How does a main conclusion differ from an intermediate conclusion?",
+          "answerZh": "次结论既被前文支持，又继续支持更高层结论；主结论是整段支持链最终要你接受的命题。",
+          "answerEn": "An intermediate conclusion is supported and then supports a further claim; the main conclusion is the final target of the argument."
+        },
+        {
+          "promptZh": "为什么“可能为真”不等于“可以推出”？",
+          "promptEn": "Why is possibly true not the same as supported by the passage?",
+          "answerZh": "Drawing a Conclusion 只允许文本给出的理由支持到的范围；合理但缺乏文本支持的选项仍然越界。",
+          "answerEn": "A conclusion must stay within the support provided; plausibility without textual support is still an overreach."
+        },
+        {
+          "promptZh": "假设题的否定测试怎样使用？",
+          "promptEn": "How is the negation test used for assumption questions?",
+          "answerZh": "准确否定候选项；若论证因此失去理由到结论的必要桥梁，该候选项更可能是隐含假设。",
+          "answerEn": "Negate the option precisely; if the argument then loses a necessary bridge, the option is likely an assumption."
+        }
+      ]
+    },
+    {
+      "id": "tara-problem-solving",
+      "number": "02",
+      "titleZh": "问题解决",
+      "titleEn": "Problem Solving",
+      "summaryZh": "题目只依赖规定的基础数学；难点是从陌生情境中选信息、造步骤和识别结构。",
+      "learningOutcomes": [
+        "把题目数据分成必要、可推导和干扰信息。",
+        "在无计算器条件下写出可复核的最短流程。",
+        "识别表格、图形或情境背后的同一数量关系。"
+      ],
+      "knowledgeUnits": [
+        { "id": "tara-ps-relevant-selection", "code": "PS1", "labelZh": "选择相关信息", "labelEn": "Relevant Selection" },
+        { "id": "tara-ps-finding-procedures", "code": "PS2", "labelZh": "寻找解题流程", "labelEn": "Finding Procedures" },
+        { "id": "tara-ps-identifying-similarity", "code": "PS3", "labelZh": "识别相同结构", "labelEn": "Identifying Similarity" }
+      ],
+      "methods": [
+        {
+          "nameZh": "先写目标量，再允许数据进入",
+          "nameEn": "Define the target before admitting data",
+          "signalZh": "题面给出表格、时间表或多组数字，其中部分信息没有必要。",
+          "methodZh": "先把问题改写为“我要算什么、单位是什么”；只圈出能直接形成目标量或必要中间量的数据。",
+          "checkZh": "若删掉某条信息答案仍不变，它不应出现在计算链中。"
+        },
+        {
+          "nameZh": "把陌生问题拆成可逆步骤",
+          "nameEn": "Turn an unfamiliar problem into reversible steps",
+          "signalZh": "数据都看懂，但没有现成公式，题目要求 Finding Procedures。",
+          "methodZh": "写“已知 → 中间量 → 目标量”，优先使用整数、比例和补数；每一步只做一个运算，并保留单位。",
+          "checkZh": "从答案反推一遍是否能恢复原始条件；数量级、单位和边界是否合理。"
+        },
+        {
+          "nameZh": "忽略表面故事，比较约束关系",
+          "nameEn": "Ignore the story and compare constraints",
+          "signalZh": "两个图表、安排或装置看起来不同，题目要求识别相似性。",
+          "methodZh": "把对象替换成变量，记录总量、分组、先后和必须同时满足的条件，再比较哪种表示保留同一关系。",
+          "checkZh": "相似不是长得像；必须在所有给定约束下产生同样的可行结果。"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "tara-ps-original-workshop-seats",
+          "titleZh": "满托原创例题：工作坊座位比例",
+          "titleEn": "Mantou Original: Workshop Seat Ratio",
+          "problemZh": "一个 48 座工作坊原计划三分之二座位给学生，其余给教师。开始前 5 名学生取消，另有 3 名教师加入。实际到场者中，教师占几分之几？",
+          "problemEn": "A 48-seat workshop planned two thirds of its seats for students and the rest for teachers. Five students cancel and three teachers join. What fraction of actual attendees are teachers?",
+          "steps": [
+            {
+              "labelZh": "第 1 步：恢复原计划人数",
+              "bodyZh": "学生为 48 的三分之二，即 32 人；教师是剩余 16 人。",
+              "math": { "tex": "48\\times\\frac{2}{3}=32,\\qquad 48-32=16", "text": "48 × 2/3 = 32；48 - 32 = 16" }
+            },
+            {
+              "labelZh": "第 2 步：分别更新两组",
+              "bodyZh": "实际学生 27 人，实际教师 19 人，因此实际总人数为 46 人。",
+              "math": { "tex": "32-5=27,\\qquad 16+3=19,\\qquad 27+19=46", "text": "32 - 5 = 27；16 + 3 = 19；27 + 19 = 46" }
+            },
+            {
+              "labelZh": "第 3 步：使用实际分母",
+              "bodyZh": "问题问实际到场者中的比例，分母不是 48 个座位，而是 46 名实际到场者。",
+              "math": { "tex": "\\frac{19}{46}", "text": "19/46" }
+            }
+          ],
+          "answerZh": "教师占实际到场者的 19/46。",
+          "trapZh": "继续用 48 作分母，或只更新学生人数而忘记新增教师。"
+        }
+      ],
+      "activeRecall": [
+        {
+          "promptZh": "Relevant Selection 的第一步是什么？",
+          "promptEn": "What is the first step in Relevant Selection?",
+          "answerZh": "先定义目标量与单位，再判断哪些信息能直接或间接生成它。",
+          "answerEn": "Define the target quantity and unit before selecting data."
+        },
+        {
+          "promptZh": "Finding Procedures 为什么要一行只做一步？",
+          "promptEn": "Why should a procedure change one thing per line?",
+          "answerZh": "这样可以检查中间量、单位和方向，发现错误时也能定位到具体转换。",
+          "answerEn": "Single-step lines expose intermediate values, units and the exact point of error."
+        },
+        {
+          "promptZh": "Identifying Similarity 比较的是什么？",
+          "promptEn": "What does Identifying Similarity compare?",
+          "answerZh": "比较约束与关系是否等价，而不是题目故事、图形外观或数字是否相同。",
+          "answerEn": "It compares equivalent constraints and relationships, not surface stories or visual resemblance."
+        }
+      ]
+    },
+    {
+      "id": "tara-writing-task",
+      "number": "03",
+      "titleZh": "限时论证写作",
+      "titleEn": "Writing Task",
+      "summaryZh": "不是展示背景知识，而是在 750 词内准确释义、提出有力反方论证并给出有条件的本人判断。",
+      "learningOutcomes": [
+        "把题目拆成释义、反方和本人立场三个明确任务。",
+        "用 5–10 分钟计划控制段落功能和例证。",
+        "在结尾给出由前文理由支持的清晰立场，而不是重复摘要。"
+      ],
+      "knowledgeUnits": [
+        { "id": "tara-writing-meaning", "code": "W1", "labelZh": "准确解释命题含义", "labelEn": "Explaining the Statement" },
+        { "id": "tara-writing-against", "code": "W2", "labelZh": "构造反方论证", "labelEn": "Reasoned Argument Against" },
+        { "id": "tara-writing-position", "code": "W3", "labelZh": "表达同意程度", "labelEn": "Extent of Agreement" },
+        { "id": "tara-writing-structure", "code": "W4", "labelZh": "段落功能与组织", "labelEn": "Paragraph Function and Organisation" },
+        { "id": "tara-writing-examples", "code": "W5", "labelZh": "具体例证与解释", "labelEn": "Targeted Examples and Explanation" },
+        { "id": "tara-writing-control", "code": "W6", "labelZh": "40 分钟与 750 词控制", "labelEn": "40-Minute and 750-Word Control" }
+      ],
+      "methods": [
+        {
+          "nameZh": "三问三格计划",
+          "nameEn": "Three-question planning grid",
+          "signalZh": "题目要求 explain、argue against、to what extent 三件事。",
+          "methodZh": "计划纸分三格：关键词的操作性定义；至少两条不同角度的反方理由；带条件的本人判断。每格先写一句中心句。",
+          "checkZh": "成文前确认三个任务都有独立内容，不能只写一篇泛泛的正反议论文。"
+        },
+        {
+          "nameZh": "例子必须服务于理由",
+          "nameEn": "Make examples serve reasons",
+          "signalZh": "想到许多新闻或个人经历，但段落中心不清楚。",
+          "methodZh": "先写可推广的理由，再用一个具体例子说明机制；随后补一句解释这个例子为什么支持理由。",
+          "checkZh": "删掉例子后，段落是否仍有完整论点？若没有，说明你在用故事替代论证。"
+        },
+        {
+          "nameZh": "用条件化立场代替模糊折中",
+          "nameEn": "Use a conditional position instead of vague balance",
+          "signalZh": "结论只写 both sides are important 或 it depends。",
+          "methodZh": "明确总体倾向，再列出改变判断的条件：I agree where X, but not where Y because Z。让条件与正文中的理由对应。",
+          "checkZh": "读者能否用一句话说出你最终赞成什么、反对什么、依据是什么。"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "tara-writing-original-recorded-lectures",
+          "titleZh": "满托原创例题：录播课程命题的写作计划",
+          "titleEn": "Mantou Original: Planning a Recorded-Lectures Response",
+          "problemZh": "命题：Universities should make recordings of every lecture available to the public. 请为“解释含义、给出反方论证、说明同意程度”建立一个可在 40 分钟内执行的计划。",
+          "problemEn": "Plan a response to: Universities should make recordings of every lecture available to the public. Address meaning, an argument against, and the extent of your agreement.",
+          "steps": [
+            {
+              "labelZh": "第 1 步：限定命题",
+              "bodyZh": "every lecture 表示默认全面公开，不只面向注册学生；available to the public 还涉及永久访问、隐私和第三方材料权利。先说明这些词怎样影响论证范围。"
+            },
+            {
+              "labelZh": "第 2 步：建立两条不同反方理由",
+              "bodyZh": "一条讨论课堂参与者隐私与安全，另一条讨论含许可材料或未成熟研究被脱离语境传播；两条不能只是同一风险换词重复。"
+            },
+            {
+              "labelZh": "第 3 步：给出条件化立场",
+              "bodyZh": "可以支持大学扩大公共访问，但不支持 every lecture 的无条件规则；本人立场可要求讲者同意、学生匿名化和受限材料移除。"
+            },
+            {
+              "labelZh": "第 4 步：安排时间",
+              "bodyZh": "用 7 分钟计划、30 分钟成文、3 分钟检查三问、段落重复和明显语言错误；不追求接近 750 词上限。"
+            }
+          ],
+          "answerZh": "可执行结构：释义段 → 隐私反方段 → 权利/语境反方段 → 公共利益与条件段 → 明确的有限同意结论。",
+          "trapZh": "把文章写成“网络课程好不好”的背景介绍，或只列优缺点却没有回答 extent of agreement。"
+        }
+      ],
+      "activeRecall": [
+        {
+          "promptZh": "Writing Task 通常要求回答哪三个动作？",
+          "promptEn": "Which three actions does the Writing Task typically require?",
+          "answerZh": "解释命题含义、给出有理由的反方论证、说明自己同意到什么程度。",
+          "answerEn": "Explain the statement, give a reasoned argument against it, and state the extent of agreement."
+        },
+        {
+          "promptZh": "为什么例子不能单独充当论证？",
+          "promptEn": "Why can an example not stand alone as an argument?",
+          "answerZh": "例子只展示一个情况；还需要一般理由与机制，说明它为何支持或限制命题。",
+          "answerEn": "An example shows one case; a general reason and mechanism are still needed to connect it to the proposition."
+        },
+        {
+          "promptZh": "写作的 750 词是什么性质的要求？",
+          "promptEn": "What kind of requirement is the 750-word figure?",
+          "answerZh": "它是上限，不是目标；完整、准确、组织清楚比为了接近上限而重复更重要。",
+          "answerEn": "It is a maximum, not a target; complete and concise reasoning matters more than filling the limit."
+        }
+      ]
+    },
+    {
+      "id": "tara-language-bridge",
+      "number": "04",
+      "titleZh": "中英论证术语桥接",
+      "titleEn": "Chinese-English Argument Language Bridge",
+      "summaryZh": "把中文议论文直觉转换成 TARA 所要求的精确逻辑关系和简洁学术英语。",
+      "learningOutcomes": [
+        "准确区分 reason、conclusion、assumption、evidence 和 principle。",
+        "识别 all、some、only、unless 等限定词如何改变选项范围。",
+        "用短句和条件表达减少中式英语中的绝对化与重复。"
+      ],
+      "knowledgeUnits": [
+        { "id": "tara-language-argument-roles", "code": "L1", "labelZh": "论证角色词", "labelEn": "Argument Roles" },
+        { "id": "tara-language-qualifiers", "code": "L2", "labelZh": "限定词与量词", "labelEn": "Qualifiers and Quantifiers" },
+        { "id": "tara-language-connectives", "code": "L3", "labelZh": "逻辑连接与支持方向", "labelEn": "Logical Connectives" },
+        { "id": "tara-language-scope", "code": "L4", "labelZh": "范围、条件与例外", "labelEn": "Scope, Conditions and Exceptions" },
+        { "id": "tara-language-concision", "code": "L5", "labelZh": "简洁准确的学术英语", "labelEn": "Concise Academic English" }
+      ],
+      "methods": [
+        {
+          "nameZh": "先标逻辑角色，再翻译句子",
+          "nameEn": "Label the logical role before translating",
+          "signalZh": "中文里“所以、可见、毕竟、只要”在英文题目中可能承担不同功能。",
+          "methodZh": "先标 R（理由）、C（结论）、A（假设）、E（例证/证据），再选择 because、therefore、provided that、for example 等表达。",
+          "checkZh": "连接词是否准确反映支持方向，而不是只让句子听起来更正式。"
+        },
+        {
+          "nameZh": "圈出所有改变范围的词",
+          "nameEn": "Circle every scope-changing word",
+          "signalZh": "选项只差 all/some、must/may、only/unless 或 usually/always。",
+          "methodZh": "把量词和情态词单独读一遍，写出它承诺的最小范围；优先排除比文本更绝对、更普遍或更因果化的选项。",
+          "checkZh": "正确选项是否增加了文本没有支持的人群、时间、原因或必然性。"
+        },
+        {
+          "nameZh": "用主张-理由-限制三句骨架",
+          "nameEn": "Use a claim-reason-limit three-sentence frame",
+          "signalZh": "写作句子很长、同一观点重复，或只有观点没有边界。",
+          "methodZh": "第一句给主张，第二句解释理由/机制，第三句说明适用条件或例外。先求逻辑清楚，再增加语言变化。",
+          "checkZh": "每句是否只有一个主要功能；删掉套话后论证是否更清楚。"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "tara-language-original-qualified-claim",
+          "titleZh": "满托原创例题：把绝对中文判断改成可论证英文",
+          "titleEn": "Mantou Original: Turning an Absolute Claim into a Defensible One",
+          "problemZh": "学生想表达：“只要公开数据，政府决策就一定会更公平。”请把它改写成范围清楚、可以被后文支持的英文主张。",
+          "problemEn": "Rewrite the claim 'Publishing data will always make government decisions fairer' into a precise, defensible English proposition.",
+          "steps": [
+            {
+              "labelZh": "第 1 步：找出过强词",
+              "bodyZh": "“只要”和“一定”把公开数据写成充分条件，并承诺所有政府决策都会更公平；这个范围通常无法被有限证据支持。"
+            },
+            {
+              "labelZh": "第 2 步：加入机制与条件",
+              "bodyZh": "把结果从必然变为可能，并说明在什么条件下发生：公众能够理解数据，机构也需要回应由数据揭示的问题。"
+            },
+            {
+              "labelZh": "第 3 步：形成可辩护主张",
+              "bodyZh": "Publishing accessible data can make some public decisions fairer when citizens can scrutinise the evidence and institutions are required to respond."
+            }
+          ],
+          "answerZh": "改写后的句子保留“透明度可能改善公平”的核心观点，同时限定了 some、can 和 when 条件。",
+          "trapZh": "只把 always 换成 often，却仍不解释何种数据、何种决策或通过什么机制产生影响。"
+        }
+      ],
+      "activeRecall": [
+        {
+          "promptZh": "reason、evidence 和 assumption 有什么区别？",
+          "promptEn": "How do a reason, evidence and an assumption differ?",
+          "answerZh": "reason 是显式支持结论的命题；evidence 是支持理由或事实判断的材料；assumption 是未明说但论证必须依赖的桥梁。",
+          "answerEn": "A reason explicitly supports a conclusion, evidence supports a factual or inferential claim, and an assumption is an unstated necessary bridge."
+        },
+        {
+          "promptZh": "为什么 may 和 must 不能互换？",
+          "promptEn": "Why are may and must not interchangeable?",
+          "answerZh": "may 只声明可能性，must 声明必要或必然；后者需要明显更强的文本支持。",
+          "answerEn": "May asserts possibility; must asserts necessity, which requires much stronger support."
+        },
+        {
+          "promptZh": "写作中怎样避免空泛的 it depends？",
+          "promptEn": "How can a writer avoid a vague 'it depends'?",
+          "answerZh": "明确依赖的条件，并说明这些条件如何改变理由权重与最终立场。",
+          "answerEn": "Name the conditions and explain how they change the reasons and final judgement."
+        }
+      ]
+    }
+  ],
+  "reviewWorkflow": [
+    {
+      "stepZh": "先按题型复盘",
+      "stepEn": "Review by question family",
+      "actionZh": "每道推理错题先标 CT1–CT7 或 PS1–PS3，再记录是任务识别、证据边界、计算流程还是英语限定词出错。"
+    },
+    {
+      "stepZh": "再按证据复做",
+      "stepEn": "Repeat with evidence",
+      "actionZh": "遮住答案，在无计算器条件下重新写出支持图或计算链；只有能够解释为何排除其他选项才算完成复盘。"
+    },
+    {
+      "stepZh": "写作只改一个变量",
+      "stepEn": "Change one writing variable",
+      "actionZh": "每轮写作只设一个可验证目标，例如三问完整、段落不重复、例子有机制或结论条件清楚；保留版本比较。"
+    },
+    {
+      "stepZh": "回到完整计时",
+      "stepEn": "Return to timed practice",
+      "actionZh": "先完成 20 分钟原创推理短诊断，再进行 40 分钟 Writing Task；基础结果只报告作答事实，不伪造 1.0–9.0 换算分或院校评价。"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "17   Find the complete set√of values of m in terms of c such that the graphs of\n     y = mx + c and y = x have two points of intersection.\n\n     A 0 < m < 4c\n               1\n\n\n     B 0 < m < 4c2\n\n     C m > 4c\n           1\n\n\n     D m < 4c\n           1\n\n\n     E m > 4c2\n\n     F m < 4c2\n\n\n\n\n                                            19"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the complete set√of values of m in terms of c such that the graphs of\n     y = mx + c and y = x have two points of intersection."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0 < m < 4c\n               1"
+    },
+    {
+      "label": "B",
+      "rawText": "0 < m < 4c2"
+    },
+    {
+      "label": "C",
+      "rawText": "m > 4c\n           1"
+    },
+    {
+      "label": "D",
+      "rawText": "m < 4c\n           1"
+    },
+    {
+      "label": "E",
+      "rawText": "m > 4c2"
+    },
+    {
+      "label": "F",
+      "rawText": "m < 4c2"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "√\nA graph-based (exam-suitable) approach is as follows: Thinking about a sketch graph of y = x,\nany negative value of m will lead to a single point of intersection, so we must be restricted to\nm > 0. This excludes options D and F. When c ≤ 0, there can be at most one point of\nintersection. The only option which rejects all possible values of m when c < 0 is A, so that\nmust be the correct option. (This option does not make sense when c = 0, but we ignore that.)\nAn algebraic solution is as follows.\n                                                  √\nThe line and the graph intersect when mx + c = x, where x ≥ 0. If m = 0, there is at most\n                                                                                          √\none solution, so we cannot have m = 0. The equation rearranges to give a quadratic in x,\n              √\nnamely mx − x + c = 0. For there to be two distinct non-negative solutions, we first require\nthe discriminant to be positive, so 1 − 4mc > 0, or 4mc < 1. We can write the roots explicitly\nas                                             √\n                                      √     1 ± 1 − 4mc\n                                        x=\n                                                 2m\n                                                                                       1\nand we require both of these to be non-negative. The midpoint of the two roots is 2m     , so if\nm < 0, one or both of the roots is negative; we must therefore√ exclude this case. So we must\n                                                               1−4mc\nhave m > 0 and 4mc < 1. If c < 0, then 1 − 4mc > 1, so 1− 2m          < 0; this therefore gives\nonly one non-negative root.\nWe are thus left with two possibilities: m > 0 and c = 0, or m > 0 and 4mc < 1, which\n                       1\nrearranges as 0 < m < 4c . The closest offered option is A.\n\n\n\n\nVersion 1.0, April 2021                                                                 Page 19\n\n                                          © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

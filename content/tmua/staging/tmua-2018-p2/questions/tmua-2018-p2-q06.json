@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q06",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 6,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "6   Which one of the following functions provides a counterexample to the statement:\n\n                     if f \u0002 (x) > 0 for all real x, then f(x) > 0 for all real x.\n\n    A f(x) = x2 + 1\n\n    B f(x) = x2 − 1\n\n    C f(x) = x3 + x + 1\n\n    D f(x) = 1 − x\n\n    E f(x) = 2x\n\n\n\n\n                                               8"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Which one of the following functions provides a counterexample to the statement:\n\n                     if f  (x) > 0 for all real x, then f(x) > 0 for all real x."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "f(x) = x2 + 1"
+    },
+    {
+      "label": "B",
+      "rawText": "f(x) = x2 − 1"
+    },
+    {
+      "label": "C",
+      "rawText": "f(x) = x3 + x + 1"
+    },
+    {
+      "label": "D",
+      "rawText": "f(x) = 1 − x"
+    },
+    {
+      "label": "E",
+      "rawText": "f(x) = 2x"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "A counterexample to an ‘if P then Q’ statement is an example where the statement is false,\nthat is where P (the antecedent) is true but Q (the consequent) is false.\nWe can now look through the given functions to see which of them satisfies these requirements.\nWe give our results as a table and make comments on the working below.\n\n\n                                 f(x)        f 0 (x)   f 0 (x) > 0   f(x) > 0\n                                                        for all x    for all x\n                          A     x2 + 1       2x          false\n                          B     x2 − 1       2x          false\n                          C   x3 + x + 1     2\n                                           3x + 1        true         false\n                          D      1−x         −1          false\n                          E       2x          ?          true         true\n\n\nOnce we know that f 0 (x) > 0 for all x is false, there is no need to go any further, so for A, B\nand D, we stop at this point.\nFor C, 3x2 ⩾ 0 for all x, so 3x2 + 1 ⩾ 1 > 0 for all x, and we know that cubics (x3 + x + 1 in\nthis case) always take both positive and negative values, so f(x) > 0 for all x is false.\nFor E, we don’t know what the derivative of 2x is (or at least, knowledge of it is not required for\nthis test), but we do know that 2x is increasing for all x, so the derivative is positive for all x.\nFinally, only C has the antecedent true and the consequent false, so C provides a counterex-\nample.\n\n\n\n\nVersion 1.0, April 2019                                                                      Page 8"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

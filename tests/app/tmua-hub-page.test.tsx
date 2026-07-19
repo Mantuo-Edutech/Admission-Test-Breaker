@@ -124,6 +124,11 @@ describe("TMUA staged preparation journey", () => {
       "/exams/tmua/profile",
     );
     expect(screen.getByRole("heading", { name: "四步完成 TMUA 准备" })).toBeInTheDocument();
+    const summary = screen.getByRole("group", { name: "TMUA 已核验资料概览" });
+    expect(within(summary).getByText("可在线作答")).toBeInTheDocument();
+    expect(within(summary).getByText("360 道")).toBeInTheDocument();
+    expect(within(summary).getByText("已完成原生排版")).toBeInTheDocument();
+    expect(within(summary).getByText("360 / 360 道")).toBeInTheDocument();
     expect(screen.getByText(/不收集姓名、电话或微信/u)).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "开始完整练习" })).not.toBeInTheDocument();
   });
@@ -211,7 +216,7 @@ describe("TMUA staged preparation journey", () => {
     expect(screen.getAllByText("课程档案未显示覆盖")).toHaveLength(3);
   });
 
-  it("presents separate module destinations and starts a Guest-owned paper", async () => {
+  it("recommends the original diagnostic before past papers and starts a Guest-owned session", async () => {
     const user = userEvent.setup();
     const store = new JourneySessionStore();
     const router = createAppRouter(
@@ -221,10 +226,13 @@ describe("TMUA staged preparation journey", () => {
     render(<RouterProvider router={router} />);
 
     expect(
-      await screen.findByRole("heading", { name: "下一步：完成一套在线真题" }),
+      await screen.findByRole("heading", { name: "下一步：先做 30 分钟能力诊断" }),
     ).toBeInTheDocument();
-    expect(screen.queryByRole("link", { name: /诊断/u })).not.toBeInTheDocument();
-    expect(screen.getByText(/原创固定题正在独立审核/u)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "开始 30 分钟诊断" })).toHaveAttribute(
+      "href",
+      "/practice/tmua-diagnostic-v1",
+    );
+    expect(screen.queryByText(/正在独立审核/u)).not.toBeInTheDocument();
     expect(
       screen.getByRole("heading", {
         name: /课程覆盖与补学建议.*Course Coverage Plan/u,
@@ -238,17 +246,19 @@ describe("TMUA staged preparation journey", () => {
       "href",
       "/exams/tmua/past-papers",
     );
-    expect(screen.getByRole("link", { name: "查看模考与资料" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "查看题库与学习资料" })).toHaveAttribute(
       "href",
       "/exams/tmua/resources",
     );
 
-    await user.click(screen.getByRole("button", { name: "开始完整练习" }));
+    await user.click(screen.getByRole("link", { name: "开始 30 分钟诊断" }));
+    expect(await screen.findByRole("heading", { name: "第 1 题" })).toBeInTheDocument();
     expect(store.saved).toMatchObject({
       learningSpaceId: FIXED_GUEST_SPACE.id,
       startedBy: { kind: "guest", actorId: FIXED_GUEST_SPACE.ownerActorId },
+      paperId: "tmua-diagnostic-v1",
     });
-    expect(router.state.location.pathname).toBe("/practice/tmua-2023-p1");
+    expect(router.state.location.pathname).toBe("/practice/tmua-diagnostic-v1");
   });
 
   it("resumes a Guest-owned active paper from the dashboard", async () => {
@@ -260,39 +270,51 @@ describe("TMUA staged preparation journey", () => {
     );
     render(<RouterProvider router={router} />);
 
-    await user.click(await screen.findByRole("button", { name: "继续练习 · 1 / 20" }));
+    await user.click(await screen.findByRole("link", { name: "继续当前练习 · 1 道已作答" }));
     expect(router.state.location.pathname).toBe("/practice/tmua-2023-p1");
   });
 
-  it("keeps the 30-minute diagnostic honest while its original form is reviewed", async () => {
+  it("opens the 30-minute original diagnostic without a construction placeholder", async () => {
     const router = createAppRouter(
       ["/exams/tmua/diagnostic"],
       services(new JourneySessionStore(), new JourneyProfileStore(profile())),
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByText("30 分钟")).toBeInTheDocument();
+    expect((await screen.findAllByText("30 分钟")).length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText("8 道固定题")).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "诊断卷正在独立审核" })).toBeInTheDocument();
-    expect(screen.getByText(/现有历年真题不会被拆分使用/u)).toBeInTheDocument();
-    expect(screen.queryByRole("button", { name: /开始诊断/u })).not.toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "8 道原创题已可在线完成" })).toBeInTheDocument();
+    expect(screen.getByText(/不生成官方换算分、录取概率或伪 Benchmark/u)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "开始 30 分钟诊断" })).toHaveAttribute(
+      "href",
+      "/practice/tmua-diagnostic-v1",
+    );
+    expect(screen.queryByText(/即将开放|正在独立审核|审核完成前不开放/u)).not.toBeInTheDocument();
   });
 
-  it("shows every imported paper publicly and distinguishes online availability", async () => {
+  it("shows every edition as a large card with two direct online-paper actions", async () => {
     const router = createAppRouter(
       ["/exams/tmua/past-papers"],
       services(new JourneySessionStore(), EMPTY_PREPARATION_PROFILE_STORE),
     );
     render(<RouterProvider router={router} />);
 
-    const table = await screen.findByRole("table", { name: "TMUA 历年真题资料馆" });
-    expect(within(table).getAllByRole("row")).toHaveLength(19);
-    expect(within(table).getAllByText("已收录")).toHaveLength(18);
-    expect(within(table).getAllByText("原卷 + 在线答题卡")).toHaveLength(17);
-    expect(within(table).getByText("逐题在线")).toBeInTheDocument();
-    expect(within(table).getAllByRole("link", { name: "开始练习" })).toHaveLength(18);
-    expect(screen.getAllByText("18 / 18")).toHaveLength(2);
-    expect(screen.getByText("360 / 360")).toBeInTheDocument();
+    const shelf = await screen.findByRole("list", { name: "TMUA 九个年份与版本" });
+    expect(within(shelf).getAllByRole("listitem")).toHaveLength(9);
+    expect(within(shelf).getByRole("heading", { name: "Early specimen" })).toBeInTheDocument();
+    expect(within(shelf).getByRole("heading", { name: "2016 Practice" })).toBeInTheDocument();
+    expect(within(shelf).getByRole("heading", { name: "2023" })).toBeInTheDocument();
+    const practiceLinks = within(shelf).getAllByRole("link");
+    expect(practiceLinks).toHaveLength(18);
+    expect(practiceLinks.every((link) => !link.getAttribute("href")?.endsWith("/start"))).toBe(true);
+    expect(
+      within(shelf).getByRole("link", { name: "Early specimen Paper 1，20 题，开始练习" }),
+    ).toHaveAttribute("href", "/practice/tmua-specimen-p1");
+    const summary = screen.getByLabelText("TMUA 在线题库概况");
+    expect(within(summary).getByText("9")).toBeInTheDocument();
+    expect(within(summary).getByText("18")).toBeInTheDocument();
+    expect(within(summary).getByText("360")).toBeInTheDocument();
+    expect(screen.queryByText("资料状态")).not.toBeInTheDocument();
     expect(screen.queryByText("建设中")).not.toBeInTheDocument();
   });
 
@@ -304,12 +326,13 @@ describe("TMUA staged preparation journey", () => {
     );
     render(<RouterProvider router={router} />);
 
-    await user.click(await screen.findByRole("button", { name: "添加冰冰，获取模考" }));
-    const dialog = screen.getByRole("dialog", { name: "添加冰冰，获取完整模考" });
+    await user.click(await screen.findByRole("button", { name: "添加冰冰，获取资料邀请码" }));
+    const dialog = screen.getByRole("dialog", { name: "添加冰冰，获取已发布复习资料" });
     expect(within(dialog).getByRole("img", { name: "冰冰老师微信二维码" })).toHaveAttribute(
       "src",
       "/brand/bingbing-wechat-qr.jpg",
     );
     expect(within(dialog).getByText(/不会向冰冰开放你的课程信息/u)).toBeInTheDocument();
+    expect(within(dialog).getByText("说明需要「六周训练计划或逐题解析」")).toBeInTheDocument();
   });
 });

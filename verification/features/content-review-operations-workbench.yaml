@@ -1,0 +1,85 @@
+schemaVersion: 1
+feature:
+  id: content-review-operations-workbench
+  title: 来源绑定的满托内部内容审核台
+  status: partial
+  userOutcome: >-
+    获得独立审核权限的满托教研人员可以按考试和审核类型查看当前待审产品、打开真实网页、
+    核对来源指纹并下载标准审核包；普通学生和其他运营角色看不到内部队列。
+run:
+  packageScript: verify:content-review-operations
+claims:
+  - id: independent-private-review-capability
+    status: verified
+    statement: >-
+      内容审核权限由 service role 单独授予和撤销，不随学生权限、邀请码运营权、转化看板权或协作 Grant 自动获得；
+      匿名访客与普通登录账号无法读取私有队列、授权表或审计表。
+    artifacts:
+      - supabase/migrations/20260719222000_content_review_operations_workbench.sql
+      - supabase/tests/database/content_review_operations_workbench.test.sql
+      - src/features/content-review-operations/supabase-content-review-operations-service.ts
+    automatedChecks:
+      - verify:content-review-operations
+      - verify:supabase-contracts
+      - verify:supabase
+  - id: current-source-server-queue
+    status: verified
+    statement: >-
+      生成的 68 个审核组通过需要 service-role 凭据和精确确认文字的同步器进入服务器；同步为事务式全量替换，
+      每项保留当前 catalog revision、来源 SHA-256、源文件数量、产品版本与本站路由，畸形输入会整体失败并保留旧队列。
+    artifacts:
+      - content/products/manual-review-worklist.json
+      - scripts/sync-content-review-queue.ts
+      - supabase/migrations/20260719222100_content_review_queue_safe_replace.sql
+      - supabase/migrations/20260719222200_content_review_queue_qualified_replace.sql
+      - supabase/tests/database/content_review_operations_workbench.test.sql
+    automatedChecks:
+      - verify:manual-review-worklist
+      - verify:content-review-operations
+      - verify:supabase
+  - id: review-packet-without-browser-approval
+    status: verified
+    statement: >-
+      审核台支持活动类型与考试筛选、逐项打开实际产品页面，并下载证据 Markdown 与决定草稿；
+      草稿默认 changes-requested、未签署且没有证据哈希，浏览器没有批准或发布 RPC，最终决定仍由版本化发布账本验证。
+    artifacts:
+      - src/features/content-review-operations/domain.ts
+      - src/features/content-review-operations/pages/ContentReviewOperationsPage.tsx
+      - src/features/library/manual-review-decisions.ts
+      - scripts/manage-manual-review.ts
+      - tests/features/content-review-operations/domain.test.ts
+      - tests/app/content-review-operations-page.test.tsx
+    automatedChecks:
+      - verify:content-review-operations
+      - verify:manual-review-ledger
+  - id: responsive-review-operations
+    status: verified
+    statement: >-
+      内部审核台在电脑使用三栏任务结构，iPad 收敛为两栏，手机改为单栏；指标、筛选器、产品入口、指纹与下载动作均保留。
+    artifacts:
+      - src/styles/practice.css
+      - src/app/routes.tsx
+      - src/features/account/pages/AccountPage.tsx
+      - tests/app/content-review-operations-layout-contract.test.ts
+      - tests/app/account-lifecycle.test.tsx
+    automatedChecks:
+      - verify:content-review-operations
+      - typecheck
+      - build
+boundaries:
+  - 审核台不会自动完成 68 项人工审核，也不会把 Agent 或自动测试冒充为学科老师、学生或真机审核人。
+  - 来源队列可以在浏览器查看，但最终决定、完整证据与证据哈希继续保留在版本化私有发布账本，不进入公开 Web 包。
+  - 本地数据库已经同步当前 68 项队列；生产 Supabase 尚未同步，也尚未授予真实教研账号。
+manualChecks:
+  - id: production-reviewer-role-and-queue-uat
+    status: pending
+    evidence: 在 staging 使用普通学生与教研账号验证拒绝、授权、68 项队列、筛选、审核包下载和立即撤销；随后确认浏览器仍无法直接发布产品。
+    viewports:
+      - 390x844
+      - 820x1180
+      - 1440x900
+  - id: real-reviewer-comprehension
+    status: pending
+    evidence: 由至少一名非技术学科审核者实际使用模板完成一项 changes-requested 审核，验证无需理解代码也能找到页面、范围、来源和证据要求。
+    viewports:
+      - desktop

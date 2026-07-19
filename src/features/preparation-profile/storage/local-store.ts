@@ -75,7 +75,7 @@ function parseSelections(value: unknown): QualificationSelection[] {
   });
 }
 
-function parseProfile(value: unknown): PreparationProfile {
+export function parseStoredPreparationProfile(value: unknown): PreparationProfile {
   if (!isRecord(value)) throw new Error("Preparation profile must be an object");
   if (value.schemaVersion !== 1) {
     throw new UnsupportedProfileError("Preparation profile schema is unsupported");
@@ -93,7 +93,7 @@ function parseProfile(value: unknown): PreparationProfile {
     guestSpaceId: value.guestSpaceId,
     exam: value.exam as "TMUA",
     entryCycle: value.entryCycle,
-    curriculumSystem: value.curriculumSystem as "caie" | "pearson-ial",
+    curriculumSystem: value.curriculumSystem as "caie" | "pearson-ial" | "ib" | "ap",
     selections: parseSelections(value.selections),
     experience: value.experience as PreparationExperience,
     createdAt: value.createdAt,
@@ -121,7 +121,7 @@ export class LocalPreparationProfileStore implements PreparationProfileStore {
     }
 
     try {
-      const profile = parseProfile(JSON.parse(raw) as unknown);
+      const profile = parseStoredPreparationProfile(JSON.parse(raw) as unknown);
       if (profile.guestSpaceId !== guestSpaceId) {
         throw new Error("Preparation profile crosses the Guest Space boundary");
       }
@@ -138,7 +138,7 @@ export class LocalPreparationProfileStore implements PreparationProfileStore {
   }
 
   async save(profile: PreparationProfile): Promise<{ persisted: boolean }> {
-    const normalized = parseProfile(JSON.parse(JSON.stringify(profile)) as unknown);
+    const normalized = parseStoredPreparationProfile(JSON.parse(JSON.stringify(profile)) as unknown);
     this.memoryProfiles.set(normalized.guestSpaceId, normalized);
     try {
       this.storage.setItem(storageKey(normalized.guestSpaceId), JSON.stringify(normalized));

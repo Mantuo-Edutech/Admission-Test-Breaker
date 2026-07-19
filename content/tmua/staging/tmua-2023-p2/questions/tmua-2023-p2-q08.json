@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "8   A student draws a triangle that is acute-angled or obtuse-angled but not right-angled.\n\n    The student counts the number of straight lines that divide the triangle into two triangles, at\n    least one of which is right-angled.\n\n    Which of the following statements is/are true?\n\n          I       The student can draw a triangle for which there is exactly 1 such straight line.\n\n          II      The student can draw a triangle for which there are exactly 2 such straight lines.\n\n          III     The student can draw a triangle for which there are exactly 3 such straight lines.\n\n\n    A   none of them\n\n    B   I only\n\n    C   II only\n\n    D   III only\n\n    E   I and II only\n\n    F   I and III only\n\n    G   II and III only\n\n    H   I, II and III\n\n\n\n\n                                                   10"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A student draws a triangle that is acute-angled or obtuse-angled but not right-angled.\n\n    The student counts the number of straight lines that divide the triangle into two triangles, at\n    least one of which is right-angled.\n\n    Which of the following statements is/are true?\n\n          I       The student can draw a triangle for which there is exactly 1 such straight line.\n\n          II      The student can draw a triangle for which there are exactly 2 such straight lines.\n\n          III     The student can draw a triangle for which there are exactly 3 such straight lines."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let us start with a triangle and see how many such straight lines it has. If we take an acute-\nangled triangle, then it has three such lines (shown in red), which are the altitudes of the triangle,\ngoing from each vertex perpendicular to the opposite side:\n\n\n\n\nTherefore statement III is true.\nBut can the student draw a triangle for which there are fewer than 3 such straight lines? There\nis always such a straight line (altitude) from every vertex in an acute-angled triangle, so the\nonly hope for fewer than 3 such straight lines is to consider an obtuse-angled triangle. There is\nonly one usable altitude in this case, and that is from the obtuse angle; the other two altitudes\nland outside the triangle:\n\n\n\n\nSo it may appear that there is only one such line in this case. However, we are not restricted\nto altitudes! Instead, we can split the obtuse angle into a right angle and an acute angle in two\ndifferent ways, giving another two lines:\n\n\n\n\nNeither of these lines can meet the side opposite the obtuse angle perpendicularly, as if they did,\nwe would have a triangle with two right angles, so they are always distinct from the altitude.\nSo in this case, we also get three such staight lines.\nHence the correct answer is option D, III only.\n\n\n\n\nVersion 1.0, September 2023                                                                  Page 10"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        10
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

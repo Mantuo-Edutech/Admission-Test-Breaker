@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13   Let x be a real number.\n\n     Which one of the following statements is a sufficient condition for exactly three of the other\n     four statements?\n\n     A   x≥0\n\n     B   x=1\n\n     C   x = 0 or x = 1\n\n     D   x ≥ 0 or x ≤ 1\n\n     E   x ≥ 0 and x ≤ 1\n\n\n\n\n                                                 15"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Let x be a real number.\n\n     Which one of the following statements is a sufficient condition for exactly three of the other\n     four statements?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "x≥0"
+    },
+    {
+      "label": "B",
+      "rawText": "x=1"
+    },
+    {
+      "label": "C",
+      "rawText": "x = 0 or x = 1"
+    },
+    {
+      "label": "D",
+      "rawText": "x ≥ 0 or x ≤ 1"
+    },
+    {
+      "label": "E",
+      "rawText": "x ≥ 0 and x ≤ 1"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We work through them sequentially:\n\nA If x ≥ 0, then B may be false, C may be false, D may be false and E may be false\n\nB If x = 1, then A is true, C is true, D is true and E is true\n\nC If x = 0 or x = 1, then A is true, B may be false, D is true and E is true\n\nD If x ≥ 0 or x ≤ 1, then A may be false (for example if x = −1), B may be false, C may be\n  false and E may be false\n\nE If x ≥ 0 and x ≤ 1, then A is true, B may be false, C may be false and D is true\n\nThe correct option is therefore C, which is sufficient for exactly three of the other four statements.\n\n\n\n\nVersion 1.0, September 2023                                                                  Page 15"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13   The function f(x) has derivative f \u0003 (x).\n\n     The diagram below shows the graph of y = f \u0003 (x).\n\n     Which point corresponds to a local minimum of f(x) ?\n\n\n                                              y\n\n\n                                                           E\n                      y = f ' (x)\n\n                                                       D\n\n\n\n\n                     A                    C                    F   x\n\n\n\n                               B\n\n\n\n\n                                                  15"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The function f(x) has derivative f  (x).\n\n     The diagram below shows the graph of y = f  (x).\n\n     Which point corresponds to a local minimum of f(x) ?\n\n\n                                              y\n\n\n                                                           E\n                      y = f ' (x)\n\n                                                       D"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    },
+    {
+      "label": "F",
+      "rawText": "[visual option F; transcription required]"
+    },
+    {
+      "label": "G",
+      "rawText": "[visual option G; transcription required]"
+    },
+    {
+      "label": "H",
+      "rawText": "[visual option H; transcription required]"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "A local minimum of f(x) occurs where the gradient is 0 at the point, is negative immediately to\nthe left of the point and is positive immediately to its right.\nSo on the graph of f 0 (x), this will be at a point where f 0 (x) = 0, and f 0 (x) is increasing from\nnegative to positive at that point. The only such point on the graph given is C.\n\nThe behaviour of f(x) at all of the labelled points is as follows:\n\nA Changing from positive to negative gradient, so a local maximum.\n\nB A local minimum of the gradient, so a non-stationary point of inflection. If walking along\n  the curve, one would stop turning to the right and start turning to the left.\n\nC Changing from negative to positive gradient, so a local minimum.\n\nD This point, where x = 0, has no particular relevance to the shape of f(x).\n\nE A local maximum of the gradient, so a non-stationary point of inflection. If walking along\n  the curve, one would stop turning to the left and start turning to the right.\n\nF A local minimum of the gradient at a point of zero gradient, so a stationary point of inflection.\n  If walking along the curve, one would stop turning to the right and start turning to the left.\n\n\n\n\nVersion 1.0, April 2019                                                                     Page 15\n\n                                                                                        © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        16
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required",
+      "option-count-review"
+    ]
+  }
+}

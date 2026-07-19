@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "17   Find the fraction of the interval 0 ≤ θ ≤ π for which the inequality\n                                \u0004            \u0005\u0004            \u0005\n                                 sin(2θ) − 12 sin θ − cos θ ≥ 0\n\n     is satisﬁed.\n\n         1\n     A   12\n\n         1\n     B   6\n\n         1\n     C   4\n\n         5\n     D   12\n\n         7\n     E   12\n\n         3\n     F   4\n\n         5\n     G   6\n\n         11\n     H   12\n\n\n\n\n                                             19"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the fraction of the interval 0 ≤ θ ≤ π for which the inequality\n                                A            BA            B\n                                 sin(2θ) − 12 sin θ − cos θ ≥ 0\n\n     is satisﬁed.\n\n         1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "12\n\n         1"
+    },
+    {
+      "label": "B",
+      "rawText": "6\n\n         1"
+    },
+    {
+      "label": "C",
+      "rawText": "4\n\n         5"
+    },
+    {
+      "label": "D",
+      "rawText": "12\n\n         7"
+    },
+    {
+      "label": "E",
+      "rawText": "12\n\n         3"
+    },
+    {
+      "label": "F",
+      "rawText": "4\n\n         5"
+    },
+    {
+      "label": "G",
+      "rawText": "6\n\n         11"
+    },
+    {
+      "label": "H",
+      "rawText": "12"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "A product of two terms is at least 0 if both factors are positive or both terms are negative. So\nwe look at the signs of the two factors.\nWe start by finding the values of θ for which they are zero.\nWe have sin 2θ = 21 when 2θ = π6 or 5π                 π     5π\n                                       6 , so for θ = 12 or 12 . Thinking about a sketch of the\n                                           1\ngraph of y = sin 2θ, we see that sin 2θ − 2 is positive for θ between these values and negative\nelsewhere.\nFor the second factor, we have sin θ = cos θ when tan θ = 1, so θ = π4 . Thinking about the\ngraphs of y = sin θ and y = cos θ, we see that sin θ − cos θ is negative for θ < π4 and positive for\nθ > π4 . For consistency, we write π4 = 3π\n                                        12 in what follows.\nWe thus have the following table:\n\n\n                         π        π     π        3π               3π                       5π\n                 0 ≤ θ < 12   θ = 12    12 < θ < 12    θ = 3π\n                                                           12\n                                                                           5π\n                                                                  12 < θ < 12    θ = 5π\n                                                                                     12    12 < θ ≤ π\n  sin 2θ − 12        −           0           +            +            +            0           −\n sin θ − cos θ       −           −           −            0            +            +           +\n   product           +           0           −            0            +            0           −\n\nThe lengths of the subintervals where the product is positive (or zero) is\n                                    π\n                                  ( 12 − 0) + ( 5π   3π     3π   π\n                                                12 − 12 ) = 12 = 4\n\nThe whole interval has length π, so the fraction of the interval for which the inequality is satisfied\nis 41 , and the answer is option C.\n\n\n\n\nc UCLES                                                                                      Page 19"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

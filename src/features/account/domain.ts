@@ -21,12 +21,23 @@ export interface AccountAccessState {
   packageIds: readonly string[];
 }
 
+export interface AccountBotProtection {
+  provider: "turnstile";
+  required: boolean;
+  siteKey: string | null;
+}
+
 export interface AccountAccessService {
   readonly configured: boolean;
+  readonly botProtection: AccountBotProtection;
   previewInvite(code: string): Promise<InvitePreview>;
-  register(email: string, password: string): Promise<RegistrationResult>;
-  signIn(email: string, password: string): Promise<AccountSession>;
+  register(email: string, password: string, captchaToken?: string): Promise<RegistrationResult>;
+  signIn(email: string, password: string, captchaToken?: string): Promise<AccountSession>;
   completeEmailConfirmation(code: string): Promise<AccountSession>;
+  requestPasswordReset(email: string, captchaToken?: string): Promise<void>;
+  completePasswordRecovery(code: string): Promise<AccountSession>;
+  updatePassword(password: string): Promise<void>;
+  signOut(): Promise<void>;
   redeemInvite(code: string): Promise<RedeemedAccess>;
   getAccessState(): Promise<AccountAccessState>;
 }
@@ -52,6 +63,19 @@ export function inviteCodeLooksValid(code: string): boolean {
   return normalized.length >= 20 && normalized.length <= 96;
 }
 
+export function safeInternalReturnPath(value: unknown): string | null {
+  if (
+    typeof value !== "string" ||
+    !value.startsWith("/") ||
+    value.startsWith("//") ||
+    value.includes("\\") ||
+    /[\r\n]/u.test(value)
+  ) {
+    return null;
+  }
+  return value;
+}
+
 export function validateRegistration(
   input: RegistrationInput,
 ): RegistrationValidation {
@@ -61,20 +85,21 @@ export function validateRegistration(
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     errors.email = "请输入有效的邮箱地址";
   }
-  if (input.password.length < 10) {
-    errors.password = "密码至少需要 10 个字符";
-  } else if (
-    !/[a-z]/.test(input.password) ||
-    !/[A-Z]/.test(input.password) ||
-    !/[0-9]/.test(input.password)
-  ) {
-    errors.password = "密码需要同时包含大写字母、小写字母和数字";
-  }
+  const passwordError = validatePassword(input.password);
+  if (passwordError !== undefined) errors.password = passwordError;
   if (input.passwordConfirmation !== input.password) {
     errors.passwordConfirmation = "两次输入的密码不一致";
   }
 
   return errors;
+}
+
+export function validatePassword(password: string): string | undefined {
+  if (password.length < 10) return "密码至少需要 10 个字符";
+  if (!/[a-z]/.test(password) || !/[A-Z]/.test(password) || !/[0-9]/.test(password)) {
+    return "密码需要同时包含大写字母、小写字母和数字";
+  }
+  return undefined;
 }
 
 export function hasRegistrationErrors(

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q01",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 1,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "1   Find the complete set of values of k for which the line y = x − 2 crosses or touches\n    the curve y = x2 + kx + 2\n\n    A −1 ≤ k ≤ 3\n\n    B −3 ≤ k ≤ 5\n\n    C −4 ≤ k ≤ 4\n\n    D k ≤ −1 or k ≥ 3\n\n    E k ≤ −3 or k ≥ 5\n\n    F k ≤ −4 or k ≥ 4\n\n\n\n\n                                            3"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the complete set of values of k for which the line y = x − 2 crosses or touches\n    the curve y = x2 + kx + 2"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−1 ≤ k ≤ 3"
+    },
+    {
+      "label": "B",
+      "rawText": "−3 ≤ k ≤ 5"
+    },
+    {
+      "label": "C",
+      "rawText": "−4 ≤ k ≤ 4"
+    },
+    {
+      "label": "D",
+      "rawText": "k ≤ −1 or k ≥ 3"
+    },
+    {
+      "label": "E",
+      "rawText": "k ≤ −3 or k ≥ 5"
+    },
+    {
+      "label": "F",
+      "rawText": "k ≤ −4 or k ≥ 4"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We find the points where the line and curve meet by solving the equations simultaneously; this\ngives x2 + kx + 2 = x − 2. Rearranging gives\n\n                                    x2 + (k − 1)x + 4 = 0.\n\nThe discriminant of this is (k − 1)2 − 4 × 1 × 4 = (k − 1)2 − 16. The line and curve cross or\ntouch when the discriminant is ≥ 0, so we must solve\n\n                                       (k − 1)2 − 16 ≥ 0.\n\nExpanding and simplifying this gives\n\n                                       k 2 − 2k − 15 ≥ 0,\n\nwhich we can factorise to get\n                                       (k − 5)(k + 3) ≥ 0.\nThe equation (k − 5)(k + 3) = 0 has roots k = −3 and k = 5, so the quadratic is non-negative\nwhen k ≤ −3 or k ≥ 5. Thus the correct solution is E.\n\n\n\n\nVersion 1.0, April 2021                                                                Page 3\n\n                                          © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        3
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

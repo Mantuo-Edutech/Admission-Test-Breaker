@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "8   A selection, S, of n terms is taken from the arithmetic sequence 1, 4, 7, 10, … , 70.\n\n    Consider the following statement:\n\n                         ( ∗) There are two distinct terms in S whose sum is 74.\n\n    What is the smallest value of n for which ( ∗) is necessarily true?\n\n    A   12\n\n    B   13\n\n    C   14\n\n    D   21\n\n    E   22\n\n    F   23\n\n\n\n\n                                                 10"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A selection, S, of n terms is taken from the arithmetic sequence 1, 4, 7, 10, … , 70.\n\n    Consider the following statement:\n\n                         ( ∗) There are two distinct terms in S whose sum is 74.\n\n    What is the smallest value of n for which ( ∗) is necessarily true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "12"
+    },
+    {
+      "label": "B",
+      "rawText": "13"
+    },
+    {
+      "label": "C",
+      "rawText": "14"
+    },
+    {
+      "label": "D",
+      "rawText": "21"
+    },
+    {
+      "label": "E",
+      "rawText": "22"
+    },
+    {
+      "label": "F",
+      "rawText": "23"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We first determine the number of terms in the whole sequence: there are 70−1\n                                                                          3 + 1 = 23 + 1 = 24\nterms.\nWe next determine the number of pairs that sum to 74. The pairs are:\n\n                                               4 + 70\n                                               7 + 67\n                                                  ..\n                                                   .\n                                              34 + 40\n                                             [37 + 37]\n\nThe final pair is excluded because the two terms have to be distinct to fit the rule in (∗). The\nnumber of valid pairs is therefore 34−4\n                                     3 + 1 = 10 + 1 = 11.\nIf a selection S does not satisfy the rule in (∗), then it can have at most one term from each of\nthese pairs, so it has to leave out at least 11 terms. So it can have at most 24 − 11 = 13 terms.\nTherefore if S has at least 14 terms, it must satisfy (∗).\nWe also need to show that if S only has 13 terms, it might not satisfy (∗). We can include 1, 37\nand one term from each listed pair, giving 2 + 11 = 13 terms. These 13 terms do not contain a\ndistinct pair summing to 37.\nHence the smallest value of n which forces (∗) to be true is 14, and the correct answer is option C..\n\n\n\n\nVersion 1.0, July 2023                                                                      Page 10"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        10
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

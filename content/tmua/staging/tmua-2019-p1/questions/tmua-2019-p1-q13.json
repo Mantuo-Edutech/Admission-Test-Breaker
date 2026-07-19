@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13   Find the maximum value of\n\n\n                                 4sin x − 4 × 2sin x + 17\n                                                       4\n\n     for real x.\n\n         1\n     A   4\n\n         5\n     B   2\n\n         13\n     C   2\n\n         21\n     D   2\n\n         65\n     E   4\n\n     F There is no maximum value.\n\n\n\n\n                                         15"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the maximum value of\n\n\n                                 4sin x − 4 × 2sin x + 17\n                                                       4\n\n     for real x.\n\n         1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "4\n\n         5"
+    },
+    {
+      "label": "B",
+      "rawText": "2\n\n         13"
+    },
+    {
+      "label": "C",
+      "rawText": "2\n\n         21"
+    },
+    {
+      "label": "D",
+      "rawText": "2\n\n         65"
+    },
+    {
+      "label": "E",
+      "rawText": "4"
+    },
+    {
+      "label": "F",
+      "rawText": "There is no maximum value."
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We will not use calculus for this question, as the specification does not expect knowledge of\ndifferentiating exponentials or trigonometric functions. (And it also turns out that using calculus\nwould make the solution far more complicated.)\nInstead, we note that this is a quadratic expression in u = 2sin x , and we can write the function\nas\n                                          u2 − 4u + 17\n                                                     4 .\n\nWe also note that as −1 ≤ sin x ≤ 1, 12 ≤ u ≤ 2 for all real x (and u can take every value in this\ninterval).\nNow we can complete the square on the quadratic to understand its behaviour; we get\n                                                           2\n                                (u − 2)2 − 22 + 17            1\n                                                4 = (u − 2) + 4\n\nThus the minimum value of the function occurs when u = 2, and for u in the interval 12 ≤ u ≤ 2,\nthe maximum value occurs when u = 12 . In this case, we get (− 23 )2 + 14 = 10  5\n                                                                            4 = 2 , so the correct\nanswer is B.\n\n\n\n\nc UCLES                                                                                    Page 15"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

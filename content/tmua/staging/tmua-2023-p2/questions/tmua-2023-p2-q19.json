@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "19   In this question, f (x) is a non-constant polynomial, and g(x) = x f ′(x)\n\n     f (x) = 0 for exactly M real values of x.\n\n     g(x) = 0 for exactly N real values of x.\n\n     Which of the following statements is/are true?\n\n           I       It is possible that M < N\n\n           II      It is possible that M = N\n\n           III     It is possible that M > N\n\n\n     A   none of them\n\n     B   I only\n\n     C   II only\n\n     D   III only\n\n     E   I and II only\n\n     F   I and III only\n\n     G   II and III only\n\n     H   I, II and III\n\n\n\n\n                                                   21"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "In this question, f (x) is a non-constant polynomial, and g(x) = x f ′(x)\n\n     f (x) = 0 for exactly M real values of x.\n\n     g(x) = 0 for exactly N real values of x.\n\n     Which of the following statements is/are true?\n\n           I       It is possible that M < N\n\n           II      It is possible that M = N\n\n           III     It is possible that M > N"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "H",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Since f (x) = 0 for exactly M real values of x, f (x) has at least M − 1 stationary points: there\nmust be at least one stationary point between every adjacent pair of values of x for which\nf (x) = 0. But there may also be more stationary points between these pairs of values or before\nthe first or after the last value.\nNow g(x) = xf 0 (x) is zero whenever f (x) has a stationary point. So there are at least M − 1\nvalues of x for which g(x) = 0, but there will be more if f (x) has more than M − 1 stationary\npoints. In addition, g(x) = 0 when x = 0. If x = 0 is a stationary point of f (x), then g(x) = 0\nat every stationary point of f (x) and nowhere else. If x = 0 is not a stationary point of f (x),\nthen g(x) = 0 will be true for one further value of x.\nSummarising:\n\n•     the number of stationary points of f (x) is at least M − 1\n\n•     N equals the number of stationary points of f (x) or one more than the number of stationary\n      points of f (x).\n\nTherefore N is at least M − 1, so N ≥ M − 1, which rearranges to M ≤ N + 1.\nNow considering the options:\n\nI    M < N is possible if f (x) has extra stationary points between zeros. For example, f (x) =\n     x2 + 1 has M = 0 but N = 1. As a second example, let f (x) be a cubic with both turning\n     points above the x-axis; this has M = 1 and N = 2 or N = 3.\n\nII   M = N is possible if the number of stationary points of f (x) is M − 1 and x = 0 is not a\n     stationary point of f (x). For example, f (x) = (x − 1)2 − 1 has M = 2 (at x = 0 and x = 2)\n     and one stationary point at x = 1. So g(x) = 0 at x = 0 and x = 1, giving N = 2.\n\nIII M > N is possible if the number of stationary points of f (x) is M − 1 and x = 0 is a\n    stationary point of f (x). For example, f (x) = x2 − 1 has M = 2 (at x = ±1) and one\n    stationary point at x = 0. So g(x) = 0 at x = 0 only, giving N = 1.\n\nThe correct answer is option H, I, II and III.\n\n\n\n\nVersion 1.0, September 2023                                                              Page 22"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        22
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

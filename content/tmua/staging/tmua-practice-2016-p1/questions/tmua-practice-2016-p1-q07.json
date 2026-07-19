@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q07",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 7,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "͹\u0003     ͸ͲΨ\u0003\u0003\u0003\u0003 ǯ\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003Ǥ\u0003\n\n       \u0017\u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003  Ǥ\u0003 \b\u0003 \u0003 \u0003\n        \u0003\u0003\u0003\u0003\u0003Ǥ\u0003\u0003\n       ଶ\n            \u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003  Ǣ\u0003\u0003\n       ହ\u0003\n\n       ଶ\n           \u0003\u0003\u0003  \u0003\u0003\u0003\u0003 \u0003\u0003Ǥ\u0003\n       ଷ\n\n       \u001a\u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003 \u0003 ǡ\u0003 \u0003 \u0003 ǡ\u0003 \u0003 \u0003 \u0003 \u0003\n       \u0003ǫ\u0003\n\n\n\u0003             ͳ\n       \u0004\u0003      \u0003\n              ͷ\n\u0003      \u0003       ͹\n       \u0005\u0003        \u0003\n              ʹͷ\n\u0003      \u0003      ͳ\n       \u0006\u0003      \u0003\n              ͵\n\u0003      \u0003      ͳͳ\n       \u0007\u0003        \u0003\n              ʹͷ\n     \u0003 \u0003      ͵\n       \b\u0003      \u0003\n              ͷ\n       \u0003"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "60Ψ ǯǤ\n\n                  Ǥ E  \n        Ǥ\n       ଶ\n               Ǣ\n       ହ\n\n       ଶ\n              Ǥ\n       ଷ\n\n                ǡ   ǡ    \n       ǫ\n\n\n             1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "5\n             7"
+    },
+    {
+      "label": "B",
+      "rawText": "25\n            1"
+    },
+    {
+      "label": "C",
+      "rawText": "3\n            11"
+    },
+    {
+      "label": "D",
+      "rawText": "25\n            3"
+    },
+    {
+      "label": "E",
+      "rawText": "5"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "There are two factors for each member: whether the member is a man or woman, and whether\nthe member plays tennis or cricket. We can either display this situation as a tree diagram or as\na two-way table. Since the information given has both the fraction of male members who play\ncricket and the fraction of the cricketing members who are women, it will be simpler to use a\ntwo-way table. (In a tree diagram, we could easily display one of the two, but the other will be\nhard.)\nWe could also work with fractions or with numbers of people. In this solution, we will work\nwith numbers. The 60% suggests that we work with a multiple of 100 people, and the presence\nof a fraction 23 , suggests that we work with a multiple of 3. So we start with 300 people. This\nis the information we obtain from the 60% of members are women and 52 of the resulting 120\nmale members play cricket:\n\n                                         Men    Women     Total\n                               Tennis     72\n                               Cricket    48\n                                Total    120        180    300\n\nWe are also told that 23 of the cricketing members are women, so the 48 cricketing men are 31 of\nthe cricketers, hence 96 cricketers are women, leaving 84 women to play tennis:\n\n                                         Men    Women     Total\n                               Tennis     72     84       (156)\n                               Cricket    48     96       (144)\n                                Total    120     180       300\n\n(The parenthesised figures are not needed to finish the question.)\nTherefore the probability that a member of the club, chosen at random, is a woman who plays\n          84    28      7\ntennis is     =     = , and the answer is B.\n          300   100    25\n\n\n\n\n                                               10\n                                                                                    © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        10
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

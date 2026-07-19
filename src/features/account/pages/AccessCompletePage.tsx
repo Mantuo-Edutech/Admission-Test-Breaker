@@ -3,6 +3,10 @@ import { CheckCircle2, LoaderCircle, ShieldCheck, TriangleAlert } from "lucide-r
 import { Link } from "react-router-dom";
 import type { AppServices } from "../../../app/dependencies.js";
 import { AccountPageHeader } from "../components/AccountPageHeader.js";
+import {
+  inviteContentProductsForPackages,
+  type ContentProduct,
+} from "../../library/content-product-registry.js";
 
 interface AccessCompletePageProps {
   services: AppServices;
@@ -12,6 +16,7 @@ type AccessVerification = "checking" | "unlocked" | "missing";
 
 export function AccessCompletePage({ services }: AccessCompletePageProps) {
   const [verification, setVerification] = useState<AccessVerification>("checking");
+  const [unlockedProducts, setUnlockedProducts] = useState<readonly ContentProduct[]>([]);
 
   useEffect(() => {
     let active = true;
@@ -23,9 +28,9 @@ export function AccessCompletePage({ services }: AccessCompletePageProps) {
     void account.getAccessState()
       .then((state) => {
         if (active) {
-          setVerification(
-            state.packageIds.includes("tmua-full-access") ? "unlocked" : "missing",
-          );
+          const products = inviteContentProductsForPackages(state.packageIds);
+          setUnlockedProducts(products);
+          setVerification(products.length > 0 ? "unlocked" : "missing");
         }
       })
       .catch(() => { if (active) setVerification("missing"); });
@@ -44,9 +49,19 @@ export function AccessCompletePage({ services }: AccessCompletePageProps) {
         {verification === "checking" && <p>正在读取当前账号的内容权限…</p>}
         {verification === "unlocked" && (
           <>
-            <p>邀请码对应的模考与复习资料已经绑定到你的学生账号。</p>
+            <p>邀请码对应的 {unlockedProducts.length} 项已发布资料已经绑定到你的学生账号。</p>
             <p className="account-message__note"><ShieldCheck aria-hidden="true" />这不会向邀请码提供者开放你的学习记录。</p>
-            <Link className="button button--primary" to="/exams/tmua/resources">查看模考与资料</Link>
+            <div className="account-message__actions">
+              {unlockedProducts.map((product, index) => (
+                <Link
+                  className={`button ${index === 0 ? "button--primary" : "button--secondary"}`}
+                  key={product.id}
+                  to={product.route!}
+                >
+                  {product.actionLabel ?? `打开${product.title.zh}`}
+                </Link>
+              ))}
+            </div>
           </>
         )}
         {verification === "missing" && (

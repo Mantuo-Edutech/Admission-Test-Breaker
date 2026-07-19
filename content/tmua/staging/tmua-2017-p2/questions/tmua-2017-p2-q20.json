@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "20     I have forgotten my 5-character computer password, but I know that it consists of\n        the letters a, b, c, d, e in some order. When I enter a potential password into the\n        computer, it tells me exactly how many of the letters are in the correct position.\n\n        When I enter abcde, it tells me that none of the letters are in the correct position.\n        The same happens when I enter cdbea and eadbc.\n\n        Using the best strategy, how many further attempts must I make in order to\n        guarantee that I can deduce the correct password?\n\n        A None: I can deduce it immediately\n\n        B One\n\n        C Two\n\n        D Three\n\n        E      More than three\n\n\n\n\n                                           \b\u0011\u0007\u0003\u0012 \u0003\u0017\b\u0016\u0017\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0015\u0015"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "I have forgotten my 5-character computer password, but I know that it consists of\n        the letters a, b, c, d, e in some order. When I enter a potential password into the\n        computer, it tells me exactly how many of the letters are in the correct position.\n\n        When I enter abcde, it tells me that none of the letters are in the correct position.\n        The same happens when I enter cdbea and eadbc.\n\n        Using the best strategy, how many further attempts must I make in order to\n        guarantee that I can deduce the correct password?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "None: I can deduce it immediately"
+    },
+    {
+      "label": "B",
+      "rawText": "One"
+    },
+    {
+      "label": "C",
+      "rawText": "Two"
+    },
+    {
+      "label": "D",
+      "rawText": "Three"
+    },
+    {
+      "label": "E",
+      "rawText": "More than three\n\n\n\n\n                                           ED E\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can write this out in a grid to see what the current state of knowledge is.\n\n                                                  Position\n                                              1   2 3 4       5\n                                   Tried      a   b c d       e\n                                              c   d b e       a\n                                              e   a d b       c\n                                   Possible   b   c a a       b\n                                              d   e e c       d\n\nSo positions 1 and 5 contain b and d in some order, while positions 2, 3, 4 contain either cea or\neac in that order.\nWe certainly do not know the correct password yet.\nWe could sensibly try bcead as our next attempt. What might we be told in response?\nIf we have the b and d in the correct order, these 2 letters will be correct, otherwise neither is\ncorrect.\nIf we have the middle three letters cea in the correct order, then these 3 letters will be correct,\notherwise none of them is.\nSo:\n\n•     if both are correct, the computer will tell us that 5 letters are correct, and we are done;\n\n•     if the outer pair are correct but the middle ones are not, the computer will tell us that\n      2 letters are correct, and we can deduce that the correct password is beacd;\n\n•     if the outer pair are wrong but the middle ones are correct, the computer will tell us that\n      3 letters are correct, and we can deduce that the correct password is dceab;\n\n•     if both are wrong, the computer will tell us that 0 letters are correct, and we can deduce\n      that the correct password is deacb.\n\nSince the four cases give four distinct responses by the computer (0, 2, 3, 5 correct letters),\nwe can distinguish between them, and therefore deduce the correct password with just this one\nfurther attempt.\nThe correct answer is B.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 23\n\n                                                                                      © UCLES 2019\n\f\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support:\nadmissionstesting.org/help"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        24,
+        25
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

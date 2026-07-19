@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q10",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 10,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "10\n\nͳͲ\u0003     \u0003\u0003\u0003‫\u0003\u0003ݕ\u0003\u0003ݔ‬Ǧ\u0003\u0003Ǥ\u0003\u0003\n      \u0003\n      \u001a \u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003  \u0003\u0003‫ ݔ‬൏ ‫\u0003ݕ‬ǫ\u0003\n\n\n      \u0004\u0003    ‫ݔ‬ସ ൏ ‫ݕ‬ସ\n      \u0003\n      \u0005\u0003    ‫ݕ‬ସ ൏ ‫ݔ‬ସ\n      \u0003\n      \u0006\u0003    ‫ି ݔ‬ଵ ൏ ‫ି ݕ‬ଵ\n      \u0003\n      \u0007\u0003    ‫ି ݕ‬ଵ ൏ ‫ି ݔ‬ଵ\n      \u0003        ଷ   ଷ\n      \b\u0003    ‫ݔ‬ହ ൏ ‫ݕ‬ହ\n      \u0003        ଷ   ଷ\n        \u0003   ‫ݕ‬ହ ൏ ‫ݔ‬ହ\n\n\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "10     ‫ݕݔ‬ǦǤ\n      \n          ‫ ݔ‬൏ ‫ݕ‬ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "‫ݔ‬ସ ൏ ‫ݕ‬ସ"
+    },
+    {
+      "label": "B",
+      "rawText": "‫ݕ‬ସ ൏ ‫ݔ‬ସ"
+    },
+    {
+      "label": "C",
+      "rawText": "‫ି ݔ‬ଵ ൏ ‫ି ݕ‬ଵ"
+    },
+    {
+      "label": "D",
+      "rawText": "‫ି ݕ‬ଵ ൏ ‫ି ݔ‬ଵ\n              ଷ   ଷ"
+    },
+    {
+      "label": "E",
+      "rawText": "‫ݔ‬ହ ൏ ‫ݕ‬ହ\n              ଷ   ଷ\n           ‫ݕ‬ହ ൏ ‫ݔ‬ହ\n\n\n\n\n© UCLES 2016"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "A key point in this question is that x and y are permitted to be positive or negative.\nTo show that a condition is not sufficient, we need to find values of x and y where the condition\nholds but x ⩾ y. To show that a condition is sufficient, we must prove it to be the case.\nWe can argue algebraically or graphically; we start with an algebraic approach.\n\nA If y = −2 and x = 1, the condition holds but x > y.\n\nB We do not even need to look at negative cases here: if x and y are both positive, we can take\n  fourth roots and deduce that y < x, for example y = 1 and x = 2.\n\nC If x = 2 and y = 1, then x−1 < y −1 but x > y.\n\nD Positive values of x and y do not work, but if we take x = 1 and y = −1, then y −1 < x−1\n  but x > y.\n\nE This looks quite plausible: if we raise this inequality to the power of 5 (which we are allowed\n  to do, as f(x) = x5 is an increasing function), we get x3 < y 3 . We can now take cube roots\n                                                √\n  (again, this is permissible as f(x) = x 3 = 3 x in an increasing function) to give x < y. So\n                                           1\n\n\n  this condition is sufficient.\n\nF Arguing as in part E, y 5 < x 5 implies y < x, so this is not sufficient. Alternatively, we can\n                             3       3\n\n\n  just substitute in the values x = 1, y = −1.\n\nThus the answer is option E.\nWe can also see this by looking at the graphs of the functions f(x) = x4 , f(x) = x−1 and\nf(x) = x 5 : if these are strictly increasing functions, then x < y if and only if f(x) < f(y), while\n         3\n\n\nif they are strictly decreasing functions, then x < y if and only if f(x) > f(y).\nThese are sketches of the graphs of these functions:\n                 y                                y                                 y\n\n\n\n\n                                 x                              x                                  x\n\n\n\n\n                                                                                        3\n           f(x) = x4                        f(x) = x−1                        f(x) = x 5\n\nNeither of the first two functions is strictly increasing or strictly decreasing (for f(x) = x−1 , note\nthat the function decreases when x < 0, but f(−1) < f(1), so it is not a decreasing function).\nThe third function is strictly increasing, so the answer is option E.\n\n\n\n\n                                                  13\n                                                                                            © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "17\n\nͳͺ\u0003   \u0006\u0003\u0003\u0003\u0003\u0003 \u0003݂ሺ‫ݔ‬ሻǣ\u0003\n      \u0003\n                         ଶ                              ଵ       ଶ       ଵ\n            ሺȗሻ\u0003 \u0003൫݂ሺ‫ݔ‬ሻ൯ ൑ ͳ\u0003\u0003\u0003െͳ ൑ ‫ ݔ‬൑ ͳ\u0003\u0003‫ି׬‬ଵ൫݂ሺ‫ݔ‬ሻ൯ ‫ ݔ‬൑ ‫ି׬‬ଵ ݂ሺ‫ݔ‬ሻ ‫\u0003ݔ‬\n            \u0003\n      \u001a \u0003\u0003\u0003\u0003\u0003 \u0003\u0003\u0003 \u0003\u0003ሺȗሻǫ\u0003\n      \u0003\n\n                    ͳ\n      \u0004\u0003 ݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬൅ \u0003\n                    ʹ\n      \u0003             ͳ\n      \u0005\u0003 ݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬െ \u0003\n                    ʹ\n      \u0003\n      \u0006\u0003 ݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬൅ ‫ ݔ‬ଷ \u0003\n      \u0003\n      \u0007\u0003 ݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬െ ‫ ݔ‬ଷ \u0003\n      \u0003\n      \b\u0003 ݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬ଶ ൅ ‫ ݔ‬ସ \u0003\n      \u0003\n          \u0003   ݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬ଶ െ ‫ ݔ‬ସ \u0003\n\n\n\n\n© UCLES 2016                                                                        [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "17\n\n18   C ݂ሺ‫ݔ‬ሻǣ\n      \n                         ଶ                              ଵ       ଶ       ଵ\n            ሺȗሻ ൫݂ሺ‫ݔ‬ሻ൯ ൑ 1െ1 ൑ ‫ ݔ‬൑ 1‫ି׬‬ଵ൫݂ሺ‫ݔ‬ሻ൯ ‫ ݔ‬൑ ‫ି׬‬ଵ ݂ሺ‫ݔ‬ሻ ‫ݔ‬\n            \n         ሺȗሻǫ\n      \n\n                    1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬൅ \n                    2\n                   1"
+    },
+    {
+      "label": "B",
+      "rawText": "݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬െ \n                    2"
+    },
+    {
+      "label": "C",
+      "rawText": "݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬൅ ‫ ݔ‬ଷ"
+    },
+    {
+      "label": "D",
+      "rawText": "݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬െ ‫ ݔ‬ଷ"
+    },
+    {
+      "label": "E",
+      "rawText": "݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬ଶ ൅ ‫ ݔ‬ସ \n      \n             ݂ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬ଶ െ ‫ ݔ‬ସ \n\n\n\n\n© UCLES 2016                                                                        [Turn over"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "For a function to be a counterexample to this ‘if’ statement, the first condition (the antecedent)\nmust be true but the second condition (the consequent) must be false.\nSo we first check whether these functions satisfy the condition f(x) ⩽ 1 for all −1 ⩽ x ⩽ 1:\n                                                                       \u00012\n\n\nA This function goes from − 21 to 32 as x goes from −1 to 1. So when x = 1, f(x) = ( 32 )2 > 1.\n                                                                                \u00012\n\n  So this function does not satisfy the antecedent.\n\nB Similarly to A, when x = − 12 , f(x) = − 32 , so f(x) > 1 and this function also does not\n                                                        \u00012\n\n  satisfy the antecedent.\n\nC When x = 1, f(x) = 2 so f(x) > 1 and this function does not satisfy the antecedent.\n                                 \u00012\n\nD This function looks as though it might satisfy the antecedent, as it does not obviously fail to\n  do so: f(−1) = f(0) = f(1) = 0, so the cubic graph has two stationary points in the interval\n  −1 ⩽ x ⩽ 1. We can locate these by differentiating:\n\n                                           f 0 (x) = 1 − 3x2\n\n   so f 0 (x) = 0 when x = ± √13 . As\n\n          f √13 bigr) = √13 − 3√\n                               1      2\n                                          < 1 and     f − √13 = − √13 + 3√\n                                                                         1        2\n                                                             \u0001\n                                 3\n                                   = 3√ 3                                  3\n                                                                             = − 3√ 3\n                                                                                      > −1,\n\n  we see that the function lies between − 3√     and  √ when −1 ⩽ x ⩽ 1, so f(x)    ⩽ 1 in this\n                                             2        2\n                                                                                 \u00012\n                                               3     3 3\n  interval, and the antecedent is satisfied.\n\nE As in C, when x = 1, f(x) = 2 so f(x) > 1 and this function does not satisfy the antecedent.\n                                         \u00012\n\nF As with D, f(−1) = f(0) = f(1) = 0, so we look for stationary points of the function. We\n  have\n                                 f 0 (x) = 2x − 4x3 = 2x(1 − 2x2 )\n  so f 0 (x) = 0 when x = 0 or x = ± √12 . We have f(0) = 0 and f ± √12 = 12 − 41 = 14 , so the\n                                                                       \u0001\n\n   function lies between 0 and 14 when −1 ⩽ x ⩽ 1, so the antecedent is satisfied.\n\nWe therefore only need to consider the consequent condition for D and F.\nFor the function in D, the integral on the right, −1 f(x) dx, is zero, since both x and x3 are odd\n                                                 R1\n\nfunctions: the area between 0 and 1 and the area between −1 and 0 are equal, but the first is\nabove the x-axis and the second below it, so they cancel each otherR 1 out.\u00012We could also see this\nby calculating the integral explicitly. The integral on the left, −1 f(x) dx, is the integral of\na square, which is never negative, so the integral must be greater than 0. (We could likewise\nfind this exactly by explicit integration.) Thus −1 f(x) dx > −1 f(x) dx and the consequent\n                                                 R1       \u00012        R1\n\nis false. Hence D provides a counterexample.\nFor the sake of completeness, we will show that F is \u0001not a counterexample. Note that 0 ⩽\nf(x) < 1 for all −1 ⩽ x ⩽ 1. This means that f(x) ⩽ f(x) for all −1 ⩽ x ⩽ 1, and so\n                                                       2\n\n\n −1 f(x) dx ⩽ −1 f(x) dx. Thus F is not a counterexample. (We could, of course, find these\nR1       \u00012      R1\n\nintegrals by explicitly integrating.)\nThe correct answer is therefore D.\n\n\n\n                                                23\n                                                                                      © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        23
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

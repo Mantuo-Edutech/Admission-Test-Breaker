@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11.    Which one of the following numbers is largest in value?\n       (All angles are given in radians.)\n\n\n\n       A       tan\n\n       B       log   100\n\n       C       sin\n\n       D       log 10\n\n       E        √2 − 1"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Which one of the following numbers is largest in value?\n       (All angles are given in radians.)"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "tan"
+    },
+    {
+      "label": "B",
+      "rawText": "log   100"
+    },
+    {
+      "label": "C",
+      "rawText": "sin"
+    },
+    {
+      "label": "D",
+      "rawText": "log 10"
+    },
+    {
+      "label": "E",
+      "rawText": "√2 − 1"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We work out or approximate all five numbers.\n\nA tan 3π\n         \u0001\n       4 = −1\n\nB log10 100 = 2\n\nC sin10 π2 = 110 = 1\n          \u0001\n\nD log2 10 = 3. · · · , or more formally, 3 < log2 10 < 4, as 23 = 8 and 24 = 16\n       √                       √\nE 0 < 2 − 1 < 1, so 0 < ( 2 − 1)10 < 1\n\nOnly one of these numbers is greater than 3, so the answer is D.\n\n\n\n\n                                                14\n                                                                                  © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

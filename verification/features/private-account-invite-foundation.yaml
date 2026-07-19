@@ -18,6 +18,8 @@ claims:
       The browser validates an invite before registration, retains it only for
       the current browser session, and redeems it after immediate login or
       email confirmation without exposing a service-role key to the client.
+      When the journey starts from a published locked product, a separately
+      validated internal return path brings the student back to that product.
     artifacts:
       - src/features/account/domain.ts
       - src/features/account/supabase-account-service.ts
@@ -25,7 +27,9 @@ claims:
       - src/features/account/pages/RegisterPage.tsx
       - src/features/account/pages/LoginPage.tsx
       - src/features/account/pages/EmailConfirmationPage.tsx
+      - src/features/account/storage/pending-invite.ts
       - tests/app/account-access-flow.test.tsx
+      - tests/features/account/pending-invite.test.ts
     automatedChecks:
       - test
       - typecheck
@@ -47,6 +51,27 @@ claims:
       - verify:supabase-contracts
       - verify:supabase
 
+  - id: authenticated-learner-data-sync
+    status: verified
+    statement: >-
+      Anonymous profiles and practice remain in a random local Guest Space.
+      After the student signs in, auth-aware adapters atomically claim newer
+      Guest data into that student's Learner Space, append only the missing
+      event suffix, clear the unscoped local copy and reject a second account.
+    artifacts:
+      - src/features/learner-data/auth-aware-practice-store.ts
+      - src/features/learner-data/auth-aware-profile-store.ts
+      - src/features/learner-data/supabase-repository.ts
+      - supabase/migrations/20260718143000_durable_learner_data.sql
+      - tests/features/learner-data/auth-aware-stores.test.ts
+      - supabase/tests/database/private_account_rls.test.sql
+      - scripts/verify-supabase-local.ts
+    automatedChecks:
+      - test
+      - typecheck
+      - verify:supabase-contracts
+      - verify:supabase
+
   - id: separate-content-entitlement
     status: verified
     statement: >-
@@ -61,12 +86,48 @@ claims:
       - verify:supabase-contracts
       - verify:supabase
 
+  - id: published-package-issuance-gate
+    status: verified
+    statement: >-
+      Service-role invite issuance succeeds only when every requested active
+      package contains at least one published entitled resource with a real
+      publication timestamp. Draft-only ESAT, TARA, LNAT and UCAT packages are
+      rejected atomically instead of giving students an empty promise.
+    artifacts:
+      - supabase/migrations/20260719090000_invite_publication_gate.sql
+      - supabase/tests/database/private_account_rls.test.sql
+      - scripts/verify-supabase-local.ts
+      - docs/architecture/decisions/2026-07-19-invites-require-published-assets.md
+    automatedChecks:
+      - verify:supabase-contracts
+      - verify:supabase
+
+  - id: account-lifecycle-ui
+    status: verified
+    statement: >-
+      A signed-in student can inspect their current content entitlements, sign
+      out, request a privacy-preserving password reset and set a new password
+      only after the recovery code establishes a valid session.
+    artifacts:
+      - src/features/account/pages/AccountPage.tsx
+      - src/features/account/pages/ForgotPasswordPage.tsx
+      - src/features/account/pages/PasswordResetPage.tsx
+      - src/features/account/supabase-account-service.ts
+      - tests/app/account-lifecycle.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+      - verify:supabase-contracts
+
 boundaries:
   - The implementation is connected to local Supabase only; no Mantou cloud project or production domain has been configured.
-  - Existing preparation profiles and practice sessions still use local Guest Space adapters and are not yet uploaded to the learner-space tables.
-  - Production SMTP, CAPTCHA or equivalent abuse protection, backup recovery, account deletion and security review remain pending.
+  - The authenticated data adapter and migration pass local database and HTTP checks, but they have not been applied to or exercised against a Mantou production project.
+  - Password reset and sign-out are implemented but still require production SMTP/domain verification; CAPTCHA or equivalent abuse protection, backup recovery, account deletion and security review remain pending.
   - Teacher, parent and agent Grants, access audit and revocation UI remain a later Phase 2 slice.
   - A local deterministic seed invite exists only for development and must never be deployed as a production invite.
+  - A package being active is not sufficient for sale or invitation; it must contain a currently published entitled resource.
+  - The least-privilege Bingbing operator identity, own-code issue/revoke RPC, private audit and own-record operations page are implemented and locally verified; real-device UAT, production account bootstrap and MFA/domain drill remain pending.
 
 manualChecks:
   - id: account-responsive-and-email-review

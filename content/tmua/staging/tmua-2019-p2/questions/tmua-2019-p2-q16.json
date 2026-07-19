@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16   The graph of the quadratic\n                                        y = px2 + qx + p\n     where p > 0, intersects the x-axis at two distinct points.\n\n     In which one of the following graphs does the shaded region show the complete set\n     of possible values that p and q could take?\n\n      A                         B                          C\n          q                         q                          q\n       4                         4                          4\n       3                         3                          3\n       2                         2                          2\n       1                         1                          1\n       0               p         0               p          0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6           −1 0 1 2 3 4 5 6\n      −2                        −2                         −2\n      −3                        −3                         −3\n      −4                        −4                         −4\n\n      D                         E                          F\n          q                         q                          q\n       4                         4                          4\n       3                         3                          3\n       2                         2                          2\n       1                         1                          1\n       0               p         0               p          0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6           −1 0 1 2 3 4 5 6\n      −2                        −2                         −2\n      −3                        −3                         −3\n      −4                        −4                         −4\n\n      G                         H\n          q                         q\n       4                         4\n       3                         3\n       2                         2\n       1                         1\n       0               p         0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6\n      −2                        −2\n      −3                        −3\n      −4                        −4\n\n\n\n\n                                             18"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The graph of the quadratic\n                                        y = px2 + qx + p\n     where p > 0, intersects the x-axis at two distinct points.\n\n     In which one of the following graphs does the shaded region show the complete set\n     of possible values that p and q could take?\n\n      A                         B                          C\n          q                         q                          q\n       4                         4                          4\n       3                         3                          3\n       2                         2                          2\n       1                         1                          1\n       0               p         0               p          0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6           −1 0 1 2 3 4 5 6\n      −2                        −2                         −2\n      −3                        −3                         −3\n      −4                        −4                         −4\n\n      D                         E                          F\n          q                         q                          q\n       4                         4                          4\n       3                         3                          3\n       2                         2                          2\n       1                         1                          1\n       0               p         0               p          0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6           −1 0 1 2 3 4 5 6\n      −2                        −2                         −2\n      −3                        −3                         −3\n      −4                        −4                         −4\n\n      G                         H\n          q                         q\n       4                         4\n       3                         3\n       2                         2\n       1                         1\n       0               p         0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6\n      −2                        −2\n      −3                        −3\n      −4                        −4"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    },
+    {
+      "label": "F",
+      "rawText": "[visual option F; transcription required]"
+    },
+    {
+      "label": "G",
+      "rawText": "[visual option G; transcription required]"
+    },
+    {
+      "label": "H",
+      "rawText": "[visual option H; transcription required]"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "For the quadratic to intersect the x-axis at two distinct points, we require the discriminant to\nbe positive. In this case, this gives\n                                          q 2 − 4p2 > 0.\n\nWe can either deduce the correct graph by solving this inequality, or decide between the given\noptions by checking various points. We show both approaches here.\nFirst, we can write the inequality as (q − 2p)(q + 2p) > 0. Therefore, this inequality holds when\neither q − 2p > 0 and q + 2p > 0, or when q − 2p < 0 and q + 2p < 0. The first case gives q > 2p\nand q > −2p. As p > 0, this simplifies to q > 2p. The second case gives q < 2p and q < −2p,\nwhich simplifies to q < −2p. So the solution is q > 2p or q < −2p, and this is shown in graph F.\nAlternatively, we can check values of p and q. When p = 1, q = 0, q 2 − 4p2 = −4 < 0, so this\npoint cannot lie in the region. This eliminates options A, C, E and G. Next, we test a point\nwith q < 0, say p = 1, q = −4. This gives q 2 − 4p2 = 12 > 0, so this point is in the region. This\neliminates options B and D, so we are left with F or H. Finally, we can check a point which\ndistinguishes the two, say p = 2, q = 3, which gives q 2 − 4p2 = −7 < 0, so this point is not in\nthe region. Therefore the correct answer is graph F.\n\n\n\n\nc UCLES                                                                                   Page 20"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        20
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required",
+      "option-count-review"
+    ]
+  }
+}

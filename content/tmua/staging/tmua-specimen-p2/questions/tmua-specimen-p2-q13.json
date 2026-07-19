@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13.    Five runners competed in a race: Fred, George, Hermione, Lavender, and Ron.\n\n               Fred beat George.\n               Hermione beat Lavender.\n               Lavender beat George.\n               Ron beat George.\n\n       Assuming there were no ties, how many possible finishing orders could there have been,\n       given only this information?\n\n\n       A       1\n       B       6\n       C       12\n       D       18\n       E       24\n       F       120"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Five runners competed in a race: Fred, George, Hermione, Lavender, and Ron.\n\n               Fred beat George.\n               Hermione beat Lavender.\n               Lavender beat George.\n               Ron beat George.\n\n       Assuming there were no ties, how many possible finishing orders could there have been,\n       given only this information?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "1"
+    },
+    {
+      "label": "B",
+      "rawText": "6"
+    },
+    {
+      "label": "C",
+      "rawText": "12"
+    },
+    {
+      "label": "D",
+      "rawText": "18"
+    },
+    {
+      "label": "E",
+      "rawText": "24"
+    },
+    {
+      "label": "F",
+      "rawText": "120"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let us indicate the runners by their initials, and write A > B to mean that A beat B.\nWe are given F > G, H > L, L > G and R > G, which combine to give F > G, H > L > G,\nR > G. So G came last, and the other four runners could have come in any order, except\nthat H > L. There are 4! = 24 ways of ordering these four runners. In half of them, H > L,\nwhile in the other half, L > H. (More precisely, we can pair every finishing order with H > L\ntogether with the finishing order in which H and L are swapped, so there are the same number\nof finishing orders with H > L as there are with L > H.)\nSo the number of possible finishing orders is 24\n                                              2 = 12, and the answer is C.\n\n\n\n\n                                              16\n                                                                                  © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        16
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

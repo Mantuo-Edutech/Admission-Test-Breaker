@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "20   What is the complete range of values of k for which the curves with equations\n\n\n                                         y = x3 − 12x\n     and\n                                       y = k − (x − 2)2\n\n     intersect at three distinct points, of which exactly two have positive x-coordinates?\n\n     A −4 < k < 0\n\n     B −4 < k < 4\n\n     C −4 < k < 16\n\n     D −16 < k < 0\n\n     E −16 < k < 4\n\n     F −16 < k < 16\n\n\n\n\n                                            22"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "What is the complete range of values of k for which the curves with equations\n\n\n                                         y = x3 − 12x\n     and\n                                       y = k − (x − 2)2\n\n     intersect at three distinct points, of which exactly two have positive x-coordinates?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−4 < k < 0"
+    },
+    {
+      "label": "B",
+      "rawText": "−4 < k < 4"
+    },
+    {
+      "label": "C",
+      "rawText": "−4 < k < 16"
+    },
+    {
+      "label": "D",
+      "rawText": "−16 < k < 0"
+    },
+    {
+      "label": "E",
+      "rawText": "−16 < k < 4"
+    },
+    {
+      "label": "F",
+      "rawText": "−16 < k < 16"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Finding the values of x at which the two curves intersect is the same as finding the values of x\nat which the y-values are equal, that is,\n                                        x3 − 12x = k − (x − 2)2\nor\n                                      x3 − 12x − k + (x − 2)2 = 0.\n\nThus we are finding out something about the roots of a cubic.\nWe can expand the brackets in the final equation to give\n                                       x3 + x2 − 16x − k + 4 = 0,\nand we write f(x) = x3 + x2 − 16x − k + 4.\nWe can determine something about the locations of the roots of f(x) by finding the stationary\npoints. We have\n                                 f 0 (x) = 3x2 + 2x − 16,\nso f 0 (x) = 0 when\n                             √                          √\n                      −2 ±       22 + 4 × 3 × 16   −2 ± 196   −2 ± 14         8\n                x=                               =          =         = 2 or − .\n                                    6                  6         6            3\n(We could have found these roots by factorising, but that did not look particularly easy.) There-\nfore there are stationary points at x = 2 and x = − 83 . We have f(2) = −16 − k, but calculating\nf(− 38 ) by hand would be painful, so let us try to avoid doing so if we can!\nWe note that f(0) = 4 − k, and that f(x) gets big as x gets big, so if there are exactly two roots\nwith positive x-coordinates, we need the graph to look something like this:\n\n                                                    y\n\n\n\n                                                    (0, 4 − k)\n\n\n                                                                         x\n\n\n\n                                                         (2, −16 − k)\n\n\n\n\nIn particular, we require f(0) > 0, so we must have k < 4.\nIt must also be the case that the stationary point at x = 2 lies below the x-axis, so we need\n−16 − k < 0, that is, −16 < k.\nOnce we have met these two conditions, it becomes clear that there are three distinct roots,\nexactly one of which has x < 0. Therefore, the complete range of values of k is given by\n−16 < k < 4, which is option E.\n\n\nc UCLES                                                                                   Page 23"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        23
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -14,6 +14,8 @@ interface FeatureClaim {
 interface ManualCheck {
   id: string;
   status: "passed" | "pending";
+  reviewer?: string;
+  reviewerRole?: string;
   checkedAt?: string;
   evidence?: string;
   viewports?: string[];
@@ -98,6 +100,9 @@ function parseManifest(raw: string, file: string): FeatureManifest {
     return {
       id: requireString(check.id, `manualChecks[${index}].id`),
       status,
+      reviewer: typeof check.reviewer === "string" ? check.reviewer : undefined,
+      reviewerRole:
+        typeof check.reviewerRole === "string" ? check.reviewerRole : undefined,
       checkedAt: typeof check.checkedAt === "string" ? check.checkedAt : undefined,
       evidence: typeof check.evidence === "string" ? check.evidence : undefined,
       viewports: Array.isArray(check.viewports)
@@ -170,10 +175,11 @@ describe("machine-readable feature verification manifests", () => {
       }
 
       for (const check of manifest.manualChecks.filter((item) => item.status === "passed")) {
+        expect(check.reviewer?.trim().length).toBeGreaterThan(0);
+        expect(check.reviewerRole?.trim().length).toBeGreaterThan(0);
         expect(check.checkedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/u);
         expect(check.evidence?.trim().length).toBeGreaterThan(0);
       }
     }
   });
 });
-

@@ -1,13 +1,19 @@
 import { FormEvent, useState } from "react";
 import { CheckCircle2, MailCheck } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import type { AppServices } from "../../../app/dependencies.js";
+import { funnelExamFromPackageIds } from "../../product-funnel/domain.js";
 import {
   hasRegistrationErrors,
+  safeInternalReturnPath,
   validateRegistration,
   type RegistrationValidation,
 } from "../domain.js";
 import { AccountPageHeader } from "../components/AccountPageHeader.js";
+import {
+  AccountBotChallenge,
+  validateBotChallenge,
+} from "../components/AccountBotChallenge.js";
 
 interface RegisterPageProps {
   services: AppServices;
@@ -15,6 +21,7 @@ interface RegisterPageProps {
 
 export function RegisterPage({ services }: RegisterPageProps) {
   const navigate = useNavigate();
+  const location = useLocation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
@@ -22,9 +29,14 @@ export function RegisterPage({ services }: RegisterPageProps) {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [confirmationEmail, setConfirmationEmail] = useState<string | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [captchaAttempt, setCaptchaAttempt] = useState(0);
   const account = services.accountAccess;
   const pendingInvite = services.pendingInvite;
   const inviteCode = pendingInvite?.load() ?? null;
+  const requestedReturn = safeInternalReturnPath(
+    (location.state as { returnTo?: unknown } | null)?.returnTo,
+  ) ?? safeInternalReturnPath(pendingInvite?.loadReturnTo());
   const localConfirmationInbox =
     import.meta.env.DEV && /^(?:localhost|127\.0\.0\.1)$/u.test(globalThis.location.hostname)
       ? "http://127.0.0.1:54324"
@@ -40,21 +52,36 @@ export function RegisterPage({ services }: RegisterPageProps) {
       setSubmitError("请先验证邀请码，再创建账号");
       return;
     }
+    const botChallengeError = validateBotChallenge(account.botProtection, captchaToken);
+    if (botChallengeError !== undefined) {
+      setSubmitError(botChallengeError);
+      return;
+    }
 
     setSubmitting(true);
     try {
-      const result = await account.register(email, password);
+      const result = await account.register(email, password, captchaToken ?? undefined);
       if (result.status === "confirmation-required") {
         setConfirmationEmail(result.email);
         return;
       }
-      await account.redeemInvite(inviteCode);
+      const access = await account.redeemInvite(inviteCode);
+      const examId = funnelExamFromPackageIds(access.packageIds);
+      if (examId !== null) {
+        void services.funnel?.track({
+          eventType: "invite_redeemed",
+          examId,
+          contextCode: "register",
+        });
+      }
       pendingInvite.clear();
-      navigate("/access/complete");
+      navigate(requestedReturn ?? "/access/complete");
     } catch (reason) {
       setSubmitError(reason instanceof Error ? reason.message : "注册失败，请稍后再试");
     } finally {
       setSubmitting(false);
+      setCaptchaToken(null);
+      setCaptchaAttempt((attempt) => attempt + 1);
     }
   }
 
@@ -75,7 +102,7 @@ export function RegisterPage({ services }: RegisterPageProps) {
             </p>
           )}
           <p className="account-message__note">邀请码已暂存在当前浏览器中，请尽量使用同一设备完成确认。</p>
-          <Link className="button button--secondary" to="/login">已经确认？前往登录</Link>
+          <Link className="button button--secondary" to="/login" state={requestedReturn === null ? undefined : { returnTo: requestedReturn }}>已经确认？前往登录</Link>
         </section>
       </main>
     );
@@ -103,9 +130,9 @@ export function RegisterPage({ services }: RegisterPageProps) {
         <div className="account-layout__intro">
           <p className="eyebrow">建立你的学习空间</p>
           <h1>创建账号，保存完整训练记录</h1>
-          <p>注册完成后，你的模考权限、作答记录和未来的学习分析都会归属于这个账号。</p>
+          <p>注册完成后，你的已发布资料权限、作答记录和未来的学习分析都会归属于这个账号。</p>
           <p className="account-privacy-note">
-            数据默认仅本人可见。以后如需老师或家长查看，必须由学生逐项授权。
+            数据默认仅本人可见。以后如需老师或家长查看，必须由学生逐项授权。<Link to="/privacy">查看学生隐私说明</Link>
           </p>
         </div>
 
@@ -125,12 +152,23 @@ export function RegisterPage({ services }: RegisterPageProps) {
             <input id="register-password-confirmation" type="password" autoComplete="new-password" value={passwordConfirmation} onChange={(event) => setPasswordConfirmation(event.target.value)} aria-invalid={errors.passwordConfirmation !== undefined} aria-describedby={errors.passwordConfirmation ? "register-confirmation-error" : undefined} />
             {errors.passwordConfirmation && <p className="form-error" id="register-confirmation-error">{errors.passwordConfirmation}</p>}
 
+            <AccountBotChallenge
+              key={captchaAttempt}
+              protection={account?.botProtection ?? { provider: "turnstile", required: false, siteKey: null }}
+              action="register"
+              onTokenChange={setCaptchaToken}
+            />
+
             {submitError && <p className="form-error" role="alert">{submitError}</p>}
-            <button className="button button--primary" type="submit" disabled={submitting}>
+            <button
+              className="button button--primary"
+              type="submit"
+              disabled={submitting || (account?.botProtection.required === true && account.botProtection.siteKey === null)}
+            >
               {submitting ? "正在创建账号…" : "创建账号并解锁"}
             </button>
           </form>
-          <p className="account-card__alternate">已有账号？ <Link to="/login">直接登录</Link></p>
+          <p className="account-card__alternate">已有账号？ <Link to="/login" state={requestedReturn === null ? undefined : { returnTo: requestedReturn }}>直接登录</Link></p>
         </div>
       </section>
     </main>

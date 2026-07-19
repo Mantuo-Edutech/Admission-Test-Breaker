@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                  \u0003\n                                                  \u0003\n                                                  \u0003\n\nͳ͸\u0003    \u0017\u0003 \u0003݂\u0003\u0003݃\u0003\u0003\u0003\u0003݂ሺ‫ݔ‬ሻ ൌ ͵‫ ݔ‬ଶ ൅ ͳʹ‫ ݔ‬൅ Ͷ\u0003\u0003݃ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬ଷ ൅ ͸‫ ݔ‬ଶ ൅ ͻ‫ ݔ‬െ ͺǤ\u0003\n\n       \u001a\u0003\u0003\u0003 \u0003\u0003\u0003\u0003\u0003‫\u0003\u0003\u0003 \u0003\u0003 \u0003\u0003\u0003\u0003 \u0003\u0003ݔ‬\n       \u0003 ǫ\u0003\n\u0003\n       A   ‫ ݔ‬൒ െͳ\u0003\n\n\u0003\n       B   ‫ ݔ‬൑ െͳ\n\n\u0003\n       C   െ͵ ൑ ‫ ݔ‬൑ െʹǡ\u0003\u0003\u0003‫ ݔ‬൒ െͳ\u0003\n\n\u0003\n       D   ‫ ݔ‬൑ െʹǡ\u0003\u0003\u0003‫ ݔ‬൒ െͳ\u0003\n\n\u0003\n       E   ‫ ݔ‬൑ െ͵ǡ\u0003\u0003\u0003െʹ ൑ ‫ ݔ‬൑ െͳ\n\n\u0003\n       F   ‫ ݔ‬൑ െ͵ǡ\u0003\u0003\u0003‫ ݔ‬൒ െʹ\u0003\n\n\u0003\n       G   െʹ ൑ ‫ ݔ‬൑ െͳ\u0003\n\u0003\n\n\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                     \u0014\u001b"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": " ݂݃݂ሺ‫ݔ‬ሻ ൌ 3‫ ݔ‬ଶ ൅ 12‫ ݔ‬൅ 4݃ሺ‫ݔ‬ሻ ൌ ‫ ݔ‬ଷ ൅ 6‫ ݔ‬ଶ ൅ 9‫ ݔ‬െ 8Ǥ\n\n        ‫   ݔ‬\n        ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "‫ ݔ‬൒ െ1"
+    },
+    {
+      "label": "B",
+      "rawText": "‫ ݔ‬൑ െ1"
+    },
+    {
+      "label": "C",
+      "rawText": "െ3 ൑ ‫ ݔ‬൑ െ2ǡ‫ ݔ‬൒ െ1"
+    },
+    {
+      "label": "D",
+      "rawText": "‫ ݔ‬൑ െ2ǡ‫ ݔ‬൒ െ1"
+    },
+    {
+      "label": "E",
+      "rawText": "‫ ݔ‬൑ െ3ǡെ2 ൑ ‫ ݔ‬൑ െ1"
+    },
+    {
+      "label": "F",
+      "rawText": "‫ ݔ‬൑ െ3ǡ‫ ݔ‬൒ െ2"
+    },
+    {
+      "label": "G",
+      "rawText": "െ2 ൑ ‫ ݔ‬൑ െ1\n\n\n\n\n\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "In this question, we consider a function to be increasing when f 0 (x) ≥ 0, and decreasing when\nf(x) ≤ 0.\n\n      Commentary: The classification of increasing and decreasing we use in the options\n      for this question avoids a subtle issue: what we consider a function to be doing (i.e.,\n      increasing, decreasing, or neither) at points where f 0 (x) = 0. For this question, though,\n      we don’t need to concern ourselves with this as the options all use ⩾ or ⩽. However, we\n      will set out our answer using ‘⩾’ or ‘⩽’.\n\nWe therefore calculate f 0 (x) and g0 (x) and find where each is positive and negative.\nf 0 (x) = 6x + 12 = 6(x + 2), so f 0 (x) > 0 when x > −2 and f 0 (x) < 0 when x < −2.\ng0 (x) = 3x2 + 12x + 9 = 3(x2 + 4x + 3). We can find where this is positive and negative by\nsketching the graph: x2 + 4x + 3 = (x + 1)(x + 3), giving the sketch of g0 (x):\n\n\n\n\n                                         −3           −1\n\n\nso g0 (x) > 0 when x < −3 or x > −1, and g0 (x) < 0 when −3 < x < −1.\nWe now want one of f 0 (x) and g0 (x) to be positive and the other negative.\nWe have f 0 (x) > 0 and g0 (x) < 0 when x > −2 and −3 < x < −1, so when −2 < x < −1.\nSimilarly, f 0 (x) < 0 and g0 (x) > 0 when x < −2 and either x < −3 or x > −1; together these\ngive x < −3.\nSo the complete set of solutions (if we decide to include the points where f 0 (x) = 0) is x ≤ −3\nor −2 ≤ x ≤ −1, and so the answer is option E.\n\n\n\n\nVersion 1.1, March 2019                                                                       Page 20\n\n                                                                                          © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        21
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

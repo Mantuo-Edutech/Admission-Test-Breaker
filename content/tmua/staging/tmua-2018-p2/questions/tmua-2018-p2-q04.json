@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q04",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 4,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "4   The non-zero real number c is such that the equation cos x = c has two solutions for\n    0 < x < 32 π.\n\n    How many solutions of the equation cos2 2x = c2 are there in the range 0 < x < 32 π ?\n\n    A 2\n\n    B 3\n\n    C 4\n\n    D 6\n\n    E 7\n\n    F 8\n\n\n\n\n                                            6"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The non-zero real number c is such that the equation cos x = c has two solutions for\n    0 < x < 32 π.\n\n    How many solutions of the equation cos2 2x = c2 are there in the range 0 < x < 32 π ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "2"
+    },
+    {
+      "label": "B",
+      "rawText": "3"
+    },
+    {
+      "label": "C",
+      "rawText": "4"
+    },
+    {
+      "label": "D",
+      "rawText": "6"
+    },
+    {
+      "label": "E",
+      "rawText": "7"
+    },
+    {
+      "label": "F",
+      "rawText": "8"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "It is worth sketching a graph of y = cos x to understand the meaning of the stated condition.\nTwo lines have been drawn corresponding to different values of c.\n\n                               y\n\n                                                                       x\n                                       1      π        3\n                               0       2π              2π       2π\n\n\n\n\nFor there to be two solutions for 0 < x < 32 π, we see from the sketch that we need −1 < c < 0\nWe now consider the equation cos2 2x = c2 , so cos 2x = ±c\nThere are two straightforward approaches. The first is to sketch the graph of y = cos 2x and\nlook at 0 < x < 32 π; the second is to note that the range can be written as 0 < 2x < 3π, so we\ncould write u = 2x and look for solutions to cos u = ±c in the range 0 < u < 3π. We will use\nthe first approach here; the second is very similar.\nHere is a sketch of y = cos 2x:\n\n                                   y\n                          −c\n                                                                           x\n                                        1         π      3\n                                   0    2π               2π       2π\n                           c\n\n\n\nWe immediately see that, for 0 < x < 32 π, there are six solutions to our equation, so the correct\nanswer is D.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 6"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

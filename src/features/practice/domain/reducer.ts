@@ -44,6 +44,7 @@ export type PracticeSessionAction =
       eventId: LearningEventId;
       at: string;
       totalQuestions: number;
+      answeredCount?: number;
     }
   | {
       type: "submit";
@@ -265,7 +266,7 @@ function openSubmission(
     actor: session.startedBy,
     occurredAt: action.at,
     payload: {
-      unansweredCount: action.totalQuestions - Object.keys(session.answers).length,
+      unansweredCount: action.totalQuestions - (action.answeredCount ?? Object.keys(session.answers).length),
     },
   });
 }

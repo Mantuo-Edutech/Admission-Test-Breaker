@@ -1,0 +1,79 @@
+schemaVersion: 1
+feature:
+  id: ucat-quantitative-reasoning-starter
+  title: Original UCAT Quantitative Reasoning data-table starter
+  status: partial
+  userOutcome: >-
+    A student can inspect four original data sets, use a working basic calculator
+    and answer ten timed Quantitative Reasoning questions without leaving the site.
+
+run:
+  packageScript: verify:ucat-starter
+
+claims:
+  - id: original-quantitative-dataset
+    status: verified
+    statement: >-
+      Four Mantou-original data sets and ten questions cover percentages, time,
+      inventory, cost, speed, rates and aggregation. Format and calculator scope
+      are anchored to two local SHA-pinned official snapshots without copying any
+      official question-bank content.
+    artifacts:
+      - content/ucat/original-practice/quantitative-reasoning-starter-v1.json
+      - src/features/practice/content/ucat-quantitative-reasoning-starter.ts
+      - tests/features/practice/content/ucat-quantitative-reasoning-starter.test.ts
+    automatedChecks:
+      - verify:ucat-starter
+      - verify:official-research
+      - typecheck
+
+  - id: validated-responsive-data-tables
+    status: verified
+    statement: >-
+      The shared content model now supports accessible captioned tables. Validation
+      rejects empty or ragged grids, desktop shows data beside its question and
+      narrow screens contain wide tables with horizontal scrolling.
+    artifacts:
+      - src/features/practice/content/types.ts
+      - src/features/practice/content/validate.ts
+      - src/features/practice/components/MathContent.tsx
+      - src/styles/practice.css
+      - tests/app/ucat-quantitative-layout-contract.test.ts
+    automatedChecks:
+      - verify:ucat-starter
+      - typecheck
+      - build
+
+  - id: functional-basic-calculator
+    status: verified
+    statement: >-
+      Quantitative papers can explicitly request the basic calculator. Its keypad
+      performs arithmetic, decimal, sign and percentage operations; it remains a
+      transient tool and does not add calculator keystrokes to learner data.
+    artifacts:
+      - src/features/practice/components/BasicCalculator.tsx
+      - src/features/practice/pages/PracticePage.tsx
+      - tests/app/practice-page.test.tsx
+    automatedChecks:
+      - verify:ucat-starter
+      - typecheck
+      - build
+
+boundaries:
+  - This is a Mantou-original teaching preview, not an official UCAT question bank or a claim of official-equivalent calibration.
+  - Four data sets and ten questions are not a complete 36-question, 26-minute Quantitative Reasoning subtest and do not generate a 300–900 score.
+  - Independent quantitative, pace, distractor, accessibility and device review remain before final publication status.
+
+manualChecks:
+  - id: independent-quantitative-review
+    status: pending
+    evidence: A separate UCAT quantitative teacher must verify every calculation, distractor, data presentation, pace and difficulty spread.
+    viewports:
+      - content
+  - id: browser-device-review
+    status: pending
+    evidence: Automated component, table and CSS contracts pass; direct desktop, tablet and phone visual review remains explicit.
+    viewports:
+      - desktop
+      - tablet
+      - phone

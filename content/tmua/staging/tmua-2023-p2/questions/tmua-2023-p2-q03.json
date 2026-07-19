@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "3   Consider the claim:\n\n             For all positive real numbers x and y,\n\n                                                      xy = x y\n\n    Which of the following is/are a counterexample to the claim?\n\n         I        x = 1, y = 16\n\n         II       x = 2, y = 8\n\n         III      x = 3, y = 4\n\n\n    A   none of them\n\n    B   I only\n\n    C   II only\n\n    D   III only\n\n    E   I and II only\n\n    F   I and III only\n\n    G   II and III only\n\n    H   I, II and III\n\n\n\n\n                                                  5"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the claim:\n\n             For all positive real numbers x and y,\n\n                                                      xy = x y\n\n    Which of the following is/are a counterexample to the claim?\n\n         I        x = 1, y = 16\n\n         II       x = 2, y = 8\n\n         III      x = 3, y = 4"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We substitute the values into the two sides of the equation:\n\n      √           √                √\nI         116 =       1 = 1 and 1 16 = 14 = 1, so this is not a counterexample.\n      √                         √\nII        28 = 24 = 16 and 2 8 6= 16, so this is a counterexample.\n      √                        √\nIII       34 = 32 = 9 and 3 4 = 32 = 9, so this is not a counterexample.\n\nTherefore the answer is option C, II only.\n\n\n\n\nVersion 1.0, September 2023                                                       Page 5"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

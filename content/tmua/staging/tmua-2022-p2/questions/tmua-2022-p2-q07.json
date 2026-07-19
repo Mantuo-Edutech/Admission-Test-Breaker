@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q07",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 7,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "7   Consider the following claim:\n\n             The difference between two consecutive positive cube numbers is always prime.\n\n    Here is an attempted proof of this claim:\n\n         I       ( x + 1)3 ൌ x 3 + 3x 2 + 3x + 1\n\n         II      Taking x to be a positive integer, the difference between two consecutive cube\n                 numbers can be expressed as ( x + 1)3 – x 3 ൌ 3x 2 + 3x + 1\n\n         III     It is impossible to factorise 3x 2 + 3x + 1 into two linear factors with integer\n                 coefficients because its discriminant is negative.\n\n         IV      Therefore for every positive integer value of x the integer 3x 2 + 3x + 1 cannot be\n                 factorised.\n\n         V       Hence, the difference between two consecutive cube numbers will always be prime.\n\n    Which of the following best describes this proof ?\n\n    A   The proof is completely correct, and the claim is true.\n\n    B   The proof is completely correct, but there are counterexamples to the claim.\n\n    C   The proof is wrong, and the first error occurs on line I.\n\n    D   The proof is wrong, and the first error occurs on line II.\n\n    E   The proof is wrong, and the first error occurs on line III.\n\n    F   The proof is wrong, and the first error occurs on line IV.\n\n    G The proof is wrong, and the first error occurs on line V.\n\n\n\n\n                                                   9"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following claim:\n\n             The difference between two consecutive positive cube numbers is always prime.\n\n    Here is an attempted proof of this claim:\n\n         I       ( x + 1)3 ൌ x 3 + 3x 2 + 3x + 1\n\n         II      Taking x to be a positive integer, the difference between two consecutive cube\n                 numbers can be expressed as ( x + 1)3 – x 3 ൌ 3x 2 + 3x + 1\n\n         III     It is impossible to factorise 3x 2 + 3x + 1 into two linear factors with integer\n                 coefficients because its discriminant is negative.\n\n         IV      Therefore for every positive integer value of x the integer 3x 2 + 3x + 1 cannot be\n                 factorised.\n\n         V       Hence, the difference between two consecutive cube numbers will always be prime.\n\n    Which of the following best describes this proof ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "The proof is completely correct, and the claim is true."
+    },
+    {
+      "label": "B",
+      "rawText": "The proof is completely correct, but there are counterexamples to the claim."
+    },
+    {
+      "label": "C",
+      "rawText": "The proof is wrong, and the first error occurs on line I."
+    },
+    {
+      "label": "D",
+      "rawText": "The proof is wrong, and the first error occurs on line II."
+    },
+    {
+      "label": "E",
+      "rawText": "The proof is wrong, and the first error occurs on line III."
+    },
+    {
+      "label": "F",
+      "rawText": "The proof is wrong, and the first error occurs on line IV."
+    },
+    {
+      "label": "G",
+      "rawText": "The proof is wrong, and the first error occurs on line V."
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Searching for small counterexamples to the claim does not find any; the first few differences are\nall prime. So we do have to check the proof in detail, as it might be correct.\nThe algebraic expansion on line I is correct.\nThe expression in line II is also correct, using the expansion from line I.\nFor line III, if we could write 3x2 + 3x + 1 = (ax + b)(cx + d) with real coefficients a, b, c and d,\nthen we would have real roots of the equation 3x3 + 3x + 1 = 0, namely x = − ab and x = − dc .\nBut the discriminant is 32 − 4 × 3 × 1 = −3 < 0, so this is impossible. So this statement is true.\nLine IV is more tricky: just because the algebraic expression is not factorisable into algebraic\nfactors does not mean that the integer it represents for any particular value of x is not factorisable\nin integers. As a simpler example, the algebraic expression x2 + 1 is not factorisable into real\nalgebraic factors, yet substituting integers for x shows that the integer value can sometimes be\nfactorised: taking x = 3 gives 32 + 1 = 10 = 2 × 5, for example. So this line of the argument is\nnot valid.\nLine V does follow from lines II and IV.\nTherefore the proof is wrong, and the first (and only) error occurs on line IV (option F).\n\nIt is worth noting that the ‘opposite’ argument does work: if an algebraic expression does\nfactorise as (ax + b)(cx + d) with a, b, c and d integers, then the value of original expression\nalways factorises (as an integer) when x is an integer, just by substituting the value of x into\nthe factorised form. (It is possible, though, that one of the factors is 1, so the integer may be\nprime for some value(s) of x.)\nIt also turns out that in this case, if we search far enough, we do find a counterexample to the\nclaim: 63 − 53 = 216 − 125 = 91 = 7 × 13. (It might have been the case that the claim was true\neven though the attempted proof had an error.)\n\n\n\n\nVersion 1.0, July 2023                                                                         Page 9"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

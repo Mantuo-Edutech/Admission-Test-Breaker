@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q14",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 14,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "14   This question uses radians.\n\n     Find the number of distinct values of x that satisfy the equation\n\n\n                               (x + 1)(3 − x) = 2(1 − cos(πx))\n\n     A 2\n\n     B 3\n\n     C 4\n\n     D 5\n\n     E 6\n\n     F 7\n\n\n\n\n                                            \u0014\u0019"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "This question uses radians.\n\n     Find the number of distinct values of x that satisfy the equation\n\n\n                               (x + 1)(3 − x) = 2(1 − cos(πx))"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "2"
+    },
+    {
+      "label": "B",
+      "rawText": "3"
+    },
+    {
+      "label": "C",
+      "rawText": "4"
+    },
+    {
+      "label": "D",
+      "rawText": "5"
+    },
+    {
+      "label": "E",
+      "rawText": "6"
+    },
+    {
+      "label": "F",
+      "rawText": "7"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We do not know a method of solving equations involving both trigonometric functions (on the\nright-hand side) and quadratics (on the left-hand side), but the question only asks us to count\nthe number of solutions, not to solve the equation. So we will instead sketch the graphs of the\nleft-hand and right-hand sides and see how many times they intersect.\nThe graph of y = (x + 1)(3 − x) is a quadratic with roots at x = −1 and x = 3. When expanded,\nit becomes y = −x2 + · · · , so it has a maximum point midway between the roots, at x = 1,\ny = 4.\n\n\n                                     4 y\n                                     2\n                                                                                      x\n      −4      −3      −2      −1     0         1       2       3        4       5         6\n                                    −2\n                                    −4\n\n\nThe graph of y = 2(1 − cos(πx)) is a transformed cosine graph. y = cos(πx) has a period of 2:\nit is the graph of y = cos x scaled by a factor of 1/π in the x-direction, and looks like this:\n\n                                         y\n                                     1\n\n                                                                                      x\n      −4      −3      −2      −1     0         1       2       3        4       5         6\n\n                                    −1\n\n\nWe can then work out the graph of y = 1 − cos(πx) by calculating the values of y at a few key\npoints, or by observing that the graph of y = − cos(πx) is the reflection of y = cos(πx) in the\nx-axis, and then y = 1 − cos(πx) is this translated by 1 unit in the y-direction. The result is:\n\n\n                                     2 y\n\n\n                                     1\n\n                                                                                      x\n      −4      −3      −2      −1     0         1       2       3        4       5         6\n\n\nFinally, the graph of y = 2(1 − cos(πx)) is the previous graph scaled by a factor of 2 in the\ny-direction:\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 16\n\f\nTest of Mathematics for University Admission, 2021 Paper 1 Solutions\n\n\n                                       4 y\n\n\n                                       2\n\n                                                                                          x\n      −4       −3      −2       −1     0         1        2       3        4       5          6\n\n\nWe can now superimpose the graph of y = (x + 1)(3 − x) on top of y = 2(1 − cos(πx)). We see\nthat the trigonometric graph is never below the x-axis, so the only possible points of intersection\nare between x = −1 and x = 3. There is one point of intersection at (1, 4), one between x = −1\nand x = 0 and one between x = 2 and x = 3, so there are three points of intersection in total.\n\n                                       4 y\n\n\n                                       2\n\n                                                                                          x\n      −4       −3      −2       −1     0         1        2       3        4       5          6\n\n\nThus the correct answer is option B.\n\nYou might wonder about a subtle point: we see that the two graphs touch each other at (1, 4),\nbut how do we know that the trigonometric graph is ‘sharper’ there, so does not also cross the\nquadratic graph close to x = 1, something like this:\n\n\n\n\nThis is a plausible possibility, but it turns out not to be the case for reasons that are beyond the\nscope of the specification.\n\n\n\n\nVersion 1.0, March 2022                                                                       Page 17"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        16,
+        17
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

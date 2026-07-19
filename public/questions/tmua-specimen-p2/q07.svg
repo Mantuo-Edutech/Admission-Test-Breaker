@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" role="img" aria-labelledby="title desc">
+ <title id="title">Four candidate implicit graphs</title><desc id="desc">Candidate graphs A to D for the equation in the question.</desc>
+ <defs><g id="axes" fill="none" stroke="#aaa" stroke-width="1.5"><path d="M20 120H330M175 15V235"/></g></defs>
+ <g transform="translate(15 15)"><use href="#axes"/><path d="M25 25C95 90 140 100 145 120S155 145 175 145 230 175 315 230" fill="none" stroke="#292437" stroke-width="3"/><text x="10" y="250">A</text></g>
+ <g transform="translate(390 15)"><use href="#axes"/><path d="M25 225C110 155 145 145 145 120S155 95 175 95 230 60 315 20" fill="none" stroke="#292437" stroke-width="3"/><text x="10" y="250">B</text></g>
+ <g transform="translate(15 285)"><use href="#axes"/><path d="M25 20C105 85 145 95 175 95S190 115 200 130 260 180 315 230" fill="none" stroke="#292437" stroke-width="3"/><text x="10" y="250">C</text></g>
+ <g transform="translate(390 285)"><use href="#axes"/><path d="M25 225C105 160 145 145 175 145S190 125 200 110 260 60 315 20" fill="none" stroke="#292437" stroke-width="3"/><text x="10" y="250">D</text></g>
+ <g fill="#292437" font-family="serif" font-size="22" font-weight="700"><text x="25" y="265">A</text><text x="400" y="265">B</text><text x="25" y="530">C</text><text x="400" y="530">D</text></g>
+</svg>

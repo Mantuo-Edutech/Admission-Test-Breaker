@@ -1,0 +1,1131 @@
+{
+  "schemaVersion": 1,
+  "revision": "2026-07-19.33",
+  "products": [
+    {
+      "id": "tmua-online-past-papers",
+      "version": "1.0.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "tmua",
+      "kind": "practice-library",
+      "title": {
+        "zh": "TMUA 历年真题在线题库",
+        "en": "TMUA Online Past Papers"
+      },
+      "summary": "18 套试卷、360 道题全部逐题在线排版；支持计时、标记、自动保存、提交与基础结果。",
+      "status": "published",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "verified-source-index",
+      "route": "/exams/tmua/past-papers",
+      "metrics": [
+        { "label": "试卷", "value": "18 套" },
+        { "label": "在线题目", "value": "360 道" }
+      ],
+      "evidence": [
+        "content/tmua/online-papers.json",
+        "verification/features/tmua-complete-online-paper-practice.yaml"
+      ]
+    },
+    {
+      "id": "tmua-course-coverage",
+      "version": "1.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "tmua",
+      "kind": "coverage-map",
+      "title": {
+        "zh": "TMUA 课程知识覆盖",
+        "en": "TMUA Course Coverage"
+      },
+      "summary": "根据 A-Level、IB 或 AP 的具体课程，逐项区分已经覆盖、需要确认和需要补充的知识。",
+      "status": "published",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-page",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/tmua/profile",
+      "metrics": [
+        { "label": "课程体系", "value": "A-Level · IB · AP" },
+        { "label": "计算方式", "value": "固定映射 · 0 Token" }
+      ],
+      "evidence": [
+        "src/features/preparation-profile/catalog.ts",
+        "verification/features/tmua-profile-first-staged-journey.yaml"
+      ]
+    },
+    {
+      "id": "tmua-diagnostic-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "tmua",
+      "kind": "practice-library",
+      "title": {
+        "zh": "TMUA 30 分钟起点能力诊断",
+        "en": "TMUA 30-Minute Starting Diagnostic"
+      },
+      "summary": "8 道满托原创固定题检查代数、几何、数列、三角、微积分与证明推理；不消耗历年真题。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/tmua/diagnostic",
+      "actionLabel": "开始 30 分钟诊断",
+      "metrics": [
+        { "label": "原创题目", "value": "8 道" },
+        { "label": "诊断时间", "value": "30 分钟" }
+      ],
+      "evidence": [
+        "content/tmua/original-practice/diagnostic-v1.json",
+        "verification/features/tmua-original-diagnostic.yaml"
+      ]
+    },
+    {
+      "id": "tmua-foundations-notes-v2",
+      "version": "0.2.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "tmua",
+      "kind": "review-notes",
+      "title": {
+        "zh": "TMUA 基础复习笔记",
+        "en": "TMUA Foundations Review Notes"
+      },
+      "summary": "从考试地图与课程缺口，到核心数学、限时推理和真题复盘；包含 9 道逐步原创例题与 12 道主动回忆题。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-page-and-pdf",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/tmua/notes/foundations",
+      "download": "/notes/tmua/tmua-foundations-v2.pdf",
+      "metrics": [
+        { "label": "当前版本", "value": "7 章" },
+        { "label": "PDF", "value": "25 页" }
+      ],
+      "evidence": [
+        "content/notes/tmua/foundations-v2.json",
+        "verification/features/tmua-foundations-notes.yaml"
+      ]
+    },
+    {
+      "id": "esat-course-module-planner",
+      "version": "1.0.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "esat",
+      "kind": "admissions-planner",
+      "title": {
+        "zh": "ESAT 专业与模块定位",
+        "en": "ESAT Course-to-Module Planner"
+      },
+      "summary": "先选择学校和专业，再得到需要报考的 ESAT 模块组合；全部由本地版本化规则计算。",
+      "status": "published",
+      "visibility": "public",
+      "access": "public",
+      "delivery": "native-page",
+      "rightsBasis": "official-facts-derived",
+      "route": "/exams/esat",
+      "metrics": [
+        { "label": "专业要求", "value": "56 项" },
+        { "label": "院校", "value": "4 所" }
+      ],
+      "evidence": [
+        "content/admissions/esat-2027.json",
+        "verification/features/esat-course-module-planner.yaml"
+      ]
+    },
+    {
+      "id": "esat-course-coverage",
+      "version": "0.8.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "esat",
+      "kind": "coverage-map",
+      "title": {
+        "zh": "ESAT 模块知识覆盖",
+        "en": "ESAT Module Knowledge Coverage"
+      },
+      "summary": "按所选模块和课程体系，具体列出已覆盖、需确认与需补充的中英文知识单元。",
+      "status": "published",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-page",
+      "rightsBasis": "official-facts-derived",
+      "route": "/exams/esat/profile",
+      "metrics": [
+        { "label": "一级知识单元", "value": "50 个" },
+        { "label": "课程体系", "value": "A-Level · IB · AP" }
+      ],
+      "evidence": [
+        "content/esat/knowledge-units.json",
+        "verification/features/esat-course-module-planner.yaml"
+      ]
+    },
+    {
+      "id": "esat-module-starters-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "esat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "ESAT 五模块原创短诊断",
+        "en": "ESAT Five-Module Starter Diagnostics"
+      },
+      "summary": "Mathematics 1、Mathematics 2、Physics、Chemistry、Biology 各有 10 道满托原创题；按专业只显示需要的模块。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/esat/past-papers",
+      "metrics": [
+        { "label": "原生模块", "value": "5 个" },
+        { "label": "原创题目", "value": "50 道" }
+      ],
+      "evidence": [
+        "content/esat/original-practice/mathematics-1-starter-v1.json",
+        "content/esat/original-practice/mathematics-2-starter-v1.json",
+        "content/esat/original-practice/physics-starter-v1.json",
+        "content/esat/original-practice/chemistry-starter-v1.json",
+        "content/esat/original-practice/biology-starter-v1.json",
+        "verification/features/esat-module-starters.yaml"
+      ]
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "esat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "ESAT Mathematics 1 原创完整模考",
+        "en": "ESAT Mathematics 1 Original Full-Length Mock"
+      },
+      "summary": "27 道满托原创题、40 分钟、全程无计算器；覆盖 Mathematics 1 的 M1–M7，并接入保存、提交、事实型结果与学习记录。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/practice/esat-mathematics-1-full-mock-v1",
+      "metrics": [
+        { "label": "原创题目", "value": "27 道" },
+        { "label": "完整计时", "value": "40 分钟" },
+        { "label": "知识范围", "value": "M1–M7" }
+      ],
+      "evidence": [
+        "content/esat/original-practice/mathematics-1-full-mock-v1.json",
+        "src/features/practice/content/esat-mathematics-1-full-mock.ts",
+        "verification/features/esat-mathematics-1-full-mock.yaml"
+      ]
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "esat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "ESAT Mathematics 2 原创完整模考",
+        "en": "ESAT Mathematics 2 Original Full-Length Mock"
+      },
+      "summary": "27 道满托原创题、40 分钟、全程无计算器；覆盖 Mathematics 2 的 MM1–MM8，并接入保存、提交、事实型结果与学习记录。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/practice/esat-mathematics-2-full-mock-v1",
+      "metrics": [
+        { "label": "原创题目", "value": "27 道" },
+        { "label": "完整计时", "value": "40 分钟" },
+        { "label": "知识范围", "value": "MM1–MM8" }
+      ],
+      "evidence": [
+        "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+        "src/features/practice/content/esat-mathematics-2-full-mock.ts",
+        "verification/features/esat-mathematics-2-full-mock.yaml"
+      ]
+    },
+    {
+      "id": "esat-physics-full-mock-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "esat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "ESAT Physics 原创完整模考",
+        "en": "ESAT Physics Original Full-Length Mock"
+      },
+      "summary": "27 道满托原创题、40 分钟、全程无计算器；覆盖 Physics 的 P1–P7，并接入保存、提交、事实型结果与学习记录。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/practice/esat-physics-full-mock-v1",
+      "metrics": [
+        { "label": "原创题目", "value": "27 道" },
+        { "label": "完整计时", "value": "40 分钟" },
+        { "label": "知识范围", "value": "P1–P7" }
+      ],
+      "evidence": [
+        "content/esat/original-practice/physics-full-mock-v1.json",
+        "src/features/practice/content/esat-physics-full-mock.ts",
+        "verification/features/esat-physics-full-mock.yaml"
+      ]
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "esat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "ESAT Chemistry 原创完整模考",
+        "en": "ESAT Chemistry Original Full-Length Mock"
+      },
+      "summary": "27 道满托原创题、40 分钟、全程无计算器；覆盖 Chemistry 的 C1–C17，并接入保存、提交、事实型结果与学习记录。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/practice/esat-chemistry-full-mock-v1",
+      "metrics": [
+        { "label": "原创题目", "value": "27 道" },
+        { "label": "完整计时", "value": "40 分钟" },
+        { "label": "知识范围", "value": "C1–C17" }
+      ],
+      "evidence": [
+        "content/esat/original-practice/chemistry-full-mock-v1.json",
+        "src/features/practice/content/esat-chemistry-full-mock.ts",
+        "verification/features/esat-chemistry-full-mock.yaml"
+      ]
+    },
+    {
+      "id": "esat-biology-full-mock-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "esat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "ESAT Biology 原创完整模考",
+        "en": "ESAT Biology Original Full-Length Mock"
+      },
+      "summary": "27 道满托原创题、40 分钟、全程无计算器；覆盖 Biology 的 B1–B11，并接入保存、提交、事实型结果与学习记录。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/practice/esat-biology-full-mock-v1",
+      "metrics": [
+        { "label": "原创题目", "value": "27 道" },
+        { "label": "完整计时", "value": "40 分钟" },
+        { "label": "知识范围", "value": "B1–B11" }
+      ],
+      "evidence": [
+        "content/esat/original-practice/biology-full-mock-v1.json",
+        "src/features/practice/content/esat-biology-full-mock.ts",
+        "verification/features/esat-biology-full-mock.yaml"
+      ]
+    },
+    {
+      "id": "tara-reasoning-starter-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "tara",
+      "kind": "practice-library",
+      "title": {
+        "zh": "TARA 推理原创短诊断",
+        "en": "TARA Reasoning Starter Diagnostic"
+      },
+      "summary": "10 道满托原创题分别检查 Critical Thinking 与 Problem Solving；支持站内计时、保存、提交和基础结果。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/tara/past-papers",
+      "metrics": [
+        { "label": "原创题目", "value": "10 道" },
+        { "label": "建议时间", "value": "20 分钟" }
+      ],
+      "evidence": [
+        "content/tara/original-practice/reasoning-starter-v1.json",
+        "verification/features/tara-reasoning-starter.yaml"
+      ]
+    },
+    {
+      "id": "tara-critical-thinking-full-mock-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "tara",
+      "kind": "practice-library",
+      "title": {
+        "zh": "TARA Critical Thinking 原创完整模考",
+        "en": "TARA Critical Thinking Original Full-Length Mock"
+      },
+      "summary": "22 道满托原创五选一题、40 分钟、全程无计算器；覆盖七类官方 Critical Thinking 能力，并接入保存、提交、事实型结果与学习记录。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/practice/tara-critical-thinking-full-mock-v1",
+      "metrics": [
+        { "label": "原创题目", "value": "22 道" },
+        { "label": "完整计时", "value": "40 分钟" },
+        { "label": "能力类型", "value": "7 类" }
+      ],
+      "evidence": [
+        "content/tara/original-practice/critical-thinking-full-mock-v1.json",
+        "src/features/practice/content/tara-full-mocks.ts",
+        "verification/features/tara-full-reasoning-mocks.yaml"
+      ]
+    },
+    {
+      "id": "tara-problem-solving-full-mock-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "tara",
+      "kind": "practice-library",
+      "title": {
+        "zh": "TARA Problem Solving 原创完整模考",
+        "en": "TARA Problem Solving Original Full-Length Mock"
+      },
+      "summary": "22 道满托原创五选一题、40 分钟、全程无计算器；覆盖 Relevant Selection、Finding Procedures 与 Identifying Similarity。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/practice/tara-problem-solving-full-mock-v1",
+      "metrics": [
+        { "label": "原创题目", "value": "22 道" },
+        { "label": "完整计时", "value": "40 分钟" },
+        { "label": "能力类型", "value": "3 类" }
+      ],
+      "evidence": [
+        "content/tara/original-practice/problem-solving-full-mock-v1.json",
+        "src/features/practice/content/tara-full-mocks.ts",
+        "verification/features/tara-full-reasoning-mocks.yaml"
+      ]
+    },
+    {
+      "id": "tara-exam-guide",
+      "version": "1.0.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "tara",
+      "kind": "exam-guide",
+      "title": {
+        "zh": "TARA 考试与准备指南",
+        "en": "TARA Exam & Preparation Guide"
+      },
+      "summary": "用一个内部页面看清 Critical Thinking、Problem Solving 与 Writing Task 的结构和准备顺序。",
+      "status": "published",
+      "visibility": "public",
+      "access": "public",
+      "delivery": "native-page",
+      "rightsBasis": "official-facts-derived",
+      "route": "/exams/tara",
+      "metrics": [
+        { "label": "必考模块", "value": "3 个" },
+        { "label": "内容语言", "value": "中英双语" }
+      ],
+      "evidence": [
+        "content/official/exam-source-registry.json",
+        "verification/features/multi-exam-official-guides.yaml"
+      ]
+    },
+    {
+      "id": "tara-starting-point-v1",
+      "version": "1.0.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "tara",
+      "kind": "preparation-map",
+      "title": {
+        "zh": "TARA 逐模块起点定位",
+        "en": "TARA Module-by-Module Starting Point"
+      },
+      "summary": "根据本人课程、学科、练习经历和每周时间，零 Token 列出 Critical Thinking、Problem Solving 与 Writing Task 可迁移基础、具体缺口和第一轮建议。",
+      "status": "published",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-page",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/tara/preparation",
+      "metrics": [
+        { "label": "考试模块", "value": "3 个" },
+        { "label": "计算方式", "value": "固定规则 · 0 Token" }
+      ],
+      "evidence": [
+        "src/features/preparation-profile/assessment-preparation.ts",
+        "verification/features/exam-aware-profile-first-practice.yaml"
+      ]
+    },
+    {
+      "id": "tara-writing-task-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "tara",
+      "kind": "practice-library",
+      "title": {
+        "zh": "TARA 限时论证写作",
+        "en": "TARA Writing Task Practice"
+      },
+      "summary": "3 道满托原创题三选一；40 分钟、750 词上限，支持字数统计、私密自动保存、提交与基础结果。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/tara/past-papers",
+      "metrics": [
+        { "label": "原创题目", "value": "3 道" },
+        { "label": "限时", "value": "40 分钟" }
+      ],
+      "evidence": [
+        "content/tara/original-practice/writing-task-v1.json",
+        "verification/features/tara-lnat-writing-practice.yaml"
+      ]
+    },
+    {
+      "id": "lnat-section-a-starter-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "lnat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "LNAT Section A 原创短诊断",
+        "en": "LNAT Section A Starter Diagnostic"
+      },
+      "summary": "3 篇满托原创英文论证文本、12 道四选一题；电脑端左文右题，手机和平板顺序阅读，并支持站内计时、保存和提交。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/lnat/past-papers",
+      "metrics": [
+        { "label": "原创文章", "value": "3 篇" },
+        { "label": "原创题目", "value": "12 道" }
+      ],
+      "evidence": [
+        "content/lnat/original-practice/section-a-starter-v1.json",
+        "verification/features/lnat-section-a-starter.yaml"
+      ]
+    },
+    {
+      "id": "lnat-section-a-full-mock-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "lnat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "LNAT Section A 原创完整结构模考",
+        "en": "LNAT Section A Original Complete-Structure Mock"
+      },
+      "summary": "12 篇满托原创英文论证文本、42 道四选一题和 95 分钟完整结构；支持响应式左右阅读、私密保存、提交、原始结果与学习记录。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/practice/lnat-section-a-full-mock-v1",
+      "metrics": [
+        { "label": "原创文章", "value": "12 篇" },
+        { "label": "原创题目", "value": "42 道" },
+        { "label": "完整计时", "value": "95 分钟" }
+      ],
+      "evidence": [
+        "content/lnat/original-practice/section-a-full-mock-v1.json",
+        "src/features/practice/content/lnat-section-a-full-mock.ts",
+        "verification/features/lnat-section-a-full-mock.yaml"
+      ]
+    },
+    {
+      "id": "lnat-exam-guide",
+      "version": "1.0.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "lnat",
+      "kind": "exam-guide",
+      "title": {
+        "zh": "LNAT 考试与准备指南",
+        "en": "LNAT Exam & Preparation Guide"
+      },
+      "summary": "在本站了解 Section A 阅读论证与 Section B 限时写作的结构、节奏与准备顺序。",
+      "status": "published",
+      "visibility": "public",
+      "access": "public",
+      "delivery": "native-page",
+      "rightsBasis": "official-facts-derived",
+      "route": "/exams/lnat",
+      "metrics": [
+        { "label": "考试部分", "value": "2 个" },
+        { "label": "内容语言", "value": "中英双语" }
+      ],
+      "evidence": [
+        "content/official/exam-source-registry.json",
+        "verification/features/multi-exam-official-guides.yaml"
+      ]
+    },
+    {
+      "id": "lnat-starting-point-v1",
+      "version": "1.0.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "lnat",
+      "kind": "preparation-map",
+      "title": {
+        "zh": "LNAT 逐模块起点定位",
+        "en": "LNAT Module-by-Module Starting Point"
+      },
+      "summary": "根据本人课程、学科、练习经历和每周时间，零 Token 分别列出 Section A 与 Section B 可迁移基础、具体缺口和第一轮建议。",
+      "status": "published",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-page",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/lnat/preparation",
+      "metrics": [
+        { "label": "考试模块", "value": "2 个" },
+        { "label": "计算方式", "value": "固定规则 · 0 Token" }
+      ],
+      "evidence": [
+        "src/features/preparation-profile/assessment-preparation.ts",
+        "verification/features/exam-aware-profile-first-practice.yaml"
+      ]
+    },
+    {
+      "id": "lnat-section-b-writing-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "lnat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "LNAT Section B 限时写作",
+        "en": "LNAT Section B Writing Practice"
+      },
+      "summary": "3 道满托原创题三选一；40 分钟、建议 500–600 词，支持字数统计、私密自动保存、提交与基础结果。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/lnat/past-papers",
+      "metrics": [
+        { "label": "原创题目", "value": "3 道" },
+        { "label": "建议篇幅", "value": "500–600 词" }
+      ],
+      "evidence": [
+        "content/lnat/original-practice/section-b-writing-v1.json",
+        "verification/features/tara-lnat-writing-practice.yaml"
+      ]
+    },
+    {
+      "id": "ucat-verbal-reasoning-starter-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "UCAT 文字推理原创短诊断",
+        "en": "UCAT Verbal Reasoning Starter"
+      },
+      "summary": "3 篇满托原创英文文本、12 道题、6 分钟；混合 True / False / Can't Tell 与最佳支持结论，并复用响应式文章练习界面。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/ucat/past-papers",
+      "metrics": [
+        { "label": "原创文章", "value": "3 篇" },
+        { "label": "原创题目", "value": "12 道" }
+      ],
+      "evidence": [
+        "content/ucat/original-practice/verbal-reasoning-starter-v1.json",
+        "verification/features/ucat-verbal-reasoning-starter.yaml"
+      ]
+    },
+    {
+      "id": "ucat-verbal-reasoning-full-mock-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "UCAT 文字推理原创完整模考",
+        "en": "UCAT Verbal Reasoning Full Mock"
+      },
+      "summary": "11 篇满托原创英文材料、44 道题、22 分钟；每篇四题，支持响应式文章阅读、计时、保存、提交与原始分结果。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/practice/ucat-verbal-reasoning-full-mock-v1",
+      "metrics": [
+        { "label": "原创文章", "value": "11 篇" },
+        { "label": "完整模考", "value": "44 题 · 22 分钟" }
+      ],
+      "evidence": [
+        "content/ucat/original-practice/verbal-reasoning-full-mock-v1.json",
+        "src/features/practice/content/ucat-verbal-reasoning-full-mock.ts",
+        "verification/features/ucat-verbal-reasoning-full-mock.yaml"
+      ]
+    },
+    {
+      "id": "ucat-exam-guide",
+      "version": "1.0.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "ucat",
+      "kind": "exam-guide",
+      "title": {
+        "zh": "UCAT 考试与准备指南",
+        "en": "UCAT Exam & Preparation Guide"
+      },
+      "summary": "在本站看清四个独立模块、题型工具和从 Tutorial 到计时模考的准备顺序。",
+      "status": "published",
+      "visibility": "public",
+      "access": "public",
+      "delivery": "native-page",
+      "rightsBasis": "official-facts-derived",
+      "route": "/exams/ucat",
+      "metrics": [
+        { "label": "考试模块", "value": "4 个" },
+        { "label": "内容语言", "value": "中英双语" }
+      ],
+      "evidence": [
+        "content/official/exam-source-registry.json",
+        "verification/features/multi-exam-official-guides.yaml"
+      ]
+    },
+    {
+      "id": "ucat-starting-point-v1",
+      "version": "1.0.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "ucat",
+      "kind": "preparation-map",
+      "title": {
+        "zh": "UCAT 逐模块起点定位",
+        "en": "UCAT Module-by-Module Starting Point"
+      },
+      "summary": "根据本人课程、学科、练习经历和每周时间，零 Token 列出 VR、DM、QR、SJT 可迁移基础、具体缺口和第一轮建议。",
+      "status": "published",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-page",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/ucat/preparation",
+      "metrics": [
+        { "label": "考试模块", "value": "4 个" },
+        { "label": "计算方式", "value": "固定规则 · 0 Token" }
+      ],
+      "evidence": [
+        "src/features/preparation-profile/assessment-preparation.ts",
+        "verification/features/exam-aware-profile-first-practice.yaml"
+      ]
+    },
+    {
+      "id": "ucat-quantitative-reasoning-starter-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "UCAT 数量推理原创短诊断",
+        "en": "UCAT Quantitative Reasoning Starter"
+      },
+      "summary": "4 组满托原创数据表、10 道数量推理题、8 分钟；支持响应式数据阅读、站内基础计算器、保存、提交和基础结果。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/ucat/past-papers",
+      "metrics": [
+        { "label": "原创数据组", "value": "4 组" },
+        { "label": "原创题目", "value": "10 道" }
+      ],
+      "evidence": [
+        "content/ucat/original-practice/quantitative-reasoning-starter-v1.json",
+        "verification/features/ucat-quantitative-reasoning-starter.yaml"
+      ]
+    },
+    {
+      "id": "ucat-quantitative-reasoning-full-mock-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "UCAT 数量推理原创完整模考",
+        "en": "UCAT Quantitative Reasoning Full Mock"
+      },
+      "summary": "9 组满托原创数据材料、36 道四选一题、26 分钟；支持响应式数据阅读、基础计算器、保存、提交与 36 分原始结果。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/practice/ucat-quantitative-reasoning-full-mock-v1",
+      "metrics": [
+        { "label": "原创数据组", "value": "9 组" },
+        { "label": "完整模考", "value": "36 题 · 26 分钟" }
+      ],
+      "evidence": [
+        "content/ucat/original-practice/quantitative-reasoning-full-mock-v1.json",
+        "src/features/practice/content/ucat-quantitative-reasoning-full-mock.ts",
+        "verification/features/ucat-quantitative-reasoning-full-mock.yaml"
+      ]
+    },
+    {
+      "id": "ucat-decision-making-starter-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "UCAT 决策判断原创短诊断",
+        "en": "UCAT Decision Making Starter"
+      },
+      "summary": "8 道满托原创题、10 分钟；混合普通选择与两组五陈述 Yes / No 题，五项全对得 2 分、错一项得 1 分。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/ucat/past-papers",
+      "metrics": [
+        { "label": "原创题目", "value": "8 道" },
+        { "label": "最高原始分", "value": "10 分" }
+      ],
+      "evidence": [
+        "content/ucat/original-practice/decision-making-starter-v1.json",
+        "verification/features/ucat-specialist-starters.yaml"
+      ]
+    },
+    {
+      "id": "ucat-decision-making-full-mock-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "UCAT 决策判断原创完整模考",
+        "en": "UCAT Decision Making Full Mock"
+      },
+      "summary": "35 道满托原创题、37 分钟；含 29 道四选一与 6 组五陈述题，支持基础计算器、保存、提交与最高 41 分的原始结果。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/practice/ucat-decision-making-full-mock-v1",
+      "metrics": [
+        { "label": "原创题目", "value": "35 道" },
+        { "label": "完整模考", "value": "37 分钟 · 最高 41 原始分" }
+      ],
+      "evidence": [
+        "content/ucat/original-practice/decision-making-full-mock-v1.json",
+        "src/features/practice/content/ucat-decision-making-full-mock.ts",
+        "verification/features/ucat-decision-making-full-mock.yaml"
+      ]
+    },
+    {
+      "id": "ucat-situational-judgement-starter-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "UCAT 情境判断原创短诊断",
+        "en": "UCAT Situational Judgement Starter"
+      },
+      "summary": "3 个满托原创医疗学习情境、10 道等级题、5 分钟；完全匹配得 1 分，相邻等级得 0.5 分。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/ucat/past-papers",
+      "metrics": [
+        { "label": "原创情境", "value": "3 个" },
+        { "label": "原创题目", "value": "10 道" }
+      ],
+      "evidence": [
+        "content/ucat/original-practice/situational-judgement-starter-v1.json",
+        "verification/features/ucat-specialist-starters.yaml"
+      ]
+    },
+    {
+      "id": "ucat-situational-judgement-full-mock-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "title": {
+        "zh": "UCAT 情境判断原创完整模考",
+        "en": "UCAT Situational Judgement Full Mock"
+      },
+      "summary": "21 个满托原创情境、69 道题、26 分钟；含适当性、重要性和最合适/最不合适三类交互，支持部分得分、保存、提交与原始分结果。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-online",
+      "rightsBasis": "mantou-original",
+      "route": "/practice/ucat-situational-judgement-full-mock-v1",
+      "metrics": [
+        { "label": "原创情境", "value": "21 个" },
+        { "label": "完整模考", "value": "69 题 · 26 分钟" }
+      ],
+      "evidence": [
+        "content/ucat/original-practice/situational-judgement-full-mock-v1.json",
+        "src/features/practice/content/ucat-situational-judgement-full-mock.ts",
+        "verification/features/ucat-situational-judgement-full-mock.yaml"
+      ]
+    },
+    {
+      "id": "tmua-specimen-p1-worked-explanations-v1",
+      "version": "1.0.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "tmua",
+      "kind": "review-notes",
+      "title": {
+        "zh": "TMUA Early Specimen Paper 1 逐题深度解析",
+        "en": "TMUA Early Specimen Paper 1 Worked Review"
+      },
+      "summary": "完成 Early Specimen Paper 1 后，按 20 道题查看方法、推导、易错点和下一步训练；正文只向拥有对应权限的账号交付。",
+      "status": "published",
+      "visibility": "public",
+      "access": "invite",
+      "packageIds": ["tmua-deep-review", "tmua-full-access"],
+      "relatedPracticeIds": ["tmua-specimen-p1"],
+      "actionLabel": "完成试卷并打开解析",
+      "delivery": "native-page",
+      "rightsBasis": "mantou-original",
+      "route": "/practice/tmua-specimen-p1",
+      "metrics": [
+        { "label": "逐题解析", "value": "20 道" },
+        { "label": "交付方式", "value": "完成后站内查看" }
+      ],
+      "evidence": [
+        "content/notes/tmua/specimen-p1-worked-explanations-v1.json",
+        "supabase/migrations/20260718213000_tmua_specimen_p1_deep_review.sql",
+        "verification/features/tmua-specimen-p1-deep-review.yaml"
+      ]
+    },
+    {
+      "id": "tmua-six-week-review-plan-v1",
+      "version": "1.0.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "tmua",
+      "kind": "review-notes",
+      "title": {
+        "zh": "TMUA 六周精确训练计划",
+        "en": "TMUA Six-Week Precision Training Plan"
+      },
+      "summary": "六周、30 次具体训练，逐次标明时间、动作、应留下的证据、周度出口和不同课程体系的调整方式。",
+      "status": "published",
+      "visibility": "public",
+      "access": "invite",
+      "packageIds": ["tmua-full-access"],
+      "delivery": "native-page",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/tmua/notes/six-week-plan",
+      "metrics": [
+        { "label": "训练周期", "value": "6 周" },
+        { "label": "具体训练", "value": "30 次" }
+      ],
+      "evidence": [
+        "content/notes/tmua/six-week-review-plan-v1.json",
+        "supabase/migrations/20260718190000_entitled_content_delivery.sql",
+        "verification/features/tmua-invite-bound-review-plan.yaml"
+      ]
+    },
+    {
+      "id": "esat-mathematics-review-notes-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "esat",
+      "kind": "review-notes",
+      "title": {
+        "zh": "ESAT 数学起点复习笔记",
+        "en": "ESAT Mathematics Starting Review Notes"
+      },
+      "summary": "按专业和课程档案显示 Mathematics 1 / 2；包含 15 个知识单元、A-Level/IB/AP 桥接、6 个方法与 2 道原创逐步例题。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-page-and-pdf",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/esat/notes/mathematics",
+      "download": "/notes/esat/esat-mathematics-foundations-v1.pdf",
+      "actionLabel": "在线阅读并下载数学笔记",
+      "metrics": [
+        { "label": "数学模块", "value": "2 个" },
+        { "label": "知识单元", "value": "15 个" },
+        { "label": "PDF", "value": "10 页" }
+      ],
+      "evidence": [
+        "content/notes/esat/mathematics-foundations-v1.json",
+        "content/products/review-notes-pdf-assets.json",
+        "public/notes/esat/esat-mathematics-foundations-v1.pdf",
+        "verification/features/esat-mathematics-review-notes.yaml"
+      ]
+    },
+    {
+      "id": "esat-science-review-notes-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "esat",
+      "kind": "review-notes",
+      "title": {
+        "zh": "ESAT 理科模块起点复习笔记",
+        "en": "ESAT Science Modules Starting Review Notes"
+      },
+      "summary": "按专业和课程档案只显示需要的 Physics、Chemistry、Biology；包含 35 个知识单元、9 个方法、3 道原创例题与 9 组主动回忆。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "delivery": "native-page-and-pdf",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/esat/notes/sciences",
+      "download": "/notes/esat/esat-sciences-foundations-v1.pdf",
+      "actionLabel": "在线阅读并下载理科笔记",
+      "metrics": [
+        { "label": "理科模块", "value": "3 个" },
+        { "label": "知识单元", "value": "35 个" },
+        { "label": "PDF", "value": "16 页" }
+      ],
+      "evidence": [
+        "content/notes/esat/sciences-foundations-v1.json",
+        "content/products/review-notes-pdf-assets.json",
+        "public/notes/esat/esat-sciences-foundations-v1.pdf",
+        "verification/features/esat-science-review-notes.yaml"
+      ]
+    },
+    {
+      "id": "esat-review-notes-v1",
+      "version": "0.0.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "esat",
+      "kind": "review-notes",
+      "title": {
+        "zh": "ESAT 中国学生复习笔记",
+        "en": "ESAT Review Notes for Chinese Students"
+      },
+      "summary": "覆盖 Mathematics 1、Mathematics 2、Physics、Chemistry、Biology 与模块策略的编辑蓝图；正文尚未通过学科、双语和权利发布门。",
+      "status": "internal-review",
+      "visibility": "internal",
+      "access": "internal",
+      "delivery": "native-page",
+      "rightsBasis": "mantou-original",
+      "metrics": [
+        { "label": "规划模块", "value": "6 个" },
+        { "label": "当前状态", "value": "编辑蓝图" }
+      ],
+      "evidence": [
+        "content/notes/china-student-review-notes-blueprint.json",
+        "content/official/research-asset-inventory.json"
+      ]
+    },
+    {
+      "id": "tara-review-notes-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "tara",
+      "kind": "review-notes",
+      "title": {
+        "zh": "TARA 推理与写作起点复习笔记",
+        "en": "TARA Reasoning and Writing Starting Review Notes"
+      },
+      "summary": "完成本人档案后，在线复习 Critical Thinking 七类能力、Problem Solving 三类能力、Writing Task 三问结构和中英论证术语；含原创方法、例题与主动回忆。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "actionLabel": "在线阅读并下载推理与写作笔记",
+      "delivery": "native-page-and-pdf",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/tara/notes/foundations",
+      "download": "/notes/tara/tara-reasoning-writing-foundations-v1.pdf",
+      "metrics": [
+        { "label": "复习模块", "value": "4 个" },
+        { "label": "知识单元", "value": "21 个" },
+        { "label": "原创例题", "value": "4 道" },
+        { "label": "PDF", "value": "17 页" }
+      ],
+      "evidence": [
+        "content/notes/tara/reasoning-writing-foundations-v1.json",
+        "content/products/review-notes-pdf-assets.json",
+        "public/notes/tara/tara-reasoning-writing-foundations-v1.pdf",
+        "verification/features/tara-review-notes.yaml"
+      ]
+    },
+    {
+      "id": "lnat-review-notes-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "lnat",
+      "kind": "review-notes",
+      "title": {
+        "zh": "LNAT 论证阅读与写作起点复习笔记",
+        "en": "LNAT Argument Reading and Writing Starting Review Notes"
+      },
+      "summary": "完成本人档案后，在线复习 Section A 论证阅读、Section B 限时写作、英语长句证据边界和 95+40 分钟执行节奏；含原创方法、例题与主动回忆。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "actionLabel": "在线阅读并下载论证阅读与写作笔记",
+      "delivery": "native-page-and-pdf",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/lnat/notes/foundations",
+      "download": "/notes/lnat/lnat-reading-writing-foundations-v1.pdf",
+      "metrics": [
+        { "label": "复习模块", "value": "4 个" },
+        { "label": "知识单元", "value": "21 个" },
+        { "label": "原创例题", "value": "4 道" },
+        { "label": "PDF", "value": "16 页" }
+      ],
+      "evidence": [
+        "content/notes/lnat/reading-writing-foundations-v1.json",
+        "content/products/review-notes-pdf-assets.json",
+        "public/notes/lnat/lnat-reading-writing-foundations-v1.pdf",
+        "verification/features/lnat-review-notes.yaml"
+      ]
+    },
+    {
+      "id": "ucat-review-notes-v1",
+      "version": "0.1.0",
+      "lastVerifiedAt": "2026-07-19",
+      "examId": "ucat",
+      "kind": "review-notes",
+      "title": {
+        "zh": "UCAT 四模块与极限节奏起点复习笔记",
+        "en": "UCAT Four-Subtest and High-Speed Pacing Starting Review Notes"
+      },
+      "summary": "完成本人档案后，在线复习 VR、DM、QR、SJT 和计算器、标记、复查节奏；含原创方法、例题与主动回忆。",
+      "status": "teaching-preview",
+      "visibility": "public",
+      "access": "profile",
+      "actionLabel": "在线阅读并下载四模块与节奏笔记",
+      "delivery": "native-page-and-pdf",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/ucat/notes/foundations",
+      "download": "/notes/ucat/ucat-four-subtest-foundations-v1.pdf",
+      "metrics": [
+        { "label": "复习模块", "value": "5 个" },
+        { "label": "知识单元", "value": "25 个" },
+        { "label": "原创例题", "value": "5 道" },
+        { "label": "PDF", "value": "20 页" }
+      ],
+      "evidence": [
+        "content/notes/ucat/four-subtest-foundations-v1.json",
+        "content/products/review-notes-pdf-assets.json",
+        "public/notes/ucat/ucat-four-subtest-foundations-v1.pdf",
+        "verification/features/ucat-review-notes.yaml"
+      ]
+    }
+  ]
+}

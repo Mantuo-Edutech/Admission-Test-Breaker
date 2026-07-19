@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "19   A triangle ABC is to be drawn with AB = 10cm, BC = 7cm and the angle at A\n     equal to θ, where θ is a certain speciﬁed angle.\n\n     Of the two possible triangles that could be drawn, the larger triangle has three times\n     the area of the smaller one.\n\n     What is the value of cos θ ?\n\n         5\n     A   7\n\n         151\n     B   200\n          √\n         2 2\n     C    5\n         √\n             17\n     D       5\n         √\n             51\n     E       8\n         √\n             34\n     F       8\n\n\n\n\n                                            21"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A triangle ABC is to be drawn with AB = 10cm, BC = 7cm and the angle at A\n     equal to θ, where θ is a certain speciﬁed angle.\n\n     Of the two possible triangles that could be drawn, the larger triangle has three times\n     the area of the smaller one.\n\n     What is the value of cos θ ?\n\n         5"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "7\n\n         151"
+    },
+    {
+      "label": "B",
+      "rawText": "200\n          √\n         2 2"
+    },
+    {
+      "label": "C",
+      "rawText": "5\n         √\n             17"
+    },
+    {
+      "label": "D",
+      "rawText": "5\n         √\n             51"
+    },
+    {
+      "label": "E",
+      "rawText": "8\n         √\n             34"
+    },
+    {
+      "label": "F",
+      "rawText": "8"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "This questions calls for a sketch. We draw AB = 10, a line from A at an angle θ to AB (though\nwe do not know what θ is), and a circular arc centred on B with radius 7.\n\n\n                                                                           C2\n\n\n\n\n                                                                        7\n                                  C1\n\n\n                           θ                      7\n                     A                      10                      B\n\n\nThe sketch shows the two triangles which could be formed subject to these conditions, with the\nthird vertex being at C1 or C2 .\nOne approach, hinted at by the instruction to find cos θ, is to use the cosine rule.\nIn the triangle ABC1 , we have\n\n                                72 = (AC1 )2 + 102 − 2(AC1 )10 cos θ                            (1)\n\nwhile in the triangle ABC2 , we have\n\n                                72 = (AC2 )2 + 102 − 2(AC2 )10 cos θ                            (2)\n\nUnfortunately, we do not know either AC1 or AC2 . We do, however, know that the larger\ntriangle has three times the area of the smaller one. Taking AC1 or AC2 as the base of the\ntriangle, the perpendicular height is from B to the line AC2 , and is the same for both triangles.\nSo AC2 = 3(AC1 )\nWe can now substitute this into equation (2) to get\n\n                               72 = 9(AC1 )2 + 102 − 6(AC1 )10 cos θ\n\nSubtracting equation (1) then gives\n\n                                    0 = 8(AC1 )2 − 40(AC1 ) cos θ\n\nso dividing by 8AC1 , we have AC1 = 5 cos θ.\nWe can now substitute this back into equation (1) to get\n\n                               72 = (5 cos θ)2 + 102 − 20(5 cos θ) cos θ\n\nso\n                                  49 = 25 cos2 θ + 100 − 100 cos2 θ\n\n\n\nVersion 1.0, April 2019                                                                    Page 21\n\n                                                                                       © UCLES 2019\n\f\nTest of Mathematics for University Admission, 2018 Paper 1 Solutions\n\n\nwhich simplifies to\n                                           75 cos2 θ = 51\n                                       √\n              51   17                  17\nso cos2 θ =      =    giving cos θ =      (as cos θ > 0)\n              75   25                  5\n\nThere is an alternative approach which does not use the cosine rule.\nIf we drop a perpendicular from B to the line AC2 , and let x = AC1 , our diagram becomes:\n\n\n                                                                   C2\n\n\n\n                                                     D\n\n\n                                                                   7\n                                 C1\n                           x\n                            θ                    7\n                      A                    10                  B\n\n\nNow D is midway between C1 and C2 by symmetry (or by using the “RHS” congruency rule on\nthe triangles BDC1 and BDC2 ), so C1 D = DC2 .\nAlso, the area of the triangle ABC1 is 21 (AC1 )(BD) and the area of the triangle ABC2 is\n1\n2 (AC2 )(BD)\nSince the larger triangle has three times the area of the smaller one, AC2 = 3(AC1 ) (as before).\nSo AC2 = 3x, hence C1 C2 = 2x, and C1 D = DC2 = x\nWe can now apply Pythagoras to BDC1 and BDA. We obtain, respectively,\n\n                                           x2 + (BD)2 = 72\n                                       (2x)2 + (BD)2 = 102\n\nSubtracting gives 3x2 = 51, so x2 = 17\n                                      √\n               AD   2x                  17\nSince cos θ =     =    we get cos θ =      as before.\n               AB   10                 5\n                                √        √\nThis also easily\n            √ shows √that BD = 32 = 4 2 and that the area of the two triangles ABC1 and\nABC2 are 2 34 and 6 34.\n\n\n\n\nVersion 1.0, April 2019                                                                  Page 22\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        22,
+        23
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

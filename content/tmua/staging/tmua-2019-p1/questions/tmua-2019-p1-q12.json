@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q12",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 12,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "12   It is given that\n\n\n                                dV   24π(t − 1)\n                                   =      √     for t ≥ 1\n                                dt   (1 + t )\n\n     and V = 7 when t = 1.\n\n     Find the value of V when t = 9.\n\n     A 208π + 7\n\n     B 216π + 7\n\n     C 224π + 7\n\n     D 416π + 7\n\n     E 608π + 7\n\n     F 744π + 7\n\n\n\n\n                                         14"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "It is given that\n\n\n                                dV   24π(t − 1)\n                                   =      √     for t ≥ 1\n                                dt   (1 + t )\n\n     and V = 7 when t = 1.\n\n     Find the value of V when t = 9."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "208π + 7"
+    },
+    {
+      "label": "B",
+      "rawText": "216π + 7"
+    },
+    {
+      "label": "C",
+      "rawText": "224π + 7"
+    },
+    {
+      "label": "D",
+      "rawText": "416π + 7"
+    },
+    {
+      "label": "E",
+      "rawText": "608π + 7"
+    },
+    {
+      "label": "F",
+      "rawText": "744π + 7"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "To find the value of V when t = 9, we need to integrate this expression. There is no general\n                            √ such as these, but we might notice that t − 1 looks somewhat\nrule for integrating quotients\nsimilar to√the denominator\n                  √            t + 1. In fact, we can use the difference of two squares to write\nt − 1 = ( t + 1)( t − 1), so we can rewrite the fraction to give\n\n                                         dV       √\n                                            = 24π( t − 1)\n                                         dt\nand this is easy to integrate; we get\n                                                3\n                                           24πt 2\n                                        V = 3 − 24πt + c\n                                            (2)\n                                                3\n                                         = 16πt 2 − 24πt + c\n\nSubstituting in V = 7 and t = 1 gives\n\n                                         7 = 16π − 24π + c\n\nso c = 8π + 7. Then at t = 9, we have\n                       3\n         V = 16π × 9 2 − 24π × 9 + 8π + 7 = (16 × 27 − 24 × 9 + 8)π + 7 = 224π + 7\n\nso the answer is option C.\n\n      Commentary: The final calculation can be simplified somewhat by writing 16 × 27 =\n      16 × 3 × 9 = 48 × 9, so the brackets become 24 × 9 + 8. Then 24 × 9 = 240 − 24 = 216,\n      giving the final answer of 224π + 7.\n\n\n\n\nc UCLES                                                                                 Page 14"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

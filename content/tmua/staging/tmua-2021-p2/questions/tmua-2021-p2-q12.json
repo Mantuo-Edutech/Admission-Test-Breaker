@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q12",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 12,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "12   Which of the following statements about polynomials f and g is/are true?\n                                                   \u0006x               \u0006x\n         I    If f(x) ≥ g(x) for all x ≥ 0, then    0\n                                                        f(t) dt ≥   0\n                                                                         g(t) dt for all x ≥ 0.\n\n         II   If f(x) ≥ g(x) for all x ≥ 0, then f \u0002 (x) ≥ g\u0002 (x) for all x ≥ 0.\n\n         III If f \u0002 (x) ≥ g\u0002 (x) for all x ≥ 0, then f(x) ≥ g(x) for all x ≥ 0.\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                              14"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Which of the following statements about polynomials f and g is/are true?\n                                                   Cx               Cx\n         I    If f(x) ≥ g(x) for all x ≥ 0, then    0\n                                                        f(t) dt ≥   0\n                                                                         g(t) dt for all x ≥ 0.\n\n         II   If f(x) ≥ g(x) for all x ≥ 0, then f  (x) ≥ g (x) for all x ≥ 0.\n\n         III If f  (x) ≥ g (x) for all x ≥ 0, then f(x) ≥ g(x) for all x ≥ 0."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Rx\nI    We can think of the integral 0 f(t) dt as being the (signed) area under the graph of y = f(x)\n     from 0 to x. Since f(x) ≥ g(x) for all x ≥ 0, the area under the graph of y = f(x) will also\n     be greater than that under the graph of y = g(x), so this statement is true.\n     You might be concerned about values of x for which g(x) is negative. We could therefore\n     demonstrate this algebraically as well.\n     We have                  Z x               Z x               Z x\n                                    f(t) dt −         g(t) dt =         (f(t) − g(t)) dt.\n                               0                 0                 0\n     Since f(t) − g(t) ≥ 0 for all x ≥ 0, we are integrating a non-negative\n                                                                  Rx        function,\n                                                                              Rx      and so the\n     integral must be non-negative, that is to say, we must have 0 f(t) dt ≥ 0 g(t) dt.\n\nII   It is not clear why f(x) ≥ g(x) should imply that the gradient (derivative) of f(x) is greater\n     than that of g(x), and it is relatively straightforward to find a counterexample. Here is one:\n\n                                                         y\n                                                                   f(x) = (x − 1)2\n\n\n\n\n                                                                       g(x) = 0     x\n                                                     0\n\n\n     In this example, f(x) ≥ g(x) for all x, but f ′ (0) < 0 while g′ (x) = 0 for all x.\n\nIII This is not necessarily true, as we could add a constant to g(x) without changing g′ (x). For\n    example, we could have f ′ (x) = g′ (x) = 1 for all x, but f(x) = x while g(x) = x + 1, so\n    f(x) < g(x) for all x.\n\nThe correct option is therefore B.\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 15"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

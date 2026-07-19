@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11   The line y = mx + 5, where m > 0, is normal to the curve y = 10 − x2 at the\n     point (p, q).\n\n     What is the value of p ?\n         √\n           2\n     A    6\n             √\n     B − 62\n          √\n         3 2\n     C    2\n               √\n     D −322\n       √\n     E   5\n        √\n     F − 5\n\n\n\n\n                                           13"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The line y = mx + 5, where m > 0, is normal to the curve y = 10 − x2 at the\n     point (p, q).\n\n     What is the value of p ?\n         √\n           2"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "6\n             √"
+    },
+    {
+      "label": "B",
+      "rawText": "− 62\n          √\n         3 2"
+    },
+    {
+      "label": "C",
+      "rawText": "2\n               √"
+    },
+    {
+      "label": "D",
+      "rawText": "−322\n       √"
+    },
+    {
+      "label": "E",
+      "rawText": "5\n        √"
+    },
+    {
+      "label": "F",
+      "rawText": "− 5"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can find the equation of the normal to the curve y = 10 − x2 at the point (p, q) as usual.\n                  dy\nThe derivative is    = −2x so at x = p the tangent has gradient −2p. Therefore the normal\n                  dx\n              1\nhas gradient    .\n             2p\nThe tangent and normal both pass through the point (p, 10 − p2 ), which shows that q = 10 − p2 .\nThe normal thus has equation\n                                                        1\n                                  y − (10 − p2 ) =        (x − p)\n                                                       2p\nso rearranging into the form y = mx + c gives\n                                          1    1\n                                    y=      x − + 10 − p2\n                                         2p    2\nWe want this to have the form y = mx + 5 where m > 0, so we have\n                                       1\n                                      − + 10 − p2 = 5.\n                                       2\nRearranging thus gives\n                                                   9\n                                            p2 =\n                                                   2\n                       √\n                3     3 2\nand hence p = ± √ = ±\n                 2     2\n                                            √\n           1                               3 2\nSince m =    > 0 we must have p > 0 so p =\n          2p                                2\nThe correct answer is C.\n\n\n\n\nVersion 1.0, April 2019                                                                 Page 13\n\n                                                                                    © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

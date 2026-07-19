@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q04",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 4,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "4   The 1st , 2nd and 3rd terms of a geometric progression are also the 1st , 4th and 6th\n    terms, respectively, of an arithmetic progression.\n\n    The sum to inﬁnity of the geometric progression is 12.\n\n    Find the 1st term of the geometric progression.\n\n    A 1\n\n    B 2\n\n    C 3\n\n    D 4\n\n    E 5\n\n    F 6\n\n\n\n\n                                              6"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The 1st , 2nd and 3rd terms of a geometric progression are also the 1st , 4th and 6th\n    terms, respectively, of an arithmetic progression.\n\n    The sum to inﬁnity of the geometric progression is 12.\n\n    Find the 1st term of the geometric progression."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "1"
+    },
+    {
+      "label": "B",
+      "rawText": "2"
+    },
+    {
+      "label": "C",
+      "rawText": "3"
+    },
+    {
+      "label": "D",
+      "rawText": "4"
+    },
+    {
+      "label": "E",
+      "rawText": "5"
+    },
+    {
+      "label": "F",
+      "rawText": "6"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let the arithmetic progression have first term a and common difference d. Let the geometric\nprogression have first term a (as the first term of the geometric progression is the same as the\nfirst term of the arithmetic progression) and common ratio r.\nThen the first three terms of the geometric progression are a, ar and ar2 , while the 1st, 4th and\n6th terms of the arithmetic progression are a, a + 3d and a + 5d.\nTherefore ar = a + 3d and ar2 = a + 5d.\nThe next piece of information we are given is that the sum to infinity of the geometric progression\n           a\nis 12, so      = 12, hence a = 12(1 − r).\n          1−r\nSo we have three equations:\n\n                                          ar = a + 3d\n                                         ar2 = a + 5d\n                                           a = 12(1 − r)\n\nThere are several ways to work out the value of a (as required for this question) from these\nequations; here is one approach.\nWe can eliminate d from the first two equations by finding 5 times the first equation minus 3\ntimes the second equation; this gives\n\n                                         5ar − 3ar2 = 2a\n\nso dividing by a yields 5r −3r2 = 2, giving 3r2 −5r +2 = 0. This factorises as (3r −2)(r −1) = 0,\nso r = 1 or r = 23 . Since the geometric progression has a sum to infinity, we must have |r| < 1,\nso r = 32 .\nThen the final equation gives a = 4, which is option D.\n\n\n\n\nVersion 1.0, April 2021                                                                     Page 6\n\n                                           © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

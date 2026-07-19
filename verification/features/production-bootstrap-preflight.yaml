@@ -1,0 +1,86 @@
+schemaVersion: 1
+feature:
+  id: production-bootstrap-preflight
+  title: Secret-safe GitHub and release-candidate production preflight
+  status: partial
+  userOutcome: >-
+    A non-technical founder can run one read-only command to see the exact GitHub,
+    environment and release-candidate setup still missing before staging or production,
+    without exposing any credential value or confusing configuration readiness with Beta readiness.
+
+run:
+  packageScript: verify:production-bootstrap
+
+claims:
+  - id: versioned-production-bootstrap-requirements
+    status: verified
+    statement: >-
+      Staging and production share a versioned requirement contract for the Mantou GitHub
+      repository, four verified workflows, four environment secret names, a public HTTPS
+      origin and production approval protection. Five non-machine-verifiable production
+      gates remain explicitly manual.
+    artifacts:
+      - deploy/bootstrap-requirements.json
+      - src/platform/production-bootstrap.ts
+      - tests/platform/production-bootstrap.test.ts
+    automatedChecks:
+      - verify:production-bootstrap
+
+  - id: read-only-secret-safe-preflight
+    status: verified
+    statement: >-
+      The preflight uses read-only git, GitHub API and Docker inspection. It reads only
+      configured secret names and public variables, never secret values, and has no API
+      mutation path. Missing setup is reported with exact safe follow-up actions.
+    artifacts:
+      - scripts/check-production-bootstrap.ts
+      - tests/architecture/production-bootstrap-contract.test.ts
+      - docs/operations/PRODUCTION_BETA_RUNBOOK.md
+    automatedChecks:
+      - verify:production-bootstrap
+
+  - id: setup-and-release-candidate-are-separate
+    status: verified
+    statement: >-
+      GitHub setup readiness is calculated independently from a clean, pushed main commit
+      with a successful Verify run for that exact SHA. Both remain separate from the final Beta gate and from SMTP,
+      Turnstile hostname, domain/TLS, backup/alerting and named-owner evidence.
+    artifacts:
+      - src/platform/production-bootstrap.ts
+      - scripts/check-production-bootstrap.ts
+      - package.json
+      - tests/platform/production-bootstrap.test.ts
+    automatedChecks:
+      - verify:production-bootstrap
+      - verify:architecture
+
+  - id: explicit-secret-safe-bootstrap-apply
+    status: verified
+    statement: >-
+      A versioned input plan lets a non-technical founder configure both GitHub Environments
+      without storing secret values. Dry-run is the default; apply requires an exact confirmation,
+      validates every secret source before any mutation, pipes values through stdin, stops on the
+      first external failure and finishes with the independent read-only gate.
+    artifacts:
+      - deploy/bootstrap-input.example.json
+      - src/platform/production-bootstrap-plan.ts
+      - scripts/apply-production-bootstrap.ts
+      - tests/platform/production-bootstrap-plan.test.ts
+      - docs/architecture/decisions/2026-07-19-explicit-production-bootstrap-apply.md
+    automatedChecks:
+      - verify:production-bootstrap
+      - verify:architecture
+
+boundaries:
+  - A green GitHub bootstrap gate does not prove Supabase, SMTP, Turnstile, domain, backup, alerting or privacy readiness.
+  - Secret values are never printed, stored in a generated report or accepted through browser-safe VITE variables.
+  - The current external audit found both GitHub Environments absent; this feature does not create them without explicit authorization.
+  - Bootstrap apply configures GitHub control-plane names and protection only; it does not create Supabase projects, SMTP, Turnstile widgets, DNS, backups or alert ownership.
+  - Production publication still requires the full Beta gate, human review evidence and an approved immutable release SHA.
+
+manualChecks:
+  - id: configure-and-verify-real-production-control-plane
+    status: pending
+    evidence: Create both GitHub Environments, configure approved Supabase projects and all named secret/variable/protection requirements, then rerun the preflight and attach the non-secret output before staging deployment.
+    viewports:
+      - operations

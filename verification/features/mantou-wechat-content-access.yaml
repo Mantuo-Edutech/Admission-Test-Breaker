@@ -21,7 +21,7 @@ claims:
     artifacts:
       - public/brand/bingbing-wechat-qr.jpg
       - src/features/service-bridge/components/WechatAccessDialog.tsx
-      - src/features/catalog/pages/TmuaResourcesPage.tsx
+      - src/features/library/pages/LearningLibraryPage.tsx
       - src/styles/practice.css
       - tests/app/tmua-hub-page.test.tsx
     automatedChecks:

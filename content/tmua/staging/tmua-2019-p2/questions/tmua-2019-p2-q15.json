@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "15   The numbers a, b and c are each greater than 1.\n\n     The following logarithms are all to the same base:\n\n                                          log(ab2 c) = 7\n                                         log(a2 bc2 ) = 11\n                                        log(a2 b2 c3 ) = 15\n\n\n     What is this base?\n\n     A a\n\n     B b\n\n     C c\n\n     D It is possible to determine the base, but the base is not a, b or c.\n\n     E There is insuﬃcient information given to determine the base.\n\n\n\n\n                                              17"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The numbers a, b and c are each greater than 1.\n\n     The following logarithms are all to the same base:\n\n                                          log(ab2 c) = 7\n                                         log(a2 bc2 ) = 11\n                                        log(a2 b2 c3 ) = 15\n\n\n     What is this base?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "a"
+    },
+    {
+      "label": "B",
+      "rawText": "b"
+    },
+    {
+      "label": "C",
+      "rawText": "c"
+    },
+    {
+      "label": "D",
+      "rawText": "It is possible to determine the base, but the base is not a, b or c."
+    },
+    {
+      "label": "E",
+      "rawText": "There is insuﬃcient information given to determine the base."
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We expand the expressions using the logarithm rules, namely log(ab) = log a + log b and log an =\nn log a when a > 1. This gives\n\n                                    log a + 2 log b + log c = 7\n                                  2 log a + log b + 2 log c = 11\n                                  2 log a + 2 log b + 3 log c = 15\n\nThis is a set of simultaneous equations! If we write A = log a, B = log b and C = log c, they\nbecome\n\n                                        A + 2B + C = 7                                         (1)\n                                       2A + B + 2C = 11                                        (2)\n                                       2A + 2B + 3C = 15                                       (3)\n\nSubtracting (3) − (2) and (3) − 2 × (1) to eliminate A gives\n\n                                             B+C =4                                            (4)\n                                          −2B + C = 1                                          (5)\n\nSubtracting these then gives\n                                             3B = 3\nso B = 1 (and thus C = 3, A = 2).\nTherefore log b = 1, so the base of logarithms is b (and also a = b2 , c = b3 ). The correct answer\nis option B.\n\n\n\n\nc UCLES                                                                                    Page 19"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

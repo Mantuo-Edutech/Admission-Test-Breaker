@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "2   An arithmetic progression has ﬁrst term a and common diﬀerence d.\n\n    The sum of the ﬁrst 5 terms is equal to the sum of the ﬁrst 8 terms.\n\n    Which one of the following expresses the relationship between a and d ?\n\n    A a = − 38\n            3\n               d\n\n    B a = −7d\n\n    C a = −6d\n\n    D a = 6d\n\n    E   a = 7d\n\n    F   a = 38\n             3\n               d\n\n\n\n\n                                           4"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "An arithmetic progression has ﬁrst term a and common diﬀerence d.\n\n    The sum of the ﬁrst 5 terms is equal to the sum of the ﬁrst 8 terms.\n\n    Which one of the following expresses the relationship between a and d ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "a = − 38\n            3\n               d"
+    },
+    {
+      "label": "B",
+      "rawText": "a = −7d"
+    },
+    {
+      "label": "C",
+      "rawText": "a = −6d"
+    },
+    {
+      "label": "D",
+      "rawText": "a = 6d"
+    },
+    {
+      "label": "E",
+      "rawText": "a = 7d"
+    },
+    {
+      "label": "F",
+      "rawText": "a = 38\n             3\n               d"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "One approach is to use the formulae for the sum of the first 5 and the first 8 terms (that is,\nSn = 12 n(2a + (n − 1)d)).\nWe have\n\n\n\n                               S5 = 12 × 5(2a + 4d) = 52 (2a + 4d)\n                               S8 = 12 × 8(2a + 7d) = 4(2a + 7d)\n\nThese are equal, so we have\n                                     5\n                                     2 (2a + 4d) = 4(2a + 7d)\n\nWe want to rearrange this to get a formula in the form a = · · · , so we multiply both sides by 2,\nexpand the brackets and collect like terms:\n\n                                         5(2a + 4d) = 8(2a + 7d)\n                                ⇐⇒        10a + 20d = 16a + 56d\n                                ⇐⇒              −6a = 36d\n                                ⇐⇒                 a = −6d\n\nso the answer is C.\nAn alternative approach is to note that the difference between the sum of the first 5 and the\nsum of the first 8 terms equals the sum of the 6th, 7th and 8th terms. (This is because S5 =\nu1 + u2 + · · · + u5 while S8 = u1 + u2 + · · · + u5 + u6 + u7 + u8 , where we have written the\nsequence as u1 , u2 , . . . .) Since the two sums S5 and S8 are equal, the sum of the 6th, 7th and\n8th terms must be zero. This gives\n\n                               (a + 5d) + (a + 6d) + (a + 7d) = 0\n\nExpanding and collecting like terms gives 3a + 18d = 0, so a = −6d, as before.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 4\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

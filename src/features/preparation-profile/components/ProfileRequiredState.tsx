@@ -9,7 +9,7 @@ interface ProfileRequiredStateProps {
 export function ProfileRequiredState({ issue = null }: ProfileRequiredStateProps) {
   return (
     <main className="tmua-stage-page">
-      <TmuaPageHeader backTo="/exams/tmua" backLabel="TMUA 考试介绍" />
+      <TmuaPageHeader />
       <section className="tmua-required-state page-shell">
         <p className="eyebrow">先完成课程定位</p>
         <h1>请先填写课程信息</h1>

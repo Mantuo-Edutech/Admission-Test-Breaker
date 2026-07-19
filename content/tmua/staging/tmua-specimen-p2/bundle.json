@@ -1,0 +1,1914 @@
+{
+  "schemaVersion": 1,
+  "bundleType": "question-import",
+  "id": "tmua-specimen-p2-extraction-v1",
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "generatedAt": "2026-07-17T07:00:00.000Z",
+  "generatedBy": "tmua-extraction-cli",
+  "sourceDocumentIds": {
+    "question": "tmua-official-specimen-paper-2",
+    "answerKey": "tmua-official-specimen-answer-key",
+    "workedSolution": "tmua-official-specimen-paper-2-worked-solutions"
+  },
+  "questionCount": 20,
+  "publishableQuestionCount": 0,
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q01",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 1,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "1.     The radius of the circle 2   +2      − 8 + 12 + 15 = 0 is\n\n\n\n\n       A\n\n\n       B\n\n\n\n       C\n\n\n       D       √37\n\n       E       √67\n\n\n\n\n                                        (       )"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The radius of the circle 2   +2      − 8 + 12 + 15 = 0 is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "√37"
+        },
+        {
+          "label": "E",
+          "rawText": "√67\n\n\n\n\n                                        (       )"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We first divide by 2 to get x2 + y 2 + . . . , then complete the square for x and y:\n\n\n\n                                            2x2 + 2y 2 − 8x + 12y + 15 = 0\n                             ⇐⇒                 x2 + y 2 − 4x + 6y + 15\n                                                                     2 =0\n                             ⇐⇒     (x − 2)2 − 22 + (y + 3)2 − 32 + 15\n                                                                    2 =0\n                             ⇐⇒                    (x − 2)2 + (y + 3)2 = 11\n                                                                         2\n                   q\nso the radius is       2 , which is option B.\n                       11\n\n\n\n\n                                                   4\n                                                                                       © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q02",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 2,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "2.     The gradient of the curve    =               at the point where   = 2 is\n                                            √\n\n\n\n\n       A       √2\n\n       B       3√2\n\n       C       4√2\n\n       D       √2\n\n       E       6√2\n\n\n\n\n© UCLES 2017                                                                      [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The gradient of the curve    =               at the point where   = 2 is\n                                            √"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "√2"
+        },
+        {
+          "label": "B",
+          "rawText": "3√2"
+        },
+        {
+          "label": "C",
+          "rawText": "4√2"
+        },
+        {
+          "label": "D",
+          "rawText": "√2"
+        },
+        {
+          "label": "E",
+          "rawText": "6√2\n\n\n\n\n© UCLES 2017                                                                      [Turn over"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We expand the brackets and divide through by the denominator to write everything as a single\npower of x:\n\n                                         (3x − 2)2\n                                   y=        √\n                                           x x\n                                         9x2 − 12x + 4\n                                     =          3\n                                           x2\n                                         1       1       3\n                                     = 9x − 12x− 2 + 4x− 2 .\n                                         2\n\n\n\n\nTherefore\n                       dy             1                  3                 5\n                          = 9 × 12 x− 2 − 12 × (− 12 )x− 2 + 4 × (− 32 )x− 2\n                       dx\n                                  1       3        5\n                          = 29 x− 2 + 6x− 2 − 6x− 2 .\n\nSubstituting in x = 2 gives us the gradient at x = 2:\n                             dy   9    1   1    1\n                                = × √ +6× √ −6× √\n                             dx   2     2 2 2  4 2\n                                  9+6−3\n                                =     √\n                                     2 2\n                                   6\n                                =√\n                                    2\n                                   √\n                                = 3 2,\n\nhence the answer is option B.\n\n\n\n\n                                                5\n                                                                                © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q03",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 3,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "4\n\n3.    Consider the following attempt to solve an equation. The steps have been numbered for\n      reference.\n                                            x+5 = x+3\n                                                                  (1)\n                                                    2\n                                          x + 5 = x + 6x + 9\n                                                                  (2)\n                                            2\n                                          x + 5x + 4 = 0\n                                                                  (3)\n                                          ( x + 4) ( x + 1) = 0\n\n\n                                          x = −4 or x = −1\n\n      Which one of the following statements is true?\n\n      A    Both −4 and −1 are solutions of the equation.\n\n      B    Neither −4 nor −1 are solutions of the equation.\n\n      C    One solution is correct and the incorrect solution arises as a result of step (1).\n\n      D    One solution is correct and the incorrect solution arises as a result of step (2).\n\n      E    One solution is correct and the incorrect solution arises as a result of step (3).\n\n\n\n\n© UCLES 2017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "4\n\n3.    Consider the following attempt to solve an equation. The steps have been numbered for\n      reference.\n                                            x+5 = x+3\n                                                                  (1)\n                                                    2\n                                          x + 5 = x + 6x + 9\n                                                                  (2)\n                                            2\n                                          x + 5x + 4 = 0\n                                                                  (3)\n                                          ( x + 4) ( x + 1) = 0\n\n\n                                          x = −4 or x = −1\n\n      Which one of the following statements is true?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "Both −4 and −1 are solutions of the equation."
+        },
+        {
+          "label": "B",
+          "rawText": "Neither −4 nor −1 are solutions of the equation."
+        },
+        {
+          "label": "C",
+          "rawText": "One solution is correct and the incorrect solution arises as a result of step (1)."
+        },
+        {
+          "label": "D",
+          "rawText": "One solution is correct and the incorrect solution arises as a result of step (2)."
+        },
+        {
+          "label": "E",
+          "rawText": "One solution is correct and the incorrect solution arises as a result of step (3).\n\n\n\n\n© UCLES 2017"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can determine whether x = −4 and/or x = −1 are solutions by substituting them back into\nthe original equation.\n                          √       √\nSubstituting x = −4 gives x + 5 = −4 + 5 = 1 and x + 3 = −4 + 3 = −1, so this is not a\nsolution.\n                         √       √\nSubstituting x = −1 gives x + 5 = −1 + 5 = 2 and x + 3 = −1 + 3 = 2, so this is a solution.\nWhere does x = −4 arise?\nWorking backwards, once we have reached the line (x + 4)(x + 1) = 0, it is clear that there are\nthe two proposed solutions.\nThe previous line is just the expansion of this; the equations x2 +5x+4 = 0 and (x+4)(x+1) = 0\nare algebraically equivalent, so step (3) is fine.\nLikewise, x + 5 = x2 + 6x + 9 is algebraically equivalent to these, obtained by a simple rear-\nrangement, so step (2) is fine. And indeed, x = −4 is a solution to this equation, as is easy to\ncheck.\nTherefore the extra solution was introduced at step (1), when we squared the equation: on the\nfirst line, x = −4 gives the incorrect −1 = 1, while squaring this gives the correct 1 = 1. Hence\nthe correct answer is C.\nWe can go further, though, and ask how we could correct the solution. If we introduce implication\nsymbols between pairs of lines, it will be clearer what is happening. The symbol ‘ ⇐⇒ ’ indicates\nthat this line is equivalent to the previous line, while ‘ =⇒ ’ indicates that this line follows from\nthe previous line, but not vice versa.\nThe argument now reads as follows:\n\n\n                                              √\n                                                  x+5=x+3\n                                =⇒                x + 5 = x2 + 6x + 9\n                               ⇐⇒         x2 + 5x + 4 = 0\n                               ⇐⇒      (x + 4)(x + 1) = 0\n                               ⇐⇒            x = −4 or x = −1\n\nThe first line is only a one-way implication, as a2 = b2 does not imply that a = b, for example\nif a = 1 and b = −1 (as in our case).\nSince not every line is an ‘if and only if’ implication, all we can say is the following: if the\noriginal equation is true, then x = −4 or x = −1. However, this argument does not show that\nif x = −4 or x = −1, then the original equation is true. So to correctly complete the argument,\nwe must check whether these possibilities satisfy the original equation.\n\n\n\n\n                                                  6\n                                                                                        © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q04",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 4,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "4.     A set of five cards each have a letter printed on their front and a number printed on their\n       back, as follows:\n\n\n\n\n       Which one of the five cards (A, B, C, D or E) provides a counterexample to the following\n       statement?\n\n               Every card that has a vowel on its front has an even number on its back."
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A set of five cards each have a letter printed on their front and a number printed on their\n       back, as follows:\n\n\n\n\n       Which one of the five cards (A, B, C, D or E) provides a counterexample to the following\n       statement?\n\n               Every card that has a vowel on its front has an even number on its back."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        },
+        {
+          "label": "F",
+          "rawText": "[visual option F; transcription required]"
+        },
+        {
+          "label": "G",
+          "rawText": "[visual option G; transcription required]"
+        },
+        {
+          "label": "H",
+          "rawText": "[visual option H; transcription required]"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The statement is a ‘for all’ statement, and can be expressed as a conditional statement:\n\n    For every card, if it has a vowel on its front, then it has an even number on its back.\n\nThus a counterexample to this statement is a card for which ‘if it has a vowel on its front, then\nit has an even number on its back’ is false. This is false if the card has a vowel on its front and\nit does not have an even number on its back.\nThe only cards with vowels on their front are A and E; of these, E has an even number on its\nback but A does not.\nSo the only counterexample is A.\n\n\n\n\n                                                7\n                                                                                      © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required",
+          "option-count-review"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q05",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 5,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "5.     Using the observation that 2      3 , it is possible to deduce that log 2 is approximately\n\n\n       A\n\n\n       B\n\n\n       C\n\n\n       D\n\n\n       E\n\n\n       F       2\n\n\n\n\n© UCLES 2017                                                                              [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Using the observation that 2      3 , it is possible to deduce that log 2 is approximately"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        },
+        {
+          "label": "F",
+          "rawText": "2\n\n\n\n\n© UCLES 2017                                                                              [Turn over"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The target log3 2 suggests that we want to take logarithms of both sides of the given approxi-\nmation to base 3, giving\n                                      log3 25 ≈ log3 33\nso that\n                                             5 log3 2 ≈ 3\nand hence log3 2 ≈ 35 , which is option A.\n\n\n\n\n                                                  8\n                                                                                  © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            8
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q06",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 6,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "6\n\n6.     The area of a rectangle is measured to be 5600 cm correct to 2 significant figures.\n\n       The width of the rectangle is measured to be 80 cm correct to the nearest centimetre.\n\n       Which one of the following expressions gives the greatest possible height of the\n       rectangle?\n\n\n       A       70.5 cm\n\n       B       75 cm\n\n\n       C             cm\n\n\n       D             cm\n                 .\n\n\n       E             cm\n\n\n       F             cm\n                 .\n\n\n\n\n© UCLES 2017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "6.     The area of a rectangle is measured to be 5600 cm correct to 2 significant figures.\n\n       The width of the rectangle is measured to be 80 cm correct to the nearest centimetre.\n\n       Which one of the following expressions gives the greatest possible height of the\n       rectangle?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "70.5 cm"
+        },
+        {
+          "label": "B",
+          "rawText": "75 cm"
+        },
+        {
+          "label": "C",
+          "rawText": "cm"
+        },
+        {
+          "label": "D",
+          "rawText": "cm\n                 ."
+        },
+        {
+          "label": "E",
+          "rawText": "cm"
+        },
+        {
+          "label": "F",
+          "rawText": "cm\n                 .\n\n\n\n\n© UCLES 2017"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The area of the rectangle is height times width, so\n                                                     area\n                                         height =          .\n                                                     width\nTo obtain the greatest possible height, we require the greatest possible area and the least possible\nwidth. The upper bound for the area is 5650 cm, and the lower bound for the height is 79.5 cm,\nso the greatest possible height is 5650\n                                   79.5 cm, which is option F.\n\n\n\n\n                                                 9\n                                                                                       © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q07",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 7,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "7\n\n7.      Which one of the following is a sketch of the graph\n\n\n                                            ( + )(          −       +   )=1?\n\n\n\n                                 4                                                4\n\n                                 3                                                3\n                                 2                                                2\n\n                                 1                                                1\n                                 0                                                0\n                   –4 –3 –2 –1        0 1   2   3   4   5   6       –4 –3 –2 –1        0 1   2   3   4   5   6\n                                 –1                                               –1\n                                 –2                                               –2\n                                 –3                                               –3\n                                 –4                                               –4\n\n\n               A                                                    B\n\n                                  4                                                4\n\n                                  3                                                3\n\n                                  2                                                2\n\n                                  1                                                1\n                                  0                                                0\n                   –4 –3 –2 –1        0 1   2   3   4   5   6       –4 –3 –2 –1        0 1   2   3   4   5   6\n                                 –1                                               –1\n                                                                                  –2\n                                 –2\n                                 –3                                               –3\n\n                                 –4                                               –4\n\n\n               C                                                    D\n\n\n\n\n© UCLES 2017                                                                                                     [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "7.      Which one of the following is a sketch of the graph\n\n\n                                            ( + )(          −       +   )=1?\n\n\n\n                                 4                                                4\n\n                                 3                                                3\n                                 2                                                2\n\n                                 1                                                1\n                                 0                                                0\n                   –4 –3 –2 –1        0 1   2   3   4   5   6       –4 –3 –2 –1        0 1   2   3   4   5   6\n                                 –1                                               –1\n                                 –2                                               –2\n                                 –3                                               –3\n                                 –4                                               –4\n\n\n               A                                                    B\n\n                                  4                                                4\n\n                                  3                                                3\n\n                                  2                                                2\n\n                                  1                                                1\n                                  0                                                0\n                   –4 –3 –2 –1        0 1   2   3   4   5   6       –4 –3 –2 –1        0 1   2   3   4   5   6\n                                 –1                                               –1\n                                                                                  –2\n                                 –2\n                                 –3                                               –3\n\n                                 –4                                               –4\n\n\n               C                                                    D\n\n\n\n\n© UCLES 2017                                                                                                     [Turn over"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        },
+        {
+          "label": "F",
+          "rawText": "[visual option F; transcription required]"
+        },
+        {
+          "label": "G",
+          "rawText": "[visual option G; transcription required]"
+        },
+        {
+          "label": "H",
+          "rawText": "[visual option H; transcription required]"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "A simple way to decide between the four given options is to determine which of the points (1, 0),\n(−1, 0), (0, 1) and (0, −1) lie on the graph.\nWe start with (1, 0): this gives 1 × 1 = 1, so (1, 0) lies on the graph. We now look at (0, 1): this\ngives 1 × 1 = 1, so this also lies on the graph. On the other hand, (−1, 0) gives −1 × 1 = −1\nand (0, −1) gives the same, so neither of these points lies on the graph.\nTherefore the graph must be that shown in option C.\nAlternatively, we can multiply out the brackets, giving x3 + y 3 = 1; therefore for large values\nof x, we must have y 3 ≈ −x3 or y ≈ −x, giving A or C. Now when 0 < x < 1, we must have\n0 < y < 1, and hence the correct graph is C.\n\n\n\n\n                                                10\n                                                                                       © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required",
+          "option-count-review"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q08",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 8,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "8\n\n8.     Consider the following statement about the positive integer :\n\n       Statement (*): The sum of the four consecutive integers, the smallest of which is      ,\n                       is a multiple of 6.\n\n       Which one of the following is true?\n\n       A       Statement (*) is true for all values of .\n\n       B       Statement (*) is true for all values of     which are odd, but not for any other values\n               of .\n\n       C       Statement (*) is true for all values of     which are multiples of 3, but not for any\n               other values of .\n\n       D       Statement (*) is true for all values of     which are multiples of 6, but not for any\n               other values of .\n\n       E       Statement (*) is not true for any value of ."
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "8.     Consider the following statement about the positive integer :\n\n       Statement (*): The sum of the four consecutive integers, the smallest of which is      ,\n                       is a multiple of 6.\n\n       Which one of the following is true?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "Statement (*) is true for all values of ."
+        },
+        {
+          "label": "B",
+          "rawText": "Statement (*) is true for all values of     which are odd, but not for any other values\n               of ."
+        },
+        {
+          "label": "C",
+          "rawText": "Statement (*) is true for all values of     which are multiples of 3, but not for any\n               other values of ."
+        },
+        {
+          "label": "D",
+          "rawText": "Statement (*) is true for all values of     which are multiples of 6, but not for any\n               other values of ."
+        },
+        {
+          "label": "E",
+          "rawText": "Statement (*) is not true for any value of ."
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We could start by trying a few examples to get a feeling for the statement.\n\n•    n = 0 gives 0 + 1 + 2 + 3 = 6, so (∗) is true in this case.\n\n•    n = 1 gives 1 + 2 + 3 + 4 = 10, so (∗) is false in this case.\n\n•    n = 2 gives 2 + 3 + 4 + 5 = 14, so (∗) is false in this case.\n\n•    n = 3 gives 3 + 4 + 5 + 6 = 18, so (∗) is true in this case.\n\nOf the given options, this exploration shows: A is false; B is false (as (∗) is false for n = 1);\nC may be true; D is false (as (∗) is true for n = 3), and E is false.\nSo by elimination, the correct answer must be C.\nWe can also prove this. The sum of the four consecutive integers is\n\n                            n + (n + 1) + (n + 2) + (n + 3) = 4n + 6.\n\nThis is a multiple of 6 whenever 4n is a multiple of 6. An integer is a multiple of 6 if and only\nif it is a multiple of both 2 and 3. 4n is always a multiple of 2, and is a multiple of 3 when n is\na multiple of 3 and for no other value of n. Hence option C is correct.\n\n\n\n\n                                                11\n                                                                                      © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q09",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 9,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "9.     Consider the statement about Fred:\n\n               (*) Every day next week, Fred will do at least one maths problem.\n\n       If statement (*) is not true, which of the following is certainly true?\n\n\n       A       Every day next week, Fred will do more than one maths problem.\n       B       Some day next week, Fred will do more than one maths problem.\n       C       On no day next week will Fred do more than one maths problem.\n       D       Every day next week, Fred will do no maths problems.\n       E       Some day next week, Fred will do no maths problems.\n       F       On no day next week will Fred do no maths problems.\n\n\n\n\n© UCLES 2017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the statement about Fred:\n\n               (*) Every day next week, Fred will do at least one maths problem.\n\n       If statement (*) is not true, which of the following is certainly true?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "Every day next week, Fred will do more than one maths problem."
+        },
+        {
+          "label": "B",
+          "rawText": "Some day next week, Fred will do more than one maths problem."
+        },
+        {
+          "label": "C",
+          "rawText": "On no day next week will Fred do more than one maths problem."
+        },
+        {
+          "label": "D",
+          "rawText": "Every day next week, Fred will do no maths problems."
+        },
+        {
+          "label": "E",
+          "rawText": "Some day next week, Fred will do no maths problems."
+        },
+        {
+          "label": "F",
+          "rawText": "On no day next week will Fred do no maths problems.\n\n\n\n\n© UCLES 2017"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "If a statement is false, then its negation is true.\nThe negation of ‘for all x, P’ is ‘there exists x such that not P’. So in this case, a negation is\n\n      There exists a day next week such that it is not the case that Fred will do at least\n      one maths problem.\n\n‘It is not the case that Fred will do at least one maths problem’ is equivalent to ‘Fred will do less\nthan one maths problem’; assuming that one cannot do a fraction of a maths problem, this is\nequivalent to ‘Fred will do no maths problems’. So the whole negation can be written as ‘Some\nday next week, Fred will do no maths problems’, which is option E.\n\n\n\n\n                                                 12\n                                                                                        © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q10",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 10,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "9\n\n10.    Which one of the following is a sketch of the graph of                = log 2 for       > 1?\n\n\n            5                                                  3\n                                                               2\n            4\n                                                               1\n            3                                                  0\n            2                                                      0 1   2    3 4   5      6   7   8   9 10\n            1                                              –1\n            0                                              –2\n                0 1   2   3 4   5   6   7   8   9 10       –3\n         –1\n                                                           –4\n         –2\n                                                           –5\n\n        A\n                                                           B\n\n                                                               4\n            5\n            4                                                  3\n            3                                                  2\n\n            2                                                  1\n                                                               0\n            1                                                      01    2    3 4   5      6   7   8   9 10\n            0                                              –1\n                0 1   2   3 4   5   6 7     8   9 10       –2\n         –1\n         –2                                                –3\n         –3                                                –4\n\n        C                                                  D\n\n            5                                                  3\n            4                                                  2\n            3                                                  1\n                                                               0\n            2\n                                                                   0 1 2      3 4   5      6   7   8   9 10\n            1                                              –1\n            0                                              –2\n                01    2   3 4   5   6 7     8   9 10\n         –1                                                –3\n         –2                                                –4\n         –3                                                –5\n\n        E                                                  F\n\n\n\n\n© UCLES 2017                                                                                            [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "9\n\n10.    Which one of the following is a sketch of the graph of                = log 2 for       > 1?\n\n\n            5                                                  3\n                                                               2\n            4\n                                                               1\n            3                                                  0\n            2                                                      0 1   2    3 4   5      6   7   8   9 10\n            1                                              –1\n            0                                              –2\n                0 1   2   3 4   5   6   7   8   9 10       –3\n         –1\n                                                           –4\n         –2\n                                                           –5"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        },
+        {
+          "label": "F",
+          "rawText": "[visual option F; transcription required]"
+        },
+        {
+          "label": "G",
+          "rawText": "[visual option G; transcription required]"
+        },
+        {
+          "label": "H",
+          "rawText": "[visual option H; transcription required]"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can start by finding the value of y when x is close to 1. When x = 1.1, say, y = log1.1 2,\nwhich is equivalent to 1.1y = 2. Now 1.12 = 1.21, so y > 2 (it looks as though y ≈ 10). The\nonly graph with this value of y near x = 1 is E, so this must be the answer.\nAlternatively, we could rearrange the equation to get xy = 2. y must always be positive,\notherwise xy would be less than 1. As x gets large, y must get closer to 0. Putting these\ntogether again shows that only graph E works.\n\n\n\n\n                                             13\n                                                                                 © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required",
+          "option-count-review"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q11",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 11,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "11.    Which one of the following numbers is largest in value?\n       (All angles are given in radians.)\n\n\n\n       A       tan\n\n       B       log   100\n\n       C       sin\n\n       D       log 10\n\n       E        √2 − 1"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Which one of the following numbers is largest in value?\n       (All angles are given in radians.)"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "tan"
+        },
+        {
+          "label": "B",
+          "rawText": "log   100"
+        },
+        {
+          "label": "C",
+          "rawText": "sin"
+        },
+        {
+          "label": "D",
+          "rawText": "log 10"
+        },
+        {
+          "label": "E",
+          "rawText": "√2 − 1"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We work out or approximate all five numbers.\n\nA tan 3π\n         \u0001\n       4 = −1\n\nB log10 100 = 2\n\nC sin10 π2 = 110 = 1\n          \u0001\n\nD log2 10 = 3. · · · , or more formally, 3 < log2 10 < 4, as 23 = 8 and 24 = 16\n       √                       √\nE 0 < 2 − 1 < 1, so 0 < ( 2 − 1)10 < 1\n\nOnly one of these numbers is greater than 3, so the answer is D.\n\n\n\n\n                                                14\n                                                                                  © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            14
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q12",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 12,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "12.    A polynomial ( ) has the property that    (1) = 2.\n\n       Which one of the following can be deduced from this?\n\n\n       A        ( ) = ( − 1) ( ) + 2 for some polynomial ( ).\n\n       B        ( ) = ( + 1) ( ) + 2 for some polynomial ( ).\n\n       C        ( ) = ( − 1) ( ) − 2 for some polynomial ( ).\n\n       D        ( ) = ( + 1) ( ) − 2 for some polynomial ( ).\n\n       E        ( ) = ( − 2) ( ) + 1 for some polynomial ( ).\n\n       F        ( ) = ( + 2) ( ) + 1 for some polynomial ( ).\n\n       G        ( ) = ( − 2) ( ) − 1 for some polynomial ( ).\n\n       H        ( ) = ( + 2) ( ) − 1 for some polynomial ( ).\n\n\n\n\n© UCLES 2017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A polynomial ( ) has the property that    (1) = 2.\n\n       Which one of the following can be deduced from this?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "( ) = ( − 1) ( ) + 2 for some polynomial ( )."
+        },
+        {
+          "label": "B",
+          "rawText": "( ) = ( + 1) ( ) + 2 for some polynomial ( )."
+        },
+        {
+          "label": "C",
+          "rawText": "( ) = ( − 1) ( ) − 2 for some polynomial ( )."
+        },
+        {
+          "label": "D",
+          "rawText": "( ) = ( + 1) ( ) − 2 for some polynomial ( )."
+        },
+        {
+          "label": "E",
+          "rawText": "( ) = ( − 2) ( ) + 1 for some polynomial ( )."
+        },
+        {
+          "label": "F",
+          "rawText": "( ) = ( + 2) ( ) + 1 for some polynomial ( )."
+        },
+        {
+          "label": "G",
+          "rawText": "( ) = ( − 2) ( ) − 1 for some polynomial ( )."
+        },
+        {
+          "label": "H",
+          "rawText": "( ) = ( + 2) ( ) − 1 for some polynomial ( ).\n\n\n\n\n© UCLES 2017"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "This is an application of the remainder theorem. If we divide p(x) by (x − 1), we get a quotient\nq(x) and a remainder r. We can write this as\n\n                                    p(x) = (x − 1)q(x) + r.\n\nIf we now substitute x = 1 into this identity, we obtain\n\n                                           p(1) = r,\n\nso we must have r = 2 (since we are told p(1) = 2). Therefore\n\n                       p(x) = (x − 1)q(x) + 2 for some polynomial q(x),\n\nwhich is option A.\nIt may be the case that some or all of B, D, E, F, G and H are also true, but we cannot deduce\nthis from the given information. C must be false, as if we substitute x = 1, we obtain 2 = −2.\n\n\n\n\n                                               15\n                                                                                    © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            15
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q13",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 13,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "13.    Five runners competed in a race: Fred, George, Hermione, Lavender, and Ron.\n\n               Fred beat George.\n               Hermione beat Lavender.\n               Lavender beat George.\n               Ron beat George.\n\n       Assuming there were no ties, how many possible finishing orders could there have been,\n       given only this information?\n\n\n       A       1\n       B       6\n       C       12\n       D       18\n       E       24\n       F       120"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Five runners competed in a race: Fred, George, Hermione, Lavender, and Ron.\n\n               Fred beat George.\n               Hermione beat Lavender.\n               Lavender beat George.\n               Ron beat George.\n\n       Assuming there were no ties, how many possible finishing orders could there have been,\n       given only this information?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "1"
+        },
+        {
+          "label": "B",
+          "rawText": "6"
+        },
+        {
+          "label": "C",
+          "rawText": "12"
+        },
+        {
+          "label": "D",
+          "rawText": "18"
+        },
+        {
+          "label": "E",
+          "rawText": "24"
+        },
+        {
+          "label": "F",
+          "rawText": "120"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let us indicate the runners by their initials, and write A > B to mean that A beat B.\nWe are given F > G, H > L, L > G and R > G, which combine to give F > G, H > L > G,\nR > G. So G came last, and the other four runners could have come in any order, except\nthat H > L. There are 4! = 24 ways of ordering these four runners. In half of them, H > L,\nwhile in the other half, L > H. (More precisely, we can pair every finishing order with H > L\ntogether with the finishing order in which H and L are swapped, so there are the same number\nof finishing orders with H > L as there are with L > H.)\nSo the number of possible finishing orders is 24\n                                              2 = 12, and the answer is C.\n\n\n\n\n                                              16\n                                                                                  © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            16
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q14",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 14,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "14.    The graph of the polynomial function\n\n                                  =    +      +        +   +    + ,\n\n       is sketched, where , , , , , and    are real constants with    ≠ 0.\n\n       Which one of the following is not possible?\n\n\n       A       The graph has two local minima and two local maxima.\n       B       The graph has one local minimum and two local maxima.\n       C       The graph has one local minimum and one local maximum.\n       D       The graph has no local minima or local maxima.\n\n\n\n\n© UCLES 2017                                                                         [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The graph of the polynomial function\n\n                                  =    +      +        +   +    + ,\n\n       is sketched, where , , , , , and    are real constants with    ≠ 0.\n\n       Which one of the following is not possible?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "The graph has two local minima and two local maxima."
+        },
+        {
+          "label": "B",
+          "rawText": "The graph has one local minimum and two local maxima."
+        },
+        {
+          "label": "C",
+          "rawText": "The graph has one local minimum and one local maximum."
+        },
+        {
+          "label": "D",
+          "rawText": "The graph has no local minima or local maxima.\n\n\n\n\n© UCLES 2017                                                                         [Turn over"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can work out the locations of the local maxima and minima by solving dx\n                                                                        dy\n                                                                           = 0. We have\n\n                              dy\n                                 = 5ax4 + 4bx3 + 3cx2 + 2dx + e,\n                              dx\nwhich is a quartic (a degree 4 polynomial). This can have at most 4 roots, so there are at most 4\nstationary points.\nThis does not seem to help us that much, as all of the options have at most 4 stationary points!\nWe also observe that we are starting with a degree 5 polynomial, so if a > 0, y tends to +∞ as\nx tends to +∞ and y tends to −∞ as x tends to −∞. Similarly, if a < 0, we have the reverse\nof this. If we now try sketching the four possibilities offered, we will see what happens:\n\nA Two local minima and two local maxima might look like this:\n\n                                         y\n\n\n\n\n                                                                     x\n                                         0\n\n\n\n\n   This seems plausible.\n\nB One local minimum and two local maxima might look like this:\n\n                                         y\n\n\n\n\n                                                                     x\n                                         0\n\n\n\n\n   This is not possible, because y tends to −∞ both when x tends to +∞ and to −∞.\n\n\n\n\n                                               17\n                                                                                     © UCLES 2019\n\f\nC One local minimum and one local maximum might look like this:\n\n                                          y\n\n\n\n\n                                                                       x\n                                          0\n\n\n\n\n   This seems plausible; there is no requirement that the quartic dx\n                                                                  dy\n                                                                     = 0 has four real roots, so\n   there need not be exactly four stationary points.\n\nD The curve y = x5 has no local minima or local maxima (though it does have a point of\n  inflection at the origin), so this is certainly possible.\n\nSo the only one which is not possible is B.\nIf we want to construct explicit examples of A and C, we could start by choosing dx dy\n                                                                                       as a quartic\nwhich has exactly four real roots (such as (x − 1)(x − 2)(x − 3)(x − 4)) or exactly two real roots\n(such as (x2 + 1)(x − 1)(x − 2)) and then integrating it to obtain our desired function. Similarly,\nif we wanted to find an example for D which has no stationary points at all, we could integrate\na function such as (x2 + 1)2 .\n\n\n\n\n                                                18\n                                                                                      © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            17,
+            18
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q15",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 15,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "15.    For any real numbers , , and where           ≥ , consider these three statements:\n\n               1        − ≥−\n\n               2           +    ≥2\n\n               3           ≥\n\n       Which of the statements 1, 2, and 3 must be true?\n\n       A       none\n\n       B       1 only\n\n       C       2 only\n\n       D       3 only\n\n       E       1 and 2 only\n\n       F       1 and 3 only\n\n       G       2 and 3 only\n\n       H       1,2 and 3"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "For any real numbers , , and where           ≥ , consider these three statements:\n\n               1        − ≥−\n\n               2           +    ≥2\n\n               3           ≥\n\n       Which of the statements 1, 2, and 3 must be true?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none"
+        },
+        {
+          "label": "B",
+          "rawText": "1 only"
+        },
+        {
+          "label": "C",
+          "rawText": "2 only"
+        },
+        {
+          "label": "D",
+          "rawText": "3 only"
+        },
+        {
+          "label": "E",
+          "rawText": "1 and 2 only"
+        },
+        {
+          "label": "F",
+          "rawText": "1 and 3 only"
+        },
+        {
+          "label": "G",
+          "rawText": "2 and 3 only"
+        },
+        {
+          "label": "H",
+          "rawText": "1,2 and 3"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "1 If we multiply the original inequality a ⩾ b by −1, we obtain −a ⩽ −b, since multiplying by\n  a negative number reverses the inequality. This is equivalent to −b ⩾ −a, so this statement\n  must be true.\n\n2 We can rearrange this inequality as a2 − 2ab + b2 ⩾ 0, and then factorise the left hand side to\n  get (a − b)2 ⩾ 0. As x2 ⩾ 0 for every real number x, this statement must be true. (Note that\n  the condition a ⩾ b is irrelevant here.)\n\n3 This is related to the original inequality by multiplying it by c. If c = −1, then this inequality\n  states −a ⩾ −b, which will not be the case unless a = b. For example, a = 2, b = 1, c = −1\n  provides an example where a ⩾ b but ac ⩾ bc is false. So this statement might not be true.\n\nHence the correct option is E.\n\n\n\n\n                                                19\n                                                                                       © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            19
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q16",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 16,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "16.    The sequence        is given by the rule:\n\n                                                   =2\n\n                                                   =    + (−1) for    ≥1\n\n       What is\n\n\n\n\n       A       150\n       B       250\n       C       −4750\n       D       5150\n\n       E       4 1−\n\n       F       4           −1\n\n\n\n\n© UCLES 2017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The sequence        is given by the rule:\n\n                                                   =2\n\n                                                   =    + (−1) for    ≥1\n\n       What is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "150"
+        },
+        {
+          "label": "B",
+          "rawText": "250"
+        },
+        {
+          "label": "C",
+          "rawText": "−4750"
+        },
+        {
+          "label": "D",
+          "rawText": "5150"
+        },
+        {
+          "label": "E",
+          "rawText": "4 1−"
+        },
+        {
+          "label": "F",
+          "rawText": "4           −1\n\n\n\n\n© UCLES 2017"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We start by calculating the first few terms of the sequence:\n\n                                       a1 = 2\n                                       a2 = 2 + (−1)1 = 1\n                                       a3 = 1 + (−1)2 = 2\n                                       a4 = 2 + (−1)3 = 1\n                                       a5 = 1 + (−1)4 = 2\n\nThe pattern is now clear: every pair of terms is 2, 1 and sums to 3. So      n=1 an is the sum of\n                                                                          P100\n50 pairs of terms, each of which sums to 3. Hence\n                                     100\n                                     X\n                                           an = 50 × 3 = 150\n                                     n=1\n\nand the answer is A.\n\n      Commentary: Note that this is not an arithmetic series, as there is not a common dif-\n      ference (that is, equal difference) between consecutive terms, and neither is it a geometric\n      series. So we cannot use the formulae for the sum of an arithmetic or geometric series.\n\n\n\n\n                                                20\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            20
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q17",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 17,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "13\n\n17.    Let be a set of positive integers, for example could consist of 3, 4, and 8.\n\n       A positive integer is called an -number if and only if for every factor   of   with   > 1,\n       the number is a multiple of some number in .\n\n       So in the above example, 9 is an -number; this is because the factors of 9 greater than 1\n       are 3 and 9, and each of these is a multiple of 3.\n\n       Positive integer   is therefore not an -number if and only if\n\n       A       for every (positive) factor of with      > 1,\n               there is a number in which is not a factor of .\n\n       B       for every (positive) factor of with > 1,\n               there is no number in which is a factor of .\n\n       C       for every (positive) factor of with     > 1,\n               every number in is a factor of .\n\n       D       for some (positive) factor of with > 1,\n               there is a number in which is not a factor of   .\n\n       E       for some (positive) factor of with > 1,\n               there is no number in which is a factor of .\n\n       F       for some (positive) factor of with      > 1,\n               every number in is a factor of .\n\n\n\n\n© UCLES 2017                                                                           [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "13\n\n17.    Let be a set of positive integers, for example could consist of 3, 4, and 8.\n\n       A positive integer is called an -number if and only if for every factor   of   with   > 1,\n       the number is a multiple of some number in .\n\n       So in the above example, 9 is an -number; this is because the factors of 9 greater than 1\n       are 3 and 9, and each of these is a multiple of 3.\n\n       Positive integer   is therefore not an -number if and only if"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "for every (positive) factor of with      > 1,\n               there is a number in which is not a factor of ."
+        },
+        {
+          "label": "B",
+          "rawText": "for every (positive) factor of with > 1,\n               there is no number in which is a factor of ."
+        },
+        {
+          "label": "C",
+          "rawText": "for every (positive) factor of with     > 1,\n               every number in is a factor of ."
+        },
+        {
+          "label": "D",
+          "rawText": "for some (positive) factor of with > 1,\n               there is a number in which is not a factor of   ."
+        },
+        {
+          "label": "E",
+          "rawText": "for some (positive) factor of with > 1,\n               there is no number in which is a factor of ."
+        },
+        {
+          "label": "F",
+          "rawText": "for some (positive) factor of with      > 1,\n               every number in is a factor of .\n\n\n\n\n© UCLES 2017                                                                           [Turn over"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We are being asked to negate the statement ‘n is an S-number’, that is, to negate the statement\n\n     for every factor m of n with m > 1, the number m is a multiple of some number\n     in S.\n\nThe negation of ‘for every m, P’ is ‘there exists m such that not P’, a negation is\n\n     there exists a factor m of n with m > 1 such that it is not the case that the number\n     m is a multiple of some number in S.\n\n(Note that ‘a factor m of n with m > 1’ is the condition on the numbers m which are being\nconsidered by the ‘for every’, so it is not changed by the negation.) ‘There exists’ is the same\nas ‘for some’, so the correct answer is either D, E or F.\nWe next need to simplify the second half of our new statement, namely ‘it is not the case that\nthe number m is a multiple of some number in S’. If it is not the case that ‘the number m is a\nmultiple of some number in S’, then it must be that m is not a multiple of any number in S, or\nequivalently, that no number in S is a factor of m.\nTherefore a full negation is\n\n     for some factor m of n with m > 1, there is no number in S which is a factor of m,\n\nso the correct answer is E.\n\n\n\n\n                                               21\n                                                                                      © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            21
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q18",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 18,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "14\n\n18.    A group of five numbers are such that:\n                       their mean is 0\n                       their range is 20\n       What is the largest possible median of the five numbers?\n\n\n\n       A       0\n\n       B       4\n\n       C       4\n\n       D       6\n\n       E       8\n\n       F       20\n\n\n\n\n© UCLES 2017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "14\n\n18.    A group of five numbers are such that:\n                       their mean is 0\n                       their range is 20\n       What is the largest possible median of the five numbers?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0"
+        },
+        {
+          "label": "B",
+          "rawText": "4"
+        },
+        {
+          "label": "C",
+          "rawText": "4"
+        },
+        {
+          "label": "D",
+          "rawText": "6"
+        },
+        {
+          "label": "E",
+          "rawText": "8"
+        },
+        {
+          "label": "F",
+          "rawText": "20\n\n\n\n\n© UCLES 2017"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can approach this algebraically or just by reasoning about numbers.\nWe begin with an algebraic approach. Let the five numbers be, in increasing order, a, b, c, d, e,\nso that the median is c. The range is 20, so e − a = 20 or a = e − 20. Also, the mean is zero, so\na + b + c + d + e = 0.\nSince c ⩽ d ⩽ e, a = e − 20 and a ⩽ b ⩽ c, we see that the sum of the five numbers is at least\n\n                         (e − 20) + (e − 20) + c + c + c = 3c + 2e − 40\n\nSince the sum is zero, this means that 0 ⩾ 3c + 2e − 40, or that 3c ⩽ 40 − 2e, so 3c + 2e ⩽ 40.\nBut c ⩽ e, so 5c ⩽ 3c + 2e ⩽ 40, so c ⩽ 8. We can have c = d = e = 8 and then a = b = −12, so\nthe largest possible median is 8, option E.\n\nAlternatively, we can just reason as follows. Let’s say that we have five numbers\n\n                                         a   b   c d e\n\narranged in increasing order, with mean 0 and range 20, and let’s suppose that the median is as\nlarge as possible.\nWe ask if there is any way of increasing c while keeping the mean equal to 0 and the median\nequal to 20.\nIf c < d, then we can increase the median without changing the mean or range by replacing each\nof c and d by their mean. So we must have c = d.\nSimilarly, if d < e, we could increase both c and d by a small amount and decrease e and a by\nthe same small amount. As long as d and e don’t swap order in this process, the mean and\nrange will not change, but the median will increase. (So we must take this small amount to be\nat most 12 (e − d).) Therefore we must have c = d = e.\nNow consider a and b. If a < b, we can do a similar trick: we increase a, c, d and e by a small\namount k and decrease b by 4k; this preserves the mean and range while increasing the median.\n(So that a and b don’t swap places, we require k to be at most 14 (b − a).) It follows that a = b.\nWe therefore have a = b and c = d = e. Since the range is 20, the numbers must be a, a, a + 20,\na + 20, a + 20. Their sum is 5a + 60 = 0, so a = −12 and a + 20 = 8, which is the largest possible\nmedian.\n\n\n\n\n                                                 22\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            14
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            22
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q19",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 19,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "15\n\n19.    The positive real numbers , , and are such that the equation\n\n                                             +      =       +\n\n       has three real roots, one positive and two negative.\n\n       Which one of the following correctly describes the real roots of the equation\n\n                                            + =         +       ?\n\n\n\n       A       It has three real roots, one positive and two negative.\n\n       B       It has three real roots, two positive and one negative.\n\n       C       It has three real roots, but their signs differ depending on , , and .\n\n       D       It has exactly one real root, which is positive.\n\n       E       It has exactly one real root, which is negative.\n\n       F       It has exactly one real root, whose sign differs depending on , , and .\n\n       G       The number of real roots can be one or three, but the number of roots differs\n               depending on , , and .\n\n\n\n\n© UCLES 2017                                                                             [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "15\n\n19.    The positive real numbers , , and are such that the equation\n\n                                             +      =       +\n\n       has three real roots, one positive and two negative.\n\n       Which one of the following correctly describes the real roots of the equation\n\n                                            + =         +       ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "It has three real roots, one positive and two negative."
+        },
+        {
+          "label": "B",
+          "rawText": "It has three real roots, two positive and one negative."
+        },
+        {
+          "label": "C",
+          "rawText": "It has three real roots, but their signs differ depending on , , and ."
+        },
+        {
+          "label": "D",
+          "rawText": "It has exactly one real root, which is positive."
+        },
+        {
+          "label": "E",
+          "rawText": "It has exactly one real root, which is negative."
+        },
+        {
+          "label": "F",
+          "rawText": "It has exactly one real root, whose sign differs depending on , , and ."
+        },
+        {
+          "label": "G",
+          "rawText": "The number of real roots can be one or three, but the number of roots differs\n               depending on , , and .\n\n\n\n\n© UCLES 2017                                                                             [Turn over"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The first equation can be rewritten as\n\n                                  f(x) = x3 + ax2 − bx − c = 0                                (1)\n\nand the second equation as\n                                 g(x) = x3 − ax2 − bx + c = 0.                                (2)\nComparing these two equations, we see that the coefficient of x2 and the constant term have\nbeen negated. We can also negate equation (2) to give\n\n                               − g(x) = −x3 + ax2 + bx − c = 0.                               (3)\n\nThis is similar to equation (1), but now the coefficients of x3 and x have been negated. This\nindicates that we can relate this to equation (1) by substituting in −x. We find that\n\n             f(−x) = (−x)3 + a(−x)2 − b(−x) − c = −x3 + ax2 + bx − c = −g(x)\n\nand so equation (3) becomes\n                                           f(−x) = 0.\nSince we are told that f(x) = 0 has three real roots, one positive and two negative, and f(−x) = 0\nmust have three real roots, one negative and two positive. (It might be helpful to note here that\ny = f(−x) is the reflection of y = f(x) in the y-axis.)\nHence the answer is B.\n\n\n\n\n                                               23\n                                                                                     © UCLES 2019"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            15
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            23
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p2-q20",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p2",
+      "edition": "specimen",
+      "paper": 2,
+      "questionNumber": 20,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "16\n\n\n20.    Five logicians each make a statement, as follows:\n\n               Mr P: Of these five statements, an odd number are true.\n               Ms Q: Both statements made by women are true.\n               Mr R: My first name is Robert and Mr P’s statement is true.\n               Ms S: Exactly one statement made by a man is true.\n               Mr T: Neither statement made by a woman is true.\n\n\n\n       How many of the five statements can be simultaneously true?\n\n\n       A       none\n       B       1 only\n       C       2 only\n       D       3 only\n       E       4 only\n       F       none or 1 only\n       G       1 or 2 only\n       H       2 or 3 only\n\n\n\n\n                                         END OF TEST\n\n\n\n\n© UCLES 2017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "16\n\n\n20.    Five logicians each make a statement, as follows:\n\n               Mr P: Of these five statements, an odd number are true.\n               Ms Q: Both statements made by women are true.\n               Mr R: My first name is Robert and Mr P’s statement is true.\n               Ms S: Exactly one statement made by a man is true.\n               Mr T: Neither statement made by a woman is true.\n\n\n\n       How many of the five statements can be simultaneously true?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none"
+        },
+        {
+          "label": "B",
+          "rawText": "1 only"
+        },
+        {
+          "label": "C",
+          "rawText": "2 only"
+        },
+        {
+          "label": "D",
+          "rawText": "3 only"
+        },
+        {
+          "label": "E",
+          "rawText": "4 only"
+        },
+        {
+          "label": "F",
+          "rawText": "none or 1 only"
+        },
+        {
+          "label": "G",
+          "rawText": "1 or 2 only"
+        },
+        {
+          "label": "H",
+          "rawText": "2 or 3 only\n\n\n\n\n                                         END OF TEST\n\n\n\n\n© UCLES 2017"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "For ease of explanation, we say ‘Mr X is true/false’ as a shorthand for ‘Mr X’s statement is\ntrue/false’.\nOf these statements, Ms Q and Mr T give the most explicit information, so we start with them.\nThey cannot both be true, as they contradict each other, though they could both be false. So\nwe look at these three possibilities in turn.\n\n•    Ms Q true, Mr T false.\n     Since Ms Q is true, Ms S is also true, which means that either Mr P or Mr R is true (as\n     Mr T is false).\n     If Mr R is true, then Mr P is also true, contradicting Ms S. So Mr R must be false.\n     Since Ms S is true, Mr P must be true; this does not pose a problem with Mr R being\n     false, as it could be that Mr R’s first name is not Robert. We must, though, check whether\n     Mr P’s statement being true is consistent with the remaining statements.\n     We have Mr P, Ms Q and Ms S true and the other two false, giving three true statements.\n     Thus Mr P’s statement is, indeed, true, and this is a possible set of truth values for the\n     statements.\n•    Ms Q false, Mr T true.\n     Since Mr T is true, Ms S is false, and so either Mr P, Mr R or both must be true (as Mr T\n     is already true).\n     If Mr P is true, there are two true statements from Mr P, Ms Q, Ms S and Mr T, which is\n     an even number, so Mr R must also be true. This is consistent, as Mr R says that Mr P’s\n     statement is true, which it is.\n     If Mr R is true, then Mr P must also be true, and this is feasible as we have just seen.\n     So in this case, we have Mr T, Mr P and Mr R all true, with the other two false, giving\n     three true statements.\n•    Both Ms Q and Mr T false.\n     Then exactly one statement made by a woman must be true, hence Ms S must be true.\n     This requires exactly one of Mr P and Mr R to be true (as Mr T is false). If Mr R is true,\n     then Mr P would also be true, which is not possible.\n     If, on the other hand, Mr P is true and Mr R is false (say his first name is not Robert, as\n     before), then we would have only Mr P and Ms S being true, and that is an even number\n     of true statements. So this is not possible (as Mr P says there are an odd number of true\n     statements).\n\nHence we must have one of the first two possibilities, and there are exactly three true statements;\nthe answer is option D.\n\n      Commentary: You might find this question easier to work out using a little table with\n      ticks and crosses, for example something like:\n\n                              Mr P    Ms Q    Mr R     Ms S    Mr T\n                               X       ×                        X\n\n      where Mr R and Ms S are not yet determined.\n\n\n\n                                                24\n                                                                                      © UCLES 2019\n\f\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support:\nadmissionstesting.org/help"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+          "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+          "pages": [
+            16
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+          "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+          "pages": [
+            24,
+            25
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    }
+  ]
+}

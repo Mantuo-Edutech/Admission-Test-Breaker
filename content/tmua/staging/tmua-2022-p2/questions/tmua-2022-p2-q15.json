@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "15   The real numbers x, y and z are all greater than 1, and satisfy the equations\n\n                                         log x y ൌ z and log y z ൌ x\n\n     Which one of the following equations for log z x must be true?\n\n     A   log z x ൌ y\n\n     B   log z x ൌ 1\n                   y\n\n     C   log z x ൌ x y\n\n     D   log z x ൌ 1\n                   xy\n\n     E   log z x ൌ x z\n\n     F   log z x ൌ 1\n                   xz\n     G log z x ൌ y z\n\n     H log z x ൌ 1\n                 yz\n\n\n\n\n                                                  17"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The real numbers x, y and z are all greater than 1, and satisfy the equations\n\n                                         log x y ൌ z and log y z ൌ x\n\n     Which one of the following equations for log z x must be true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "log z x ൌ y"
+    },
+    {
+      "label": "B",
+      "rawText": "log z x ൌ 1\n                   y"
+    },
+    {
+      "label": "C",
+      "rawText": "log z x ൌ x y"
+    },
+    {
+      "label": "D",
+      "rawText": "log z x ൌ 1\n                   xy"
+    },
+    {
+      "label": "E",
+      "rawText": "log z x ൌ x z"
+    },
+    {
+      "label": "F",
+      "rawText": "log z x ൌ 1\n                   xz"
+    },
+    {
+      "label": "G",
+      "rawText": "log z x ൌ y z"
+    },
+    {
+      "label": "H",
+      "rawText": "log z x ൌ 1\n                 yz"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Since logx y = z, we have y = xz . Likewise z = y x . Combining these gives\n\n                                     z = y x = (xz )x = xxz .\n                                                1                                   1\nTherefore raising the equation to the power of    gives z 1/xz = x, hence logz x =    , which is\n                                               xz                                  xz\noption F.\n\n\n\n\nVersion 1.0, July 2023                                                                  Page 17"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        17
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

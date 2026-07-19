@@ -10,10 +10,15 @@ import { FIXED_GUEST_SPACE_STORE } from "../support/fixed-guest-space-store.js";
 import { FIXED_PREPARATION_PROFILE_STORE } from "../support/fixed-preparation-profile-store.js";
 
 class MemoryPendingInviteStore implements PendingInviteStore {
-  constructor(private code: string | null = null) {}
+  constructor(
+    private code: string | null = null,
+    private returnTo: string | null = null,
+  ) {}
   load() { return this.code; }
   save(code: string) { this.code = code; }
-  clear() { this.code = null; }
+  loadReturnTo() { return this.returnTo; }
+  saveReturnTo(path: string) { this.returnTo = path; }
+  clear() { this.code = null; this.returnTo = null; }
 }
 
 function accountService(
@@ -21,6 +26,7 @@ function accountService(
 ): AccountAccessService {
   return {
     configured: true,
+    botProtection: { provider: "turnstile", required: false, siteKey: null },
     previewInvite: vi.fn(async () => ({
       valid: true,
       label: "TMUA 完整资料权限",
@@ -32,6 +38,10 @@ function accountService(
     })),
     signIn: vi.fn(async () => ({ email: "student@example.com" })),
     completeEmailConfirmation: vi.fn(async () => ({ email: "student@example.com" })),
+    requestPasswordReset: vi.fn(async () => undefined),
+    completePasswordRecovery: vi.fn(async () => ({ email: "student@example.com" })),
+    updatePassword: vi.fn(async () => undefined),
+    signOut: vi.fn(async () => undefined),
     redeemInvite: vi.fn(async () => ({ packageIds: ["tmua-full-access"] })),
     getAccessState: vi.fn(async () => ({
       session: { email: "student@example.com" },
@@ -82,6 +92,34 @@ describe("invite-first account access flow", () => {
     expect(await screen.findByRole("heading", { name: "创建账号，保存完整训练记录" })).toBeInTheDocument();
   });
 
+  it("preserves a deep-review return target through invite validation and registration", async () => {
+    const user = userEvent.setup();
+    const account = accountService();
+    const pending = new MemoryPendingInviteStore();
+    const router = createAppRouter(
+      ["/access?returnTo=%2Fresults%2Fses_original-result"],
+      services(account, pending),
+    );
+    render(<RouterProvider router={router} />);
+
+    await user.type(
+      await screen.findByLabelText("邀请码"),
+      "MANTUO-TMUA-LOCAL-2026-ACCESS",
+    );
+    await user.click(screen.getByRole("button", { name: "验证并继续注册" }));
+    expect(pending.loadReturnTo()).toBe("/results/ses_original-result");
+
+    await user.type(await screen.findByLabelText("邮箱"), "student@example.com");
+    await user.type(screen.getByLabelText("密码"), "SecurePass1");
+    await user.type(screen.getByLabelText("再次输入密码"), "SecurePass1");
+    await user.click(screen.getByRole("button", { name: "创建账号并解锁" }));
+
+    expect(account.redeemInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
+    expect(router.state.location.pathname).toBe("/results/ses_original-result");
+    expect(pending.load()).toBeNull();
+    expect(pending.loadReturnTo()).toBeNull();
+  });
+
   it("does not create an account until the registration fields pass locally", async () => {
     const user = userEvent.setup();
     const account = accountService();
@@ -102,7 +140,10 @@ describe("invite-first account access flow", () => {
     const user = userEvent.setup();
     const account = accountService();
     const pending = new MemoryPendingInviteStore("MANTUOTMUALOCAL2026ACCESS");
-    const router = createAppRouter(["/register"], services(account, pending));
+    const appServices = services(account, pending);
+    const track = vi.fn(async () => undefined);
+    appServices.funnel = { track };
+    const router = createAppRouter(["/register"], appServices);
     render(<RouterProvider router={router} />);
 
     await user.type(await screen.findByLabelText("邮箱"), "student@example.com");
@@ -113,6 +154,32 @@ describe("invite-first account access flow", () => {
     expect(account.redeemInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
     expect(pending.load()).toBeNull();
     expect(await screen.findByRole("heading", { name: "内容已解锁" })).toBeInTheDocument();
+    expect(track).toHaveBeenCalledWith({
+      eventType: "invite_redeemed",
+      examId: "tmua",
+      contextCode: "register",
+    });
+  });
+
+  it("recognises a deep-review-only invite and opens the product registered for that package", async () => {
+    const account = accountService({
+      getAccessState: vi.fn(async () => ({
+        session: { email: "student@example.com" },
+        packageIds: ["tmua-deep-review"],
+      })),
+    });
+    const router = createAppRouter(
+      ["/access/complete"],
+      services(account, new MemoryPendingInviteStore()),
+    );
+    render(<RouterProvider router={router} />);
+
+    expect(await screen.findByRole("heading", { name: "内容已解锁" })).toBeInTheDocument();
+    expect(screen.getByText(/1 项已发布资料/u)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "完成试卷并打开解析" })).toHaveAttribute(
+      "href",
+      "/practice/tmua-specimen-p1",
+    );
   });
 
   it("keeps the invite pending while verified email is required", async () => {
@@ -152,9 +219,30 @@ describe("invite-first account access flow", () => {
     await user.type(screen.getByLabelText("密码"), "SecurePass1");
     await user.click(screen.getByRole("button", { name: "登录" }));
 
-    expect(account.signIn).toHaveBeenCalledWith("student@example.com", "SecurePass1");
+    expect(account.signIn).toHaveBeenCalledWith(
+      "student@example.com",
+      "SecurePass1",
+      undefined,
+    );
     expect(account.redeemInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
     expect(await screen.findByRole("heading", { name: "内容已解锁" })).toBeInTheDocument();
+  });
+
+  it("fails closed when a deployed account service is missing its CAPTCHA site key", async () => {
+    const account = accountService({
+      botProtection: { provider: "turnstile", required: true, siteKey: null },
+    });
+    const router = createAppRouter(
+      ["/login"],
+      services(account, new MemoryPendingInviteStore()),
+    );
+    render(<RouterProvider router={router} />);
+
+    expect(await screen.findByRole("alert")).toHaveTextContent(
+      "账号安全验证尚未配置",
+    );
+    expect(screen.getByRole("button", { name: "登录" })).toBeDisabled();
+    expect(account.signIn).not.toHaveBeenCalled();
   });
 
   it("does not claim success when the completion URL has no entitlement", async () => {
@@ -182,7 +270,7 @@ describe("invite-first account access flow", () => {
     render(<RouterProvider router={router} />);
 
     expect(await screen.findByText("账号权限已确认")).toBeInTheDocument();
-    expect(screen.getByText("已解锁")).toBeInTheDocument();
+    expect(screen.getAllByText("已解锁").length).toBeGreaterThanOrEqual(1);
     expect(screen.queryByRole("link", { name: "输入邀请码" })).not.toBeInTheDocument();
   });
 });

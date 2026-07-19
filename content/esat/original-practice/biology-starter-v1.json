@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "id": "esat-biology-starter-v1",
+  "exam": "ESAT",
+  "edition": "Biology Starter · Original v1",
+  "sectionLabel": "Biology · Original Diagnostic",
+  "sectionLabelZh": "生物 · 满托原创短诊断",
+  "durationMinutes": 20,
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本练习依据 ESAT Biology 公开范围独立命题，不复制或改写官方 Guide、ENGAA 或 NSAA 题面。",
+  "sourceAnchors": [
+    {
+      "id": "esat-content-specification",
+      "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+      "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+      "usedFor": "Biology scope boundary"
+    },
+    {
+      "id": "esat-guide-biology",
+      "localPath": "content/official/raw/esat/ESAT_Guide_Biology_June_2025.pdf",
+      "sha256": "cd5fd84f56ef0e55722841fcbdacb86eec15b0eddd16a05ea56c5d902d9e125b",
+      "usedFor": "terminology and topic coverage only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "esat-biology-starter-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which organelle is the main site of aerobic respiration and ATP production in a eukaryotic cell?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Golgi apparatus" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Mitochondrion" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Nucleus" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Ribosome" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["bio-cells"],
+      "skillTags": ["organelle-function", "respiration"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-starter-v1.json"
+    },
+    {
+      "id": "esat-biology-starter-v1-q02",
+      "number": 2,
+      "sourcePage": 2,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A plant cell is placed in a solution with a lower water potential than the cell sap. What is the most likely initial net movement?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Water enters the cell by active transport." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Water leaves the cell by osmosis." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Solute leaves the cell by osmosis." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Water enters the cell by diffusion against its gradient." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["bio-membranes", "bio-plants"],
+      "skillTags": ["osmosis", "water-potential"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-starter-v1.json"
+    },
+    {
+      "id": "esat-biology-starter-v1-q03",
+      "number": 3,
+      "sourcePage": 3,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which chromosome combination normally determines a human male at fertilisation?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "XX" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "XY" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "YY" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "XO" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["bio-division"],
+      "skillTags": ["sex-determination", "chromosomes"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-starter-v1.json"
+    },
+    {
+      "id": "esat-biology-starter-v1-q04",
+      "number": 4,
+      "sourcePage": 4,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Two heterozygous parents for a single recessive condition have genotype " }, { "kind": "math", "tex": "Aa" }, { "kind": "text", "value": ". What is the probability that their child has genotype " }, { "kind": "math", "tex": "aa" }, { "kind": "text", "value": "?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{1}{4}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{1}{3}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{1}{2}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{3}{4}" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["bio-inheritance"],
+      "skillTags": ["genetic-cross", "probability"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-starter-v1.json"
+    },
+    {
+      "id": "esat-biology-starter-v1-q05",
+      "number": 5,
+      "sourcePage": 5,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A gene most directly determines which of the following?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The order of amino acids in a polypeptide" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The number of chromosomes in every species" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The amount of oxygen in the atmosphere" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The rate of every chemical reaction in a cell" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["bio-dna"],
+      "skillTags": ["gene-expression", "protein-synthesis"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-starter-v1.json"
+    },
+    {
+      "id": "esat-biology-starter-v1-q06",
+      "number": 6,
+      "sourcePage": 6,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Why are bacterial plasmids useful as vectors in genetic engineering?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They are proteins that cut DNA at specific sites." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They are small DNA molecules that can carry inserted genes into bacteria." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They prevent all bacterial cells from dividing." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They translate messenger RNA into proteins outside cells." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["bio-gene-tech"],
+      "skillTags": ["vectors", "plasmids"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-starter-v1.json"
+    },
+    {
+      "id": "esat-biology-starter-v1-q07",
+      "number": 7,
+      "sourcePage": 7,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which sequence best explains how antibiotic resistance becomes common in a bacterial population?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Antibiotics cause every bacterium to develop the same useful mutation." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some bacteria already vary; resistant bacteria survive and reproduce more." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Sensitive bacteria choose to become resistant before reproduction." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "All variation disappears when antibiotics are present." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["bio-variation"],
+      "skillTags": ["natural-selection", "antibiotic-resistance"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-starter-v1.json"
+    },
+    {
+      "id": "esat-biology-starter-v1-q08",
+      "number": 8,
+      "sourcePage": 8,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "An enzyme-controlled reaction slows sharply above its optimum temperature. What is the best explanation?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The enzyme has been used up as a reactant." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The substrate has changed into an enzyme." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Bonds maintaining the enzyme's shape are disrupted, changing the active site." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Molecules stop moving at high temperature." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["bio-enzymes"],
+      "skillTags": ["denaturation", "structure-function"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-starter-v1.json"
+    },
+    {
+      "id": "esat-biology-starter-v1-q09",
+      "number": 9,
+      "sourcePage": 9,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which feature of capillaries most directly reduces diffusion distance between blood and tissues?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They have walls one cell thick." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They contain valves throughout their length." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They carry blood at the highest pressure in the body." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They have thick muscular walls." }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["bio-animal"],
+      "skillTags": ["exchange-surfaces", "circulation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-starter-v1.json"
+    },
+    {
+      "id": "esat-biology-starter-v1-q10",
+      "number": 10,
+      "sourcePage": 10,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Why is less energy available to organisms at each successive trophic level in a food chain?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Energy is destroyed whenever an organism respires." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Not all biomass is eaten or absorbed, and energy is transferred to the surroundings during respiration." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Producers receive no energy from light." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Consumers convert all chemical energy into new biomass." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["bio-ecosystems"],
+      "skillTags": ["energy-transfer", "food-chains"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/biology-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/biology-starter-v1.json"
+    }
+  ]
+}

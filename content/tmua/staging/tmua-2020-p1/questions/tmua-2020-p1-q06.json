@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q06",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 6,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "6   Find the maximum value of the function\n\n                                                 1\n                                 f(x) =\n                                          52x − 4(5x ) + 7\n\n    A   1\n        7\n\n    B   1\n        4\n\n    C   1\n        3\n\n    D 3\n\n    E 4\n\n    F 7\n\n\n\n\n                                           8"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the maximum value of the function\n\n                                                 1\n                                 f(x) =\n                                          52x − 4(5x ) + 7"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "1\n        7"
+    },
+    {
+      "label": "B",
+      "rawText": "1\n        4"
+    },
+    {
+      "label": "C",
+      "rawText": "1\n        3"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "4"
+    },
+    {
+      "label": "F",
+      "rawText": "7"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The denominator is a quadratic in u = 5x , so we can write it as\n                                       1                 1\n                                                =\n                                  u2 − 4u + 7       (u − 2)2 + 3\n\nThe maximum value of this fraction is obtained when the denominator takes its minimum value,\nwhich is when u = 2, giving a value of 13 . We must also check that this value can be obtained;\nthis is the case as 5x = 2 has a real solution.\nTherefore the correct answer is option C.\n\n\n\n\nVersion 1.0, April 2021                                                                 Page 8\n\n                                            © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

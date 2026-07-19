@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q01",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 1,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "1   The function f is given, for x > 0, by\n\n                                                 x3 − 4x\n                                        f(x) =      √\n                                                  2 x\n\n\n    Find the value of f \u0002 (4).\n\n    A 3\n\n    B 9\n\n    C 9.5\n\n    D 12\n\n    E 39.5\n\n    F 88\n\n\n\n\n                                             3"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The function f is given, for x > 0, by\n\n                                                 x3 − 4x\n                                        f(x) =      √\n                                                  2 x\n\n\n    Find the value of f  (4)."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "3"
+    },
+    {
+      "label": "B",
+      "rawText": "9"
+    },
+    {
+      "label": "C",
+      "rawText": "9.5"
+    },
+    {
+      "label": "D",
+      "rawText": "12"
+    },
+    {
+      "label": "E",
+      "rawText": "39.5"
+    },
+    {
+      "label": "F",
+      "rawText": "88"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We first simplify the fraction using index laws:\n\n                                                 x3 − 4x\n                                        f(x) =      √\n                                                  2 x\n                                                 x3 − 4x\n                                             =          1\n                                                  2x 2\n                                               1 25     1\n                                             = 2 x − 2x 2\n\nso\n                                                    3        1\n                                       f 0 (x) = 45 x 2 − x− 2\nSubstituting x = 4 then gives\n\n                                f 0 (4) = 54 × 8 − 12 = 10 − 12 = 9.5\n\nand so the answer is C.\n\n\n\n\nVersion 1.0, April 2019                                                 Page 3"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        3
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

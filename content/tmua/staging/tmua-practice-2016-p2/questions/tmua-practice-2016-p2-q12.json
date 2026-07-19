@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q12",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 12,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "12\n\nͳʹ\u0003   \u0017\u0003\u0003\u0003\u0003\u0003 \u0003 \u0003\u0003ܽ\u0003\u0003\u0003 \u0003 \u0003\u0003݀Ǥ\u0003\u0003\n      \u0003\n      \u0017\u0003\u0003\u0003\u0003\u0003݊\u0003\u0003\u0003\u0003\u0003ܵ௡ Ǥ\u0003\n      \u0003\n        \u0003଼ܵ ൐ ͵ܵ଺ ǡ\u0003\u0003 \u0003\u0003 \u0003\u0003\u0003\u0003\u0003ܽ\u0003\u0003\u0003\u0003\u0003݀ǫ\u0003\n\n\n      \u0004\u0003    \u0003ܽ\u0003\u0003݀\u0003\u0003\u0003\n      \u0003\n      \u0005\u0003    ܽ\u0003\u0003ǡ\u0003݀\u0003\u0003\u0003\n      \u0003\n      \u0006\u0003    ܽ\u0003\u0003ǡ\u0003݀\u0003\u0003\u0003\n      \u0003\n      \u0007\u0003    ܽ\u0003\u0003ǡ\u0003\u0003\u0003\u0003\u0003݀\u0003 \u0003\u0003 \u0003\n      \u0003\n      \b\u0003    ݀\u0003\u0003ǡ\u0003\u0003\u0003\u0003\u0003ܽ\u0003 \u0003\u0003 \u0003\n      \u0003\n        \u0003   \u0003\u0003\u0003\u0003ܽ\u0003\u0003\u0003\u0003\u0003݀\u0003 \u0003\u0003 \u0003\n\n\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "12     ܽ  ݀Ǥ\n      \n      ݊ܵ௡ Ǥ\n      \n        ଼ܵ ൐ 3ܵ଺ ǡ  ܽ݀ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    },
+    {
+      "label": "F",
+      "rawText": "[visual option F; transcription required]"
+    },
+    {
+      "label": "G",
+      "rawText": "[visual option G; transcription required]"
+    },
+    {
+      "label": "H",
+      "rawText": "[visual option H; transcription required]"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The formula for Sn in terms of a and d is Sn = 21 n(2a + (n − 1)d). Substituting n = 8 and n = 6\ngives\n\n                                        S8 = 4(2a + 7d)\n                                        S6 = 3(2a + 5d)\n\nso the condition S8 > 3S6 becomes\n\n                                  4(2a + 7d) > 3 × 3(2a + 5d).\n\nExpanding the brackets gives 8a + 28d > 18a + 45d, which on rearranging gives −8a > 17d, or\n      8\nd < − 17 a.\nIf a is positive, then − 17\n                         8\n                            a is negative, so d must be negative. If a is negative, then − 17\n                                                                                           8\n                                                                                              a is\npositive, so d could be positive or negative. So a can be positive or negative, as can d.\nWe therefore cannot deduce the sign of either a or d, and so the correct option is F.\n\n\n\n\n                                               15\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required",
+      "option-count-review",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}
