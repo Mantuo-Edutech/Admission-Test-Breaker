@@ -76,7 +76,9 @@ function services(
 describe("invite-first account access flow", () => {
   it("validates an invite before exposing registration", async () => {
     const user = userEvent.setup();
-    const account = accountService();
+    const account = accountService({
+      getAccessState: vi.fn(async () => ({ session: null, packageIds: [] })),
+    });
     const pending = new MemoryPendingInviteStore();
     const router = createAppRouter(["/access"], services(account, pending));
     render(<RouterProvider router={router} />);
@@ -85,7 +87,7 @@ describe("invite-first account access flow", () => {
       await screen.findByLabelText("邀请码"),
       "MANTUO-TMUA-LOCAL-2026-ACCESS",
     );
-    await user.click(screen.getByRole("button", { name: "验证并继续注册" }));
+    await user.click(screen.getByRole("button", { name: "验证并继续" }));
 
     expect(account.previewInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
     expect(pending.load()).toBe("MANTUOTMUALOCAL2026ACCESS");
@@ -94,7 +96,9 @@ describe("invite-first account access flow", () => {
 
   it("preserves a deep-review return target through invite validation and registration", async () => {
     const user = userEvent.setup();
-    const account = accountService();
+    const account = accountService({
+      getAccessState: vi.fn(async () => ({ session: null, packageIds: [] })),
+    });
     const pending = new MemoryPendingInviteStore();
     const router = createAppRouter(
       ["/access?returnTo=%2Fresults%2Fses_original-result"],
@@ -106,7 +110,7 @@ describe("invite-first account access flow", () => {
       await screen.findByLabelText("邀请码"),
       "MANTUO-TMUA-LOCAL-2026-ACCESS",
     );
-    await user.click(screen.getByRole("button", { name: "验证并继续注册" }));
+    await user.click(screen.getByRole("button", { name: "验证并继续" }));
     expect(pending.loadReturnTo()).toBe("/results/ses_original-result");
 
     await user.type(await screen.findByLabelText("邮箱"), "student@example.com");
@@ -226,6 +230,109 @@ describe("invite-first account access flow", () => {
     );
     expect(account.redeemInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
     expect(await screen.findByRole("heading", { name: "内容已解锁" })).toBeInTheDocument();
+  });
+
+  it("redeems directly when an already signed-in student enters another invite", async () => {
+    const user = userEvent.setup();
+    const account = accountService({
+      getAccessState: vi.fn(async () => ({
+        session: { email: "student@example.com" },
+        packageIds: [],
+      })),
+    });
+    const pending = new MemoryPendingInviteStore();
+    const appServices = services(account, pending);
+    const track = vi.fn(async () => undefined);
+    appServices.funnel = { track };
+    const router = createAppRouter(
+      ["/access?returnTo=%2Fresults%2Fses_existing-student"],
+      appServices,
+    );
+    render(<RouterProvider router={router} />);
+
+    await user.type(
+      await screen.findByLabelText("邀请码"),
+      "MANTUO-TMUA-LOCAL-2026-ACCESS",
+    );
+    await user.click(screen.getByRole("button", { name: "验证并继续" }));
+
+    expect(account.previewInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
+    expect(account.redeemInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
+    expect(account.register).not.toHaveBeenCalled();
+    expect(account.signIn).not.toHaveBeenCalled();
+    expect(router.state.location.pathname).toBe("/results/ses_existing-student");
+    expect(pending.load()).toBeNull();
+    expect(track).toHaveBeenCalledWith({
+      eventType: "invite_redeemed",
+      examId: "tmua",
+      contextCode: "signed-in-access",
+    });
+  });
+
+  it("keeps a valid code out of pending storage when signed-in redemption fails", async () => {
+    const user = userEvent.setup();
+    const account = accountService({
+      getAccessState: vi.fn(async () => ({
+        session: { email: "student@example.com" },
+        packageIds: [],
+      })),
+      redeemInvite: vi.fn(async () => {
+        throw new Error("权限解锁失败，请稍后重试");
+      }),
+    });
+    const pending = new MemoryPendingInviteStore();
+    const router = createAppRouter(["/access"], services(account, pending));
+    render(<RouterProvider router={router} />);
+
+    await user.type(
+      await screen.findByLabelText("邀请码"),
+      "MANTUO-TMUA-LOCAL-2026-ACCESS",
+    );
+    await user.click(screen.getByRole("button", { name: "验证并继续" }));
+
+    expect(await screen.findByRole("alert")).toHaveTextContent("权限解锁失败，请稍后重试");
+    expect(pending.load()).toBeNull();
+    expect(router.state.location.pathname).toBe("/access");
+  });
+
+  it("redeems the pending invite after email confirmation and preserves the return target", async () => {
+    const account = accountService();
+    const pending = new MemoryPendingInviteStore(
+      "MANTUOTMUALOCAL2026ACCESS",
+      "/results/ses_email-confirmed",
+    );
+    const router = createAppRouter(
+      ["/auth/confirm?code=confirmation-code"],
+      services(account, pending),
+    );
+    render(<RouterProvider router={router} />);
+
+    expect(await screen.findByRole("heading", { name: "解锁完成" })).toBeInTheDocument();
+    expect(account.completeEmailConfirmation).toHaveBeenCalledWith("confirmation-code");
+    expect(account.redeemInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
+    expect(pending.load()).toBeNull();
+    expect(screen.getByRole("link", { name: "查看已解锁内容" })).toHaveAttribute(
+      "href",
+      "/results/ses_email-confirmed",
+    );
+  });
+
+  it("does not claim entitlement when email confirmation opens without the pending browser code", async () => {
+    const account = accountService();
+    const router = createAppRouter(
+      ["/auth/confirm?code=cross-device-code"],
+      services(account, new MemoryPendingInviteStore()),
+    );
+    render(<RouterProvider router={router} />);
+
+    expect(await screen.findByRole("heading", { name: "邮箱已确认" })).toBeInTheDocument();
+    expect(account.completeEmailConfirmation).toHaveBeenCalledWith("cross-device-code");
+    expect(account.redeemInvite).not.toHaveBeenCalled();
+    expect(screen.getByText(/当前浏览器没有待核销的邀请码/u)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "重新输入邀请码" })).toHaveAttribute(
+      "href",
+      "/access",
+    );
   });
 
   it("fails closed when a deployed account service is missing its CAPTCHA site key", async () => {

@@ -101,7 +101,7 @@ export function RegisterPage({ services }: RegisterPageProps) {
               ，再点击最新邮件中的确认链接。
             </p>
           )}
-          <p className="account-message__note">邀请码已暂存在当前浏览器中，请尽量使用同一设备完成确认。</p>
+          <p className="account-message__note">邀请码已暂存在当前浏览器中。若确认链接在另一台设备打开，登录后重新输入同一个邀请码即可完成绑定。</p>
           <Link className="button button--secondary" to="/login" state={requestedReturn === null ? undefined : { returnTo: requestedReturn }}>已经确认？前往登录</Link>
         </section>
       </main>

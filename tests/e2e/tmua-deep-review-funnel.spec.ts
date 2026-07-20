@@ -62,6 +62,6 @@ test("a locked deep review leads to Bingbing and preserves the result return pat
 
   await inviteLink.click();
   await expect(page).toHaveURL(new RegExp(`/access\\?returnTo=${encodeURIComponent(resultPath)}`, "u"));
-  await expect(page.getByRole("heading", { level: 1, name: "使用邀请码解锁完整内容" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "使用邀请码解锁已发布内容" })).toBeVisible();
   await expectNoDocumentOverflow(page);
 });

@@ -157,7 +157,7 @@ unset REVIEWER_ID
 
 邀请码签发不能靠运营人员记忆内容状态。底层 `issue_invite` 继续只允许 `service_role`，并强制每个权限包至少包含一项已经正式发布的 entitled 资源；只有草稿占位的包会以 `invite_package_unpublished` 失败。冰冰账号由批准的技术责任人通过 `configure_invite_operator` 单独授予或撤销邀请运营能力，浏览器只能使用受约束的 operator RPC：列出已发布资料包、签发有限期代码、查看/撤销本人代码和查看本人审计。`/operations/invites` 已按本人队列接入这些 RPC；入口只在账号二次角色检查通过后出现，直接访问仍会重新验证。不得直接写私有表或把 service-role key 放入冰冰浏览器，也不得用共享表格保存明文邀请码。
 
-每项从练习结果销售或解锁的逐题解析还必须在 `content/products/catalog.json` 的 `relatedPracticeIds` 声明真实练习关系。产品 ID、题目 `explanationResourceId` 和服务端 `content_resources.id` 必须完全一致；不得在 React 页面写死题量、产品名或“可解锁”承诺。发布前必须验证 locked、available、第二账号拒绝、revoked 四种服务端状态，以及“原结果 → 冰冰/已有邀请码 → 注册或登录 → 核销 → 返回原结果”三视口流程。返回地址只能是经校验的站内路径，兑换后必须清除；它不能替代 entitlement。若任一映射冲突，先撤下入口并修复目录，不得让运营口头补偿产品缺失。
+每项从练习结果销售或解锁的逐题解析还必须在 `content/products/catalog.json` 的 `relatedPracticeIds` 声明真实练习关系。产品 ID、题目 `explanationResourceId` 和服务端 `content_resources.id` 必须完全一致；不得在 React 页面写死题量、产品名或“可解锁”承诺。发布前必须验证 locked、available、第二账号拒绝、revoked 四种服务端状态，以及“原结果 → 冰冰/已有邀请码 → 未登录注册或登录／已登录直接核销 → 返回原结果”三视口流程。另用第二浏览器打开邮箱确认链接：若 pending code 不存在，页面必须只显示邮箱已确认并要求重新输入原邀请码，不能显示资料已解锁。返回地址只能是经校验的站内路径，兑换后必须清除；明文邀请码不得放入 URL，它也不能替代 entitlement。若任一映射冲突，先撤下入口并修复目录，不得让运营口头补偿产品缺失。
 
 运营角色不等于管理员。它不返回学生账号、邮箱、核销者身份、答案、档案或学习事件；列表只有非个人化 reference、资料包、有效期、核销次数和状态。邀请码 reference 禁止邮箱、URL 和明显手机号，明文 code 只在签发响应出现一次，审计中只保存受控 metadata。撤销邀请码只阻止未来核销，不暗中撤销学生已经获得的 entitlement；后者属于更高权限的支持/退款流程。
 

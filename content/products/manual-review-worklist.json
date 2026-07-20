@@ -1506,7 +1506,7 @@
               "route": "/exams/tmua/profile"
             }
           ],
-          "sourceFingerprint": "sha256:e9ac104aba35db1d1d7c858563a6abce058e18c9e8c894cc4b88dd5b5e014d3c",
+          "sourceFingerprint": "sha256:119df7dd90452f7e73972343b833678223503263417afc33c4f78af33b397eae",
           "sourceArtifactCount": 26
         },
         {
@@ -1532,7 +1532,7 @@
               "route": "/practice/tmua-specimen-p1"
             }
           ],
-          "sourceFingerprint": "sha256:c3baeb91b1720e1f343e79cadb9ea493b5e9527970efb32e6da7e1fa10a88054",
+          "sourceFingerprint": "sha256:deb397567d4b50b5517bd11c35b34ef66c2dbbdb56193e2e67235431a37e0a94",
           "sourceArtifactCount": 24
         },
         {
