@@ -40,6 +40,10 @@ jobs:
           node-version: 22.18.0
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - name: Prepare isolated local Supabase
+        run: |
+          pnpm exec supabase stop --all --no-backup || true
+          pnpm supabase:prepare-ci
       - run: pnpm supabase:start
       - run: pnpm verify:supabase
       - run: pnpm verify:recovery-local
