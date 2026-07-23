@@ -65,7 +65,10 @@ function completeSnapshot(): ProductionBootstrapSnapshot {
 }
 
 describe("production bootstrap assessment", () => {
-  it("validates every supported public SMTP control-plane variable", () => {
+  it("validates every supported public control-plane variable", () => {
+    expect(isValidProductionVariable("TURNSTILE_SITE_KEY", "0x4AAAAAAABBBBBBBBCCCCCCCC")).toBe(true);
+    expect(isValidProductionVariable("TURNSTILE_SITE_KEY", "1x00000000000000000000AA")).toBe(false);
+    expect(isValidProductionVariable("TURNSTILE_SITE_KEY", "0x-replace-with-key")).toBe(false);
     expect(isValidProductionVariable("SMTP_HOST", "smtp.resend.com")).toBe(true);
     expect(isValidProductionVariable("SMTP_PORT", "587")).toBe(true);
     expect(isValidProductionVariable("SMTP_ADMIN_EMAIL", "no-reply@auth.uktest.cc")).toBe(true);

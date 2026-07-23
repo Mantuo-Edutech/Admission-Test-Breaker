@@ -360,7 +360,7 @@ describe("module architecture boundaries", () => {
       "vitest run tests/features/content-review-operations tests/app/content-review-operations-page.test.tsx tests/app/content-review-operations-layout-contract.test.ts tests/app/account-lifecycle.test.tsx",
     );
     expect(packageJson.scripts?.["verify:production-bootstrap"]).toBe(
-      "vitest run tests/platform/production-bootstrap.test.ts tests/platform/production-bootstrap-plan.test.ts tests/architecture/production-bootstrap-contract.test.ts",
+      "vitest run tests/platform/production-bootstrap.test.ts tests/platform/production-bootstrap-plan.test.ts tests/platform/turnstile-bootstrap.test.ts tests/architecture/production-bootstrap-contract.test.ts tests/architecture/turnstile-bootstrap-contract.test.ts",
     );
     expect(packageJson.scripts?.["verify:supabase-project-selection"]).toBe(
       "vitest run tests/platform/supabase-project-selection.test.ts tests/architecture/supabase-project-selection-contract.test.ts",

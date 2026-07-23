@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "policyVersion": "1.1.0",
+  "policyVersion": "1.2.0",
   "repository": "Mantuo-Edutech/Admission-Test-Breaker",
   "requiredWorkflowFiles": [
     ".github/workflows/verify.yml",
@@ -20,6 +20,7 @@
       ],
       "requiredVariables": [
         "PUBLIC_APP_ORIGIN",
+        "TURNSTILE_SITE_KEY",
         "SMTP_HOST",
         "SMTP_PORT",
         "SMTP_ADMIN_EMAIL",
@@ -38,6 +39,7 @@
       ],
       "requiredVariables": [
         "PUBLIC_APP_ORIGIN",
+        "TURNSTILE_SITE_KEY",
         "SMTP_HOST",
         "SMTP_PORT",
         "SMTP_ADMIN_EMAIL",

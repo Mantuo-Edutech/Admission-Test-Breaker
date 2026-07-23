@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "repository": "Mantuo-Edutech/Admission-Test-Breaker",
+  "accountIdEnvironmentVariable": "MANTUO_CLOUDFLARE_ACCOUNT_ID",
+  "apiTokenEnvironmentVariable": "MANTUO_CLOUDFLARE_TURNSTILE_API_TOKEN",
+  "widgets": [
+    {
+      "environment": "staging",
+      "name": "Mantuo UK Test staging accounts",
+      "domains": [
+        "staging.uktest.cc"
+      ]
+    },
+    {
+      "environment": "production",
+      "name": "Mantuo UK Test production accounts",
+      "domains": [
+        "uktest.cc",
+        "www.uktest.cc"
+      ]
+    }
+  ]
+}

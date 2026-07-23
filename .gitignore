@@ -14,4 +14,5 @@ node_modules/
 .env.local
 .env.*.local
 deploy/bootstrap-input.local.json
+deploy/turnstile-bootstrap.local.json
 deploy/supabase-project-selection.local.json

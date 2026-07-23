@@ -56,6 +56,7 @@ describe("production bootstrap contract", () => {
     for (const environment of requirements.environments) {
       expect(environment.requiredSecrets).toEqual(expect.arrayContaining(["SMTP_USER", "SMTP_PASS"]));
       expect(environment.requiredVariables).toEqual(expect.arrayContaining([
+        "TURNSTILE_SITE_KEY",
         "SMTP_HOST",
         "SMTP_PORT",
         "SMTP_ADMIN_EMAIL",
