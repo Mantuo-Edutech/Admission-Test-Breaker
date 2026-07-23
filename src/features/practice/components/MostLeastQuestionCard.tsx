@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import type { PracticePassage, PracticeQuestion } from "../content/types.js";
+import type { PracticePassage } from "../content/types.js";
+import type { DeliveredPracticeQuestion } from "../delivery/domain.js";
 import { parseMostLeastAnswer, serializeMostLeastAnswer } from "../domain/most-least-response.js";
 import { MathContent } from "./MathContent.js";
 
 interface MostLeastQuestionCardProps {
-  question: PracticeQuestion;
+  question: DeliveredPracticeQuestion;
   passage?: PracticePassage;
   examName: string;
   sectionLabel: string;

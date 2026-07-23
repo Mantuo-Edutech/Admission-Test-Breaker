@@ -1,6 +1,6 @@
 # Server-delivered practice content and authoring workflow
 
-Status: accepted target architecture  
+Status: implemented V1
 Date: 2026-07-23
 
 ## Context
@@ -50,18 +50,15 @@ Extraction is an input adapter, never the publication authority. “New question
 review” and conversion state belong in the private operations interface and
 server logs, not in the student-facing catalogue.
 
-## Target records
+## Implemented records
 
 | Record | Purpose | Student browser access |
 | --- | --- | --- |
-| `papers` | Stable paper identity and exam/module metadata | Catalogue projection only |
-| `paper_versions` | Immutable publication revision and checksum | Current published revision only |
-| `questions` / `choices` | Sanitised prompt and response shape | Active published paper |
-| `answer_keys` | Correct answer and scoring metadata | Never direct; server scoring only |
-| `explanations` | Versioned worked interpretation | Entitlement-checked endpoint |
-| `media_assets` | Figure identity, dimensions and private storage path | Short-lived scoped delivery |
-| `review_tasks` | Extraction and academic verification state | Operations roles only |
-| `publications` | Publish, supersede and rollback ledger | Public status projection only |
+| `public.practice_content_revisions` | Immutable revision, checksum and publication metadata | Published metadata only |
+| `private.practice_paper_payloads` | Sanitised prompt, choice and media references | One exact revision through `get_practice_paper` |
+| `private.practice_paper_answer_keys` | Correct answers and scoring metadata | Never direct; `score_practice_submission` only |
+| `public.content_resource_payloads` | Versioned Notes and worked explanations | `get_entitled_content_resource` after entitlement |
+| `public.practice_sessions` | Learner-owned answer/timing snapshot with revision and digest | Owning learner only through RLS |
 
 All learner answers, time events and results remain in the Private Learner Domain
 and keep their existing `learner_space_id` and RLS boundaries.
@@ -71,12 +68,10 @@ and keep their existing `learner_space_id` and RLS boundaries.
 The target interface is transport-agnostic:
 
 ```text
-GET  /v1/exams/:exam/papers
-GET  /v1/papers/:paperId?revision=:revision
-POST /v1/practice-sessions
-PUT  /v1/practice-sessions/:sessionId/answers/:questionId
-POST /v1/practice-sessions/:sessionId/submit
-GET  /v1/practice-sessions/:sessionId/result
+POST /rest/v1/rpc/get_practice_paper
+POST /rest/v1/rpc/save_practice_session
+POST /rest/v1/rpc/score_practice_submission
+POST /rest/v1/rpc/get_entitled_content_resource
 ```
 
 Private administration adds upload, ingest, review, publish and rollback
@@ -129,14 +124,11 @@ exposure, minimise each response, rate-limit enumeration, watermark where
 appropriate and retain an access audit. UI hiding, obscure URLs and disabled
 download buttons are not security controls.
 
-## Migration phases
+## Completed V1 boundary
 
-1. Define and validate a client-safe paper payload that excludes answer keys.
-2. Create content tables, private storage buckets and RLS/service policies.
-3. Build publish/rollback commands and migrate one non-critical paper end to end.
-4. Switch scoring and explanations to protected server endpoints.
-5. Migrate the remaining catalogues, then reject practice content in public bundles.
-6. Evaluate Axum only with measured latency, throughput or workflow requirements.
-
-Until phase 5 is complete, the current client-bundled answer keys remain a known
-production limitation and must not be described as protected.
+1. All 44 currently published papers use one safe delivery and scoring contract, including 18 TMUA past papers.
+2. The browser build is scanned for protected Notes bodies, all complete answer sequences and all server question payloads.
+3. Session schema v3 stores `paperRevisionId` and `contentDigest`; the database validates the exact published tuple and prevents an existing session moving revisions.
+4. Publication is append-only. A changed paper creates `r2`, retains `r1` payload and answer package, and creates a new additive migration instead of modifying an applied migration.
+5. Production modules are forbidden by an Agent-runnable architecture test from importing answer-bearing authoring registries.
+6. Axum, a separate repository and full offline PWA remain deferred until measured demand justifies them.

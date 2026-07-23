@@ -2,7 +2,7 @@ import { ArrowRight, BookOpenCheck, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { AppServices } from "../../../app/dependencies.js";
 import { usePreparationProfileContext } from "../../preparation-profile/hooks/usePreparationProfileContext.js";
-import { TMUA_ONLINE_PAPER_MANIFEST } from "../../practice/content/tmua-online-registry.js";
+import { PUBLISHED_PRACTICE_REVISIONS } from "../../practice/content/published-revisions.js";
 import { TmuaPageHeader } from "../components/TmuaPageHeader.js";
 import { TMUA_PUBLIC_SUMMARY } from "../tmua-summary.js";
 
@@ -32,6 +32,10 @@ const STARTING_STEPS = [
     detail: "回看错题与时间分配，再选择真题、起点诊断或已发布复习资料。",
   },
 ] as const;
+
+const publishedTmuaPastPaperQuestions = PUBLISHED_PRACTICE_REVISIONS.papers
+  .filter((paper) => paper.exam === "TMUA" && paper.paperId !== "tmua-diagnostic-v1")
+  .reduce((total, paper) => total + paper.questionCount, 0);
 
 export function TmuaHubPage({ services }: TmuaHubPageProps) {
   const { loading, profile, issue } = usePreparationProfileContext(services);
@@ -68,7 +72,7 @@ export function TmuaHubPage({ services }: TmuaHubPageProps) {
         </div>
         <dl aria-label="TMUA 真题与在线练习" role="group">
           <div><dt>历年真题</dt><dd>{TMUA_PUBLIC_SUMMARY.paperCount} 套</dd></div>
-          <div className="tmua-hub-hero__available"><dt>真题总量</dt><dd>{TMUA_ONLINE_PAPER_MANIFEST.questionCount} 道</dd></div>
+          <div className="tmua-hub-hero__available"><dt>真题总量</dt><dd>{publishedTmuaPastPaperQuestions} 道</dd></div>
           <div>
             <dt>在线练习</dt>
             <dd>{TMUA_PUBLIC_SUMMARY.paperCount} 套全部可作答</dd>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import type { AppServices } from "../../../app/dependencies.js";
 import { isGuestSpaceOwner } from "../../../platform/learning-space/domain.js";
 import { TmuaPageHeader } from "../components/TmuaPageHeader.js";
-import { TMUA_ONLINE_PAPERS } from "../../practice/content/tmua-online-registry.js";
+import { PUBLISHED_PRACTICE_REVISIONS } from "../../practice/content/published-revisions.js";
 import type { PracticeSession } from "../../practice/domain/session.js";
 import { usePreparationProfileContext } from "../../preparation-profile/hooks/usePreparationProfileContext.js";
 import { TMUA_PUBLIC_SUMMARY } from "../tmua-summary.js";
@@ -14,15 +14,18 @@ import {
   type PracticeEntry,
 } from "../components/PracticeLibrary.js";
 
-const onlinePaperById = new Map(TMUA_ONLINE_PAPERS.map((paper) => [paper.id, paper]));
+const publishedTmuaPaperIds = new Set(
+  PUBLISHED_PRACTICE_REVISIONS.papers
+    .filter((paper) => paper.exam === "TMUA")
+    .map((paper) => paper.paperId),
+);
 
 const tmuaPaperEntries: readonly PracticeEntry[] = TMUA_PUBLIC_SUMMARY.editions.flatMap((edition) =>
   edition.papers.flatMap((paper) => {
     const paperId = `tmua-${edition.id}-p${paper.paper}`;
-    const onlinePaper = onlinePaperById.get(paperId);
-    return onlinePaper === undefined ? [] : [{
+    return !publishedTmuaPaperIds.has(paperId) ? [] : [{
       id: paperId,
-      to: `/practice/${onlinePaper.id}`,
+      to: `/practice/${paperId}`,
       kicker: edition.label,
       title: `Paper ${paper.paper}`,
       meta: "20 题 · 75 分钟",

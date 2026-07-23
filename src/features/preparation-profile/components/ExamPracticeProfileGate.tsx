@@ -1,12 +1,11 @@
 import { useEffect, useState, type ReactNode } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import type { AppServices } from "../../../app/dependencies.js";
 import type { GuestSpace } from "../../../platform/learning-space/domain.js";
 import { EsatPlanRequiredState } from "../../catalog/components/EsatPlanRequiredState.js";
 import { loadEsatPreparationPlan } from "../../catalog/esat-plan.js";
 import { SiteHeader } from "../../navigation/components/SiteHeader.js";
-import { getPracticePaper } from "../../practice/content/practice-paper-registry.js";
-import type { PracticePaper } from "../../practice/content/types.js";
+import type { DeliveredPracticePaper } from "../../practice/delivery/domain.js";
 import type { AssessmentBackgroundProfile, AssessmentProfileExamId } from "../assessment-profile-domain.js";
 import { PreparationProfileGate } from "./PreparationProfileGate.js";
 import { AssessmentProfileRequiredState } from "./AssessmentProfileRequiredState.js";
@@ -67,12 +66,9 @@ function BackgroundProfileGate({ examId, services, children }: {
 export function ExamPracticeProfileGate({ services, children, paper: resolvedPaper }: {
   services: AppServices;
   children: ReactNode;
-  paper?: PracticePaper | null;
+  paper: DeliveredPracticePaper | null;
 }) {
-  const { paperId } = useParams();
-  const paper = resolvedPaper === undefined
-    ? paperId === undefined ? null : getPracticePaper(paperId)
-    : resolvedPaper;
+  const paper = resolvedPaper;
   const examId = paper?.exam.toLowerCase();
   if (examId === "tmua") return <PreparationProfileGate services={services}>{children}</PreparationProfileGate>;
   if (examId === "esat") return <EsatPracticeGate>{children}</EsatPracticeGate>;

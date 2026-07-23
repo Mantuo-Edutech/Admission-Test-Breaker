@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "2026-07-19.19",
+  "revision": "2026-07-23.1",
   "policy": {
     "everyContentFileMustHaveLifecycle": true,
     "sourceAssetIsNotAutomaticallyAProduct": true,
@@ -211,6 +211,25 @@
       "id": "beta-release-control",
       "classification": "release-control",
       "paths": ["content/platform/beta-100-readiness.json"],
+      "pathPrefixes": [],
+      "productIds": [],
+      "publicDelivery": false
+    },
+    {
+      "id": "practice-revision-release-control",
+      "classification": "release-control",
+      "paths": [
+        "content/practice/published-paper-revisions.json",
+        "content/practice/server-delivery/public-paper-payloads.json"
+      ],
+      "pathPrefixes": [],
+      "productIds": [],
+      "publicDelivery": false
+    },
+    {
+      "id": "practice-private-answer-source",
+      "classification": "internal-product-source",
+      "paths": ["content/practice/server-delivery/private-answer-keys.json"],
       "pathPrefixes": [],
       "productIds": [],
       "publicDelivery": false

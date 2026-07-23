@@ -1,9 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Bookmark, ChevronLeft, ChevronRight } from "lucide-react";
 import type { AppServices } from "../../../app/dependencies.js";
-import { getPracticePaper, practicePaperPresentation } from "../content/practice-paper-registry.js";
-import type { PracticePaper } from "../content/types.js";
+import { practicePaperPresentation } from "../content/practice-paper-presentation.js";
+import {
+  sessionContentMatchesPaper,
+} from "../content/published-revisions.js";
+import type { DeliveredPracticePaper } from "../delivery/domain.js";
 import { ExamHeader } from "../components/ExamHeader.js";
 import { EssayPracticeEditor } from "../components/EssayPracticeEditor.js";
 import { MobileQuestionMap, QuestionMap } from "../components/QuestionMap.js";
@@ -25,7 +28,7 @@ import { buildFeedbackHref, normalizeFeedbackContext } from "../../feedback/doma
 
 interface PracticePageProps {
   services: AppServices;
-  paper?: PracticePaper | null;
+  paper: DeliveredPracticePaper | null;
 }
 
 type PracticeLoadState =
@@ -36,10 +39,7 @@ type PracticeLoadState =
 export function PracticePage({ services, paper }: PracticePageProps) {
   const navigate = useNavigate();
   const location = useLocation();
-  const { paperId } = useParams();
-  const requestedPaper = paper === undefined
-    ? paperId === undefined ? null : getPracticePaper(paperId)
-    : paper;
+  const requestedPaper = paper;
   const presentation = requestedPaper === null ? null : practicePaperPresentation(requestedPaper);
   const [loadState, setLoadState] = useState<PracticeLoadState>({ kind: "loading" });
   const [clockMs, setClockMs] = useState(() => services.now().getTime());
@@ -107,6 +107,7 @@ export function PracticePage({ services, paper }: PracticePageProps) {
       }
       if (
         result.session?.paperId === requestedPaper.id &&
+        sessionContentMatchesPaper(result.session, requestedPaper) &&
         result.session.status === "active"
       ) {
         setLoadState({ kind: "ready", session: result.session });
@@ -120,6 +121,7 @@ export function PracticePage({ services, paper }: PracticePageProps) {
         learningSpaceId: guestSpace.id,
         actor: { kind: "guest", actorId: guestSpace.ownerActorId },
         paperId: requestedPaper.id,
+        contentRef: requestedPaper.contentRef,
         durationMinutes: requestedPaper.durationMinutes,
         startedAt: services.now().toISOString(),
         eventId: services.ids.eventId(),

@@ -3,7 +3,7 @@ begin;
 create extension if not exists pgtap with schema extensions;
 set local search_path = public, extensions;
 
-select plan(46);
+select plan(51);
 
 insert into auth.users (
   id,
@@ -93,11 +93,13 @@ language sql
 immutable
 as $$
   select jsonb_build_object(
-    'schemaVersion', 2,
+    'schemaVersion', 3,
     'id', 'ses_alice_test',
     'learningSpaceId', 'gsp_alice_browser',
     'startedBy', jsonb_build_object('kind', 'guest', 'actorId', 'guest_alice_browser'),
     'paperId', 'tmua-2023-p1',
+    'paperRevisionId', 'tmua-2023-p1-r1',
+    'contentDigest', 'ad52e7968d9cc8459289f22d8239cd2e981d470e40ec2c14270a7d10e540caba',
     'status', 'active',
     'startedAt', '2026-07-15T00:00:00.000Z',
     'deadlineAt', '2026-07-15T01:15:00.000Z',
@@ -179,6 +181,11 @@ where invite.code_digest = private.invite_code_digest('MANTUO-TMUA-ONE-USE-2026-
 
 set local role anon;
 select is((select count(*) from public.content_resources), 1::bigint, 'anonymous users see only public published content');
+select is(
+  (select count(*) from public.practice_content_revisions),
+  44::bigint,
+  'anonymous users can read only immutable published practice revision metadata'
+);
 reset role;
 
 select ok(
@@ -196,6 +203,10 @@ select ok(
 select ok(
   not has_table_privilege('authenticated', 'public.learning_events', 'update'),
   'learning events are append-only for students'
+);
+select ok(
+  not has_table_privilege('authenticated', 'public.practice_content_revisions', 'insert'),
+  'students cannot publish or mutate practice revisions'
 );
 select ok(
   not has_function_privilege('anon', 'public.export_my_learning_data()', 'execute'),
@@ -282,6 +293,63 @@ select is(
 select lives_ok(
   $$select public.save_practice_session(pg_temp.guest_session())$$,
   'Alice can atomically claim a Guest session into her learner space'
+);
+select is(
+  (
+    select paper_revision_id || ':' || content_digest
+    from public.practice_sessions
+    where id = 'ses_alice_test'
+  ),
+  'tmua-2023-p1-r1:ad52e7968d9cc8459289f22d8239cd2e981d470e40ec2c14270a7d10e540caba',
+  'the durable session pins the exact published revision and digest'
+);
+
+select throws_ok(
+  $$
+    select public.save_practice_session(
+      jsonb_set(
+        pg_temp.guest_session(),
+        '{contentDigest}',
+        to_jsonb(repeat('0', 64))
+      )
+    )
+  $$,
+  '22023',
+  'practice_content_revision_invalid',
+  'the server rejects a forged content digest'
+);
+
+reset role;
+set local role service_role;
+insert into public.practice_content_revisions (
+  paper_revision_id, paper_id, revision, exam, schema_version,
+  content_digest, question_count, duration_minutes, published_at
+) values (
+  'tmua-2023-p1-r2', 'tmua-2023-p1', 2, 'TMUA', 1,
+  repeat('b', 64), 20, 75, now()
+);
+reset role;
+set local role authenticated;
+select set_config('request.jwt.claim.sub', '11111111-1111-4111-8111-111111111111', true);
+select set_config('request.jwt.claim.role', 'authenticated', true);
+
+select throws_ok(
+  $$
+    select public.save_practice_session(
+      jsonb_set(
+        jsonb_set(
+          pg_temp.guest_session(),
+          '{paperRevisionId}',
+          '"tmua-2023-p1-r2"'::jsonb
+        ),
+        '{contentDigest}',
+        to_jsonb(repeat('b', 64))
+      )
+    )
+  $$,
+  '40001',
+  'practice_session_content_conflict',
+  'a later valid publication cannot silently move an existing session'
 );
 
 select lives_ok(

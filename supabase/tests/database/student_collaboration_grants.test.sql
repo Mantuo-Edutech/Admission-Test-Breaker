@@ -40,20 +40,25 @@ select
 grant select on collaboration_test_ids to authenticated;
 
 insert into public.practice_sessions (
-  id, learner_space_id, paper_id, schema_version, status, snapshot,
+  id, learner_space_id, paper_id, paper_revision_id, content_digest,
+  schema_version, status, snapshot,
   started_at, deadline_at, submitted_at
 ) values (
   'ses_collaboration_tmua_01',
   (select student_space from collaboration_test_ids),
   'tmua-diagnostic-v1',
-  2,
+  'tmua-diagnostic-v1-r1',
+  'a2366aac9020a842da2c93fa5c3fc85d63d9fb58f3683026e87f3f375689b00a',
+  3,
   'submitted',
   jsonb_build_object(
-    'schemaVersion', 2,
+    'schemaVersion', 3,
     'id', 'ses_collaboration_tmua_01',
     'learningSpaceId', (select student_space from collaboration_test_ids),
     'startedBy', jsonb_build_object('kind', 'student', 'userId', (select student_ref from collaboration_test_ids)),
     'paperId', 'tmua-diagnostic-v1',
+    'paperRevisionId', 'tmua-diagnostic-v1-r1',
+    'contentDigest', 'a2366aac9020a842da2c93fa5c3fc85d63d9fb58f3683026e87f3f375689b00a',
     'status', 'submitted',
     'startedAt', '2026-07-19T08:00:00.000Z',
     'deadlineAt', '2026-07-19T08:30:00.000Z',

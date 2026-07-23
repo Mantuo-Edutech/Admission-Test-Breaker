@@ -20,6 +20,13 @@ const profileFixturePath = path.join(
   "preparation-profile",
   "__domain-architecture-fixture__.ts",
 );
+const authoringContentFixturePath = path.join(
+  sourceRoot,
+  "features",
+  "practice",
+  "pages",
+  "__authoring-content-fixture__.ts",
+);
 
 async function sourceFiles(directory: string): Promise<string[]> {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -189,6 +196,26 @@ function evaluate(reference: ImportReference): ArchitectureViolation[] {
     }
   }
 
+  const importsAnswerBearingAuthoringRegistry =
+    target.endsWith("/src/features/practice/content/practice-paper-registry.ts") ||
+    target.endsWith("/src/features/practice/content/tmua-online-registry.ts");
+  const isAuthoringContentModule = relativeFile.startsWith(
+    "src/features/practice/content/",
+  );
+  const isExplicitTestDeliveryAdapter =
+    relativeFile ===
+    "src/features/practice/delivery/test-practice-delivery-service.ts";
+  if (
+    importsAnswerBearingAuthoringRegistry &&
+    !isAuthoringContentModule &&
+    !isExplicitTestDeliveryAdapter
+  ) {
+    violations.push({
+      ...reference,
+      rule: "production runtime must receive practice papers through the safe delivery contract",
+    });
+  }
+
   return violations;
 }
 
@@ -199,6 +226,7 @@ async function architectureViolations(): Promise<ArchitectureViolation[]> {
 afterEach(async () => {
   await rm(fixturePath, { force: true });
   await rm(profileFixturePath, { force: true });
+  await rm(authoringContentFixturePath, { force: true });
 });
 
 describe("module architecture boundaries", () => {
@@ -228,6 +256,20 @@ describe("module architecture boundaries", () => {
       expect.objectContaining({
         specifier: "react",
         rule: "preparation profile domain must not depend on UI or storage adapters",
+      }),
+    );
+  });
+
+  it("reports a production page importing the answer-bearing authoring registry", async () => {
+    await writeFile(
+      authoringContentFixturePath,
+      'import { getPracticePaper } from "../content/practice-paper-registry.js";\nexport { getPracticePaper };\n',
+    );
+
+    expect(await architectureViolations()).toContainEqual(
+      expect.objectContaining({
+        specifier: "../content/practice-paper-registry.js",
+        rule: "production runtime must receive practice papers through the safe delivery contract",
       }),
     );
   });
@@ -282,7 +324,7 @@ describe("module architecture boundaries", () => {
       "tsx scripts/check-manual-review-worklist.ts --verify && vitest run tests/features/library/manual-review-worklist.test.ts",
     );
     expect(packageJson.scripts?.["verify:production-platform"]).toBe(
-      "vitest run tests/architecture/production-platform-contracts.test.ts tests/platform/runtime-config.test.ts tests/platform/supabase-auth-protection-config.test.ts tests/platform/deployment-runtime-validation.test.ts",
+      "vitest run tests/architecture/production-platform-contracts.test.ts tests/platform/runtime-config.test.ts tests/platform/supabase-auth-protection-config.test.ts tests/platform/supabase-management-migrations.test.ts tests/platform/deployment-runtime-validation.test.ts",
     );
     expect(packageJson.scripts?.["verify:web-performance"]).toBe(
       "tsx scripts/check-web-performance-budget.ts",
@@ -333,7 +375,7 @@ describe("module architecture boundaries", () => {
       "vitest run tests/features/practice/content/esat-mathematics-1-full-mock.test.ts tests/features/practice/content/esat-mathematics-2-full-mock.test.ts tests/features/practice/content/esat-physics-full-mock.test.ts tests/features/practice/content/esat-chemistry-full-mock.test.ts tests/features/practice/content/esat-biology-full-mock.test.ts tests/app/multi-exam-practice-library.test.tsx tests/app/practice-page.test.tsx tests/app/results-page.test.tsx",
     );
     expect(packageJson.scripts?.verify).toBe(
-      "pnpm verify:architecture && pnpm verify:features && pnpm verify:supabase-contracts && pnpm verify:account-access && pnpm verify:invite-operations && pnpm verify:production-platform && pnpm verify:production-bootstrap && pnpm verify:supabase-project-selection && pnpm verify:content-products && pnpm verify:product-lineage && pnpm verify:content-release-readiness && pnpm verify:manual-review-worklist && pnpm verify:manual-review-ledger && pnpm verify:content-review-operations && pnpm verify:entitled-content && pnpm verify:feedback && pnpm verify:product-funnel && pnpm verify:funnel-analytics && pnpm verify:collaboration && pnpm verify:learning-record && pnpm beta:audit && pnpm verify:content-imports && pnpm verify:curriculum-sources && pnpm verify:esat-assets && pnpm verify:esat-full-mock && pnpm verify:esat-starter && pnpm verify:tara-starter && pnpm verify:tara-full-mock && pnpm verify:lnat-starter && pnpm verify:lnat-full-mock && pnpm verify:ucat-starter && pnpm verify:ucat-verbal-full-mock && pnpm verify:ucat-decision-full-mock && pnpm verify:ucat-quantitative-full-mock && pnpm verify:ucat-situational-full-mock && pnpm verify:essay-practice && pnpm verify:tmua-diagnostic && pnpm verify:review-notes && pnpm verify:review-notes-pdfs && pnpm verify:tmua-notes && pnpm verify:tmua-corpus && pnpm verify:tmua-extractions && pnpm verify:tmua-online-papers && pnpm test && pnpm typecheck && pnpm build && pnpm verify:web-performance && pnpm verify:private-content-bundle",
+      "pnpm verify:architecture && pnpm verify:features && pnpm verify:supabase-contracts && pnpm verify:account-access && pnpm verify:invite-operations && pnpm verify:production-platform && pnpm verify:production-bootstrap && pnpm verify:supabase-project-selection && pnpm verify:content-products && pnpm verify:product-lineage && pnpm verify:content-release-readiness && pnpm verify:manual-review-worklist && pnpm verify:manual-review-ledger && pnpm verify:content-review-operations && pnpm verify:entitled-content && pnpm verify:feedback && pnpm verify:product-funnel && pnpm verify:funnel-analytics && pnpm verify:collaboration && pnpm verify:learning-record && pnpm beta:audit && pnpm verify:content-imports && pnpm verify:curriculum-sources && pnpm verify:esat-assets && pnpm verify:esat-full-mock && pnpm verify:esat-starter && pnpm verify:tara-starter && pnpm verify:tara-full-mock && pnpm verify:lnat-starter && pnpm verify:lnat-full-mock && pnpm verify:ucat-starter && pnpm verify:ucat-verbal-full-mock && pnpm verify:ucat-decision-full-mock && pnpm verify:ucat-quantitative-full-mock && pnpm verify:ucat-situational-full-mock && pnpm verify:essay-practice && pnpm verify:tmua-diagnostic && pnpm verify:review-notes && pnpm verify:review-notes-pdfs && pnpm verify:tmua-notes && pnpm verify:tmua-corpus && pnpm verify:tmua-extractions && pnpm verify:tmua-online-papers && pnpm verify:practice-revisions && pnpm verify:server-practice-packages && pnpm test && pnpm typecheck && pnpm build && pnpm verify:web-performance && pnpm verify:private-content-bundle",
     );
   });
 });

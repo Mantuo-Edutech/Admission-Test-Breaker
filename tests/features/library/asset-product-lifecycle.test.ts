@@ -60,7 +60,7 @@ describe("content asset to web product lifecycle", () => {
 
     expect(lifecycle).toMatchObject({
       schemaVersion: 1,
-      revision: "2026-07-19.19",
+      revision: "2026-07-23.1",
       policy: {
         everyContentFileMustHaveLifecycle: true,
         sourceAssetIsNotAutomaticallyAProduct: true,

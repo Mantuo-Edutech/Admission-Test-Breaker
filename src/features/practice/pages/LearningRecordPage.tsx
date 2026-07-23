@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import type { AppServices } from "../../../app/dependencies.js";
 import { SiteHeader } from "../../navigation/components/SiteHeader.js";
 import type { PracticeExamId } from "../catalog/assessment-registry.js";
-import { loadPracticePaper } from "../content/practice-paper-registry.js";
 import type { PracticeSession } from "../domain/session.js";
+import { resolvePracticeDeliveryService } from "../delivery/resolve-service.js";
 import {
   buildPracticeHistoryView,
+  type PracticeHistoryMaterial,
   type PracticeHistoryView,
 } from "../history/history-read-model.js";
 import type { PracticeHistoryLoadResult } from "../history/store.js";
@@ -72,12 +73,26 @@ export function LearningRecordPage({
     ]).then(async ([history, current]) => {
       if (!active) return;
       const merged = mergeCurrent(history, current.session);
-      await Promise.all(merged.sessions.map((session) => loadPracticePaper(session.paperId)));
+      const delivery = await resolvePracticeDeliveryService(services.practiceDelivery);
+      const materialEntries = delivery === null ? [] : await Promise.all(
+        merged.sessions.map(async (session): Promise<readonly [string, PracticeHistoryMaterial] | null> => {
+          const exactPaper = await delivery.loadPaper(session.paperId, session.paperRevisionId).catch(() => null);
+          const paper = exactPaper ?? await delivery.loadPaper(session.paperId).catch(() => null);
+          if (paper === null) return null;
+          const results = exactPaper === null || session.status === "active" || paper.responseMode === "essay"
+            ? null
+            : await delivery.score(session).catch(() => null);
+          return [session.id, { paper, results }] as const;
+        }),
+      );
       if (!active) return;
+      const materials = new Map(
+        materialEntries.filter((entry): entry is readonly [string, PracticeHistoryMaterial] => entry !== null),
+      );
       setState({
         loading: false,
         history: merged,
-        view: buildPracticeHistoryView(merged.sessions, examId, services.now()),
+        view: buildPracticeHistoryView(merged.sessions, examId, services.now(), materials),
       });
     });
     return () => { active = false; };

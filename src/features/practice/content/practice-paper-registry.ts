@@ -1,4 +1,3 @@
-import { deepReviewPackageId, PRACTICE_ACCESS_POLICY, type PracticeExamId } from "../catalog/assessment-registry.js";
 import { getEsatPracticePaper } from "./esat-starters.js";
 import { LNAT_SECTION_A_STARTER } from "./lnat-section-a-starter.js";
 import { LNAT_SECTION_B_WRITING } from "./lnat-section-b-writing.js";
@@ -10,18 +9,16 @@ import { UCAT_DECISION_MAKING_STARTER } from "./ucat-decision-making-starter.js"
 import { UCAT_SITUATIONAL_JUDGEMENT_STARTER } from "./ucat-situational-judgement-starter.js";
 import { UCAT_VERBAL_REASONING_STARTER } from "./ucat-verbal-reasoning-starter.js";
 import { getTmuaPracticePaper } from "./tmua-online-registry.js";
-import type { PracticePaper, PracticePaperAccess } from "./types.js";
+import type { PracticePaper } from "./types.js";
+import {
+  publishPracticePaper,
+  type PublishedPracticePaper,
+} from "./published-revisions.js";
 
-export interface PracticePaperPresentation {
-  readonly examId: PracticeExamId;
-  readonly examName: PracticePaper["exam"];
-  readonly title: string;
-  readonly subtitle: string;
-  readonly backHref: string;
-  readonly questionCount: number;
-  readonly durationMinutes: number;
-  readonly access: PracticePaperAccess;
-}
+export {
+  practicePaperPresentation,
+  type PracticePaperPresentation,
+} from "./practice-paper-presentation.js";
 
 const ROUTE_ONLY_PAPER_IDS = new Set([
   "tara-critical-thinking-full-mock-v1",
@@ -32,28 +29,29 @@ const ROUTE_ONLY_PAPER_IDS = new Set([
   "ucat-quantitative-reasoning-full-mock-v1",
   "ucat-situational-judgement-full-mock-v1",
 ]);
-const dynamicallyLoadedPapers = new Map<string, PracticePaper>();
+const dynamicallyLoadedPapers = new Map<string, PublishedPracticePaper>();
 
-export function getPracticePaper(paperId: string): PracticePaper | null {
+export function getPracticePaper(paperId: string): PublishedPracticePaper | null {
   const dynamicallyLoaded = dynamicallyLoadedPapers.get(paperId);
   if (dynamicallyLoaded !== undefined) return dynamicallyLoaded;
-  if (paperId === TMUA_DIAGNOSTIC_V1.id) return TMUA_DIAGNOSTIC_V1;
-  if (paperId === UCAT_SITUATIONAL_JUDGEMENT_STARTER.id) return UCAT_SITUATIONAL_JUDGEMENT_STARTER;
-  if (paperId === UCAT_DECISION_MAKING_STARTER.id) return UCAT_DECISION_MAKING_STARTER;
-  if (paperId === UCAT_QUANTITATIVE_REASONING_STARTER.id) return UCAT_QUANTITATIVE_REASONING_STARTER;
-  if (paperId === LNAT_SECTION_B_WRITING.id) return LNAT_SECTION_B_WRITING;
-  if (paperId === TARA_WRITING_TASK.id) return TARA_WRITING_TASK;
-  if (paperId === UCAT_VERBAL_REASONING_STARTER.id) return UCAT_VERBAL_REASONING_STARTER;
-  if (paperId === LNAT_SECTION_A_STARTER.id) return LNAT_SECTION_A_STARTER;
-  if (paperId === TARA_REASONING_STARTER.id) return TARA_REASONING_STARTER;
-  return getEsatPracticePaper(paperId) ?? getTmuaPracticePaper(paperId);
+  const paper = paperId === TMUA_DIAGNOSTIC_V1.id ? TMUA_DIAGNOSTIC_V1
+    : paperId === UCAT_SITUATIONAL_JUDGEMENT_STARTER.id ? UCAT_SITUATIONAL_JUDGEMENT_STARTER
+    : paperId === UCAT_DECISION_MAKING_STARTER.id ? UCAT_DECISION_MAKING_STARTER
+    : paperId === UCAT_QUANTITATIVE_REASONING_STARTER.id ? UCAT_QUANTITATIVE_REASONING_STARTER
+    : paperId === LNAT_SECTION_B_WRITING.id ? LNAT_SECTION_B_WRITING
+    : paperId === TARA_WRITING_TASK.id ? TARA_WRITING_TASK
+    : paperId === UCAT_VERBAL_REASONING_STARTER.id ? UCAT_VERBAL_REASONING_STARTER
+    : paperId === LNAT_SECTION_A_STARTER.id ? LNAT_SECTION_A_STARTER
+    : paperId === TARA_REASONING_STARTER.id ? TARA_REASONING_STARTER
+    : getEsatPracticePaper(paperId) ?? getTmuaPracticePaper(paperId);
+  return paper === null ? null : publishPracticePaper(paper);
 }
 
 /**
  * Loads large, route-only paper datasets without adding them to every practice
  * page bundle. Synchronous callers can use getPracticePaper after this resolves.
  */
-export async function loadPracticePaper(paperId: string): Promise<PracticePaper | null> {
+export async function loadPracticePaper(paperId: string): Promise<PublishedPracticePaper | null> {
   const existing = getPracticePaper(paperId);
   if (existing !== null) return existing;
   if (!ROUTE_ONLY_PAPER_IDS.has(paperId)) return null;
@@ -69,24 +67,8 @@ export async function loadPracticePaper(paperId: string): Promise<PracticePaper 
       : paperId === "ucat-situational-judgement-full-mock-v1"
         ? (await import("./ucat-situational-judgement-full-mock.js")).UCAT_SITUATIONAL_JUDGEMENT_FULL_MOCK
       : (await import("./tara-full-mocks.js")).getTaraFullMock(paperId);
-  if (paper !== null) dynamicallyLoadedPapers.set(paperId, paper);
-  return paper;
-}
-
-export function practicePaperPresentation(paper: PracticePaper): PracticePaperPresentation {
-  const examId = paper.exam.toLowerCase() as PracticeExamId;
-  const sectionTitle = paper.sectionLabel ?? (paper.paper === undefined ? "Practice" : `Paper ${paper.paper}`);
-  return {
-    examId,
-    examName: paper.exam,
-    title: `${paper.exam} ${paper.edition}`,
-    subtitle: paper.sectionLabelZh === undefined ? sectionTitle : `${sectionTitle} · ${paper.sectionLabelZh}`,
-    backHref: `/exams/${examId}/past-papers`,
-    questionCount: paper.questions.length,
-    durationMinutes: paper.durationMinutes,
-    access: paper.access ?? {
-      ...PRACTICE_ACCESS_POLICY,
-      deepReviewPackageId: deepReviewPackageId(examId),
-    },
-  };
+  if (paper === null) return null;
+  const published = publishPracticePaper(paper);
+  dynamicallyLoadedPapers.set(paperId, published);
+  return published;
 }

@@ -37,19 +37,20 @@ jobs:
       - run: pnpm verify:supabase-contracts
       - run: pnpm verify:production-platform
       - name: Link approved Supabase project
-        run: pnpm exec supabase link --project-ref "$SUPABASE_PROJECT_REF" --password "$SUPABASE_DB_PASSWORD"
+        run: pnpm exec supabase link --project-ref "$SUPABASE_PROJECT_REF"
         env:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
           SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
-          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
       - name: Show migration plan
-        run: pnpm exec supabase db push --linked --dry-run
+        run: pnpm supabase:migrations:plan
         env:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
       - name: Apply reviewed migrations
-        run: pnpm exec supabase db push --linked
+        run: pnpm supabase:migrations:apply
         env:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
       - name: Enforce Auth bot protection
         run: pnpm supabase:auth-protection:apply
         env:

@@ -1,5 +1,5 @@
 import { Bookmark, Check, Minus, X } from "lucide-react";
-import type { PracticeQuestion } from "../content/types.js";
+import type { DeliveredPracticeQuestion } from "../delivery/domain.js";
 import type { QuestionResult } from "../domain/results.js";
 import type { WorkedExplanation } from "../../entitled-content/domain.js";
 import { MathContent } from "./MathContent.js";
@@ -29,7 +29,7 @@ function formatQuestionTime(timeMs: number): string {
 
 interface QuestionResultRowProps {
   result: QuestionResult;
-  question: PracticeQuestion;
+  question: DeliveredPracticeQuestion;
   explanation?: WorkedExplanation;
   feedbackHref?: string;
 }
@@ -42,7 +42,7 @@ export function QuestionResultRow({ result, question, explanation, feedbackHref 
     ? parseMostLeastAnswer(result.selectedAnswer ?? undefined)
     : null;
   const mostLeastKey = question.responseMode === "most-least-choice"
-    ? parseMostLeastAnswer(question.correctAnswer)
+    ? parseMostLeastAnswer(result.correctAnswer)
     : null;
   return (
     <article className={`result-row result-row--${result.status}`}>
@@ -95,10 +95,10 @@ export function QuestionResultRow({ result, question, explanation, feedbackHref 
           ) : (
             <ol className="statement-result-list">
               {(question.statements ?? []).map((statement) => (
-                <li key={statement.id} className={statementAnswers[statement.id] === statement.correctAnswer ? "is-correct" : ""}>
+                <li key={statement.id} className={statementAnswers[statement.id] === result.statementCorrectAnswers?.[statement.id] ? "is-correct" : ""}>
                   <MathContent blocks={statement.content} />
                   <span>你的答案 <strong>{statementAnswers[statement.id] === "yes" ? "Yes" : statementAnswers[statement.id] === "no" ? "No" : "—"}</strong></span>
-                  <span>正确答案 <strong>{statement.correctAnswer === "yes" ? "Yes" : "No"}</strong></span>
+                  <span>正确答案 <strong>{result.statementCorrectAnswers?.[statement.id] === "yes" ? "Yes" : "No"}</strong></span>
                 </li>
               ))}
             </ol>

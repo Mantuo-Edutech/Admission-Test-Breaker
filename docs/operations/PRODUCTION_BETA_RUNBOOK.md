@@ -44,7 +44,7 @@ pnpm production:preflight
 **Expected result:** 只显示仓库、工作流、GitHub Environment、secret 名称、公开 origin、审批人、当前 commit 与 Docker 状态；不会读取或打印 secret 值。`GitHub setup ready` 只表示发布控制面配置完整，不等于 Beta 已可上线。
 **If it fails:** 按输出逐项处理；不要把 secret 放入命令参数、聊天、截图、仓库或任何 `VITE_*` 环境变量。
 
-当前真实结果：GitHub 远端与 CLI 权限有效；`staging`、`production` 两个 Environment 已于 2026-07-19 创建，但八个 environment secret、两个 `PUBLIC_APP_ORIGIN` 和 production required reviewer 仍未配置。独立 Supabase 云项目、SMTP、Turnstile hostname、域名/TLS、平台恢复和告警也尚未留下真实生产证据。最新 PR 的 application、database-and-capacity、browser-journey 和不可变容器验证全部通过，但这只证明发布候选代码可复现，不代表生产已上线。
+当前真实结果：GitHub 远端与 CLI 权限有效；`staging`、`production` 两个 Environment 已创建，Supabase access token、项目 ref、两个 `PUBLIC_APP_ORIGIN` 和 production required reviewer 已配置。两个独立 Supabase 项目均完成 27 个迁移并通过真实双账号隔离、邀请码与权益验证。Turnstile secret/hostname、自定义 SMTP、首个物理备份、外部告警以及当前改动的 PR/主分支绿灯仍未完成，因此 production 浏览器账号功能尚未开放。
 
 ### Supabase 项目只读盘点与选择
 
@@ -65,7 +65,7 @@ cp deploy/supabase-project-selection.example.json deploy/supabase-project-select
 pnpm production:supabase-plan -- --config deploy/supabase-project-selection.local.json
 ```
 
-`create` 只形成计划，不接受费用；`reuse` 要求清单内、同 organization、健康且 staging/production 不能共用；`defer` 可以表达“先做 staging”，但计划不会被标记为可进入完整生产配置。配置文件不包含 access token、数据库密码或 service-role key。当前实现没有任何云项目写入路径；真正的创建/恢复动作必须另有明确批准、费用确认和数据地区确认。
+`create` 只形成计划，不接受费用；`reuse` 要求清单内、同 organization、健康且 staging/production 不能共用；`defer` 可以表达“先做 staging”，但计划不会被标记为可进入完整生产配置。配置文件不包含 access token 或 service-role key。云端迁移使用 Supabase CLI 的 Management API/JIT 通道，不持有长期数据库密码；项目创建、恢复和付费变更仍必须有明确批准、费用确认和数据地区确认。
 
 推荐先使用默认 dry-run 的自动配置器。复制模板到已被 Git 忽略的本地文件，只填写公开 origin、production GitHub reviewer 和 secret 的本机环境变量**名称**，不要把真实 secret 写入 JSON：
 
@@ -74,7 +74,7 @@ cp deploy/bootstrap-input.example.json deploy/bootstrap-input.local.json
 pnpm production:bootstrap-plan -- --config deploy/bootstrap-input.local.json
 ```
 
-确认计划无占位值后，在当前安全终端导入模板指定的八个环境变量。不要把值放入命令参数、shell 脚本、聊天或截图。全部值准备好以后才显式执行：
+确认计划无占位值后，在当前安全终端导入模板指定的六个环境变量。不要把值放入命令参数、shell 脚本、聊天或截图。全部值准备好以后才显式执行：
 
 ```bash
 pnpm production:bootstrap-apply -- \
@@ -82,15 +82,13 @@ pnpm production:bootstrap-apply -- \
   --confirm CONFIGURE_MANTUO_PRODUCTION_CONTROL_PLANE
 unset MANTUO_STAGING_SUPABASE_ACCESS_TOKEN \
   MANTUO_STAGING_SUPABASE_PROJECT_REF \
-  MANTUO_STAGING_SUPABASE_DB_PASSWORD \
   MANTUO_STAGING_TURNSTILE_SECRET_KEY \
   MANTUO_PRODUCTION_SUPABASE_ACCESS_TOKEN \
   MANTUO_PRODUCTION_SUPABASE_PROJECT_REF \
-  MANTUO_PRODUCTION_SUPABASE_DB_PASSWORD \
   MANTUO_PRODUCTION_TURNSTILE_SECRET_KEY
 ```
 
-执行器会在任何写入前一次确认八个值全部存在；缺一个即零写入。secret 只通过 stdin 交给 GitHub CLI，stdout/stderr 被丢弃；公开 origin 可以进入 variable。Environment 已存在时不会重建，已有 required reviewer 达标时不会覆盖，外部调用失败立即停止，可修复后安全重跑。最后会自动执行独立只读 bootstrap gate。自动配置只处理 GitHub 控制面，绝不代表 SMTP、真实邮件、Turnstile hostname、DNS/TLS、平台恢复、告警或 Beta 人工门已经完成。
+执行器会在任何写入前一次确认六个值全部存在；缺一个即零写入。secret 只通过 stdin 交给 GitHub CLI，stdout/stderr 被丢弃；公开 origin 可以进入 variable。Environment 已存在时不会重建，已有 required reviewer 达标时不会覆盖，外部调用失败立即停止，可修复后安全重跑。最后会自动执行独立只读 bootstrap gate。自动配置只处理 GitHub 控制面，绝不代表 SMTP、真实邮件、Turnstile hostname、DNS/TLS、平台恢复、告警或 Beta 人工门已经完成。
 
 以下逐条命令保留为故障排查与受控人工回退路径。先创建环境：
 
@@ -99,17 +97,15 @@ gh api --method PUT repos/Mantuo-Edutech/Admission-Test-Breaker/environments/sta
 gh api --method PUT repos/Mantuo-Edutech/Admission-Test-Breaker/environments/production
 ```
 
-为两个环境分别安全输入四个 secret；命令会交互读取值，不应把值写在命令行：
+为两个环境分别安全输入三个 secret；命令会交互读取值，不应把值写在命令行：
 
 ```bash
 gh secret set --env staging SUPABASE_ACCESS_TOKEN
 gh secret set --env staging SUPABASE_PROJECT_REF
-gh secret set --env staging SUPABASE_DB_PASSWORD
 gh secret set --env staging TURNSTILE_SECRET_KEY
 
 gh secret set --env production SUPABASE_ACCESS_TOKEN
 gh secret set --env production SUPABASE_PROJECT_REF
-gh secret set --env production SUPABASE_DB_PASSWORD
 gh secret set --env production TURNSTILE_SECRET_KEY
 ```
 
@@ -218,7 +214,7 @@ select * from public.configure_product_funnel_viewer(
 
 GitHub 的 `staging` 与 `production` Environments 各自配置：
 
-- Secrets：`SUPABASE_ACCESS_TOKEN`、`SUPABASE_PROJECT_REF`、`SUPABASE_DB_PASSWORD`、`TURNSTILE_SECRET_KEY`；
+- Secrets：`SUPABASE_ACCESS_TOKEN`、`SUPABASE_PROJECT_REF`、`TURNSTILE_SECRET_KEY`；
 - Variable：`PUBLIC_APP_ORIGIN`；
 - Required reviewers：至少创始人/技术责任人一人；production 不允许无审批自动发布。
 
@@ -244,7 +240,7 @@ pnpm supabase:auth-protection:check
 
 1. 合并前 GitHub `Verify` 必须通过应用、数据库、恢复、100 用户容量和容器五个 job；内容负责人另外运行 `pnpm verify:manual-review-ledger`、`pnpm verify:content-release-readiness` 与 `pnpm verify:manual-review-worklist`，确认目标产品的人工决定仍对应当前源文件、证据未被改写且没有未解释、遗漏或重复的阻塞项。
 2. 运行 `Release immutable image`，选择 staging；它只发布 `ghcr.io/mantuo-edutech/admission-test-breaker:<commit-sha>`。
-3. 运行 `Deploy Supabase environment`，输入同一 SHA 和 staging。工作流先执行 `db push --dry-run`，再应用 migration、启用并复核 Auth Turnstile、配置 `ALLOWED_ORIGINS` 并部署 `invite-preview`。
+3. 运行 `Deploy Supabase environment`，输入同一 SHA 和 staging。工作流先通过 Management API 对比远端迁移历史，再将每个待执行 migration 与历史记录放在同一事务中应用；随后启用并复核 Auth Turnstile、配置 `ALLOWED_ORIGINS` 并部署 `invite-preview`。远端存在仓库没有的迁移时必须失败关闭。
 4. staging 服务器使用同一 SHA 更新 `APP_IMAGE` 与 `APP_RELEASE`：
 
    ```bash

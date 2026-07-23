@@ -714,11 +714,13 @@ async function main() {
     const eventId = `evt_http_${unique}`;
     const actor = { kind: "guest", actorId: `guest_http_${unique}` };
     const sessionPayload = {
-      schemaVersion: 2,
+      schemaVersion: 3,
       id: sessionId,
       learningSpaceId: guestSpaceId,
       startedBy: actor,
       paperId: "tmua-2023-p1",
+      paperRevisionId: "tmua-2023-p1-r1",
+      contentDigest: "ad52e7968d9cc8459289f22d8239cd2e981d470e40ec2c14270a7d10e540caba",
       status: "active",
       startedAt: "2026-07-18T00:00:00.000Z",
       deadlineAt: "2026-07-18T01:15:00.000Z",

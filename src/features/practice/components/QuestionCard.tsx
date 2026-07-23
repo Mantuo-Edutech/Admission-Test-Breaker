@@ -1,10 +1,11 @@
-import type { PracticePassage, PracticeQuestion } from "../content/types.js";
+import type { PracticePassage } from "../content/types.js";
+import type { DeliveredPracticeQuestion } from "../delivery/domain.js";
 import { AnswerChoice } from "./AnswerChoice.js";
 import { MathContent } from "./MathContent.js";
 import { Link } from "react-router-dom";
 
 interface QuestionCardProps {
-  question: PracticeQuestion;
+  question: DeliveredPracticeQuestion;
   passage?: PracticePassage;
   examName?: string;
   sectionLabel?: string;

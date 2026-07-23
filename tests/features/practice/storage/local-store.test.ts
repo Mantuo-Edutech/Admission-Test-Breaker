@@ -77,7 +77,7 @@ function esatSession() {
     actor: { kind: "guest", actorId: "guest_esat-browser-one" },
     startedAt: "2026-07-13T00:00:00.000Z",
     eventId: "evt_esat-storage-started",
-    paperId: "esat-specimen-mathematics-1",
+    paperId: "esat-mathematics-1-starter-v1",
     durationMinutes: 40,
   });
 }
@@ -121,6 +121,27 @@ describe("local practice session store", () => {
 
     expect(storage.getItem(legacyKey)).toBeNull();
     expect(storage.getItem(PRACTICE_SESSION_STORAGE_KEY)).not.toBeNull();
+  });
+
+  it("upgrades a schema-v2 session to the currently published immutable revision", async () => {
+    const storage = new MemoryStorage();
+    const current = activeSession();
+    const legacy = { ...current } as Record<string, unknown>;
+    legacy.schemaVersion = 2;
+    delete legacy.paperRevisionId;
+    delete legacy.contentDigest;
+    storage.setItem(PRACTICE_SESSION_STORAGE_KEY, JSON.stringify(legacy));
+    const store = new LocalPracticeSessionStore(storage);
+
+    const loaded = await store.loadCurrent();
+
+    expect(loaded.issue).toBeNull();
+    expect(loaded.session).toMatchObject({
+      schemaVersion: 3,
+      paperId: "tmua-2023-p1",
+      paperRevisionId: "tmua-2023-p1-r1",
+      contentDigest: expect.stringMatching(/^[a-f0-9]{64}$/u),
+    });
   });
 
   it("round-trips a paused session with no active timing segment", async () => {

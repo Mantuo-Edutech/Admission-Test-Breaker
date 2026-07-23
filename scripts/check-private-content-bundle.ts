@@ -17,6 +17,24 @@ type SixWeekPlan = {
   benchmarkBoundary: { bodyZh: string };
 };
 
+type PublicPracticeArtifact = {
+  packages: Array<{
+    paperRevisionId: string;
+    payload: {
+      questions: Array<{
+        prompt: Array<{ kind: string; runs?: Array<{ kind: string; value?: string }> }>;
+      }>;
+    };
+  }>;
+};
+
+type PrivateAnswerArtifact = {
+  packages: Array<{
+    paperRevisionId: string;
+    answerKey: { questions: Array<{ correctAnswer: string }> };
+  }>;
+};
+
 const textExtensions = new Set([".css", ".html", ".js", ".json", ".map", ".txt"]);
 
 async function listTextFiles(directory: string): Promise<string[]> {
@@ -45,6 +63,12 @@ const specimen = await parseJson<SpecimenReview>(
 const sixWeekPlan = await parseJson<SixWeekPlan>(
   "content/notes/tmua/six-week-review-plan-v1.json",
 );
+const publicPractice = await parseJson<PublicPracticeArtifact>(
+  "content/practice/server-delivery/public-paper-payloads.json",
+);
+const privateAnswers = await parseJson<PrivateAnswerArtifact>(
+  "content/practice/server-delivery/private-answer-keys.json",
+);
 
 const sentinels = [
   specimen.explanations[2]?.keyIdeaZh,
@@ -65,14 +89,35 @@ const bundleText = (
 ).join("\n");
 const leaks = sentinels.filter((sentinel) => bundleText.includes(sentinel as string));
 
-if (leaks.length > 0) {
+const answerSequenceLeaks = privateAnswers.packages
+  .map((item) => ({
+    paperRevisionId: item.paperRevisionId,
+    signature: JSON.stringify(item.answerKey.questions.map((question) => question.correctAnswer)),
+  }))
+  .filter((item) => item.signature.length >= 32 && bundleText.includes(item.signature));
+
+const embeddedPaperLeaks = publicPractice.packages.flatMap((item) => {
+  const candidate = item.payload.questions
+    .flatMap((question) => question.prompt)
+    .flatMap((block) => block.runs ?? [])
+    .map((run) => run.value ?? "")
+    .filter((value) => value.length >= 90)
+    .sort((left, right) => right.length - left.length)[0];
+  return candidate !== undefined && bundleText.includes(candidate)
+    ? [{ paperRevisionId: item.paperRevisionId, sentinel: candidate }]
+    : [];
+});
+
+if (leaks.length > 0 || answerSequenceLeaks.length > 0 || embeddedPaperLeaks.length > 0) {
   throw new Error(
-    `Protected content was found in the public bundle:\n${leaks
-      .map((leak) => `- ${leak}`)
-      .join("\n")}`,
+    `Protected or server-delivered practice content was found in the public bundle:\n${[
+      ...leaks.map((leak) => `- protected content: ${leak}`),
+      ...answerSequenceLeaks.map((leak) => `- complete answer sequence: ${leak.paperRevisionId}`),
+      ...embeddedPaperLeaks.map((leak) => `- embedded paper payload: ${leak.paperRevisionId}`),
+    ].join("\n")}`,
   );
 }
 
 console.log(
-  `Private bundle boundary: PASS (${sentinels.length} protected-body sentinels absent from ${files.length} files)`,
+  `Private bundle boundary: PASS (${sentinels.length} protected-body sentinels, ${privateAnswers.packages.length} answer sequences and ${publicPractice.packages.length} server paper payloads absent from ${files.length} files)`,
 );

@@ -3,6 +3,8 @@ import { UCAT_QUANTITATIVE_REASONING_STARTER } from "../../../../src/features/pr
 import { practiceSessionReducer } from "../../../../src/features/practice/domain/reducer.js";
 import { createPracticeSession } from "../../../../src/features/practice/domain/session.js";
 import { buildPracticeHistoryView } from "../../../../src/features/practice/history/history-read-model.js";
+import { TestPracticeDeliveryService } from "../../../../src/features/practice/delivery/test-practice-delivery-service.js";
+import type { PracticeSession } from "../../../../src/features/practice/domain/session.js";
 
 function completedQrSession() {
   const paper = UCAT_QUANTITATIVE_REASONING_STARTER;
@@ -53,11 +55,23 @@ function completedQrSession() {
 }
 
 describe("practice history evidence read model", () => {
-  it("derives frequency, time, changes, module results and topic facts without a benchmark", () => {
+  async function materialsFor(session: PracticeSession, includeResults = true) {
+    const delivery = new TestPracticeDeliveryService();
+    const paper = await delivery.loadPaper(session.paperId);
+    if (paper === null) throw new Error("Missing test paper");
+    return new Map([[session.id, {
+      paper,
+      results: includeResults ? await delivery.score(session) : null,
+    }]]);
+  }
+
+  it("derives frequency, time, changes, module results and topic facts without a benchmark", async () => {
+    const session = completedQrSession();
     const view = buildPracticeHistoryView(
-      [completedQrSession()],
+      [session],
       "ucat",
       new Date("2026-07-18T12:00:00.000Z"),
+      await materialsFor(session),
     );
 
     expect(view).toMatchObject({
@@ -84,11 +98,38 @@ describe("practice history evidence read model", () => {
     expect(view.topics.some((topic) => topic.label.startsWith("数量推理："))).toBe(true);
   });
 
-  it("filters another exam instead of mixing evidence", () => {
+  it("filters another exam instead of mixing evidence", async () => {
+    const session = completedQrSession();
     expect(buildPracticeHistoryView(
-      [completedQrSession()],
+      [session],
       "lnat",
       new Date("2026-07-18T12:00:00.000Z"),
+      await materialsFor(session),
     ).entries).toEqual([]);
+  });
+
+  it("never recalculates a historical result against a different content revision", async () => {
+    const historical = {
+      ...completedQrSession(),
+      paperRevisionId: "ucat-quantitative-reasoning-starter-v1-r99",
+      contentDigest: "0".repeat(64),
+    };
+
+    const view = buildPracticeHistoryView(
+      [historical],
+      "ucat",
+      new Date("2026-07-18T12:00:00.000Z"),
+      await materialsFor(historical, false),
+    );
+
+    expect(view.entries[0]).toMatchObject({
+      contentAvailable: false,
+      statusLabel: "原内容版本待恢复",
+      score: null,
+      maxScore: null,
+      percentage: null,
+      resultHref: null,
+    });
+    expect(view.topics).toEqual([]);
   });
 });

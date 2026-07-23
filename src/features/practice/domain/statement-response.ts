@@ -24,7 +24,10 @@ export function serializeStatementAnswers(answers: StatementAnswers): string {
   return JSON.stringify(Object.fromEntries(Object.entries(answers).sort(([left], [right]) => left.localeCompare(right))));
 }
 
-export function statementSetIsComplete(statements: readonly PracticeStatement[], value: string | undefined): boolean {
+export function statementSetIsComplete(
+  statements: readonly Pick<PracticeStatement, "id">[],
+  value: string | undefined,
+): boolean {
   const answers = parseStatementAnswers(value);
   return statements.length > 0 && statements.every((statement) => answers[statement.id] !== undefined);
 }

@@ -10,6 +10,7 @@ export interface QuestionResult {
   number: number;
   selectedAnswer: string | null;
   correctAnswer: string;
+  statementCorrectAnswers?: Readonly<Record<string, "yes" | "no">>;
   status: QuestionResultStatus;
   points: number;
   maxPoints: number;
@@ -107,6 +108,13 @@ export function calculateResults(
       number: question.number,
       selectedAnswer: selectedAnswer ?? null,
       correctAnswer: question.correctAnswer,
+      ...(question.responseMode === "statement-set"
+        ? {
+            statementCorrectAnswers: Object.fromEntries(
+              (question.statements ?? []).map((statement) => [statement.id, statement.correctAnswer]),
+            ),
+          }
+        : {}),
       ...score,
       timeMs: session.timingByQuestionMs[question.id] ?? 0,
       marked: session.markedQuestionIds.includes(question.id),

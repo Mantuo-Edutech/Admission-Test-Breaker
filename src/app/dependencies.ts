@@ -43,6 +43,8 @@ import type { CollaborationService } from "../features/collaboration/domain.js";
 import { SupabaseCollaborationService } from "../features/collaboration/supabase-collaboration-service.js";
 import type { ContentReviewOperationsService } from "../features/content-review-operations/domain.js";
 import type { SupabaseClient } from "@supabase/supabase-js";
+import type { PracticeDeliveryService } from "../features/practice/delivery/domain.js";
+import { SupabasePracticeDeliveryService } from "../features/practice/delivery/supabase-practice-delivery-service.js";
 
 export interface AppIdFactory {
   sessionId(): PracticeSessionId;
@@ -68,6 +70,7 @@ export interface AppServices {
   inviteOperations?: InviteOperationsService;
   collaboration?: CollaborationService;
   contentReviewOperations?: ContentReviewOperationsService;
+  practiceDelivery?: PracticeDeliveryService;
 }
 
 function randomSuffix(): string {
@@ -170,6 +173,7 @@ export function createDefaultAppServices(): AppServices {
           productFunnelAnalytics: new SupabaseProductFunnelAnalyticsService(supabaseClient),
           collaboration: new SupabaseCollaborationService(supabaseClient),
           contentReviewOperations: createLazyContentReviewOperationsService(supabaseClient),
+          practiceDelivery: new SupabasePracticeDeliveryService(supabaseClient),
         }),
   };
 }

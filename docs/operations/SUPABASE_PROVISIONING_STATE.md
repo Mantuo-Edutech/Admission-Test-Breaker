@@ -2,7 +2,7 @@
 
 Updated: 2026-07-23 (Asia/Shanghai)
 
-This file contains non-secret deployment state only. Database passwords are stored in the local macOS Keychain and must never be committed, pasted into chat, or exposed through a `VITE_*` variable.
+This file contains non-secret deployment state only. Deployment uses short-lived Supabase Management API/JIT database access and does not retain database passwords. Management tokens and service-role keys must never be committed, pasted into chat, or exposed through a `VITE_*` variable.
 
 ## Projects
 
@@ -15,12 +15,14 @@ The requested Hong Kong region (`ap-east-1`) was rejected by the Supabase Manage
 
 ## Database state
 
-Both projects contain all 19 reviewed migrations from:
+Both projects contain all 27 reviewed migrations from:
 
 - `20260715090000_private_account_foundation.sql`
-- through `20260719222200_content_review_queue_qualified_replace.sql`
+- through `20260723221300_server_practice_scoring.sql`
 
-Remote migration history was read back after deployment and matches the local migration set in both environments. The migrations establish private account spaces, row-level isolation, practice history, content entitlements, invitation operations, student data rights, collaboration grants and operations review tables.
+Remote migration history was read back after deployment and matches the local migration set in both environments. Each project contains 44 immutable practice revisions, 44 sanitised server payloads and 44 private answer keys. The Management API publisher fails closed on an unknown remote migration and records schema plus history atomically.
+
+Both projects passed a live two-account contract on 2026-07-23: confirmed-user login, exact `paper_revision_id` and digest persistence, server scoring, cross-tenant session denial, short-lived invite redemption, entitled Notes delivery and non-entitled account denial. Temporary Auth users were deleted after each run.
 
 ## Production origin
 
@@ -33,12 +35,7 @@ Remote migration history was read back after deployment and matches the local mi
 
 ## Local secret references
 
-The generated database passwords are stored in macOS Keychain entries:
-
-- service `mantuo-atb-staging`, account `supabase-db`
-- service `mantuo-atb-production`, account `supabase-db`
-
-The Supabase management token remains in the existing `Supabase CLI` Keychain entry.
+The Supabase management token remains in the existing `Supabase CLI` Keychain entry. No database password is kept by this project. Publishable keys are runtime configuration; service-role keys are retrieved only for an explicitly confirmed remote contract test and are never written to disk.
 
 ## Required before public account activation
 
@@ -47,5 +44,5 @@ The Supabase management token remains in the existing `Supabase CLI` Keychain en
 3. Configure custom SMTP and finish the production Auth CAPTCHA baseline.
 4. Deploy `invite-preview` with an exact `ALLOWED_ORIGINS` value.
 5. Add each environment's publishable key to the web runtime; never expose service-role keys.
-6. Complete two-account isolation, registration, email confirmation, invitation, export and deletion acceptance tests.
-7. Upgrade production to a paid plan before the real student Beta so daily backups are available; Free/Nano is suitable only for setup and preview.
+6. Complete the browser-level registration, email confirmation, export and deletion acceptance tests; the database-level two-account, invitation and entitlement checks already pass.
+7. Upgrade production to a paid plan before the real student Beta so daily backups are available. Both projects report WAL-G enabled but no physical snapshot yet; this is not accepted as recovery evidence.

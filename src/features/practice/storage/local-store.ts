@@ -17,6 +17,7 @@ import type {
   SessionSaveResult,
 } from "./store.js";
 import type { PracticeHistoryArchive } from "../history/store.js";
+import { publishedContentRefForPaperId } from "../content/published-revisions.js";
 
 export const PRACTICE_SESSION_STORAGE_KEY = "admission-test-breaker:practice:current:v1";
 const LEGACY_PRACTICE_SESSION_STORAGE_KEY = "tmua:practice:current:v1";
@@ -28,6 +29,8 @@ const sessionFields = new Set([
   "learningSpaceId",
   "startedBy",
   "paperId",
+  "paperRevisionId",
+  "contentDigest",
   "status",
   "startedAt",
   "deadlineAt",
@@ -39,6 +42,9 @@ const sessionFields = new Set([
   "activeQuestionEnteredAt",
   "events",
 ]);
+const legacySessionFields = new Set(
+  [...sessionFields].filter((field) => field !== "paperRevisionId" && field !== "contentDigest"),
+);
 
 const eventFields = new Set([
   "id",
@@ -213,10 +219,11 @@ function parseEvents(
 
 export function parseStoredPracticeSession(value: unknown): PracticeSession {
   assertRecord(value, "Practice session");
-  if (value.schemaVersion !== 2) {
+  if (value.schemaVersion !== 2 && value.schemaVersion !== 3) {
     throw new UnsupportedSessionError("Practice session schema is unsupported");
   }
-  assertExactFields(value, sessionFields, "Practice session");
+  const legacy = value.schemaVersion === 2;
+  assertExactFields(value, legacy ? legacySessionFields : sessionFields, "Practice session");
 
   assertNonEmptyString(value.id, "Practice session ID");
   assertNonEmptyString(value.learningSpaceId, "Learning space ID");
@@ -228,6 +235,20 @@ export function parseStoredPracticeSession(value: unknown): PracticeSession {
     throw new Error("Practice paper is invalid");
   }
   const paperId = value.paperId;
+  const legacyContentRef = legacy ? publishedContentRefForPaperId(paperId) : null;
+  if (legacy && legacyContentRef === null) {
+    throw new UnsupportedSessionError("Legacy practice content revision is no longer available");
+  }
+  const paperRevisionId = legacy ? legacyContentRef!.paperRevisionId : value.paperRevisionId;
+  const contentDigest = legacy ? legacyContentRef!.contentDigest : value.contentDigest;
+  if (
+    typeof paperRevisionId !== "string" ||
+    !new RegExp(`^${paperId.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&")}-r[1-9]\\d*$`, "u").test(paperRevisionId) ||
+    typeof contentDigest !== "string" ||
+    !/^[a-f0-9]{64}$/u.test(contentDigest)
+  ) {
+    throw new Error("Practice content revision is invalid");
+  }
   if (
     value.status !== "active" &&
     value.status !== "submitted" &&
@@ -287,11 +308,13 @@ export function parseStoredPracticeSession(value: unknown): PracticeSession {
   }
 
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
     id,
     learningSpaceId,
     startedBy,
     paperId,
+    paperRevisionId,
+    contentDigest,
     status: value.status,
     startedAt: value.startedAt,
     deadlineAt: value.deadlineAt,

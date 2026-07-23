@@ -1,9 +1,16 @@
 import type { PracticeExamId } from "../catalog/assessment-registry.js";
 import { knowledgeTagLabel } from "../content/knowledge-tag-taxonomy.js";
-import { getPracticePaper, practicePaperPresentation } from "../content/practice-paper-registry.js";
+import { practicePaperPresentation } from "../content/practice-paper-presentation.js";
+import { sessionContentMatchesPaper } from "../content/published-revisions.js";
 import { countEssayWords, parseEssayResponse } from "../domain/essay-response.js";
-import { calculateResults, type PracticeResults } from "../domain/results.js";
+import type { PracticeResults } from "../domain/results.js";
 import type { PracticeSession } from "../domain/session.js";
+import type { DeliveredPracticePaper } from "../delivery/domain.js";
+
+export interface PracticeHistoryMaterial {
+  readonly paper: DeliveredPracticePaper;
+  readonly results: PracticeResults | null;
+}
 
 export interface PracticeHistoryEntry {
   readonly session: PracticeSession;
@@ -24,6 +31,7 @@ export interface PracticeHistoryEntry {
   readonly resultHref: string | null;
   readonly practiceHref: string;
   readonly moduleKey: string;
+  readonly contentAvailable: boolean;
 }
 
 export interface PracticeModuleEvidence {
@@ -73,18 +81,29 @@ function essayWords(session: PracticeSession): number {
   );
 }
 
-function objectiveResults(session: PracticeSession): PracticeResults | null {
+function objectiveResults(
+  session: PracticeSession,
+  materials: ReadonlyMap<string, PracticeHistoryMaterial>,
+): PracticeResults | null {
   if (session.status === "active") return null;
-  const paper = getPracticePaper(session.paperId);
-  if (paper === null || paper.responseMode === "essay") return null;
-  return calculateResults(paper, session);
+  const material = materials.get(session.id);
+  if (
+    material === undefined ||
+    !sessionContentMatchesPaper(session, material.paper) ||
+    material.paper.responseMode === "essay"
+  ) return null;
+  return material.results;
 }
 
-function entryFromSession(session: PracticeSession): PracticeHistoryEntry | null {
-  const paper = getPracticePaper(session.paperId);
-  if (paper === null) return null;
+function entryFromSession(
+  session: PracticeSession,
+  materials: ReadonlyMap<string, PracticeHistoryMaterial>,
+): PracticeHistoryEntry | null {
+  const paper = materials.get(session.id)?.paper;
+  if (paper === undefined) return null;
+  const contentAvailable = sessionContentMatchesPaper(session, paper);
   const presentation = practicePaperPresentation(paper);
-  const results = objectiveResults(session);
+  const results = objectiveResults(session, materials);
   const words = paper.responseMode === "essay" ? essayWords(session) : null;
   const answeredCount = paper.responseMode === "essay"
     ? (words ?? 0) > 0 ? 1 : 0
@@ -95,7 +114,9 @@ function entryFromSession(session: PracticeSession): PracticeHistoryEntry | null
     examName: presentation.examName,
     title: presentation.title,
     subtitle: presentation.subtitle,
-    statusLabel: session.status === "active" ? "进行中" : session.status === "submitted" ? "已提交" : "已到时提交",
+    statusLabel: !contentAvailable
+      ? "原内容版本待恢复"
+      : session.status === "active" ? "进行中" : session.status === "submitted" ? "已提交" : "已到时提交",
     lastActivityAt: lastActivityAt(session),
     answeredCount,
     totalQuestions: paper.responseMode === "essay" ? 1 : paper.questions.length,
@@ -105,9 +126,10 @@ function entryFromSession(session: PracticeSession): PracticeHistoryEntry | null
     maxScore: results?.maxScore ?? null,
     percentage: results?.percentage ?? null,
     essayWords: words,
-    resultHref: session.status === "active" ? null : `/results/${session.id}`,
+    resultHref: session.status === "active" || !contentAvailable ? null : `/results/${session.id}`,
     practiceHref: `/practice/${paper.id}`,
     moduleKey: paper.sectionId ?? `${paper.exam.toLowerCase()}-${paper.paper ?? paper.edition}`,
+    contentAvailable,
   };
 }
 
@@ -115,10 +137,11 @@ export function buildPracticeHistoryView(
   sessions: readonly PracticeSession[],
   examId: PracticeExamId,
   now: Date,
+  materials: ReadonlyMap<string, PracticeHistoryMaterial> = new Map(),
 ): PracticeHistoryView {
   if (!Number.isFinite(now.getTime())) throw new Error("Practice history requires a valid current time");
   const entries = sessions
-    .map(entryFromSession)
+    .map((session) => entryFromSession(session, materials))
     .filter((entry): entry is PracticeHistoryEntry => entry !== null && entry.examId === examId)
     .sort((left, right) => Date.parse(right.lastActivityAt) - Date.parse(left.lastActivityAt));
   const thirtyDaysAgo = now.getTime() - 30 * 24 * 60 * 60 * 1_000;
@@ -146,7 +169,7 @@ export function buildPracticeHistoryView(
     if (entry.percentage !== null) module.percentages.push(entry.percentage);
     moduleMap.set(entry.moduleKey, module);
 
-    const results = objectiveResults(entry.session);
+    const results = objectiveResults(entry.session, materials);
     for (const question of results?.questions ?? []) {
       if (question.status === "unanswered") continue;
       for (const knowledgeTag of question.knowledgeTags) {

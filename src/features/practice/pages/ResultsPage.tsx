@@ -17,13 +17,12 @@ import type {
 } from "../../entitled-content/domain.js";
 import { BrandMark } from "../../navigation/components/BrandMark.js";
 import { QuestionResultRow } from "../components/QuestionResultRow.js";
-import { loadPracticePaper, practicePaperPresentation } from "../content/practice-paper-registry.js";
-import type { PracticePaper } from "../content/types.js";
-import {
-  calculateResults,
-  type PracticeResults,
-} from "../domain/results.js";
+import { practicePaperPresentation } from "../content/practice-paper-presentation.js";
+import { sessionContentMatchesPaper } from "../content/published-revisions.js";
+import type { PracticeResults } from "../domain/results.js";
 import type { PracticeSession } from "../domain/session.js";
+import type { DeliveredPracticePaper } from "../delivery/domain.js";
+import { resolvePracticeDeliveryService } from "../delivery/resolve-service.js";
 import { countEssayWords, parseEssayResponse } from "../domain/essay-response.js";
 import { buildFeedbackHref, normalizeFeedbackContext } from "../../feedback/domain.js";
 import { ESAT_KNOWLEDGE_UNITS } from "../../catalog/esat-plan.js";
@@ -38,7 +37,7 @@ interface ResultsPageProps {
 type ResultLoadState =
   | { kind: "loading" }
   | { kind: "unavailable" }
-  | { kind: "ready"; results: PracticeResults | null; eventCount: number; paper: PracticePaper; session: PracticeSession };
+  | { kind: "ready"; results: PracticeResults | null; eventCount: number; paper: DeliveredPracticePaper; session: PracticeSession };
 
 type DeepReviewState =
   | { readonly kind: "unavailable" }
@@ -152,7 +151,7 @@ const topicNames: Record<string, string> = {
 };
 
 interface EssayResultViewProps {
-  paper: PracticePaper;
+  paper: DeliveredPracticePaper;
   session: PracticeSession;
   eventCount: number;
   restarting: boolean;
@@ -236,40 +235,51 @@ export function ResultsPage({ services }: ResultsPageProps) {
   useEffect(() => {
     let active = true;
     void (async () => {
-      const loaded = await services.store.loadCurrent();
-      if (!active) return;
-      let session = loaded.session;
-      if (session?.id !== sessionId && services.practiceHistory !== undefined) {
-        const history = await services.practiceHistory.listRecent(100);
-        session = history.sessions.find((candidate) => candidate.id === sessionId) ?? null;
+      try {
+        const loaded = await services.store.loadCurrent();
+        if (!active) return;
+        let session = loaded.session;
+        if (session?.id !== sessionId && services.practiceHistory !== undefined) {
+          const history = await services.practiceHistory.listRecent(100);
+          session = history.sessions.find((candidate) => candidate.id === sessionId) ?? null;
+        }
+        if (!active) return;
+        if (
+          session === null ||
+          session.id !== sessionId ||
+          session.status === "active"
+        ) {
+          setState({ kind: "unavailable" });
+          return;
+        }
+        const delivery = await resolvePracticeDeliveryService(services.practiceDelivery);
+        if (delivery === null) {
+          setState({ kind: "unavailable" });
+          return;
+        }
+        const paper = await delivery.loadPaper(session.paperId, session.paperRevisionId);
+        if (!active) return;
+        if (paper === null || !sessionContentMatchesPaper(session, paper)) {
+          setState({ kind: "unavailable" });
+          return;
+        }
+        const results = paper.responseMode === "essay" ? null : await delivery.score(session);
+        if (!active) return;
+        setState({
+          kind: "ready",
+          results,
+          eventCount: session.events.length,
+          paper,
+          session,
+        });
+      } catch {
+        if (active) setState({ kind: "unavailable" });
       }
-      if (!active) return;
-      if (
-        session === null ||
-        session.id !== sessionId ||
-        session.status === "active"
-      ) {
-        setState({ kind: "unavailable" });
-        return;
-      }
-      const paper = await loadPracticePaper(session.paperId);
-      if (!active) return;
-      if (paper === null) {
-        setState({ kind: "unavailable" });
-        return;
-      }
-      setState({
-        kind: "ready",
-        results: paper.responseMode === "essay" ? null : calculateResults(paper, session),
-        eventCount: session.events.length,
-        paper,
-        session,
-      });
     })();
     return () => {
       active = false;
     };
-  }, [services.store, sessionId]);
+  }, [services.practiceDelivery, services.practiceHistory, services.store, sessionId]);
 
   useEffect(() => {
     if (state.kind !== "ready") return;

@@ -45,13 +45,20 @@ describe("production platform contracts", () => {
   });
 
   it("verifies the actual deployed browser identity and hosted Auth service", async () => {
-    const verifier = await source("scripts/verify-deployment.ts");
+    const [verifier, remoteSupabaseVerifier] = await Promise.all([
+      source("scripts/verify-deployment.ts"),
+      source("scripts/verify-supabase-remote.ts"),
+    ]);
 
     expect(verifier).toContain("EXPECTED_SUPABASE_PROJECT_REF");
     expect(verifier).toContain("/auth/v1/health");
     expect(verifier).toContain("/auth/v1/settings");
     expect(verifier).toContain("Supabase Auth email confirmation is not enforced");
     expect(verifier).toContain("Deployed Turnstile site key is empty");
+    expect(remoteSupabaseVerifier).toContain("paper_revision_id");
+    expect(remoteSupabaseVerifier).toContain("guest_space_already_claimed");
+    expect(remoteSupabaseVerifier).toContain("get_entitled_content_resource");
+    expect(remoteSupabaseVerifier).toContain("auth/v1/admin/users/${user.id}");
   });
 
   it("gates changes with application, database, recovery, capacity and container checks", async () => {
@@ -78,8 +85,9 @@ describe("production platform contracts", () => {
     );
     expect(capacityCheck).toContain("p_message: capacityFeedbackMessage");
     expect(capacityCheck).not.toContain("Capacity feedback marker ${suffix}");
-    expect(supabaseDeployment).toContain("supabase db push --linked --dry-run");
-    expect(supabaseDeployment).toContain("supabase db push --linked");
+    expect(supabaseDeployment).toContain("pnpm supabase:migrations:plan");
+    expect(supabaseDeployment).toContain("pnpm supabase:migrations:apply");
+    expect(supabaseDeployment).not.toContain("SUPABASE_DB_PASSWORD");
     expect(supabaseDeployment).toContain("pnpm supabase:auth-protection:apply");
     expect(supabaseDeployment).toContain("secrets.TURNSTILE_SECRET_KEY");
     expect(supabaseDeployment).toContain("supabase functions deploy invite-preview");
