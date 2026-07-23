@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "policyVersion": "1.0.0",
+  "policyVersion": "1.1.0",
   "repository": "Mantuo-Edutech/Admission-Test-Breaker",
   "requiredWorkflowFiles": [
     ".github/workflows/verify.yml",
@@ -14,10 +14,16 @@
       "requiredSecrets": [
         "SUPABASE_ACCESS_TOKEN",
         "SUPABASE_PROJECT_REF",
-        "TURNSTILE_SECRET_KEY"
+        "TURNSTILE_SECRET_KEY",
+        "SMTP_USER",
+        "SMTP_PASS"
       ],
       "requiredVariables": [
-        "PUBLIC_APP_ORIGIN"
+        "PUBLIC_APP_ORIGIN",
+        "SMTP_HOST",
+        "SMTP_PORT",
+        "SMTP_ADMIN_EMAIL",
+        "SMTP_SENDER_NAME"
       ],
       "minimumRequiredReviewers": 0
     },
@@ -26,10 +32,16 @@
       "requiredSecrets": [
         "SUPABASE_ACCESS_TOKEN",
         "SUPABASE_PROJECT_REF",
-        "TURNSTILE_SECRET_KEY"
+        "TURNSTILE_SECRET_KEY",
+        "SMTP_USER",
+        "SMTP_PASS"
       ],
       "requiredVariables": [
-        "PUBLIC_APP_ORIGIN"
+        "PUBLIC_APP_ORIGIN",
+        "SMTP_HOST",
+        "SMTP_PORT",
+        "SMTP_ADMIN_EMAIL",
+        "SMTP_SENDER_NAME"
       ],
       "minimumRequiredReviewers": 1
     }
@@ -41,7 +53,7 @@
     },
     {
       "id": "trusted-smtp",
-      "label": "可信 SMTP、发件域名与真实确认/重置邮件"
+      "label": "发件域名 DNS 认证与真实确认/重置邮件交付"
     },
     {
       "id": "turnstile-hostnames",

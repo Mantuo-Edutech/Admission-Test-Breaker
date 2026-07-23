@@ -33,7 +33,7 @@ Web 镜像不包含数据库密码、service-role key、学生数据或 entitlem
 ### 生产配置预检
 
 **Owner:** 创始人/技术责任人 | **Frequency:** 首次配置、每次发布候选
-**Last Updated:** 2026-07-19 | **Last Run:** 2026-07-19（13 passed / 13 failed / 5 manual）
+**Last Updated:** 2026-07-24 | **Last Run:** 每次发布候选以当前命令输出为准
 
 从仓库根目录运行：
 
@@ -41,10 +41,10 @@ Web 镜像不包含数据库密码、service-role key、学生数据或 entitlem
 pnpm production:preflight
 ```
 
-**Expected result:** 只显示仓库、工作流、GitHub Environment、secret 名称、公开 origin、审批人、当前 commit 与 Docker 状态；不会读取或打印 secret 值。`GitHub setup ready` 只表示发布控制面配置完整，不等于 Beta 已可上线。
+**Expected result:** 只显示仓库、工作流、GitHub Environment、secret 名称、公开 origin、SMTP 非秘密身份、审批人、当前 commit 与 Docker 状态；不会读取或打印 secret 值。`GitHub setup ready` 只表示发布控制面配置完整，不等于 Beta 已可上线。
 **If it fails:** 按输出逐项处理；不要把 secret 放入命令参数、聊天、截图、仓库或任何 `VITE_*` 环境变量。
 
-当前真实结果：GitHub 远端与 CLI 权限有效；`staging`、`production` 两个 Environment 已创建，Supabase access token、项目 ref、两个 `PUBLIC_APP_ORIGIN` 和 production required reviewer 已配置。两个独立 Supabase 项目均完成 27 个迁移并通过真实双账号隔离、邀请码与权益验证。Turnstile secret/hostname、自定义 SMTP、首个物理备份、外部告警以及当前改动的 PR/主分支绿灯仍未完成，因此 production 浏览器账号功能尚未开放。
+当前真实结果：GitHub 远端与 CLI 权限有效；`staging`、`production` 两个 Environment 已创建，Supabase access token、项目 ref、两个 `PUBLIC_APP_ORIGIN` 和 production required reviewer 已配置。两个独立 Supabase 项目均完成 27 个迁移并通过真实双账号隔离、邀请码与权益验证；主分支同 SHA Verify 已全绿。Turnstile secret/hostname、SMTP 供应商凭据与发件域名认证、首个物理备份和外部告警仍未完成，因此 production 浏览器账号功能尚未开放。
 
 ### Supabase 项目只读盘点与选择
 
@@ -67,14 +67,14 @@ pnpm production:supabase-plan -- --config deploy/supabase-project-selection.loca
 
 `create` 只形成计划，不接受费用；`reuse` 要求清单内、同 organization、健康且 staging/production 不能共用；`defer` 可以表达“先做 staging”，但计划不会被标记为可进入完整生产配置。配置文件不包含 access token 或 service-role key。云端迁移使用 Supabase CLI 的 Management API/JIT 通道，不持有长期数据库密码；项目创建、恢复和付费变更仍必须有明确批准、费用确认和数据地区确认。
 
-推荐先使用默认 dry-run 的自动配置器。复制模板到已被 Git 忽略的本地文件，只填写公开 origin、production GitHub reviewer 和 secret 的本机环境变量**名称**，不要把真实 secret 写入 JSON：
+推荐先使用默认 dry-run 的自动配置器。复制模板到已被 Git 忽略的本地文件，只填写公开 origin、SMTP host/port/发件身份、production GitHub reviewer 和 secret 的本机环境变量**名称**，不要把真实 secret 写入 JSON：
 
 ```bash
 cp deploy/bootstrap-input.example.json deploy/bootstrap-input.local.json
 pnpm production:bootstrap-plan -- --config deploy/bootstrap-input.local.json
 ```
 
-确认计划无占位值后，在当前安全终端导入模板指定的六个环境变量。不要把值放入命令参数、shell 脚本、聊天或截图。全部值准备好以后才显式执行：
+确认计划无占位值后，在当前安全终端导入模板指定的十个 secret 环境变量。不要把值放入命令参数、shell 脚本、聊天或截图。全部值准备好以后才显式执行：
 
 ```bash
 pnpm production:bootstrap-apply -- \
@@ -83,12 +83,16 @@ pnpm production:bootstrap-apply -- \
 unset MANTUO_STAGING_SUPABASE_ACCESS_TOKEN \
   MANTUO_STAGING_SUPABASE_PROJECT_REF \
   MANTUO_STAGING_TURNSTILE_SECRET_KEY \
+  MANTUO_STAGING_SMTP_USER \
+  MANTUO_STAGING_SMTP_PASS \
   MANTUO_PRODUCTION_SUPABASE_ACCESS_TOKEN \
   MANTUO_PRODUCTION_SUPABASE_PROJECT_REF \
-  MANTUO_PRODUCTION_TURNSTILE_SECRET_KEY
+  MANTUO_PRODUCTION_TURNSTILE_SECRET_KEY \
+  MANTUO_PRODUCTION_SMTP_USER \
+  MANTUO_PRODUCTION_SMTP_PASS
 ```
 
-执行器会在任何写入前一次确认六个值全部存在；缺一个即零写入。secret 只通过 stdin 交给 GitHub CLI，stdout/stderr 被丢弃；公开 origin 可以进入 variable。Environment 已存在时不会重建，已有 required reviewer 达标时不会覆盖，外部调用失败立即停止，可修复后安全重跑。最后会自动执行独立只读 bootstrap gate。自动配置只处理 GitHub 控制面，绝不代表 SMTP、真实邮件、Turnstile hostname、DNS/TLS、平台恢复、告警或 Beta 人工门已经完成。
+执行器会在任何写入前一次确认十个值全部存在；缺一个即零写入。secret 只通过 stdin 交给 GitHub CLI，stdout/stderr 被丢弃；公开 origin 和 SMTP 非秘密身份可以进入 variable。Environment 已存在时不会重建，已有 required reviewer 达标时不会覆盖，外部调用失败立即停止，可修复后安全重跑。最后会自动执行独立只读 bootstrap gate。自动配置只处理 GitHub 控制面，绝不代表真实邮件、Turnstile hostname、DNS/TLS、平台恢复、告警或 Beta 人工门已经完成。
 
 以下逐条命令保留为故障排查与受控人工回退路径。先创建环境：
 
@@ -97,23 +101,33 @@ gh api --method PUT repos/Mantuo-Edutech/Admission-Test-Breaker/environments/sta
 gh api --method PUT repos/Mantuo-Edutech/Admission-Test-Breaker/environments/production
 ```
 
-为两个环境分别安全输入三个 secret；命令会交互读取值，不应把值写在命令行：
+为两个环境分别安全输入五个 secret；命令会交互读取值，不应把值写在命令行：
 
 ```bash
 gh secret set --env staging SUPABASE_ACCESS_TOKEN
 gh secret set --env staging SUPABASE_PROJECT_REF
 gh secret set --env staging TURNSTILE_SECRET_KEY
+gh secret set --env staging SMTP_USER
+gh secret set --env staging SMTP_PASS
 
 gh secret set --env production SUPABASE_ACCESS_TOKEN
 gh secret set --env production SUPABASE_PROJECT_REF
 gh secret set --env production TURNSTILE_SECRET_KEY
+gh secret set --env production SMTP_USER
+gh secret set --env production SMTP_PASS
 ```
 
-再写入两个公开 origin：
+再写入公开 origin 与 SMTP 非秘密身份：
 
 ```bash
 gh variable set --env staging PUBLIC_APP_ORIGIN --body 'https://<staging-domain>/'
 gh variable set --env production PUBLIC_APP_ORIGIN --body 'https://<production-domain>/'
+for environment in staging production; do
+  gh variable set --env "$environment" SMTP_HOST --body 'smtp.<provider-domain>'
+  gh variable set --env "$environment" SMTP_PORT --body '587'
+  gh variable set --env "$environment" SMTP_ADMIN_EMAIL --body 'no-reply@auth.uktest.cc'
+  gh variable set --env "$environment" SMTP_SENDER_NAME --body '满托 UK Test'
+done
 ```
 
 production 必须至少有一名 required reviewer。先解析批准人的 GitHub 数字 ID，再更新保护规则：
@@ -135,6 +149,7 @@ unset REVIEWER_ID
 | Environment 返回 404 | 尚未创建或当前 GitHub 身份无权限 | 用上述 `gh api --method PUT` 创建；仍失败则由组织 Owner 复核权限 |
 | secret 显示 missing | 名称拼写错误或写在 repository secret 而不是 environment secret | 对目标环境重新执行对应 `gh secret set --env` |
 | `PUBLIC_APP_ORIGIN` 失败 | 使用 HTTP、localhost、占位域名或包含额外 path | 只写 `https://hostname/` |
+| SMTP variable 失败 | hostname/邮箱仍为占位值、端口不受支持或发件名称为空 | 使用供应商正式 hostname、465/587/2525、已认证发件域名和 2–80 字符名称 |
 | production reviewers 失败 | 未配置 required reviewer 或 protection rule 未保存 | 重新运行 reviewer 配置并用 `gh api .../environments/production` 查看规则 |
 | release candidate 失败 | 不在 main、工作树未提交、当前 SHA 未推送，或该 SHA 没有成功 Verify run | 经 Pull Request 合并 main，等待同一 SHA 的 Verify 全部通过；不要借用其他 commit 的绿灯 |
 
@@ -214,8 +229,8 @@ select * from public.configure_product_funnel_viewer(
 
 GitHub 的 `staging` 与 `production` Environments 各自配置：
 
-- Secrets：`SUPABASE_ACCESS_TOKEN`、`SUPABASE_PROJECT_REF`、`TURNSTILE_SECRET_KEY`；
-- Variable：`PUBLIC_APP_ORIGIN`；
+- Secrets：`SUPABASE_ACCESS_TOKEN`、`SUPABASE_PROJECT_REF`、`TURNSTILE_SECRET_KEY`、`SMTP_USER`、`SMTP_PASS`；
+- Variables：`PUBLIC_APP_ORIGIN`、`SMTP_HOST`、`SMTP_PORT`、`SMTP_ADMIN_EMAIL`、`SMTP_SENDER_NAME`；
 - Required reviewers：至少创始人/技术责任人一人；production 不允许无审批自动发布。
 
 服务器从 `deploy/.env.production.example` 创建不进 Git 的 `.env.production`。其中 Supabase publishable key 与 `TURNSTILE_SITE_KEY` 可以进入浏览器；Turnstile secret、数据库 URL、service-role key 和 GitHub token 不得放入该文件或任何 `VITE_*` 变量。
@@ -236,11 +251,30 @@ pnpm supabase:auth-protection:check
 
 `check` 只输出 CAPTCHA 开关/provider、site URL 是否匹配、邮件确认状态和最小密码长度，不读取或显示 secret。apply 会合并而非删除已有 redirect allowlist，并强制邮件确认、10 位大小写字母加数字密码与 refresh-token rotation。前端必须同时验证注册、登录和密码重置；还要覆盖 token 过期、重复使用、网络失败和 429。Supabase Auth 负责服务端校验，浏览器按钮状态不构成安全边界。参考：https://supabase.com/docs/guides/auth/auth-captcha 和 https://supabase.com/docs/guides/auth/rate-limits
 
+SMTP 供应商完成账号和发件域名认证后，Supabase 发布工作流会自动应用并复核 Auth SMTP。批准终端也可以独立执行：
+
+```bash
+export SUPABASE_ACCESS_TOKEN='<scoped-management-token>'
+export SUPABASE_PROJECT_REF='<approved-project-ref>'
+export SMTP_HOST='smtp.<provider-domain>'
+export SMTP_PORT='587'
+export SMTP_ADMIN_EMAIL='no-reply@auth.uktest.cc'
+export SMTP_SENDER_NAME='满托 UK Test'
+export SMTP_USER='<secret-from-secure-store>'
+export SMTP_PASS='<secret-from-secure-store>'
+pnpm supabase:auth-smtp:apply
+unset SMTP_PASS
+pnpm supabase:auth-smtp:check
+unset SMTP_USER
+```
+
+`apply` 写入后会重新读取远端配置，检查 host、port、发件身份、凭据已存储、邮箱确认和安全邮箱变更；输出只有布尔状态，不显示 username/password。`check` 不需要 `SMTP_PASS`，但需要 `SMTP_USER` 用于精确身份比对。真实完成还必须验证 SPF、DKIM、DMARC、至少一个非团队邮箱的注册确认和密码重置，以及退信/失败日志。参考：https://supabase.com/docs/guides/auth/auth-smtp
+
 ## 4. 发布顺序
 
 1. 合并前 GitHub `Verify` 必须通过应用、数据库、恢复、100 用户容量和容器五个 job；内容负责人另外运行 `pnpm verify:manual-review-ledger`、`pnpm verify:content-release-readiness` 与 `pnpm verify:manual-review-worklist`，确认目标产品的人工决定仍对应当前源文件、证据未被改写且没有未解释、遗漏或重复的阻塞项。
 2. 运行 `Release immutable image`，选择 staging；它只发布 `ghcr.io/mantuo-edutech/admission-test-breaker:<commit-sha>`。
-3. 运行 `Deploy Supabase environment`，输入同一 SHA 和 staging。工作流先通过 Management API 对比远端迁移历史，再将每个待执行 migration 与历史记录放在同一事务中应用；随后启用并复核 Auth Turnstile、配置 `ALLOWED_ORIGINS` 并部署 `invite-preview`。远端存在仓库没有的迁移时必须失败关闭。
+3. 运行 `Deploy Supabase environment`，输入同一 SHA 和 staging。工作流先通过 Management API 对比远端迁移历史，再将每个待执行 migration 与历史记录放在同一事务中应用；随后启用并复核 Auth Turnstile、自定义 SMTP，配置 `ALLOWED_ORIGINS` 并部署 `invite-preview`。远端存在仓库没有的迁移或 Auth 配置不完整时必须失败关闭。
 4. staging 服务器使用同一 SHA 更新 `APP_IMAGE` 与 `APP_RELEASE`：
 
    ```bash

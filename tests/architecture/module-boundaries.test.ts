@@ -324,7 +324,7 @@ describe("module architecture boundaries", () => {
       "tsx scripts/check-manual-review-worklist.ts --verify && vitest run tests/features/library/manual-review-worklist.test.ts",
     );
     expect(packageJson.scripts?.["verify:production-platform"]).toBe(
-      "vitest run tests/architecture/production-platform-contracts.test.ts tests/platform/runtime-config.test.ts tests/platform/supabase-auth-protection-config.test.ts tests/platform/supabase-management-migrations.test.ts tests/platform/deployment-runtime-validation.test.ts",
+      "vitest run tests/architecture/production-platform-contracts.test.ts tests/platform/runtime-config.test.ts tests/platform/supabase-auth-protection-config.test.ts tests/platform/supabase-auth-smtp-config.test.ts tests/platform/supabase-management-migrations.test.ts tests/platform/deployment-runtime-validation.test.ts",
     );
     expect(packageJson.scripts?.["verify:web-performance"]).toBe(
       "tsx scripts/check-web-performance-budget.ts",

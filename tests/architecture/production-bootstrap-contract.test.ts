@@ -45,4 +45,22 @@ describe("production bootstrap contract", () => {
     );
     expect(packageJson.scripts["production:bootstrap-apply"]).toContain("--apply");
   });
+
+  it("requires provider-neutral SMTP inputs in both GitHub environments", async () => {
+    const requirements = JSON.parse(
+      await readFile("deploy/bootstrap-requirements.json", "utf8"),
+    ) as {
+      environments: Array<{ requiredSecrets: string[]; requiredVariables: string[] }>;
+    };
+
+    for (const environment of requirements.environments) {
+      expect(environment.requiredSecrets).toEqual(expect.arrayContaining(["SMTP_USER", "SMTP_PASS"]));
+      expect(environment.requiredVariables).toEqual(expect.arrayContaining([
+        "SMTP_HOST",
+        "SMTP_PORT",
+        "SMTP_ADMIN_EMAIL",
+        "SMTP_SENDER_NAME",
+      ]));
+    }
+  });
 });

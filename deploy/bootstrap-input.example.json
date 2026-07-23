@@ -5,19 +5,35 @@
     {
       "name": "staging",
       "publicAppOrigin": "https://replace-with-staging-domain.invalid/",
+      "publicVariables": {
+        "SMTP_HOST": "smtp.replace-with-provider.invalid",
+        "SMTP_PORT": "587",
+        "SMTP_ADMIN_EMAIL": "no-reply@auth.replace-with-domain.invalid",
+        "SMTP_SENDER_NAME": "满托 UK Test"
+      },
       "secretEnvironmentVariables": {
         "SUPABASE_ACCESS_TOKEN": "MANTUO_STAGING_SUPABASE_ACCESS_TOKEN",
         "SUPABASE_PROJECT_REF": "MANTUO_STAGING_SUPABASE_PROJECT_REF",
-        "TURNSTILE_SECRET_KEY": "MANTUO_STAGING_TURNSTILE_SECRET_KEY"
+        "TURNSTILE_SECRET_KEY": "MANTUO_STAGING_TURNSTILE_SECRET_KEY",
+        "SMTP_USER": "MANTUO_STAGING_SMTP_USER",
+        "SMTP_PASS": "MANTUO_STAGING_SMTP_PASS"
       }
     },
     {
       "name": "production",
       "publicAppOrigin": "https://replace-with-production-domain.invalid/",
+      "publicVariables": {
+        "SMTP_HOST": "smtp.replace-with-provider.invalid",
+        "SMTP_PORT": "587",
+        "SMTP_ADMIN_EMAIL": "no-reply@auth.replace-with-domain.invalid",
+        "SMTP_SENDER_NAME": "满托 UK Test"
+      },
       "secretEnvironmentVariables": {
         "SUPABASE_ACCESS_TOKEN": "MANTUO_PRODUCTION_SUPABASE_ACCESS_TOKEN",
         "SUPABASE_PROJECT_REF": "MANTUO_PRODUCTION_SUPABASE_PROJECT_REF",
-        "TURNSTILE_SECRET_KEY": "MANTUO_PRODUCTION_TURNSTILE_SECRET_KEY"
+        "TURNSTILE_SECRET_KEY": "MANTUO_PRODUCTION_TURNSTILE_SECRET_KEY",
+        "SMTP_USER": "MANTUO_PRODUCTION_SMTP_USER",
+        "SMTP_PASS": "MANTUO_PRODUCTION_SMTP_PASS"
       },
       "requiredReviewerUsername": "replace-with-github-username"
     }

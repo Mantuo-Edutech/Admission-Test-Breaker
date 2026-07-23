@@ -90,6 +90,9 @@ describe("production platform contracts", () => {
     expect(supabaseDeployment).not.toContain("SUPABASE_DB_PASSWORD");
     expect(supabaseDeployment).toContain("pnpm supabase:auth-protection:apply");
     expect(supabaseDeployment).toContain("secrets.TURNSTILE_SECRET_KEY");
+    expect(supabaseDeployment).toContain("pnpm supabase:auth-smtp:apply");
+    expect(supabaseDeployment).toContain("secrets.SMTP_PASS");
+    expect(supabaseDeployment).toContain("vars.SMTP_ADMIN_EMAIL");
     expect(supabaseDeployment).toContain("supabase functions deploy invite-preview");
     expect(supabaseDeployment).toContain("ALLOWED_ORIGINS=$PUBLIC_APP_ORIGIN");
   });
@@ -155,6 +158,24 @@ describe("production platform contracts", () => {
     expect(configurator).toContain("security_captcha_provider");
     expect(configurator).not.toMatch(/console\.log\([^\n]*TURNSTILE_SECRET_KEY/u);
     expect(runtime).toContain('environment === "staging" || environment === "production"');
+  });
+
+  it("keeps custom Auth SMTP automated, provider-neutral and secret-safe", async () => {
+    const [packageJson, configurator, deployment] = await Promise.all([
+      source("package.json"),
+      source("scripts/configure-supabase-auth-smtp.ts"),
+      source(".github/workflows/deploy-supabase.yml"),
+    ]);
+
+    expect(packageJson).toContain("supabase:auth-smtp:check");
+    expect(packageJson).toContain("supabase:auth-smtp:apply");
+    expect(configurator).toContain("mailer_secure_email_change_enabled");
+    expect(configurator).toContain("smtp_admin_email");
+    expect(configurator).toContain("smtp_sender_name");
+    expect(configurator).not.toMatch(/console\.log\([^\n]*(?:SMTP_PASS|SMTP_USER)/u);
+    expect(deployment).toContain("secrets.SMTP_USER");
+    expect(deployment).toContain("secrets.SMTP_PASS");
+    expect(deployment).not.toContain("smtp.resend.com");
   });
 
   it("keeps restore tooling non-production by default and integrity checks every file", async () => {

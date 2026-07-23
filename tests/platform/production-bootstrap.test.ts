@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   assessProductionBootstrap,
+  isValidProductionVariable,
   type ProductionBootstrapRequirements,
   type ProductionBootstrapSnapshot,
 } from "../../src/platform/production-bootstrap.js";
@@ -64,6 +65,19 @@ function completeSnapshot(): ProductionBootstrapSnapshot {
 }
 
 describe("production bootstrap assessment", () => {
+  it("validates every supported public SMTP control-plane variable", () => {
+    expect(isValidProductionVariable("SMTP_HOST", "smtp.resend.com")).toBe(true);
+    expect(isValidProductionVariable("SMTP_PORT", "587")).toBe(true);
+    expect(isValidProductionVariable("SMTP_ADMIN_EMAIL", "no-reply@auth.uktest.cc")).toBe(true);
+    expect(isValidProductionVariable("SMTP_SENDER_NAME", "满托 UK Test")).toBe(true);
+    expect(isValidProductionVariable("SMTP_HOST", "smtp.example.com")).toBe(false);
+    expect(isValidProductionVariable("SMTP_HOST", "smtp.invalid")).toBe(false);
+    expect(isValidProductionVariable("SMTP_HOST", "127.0.0.1")).toBe(false);
+    expect(isValidProductionVariable("SMTP_PORT", "25")).toBe(false);
+    expect(isValidProductionVariable("SMTP_PORT", "587.0")).toBe(false);
+    expect(isValidProductionVariable("UNKNOWN", "value")).toBe(false);
+  });
+
   it("separates machine-ready GitHub setup from manual production evidence", () => {
     const report = assessProductionBootstrap(requirements, completeSnapshot());
 

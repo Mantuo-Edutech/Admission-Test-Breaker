@@ -124,7 +124,7 @@
 | G4c Supabase static | RLS 开启、服务端函数权限、认证与密钥边界 | `pnpm verify:supabase-contracts` | P0 |
 | G5 Integration | 存储、RLS、真实 HTTP 邀请码/登录/核销链路 | `pnpm verify:supabase`；后续扩展 AI/Webhook/MCP | P0 |
 | G5a Learning record | 完整历史快照、Guest claim、结果回看、考试隔离、双语标签全集 | `pnpm verify:learning-record` + `pnpm verify:e2e` | P0 |
-| G5b Production platform | 不可变镜像、runtime config、安全头、CI、首屏/异步资源预算、全数据库恢复与 100 用户容量；生产预检只读核对 GitHub Environment、secret 名称、公开 origin、审批人与 pushed SHA | `pnpm verify:production-platform` + `pnpm verify:production-bootstrap` + `pnpm production:preflight` + 恢复/容量命令 | 生产 P0 |
+| G5b Production platform | 不可变镜像、runtime config、安全头、CI、首屏/异步资源预算、全数据库恢复与 100 用户容量；生产预检只读核对 GitHub Environment、secret 名称、公开 origin、SMTP 身份、审批人与 pushed SHA | `pnpm verify:production-platform` + `pnpm verify:production-bootstrap` + `pnpm production:preflight` + 恢复/容量命令 | 生产 P0 |
 | G6 Journey | 开始、恢复、提交、结果、授权闭环 | 分阶段加入 `pnpm test:e2e` | P0 |
 | G7 UI Quality | 无障碍、手机/iPad/桌面、reduced motion | Chromium 三视口 Playwright 关键旅程已接入 CI；真实设备 + 键盘/屏幕阅读器/reduced-motion 人工评审仍待完成 | P1；关键动作 P0 |
 | G8 Security/Privacy | 越权、撤销、密钥、日志、导出/删除 | 安全套件 + 威胁模型复核 | 生产 P0 |
@@ -153,7 +153,7 @@
 | Private Account / Entitlement | Slice 2A、本地数据权利、反馈、考试档案、匿名漏斗/看板、学生逐项 Grant、两项真实资料、冰冰运营角色和 Turnstile 契约通过 | Supabase migration、受认证 RPC、一次性协作码、schema-v4 导出、238 项 pgTAP、组件与现有真实 HTTP gate | 云项目、SMTP/Turnstile、生产角色/MFA bootstrap、学生+协作者双账号真机 UAT、备份、告警和隐私运营 |
 | Feedback / Content correction | 题目级入口、本人回执、确定性 P1-P4、去重、PII 拒收、RLS 与私有审计已本地验证 | `pnpm verify:feedback`、16 项专项 pgTAP、真实 HTTP 双账号/分诊、独立运行手册 | 指定主/备负责人，接入 P1/P2 告警，在 staging 演练隐私、登录和来源纠错 |
 | Learner Space / Events | auth-aware 适配器、考试档案、事务仓储、五考试学习记录和授权投影已在本地实现 | Guest claim、按 exam 分区、稳定 ID、事件幂等、本机历史、RLS 跨租户与 Grant 负面测试、三视口布局契约 | 云端 migration、生产跨设备恢复、双账号真机/无障碍 UAT |
-| Production platform | 不可变 Web 镜像、runtime config、Caddy/TLS 编排、GitHub CI/发布/Supabase 部署工作流、Turnstile 失败关闭与自动配置、本地全库恢复与 100 用户容量已验证；只读 preflight 将 GitHub setup、release candidate 与最终 Beta 明确分离；默认 dry-run、显式确认、secret 只经 stdin 的 apply 可重复配置 GitHub 控制面 | 非 root/只读容器、健康/版本/安全头、Auth protection contract、生产 bootstrap requirement/plan/apply 专项测试、反馈恢复指纹、100 用户并发 10 完成反馈且最近 p50 24ms、p95 62ms、最大 103ms；真实 preflight 确认两套 GitHub Environment 已创建，但八个 secret、两个公开 origin 和 production reviewer 尚未配置 | 准备真实输入后执行 apply，创建 staging/production Supabase 云项目，配置正式域名、SMTP/Turnstile、平台恢复、外部监控与真实接收人 |
+| Production platform | 不可变 Web 镜像、runtime config、Caddy/TLS 编排、GitHub CI/发布/Supabase 部署工作流、Turnstile 与供应商中立 SMTP 的失败关闭自动配置、本地全库恢复与 100 用户容量已验证；只读 preflight 将 GitHub setup、release candidate 与最终 Beta 明确分离；默认 dry-run、显式确认、secret 只经 stdin 的 apply 可重复配置 GitHub 控制面 | 非 root/只读容器、健康/版本/安全头、Auth protection/SMTP contract、生产 bootstrap requirement/plan/apply 专项测试、反馈恢复指纹、100 用户并发 10 完成反馈且最近 p50 24ms、p95 62ms、最大 103ms；真实 preflight 确认两套 Environment、Supabase secret、正式 origin 和 production reviewer 已配置，Turnstile/SMTP 输入仍缺失 | 开通并认证 SMTP 发件域名、创建受 hostname 限制的 Turnstile widgets，执行两套环境 apply，随后完成真实邮件、平台恢复、外部监控和主备责任人证据 |
 | Consent / Grants | 持久 Grant、一次性兑换、学生管理、老师/家长工作区、审计和导出已在本地实现 | `pnpm verify:collaboration`、44 项专项 pgTAP、五 scope/考试/有效期/立即撤销测试 | 生产 migration、MFA 双账号演练、真机/屏幕阅读器 UAT；Agent 仍未接入 |
 | Benchmark / AI / Integrations | AI Job 核心契约已实现 | 投影引用、预算、委托授权和禁止 secret 校验 | Provider 适配器、Benchmark 与外部集成 |
 | 品牌与完整准备旅程 | 分阶段页面、CAIE/Pearson/IB/AP 课程映射、TMUA 30 分钟起点诊断、三项逐模块起点定位与五考试顶层 Notes/下载版已交付 | 多考试首页、实际课程单元优先流程、零 Token 覆盖/起点报告、原创诊断、个人准备首页、独立资料馆与资料入口、Guest/Learner Space 隔离 | 完整长度模考、诊断教师复核与学生标定、Notes 细颗粒章节、真实数据校准报告与年度院校注册表 |
