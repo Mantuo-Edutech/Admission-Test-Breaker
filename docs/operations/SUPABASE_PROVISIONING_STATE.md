@@ -47,7 +47,7 @@ The Supabase management token remains in the existing `Supabase CLI` Keychain en
 
 1. Choose an optional staging subdomain.
 2. Create separate Cloudflare Turnstile widgets restricted to the production and staging hostnames.
-3. Configure custom SMTP and finish the production Auth CAPTCHA baseline.
+3. Provision an SMTP provider and authenticate `auth.uktest.cc`; the repository can then apply and verify both hosted projects without using the Supabase GUI.
 4. Add each environment's publishable key to the web runtime; never expose service-role keys.
 5. Complete the browser-level registration, email confirmation, export and deletion acceptance tests; the database-level two-account, invitation and entitlement checks already pass.
 6. Upgrade production to a paid plan before the real student Beta so daily backups are available. Both projects report WAL-G enabled but no physical snapshot yet; this is not accepted as recovery evidence.

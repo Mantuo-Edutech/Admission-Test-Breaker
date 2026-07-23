@@ -104,6 +104,62 @@ describe("production bootstrap plan", () => {
     ]));
   });
 
+  it("plans validated SMTP variables and secret references without storing credentials", () => {
+    const smtpRequirements: ProductionBootstrapRequirements = {
+      ...requirements,
+      environments: requirements.environments.map((environment) => ({
+        ...environment,
+        requiredSecrets: [...environment.requiredSecrets, "SMTP_USER", "SMTP_PASS"],
+        requiredVariables: [
+          ...environment.requiredVariables,
+          "SMTP_HOST",
+          "SMTP_PORT",
+          "SMTP_ADMIN_EMAIL",
+          "SMTP_SENDER_NAME",
+        ],
+      })),
+    };
+    const input = completeInput();
+    const configured: ProductionBootstrapInput = {
+      ...input,
+      environments: input.environments.map((environment) => ({
+        ...environment,
+        publicVariables: {
+          SMTP_HOST: "smtp.resend.com",
+          SMTP_PORT: "587",
+          SMTP_ADMIN_EMAIL: "no-reply@auth.uktest.cc",
+          SMTP_SENDER_NAME: "满托 UK Test",
+        },
+        secretEnvironmentVariables: {
+          ...environment.secretEnvironmentVariables,
+          SMTP_USER: `MANTUO_${environment.name.toUpperCase()}_SMTP_USER`,
+          SMTP_PASS: `MANTUO_${environment.name.toUpperCase()}_SMTP_PASS`,
+        },
+      })),
+    };
+
+    const plan = buildProductionBootstrapPlan(smtpRequirements, configured);
+    expect(plan.valid).toBe(true);
+    expect(plan.steps).toEqual(expect.arrayContaining([
+      expect.objectContaining({ kind: "set-public-variable", name: "SMTP_HOST", value: "smtp.resend.com" }),
+      expect.objectContaining({ kind: "set-public-variable", name: "SMTP_PORT", value: "587" }),
+      expect.objectContaining({ kind: "set-secret-from-environment", name: "SMTP_PASS" }),
+    ]));
+    expect(JSON.stringify(plan)).not.toContain("smtp-password-value");
+
+    const invalid = buildProductionBootstrapPlan(smtpRequirements, {
+      ...configured,
+      environments: configured.environments.map((environment) => ({
+        ...environment,
+        publicVariables: { ...environment.publicVariables, SMTP_HOST: "smtp.example.com" },
+      })),
+    });
+    expect(invalid.valid).toBe(false);
+    expect(invalid.issues).toEqual(expect.arrayContaining([
+      expect.stringContaining("SMTP_HOST"),
+    ]));
+  });
+
   it("performs zero writes when confirmation is absent", async () => {
     const plan = buildProductionBootstrapPlan(requirements, completeInput());
     const adapter = fakeAdapter();

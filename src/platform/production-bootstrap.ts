@@ -86,6 +86,62 @@ export function isValidProductionOrigin(value: string): boolean {
   }
 }
 
+function isValidSmtpHost(value: string): boolean {
+  const host = value.trim().toLowerCase();
+  const labels = host.split(".");
+  const reserved = [".example", ".invalid", ".local", ".localhost"]
+    .some((suffix) => host.endsWith(suffix));
+  return host.length <= 253
+    && labels.length >= 2
+    && labels.every((label) => /^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/u.test(label))
+    && !placeholder(host)
+    && !reserved
+    && !/^\d+(?:\.\d+){3}$/u.test(host);
+}
+
+function isValidSmtpAdminEmail(value: string): boolean {
+  const email = value.trim().toLowerCase();
+  const match = /^[^\s@]+@([^\s@]+)$/u.exec(email);
+  return match !== null && !placeholder(email) && isValidSmtpHost(match[1]!);
+}
+
+function isValidSmtpSenderName(value: string): boolean {
+  const name = value.trim();
+  return name.length >= 2 && name.length <= 80 && !/[\r\n]/u.test(name) && !placeholder(name);
+}
+
+export function isValidProductionVariable(name: string, value: string): boolean {
+  if (name === "PUBLIC_APP_ORIGIN") return isValidProductionOrigin(value);
+  if (name === "SMTP_HOST") return isValidSmtpHost(value);
+  if (name === "SMTP_PORT") {
+    const port = value.trim();
+    return /^\d+$/u.test(port) && [465, 587, 2525].includes(Number(port));
+  }
+  if (name === "SMTP_ADMIN_EMAIL") return isValidSmtpAdminEmail(value);
+  if (name === "SMTP_SENDER_NAME") return isValidSmtpSenderName(value);
+  return false;
+}
+
+function productionVariableLabel(name: string): string {
+  if (name === "PUBLIC_APP_ORIGIN") return "正式 HTTPS origin";
+  if (name === "SMTP_HOST") return "正式 SMTP hostname";
+  if (name === "SMTP_PORT") return "安全 SMTP port";
+  if (name === "SMTP_ADMIN_EMAIL") return "正式发件邮箱";
+  if (name === "SMTP_SENDER_NAME") return "正式发件名称";
+  return "受支持的生产配置";
+}
+
+function productionVariableAction(environment: string, name: string): string {
+  const examples: Readonly<Record<string, string>> = {
+    PUBLIC_APP_ORIGIN: "https://<该环境正式域名>/",
+    SMTP_HOST: "smtp.<provider-domain>",
+    SMTP_PORT: "587",
+    SMTP_ADMIN_EMAIL: "no-reply@auth.<正式域名>",
+    SMTP_SENDER_NAME: "满托 UK Test",
+  };
+  return `运行 gh variable set --env ${environment} ${name} --body ${examples[name] ?? "<approved-value>"}。`;
+}
+
 function check(
   id: string,
   category: ProductionBootstrapCheck["category"],
@@ -165,9 +221,9 @@ export function assessProductionBootstrap(
       checks.push(check(
         `${requirement.name}-variable-${variable}`,
         "github-environment",
-        exists && variable === "PUBLIC_APP_ORIGIN" && isValidProductionOrigin(value),
-        `${requirement.name} variable：${variable} 为正式 HTTPS origin`,
-        `运行 gh variable set --env ${requirement.name} ${variable} --body https://<该环境正式域名>/。`,
+        exists && isValidProductionVariable(variable, value),
+        `${requirement.name} variable：${variable} 为${productionVariableLabel(variable)}`,
+        productionVariableAction(requirement.name, variable),
       ));
     }
     if (requirement.minimumRequiredReviewers > 0) {

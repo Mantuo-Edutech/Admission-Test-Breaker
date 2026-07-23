@@ -1,5 +1,6 @@
 import {
   isValidProductionOrigin,
+  isValidProductionVariable,
   type ProductionBootstrapRequirements,
 } from "./production-bootstrap.js";
 
@@ -9,6 +10,7 @@ export const PRODUCTION_BOOTSTRAP_CONFIRMATION =
 export interface ProductionBootstrapInputEnvironment {
   readonly name: "staging" | "production";
   readonly publicAppOrigin: string;
+  readonly publicVariables?: Readonly<Record<string, string>>;
   readonly secretEnvironmentVariables: Readonly<Record<string, string>>;
   readonly requiredReviewerUsername?: string;
 }
@@ -138,8 +140,11 @@ export function buildProductionBootstrapPlan(
     });
 
     for (const variable of requirement.requiredVariables) {
-      if (variable !== "PUBLIC_APP_ORIGIN") {
-        issues.push(`尚不支持自动配置公开变量 ${variable}。`);
+      const value = variable === "PUBLIC_APP_ORIGIN"
+        ? environment.publicAppOrigin
+        : environment.publicVariables?.[variable]?.trim() ?? "";
+      if (!isValidProductionVariable(variable, value)) {
+        issues.push(`${requirement.name} 公开变量 ${variable} 缺失或不合法。`);
         continue;
       }
       steps.push({
@@ -147,7 +152,7 @@ export function buildProductionBootstrapPlan(
         kind: "set-public-variable",
         environment: requirement.name,
         name: variable,
-        value: environment.publicAppOrigin,
+        value,
         description: `设置 ${requirement.name} 公开变量 ${variable}`,
       });
     }
