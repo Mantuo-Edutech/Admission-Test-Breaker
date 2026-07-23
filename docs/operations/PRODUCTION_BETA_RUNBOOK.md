@@ -288,7 +288,7 @@ unset SMTP_USER
 
 1. 合并前 GitHub `Verify` 必须通过应用、数据库、恢复、100 用户容量和容器五个 job；内容负责人另外运行 `pnpm verify:manual-review-ledger`、`pnpm verify:content-release-readiness` 与 `pnpm verify:manual-review-worklist`，确认目标产品的人工决定仍对应当前源文件、证据未被改写且没有未解释、遗漏或重复的阻塞项。
 2. 运行 `Release immutable image`，选择 staging；它只发布 `ghcr.io/mantuo-edutech/admission-test-breaker:<commit-sha>`。
-3. 运行 `Deploy Supabase environment`，输入同一 SHA 和 staging。工作流先通过 Management API 对比远端迁移历史，再将每个待执行 migration 与历史记录放在同一事务中应用；随后启用并复核 Auth Turnstile、自定义 SMTP，配置 `ALLOWED_ORIGINS` 并部署 `invite-preview`。远端存在仓库没有的迁移或 Auth 配置不完整时必须失败关闭。
+3. 运行 `Deploy Supabase environment`，输入同一 SHA 和 staging。工作流先通过 Management API 对比远端迁移历史，再将每个待执行 migration 与历史记录放在同一事务中应用；production 还会在任何 migration 写入前要求一个最近 30 小时内的真实托管恢复点。随后启用并复核 Auth Turnstile、自定义 SMTP，配置 `ALLOWED_ORIGINS` 并部署 `invite-preview`。远端存在仓库没有的迁移、production 没有恢复点或 Auth 配置不完整时必须失败关闭。
 4. staging 服务器使用同一 SHA 更新 `APP_IMAGE` 与 `APP_RELEASE`：
 
    ```bash
@@ -317,6 +317,16 @@ unset SMTP_USER
 ### 主恢复路径
 
 100 人 Beta 至少使用带每日平台备份的 Supabase 付费方案。初始目标为 **RPO ≤ 24 小时、RTO ≤ 4 小时**；若真实训练频率证明 24 小时损失不可接受，再启用 PITR。Supabase 当前说明付费项目提供每日平台备份，而 Storage 对象不包含在数据库备份中：https://supabase.com/docs/guides/platform/backups
+
+付费方案产生第一个备份后，从保存了目标 Environment secret 的 GitHub workflow 运行 production 发布；它会在 migration 前自动执行：
+
+```bash
+SUPABASE_ACCESS_TOKEN='<scoped-management-token>' \
+SUPABASE_PROJECT_REF='<approved-production-ref>' \
+pnpm supabase:managed-backups:check
+```
+
+验证器只调用 Management API 的备份读取 endpoint，不恢复、不更新、不删除项目，也不打印 token。`walg_enabled` 本身不算通过；必须存在最近 30 小时内完成的每日备份，或有效的 PITR 恢复窗口。30 小时是允许日备份调度与检查延迟的自动门禁容差，不改变事故目标 RPO 24 小时。该命令通过只证明恢复点存在，不代替下面的恢复到新项目演练。
 
 灾难恢复必须恢复到**新项目**，而不是先覆盖仍可取证的生产项目。恢复后还要重新核对 Edge Function、Auth 设置/API key、SMTP、Realtime、扩展和网络限制；平台的新项目恢复也明确列出这些非数据库配置：https://supabase.com/docs/guides/platform/clone-project
 

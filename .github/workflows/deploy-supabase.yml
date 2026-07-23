@@ -46,6 +46,12 @@ jobs:
         env:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
           SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+      - name: Require recent production restore point
+        if: inputs.environment == 'production'
+        run: pnpm supabase:managed-backups:check
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
       - name: Apply reviewed migrations
         run: pnpm supabase:migrations:apply
         env:
@@ -84,4 +90,4 @@ jobs:
         run: |
           echo "Supabase target: ${{ inputs.environment }}" >> "$GITHUB_STEP_SUMMARY"
           echo "Release: ${{ inputs.release_sha }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "Migrations, Auth bot protection, custom SMTP and invite-preview were deployed. Real email delivery, remote permission journey and backup evidence must still be attached before Beta approval." >> "$GITHUB_STEP_SUMMARY"
+          echo "Production requires a recent managed restore point before migrations. Real email delivery, remote permission journey and a recovery-to-new-project drill must still be attached before Beta approval." >> "$GITHUB_STEP_SUMMARY"
