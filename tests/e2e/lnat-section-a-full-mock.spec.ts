@@ -40,9 +40,9 @@ test("LNAT complete Section A mock opens natively and preserves the first respon
 
   const libraryResponse = await page.goto("/exams/lnat/past-papers");
   expect(libraryResponse?.ok()).toBe(true);
-  const fullMockLink = page.getByRole("region", {
-    name: /LNAT Section A Starter & Complete-Structure Mock/u,
-  }).getByRole("link", { name: /^02\s*Section A Full Mock\s*完整结构模考/u });
+  const fullMockLink = page.getByRole("list", {
+    name: "完整练习 Full-length practice",
+  }).getByRole("link", { name: /Multiple Choice.*42 题.*开始练习/u });
   await expect(fullMockLink).toBeVisible();
   await fullMockLink.click();
 

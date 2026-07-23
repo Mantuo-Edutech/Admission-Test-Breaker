@@ -1,8 +1,12 @@
-import { CheckCircle2, FileCheck2 } from "lucide-react";
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { SiteHeader } from "../../navigation/components/SiteHeader.js";
 import { getAssessmentDefinition } from "../../practice/catalog/assessment-registry.js";
+import {
+  PracticeEntrySection,
+  PracticeLibraryHero,
+  type PracticeEntry,
+} from "../components/PracticeLibrary.js";
 import { ESAT_MODULE_LABELS, type EsatModuleId } from "../esat-admissions.js";
 import { loadEsatPreparationPlan } from "../esat-plan.js";
 
@@ -62,104 +66,60 @@ export function EsatPastPapersPage() {
     const mock = fullMockByModule[section.id as EsatModuleId];
     return mock === undefined ? [] : [mock];
   });
+  const fullMockEntries: readonly PracticeEntry[] = fullMocks.map((mock) => ({
+    id: mock.paperId,
+    to: `/practice/${mock.paperId}`,
+    kicker: `FULL MOCK · ${mock.range}`,
+    title: mock.label,
+    subtitle: mock.labelZh,
+    meta: "27 题 · 40 分钟",
+    ariaLabel: `${mock.label} ${mock.labelZh}，27 题，40 分钟，开始完整模考`,
+  }));
+  const diagnosticEntries: readonly PracticeEntry[] = sections.map((section) => ({
+    id: starterByModule[section.id as EsatModuleId].paperId,
+    to: `/practice/${starterByModule[section.id as EsatModuleId].paperId}`,
+    kicker: "SHORT DIAGNOSTIC",
+    title: section.label,
+    subtitle: section.labelZh,
+    meta: "10 题 · 建议 20 分钟",
+    kind: "diagnostic",
+    ariaLabel: `${section.label} ${section.labelZh}，10 题短诊断，开始练习`,
+  }));
 
   return (
     <main className="tmua-stage-page esat-stage-page assessment-library-page">
       <SiteHeader examId="esat" />
-      <section className="tmua-stage-hero page-shell">
-        <p className="eyebrow">ESAT · MODULE PRACTICE & FULL MOCK</p>
-        <h1>只练你申请专业真正需要的模块<span>Practise only the modules required by your degree choices</span></h1>
-        <p>
-          {plan === null
-            ? "先选择申请专业，系统会确定模块，再开放对应的在线短诊断。"
-            : `已根据专业保留：${plan.moduleIds.map((id) => ESAT_MODULE_LABELS[id]).join(" · ")}`}
-        </p>
-      </section>
+      <PracticeLibraryHero
+        exam="ESAT"
+        title={plan === null ? "先确定你的考试模块" : "选择一个模块开始"}
+        titleEn={plan === null ? "Find your required modules" : "Choose a module"}
+        summary={plan === null
+          ? "选择学校和专业，系统会给出对应模块。"
+          : `你的模块：${plan.moduleIds.map((id) => ESAT_MODULE_LABELS[id]).join(" · ")}`}
+        facts={plan === null
+          ? ["按专业筛选", "无需 AI Token"]
+          : [`${sections.length} 个必考模块`, `${fullMockEntries.length} 套完整模考`, `${diagnosticEntries.length} 套短诊断`]}
+        action={<Link className="practice-library-hero__action" to="/exams/esat">{plan === null ? "选择学校和专业" : "修改专业与模块"}</Link>}
+      />
 
-      {plan === null ? (
-        <div className="tmua-stage-actions page-shell">
-          <Link className="button button--primary" to="/exams/esat">选择学校和专业</Link>
-        </div>
-      ) : (
+      {plan !== null && (
         <>
-          {fullMocks.length > 0 ? (
-            <section className="esat-full-mock-callout page-shell" aria-labelledby="esat-full-mock-title">
-              <div>
-                <p>完整模拟卷 · YOUR REQUIRED MODULES</p>
-                <h2 id="esat-full-mock-title">用完整模考校准每个模块的做题节奏<small>Calibrate each required module with a full mock</small></h2>
-                <p>每套 27 道满托原创题，计时 40 分钟，不使用计算器。提交后查看本卷得分、每题答案、知识标签和时间分配。</p>
-              </div>
-              <dl>
-                <div><dt>完整模考</dt><dd>{fullMocks.length} 套</dd></div>
-                <div><dt>每套题量</dt><dd>27 道</dd></div>
-                <div><dt>每套计时</dt><dd>40 分钟</dd></div>
-              </dl>
-              <div className="esat-full-mock-callout__papers" aria-label="你的 ESAT 完整模考">
-                {fullMocks.map((mock, index) => (
-                  <Link key={mock.paperId} to={`/practice/${mock.paperId}`}>
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <strong>{mock.label}</strong>
-                    <small>{mock.labelZh} · 27 题 · 40 分钟 · {mock.range}</small>
-                    <em>开始完整模考 →</em>
-                  </Link>
-                ))}
-              </div>
-              <p className="esat-full-mock-callout__boundary">建议先完整计时作答，再根据知识标签和每题用时安排下一轮复习。</p>
-            </section>
-          ) : null}
-
-          <section className="esat-starter-practice page-shell" aria-labelledby="esat-starter-title">
-            <div>
-              <p>免费模块诊断 · FIVE MODULES</p>
-              <h2 id="esat-starter-title">再用短诊断逐模块检查缺口<small>Use short diagnostics to inspect each selected module</small></h2>
-              <p>每个模块 10 道满托原创题、建议 20 分钟。系统保存作答、改答和活跃用时；提交后立即给出正确答案、分数与知识标签。</p>
-            </div>
-            <dl>
-              <div><dt>你的模块</dt><dd>{sections.length} 个</dd></div>
-              <div><dt>可练题目</dt><dd>{sections.length * 10} 道</dd></div>
-              <div><dt>单模块建议</dt><dd>20 分钟</dd></div>
-            </dl>
-            <div className="esat-starter-practice__modules" aria-label="你的 ESAT 在线短诊断">
-              {sections.map((section, index) => {
-                const starter = starterByModule[section.id as EsatModuleId];
-                return (
-                  <Link key={section.id} to={`/practice/${starter.paperId}`}>
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <strong>{section.label}</strong>
-                    <small>{section.labelZh} · 10 题 · {starter.focusCount} 个重点范围</small>
-                  </Link>
-                );
-              })}
-            </div>
-            <p className="esat-starter-practice__boundary">短诊断用于快速发现知识缺口；完整模考用于检查 40 分钟内的正确率与做题节奏。</p>
-          </section>
-
-          <section className="assessment-section-grid page-shell" aria-label="与你申请相关的 ESAT 模块练习">
-            {sections.map((section, index) => (
-              <article key={section.id}>
-                <header>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <div><p>{section.label}</p><h2>{section.labelZh}</h2></div>
-                </header>
-                <dl>
-                  <div><dt><FileCheck2 aria-hidden="true" />知识范围</dt><dd>{starterByModule[section.id as EsatModuleId].focusCount} 个重点</dd></div>
-                </dl>
-                <div className="assessment-section-grid__status">
-                  <CheckCircle2 aria-hidden="true" />
-                  {fullMockByModule[section.id as EsatModuleId] === undefined
-                    ? "10 道模块诊断题"
-                    : "10 道模块诊断题 + 27 道完整模考"}
-                </div>
-                <p className="assessment-section-grid__boundary">
-                  免费完成题目、计时与基础结果；Review Notes 和逐题深度解析通过邀请码解锁。
-                </p>
-                <div className="assessment-section-grid__actions">
-                  <Link className="button button--primary" to={`/practice/${starterByModule[section.id as EsatModuleId].paperId}`}>开始这个模块</Link>
-                  <Link className="tmua-notes-inline-link" to="/exams/esat/coverage">查看具体知识缺口 →</Link>
-                </div>
-              </article>
-            ))}
-          </section>
+          {fullMockEntries.length === 0 ? null : (
+            <PracticeEntrySection
+              eyebrow="FULL MOCKS"
+              title="完整模考"
+              titleEn="Full-length practice"
+              summary={`${fullMockEntries.length} 套 · 每套 27 题 / 40 分钟`}
+              entries={fullMockEntries}
+            />
+          )}
+          <PracticeEntrySection
+            eyebrow="SHORT DIAGNOSTICS"
+            title="短诊断"
+            titleEn="Check your starting point"
+            summary={`${diagnosticEntries.length} 套 · 每套 10 题`}
+            entries={diagnosticEntries}
+          />
         </>
       )}
 

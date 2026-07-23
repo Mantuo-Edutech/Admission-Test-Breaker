@@ -3814,198 +3814,282 @@
   font-weight: 750;
 }
 
-.tmua-archive {
-  padding-block: clamp(4rem, 8vw, 7rem);
-  border-top: 1px solid var(--color-line);
-  scroll-margin-top: 1rem;
-}
-
-.tmua-archive__summary {
-  margin: 0 0 clamp(2rem, 4vw, 3.5rem);
+/* Shared, action-first paper libraries */
+.practice-library-hero {
+  padding-block: clamp(2.25rem, 5vw, 4rem);
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-block: 1px solid var(--color-line);
+  grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
+  align-items: end;
+  gap: clamp(2rem, 7vw, 7rem);
+  border-bottom: 1px solid var(--color-line);
 }
 
-.tmua-archive__summary > div {
-  min-height: 10rem;
-  padding: clamp(1.35rem, 3vw, 2.25rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.tmua-archive__summary > div + div {
-  border-left: 1px solid var(--color-line);
-}
-
-.tmua-archive__summary dt {
-  color: var(--color-slate);
-  font-size: 0.67rem;
-  font-weight: 750;
-  letter-spacing: 0.08em;
-}
-
-.tmua-archive__summary dd {
-  margin: 1.5rem 0 0;
-}
-
-.tmua-archive__summary strong {
-  display: block;
-  font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 1;
-}
-
-.tmua-archive__summary span {
-  margin-top: 0.7rem;
-  display: block;
-  color: var(--color-slate);
-  font-size: 0.73rem;
-}
-
-.tmua-paper-shelf {
+.practice-library-hero h1 {
+  max-width: 9em;
   margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 5.25rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.practice-library-hero h1 span {
+  margin-top: 0.75rem;
+  display: block;
+  color: var(--color-purple);
+  font-family: var(--font-sans);
+  font-size: clamp(0.78rem, 1.25vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+}
+
+.practice-library-hero__guide > p {
+  max-width: 36rem;
+  margin: 0;
+  color: var(--color-ink);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.practice-library-hero__guide ul {
+  margin: 1.25rem 0 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--color-line);
-  border-left: 1px solid var(--color-line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
   list-style: none;
 }
 
-.tmua-paper-edition {
-  min-width: 0;
-  min-height: 24rem;
-  display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
-  border-right: 1px solid var(--color-line);
-  border-bottom: 1px solid var(--color-line);
+.practice-library-hero__guide li {
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--color-line);
   background: var(--color-paper-raised);
-  transition: background-color 160ms ease, transform 160ms ease;
+  color: var(--color-slate);
+  font-size: 0.7rem;
+  font-weight: 700;
 }
 
-.tmua-paper-edition:hover {
-  background: #fffdf8;
+.practice-library-hero__action {
+  width: fit-content;
+  min-height: 2.75rem;
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-purple);
+  font-size: 0.76rem;
+  font-weight: 750;
+  text-underline-offset: 0.22em;
 }
 
-.tmua-paper-edition > header {
-  padding: clamp(1.5rem, 3vw, 2.35rem);
+.practice-library-hero__action svg {
+  width: 1rem;
 }
 
-.tmua-paper-edition > header > div {
+.practice-resume-strip {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  border: 1px solid var(--color-purple);
+  background: var(--color-lavender);
 }
 
-.tmua-paper-edition > header svg {
-  width: 1.45rem;
-  height: 1.45rem;
-  color: var(--color-purple);
+.practice-resume-strip div,
+.practice-resume-strip span,
+.practice-resume-strip strong {
+  display: block;
 }
 
-.tmua-paper-edition__index,
-.tmua-paper-edition > header > p {
+.practice-resume-strip span {
   color: var(--color-purple);
-  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 750;
-  letter-spacing: 0.11em;
 }
 
-.tmua-paper-edition > header > p {
-  margin: clamp(2.5rem, 5vw, 4.5rem) 0 0.9rem;
-  color: var(--color-slate);
+.practice-resume-strip strong {
+  margin-top: 0.25rem;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
-.tmua-paper-edition h3 {
+.practice-resume-strip > a {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-purple);
+  font-size: 0.76rem;
+  font-weight: 750;
+}
+
+.practice-resume-strip svg {
+  width: 1rem;
+}
+
+.practice-entry-section {
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.practice-entry-section + .practice-entry-section {
+  padding-top: 0;
+}
+
+.practice-entry-section > header {
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.practice-entry-section > header p {
+  margin: 0 0 0.45rem;
+  color: var(--color-purple);
+  font-size: 0.66rem;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+}
+
+.practice-entry-section > header h2 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 3.5vw, 3.15rem);
+  font-size: clamp(1.8rem, 3vw, 2.75rem);
   font-weight: 500;
-  letter-spacing: -0.045em;
-  line-height: 1.04;
+  letter-spacing: -0.035em;
 }
 
-.tmua-paper-edition__papers {
+.practice-entry-section > header h2 span {
+  margin-left: 0.65rem;
+  color: var(--color-purple);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+.practice-entry-section > header > strong {
+  max-width: 34rem;
+  color: var(--color-slate);
+  font-size: 0.7rem;
+  font-weight: 650;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.practice-entry-grid {
+  margin: 0;
+  padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 1px solid var(--color-line);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 0.75rem;
+  list-style: none;
 }
 
-.tmua-paper-edition__papers a {
+.practice-entry-grid li {
   min-width: 0;
-  min-height: 7rem;
-  padding: 1.25rem;
+}
+
+.practice-entry-grid a {
+  min-height: 10.5rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 0.9rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-paper-raised);
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: border-color 140ms ease, background-color 140ms ease, transform 140ms ease;
+}
+
+.practice-entry-grid a:hover,
+.practice-entry-grid a:focus-visible {
+  border-color: var(--color-purple);
+  background: #fffdf8;
+  transform: translateY(-2px);
+}
+
+.practice-entry-grid a > header,
+.practice-entry-grid a > footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  color: var(--color-ink);
-  text-decoration: none;
-  transition: background-color 150ms ease, color 150ms ease;
 }
 
-.tmua-paper-edition__papers a + a {
-  border-left: 1px solid var(--color-line);
-}
-
-.tmua-paper-edition__papers a:hover,
-.tmua-paper-edition__papers a:focus-visible {
-  background: var(--color-purple);
-  color: #fffdf8;
-}
-
-.tmua-paper-edition__papers a > span {
-  min-width: 0;
-  display: grid;
-  gap: 0.45rem;
-}
-
-.tmua-paper-edition__papers strong {
-  font-family: var(--font-serif);
-  font-size: 1.28rem;
-  font-weight: 600;
-}
-
-.tmua-paper-edition__papers small {
-  color: var(--color-slate);
-  font-size: 0.72rem;
-  white-space: nowrap;
-}
-
-.tmua-paper-edition__papers a:hover small,
-.tmua-paper-edition__papers a:focus-visible small {
-  color: rgba(255, 253, 248, 0.75);
-}
-
-.tmua-paper-edition__papers svg {
-  width: 1.05rem;
-  min-width: 1.05rem;
-}
-
-.tmua-archive__note {
-  margin: 1.25rem 0 0;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  color: var(--color-slate);
-  font-size: 0.77rem;
-  line-height: 1.65;
-}
-
-.tmua-archive__note svg {
-  width: 1rem;
-  min-width: 1rem;
-  margin-top: 0.12rem;
+.practice-entry-grid a > header {
   color: var(--color-purple);
 }
 
+.practice-entry-grid a > header svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.practice-entry-grid a > header span {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.64rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.practice-entry-grid a > div small {
+  display: block;
+  color: var(--color-purple);
+  font-size: 0.62rem;
+  font-weight: 750;
+  letter-spacing: 0.07em;
+}
+
+.practice-entry-grid h3 {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+.practice-entry-grid a > div p {
+  margin: 0.35rem 0 0;
+  color: var(--color-slate);
+  font-size: 0.72rem;
+}
+
+.practice-entry-grid a > footer {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-line);
+  color: var(--color-slate);
+  font-size: 0.68rem;
+}
+
+.practice-entry-grid a > footer em {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--color-purple);
+  font-style: normal;
+  font-weight: 750;
+}
+
+.practice-entry-grid a > footer svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
 @media (max-width: 55rem) {
+  .practice-library-hero {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 1.5rem;
+  }
+
   .tmua-hub-hero {
     grid-template-columns: 1fr;
   }
@@ -4023,10 +4107,6 @@
     border-top: 0;
     border-left: 1px solid var(--color-line);
     padding-left: 1rem;
-  }
-
-  .tmua-paper-shelf {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .profile-panel,
@@ -4055,6 +4135,28 @@
 }
 
 @media (max-width: 35rem) {
+  .practice-library-hero {
+    padding-block: 2rem;
+  }
+
+  .practice-library-hero h1 {
+    font-size: clamp(2.45rem, 13vw, 3.7rem);
+  }
+
+  .practice-resume-strip,
+  .practice-entry-section > header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .practice-entry-section > header > strong {
+    text-align: left;
+  }
+
+  .practice-entry-grid a {
+    min-height: 9.5rem;
+  }
+
   .tmua-hub-page__back {
     font-size: 0;
   }
@@ -4076,14 +4178,6 @@
     border-top: 1px solid var(--color-line);
     border-left: 0;
     padding-left: 0;
-  }
-
-  .tmua-paper-shelf {
-    grid-template-columns: 1fr;
-  }
-
-  .tmua-paper-edition {
-    min-height: 21rem;
   }
 
   .profile-panel,

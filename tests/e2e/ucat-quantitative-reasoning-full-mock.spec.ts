@@ -50,9 +50,9 @@ test("UCAT complete Quantitative Reasoning mock supports nine datasets, calculat
 
   const libraryResponse = await page.goto("/exams/ucat/past-papers");
   expect(libraryResponse?.ok()).toBe(true);
-  const fullMockLink = page.getByRole("region", {
-    name: /Four UCAT Starters & Four Full Mocks/u,
-  }).getByRole("link", { name: /^06\s*Quantitative Reasoning Full Mock\s*完整模考/u });
+  const fullMockLink = page.getByRole("list", {
+    name: "完整练习 Full-length practice",
+  }).getByRole("link", { name: /Quantitative Reasoning 数量推理.*36 题.*开始练习/u });
   await expect(fullMockLink).toBeVisible();
   await fullMockLink.click();
 

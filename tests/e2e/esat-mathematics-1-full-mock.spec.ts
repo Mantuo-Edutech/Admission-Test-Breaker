@@ -30,9 +30,9 @@ test("ESAT Mathematics 1 full mock opens natively and persists at the current vi
   expect(libraryResponse?.ok()).toBe(true);
   await expect(page.getByRole("heading", {
     level: 2,
-    name: /用完整模考校准每个模块的做题节奏.*Calibrate each required module/u,
+    name: /完整模考.*Full-length practice/u,
   })).toBeVisible();
-  await expect(page.getByText("27 道", { exact: true })).toBeVisible();
+  await expect(page.getByRole("list", { name: "完整模考 Full-length practice" })).toContainText("27 题 · 40 分钟");
 
   await page.getByRole("link", { name: /Mathematics 1.*开始完整模考/u }).click();
   await expect(page).toHaveURL(/\/practice\/esat-mathematics-1-full-mock-v1$/u);

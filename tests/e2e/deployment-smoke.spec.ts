@@ -65,8 +65,8 @@ test("deployed TMUA AP profile produces coverage and opens a native paper", asyn
 
   const archive = await page.goto("/exams/tmua/past-papers");
   expect(archive?.ok()).toBe(true);
-  await expect(page.getByRole("list", { name: "TMUA 九个年份与版本" }).getByRole("listitem"))
-    .toHaveCount(9);
+  await expect(page.getByRole("list", { name: "历年真题 18 papers" }).getByRole("listitem"))
+    .toHaveCount(18);
   await expect(page.getByRole("link", { name: "Early specimen Paper 1，20 题，开始练习" }))
     .toBeVisible();
 

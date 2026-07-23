@@ -30,9 +30,9 @@ test("ESAT Chemistry full mock opens natively and persists at the current viewpo
   expect(libraryResponse?.ok()).toBe(true);
   await expect(page.getByRole("heading", {
     level: 2,
-    name: /用完整模考校准每个模块的做题节奏.*Calibrate each required module/u,
+    name: /完整模考.*Full-length practice/u,
   })).toBeVisible();
-  await expect(page.getByRole("link", { name: /Chemistry.*C1–C17.*开始完整模考/u })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Chemistry.*27 题.*开始完整模考/u })).toBeVisible();
 
   await page.getByRole("link", { name: /Chemistry.*开始完整模考/u }).click();
   await expect(page).toHaveURL(/\/practice\/esat-chemistry-full-mock-v1$/u);

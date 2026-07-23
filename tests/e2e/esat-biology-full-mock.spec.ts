@@ -28,7 +28,7 @@ test("ESAT Biology full mock opens natively and persists at the current viewport
 
   const libraryResponse = await page.goto("/exams/esat/past-papers");
   expect(libraryResponse?.ok()).toBe(true);
-  await expect(page.getByRole("link", { name: /Biology.*B1–B11.*开始完整模考/u })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Biology.*27 题.*开始完整模考/u })).toBeVisible();
 
   await page.getByRole("link", { name: /Biology.*开始完整模考/u }).click();
   await expect(page).toHaveURL(/\/practice\/esat-biology-full-mock-v1$/u);

@@ -40,12 +40,12 @@ test("both TARA full reasoning modules open natively and persist at the current 
 
   const libraryResponse = await page.goto("/exams/tara/past-papers");
   expect(libraryResponse?.ok()).toBe(true);
-  const fullMockLinks = page.getByRole("region", { name: /TARA Reasoning Starter & Full-Length Mocks/u });
+  const fullMockLinks = page.getByRole("list", { name: "完整练习 Full-length practice" });
   const criticalThinkingLink = fullMockLinks.getByRole("link", {
-    name: /^02\s*Critical Thinking\s*完整模考/u,
+    name: /Critical Thinking 批判思维.*22 题.*开始练习/u,
   });
   const problemSolvingLink = fullMockLinks.getByRole("link", {
-    name: /^03\s*Problem Solving\s*完整模考/u,
+    name: /Problem Solving 问题解决.*22 题.*开始练习/u,
   });
   await expect(criticalThinkingLink).toBeVisible();
   await expect(problemSolvingLink).toBeVisible();
@@ -60,8 +60,8 @@ test("both TARA full reasoning modules open natively and persist at the current 
   await expectNoDocumentOverflow(page);
 
   await page.goto("/exams/tara/past-papers");
-  await page.getByRole("region", { name: /TARA Reasoning Starter & Full-Length Mocks/u })
-    .getByRole("link", { name: /^03\s*Problem Solving\s*完整模考/u })
+  await page.getByRole("list", { name: "完整练习 Full-length practice" })
+    .getByRole("link", { name: /Problem Solving 问题解决.*22 题.*开始练习/u })
     .click();
   await expect(page).toHaveURL(/\/practice\/tara-problem-solving-full-mock-v1$/u);
   await expect(page.getByRole("heading", { level: 1, name: "第 1 题" })).toBeVisible();

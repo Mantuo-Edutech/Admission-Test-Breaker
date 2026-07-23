@@ -4,159 +4,77 @@ import { beforeEach, describe, expect, it } from "vitest";
 import { createAppRouter } from "../../src/app/routes.js";
 import { createEsatPreparationPlan, saveEsatPreparationPlan } from "../../src/features/catalog/esat-plan.js";
 
-describe("honest multi-exam practice readiness pages", () => {
+describe("action-first multi-exam practice libraries", () => {
   beforeEach(() => globalThis.localStorage.clear());
 
-  it("shows LNAT structure with real Section A and Section B original practice", async () => {
+  it("gives LNAT students direct access to full and starting practice", async () => {
     const router = createAppRouter(["/exams/lnat/past-papers"]);
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: /先看清每个模块怎么考/u })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "文章阅读与推理" })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "论证写作" })).toBeInTheDocument();
-    expect(screen.getByText("42 题")).toBeInTheDocument();
-    expect(screen.getAllByText("95 分钟").length).toBeGreaterThanOrEqual(2);
-    expect(screen.getByRole("heading", { name: /先做短诊断，再完成 42 题全卷/u })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /Section A Starter/u })).toHaveAttribute(
+    expect(await screen.findByRole("heading", { name: /选择一套练习.*Choose your practice/u })).toBeInTheDocument();
+    expect(screen.getByRole("list", { name: "LNAT 练习关键信息" })).toHaveTextContent("42 题完整模考");
+    expect(screen.getByRole("list", { name: "完整练习 Full-length practice" })).toHaveTextContent("42 题 · 95 分钟");
+    expect(screen.getByRole("link", { name: /Reading & Reasoning.*12 题.*开始练习/u })).toHaveAttribute(
       "href",
       "/practice/lnat-section-a-starter-v1",
     );
-    expect(screen.getByRole("link", { name: /Section A Full Mock/u })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Multiple Choice.*42 题.*开始练习/u })).toHaveAttribute(
       "href",
       "/practice/lnat-section-a-full-mock-v1",
     );
-    expect(screen.getByText(/12 篇满托原创英文论证文章、42 道四选一题、95 分钟/u)).toBeInTheDocument();
-    expect(screen.getByText(/完成后查看 42 分制本卷得分、每篇用时和题型表现/u)).toBeInTheDocument();
-    expect(screen.getByText(/建议 500–600 词、上限 750 词/u)).toBeInTheDocument();
-    expect(screen.getByText(/私密自动保存和完整提交记录/u)).toBeInTheDocument();
-    expect(screen.queryByText("按需解锁")).not.toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /开始 Section A 完整模考/u })).toHaveAttribute(
-      "href",
-      "/practice/lnat-section-a-full-mock-v1",
-    );
-    expect(screen.getByRole("link", { name: /开始 Section B 写作/u })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Essay.*40 分钟.*开始练习/u })).toHaveAttribute(
       "href",
       "/practice/lnat-section-b-writing-v1",
     );
+    expect(screen.queryByText(/审核|校验|转换|归档/u)).not.toBeInTheDocument();
   });
 
   it("shows all four UCAT subtests with four complete original mocks", async () => {
     const router = createAppRouter(["/exams/ucat/past-papers"]);
     render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { name: /先看清每个模块怎么考/u });
-    for (const name of ["文字推理", "决策判断", "数量推理", "情境判断"]) {
-      expect(screen.getByRole("heading", { name })).toBeInTheDocument();
-    }
-    expect(screen.getByText("22 分钟")).toBeInTheDocument();
-    expect(screen.getByText("37 分钟")).toBeInTheDocument();
-    expect(screen.getAllByText("26 分钟")).toHaveLength(2);
-    expect(screen.getByRole("heading", { name: /先体验四个模块，再完成四套全卷/u })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /Verbal Reasoning Starter/u })).toHaveAttribute(
+    await screen.findByRole("heading", { name: /选择一套练习.*Choose your practice/u });
+    expect(screen.getAllByRole("listitem")).toHaveLength(11);
+    expect(screen.getByRole("list", { name: "完整练习 Full-length practice" })).toHaveTextContent("44 题 · 22 分钟");
+    expect(screen.getByRole("list", { name: "完整练习 Full-length practice" })).toHaveTextContent("35 题 · 37 分钟");
+    expect(screen.getByRole("link", { name: /Verbal Reasoning 文字推理.*12 题.*开始练习/u })).toHaveAttribute(
       "href",
       "/practice/ucat-verbal-reasoning-starter-v1",
     );
-    expect(screen.getByRole("link", { name: /Verbal Reasoning Full Mock/u })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Verbal Reasoning 文字推理.*44 题.*开始练习/u })).toHaveAttribute(
       "href",
       "/practice/ucat-verbal-reasoning-full-mock-v1",
     );
-    expect(screen.getByText(/11 篇满托原创英文材料、44 道题、22 分钟/u)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /开始文字推理完整模考/u })).toHaveAttribute(
-      "href",
-      "/practice/ucat-verbal-reasoning-full-mock-v1",
-    );
-    expect(screen.getByRole("link", { name: /先做 12 题短诊断/u })).toHaveAttribute(
-      "href",
-      "/practice/ucat-verbal-reasoning-starter-v1",
-    );
-    expect(screen.getByRole("link", { name: /Quantitative Reasoning Starter/u })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Quantitative Reasoning 数量推理.*10 题.*开始练习/u })).toHaveAttribute(
       "href",
       "/practice/ucat-quantitative-reasoning-starter-v1",
     );
-    expect(screen.getByRole("link", { name: /Quantitative Reasoning Full Mock/u })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Quantitative Reasoning 数量推理.*36 题.*开始练习/u })).toHaveAttribute(
       "href",
       "/practice/ucat-quantitative-reasoning-full-mock-v1",
     );
-    expect(screen.getByText(/9 组满托原创数据材料、36 道四选一题、26 分钟/u)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /开始数量推理完整模考/u })).toHaveAttribute(
-      "href",
-      "/practice/ucat-quantitative-reasoning-full-mock-v1",
-    );
-    expect(screen.getByRole("link", { name: /先做 10 题短诊断/u })).toHaveAttribute(
-      "href",
-      "/practice/ucat-quantitative-reasoning-starter-v1",
-    );
-    expect(screen.getByRole("link", { name: /Decision Making Starter/u })).toHaveAttribute(
-      "href",
-      "/practice/ucat-decision-making-starter-v1",
-    );
-    expect(screen.getByRole("link", { name: /Decision Making Full Mock/u })).toHaveAttribute(
-      "href",
-      "/practice/ucat-decision-making-full-mock-v1",
-    );
-    expect(screen.getByText(/35 道满托原创题、37 分钟，含 29 道四选一与 6 组五陈述题/u)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /开始决策判断完整模考/u })).toHaveAttribute(
-      "href",
-      "/practice/ucat-decision-making-full-mock-v1",
-    );
-    expect(screen.getByRole("link", { name: /先做 8 题短诊断/u })).toHaveAttribute(
-      "href",
-      "/practice/ucat-decision-making-starter-v1",
-    );
-    expect(screen.getByRole("link", { name: /Situational Judgement Starter/u })).toHaveAttribute(
-      "href",
-      "/practice/ucat-situational-judgement-starter-v1",
-    );
-    expect(screen.getByRole("link", { name: /Situational Judgement Full Mock/u })).toHaveAttribute(
-      "href",
-      "/practice/ucat-situational-judgement-full-mock-v1",
-    );
-    expect(screen.getByText(/21 个满托原创情境、69 道题、26 分钟/u)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /开始情境判断完整模考/u })).toHaveAttribute(
-      "href",
-      "/practice/ucat-situational-judgement-full-mock-v1",
-    );
-    expect(screen.getByRole("link", { name: /先做 SJT 10 题短诊断/u })).toHaveAttribute(
-      "href",
-      "/practice/ucat-situational-judgement-starter-v1",
-    );
-    expect(screen.queryByText(/本模块尚无通过来源、权利、专属交互和评分验收/u)).not.toBeInTheDocument();
-    expect(screen.queryByText(/不等同于正式 11 篇、44 题/u)).not.toBeInTheDocument();
+    expect(screen.getByRole("list", { name: "起点练习 Short practice" }).children).toHaveLength(4);
+    expect(screen.queryByText(/审核|校验|转换|归档/u)).not.toBeInTheDocument();
   });
 
   it("shows the current TARA structure with real reasoning and writing practice", async () => {
     const router = createAppRouter(["/exams/tara/past-papers"]);
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: /先看清每个模块怎么考/u })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /先做短诊断，再完成两个完整模块/u })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "批判思维" })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "问题解决" })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "限时论证写作" })).toBeInTheDocument();
-    expect(screen.getAllByText("22 题")).toHaveLength(2);
-    expect(screen.getAllByText("40 分钟")).toHaveLength(3);
-    expect(screen.getByRole("link", { name: /Reasoning Starter/u })).toHaveAttribute(
+    expect(await screen.findByRole("heading", { name: /选择一套练习.*Choose your practice/u })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /Reasoning Starter.*10 题.*开始练习/u })).toHaveAttribute(
       "href",
       "/practice/tara-reasoning-starter-v1",
     );
-    expect(screen.getByRole("link", { name: /^02Critical Thinking完整模考/u })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Critical Thinking 批判思维.*22 题.*开始练习/u })).toHaveAttribute(
       "href",
       "/practice/tara-critical-thinking-full-mock-v1",
     );
-    expect(screen.getByRole("link", { name: /^03Problem Solving完整模考/u })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Problem Solving 问题解决.*22 题.*开始练习/u })).toHaveAttribute(
       "href",
       "/practice/tara-problem-solving-full-mock-v1",
     );
-    expect(screen.getByRole("link", { name: /开始 Critical Thinking 完整模考/u })).toHaveAttribute(
-      "href",
-      "/practice/tara-critical-thinking-full-mock-v1",
-    );
-    expect(screen.getByRole("link", { name: /开始 Problem Solving 完整模考/u })).toHaveAttribute(
-      "href",
-      "/practice/tara-problem-solving-full-mock-v1",
-    );
-    expect(screen.getByText(/上限 750 词；编辑器提供计时、字数统计、私密自动保存/u)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /开始限时写作/u })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Argumentative Writing 限时论证写作.*40 分钟.*开始练习/u })).toHaveAttribute(
       "href",
       "/practice/tara-writing-task-v1",
     );
@@ -174,12 +92,10 @@ describe("honest multi-exam practice readiness pages", () => {
     const router = createAppRouter(["/exams/esat/past-papers"]);
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: /只练你申请专业真正需要的模块/u })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /选择一个模块开始.*Choose a module/u })).toBeInTheDocument();
     expect(screen.queryByText(/LOCAL SOURCE AUDIT|本地校验文件|历史题卷 \+ 答案/u)).not.toBeInTheDocument();
-    expect(screen.getAllByText("10 道模块诊断题 + 27 道完整模考")).toHaveLength(3);
-    expect(screen.getByRole("heading", { name: /用完整模考校准每个模块的做题节奏/u })).toBeInTheDocument();
-    expect(screen.getByText("27 道", { selector: "dd" })).toBeInTheDocument();
-    expect(screen.getByText("40 分钟", { selector: "dd" })).toBeInTheDocument();
+    expect(screen.getByRole("list", { name: "ESAT 练习关键信息" })).toHaveTextContent("3 个必考模块");
+    expect(screen.getByRole("list", { name: "完整模考 Full-length practice" }).children).toHaveLength(3);
     expect(screen.getByRole("link", { name: /Mathematics 1.*开始完整模考/u })).toHaveAttribute(
       "href",
       "/practice/esat-mathematics-1-full-mock-v1",
@@ -192,15 +108,13 @@ describe("honest multi-exam practice readiness pages", () => {
       "href",
       "/practice/esat-physics-full-mock-v1",
     );
-    expect(screen.getByRole("heading", { name: /再用短诊断逐模块检查缺口/u })).toBeInTheDocument();
-    expect(screen.getByText("30 道")).toBeInTheDocument();
+    expect(screen.getByRole("list", { name: "短诊断 Check your starting point" }).children).toHaveLength(3);
     expect(screen.getByRole("link", { name: /Mathematics 1.*10 题/u })).toHaveAttribute("href", "/practice/esat-mathematics-1-starter-v1");
     expect(screen.getByRole("link", { name: /Physics.*10 题/u })).toHaveAttribute("href", "/practice/esat-physics-starter-v1");
     expect(screen.getByRole("link", { name: /Mathematics 2.*10 题/u })).toHaveAttribute("href", "/practice/esat-mathematics-2-starter-v1");
     expect(screen.queryByRole("link", { name: /Chemistry.*10 题/u })).not.toBeInTheDocument();
     expect(screen.queryByRole("link", { name: /Biology.*10 题/u })).not.toBeInTheDocument();
-    expect(screen.queryByText(/联系冰冰.*邀请码/u)).not.toBeInTheDocument();
-    expect(screen.queryByText("按需解锁")).not.toBeInTheDocument();
+    expect(screen.queryByText(/审核|校验|转换|归档|联系冰冰|邀请码|按需解锁/u)).not.toBeInTheDocument();
   });
 
   it("shows the Chemistry starter and full mock for a real chemical-engineering plan", async () => {
@@ -215,7 +129,7 @@ describe("honest multi-exam practice readiness pages", () => {
     const router = createAppRouter(["/exams/esat/past-papers"]);
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("link", { name: /Chemistry.*C1–C17.*开始完整模考/u })).toHaveAttribute(
+    expect(await screen.findByRole("link", { name: /Chemistry.*27 题.*开始完整模考/u })).toHaveAttribute(
       "href",
       "/practice/esat-chemistry-full-mock-v1",
     );
@@ -239,7 +153,7 @@ describe("honest multi-exam practice readiness pages", () => {
     const router = createAppRouter(["/exams/esat/past-papers"]);
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("link", { name: /Biology.*B1–B11.*开始完整模考/u })).toHaveAttribute(
+    expect(await screen.findByRole("link", { name: /Biology.*27 题.*开始完整模考/u })).toHaveAttribute(
       "href",
       "/practice/esat-biology-full-mock-v1",
     );

@@ -50,9 +50,9 @@ test("desktop: Decision Making completes, reloads and scores a five-statement se
   await page.goto("/");
   await page.locator('a.exam-entry[href="/exams/ucat"]').click();
   await page.getByRole("link", { name: "免费在线练习", exact: true }).click();
-  await page.getByRole("link", { name: /Decision Making Starter/u }).first().click();
+  await page.getByRole("link", { name: /Decision Making 决策判断.*8 题.*开始练习/u }).click();
   await completeUcatProfile(page);
-  await page.getByRole("link", { name: /Decision Making Starter/u }).first().click();
+  await page.getByRole("link", { name: /Decision Making 决策判断.*8 题.*开始练习/u }).click();
   await expect(page.getByRole("heading", { level: 1, name: "第 1 题" })).toBeVisible();
 
   await page.getByRole("button", { name: /第 4 题，未作答/u }).click();
@@ -81,7 +81,7 @@ test("iPad: Quantitative Reasoning keeps the table and calculator usable", async
 
   await page.goto("/practice/ucat-quantitative-reasoning-starter-v1");
   await completeUcatProfile(page);
-  await page.getByRole("link", { name: /Quantitative Reasoning Starter/u }).first().click();
+  await page.getByRole("link", { name: /Quantitative Reasoning 数量推理.*10 题.*开始练习/u }).click();
   await expect(page.getByRole("heading", { level: 1, name: "第 1 题" })).toBeVisible();
   await expect(page.getByRole("table", { name: "Booked appointments and consultation time" })).toBeVisible();
   await page.getByRole("button", { name: "基础计算器" }).click();
@@ -105,7 +105,7 @@ test("phone: Situational Judgement records adjacent partial credit", async ({ pa
 
   await page.goto("/practice/ucat-situational-judgement-starter-v1");
   await completeUcatProfile(page);
-  await page.getByRole("link", { name: /Situational Judgement Starter/u }).first().click();
+  await page.getByRole("link", { name: /Situational Judgement 情境判断.*10 题.*开始练习/u }).click();
   await expect(page.getByRole("heading", { level: 1, name: "第 1 题" })).toBeVisible();
   await expect(page.getByText("情境判断等级题")).toBeVisible();
   await page.getByRole("radio", { name: "选项 B" }).check();

@@ -40,9 +40,9 @@ test("UCAT complete Verbal Reasoning mock opens natively and preserves the first
 
   const libraryResponse = await page.goto("/exams/ucat/past-papers");
   expect(libraryResponse?.ok()).toBe(true);
-  const fullMockLink = page.getByRole("region", {
-    name: /Four UCAT Starters & Four Full Mocks/u,
-  }).getByRole("link", { name: /^02\s*Verbal Reasoning Full Mock\s*完整模考/u });
+  const fullMockLink = page.getByRole("list", {
+    name: "完整练习 Full-length practice",
+  }).getByRole("link", { name: /Verbal Reasoning 文字推理.*44 题.*开始练习/u });
   await expect(fullMockLink).toBeVisible();
   await fullMockLink.click();
 

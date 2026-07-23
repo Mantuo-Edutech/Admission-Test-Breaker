@@ -48,9 +48,9 @@ test("UCAT complete Situational Judgement mock supports rating and most/least re
 
   const libraryResponse = await page.goto("/exams/ucat/past-papers");
   expect(libraryResponse?.ok()).toBe(true);
-  const fullMockLink = page.getByRole("region", {
-    name: /Four UCAT Starters & Four Full Mocks/u,
-  }).getByRole("link", { name: /^08\s*Situational Judgement Full Mock\s*完整模考/u });
+  const fullMockLink = page.getByRole("list", {
+    name: "完整练习 Full-length practice",
+  }).getByRole("link", { name: /Situational Judgement 情境判断.*69 题.*开始练习/u });
   await expect(fullMockLink).toBeVisible();
   await fullMockLink.click();
 
