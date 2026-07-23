@@ -73,7 +73,7 @@ export function TmuaDashboardPage({ services }: TmuaDashboardPageProps) {
           </div>
           <p className="tmua-dashboard-card__fact">8 道满托原创 · 30 分钟 · 不可使用计算器</p>
           <h2>TMUA 起点能力诊断<span>TMUA Starting Diagnostic</span></h2>
-          <p>覆盖代数、二次方程、坐标几何、数列、三角、微积分、数学逻辑和反例；只报告实际作答证据。</p>
+          <p>覆盖代数、二次方程、坐标几何、数列、三角、微积分、数学逻辑和反例；提交后查看知识表现与做题节奏。</p>
           {recoverable === null ? (
             <Link className="button button--primary" to="/practice/tmua-diagnostic-v1">
               开始 30 分钟诊断

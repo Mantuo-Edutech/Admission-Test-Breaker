@@ -16,7 +16,6 @@ import { BrandMark } from "../../navigation/components/BrandMark.js";
 import { SiteHeader } from "../../navigation/components/SiteHeader.js";
 import { WechatAccessDialog } from "../../service-bridge/components/WechatAccessDialog.js";
 import {
-  CONTENT_PRODUCT_CATALOG,
   inviteContentProductsForPackages,
   publicContentProducts,
   type ContentProduct,
@@ -64,6 +63,15 @@ const accessCopy = {
   internal: "内部审核",
 } as const;
 
+const kindLabels: Readonly<Record<ContentProductKind, string>> = {
+  "practice-library": "在线题库",
+  "coverage-map": "知识覆盖",
+  "review-notes": "复习笔记",
+  "admissions-planner": "专业定位",
+  "preparation-map": "课程定位",
+  "exam-guide": "考试指南",
+};
+
 function isExamId(value: string | null): value is ExamId {
   return EXAM_CATALOG.some((exam) => exam.id === value);
 }
@@ -93,10 +101,8 @@ function ProductCard({
       <header>
         <span className="learning-product-card__icon"><Icon aria-hidden="true" /></span>
         <div>
-          <p>STEP {String(journeyStage.number).padStart(2, "0")} · {journeyStage.zh} · {product.examId.toUpperCase()} · V{product.version}</p>
-          <span className={`learning-product-card__status learning-product-card__status--${product.status}`}>
-            {product.status === "published" ? "已发布" : "教学预览"}
-          </span>
+          <p>STEP {String(journeyStage.number).padStart(2, "0")} · {journeyStage.zh} · {product.examId.toUpperCase()}</p>
+          <span className={`learning-product-card__status learning-product-card__status--${product.status}`}>{kindLabels[product.kind]}</span>
         </div>
       </header>
       <h2>{product.title.zh}<span>{product.title.en}</span></h2>
@@ -164,18 +170,18 @@ export function LearningLibraryPage({ examId, services }: LearningLibraryPagePro
 
       <section className="learning-library-hero page-shell">
         <div>
-          <p className="eyebrow">LEARNING LIBRARY · REV {CONTENT_PRODUCT_CATALOG.revision}</p>
+          <p className="eyebrow">题库 · 模拟练习 · REVIEW NOTES</p>
           <h1>
-            {selectedExam === null ? "真正可以打开使用的内容" : `${selectedExam.name} 题库与学习资料`}
+            {selectedExam === null ? "完整题库与复习资料" : `${selectedExam.name} 题库与学习资料`}
             <span>{selectedExam === null ? "PRACTICE, COVERAGE & NOTES" : "PRACTICE & LEARNING RESOURCES"}</span>
           </h1>
           <p>
-            只展示已经做成本站页面或在线题库的内容。每项资料都标明当前版本、使用条件和可核验依据。
+            从了解考试、课程定位到在线练习和 Review Notes，按照准备顺序找到下一步需要的内容。
           </p>
         </div>
         <dl>
-          <div><dt>当前可用产品</dt><dd>{products.length}<span>项</span></dd></div>
-          <div><dt>外部跳转</dt><dd>0<span>个主要入口</span></dd></div>
+          <div><dt>学习内容</dt><dd>{products.length}<span>项</span></dd></div>
+          <div><dt>准备路径</dt><dd>4<span>步</span></dd></div>
         </dl>
       </section>
 
@@ -217,17 +223,17 @@ export function LearningLibraryPage({ examId, services }: LearningLibraryPagePro
         {products.length === 0 && (
           <div className="learning-library-empty">
             <FileText aria-hidden="true" />
-            <h2>当前没有通过发布门的内容</h2>
-            <p>来源已发现或页面结构已配置，不等于内容已经可以使用；因此这里不会展示虚假入口。</p>
+            <h2>暂时没有相关资料</h2>
+            <p>请选择其他考试，或返回考试概览继续准备。</p>
           </div>
         )}
       </section>
 
       <section className="learning-library-access page-shell" aria-labelledby="learning-library-access-title">
         <div>
-          <p className="eyebrow">{hasSelectedExamAccess ? "CONTENT ACCESS VERIFIED" : "需要确认当前可用内容？"}</p>
-          <h2 id="learning-library-access-title">{hasSelectedExamAccess ? "账号权限已确认" : "添加冰冰，确认已发布版本"}</h2>
-          <p>{hasSelectedExamAccess ? "已解锁；通过教研发布门并加入权限包的内容会对当前账号开放。" : "冰冰只说明已经发布的内容并协助注册，不会把草稿或计划中的资料作为可解锁内容承诺；邀请码也不会授予他人查看你的学习数据。"}</p>
+          <p className="eyebrow">{hasSelectedExamAccess ? "FULL ACCESS" : "完整资料 · FULL ACCESS"}</p>
+          <h2 id="learning-library-access-title">{hasSelectedExamAccess ? "完整资料已经解锁" : "添加冰冰，获取 Review Notes"}</h2>
+          <p>{hasSelectedExamAccess ? "当前账号可以使用已解锁的完整复习资料和深度解析。" : "真题与基础练习可以直接使用；完整复习笔记和深度解析通过邀请码解锁。邀请码不会授予他人查看你的学习数据。"}</p>
         </div>
         <div>
           {hasSelectedExamAccess ? (

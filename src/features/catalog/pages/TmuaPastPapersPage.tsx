@@ -16,7 +16,7 @@ export function TmuaPastPapersPage() {
           历年真题
           <span>Past Papers</span>
         </h1>
-        <p>18 套历年试卷均已收录并可在线练习。选择年份后即可计时作答、标记和提交评分。</p>
+        <p>18 套历年真题全部可以在线练习。选择年份后即可计时作答、标记和提交评分。</p>
       </section>
 
       <section className="tmua-archive page-shell" aria-labelledby="tmua-archive-title">
@@ -45,7 +45,7 @@ export function TmuaPastPapersPage() {
             <dt>在线题目</dt>
             <dd>
               <strong>{TMUA_PUBLIC_SUMMARY.questionShellCount}</strong>
-              <span>全部逐题排版、可作答与评分</span>
+              <span>题目、选项、公式与图形完整呈现</span>
             </dd>
           </div>
         </dl>
@@ -88,7 +88,7 @@ export function TmuaPastPapersPage() {
         </ol>
         <p className="tmua-archive__note">
           <LibraryBig aria-hidden="true" />
-          全部试卷使用 KaTeX 公式与独立 SVG 图形，并经过题面、选项、答案三项核验；作答、标记、计时和评分都在系统内完成。
+          全部 360 道真题都可以在系统内作答、标记、计时和评分，提交后直接回看整套表现。
         </p>
       </section>
     </main>

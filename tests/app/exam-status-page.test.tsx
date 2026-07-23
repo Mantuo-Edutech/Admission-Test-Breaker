@@ -9,21 +9,18 @@ const guides = [
     name: "TARA",
     title: /三部分能力.*Reason, Solve, Write/u,
     format: "Critical Thinking",
-    officialLink: "TARA Question Guide",
   },
   {
     route: "/exams/lnat",
     name: "LNAT",
     title: /阅读论证.*Read Critically\. Argue Clearly\./u,
     format: "Section A · Multiple Choice",
-    officialLink: "LNAT 官方练习",
   },
   {
     route: "/exams/ucat",
     name: "UCAT",
     title: /先熟悉题型.*Learn the Test Before You Time It/u,
     format: "Verbal Reasoning",
-    officialLink: "官方题库与模考",
   },
 ] as const;
 
@@ -52,7 +49,7 @@ describe("public official exam guides", () => {
 
   it.each(guides)(
     "turns the $name route into a useful official starting point",
-    async ({ route, name, title, format, officialLink }) => {
+    async ({ route, name, title, format }) => {
       const router = createAppRouter([route]);
       render(<RouterProvider router={router} />);
 
@@ -61,9 +58,10 @@ describe("public official exam guides", () => {
       ).toBeInTheDocument();
       expect(screen.getByRole("heading", { name: format })).toBeInTheDocument();
       expect(screen.getByRole("heading", { name: "按这个顺序开始" })).toBeInTheDocument();
-      expect(screen.getByRole("heading", { name: new RegExp(officialLink, "u") })).toBeInTheDocument();
-      expect(screen.queryByRole("link", { name: new RegExp(officialLink, "u") })).not.toBeInTheDocument();
-      expect(screen.getAllByText("已纳入本站来源清单").length).toBeGreaterThan(0);
+      expect(screen.getByRole("heading", { name: "接下来需要的内容都在这里" })).toBeInTheDocument();
+      expect(screen.getByRole("link", { name: "查看在线练习" })).toHaveAttribute("href", `${route}/past-papers`);
+      expect(screen.getByRole("link", { name: "查看复习资料" })).toHaveAttribute("href", `${route}/resources`);
+      expect(screen.queryByText(/来源清单|核验日期|权利状态/u)).not.toBeInTheDocument();
       const navigation = screen.getByRole("navigation", { name: "主要导航" });
       expect(within(navigation).getByRole("link", { name: `${name} 概览` })).toHaveAttribute(
         "aria-current",

@@ -25,7 +25,7 @@ function EsatPracticeGate({ children }: { children: ReactNode }) {
         <section className="tmua-required-state page-shell">
           <p className="eyebrow">第 2 步 · COURSE PROFILE</p>
           <h1>请先填写 ESAT 课程信息</h1>
-          <p>专业与模块已经确定；还需要课程体系和具体课程，才能保存对应练习证据。</p>
+          <p>专业与模块已经确定；填写课程体系和具体课程后，系统会保存对应的练习记录。</p>
           <Link className="button button--primary" to="/exams/esat/profile">填写课程信息</Link>
         </section>
       </main>

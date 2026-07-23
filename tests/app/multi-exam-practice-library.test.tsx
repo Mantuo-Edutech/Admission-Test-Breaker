@@ -26,9 +26,9 @@ describe("honest multi-exam practice readiness pages", () => {
       "/practice/lnat-section-a-full-mock-v1",
     );
     expect(screen.getByText(/12 篇满托原创英文论证文章、42 道四选一题、95 分钟/u)).toBeInTheDocument();
-    expect(screen.getByText(/完整模考只报告 42 分原始正确数/u)).toBeInTheDocument();
+    expect(screen.getByText(/完成后查看 42 分制本卷得分、每篇用时和题型表现/u)).toBeInTheDocument();
     expect(screen.getByText(/建议 500–600 词、上限 750 词/u)).toBeInTheDocument();
-    expect(screen.getByText(/当前不生成自动分数/u)).toBeInTheDocument();
+    expect(screen.getByText(/私密自动保存和完整提交记录/u)).toBeInTheDocument();
     expect(screen.queryByText("按需解锁")).not.toBeInTheDocument();
     expect(screen.getByRole("link", { name: /开始 Section A 完整模考/u })).toHaveAttribute(
       "href",
@@ -175,11 +175,8 @@ describe("honest multi-exam practice readiness pages", () => {
     render(<RouterProvider router={router} />);
 
     expect(await screen.findByRole("heading", { name: /只练你申请专业真正需要的模块/u })).toBeInTheDocument();
-    expect(screen.getByText("39 份官方资料已完整下载并通过文件校验")).toBeInTheDocument();
-    expect(screen.getByText("39")).toBeInTheDocument();
-    expect(screen.getByText("5")).toBeInTheDocument();
-    expect(screen.getByText("16")).toBeInTheDocument();
-    expect(screen.getAllByText("10 道短诊断 + 27 道完整模考已经原生上线")).toHaveLength(3);
+    expect(screen.queryByText(/LOCAL SOURCE AUDIT|本地校验文件|历史题卷 \+ 答案/u)).not.toBeInTheDocument();
+    expect(screen.getAllByText("10 道模块诊断题 + 27 道完整模考")).toHaveLength(3);
     expect(screen.getByRole("heading", { name: /用完整模考校准每个模块的做题节奏/u })).toBeInTheDocument();
     expect(screen.getByText("27 道", { selector: "dd" })).toBeInTheDocument();
     expect(screen.getByText("40 分钟", { selector: "dd" })).toBeInTheDocument();

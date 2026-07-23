@@ -89,7 +89,7 @@ export function LearningRecordPage({
         <SiteHeader examId={examId} />
         <section className="practice-state-page" aria-live="polite">
           <p className="eyebrow">正在整理本人记录 · LEARNING RECORD</p>
-          <h1>正在读取你的 {name} 练习证据…</h1>
+          <h1>正在读取你的 {name} 练习记录…</h1>
         </section>
       </main>
     );
@@ -106,9 +106,9 @@ export function LearningRecordPage({
       <SiteHeader examId={examId} />
       <section className="learning-record-hero page-shell">
         <div>
-          <p className="eyebrow">YOUR PRACTICE RECORD · 你的真实学习证据</p>
+          <p className="eyebrow">YOUR PRACTICE RECORD · 你的训练记录</p>
           <h1>{name} 学习记录<span>Frequency, time, changes and results</span></h1>
-          <p>这里只汇总已经保存的作答事实：练习频率、活跃用时、改答、原始结果和知识标签。没有足够样本时，不生成排名、能力定论或训练时长承诺。</p>
+          <p>练习频率、活跃用时、改答、得分和知识标签都保存在这里，帮助你看清训练是否稳定进步。</p>
         </div>
         <aside data-scope={history.scope}>
           <ShieldCheck aria-hidden="true" />
@@ -131,7 +131,7 @@ export function LearningRecordPage({
 
       {view.entries.length === 0 ? (
         <section className="learning-record-empty page-shell">
-          <p className="eyebrow">NO SAVED EVIDENCE YET</p>
+          <p className="eyebrow">NO PRACTICE RECORD YET</p>
           <h2>完成第一项 {name} 在线练习后，这里会自动形成记录</h2>
           <p>答题、改答、标记、每题活跃用时和提交结果都会进入同一份私密会话。</p>
           <Link className="button button--primary" to={`/exams/${examId}/past-papers`}>进入免费在线练习<ArrowRight aria-hidden="true" /></Link>
@@ -140,8 +140,8 @@ export function LearningRecordPage({
         <>
           <section className="learning-record-modules page-shell" aria-labelledby={`${examId}-record-modules`}>
             <header>
-              <p className="eyebrow">MODULE EVIDENCE</p>
-              <h2 id={`${examId}-record-modules`}>按模块查看已积累的证据</h2>
+              <p className="eyebrow">MODULE PERFORMANCE</p>
+              <h2 id={`${examId}-record-modules`}>按模块查看训练表现</h2>
               <span>平均原始正确率只汇总已提交的客观题；写作不生成自动分数。</span>
             </header>
             <div>
@@ -162,8 +162,8 @@ export function LearningRecordPage({
           {view.topics.length > 0 && (
             <section className="learning-record-topics page-shell" aria-labelledby={`${examId}-record-topics`}>
               <header>
-                <p className="eyebrow">KNOWLEDGE EVIDENCE</p>
-                <h2 id={`${examId}-record-topics`}>具体知识标签的作答事实</h2>
+                <p className="eyebrow">KNOWLEDGE PERFORMANCE</p>
+                <h2 id={`${examId}-record-topics`}>具体知识点的作答表现</h2>
                 <span>按错答与部分得分数量优先排列，只说明已经出现的样本。</span>
               </header>
               <div>

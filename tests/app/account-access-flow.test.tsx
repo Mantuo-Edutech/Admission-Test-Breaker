@@ -376,7 +376,7 @@ describe("invite-first account access flow", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByText("账号权限已确认")).toBeInTheDocument();
+    expect(await screen.findByText("完整资料已经解锁")).toBeInTheDocument();
     expect(screen.getAllByText("已解锁").length).toBeGreaterThanOrEqual(1);
     expect(screen.queryByRole("link", { name: "输入邀请码" })).not.toBeInTheDocument();
   });

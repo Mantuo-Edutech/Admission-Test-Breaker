@@ -1,11 +1,10 @@
-import { CheckCircle2, FileCheck2, ShieldCheck } from "lucide-react";
+import { CheckCircle2, FileCheck2 } from "lucide-react";
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { SiteHeader } from "../../navigation/components/SiteHeader.js";
 import { getAssessmentDefinition } from "../../practice/catalog/assessment-registry.js";
 import { ESAT_MODULE_LABELS, type EsatModuleId } from "../esat-admissions.js";
 import { loadEsatPreparationPlan } from "../esat-plan.js";
-import { ESAT_SOURCE_SUMMARY as sourceSummary } from "../esat-source-summary.js";
 
 const starterByModule: Readonly<Record<EsatModuleId, { readonly paperId: string; readonly focusCount: number }>> = {
   "mathematics-1": { paperId: "esat-mathematics-1-starter-v1", focusCount: 7 },
@@ -77,19 +76,6 @@ export function EsatPastPapersPage() {
         </p>
       </section>
 
-      <section className="esat-source-audit page-shell" aria-labelledby="esat-source-audit-title">
-        <header>
-          <p>LOCAL SOURCE AUDIT · {sourceSummary.verifiedAt}</p>
-          <h2 id="esat-source-audit-title">{sourceSummary.statusZh}<small>{sourceSummary.statusEn}</small></h2>
-        </header>
-        <dl>
-          <div><dt>本地校验文件</dt><dd>{sourceSummary.officialArchive.locallyVerifiedFiles}<span>份</span></dd></div>
-          <div><dt>模块 Guide</dt><dd>{sourceSummary.officialArchive.moduleGuides}<span>份</span></dd></div>
-          <div><dt>历史题卷 + 答案</dt><dd>{sourceSummary.officialArchive.historicQuestionAnswerPairs}<span>组</span></dd></div>
-        </dl>
-        <p><ShieldCheck aria-hidden="true" />{sourceSummary.publicationBoundaryZh}</p>
-      </section>
-
       {plan === null ? (
         <div className="tmua-stage-actions page-shell">
           <Link className="button button--primary" to="/exams/esat">选择学校和专业</Link>
@@ -99,12 +85,12 @@ export function EsatPastPapersPage() {
           {fullMocks.length > 0 ? (
             <section className="esat-full-mock-callout page-shell" aria-labelledby="esat-full-mock-title">
               <div>
-                <p>FULL-LENGTH ORIGINAL MOCKS · YOUR REQUIRED MODULES</p>
-                <h2 id="esat-full-mock-title">用完整模考校准每个模块的做题节奏<small>Calibrate each required module with a full native mock</small></h2>
-                <p>每套 27 道满托原创题，严格计时 40 分钟，不使用计算器。提交后只给正确数、每题答案和知识标签，不伪造官方 1–9 分。</p>
+                <p>完整模拟卷 · YOUR REQUIRED MODULES</p>
+                <h2 id="esat-full-mock-title">用完整模考校准每个模块的做题节奏<small>Calibrate each required module with a full mock</small></h2>
+                <p>每套 27 道满托原创题，计时 40 分钟，不使用计算器。提交后查看本卷得分、每题答案、知识标签和时间分配。</p>
               </div>
               <dl>
-                <div><dt>已完成模块</dt><dd>{fullMocks.length} 套</dd></div>
+                <div><dt>完整模考</dt><dd>{fullMocks.length} 套</dd></div>
                 <div><dt>每套题量</dt><dd>27 道</dd></div>
                 <div><dt>每套计时</dt><dd>40 分钟</dd></div>
               </dl>
@@ -118,13 +104,13 @@ export function EsatPastPapersPage() {
                   </Link>
                 ))}
               </div>
-              <p className="esat-full-mock-callout__boundary"><ShieldCheck aria-hidden="true" />这是满托原创 teaching preview，不是官方卷，也不承诺与正式考试等难；完整题面留在本站原生练习中。</p>
+              <p className="esat-full-mock-callout__boundary">建议先完整计时作答，再根据知识标签和每题用时安排下一轮复习。</p>
             </section>
           ) : null}
 
           <section className="esat-starter-practice page-shell" aria-labelledby="esat-starter-title">
             <div>
-              <p>FREE NATIVE PRACTICE · FIVE MODULES</p>
+              <p>免费模块诊断 · FIVE MODULES</p>
               <h2 id="esat-starter-title">再用短诊断逐模块检查缺口<small>Use short diagnostics to inspect each selected module</small></h2>
               <p>每个模块 10 道满托原创题、建议 20 分钟。系统保存作答、改答和活跃用时；提交后立即给出正确答案、分数与知识标签。</p>
             </div>
@@ -145,10 +131,10 @@ export function EsatPastPapersPage() {
                 );
               })}
             </div>
-            <p className="esat-starter-practice__boundary"><ShieldCheck aria-hidden="true" />五套均为满托独立命题，官方资料只用于核对范围；它们不复制官方题面，也不冒充正式 ESAT 真题、百分位或录取 Benchmark。</p>
+            <p className="esat-starter-practice__boundary">短诊断用于快速发现知识缺口；完整模考用于检查 40 分钟内的正确率与做题节奏。</p>
           </section>
 
-          <section className="assessment-section-grid page-shell" aria-label="与你申请相关的 ESAT 模块资料状态">
+          <section className="assessment-section-grid page-shell" aria-label="与你申请相关的 ESAT 模块练习">
             {sections.map((section, index) => (
               <article key={section.id}>
                 <header>
@@ -156,16 +142,16 @@ export function EsatPastPapersPage() {
                   <div><p>{section.label}</p><h2>{section.labelZh}</h2></div>
                 </header>
                 <dl>
-                  <div><dt><FileCheck2 aria-hidden="true" />官方范围</dt><dd>知识地图已整理</dd></div>
+                  <div><dt><FileCheck2 aria-hidden="true" />知识范围</dt><dd>{starterByModule[section.id as EsatModuleId].focusCount} 个重点</dd></div>
                 </dl>
                 <div className="assessment-section-grid__status">
                   <CheckCircle2 aria-hidden="true" />
                   {fullMockByModule[section.id as EsatModuleId] === undefined
-                    ? "10 道原创题已经原生上线"
-                    : "10 道短诊断 + 27 道完整模考已经原生上线"}
+                    ? "10 道模块诊断题"
+                    : "10 道模块诊断题 + 27 道完整模考"}
                 </div>
                 <p className="assessment-section-grid__boundary">
-                  Guide 原件仅用于内部范围核对；免费题目与事实型结果不需要邀请码，逐题教学解析仍需独立教研后发布。
+                  免费完成题目、计时与基础结果；Review Notes 和逐题深度解析通过邀请码解锁。
                 </p>
                 <div className="assessment-section-grid__actions">
                   <Link className="button button--primary" to={`/practice/${starterByModule[section.id as EsatModuleId].paperId}`}>开始这个模块</Link>

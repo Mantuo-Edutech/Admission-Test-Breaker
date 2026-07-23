@@ -27,19 +27,19 @@ export function TmuaDiagnosticPage({ services }: TmuaDiagnosticPageProps) {
 
       <section className="diagnostic-spec page-shell" aria-label="30 分钟诊断设计">
         <div><Clock3 aria-hidden="true" /><strong>30 分钟</strong><span>每题保留活跃用时与改答记录</span></div>
-        <div><FileCheck2 aria-hidden="true" /><strong>8 道固定题</strong><span>不消耗、不拆分任何历年真题</span></div>
-        <div><Scale aria-hidden="true" /><strong>只报告实际表现</strong><span>不把短诊断换算成官方分数或百分位</span></div>
+        <div><FileCheck2 aria-hidden="true" /><strong>8 道原创题</strong><span>覆盖六个核心数学与推理方向</span></div>
+        <div><Scale aria-hidden="true" /><strong>起点结果</strong><span>查看正确率、知识表现和做题节奏</span></div>
       </section>
 
       <section className="diagnostic-review-state page-shell">
         <CheckCircle2 aria-hidden="true" />
         <div>
-          <p className="eyebrow">当前版本 · ORIGINAL V1</p>
-          <h2>8 道原创题已可在线完成</h2>
+          <p className="eyebrow">满托原创 · STARTING POINT</p>
+          <h2>用 8 道题找到第一轮训练重点</h2>
           <p>
-            本卷按公开 TMUA 内容范围独立命题。提交后只显示正确率、答案、每题用时和真实作答记录，不生成官方换算分、录取概率或伪 Benchmark。
+            提交后立即查看正确率、答案、每题用时和知识表现，并根据结果选择真题或针对性复习。
           </p>
-          <strong>教学预览版本 · 仍待独立教师终审与真实学生标定</strong>
+          <strong>诊断题不会消耗任何一套历年真题。</strong>
         </div>
       </section>
 

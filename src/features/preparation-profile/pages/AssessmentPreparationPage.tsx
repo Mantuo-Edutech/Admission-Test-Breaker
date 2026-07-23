@@ -91,13 +91,13 @@ export function AssessmentPreparationPage({
 
       <section className="assessment-preparation-evidence page-shell" aria-labelledby={`${examId}-evidence-title`}>
         <header>
-          <div><GraduationCap aria-hidden="true" /><p>你的课程依据 · YOUR COURSE EVIDENCE</p></div>
-          <h2 id={`${examId}-evidence-title`}>系统使用了这些已学学科</h2>
+          <div><GraduationCap aria-hidden="true" /><p>你的课程背景 · YOUR SUBJECTS</p></div>
+          <h2 id={`${examId}-evidence-title`}>定位参考了这些已学学科</h2>
         </header>
         <ul>
           {plan.subjectLabels.map((subject) => <li key={subject}>{subject}</li>)}
         </ul>
-        <p><ShieldCheck aria-hidden="true" />课程背景不是能力证据。真正的速度、正确率和错误类型，要在完成在线短诊断以后才能形成。</p>
+        <p><ShieldCheck aria-hidden="true" />课程背景用于判断知识覆盖；完成在线诊断后，系统会加入你的速度、正确率和错误类型。</p>
       </section>
 
       <section className="assessment-preparation-modules page-shell" aria-labelledby={`${examId}-modules-title`}>
@@ -116,7 +116,7 @@ export function AssessmentPreparationPage({
               </header>
               <div className="assessment-preparation-modules__body">
                 <section>
-                  <p>课程依据 · Course evidence</p>
+                  <p>课程覆盖 · Course coverage</p>
                   <h4>{module.courseEvidence}</h4>
                   <span>{module.courseConclusion}</span>
                 </section>
@@ -133,7 +133,7 @@ export function AssessmentPreparationPage({
               </div>
               <footer>
                 <BookOpenCheck aria-hidden="true" />
-                <span>下一步用真实作答证据更新定位</span>
+                <span>下一步用在线练习结果更新定位</span>
                 <Link to={module.practiceHref}>{module.practiceLabel}<ArrowRight aria-hidden="true" /></Link>
               </footer>
             </article>

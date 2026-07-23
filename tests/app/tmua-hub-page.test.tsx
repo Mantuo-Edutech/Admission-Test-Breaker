@@ -124,11 +124,11 @@ describe("TMUA staged preparation journey", () => {
       "/exams/tmua/profile",
     );
     expect(screen.getByRole("heading", { name: "四步完成 TMUA 准备" })).toBeInTheDocument();
-    const summary = screen.getByRole("group", { name: "TMUA 已核验资料概览" });
-    expect(within(summary).getByText("可在线作答")).toBeInTheDocument();
+    const summary = screen.getByRole("group", { name: "TMUA 真题与在线练习" });
+    expect(within(summary).getByText("真题总量")).toBeInTheDocument();
     expect(within(summary).getByText("360 道")).toBeInTheDocument();
-    expect(within(summary).getByText("已完成原生排版")).toBeInTheDocument();
-    expect(within(summary).getByText("360 / 360 道")).toBeInTheDocument();
+    expect(within(summary).getByText("在线练习")).toBeInTheDocument();
+    expect(within(summary).getByText("18 套全部可作答")).toBeInTheDocument();
     expect(screen.getByText(/不收集姓名、电话或微信/u)).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "开始完整练习" })).not.toBeInTheDocument();
   });
@@ -282,9 +282,9 @@ describe("TMUA staged preparation journey", () => {
     render(<RouterProvider router={router} />);
 
     expect((await screen.findAllByText("30 分钟")).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getByText("8 道固定题")).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "8 道原创题已可在线完成" })).toBeInTheDocument();
-    expect(screen.getByText(/不生成官方换算分、录取概率或伪 Benchmark/u)).toBeInTheDocument();
+    expect(screen.getByText("8 道原创题")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "用 8 道题找到第一轮训练重点" })).toBeInTheDocument();
+    expect(screen.getByText(/诊断题不会消耗任何一套历年真题/u)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "开始 30 分钟诊断" })).toHaveAttribute(
       "href",
       "/practice/tmua-diagnostic-v1",

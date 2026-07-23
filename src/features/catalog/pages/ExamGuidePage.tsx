@@ -1,4 +1,4 @@
-import { CheckCircle2, FileText, ShieldCheck } from "lucide-react";
+import { CheckCircle2, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SiteHeader } from "../../navigation/components/SiteHeader.js";
 import { getExamGuide } from "../exam-guides.js";
@@ -76,23 +76,27 @@ export function ExamGuidePage({ exam }: ExamGuidePageProps) {
 
       <section className="exam-guide-section exam-guide-resources page-shell" id="resources" aria-labelledby={`${exam.id}-resources-title`}>
         <header className="section-heading">
-          <p>本站整理依据 · SOURCES DIGESTED</p>
-          <h2 id={`${exam.id}-resources-title`}>官方资料已经整理进本站</h2>
-          <span>学生无需离开本站寻找入口；原始来源、核验日期与权利状态保存在内部版本化清单。</span>
+          <p>完整准备 · ALL IN ONE PLACE</p>
+          <h2 id={`${exam.id}-resources-title`}>接下来需要的内容都在这里</h2>
+          <span>了解考试后，继续完成定位、在线练习和针对性复习。</span>
         </header>
         <div className="exam-guide-resources__grid">
-          {guide.officialLinks.map((resource) => (
-            <article key={resource.href}>
-              <FileText aria-hidden="true" />
-              <div><h3>{resource.label}</h3><p>{resource.description}</p><span>已纳入本站来源清单</span></div>
-              <CheckCircle2 aria-hidden="true" />
-            </article>
-          ))}
+          <article>
+            <FileText aria-hidden="true" />
+            <div><h3>考试与课程定位</h3><p>根据申请方向和课程背景，确认考试模块与知识缺口。</p><Link to={exam.href}>进入 {exam.name} 概览</Link></div>
+            <CheckCircle2 aria-hidden="true" />
+          </article>
+          <article>
+            <FileText aria-hidden="true" />
+            <div><h3>在线题库与模拟练习</h3><p>直接在系统内完成计时、标记、提交和结果回顾。</p><Link to={`${exam.href}/past-papers`}>查看在线练习</Link></div>
+            <CheckCircle2 aria-hidden="true" />
+          </article>
+          <article>
+            <FileText aria-hidden="true" />
+            <div><h3>Review Notes</h3><p>按照考试模块复习核心知识、常见错误与解题方法。</p><Link to={`${exam.href}/resources`}>查看复习资料</Link></div>
+            <CheckCircle2 aria-hidden="true" />
+          </article>
         </div>
-        <p className="exam-guide-resources__boundary">
-          <ShieldCheck aria-hidden="true" />
-          本站保留来源可追溯性，但不会把外部链接当作产品；在线题库只使用满托原创、已授权或完成独立权利核验的内容。
-        </p>
       </section>
     </main>
   );

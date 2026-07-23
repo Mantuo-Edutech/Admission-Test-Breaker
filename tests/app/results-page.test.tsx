@@ -178,7 +178,7 @@ describe("evidence-only results page", () => {
     expect(screen.getByText("正确 1")).toBeInTheDocument();
     expect(screen.getByText("未作答 19")).toBeInTheDocument();
     expect(screen.getByText("活跃页内用时")).toBeInTheDocument();
-    expect(screen.getByText(/样本积累中/)).toBeInTheDocument();
+    expect(screen.getByText(/完成更多练习后，趋势会更稳定/u)).toBeInTheDocument();
     expect(screen.getByLabelText("你的答案 F")).toBeInTheDocument();
     expect(screen.getAllByLabelText("正确答案 F")).not.toHaveLength(0);
     expect(screen.getAllByRole("link", { name: /报告这道题的问题/u })[0]).toHaveAttribute(

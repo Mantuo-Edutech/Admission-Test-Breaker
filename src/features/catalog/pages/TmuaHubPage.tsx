@@ -24,7 +24,7 @@ const STARTING_STEPS = [
   {
     number: "03",
     title: "开始在线练习",
-    detail: "进入已核验的完整试卷，系统记录作答、修改和实际用时。",
+    detail: "进入 18 套完整真题，系统记录作答、修改和实际用时。",
   },
   {
     number: "04",
@@ -63,14 +63,12 @@ export function TmuaHubPage({ services }: TmuaHubPageProps) {
             )}
           </div>
         </div>
-        <dl aria-label="TMUA 已核验资料概览" role="group">
-          <div><dt>已归档试卷</dt><dd>{TMUA_PUBLIC_SUMMARY.paperCount} 套</dd></div>
-          <div className="tmua-hub-hero__available"><dt>可在线作答</dt><dd>{TMUA_ONLINE_PAPER_MANIFEST.questionCount} 道</dd></div>
+        <dl aria-label="TMUA 真题与在线练习" role="group">
+          <div><dt>历年真题</dt><dd>{TMUA_PUBLIC_SUMMARY.paperCount} 套</dd></div>
+          <div className="tmua-hub-hero__available"><dt>真题总量</dt><dd>{TMUA_ONLINE_PAPER_MANIFEST.questionCount} 道</dd></div>
           <div>
-            <dt>已完成原生排版</dt>
-            <dd>
-              {TMUA_PUBLIC_SUMMARY.publishedQuestionCount} / {TMUA_ONLINE_PAPER_MANIFEST.questionCount} 道
-            </dd>
+            <dt>在线练习</dt>
+            <dd>{TMUA_PUBLIC_SUMMARY.paperCount} 套全部可作答</dd>
           </div>
         </dl>
       </section>

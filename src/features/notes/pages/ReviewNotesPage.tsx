@@ -112,7 +112,7 @@ export function ReviewNotesPage({
         <header>
           <p>02 · CURRICULUM BRIDGE</p>
           <h2 id="review-notes-curriculum-title">你学过的课程，哪些能直接迁移？<span>What Transfers — and What Still Needs Checking?</span></h2>
-          <small>这是课程范围判断，不是能力结论；请结合本人课程档案和实际练习证据。</small>
+          <small>这是课程范围判断；请结合本人课程档案和在线练习结果安排复习。</small>
         </header>
         <div className="review-notes-curricula">
           {notes.curriculumBridges.map((bridge) => (

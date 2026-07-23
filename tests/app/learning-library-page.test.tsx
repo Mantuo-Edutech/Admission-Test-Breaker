@@ -7,7 +7,7 @@ describe("standardized learning library", () => {
   it("shows only products that can be opened inside the site", async () => {
     render(<RouterProvider router={createAppRouter(["/library"])} />);
 
-    expect(await screen.findByRole("heading", { name: /真正可以打开使用的内容/u })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /完整题库与复习资料/u })).toBeInTheDocument();
     expect(
       within(screen.getByRole("list", { name: "资料使用顺序" })).getAllByRole("listitem")
         .map((item) => item.textContent),

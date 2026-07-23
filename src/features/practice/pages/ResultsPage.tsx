@@ -418,7 +418,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
           <div className="results-hero__copy">
             <p className="eyebrow">YOUR SESSION · YOUR EVIDENCE</p>
             <h1>本次练习完成</h1>
-            <p>这是基于本次作答和计时的事实记录。它不是能力定论，也不会用不足的样本制造排名。</p>
+            <p>查看本卷得分、知识表现、做题节奏和逐题答案。</p>
           </div>
           <div className="score-seal" aria-label={`得分 ${results.score} / ${results.maxScore}`}>
             <span>本次得分</span>
@@ -437,21 +437,21 @@ export function ResultsPage({ services }: ResultsPageProps) {
         <section className="result-insights page-shell">
           <article className="insight-card">
             <Clock3 aria-hidden="true" />
-            <p>节奏证据</p>
+            <p>做题节奏</p>
             <h2>{attemptedCount > 0 ? `完成 ${attemptedCount} 道作答` : "本次尚未作答"}</h2>
             <span>仅统计页面可见且练习处于活动状态的时间</span>
           </article>
           <article className="insight-card">
             <BarChart3 aria-hidden="true" />
-            <p>知识证据</p>
+            <p>知识表现</p>
             <h2>{attemptedTopics.length > 0 ? topicNames[attemptedTopics[0]!.knowledgeTag] ?? attemptedTopics[0]!.knowledgeTag : "等待更多数据"}</h2>
-            <span>这里只汇总本卷标签，不推断尚未被观察的能力。</span>
+            <span>根据本卷已作答题目的知识标签汇总</span>
           </article>
           <article className="insight-card">
             <DatabaseZap aria-hidden="true" />
-            <p>事件记录</p>
-            <h2>{eventCount} 条学习事件</h2>
-            <span>作答、修改、标记、浏览、计时与提交均带版本留存。</span>
+            <p>答题过程</p>
+            <h2>{eventCount} 次有效动作</h2>
+            <span>包括作答、修改、标记、浏览、计时与提交</span>
           </article>
         </section>
 
@@ -459,8 +459,8 @@ export function ResultsPage({ services }: ResultsPageProps) {
           <div><ShieldCheck aria-hidden="true" /></div>
           <div>
             <p className="eyebrow">FAIR BENCHMARK</p>
-            <h2>群体 Benchmark 样本积累中</h2>
-            <p>在考试版本、备考阶段、样本量与置信度足够之前，我们不会展示百分位或训练时间承诺。</p>
+            <h2>完成更多练习后，趋势会更稳定</h2>
+            <p>当前结果只反映本卷表现；随着练习增加，你会逐步看到更可靠的知识、速度和稳定性变化。</p>
           </div>
         </section>
 
@@ -468,7 +468,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
           <div className="section-heading">
             <div>
               <p className="eyebrow">ANSWER REVIEW</p>
-              <h2 id="answer-review-title">逐题证据</h2>
+              <h2 id="answer-review-title">逐题回顾</h2>
             </div>
             <span>答案仅在提交后显示</span>
           </div>
@@ -483,7 +483,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
                     : deepReview.kind === "error" && deepReview.reason !== "service"
                       ? "逐题解析暂时无法读取"
                       : deepReviewProduct === undefined
-                        ? "逐题解析产品映射缺失"
+                        ? "逐题解析暂时不可用"
                         : `${deepReviewProduct.title.zh}已经可用`}</p>
                 <span>{deepReview.kind === "available"
                   ? `${deepReview.payload.subtitleZh}。基础答案仍然免费。`

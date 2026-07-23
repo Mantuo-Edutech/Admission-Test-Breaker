@@ -102,7 +102,7 @@ export function TmuaCoveragePage({ services }: TmuaCoveragePageProps) {
 
       <section className="course-coverage-report page-shell" aria-labelledby="course-coverage-title">
         <header className="section-heading">
-          <p>10 个知识领域 · 映射版本 {report.mappingVersion}</p>
+          <p>10 个知识领域 · TMUA KNOWLEDGE MAP</p>
           <h2 id="course-coverage-title">逐项学习建议 <span>Topic-by-topic Plan</span></h2>
           <span>先看课程结论，再看具体主题和预计时间；时间是备课区间，不是能力 Benchmark。</span>
         </header>

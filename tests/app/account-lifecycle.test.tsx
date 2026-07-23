@@ -104,7 +104,7 @@ describe("student account lifecycle", () => {
 
     const library = await screen.findByRole("region", { name: "可用题库与学习资料" });
     expect(within(library).getAllByText("已解锁")).toHaveLength(2);
-    expect(screen.getByRole("heading", { name: "账号权限已确认" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "完整资料已经解锁" })).toBeInTheDocument();
   });
 
   it("reveals the private operations entry only after the separate operator check passes", async () => {
@@ -240,7 +240,7 @@ describe("student account lifecycle", () => {
 
     expect(await screen.findByRole("heading", { name: /你的数据属于你/u })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "默认只有学生本人可见" })).toBeInTheDocument();
-    expect(screen.getByText(/当前页面不是最终法律隐私声明/u)).toBeInTheDocument();
+    expect(screen.getByText(/通过站内反馈提交给满托服务团队/u)).toBeInTheDocument();
   });
 
   it("requests a reset without revealing whether the email exists", async () => {

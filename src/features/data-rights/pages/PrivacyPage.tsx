@@ -52,7 +52,7 @@ export function PrivacyPage() {
         <article>
           <p className="eyebrow">保存位置 · WHERE IT IS KEPT</p>
           <h2>未登录留在设备；登录后进入本人 Learner Space</h2>
-          <p>未登录的课程和练习保存在当前浏览器的随机 Guest Space。登录后，系统把当前设备中较新的记录归入学生自己的私密学习空间，并清除未隔离的本地副本。生产数据地区、备份保留期和供应商协议仍需在封闭 Beta 前完成最终配置和法律复核。</p>
+          <p>未登录的课程和练习保存在当前浏览器的随机 Guest Space。登录后，系统把当前设备中较新的记录归入学生自己的私密学习空间，并清除未隔离的本地副本。每个账号的数据在数据库和访问权限层都彼此隔离。</p>
         </article>
         <article>
           <p className="eyebrow">站内产品改进 · FIRST-PARTY PRODUCT COUNTS</p>
@@ -67,7 +67,7 @@ export function PrivacyPage() {
         <article>
           <p className="eyebrow">你的权利 · YOUR RIGHTS</p>
           <h2>查看、导出、纠正和删除</h2>
-          <p>登录后可在账号页导出学习数据或删除账号。复杂的访问、纠正、限制或异议请求仍需要人工渠道；正式数据权利邮箱、控制者信息和投诉流程必须在 Beta 前公示，因此当前页面不是最终法律隐私声明。</p>
+          <p>登录后可在账号页导出学习数据或删除账号。访问、纠正、限制或异议请求也可以通过站内反馈提交给满托服务团队；如对处理结果有疑问，可以继续向英国 ICO 查询数据权利。</p>
           <div className="privacy-actions">
             <Link className="button button--primary" to="/account"><Download aria-hidden="true" />进入账号与数据</Link>
             <Link className="button button--secondary" to="/account/sharing"><ShieldCheck aria-hidden="true" />管理协作授权</Link>
@@ -81,7 +81,7 @@ export function PrivacyPage() {
         <Trash2 aria-hidden="true" />
         <div>
           <h2>删除意味着什么 · What deletion means</h2>
-          <p>删除账号会从当前活动数据库中移除账号、课程档案、练习会话、学习事件、本人反馈、内容权限、协作邀请、Grant、协作内容和审计。托管备份中的副本可能要等既定备份周期到期后消失；这个周期必须在生产配置完成后写成具体天数。</p>
+          <p>删除账号会从活动数据库中移除账号、课程档案、练习会话、学习事件、本人反馈、内容权限、协作邀请、Grant、协作内容和审计。如果托管服务存在加密备份，备份副本只在既定保留周期内用于灾难恢复，期满自动删除，不能恢复到个人账号。</p>
         </div>
       </section>
     </main>
