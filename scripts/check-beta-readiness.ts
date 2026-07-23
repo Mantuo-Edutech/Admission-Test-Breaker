@@ -1,5 +1,11 @@
 import { access, readFile } from "node:fs/promises";
 import path from "node:path";
+import {
+  PRODUCTION_P0_GATES,
+  REPOSITORY_VERIFIED_PRODUCTION_GATES,
+  type ProductionP0GateId,
+} from "../src/platform/production-evidence-ledger.js";
+import { auditProductionEvidence } from "./lib/production-evidence.js";
 
 type Status = "verified" | "partial" | "incomplete" | "blocked";
 
@@ -68,14 +74,32 @@ async function loadAssessment(): Promise<ReadinessAssessment> {
 
 const assessment = await loadAssessment();
 const p0 = assessment.gates.filter((gate) => gate.priority === "P0");
-const verifiedP0 = p0.filter((gate) => gate.status === "verified").length;
+const repositoryVerifiedP0 = p0
+  .filter((gate) => gate.status === "verified")
+  .map((gate) => gate.id)
+  .filter((id): id is ProductionP0GateId => PRODUCTION_P0_GATES.includes(id as ProductionP0GateId));
+for (const gate of repositoryVerifiedP0) {
+  if (!REPOSITORY_VERIFIED_PRODUCTION_GATES.includes(
+    gate as typeof REPOSITORY_VERIFIED_PRODUCTION_GATES[number],
+  )) {
+    throw new Error(`${gate} cannot be verified by editing the static readiness assessment`);
+  }
+}
+const expectedRelease = process.env.PRODUCTION_EVIDENCE_RELEASE?.trim();
+const productionEvidence = await auditProductionEvidence({
+  repositoryVerifiedGates: repositoryVerifiedP0,
+  ...(expectedRelease === undefined || expectedRelease === "" ? {} : { expectedRelease }),
+});
 
-console.log(`Beta readiness: ${assessment.readinessScore}/100 (${assessment.decision})`);
-console.log(`P0 gates: ${verifiedP0}/${p0.length} verified`);
-for (const gate of p0.filter((item) => item.status !== "verified")) {
-  console.log(`- ${gate.id} ${gate.name}: ${gate.status}`);
+console.log(`Beta readiness baseline: ${assessment.readinessScore}/100 (${assessment.decision})`);
+console.log(
+  `P0 gates from current evidence: ${productionEvidence.verifiedGateCount}/${productionEvidence.totalGateCount} verified`,
+);
+for (const gate of productionEvidence.gates.filter((item) => item.status !== "verified")) {
+  const name = p0.find((item) => item.id === gate.id)?.name ?? gate.id;
+  console.log(`- ${gate.id} ${name}: ${gate.status}`);
 }
 
-if (process.argv.includes("--require-ready") && assessment.decision !== "ready") {
+if (process.argv.includes("--require-ready") && !productionEvidence.ready) {
   process.exitCode = 1;
 }

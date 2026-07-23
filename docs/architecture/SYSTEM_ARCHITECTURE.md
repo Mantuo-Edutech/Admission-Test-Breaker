@@ -388,6 +388,8 @@ Projections ──只消费事件，不反向修改──> Event Ledger
 
 验证代码与生产实现分离；测试不能通过复制生产逻辑获得“假绿”。每个发布项必须在总验证矩阵中有负责人、命令和证据。
 
+生产事实不再直接写进一段会过期的 readiness 文案。`verification/production/control-catalog.json` 把 P0 拆成自动控制与人工控制；`verification/production/evidence/` 的记录绑定 production origin、Supabase project ref、控制源文件指纹、时间，并在需要时绑定准确的 deployed commit。最近失败会覆盖旧成功，证据过期、目标改变、release 改变或控制代码变化都会自动失效。`pnpm production:evidence:audit` 解释缺口，`pnpm production:evidence:gate` 与 `pnpm beta:gate` 按证据推导 6 个 P0，而不是相信手改状态。人工记录必须有指定角色、精确 attestation 和本地证据哈希；该机制只能验证签字完整性，不能冒充法律审核、真机 UAT、MFA 账号所有权或真实恢复演练。决策见 `docs/architecture/decisions/2026-07-24-source-bound-production-evidence-ledger.md`。
+
 已交付功能在 `verification/features/*.yaml` 中声明用户结果、可核验主张、代码证据、自动命令、人工视口检查和明确非能力边界。`pnpm verify:features` 可独立检查清单结构、证据路径与命令是否真实存在；`pnpm verify` 同时执行架构、功能、内容、单元、类型、生产构建、Web 性能预算，以及受保护正文不得进入公开 bundle 的泄露门禁。练习路由把考试档案门与题目注册表放在同一个异步边界内，因此首页不会为了显示五个考试入口而加载 360 道 TMUA 正文；TARA 两套 22 题完整模考、LNAT 12 篇/42 题完整结构模考，以及 UCAT VR、DM、QR 三套完整模考都通过 `loadPracticePaper` 建立独立动态题目分块，只在练习或历史结果真正需要对应试卷时加载并缓存，避免所有练习共享包随内容增长失控。KaTeX 样式也随公式组件按需加载。`pnpm verify:web-performance` 对生产构建的入口 JS、首屏 JS、首屏 JS+CSS 和最大非入口 JS 分别设定字节门槛，回归时直接失败。
 
 私密账户切片额外提供两级门禁：`pnpm verify:supabase-contracts` 静态检查 RLS、事务 RPC、服务端密钥、资料签发、运营/漏斗最小权限、学生 Grant、数据权利、反馈、私有资料、不可变练习版本与认证基线；`pnpm verify:supabase` 在本地 Supabase 执行 9 个数据库文件中的 268 项 pgTAP 隔离测试，并通过真实 HTTP 验证现有账号、运营、邀请码、学习数据、反馈、漏斗、服务端题面/评分和私有资料链路。其中 44 项协作 pgTAP 单独证明老师/家长正向权限、五项 scope 不继承、考试隔离、第三账号拒绝、审计、schema-v4 导出和立即撤销。`pnpm verify:collaboration` 另外检查领域、Supabase adapter、四页路由、账号入口和电脑/iPad/手机布局契约。`pnpm verify:learning-record` 独立检查本机历史归档、Guest claim、历史结果回看和按考试投影；`pnpm verify:e2e` 在 Chromium 桌面、iPad 和手机尺寸执行关键练习旅程。这些仍不能代替真实 Safari/iOS/Android、键盘、屏幕阅读器和 reduced-motion 人工 UAT。
@@ -404,4 +406,4 @@ Projections ──只消费事件，不反向修改──> Event Ledger
 
 Supabase 云项目选择先经过独立的只读边界。`production:supabase-inventory` 只执行 `projects list` 并返回公开 project ref、名称、organization、状态和创建时间；`production:supabase-plan` 将 staging/production 的 `create`、`reuse` 或 `defer` 输入验证为 dry-run 步骤。两个环境不能共用项目，非健康旧项目不能直接复用，首次新建只能计划 nano 且必须提示可能费用。该层没有 create/delete/pause/restore/link、数据库密码、service-role 或学生数据读取路径，也不等于后续项目创建获批。决策见 `docs/architecture/decisions/2026-07-19-fail-closed-supabase-project-selection.md`。
 
-当前 Vite 应用、本地 Supabase、可运行容器、恢复演练和容量结果是 Reference Journey 与生产兼容底座，不代表满托云端后端、SMTP、平台恢复或告警已经完成。任何“本地可体验”能力都必须在界面和文档中区分本地证据与生产隐私保证。具体操作和 RPO/RTO 边界见 `docs/operations/PRODUCTION_BETA_RUNBOOK.md`。
+当前 Vite 应用、本地 Supabase、可运行容器、本地恢复演练和容量结果是 Reference Journey 与生产兼容底座，不自动代表 SMTP 邮件、平台恢复、真实设备旅程或告警已经完成。实际完成度只取当前生产证据审计结果；任何“本地可体验”能力都必须在界面和文档中区分本地证据与生产隐私保证。具体操作和 RPO/RTO 边界见 `docs/operations/PRODUCTION_BETA_RUNBOOK.md`。

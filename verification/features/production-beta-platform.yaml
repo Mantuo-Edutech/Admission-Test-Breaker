@@ -83,10 +83,23 @@ claims:
     automatedChecks:
       - verify:recovery-local
       - verify:beta-load-local
+  - id: source-bound-production-evidence
+    status: verified
+    statement: 生产 P0 不再依赖可手改的环境叙述；控制目录把每项门禁拆为自动和人工证据，记录绑定 uktest.cc、生产 Supabase、源文件指纹、时效和准确 release。最近失败覆盖旧成功，任何源文件、目标或 release 漂移都会失效，人工结论必须提供精确 attestation 与去隐私证据哈希。
+    artifacts:
+      - verification/production/control-catalog.json
+      - src/platform/production-evidence-ledger.ts
+      - scripts/audit-production-evidence.ts
+      - scripts/record-production-evidence.ts
+      - tests/platform/production-evidence-ledger.test.ts
+      - docs/architecture/decisions/2026-07-24-source-bound-production-evidence-ledger.md
+    automatedChecks:
+      - verify:production-platform
+      - production:evidence:audit
 boundaries:
   - 当前证明的是本地恢复与 100 用户容量、可部署镜像、部署预检、定时真实 URL 验证契约和 CI 契约；尚未证明满托 staging 或 production 已部署，也没有真实云 URL 的 preflight 输出。定时 workflow 只有在 GitHub Environment 配置 `PUBLIC_APP_ORIGIN` 后才会形成远程运行证据。
   - Supabase 平台物理备份或新项目恢复是账号与托管 schema 的主要灾备路径；逻辑导出只是补充，不能替代平台备份。
-  - CAPTCHA 的客户端、CSP、runtime 和 Management API 自动配置契约已经验证，但满托真实 Turnstile hostname key 与 Supabase 云项目尚未配置；生产域名、SMTP、告警接收人和真实恢复演练仍是 Beta P0。
+  - CAPTCHA、SMTP、备份和部署都已有自动检查契约；是否在当前生产环境真实完成，只以 source-bound production evidence audit 为准。没有当前记录时保持未验证，不把旧文案或一次对话当成证据。
 manualChecks:
   - id: staging-production-promotion
     status: pending
