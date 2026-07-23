@@ -12,7 +12,7 @@ async function expectNoDocumentOverflow(page: Page) {
 test("the Mantou front door explains the product and exposes all five exams", async ({ page }) => {
   await page.goto("/");
 
-  await expect(page).toHaveTitle(/满托入学考试练习场.*TMUA.*UCAT/u);
+  await expect(page).toHaveTitle("满托｜英国入学考试练习与诊断");
   await expect(page.getByRole("heading", { level: 1, name: "不再为升学考试而焦虑" })).toBeVisible();
   await expect(page.getByRole("img", { name: "满托" })).toBeVisible();
   await expect(page.locator(".exam-entry")).toHaveCount(5);

@@ -33,7 +33,7 @@ async function completeUcatProfile(page: Page) {
   await page.getByRole("link", { name: "填写 UCAT 背景信息" }).click();
   await page.getByRole("radio", { name: /A-Level \/ IAL/u }).check();
   await page.getByRole("radio", { name: "Year 12" }).check();
-  await page.getByRole("checkbox", { name: "Mathematics数学", exact: true }).check();
+  await page.getByRole("checkbox", { name: "Mathematics 数学", exact: true }).check();
   await page.getByRole("radio", { name: "看过或做过少量样题" }).check();
   await page.getByRole("radio", { name: "每周 2–4 小时" }).check();
   await page.getByRole("button", { name: "保存并查看 UCAT 起点定位" }).click();
@@ -49,7 +49,7 @@ test("desktop: Decision Making completes, reloads and scores a five-statement se
 
   await page.goto("/");
   await page.locator('a.exam-entry[href="/exams/ucat"]').click();
-  await page.getByRole("link", { name: "免费在线练习", exact: true }).click();
+  await page.getByRole("link", { name: "查看免费在线练习", exact: true }).click();
   await page.getByRole("link", { name: /Decision Making 决策判断.*8 题.*开始练习/u }).click();
   await completeUcatProfile(page);
   await page.getByRole("link", { name: /Decision Making 决策判断.*8 题.*开始练习/u }).click();
