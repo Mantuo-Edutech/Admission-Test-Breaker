@@ -110,6 +110,13 @@ export interface ProductionEvidenceAssessment {
   readonly controls: readonly ProductionEvidenceControlAssessment[];
 }
 
+export interface ProductionEvidenceWorkspace {
+  readonly scope: ProductionEvidenceScope;
+  readonly release: string | null;
+  readonly head: string;
+  readonly porcelainStatus: string;
+}
+
 type UnknownRecord = Record<string, unknown>;
 
 function object(value: unknown, label: string): UnknownRecord {
@@ -139,6 +146,44 @@ function sha256(value: string | Uint8Array): string {
 
 function validSha256(value: string): boolean {
   return /^[a-f0-9]{64}$/u.test(value);
+}
+
+function changedPaths(porcelainStatus: string): readonly string[] {
+  return porcelainStatus
+    .split(/\r?\n/u)
+    .filter(Boolean)
+    .flatMap((line) => {
+      if (line.length < 4 || line[2] !== " ") {
+        throw new Error("Git returned an unreadable production evidence workspace status");
+      }
+      const path = line.slice(3);
+      if (path.startsWith('"') || path.endsWith('"')) {
+        throw new Error("Production evidence workspace paths must be unquoted UTF-8 paths");
+      }
+      return path.split(" -> ");
+    });
+}
+
+export function assertProductionEvidenceWorkspace(
+  workspace: ProductionEvidenceWorkspace,
+): void {
+  if (!/^[a-f0-9]{40}$/u.test(workspace.head)) {
+    throw new Error("Production evidence requires an exact Git HEAD commit");
+  }
+  if (workspace.scope === "release" && workspace.release !== workspace.head) {
+    throw new Error("Release-scoped production evidence must run from the exact release commit");
+  }
+  if (workspace.scope === "environment" && workspace.release !== null) {
+    throw new Error("Environment-scoped production evidence must not claim a release commit");
+  }
+  const unsafeChanges = changedPaths(workspace.porcelainStatus).filter(
+    (path) => !path.startsWith("verification/production/evidence/"),
+  );
+  if (unsafeChanges.length > 0) {
+    throw new Error(
+      `Production evidence workspace contains changes outside the evidence ledger: ${unsafeChanges.join(", ")}`,
+    );
+  }
 }
 
 function productionTarget(value: unknown, label: string): ProductionEvidenceTarget {

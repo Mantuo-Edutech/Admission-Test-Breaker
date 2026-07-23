@@ -38,6 +38,12 @@ catalog. Their structured reports must contain every required check, the exact t
 and an overall result derived from the individual checks; an empty attachment cannot become a
 passing result.
 
+For a release-scoped record, the recorder also requires Git HEAD to equal the claimed 40-character
+release exactly. For every record it rejects staged, tracked or untracked changes outside the
+production evidence directory, and it repeats this check after an automated command returns.
+Consequently an Agent cannot run stronger, uncommitted or future validation code and attach the
+result to an older deployed release.
+
 Raw command output, credentials, personal email addresses, student data and invite codes are not
 stored in the ledger. A newer failure overrides an older pass. A target, release, control or source
 change invalidates old evidence automatically.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "2026-07-24.1",
+  "revision": "2026-07-24.3",
   "target": {
     "environment": "production",
     "origin": "https://uktest.cc",
@@ -99,6 +99,7 @@
       "gates": ["B100-P0-02", "B100-P0-05"],
       "sourcePaths": [
         "scripts/verify-supabase-remote.ts",
+        "src/platform/remote-practice-catalog-contract.ts",
         "supabase/migrations/20260718143000_durable_learner_data.sql",
         "supabase/migrations/20260719210000_student_controlled_collaboration.sql"
       ],
@@ -216,6 +217,7 @@
       "gates": ["B100-P0-04"],
       "sourcePaths": [
         ".github/workflows/deployment-smoke.yml",
+        "deploy/monitored-environments.json",
         "docs/operations/PRODUCTION_BETA_RUNBOOK.md",
         "src/platform/production-manual-evidence.ts",
         "verification/production/manual-control-procedures.json"

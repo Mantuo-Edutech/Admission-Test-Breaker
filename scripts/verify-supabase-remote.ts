@@ -1,5 +1,9 @@
 import { createPracticeSession } from "../src/features/practice/domain/session.js";
-import { parseDeliveredPracticePaper, parsePracticeResults } from "../src/features/practice/delivery/domain.js";
+import { parsePracticeResults } from "../src/features/practice/delivery/domain.js";
+import {
+  PUBLISHED_PRACTICE_REVISIONS,
+} from "../src/features/practice/content/published-revisions.js";
+import { verifyRemotePracticeCatalog } from "../src/platform/remote-practice-catalog-contract.js";
 
 interface AdminUser { readonly id: string }
 interface PasswordSession { readonly access_token: string }
@@ -76,15 +80,19 @@ try {
   const firstAuth = { ...publicHeaders, Authorization: `Bearer ${(await login(firstEmail, password)).access_token}` };
   const secondAuth = { ...publicHeaders, Authorization: `Bearer ${(await login(secondEmail, password)).access_token}` };
 
-  const rawPaper = await request<unknown>("/rest/v1/rpc/get_practice_paper", {
-    method: "POST",
-    headers: publicHeaders,
-    body: JSON.stringify({ p_paper_id: "tmua-2023-p1", p_paper_revision_id: "tmua-2023-p1-r1" }),
-  }, "Remote safe paper delivery");
-  const paper = parseDeliveredPracticePaper(rawPaper, "tmua-2023-p1");
-  if (paper.questions.length !== 20 || JSON.stringify(rawPaper).includes("correctAnswer")) {
-    throw new Error("Remote question delivery crossed the answer-key boundary");
-  }
+  const deliveredCatalog = await verifyRemotePracticeCatalog(
+    PUBLISHED_PRACTICE_REVISIONS.papers,
+    (expected) => request<unknown>("/rest/v1/rpc/get_practice_paper", {
+      method: "POST",
+      headers: publicHeaders,
+      body: JSON.stringify({
+        p_paper_id: expected.paperId,
+        p_paper_revision_id: expected.paperRevisionId,
+      }),
+    }, `Remote safe paper delivery ${expected.paperRevisionId}`),
+  );
+  const paper = deliveredCatalog.papers.get("tmua-2023-p1");
+  if (paper === undefined) throw new Error("Remote delivery omitted the scoring reference paper");
 
   const guestSpaceId = `gsp_remote_${unique}`;
   const session = createPracticeSession({
@@ -186,7 +194,10 @@ try {
   }, "Second learner entitled-content isolation lookup");
   if (secondNotes.length !== 0) throw new Error("Entitled Notes crossed the tenant boundary");
 
-  console.log("Remote Supabase identity, immutable sessions, scoring, RLS, invite and entitled Notes: PASS");
+  console.log(
+    `Remote Supabase ${deliveredCatalog.paperCount} papers / ${deliveredCatalog.questionCount} questions, ` +
+    "identity, immutable sessions, scoring, RLS, invite and entitled Notes: PASS",
+  );
 } finally {
   for (const user of users.reverse()) {
     await fetch(`${apiUrl}/auth/v1/admin/users/${user.id}`, {

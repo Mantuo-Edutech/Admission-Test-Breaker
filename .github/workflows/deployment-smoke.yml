@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
 
 concurrency:
   group: deployment-smoke-${{ github.event_name == 'workflow_dispatch' && inputs.environment || 'production' }}
@@ -24,7 +25,6 @@ concurrency:
 jobs:
   deployed-journey:
     runs-on: ubuntu-latest
-    environment: ${{ github.event_name == 'workflow_dispatch' && inputs.environment || 'production' }}
     steps:
       - uses: actions/checkout@v7
       - uses: pnpm/action-setup@v6
@@ -35,21 +35,28 @@ jobs:
           node-version: 22.18.0
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - name: Require the selected environment URL
-        run: test -n "$DEPLOYMENT_BASE_URL"
-        env:
-          DEPLOYMENT_BASE_URL: ${{ vars.PUBLIC_APP_ORIGIN }}
+      - name: Resolve the public monitored target
+        id: target
+        run: |
+          selected="${{ github.event_name == 'workflow_dispatch' && inputs.environment || 'production' }}"
+          origin="$(jq -er --arg selected "$selected" '.environments[$selected].origin' deploy/monitored-environments.json)"
+          project_ref="$(jq -er --arg selected "$selected" '.environments[$selected].supabaseProjectRef' deploy/monitored-environments.json)"
+          [[ "$origin" =~ ^https://[A-Za-z0-9.-]+$ ]]
+          [[ "$project_ref" =~ ^[a-z0-9]{20}$ ]]
+          echo "environment=$selected" >> "$GITHUB_OUTPUT"
+          echo "origin=$origin" >> "$GITHUB_OUTPUT"
+          echo "project_ref=$project_ref" >> "$GITHUB_OUTPUT"
       - name: Verify deployed runtime, Auth and security headers
         run: pnpm verify:deployment
         env:
-          DEPLOYMENT_BASE_URL: ${{ vars.PUBLIC_APP_ORIGIN }}
-          EXPECTED_ENVIRONMENT: ${{ github.event_name == 'workflow_dispatch' && inputs.environment || 'production' }}
-          EXPECTED_SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+          DEPLOYMENT_BASE_URL: ${{ steps.target.outputs.origin }}
+          EXPECTED_ENVIRONMENT: ${{ steps.target.outputs.environment }}
+          EXPECTED_SUPABASE_PROJECT_REF: ${{ steps.target.outputs.project_ref }}
       - run: pnpm exec playwright install --with-deps chromium
       - name: Verify deployed public and Guest learning journeys
         run: pnpm verify:e2e:deployment
         env:
-          DEPLOYMENT_BASE_URL: ${{ vars.PUBLIC_APP_ORIGIN }}
+          DEPLOYMENT_BASE_URL: ${{ steps.target.outputs.origin }}
       - if: failure()
         uses: actions/upload-artifact@v7
         with:
@@ -58,9 +65,31 @@ jobs:
             playwright-deployment-report/
             test-results/
           retention-days: 14
+      - name: Reconcile the production monitor incident
+        if: always() && github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MONITOR_STATUS: ${{ job.status }}
+          MONITOR_ORIGIN: ${{ steps.target.outputs.origin }}
+          MONITOR_RELEASE_RUN: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          label="production-monitor"
+          title="[production-monitor] uktest.cc deployment smoke failed"
+          gh label create "$label" --color B60205 --description "Automated production availability incident" --force
+          issue_number="$(gh issue list --state open --label "$label" --json number --jq '.[0].number // ""')"
+          if [ "$MONITOR_STATUS" != "success" ]; then
+            body="Automated checks failed for ${MONITOR_ORIGIN}. Run: ${MONITOR_RELEASE_RUN}"
+            if [ -z "$issue_number" ]; then
+              gh issue create --title "$title" --body "$body" --label "$label"
+            else
+              gh issue comment "$issue_number" --body "$body"
+            fi
+          elif [ -n "$issue_number" ]; then
+            gh issue close "$issue_number" --comment "Automated checks recovered. Run: ${MONITOR_RELEASE_RUN}"
+          fi
       - name: Record monitored deployment
         if: always()
         run: |
-          echo "Environment: ${{ github.event_name == 'workflow_dispatch' && inputs.environment || 'production' }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "Origin: ${{ vars.PUBLIC_APP_ORIGIN }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Environment: ${{ steps.target.outputs.environment }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Origin: ${{ steps.target.outputs.origin }}" >> "$GITHUB_STEP_SUMMARY"
           echo "This check validates deployed runtime/Auth headers and read-only public/Guest learning journeys. It does not create an account or consume an invite." >> "$GITHUB_STEP_SUMMARY"
