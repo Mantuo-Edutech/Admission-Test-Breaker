@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { describe, expect, it } from "vitest";
 import {
   assessProductionEvidence,
+  assertProductionEvidenceWorkspace,
   parseProductionEvidenceCatalog,
   parseProductionEvidenceRecord,
   productionControlSourceFingerprint,
@@ -204,5 +205,39 @@ describe("production evidence ledger", () => {
     expect(second).not.toBe(first);
     expect(paths).toContain("scripts/record-production-evidence.ts");
     expect(paths).toContain("src/platform/production-evidence-ledger.ts");
+  });
+
+  it("binds release evidence to the exact clean commit while allowing ledger artifacts", () => {
+    expect(() => assertProductionEvidenceWorkspace({
+      scope: "release",
+      release,
+      head: release,
+      porcelainStatus:
+        "?? verification/production/evidence/artifacts/identity-redacted.json\n" +
+        "?? verification/production/evidence/2026-07-24--identity.json\n",
+    })).not.toThrow();
+
+    expect(() => assertProductionEvidenceWorkspace({
+      scope: "release",
+      release,
+      head: "f".repeat(40),
+      porcelainStatus: "",
+    })).toThrow("exact release commit");
+
+    expect(() => assertProductionEvidenceWorkspace({
+      scope: "release",
+      release,
+      head: release,
+      porcelainStatus: " M scripts/verify-supabase-remote.ts\n",
+    })).toThrow("changes outside the evidence ledger");
+  });
+
+  it("prevents environment evidence from claiming a release", () => {
+    expect(() => assertProductionEvidenceWorkspace({
+      scope: "environment",
+      release,
+      head: release,
+      porcelainStatus: "",
+    })).toThrow("must not claim a release commit");
   });
 });

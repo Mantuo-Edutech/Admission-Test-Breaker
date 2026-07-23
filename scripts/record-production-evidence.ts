@@ -1,7 +1,9 @@
-import { spawn } from "node:child_process";
+import { execFile as execFileCallback, spawn } from "node:child_process";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { promisify } from "node:util";
 import {
+  assertProductionEvidenceWorkspace,
   parseProductionEvidenceRecord,
   productionControlSourceFingerprint,
   productionTargetEnvironment,
@@ -18,6 +20,8 @@ import {
   loadProductionEvidenceCatalog,
   PRODUCTION_EVIDENCE_DIRECTORY,
 } from "./lib/production-evidence.js";
+
+const execFile = promisify(execFileCallback);
 
 const MANUAL_PROCEDURE_CATALOG_PATH =
   "verification/production/manual-control-procedures.json";
@@ -86,6 +90,22 @@ async function writeEvidence(record: ProductionEvidenceRecord): Promise<string> 
   return outputPath;
 }
 
+async function assertEvidenceWorkspace(
+  scope: "release" | "environment",
+  release: string | null,
+): Promise<void> {
+  const [head, status] = await Promise.all([
+    execFile("git", ["rev-parse", "HEAD"], { encoding: "utf8" }),
+    execFile("git", ["status", "--porcelain=v1", "--untracked-files=all"], { encoding: "utf8" }),
+  ]);
+  assertProductionEvidenceWorkspace({
+    scope,
+    release,
+    head: head.stdout.trim(),
+    porcelainStatus: status.stdout,
+  });
+}
+
 const controlId = argument("--control");
 if (controlId === undefined) throw new Error("--control is required");
 const catalog = await loadProductionEvidenceCatalog();
@@ -98,6 +118,7 @@ if (process.argv.includes("--manual-only") && control.method !== "manual") {
   throw new Error(`${controlId} requires the automated evidence runner`);
 }
 const release = fullRelease(control.scope);
+await assertEvidenceWorkspace(control.scope, release);
 const observedAt = new Date().toISOString();
 const sourceFingerprint = await productionControlSourceFingerprint(
   catalog,
@@ -133,6 +154,7 @@ if (control.method === "automated") {
     },
     artifacts: [],
   };
+  await assertEvidenceWorkspace(control.scope, release);
   console.log(`Evidence written: ${await writeEvidence(record)}`);
   if (result.exitCode !== 0) process.exitCode = result.exitCode;
 } else {
@@ -187,5 +209,6 @@ if (control.method === "automated") {
     },
     artifacts,
   };
+  await assertEvidenceWorkspace(control.scope, release);
   console.log(`Evidence written: ${await writeEvidence(record)}`);
 }
