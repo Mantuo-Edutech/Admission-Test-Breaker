@@ -16,3 +16,4 @@ node_modules/
 deploy/bootstrap-input.local.json
 deploy/turnstile-bootstrap.local.json
 deploy/supabase-project-selection.local.json
+deploy/ecs-host-nginx.env.local

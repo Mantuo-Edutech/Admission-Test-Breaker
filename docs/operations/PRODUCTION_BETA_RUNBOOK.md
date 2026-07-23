@@ -233,7 +233,7 @@ GitHub 的 `staging` 与 `production` Environments 各自配置：
 - Variables：`PUBLIC_APP_ORIGIN`、`TURNSTILE_SITE_KEY`、`SMTP_HOST`、`SMTP_PORT`、`SMTP_ADMIN_EMAIL`、`SMTP_SENDER_NAME`；
 - Required reviewers：至少创始人/技术责任人一人；production 不允许无审批自动发布。
 
-服务器从 `deploy/.env.production.example` 创建不进 Git 的 `.env.production`。其中 Supabase publishable key 与 `TURNSTILE_SITE_KEY` 可以进入浏览器；Turnstile secret、数据库 URL、service-role key 和 GitHub token 不得放入该文件或任何 `VITE_*` 变量。
+专用单站服务器从 `deploy/.env.production.example` 创建不进 Git 的 `.env.production`。现有香港共享 ECS 改用 `deploy/ecs-host-nginx.env.example` 生成宿主机权限为 `0600`、不进 Git 的 `ecs-host-nginx.env.local`。两者都只允许浏览器公开配置：Supabase publishable key 与 `TURNSTILE_SITE_KEY`；Turnstile secret、数据库 URL、service-role key、SMTP 凭据和 GitHub token 不得放入该文件或任何 `VITE_*` 变量。
 
 Supabase 项目还必须完成：正式域名 redirect allowlist、自定义 SMTP、CAPTCHA/滥用保护、团队 MFA、网络/SSL 安全检查、备份计划和 Auth 邮件模板。平台的现行生产检查清单见：https://supabase.com/docs/guides/deployment/going-into-prod
 
@@ -289,14 +289,27 @@ unset SMTP_USER
 1. 合并前 GitHub `Verify` 必须通过应用、数据库、恢复、100 用户容量和容器五个 job；内容负责人另外运行 `pnpm verify:manual-review-ledger`、`pnpm verify:content-release-readiness` 与 `pnpm verify:manual-review-worklist`，确认目标产品的人工决定仍对应当前源文件、证据未被改写且没有未解释、遗漏或重复的阻塞项。
 2. 运行 `Release immutable image`，选择 staging；它只发布 `ghcr.io/mantuo-edutech/admission-test-breaker:<commit-sha>`。
 3. 运行 `Deploy Supabase environment`，输入同一 SHA 和 staging。工作流先通过 Management API 对比远端迁移历史，再将每个待执行 migration 与历史记录放在同一事务中应用；production 还会在任何 migration 写入前要求一个最近 30 小时内的真实托管恢复点。随后启用并复核 Auth Turnstile、自定义 SMTP，配置 `ALLOWED_ORIGINS` 并部署 `invite-preview`。远端存在仓库没有的迁移、production 没有恢复点或 Auth 配置不完整时必须失败关闭。
-4. staging 服务器使用同一 SHA 更新 `APP_IMAGE` 与 `APP_RELEASE`：
+4. staging 服务器使用同一 SHA 更新 `APP_IMAGE` 与 `APP_RELEASE`。专用单站主机可以使用 Compose；**香港共享 ECS 不得启动该 Compose 内的 Caddy**，因为宿主机 Nginx 已经为多个站点占用 80/443。共享 ECS 使用：
 
    ```bash
-   docker compose --env-file .env.production -f compose.production.yml pull
-   docker compose --env-file .env.production -f compose.production.yml up -d
+   if [ ! -f /opt/admission-test-breaker/ecs-host-nginx.env.local ]; then
+     install -m 0600 deploy/ecs-host-nginx.env.example \
+       /opt/admission-test-breaker/ecs-host-nginx.env.local
+   fi
+   # 在批准终端填写浏览器公开值与准确 commit SHA；不放任何 secret。
+   set -a
+   . /opt/admission-test-breaker/ecs-host-nginx.env.local
+   set +a
+   deploy/deploy-ecs-host-nginx.sh
    ```
 
-   直接替换 Web 容器时，必须先运行 `deploy/prepare-static-asset-archive.sh <当前容器名> <持久资源目录>`，再把该目录只读挂载到 `/usr/share/nginx/html/assets`。资源目录保留最近 14 天的哈希文件，确保发布前已经打开的标签页仍能进入懒加载路由；不得只替换容器并立即删除上一版本的全部静态资源。
+   发布器先验证宿主机 Nginx 仍代理 `127.0.0.1:8090`，并要求 SHA tag、OCI revision label、镜像内只读 build-revision 三者一致；然后才由准确镜像生成 runtime 文件、合并最近 14 天哈希资源、在随机 loopback 端口完成候选验证。候选通过后才保留旧容器并切换 8090；新版本在 loopback 或公开域名验证失败时自动恢复旧版本。它不编辑或 reload Nginx，不绑定 80/443，不清理其他容器或镜像。成功状态写入 `/opt/admission-test-breaker/deployment-state/current.json`，上一容器保持停止但可立即恢复：
+
+   ```bash
+   deploy/rollback-ecs-host-nginx.sh
+   ```
+
+   不得在记录完真实线上验证和回滚证据前删除该容器、对应 runtime 目录或旧镜像。详细决策见 `docs/architecture/decisions/2026-07-24-shared-ecs-release-control.md`。
 
 5. 验证实际运行版本：
 
