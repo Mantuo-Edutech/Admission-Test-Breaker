@@ -14,6 +14,11 @@ export const REPOSITORY_VERIFIED_PRODUCTION_GATES = ["B100-P0-06"] as const;
 export type ProductionEvidenceMethod = "automated" | "manual";
 export type ProductionEvidenceScope = "release" | "environment";
 
+const PRODUCTION_EVIDENCE_FRAMEWORK_SOURCE_PATHS = [
+  "scripts/record-production-evidence.ts",
+  "src/platform/production-evidence-ledger.ts",
+] as const;
+
 export interface ProductionEvidenceTarget {
   readonly environment: "production";
   readonly origin: string;
@@ -313,7 +318,11 @@ export async function productionControlSourceFingerprint(
   read: (path: string) => Promise<string | Uint8Array>,
 ): Promise<string> {
   const sources = [];
-  for (const sourcePath of [...control.sourcePaths].sort()) {
+  const sourcePaths = [...new Set([
+    ...PRODUCTION_EVIDENCE_FRAMEWORK_SOURCE_PATHS,
+    ...control.sourcePaths,
+  ])].sort();
+  for (const sourcePath of sourcePaths) {
     sources.push({ path: sourcePath, sha256: sha256(await read(sourcePath)) });
   }
   return sha256(JSON.stringify({

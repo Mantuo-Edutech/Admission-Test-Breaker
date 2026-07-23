@@ -31,6 +31,13 @@ Production records under `verification/production/evidence/` bind a result to:
 - either an exact automated command plus output digest, or a named role reference, exact manual
   attestation and hashed local artifacts.
 
+The source fingerprint always includes the ledger parser and recorder in addition to each
+control's declared sources. A change that weakens how evidence is parsed or recorded therefore
+invalidates every earlier result. Manual controls additionally bind to a versioned procedure
+catalog. Their structured reports must contain every required check, the exact target and release,
+and an overall result derived from the individual checks; an empty attachment cannot become a
+passing result.
+
 Raw command output, credentials, personal email addresses, student data and invite codes are not
 stored in the ledger. A newer failure overrides an older pass. A target, release, control or source
 change invalidates old evidence automatically.
@@ -40,8 +47,9 @@ change invalidates old evidence automatically.
 `pnpm beta:gate` consumes the same derived result instead of trusting manually edited P0 labels.
 
 Manual evidence can only be recorded through `pnpm production:evidence:record-manual` with the
-exact `I_COMPLETED_THIS_PRODUCTION_CONTROL` attestation and at least one hashed artifact. The tool
-validates the record; it does not decide whether a reviewer is qualified or perform the review.
+exact `I_COMPLETED_THIS_PRODUCTION_CONTROL` attestation, a structured report generated from the
+versioned procedure and any necessary supplementary hashed artifacts. The tool validates the
+record; it does not decide whether a reviewer is qualified or perform the review.
 
 ## Consequences
 

@@ -20,20 +20,38 @@ describe("production evidence architecture contract", () => {
   });
 
   it("makes the beta gate consume source-bound evidence without automating human approval", async () => {
-    const [packageJson, betaAudit, recorder, readme] = await Promise.all([
+    const [packageJson, betaAudit, recorder, readme, procedures] = await Promise.all([
       readFile("package.json", "utf8"),
       readFile("scripts/check-beta-readiness.ts", "utf8"),
       readFile("scripts/record-production-evidence.ts", "utf8"),
       readFile("verification/production/evidence/README.md", "utf8"),
+      readFile("verification/production/manual-control-procedures.json", "utf8"),
     ]);
     expect(packageJson).toContain("production:evidence:audit");
     expect(packageJson).toContain("production:evidence:gate");
     expect(packageJson).toContain("production:evidence:record-manual");
+    expect(packageJson).toContain("production:evidence:prepare-manual");
     expect(betaAudit).toContain("auditProductionEvidence");
     expect(recorder).toContain("I_COMPLETED_THIS_PRODUCTION_CONTROL");
     expect(recorder).toContain("sourceFingerprint");
+    expect(recorder).toContain("validateManualProductionControlReport");
+    expect(recorder).toContain("--report");
     expect(recorder).not.toContain("SUPABASE_SERVICE_ROLE_KEY=");
     expect(readme).toContain("do not hand-edit");
+    expect(procedures).toContain("identity-journey-uat");
+    expect(procedures).toContain("managed-recovery-drill");
+  });
+
+  it("binds every manual control to the structured UAT procedure and validator", async () => {
+    const catalog = parseProductionEvidenceCatalog(JSON.parse(
+      await readFile("verification/production/control-catalog.json", "utf8"),
+    ));
+    for (const control of catalog.controls.filter((candidate) => candidate.method === "manual")) {
+      expect(control.sourcePaths).toContain("src/platform/production-manual-evidence.ts");
+      expect(control.sourcePaths).toContain(
+        "verification/production/manual-control-procedures.json",
+      );
+    }
   });
 
   it("binds privacy approval to a complete independent-review packet", async () => {

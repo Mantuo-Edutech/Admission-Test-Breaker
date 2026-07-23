@@ -186,10 +186,14 @@ describe("production evidence ledger", () => {
   it("binds a control fingerprint to its catalog definition and source bytes", async () => {
     const controlCatalog = await catalog();
     const control = controlCatalog.controls[0]!;
+    const paths: string[] = [];
     const first = await productionControlSourceFingerprint(
       controlCatalog,
       control,
-      async (sourcePath) => `first:${sourcePath}`,
+      async (sourcePath) => {
+        paths.push(sourcePath);
+        return `first:${sourcePath}`;
+      },
     );
     const second = await productionControlSourceFingerprint(
       controlCatalog,
@@ -198,5 +202,7 @@ describe("production evidence ledger", () => {
     );
     expect(first).toMatch(/^[a-f0-9]{64}$/u);
     expect(second).not.toBe(first);
+    expect(paths).toContain("scripts/record-production-evidence.ts");
+    expect(paths).toContain("src/platform/production-evidence-ledger.ts");
   });
 });

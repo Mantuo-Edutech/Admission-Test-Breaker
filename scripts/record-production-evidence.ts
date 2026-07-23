@@ -10,9 +10,17 @@ import {
   type ProductionEvidenceRecord,
 } from "../src/platform/production-evidence-ledger.js";
 import {
+  parseManualProductionControlReport,
+  parseManualProductionProcedureCatalog,
+  validateManualProductionControlReport,
+} from "../src/platform/production-manual-evidence.js";
+import {
   loadProductionEvidenceCatalog,
   PRODUCTION_EVIDENCE_DIRECTORY,
 } from "./lib/production-evidence.js";
+
+const MANUAL_PROCEDURE_CATALOG_PATH =
+  "verification/production/manual-control-procedures.json";
 
 function argument(name: string): string | undefined {
   const index = process.argv.indexOf(name);
@@ -134,8 +142,27 @@ if (control.method === "automated") {
   if (manualResult !== "passed" && manualResult !== "failed") {
     throw new Error("manual controls require an exact --result passed or --result failed");
   }
-  const artifactPaths = argumentsFor("--artifact");
-  if (artifactPaths.length === 0) throw new Error("manual controls require at least one --artifact");
+  const reportPath = argument("--report");
+  if (reportPath === undefined) throw new Error("manual controls require --report");
+  if (!reportPath.endsWith(".json")) throw new Error("manual control --report must be JSON");
+  const artifactPaths = [reportPath, ...argumentsFor("--artifact")];
+  if (new Set(artifactPaths).size !== artifactPaths.length) {
+    throw new Error("manual control artifacts must not be duplicated");
+  }
+  const procedureCatalog = parseManualProductionProcedureCatalog(JSON.parse(
+    await readFile(MANUAL_PROCEDURE_CATALOG_PATH, "utf8"),
+  ));
+  const report = parseManualProductionControlReport(JSON.parse(
+    await readFile(reportPath, "utf8"),
+  ));
+  validateManualProductionControlReport({
+    catalog: procedureCatalog,
+    control,
+    report,
+    expectedTarget: catalog.target,
+    expectedRelease: release,
+    expectedResult: manualResult,
+  });
   const artifacts: ProductionEvidenceArtifact[] = [];
   for (const artifactPath of artifactPaths) {
     if (!artifactPath.startsWith("verification/production/evidence/artifacts/")) {
