@@ -36,7 +36,7 @@ export function EsatScienceNotesPage() {
           <p>当前专业组合没有要求 Physics、Chemistry 或 Biology；不需要为了看到更多内容而额外学习这些模块。</p>
           <div className="tmua-overview-page__actions">
             <Link className="button button--primary" to="/exams/esat/notes/mathematics">打开数学复习笔记<ArrowRight aria-hidden="true" /></Link>
-            <Link className="button button--secondary" to="/exams/esat/dashboard">返回我的准备</Link>
+            <Link className="button button--secondary" to="/exams/esat/resources">返回复习笔记</Link>
           </div>
         </section>
       </main>

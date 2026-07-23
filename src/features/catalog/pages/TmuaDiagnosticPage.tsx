@@ -48,9 +48,9 @@ export function TmuaDiagnosticPage({ services }: TmuaDiagnosticPageProps) {
           <FileCheck2 aria-hidden="true" />
           开始 30 分钟诊断
         </Link>
-        <Link className="button button--secondary" to="/exams/tmua/dashboard">
+        <Link className="button button--secondary" to="/exams/tmua/past-papers">
           <ArrowLeft aria-hidden="true" />
-          返回准备首页
+          返回在线练习
         </Link>
       </div>
     </main>

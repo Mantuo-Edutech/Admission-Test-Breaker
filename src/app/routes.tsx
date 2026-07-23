@@ -37,14 +37,17 @@ const EsatProfilePage = lazy(async () => ({
 const EsatCoveragePage = lazy(async () => ({
   default: (await import("../features/catalog/pages/EsatCoveragePage.js")).EsatCoveragePage,
 }));
-const EsatDashboardPage = lazy(async () => ({
-  default: (await import("../features/catalog/pages/EsatDashboardPage.js")).EsatDashboardPage,
-}));
 const EsatPastPapersPage = lazy(async () => ({
   default: (await import("../features/catalog/pages/EsatPastPapersPage.js")).EsatPastPapersPage,
 }));
 const LearningLibraryPage = lazy(async () => ({
   default: (await import("../features/library/pages/LearningLibraryPage.js")).LearningLibraryPage,
+}));
+const ExamNotesPage = lazy(async () => ({
+  default: (await import("../features/library/pages/ExamNotesPage.js")).ExamNotesPage,
+}));
+const ExpertGuidancePage = lazy(async () => ({
+  default: (await import("../features/service-bridge/pages/ExpertGuidancePage.js")).ExpertGuidancePage,
 }));
 const AssessmentPracticeLibraryPage = lazy(async () => ({
   default: (await import("../features/catalog/pages/AssessmentPracticeLibraryPage.js")).AssessmentPracticeLibraryPage,
@@ -52,10 +55,6 @@ const AssessmentPracticeLibraryPage = lazy(async () => ({
 const TmuaHubPage = lazy(async () => ({
   default: (await import("../features/catalog/pages/TmuaHubPage.js"))
     .TmuaHubPage,
-}));
-const TmuaDashboardPage = lazy(async () => ({
-  default: (await import("../features/catalog/pages/TmuaDashboardPage.js"))
-    .TmuaDashboardPage,
 }));
 const TmuaDiagnosticPage = lazy(async () => ({
   default: (await import("../features/catalog/pages/TmuaDiagnosticPage.js"))
@@ -240,13 +239,7 @@ export function createAppRouter(
     },
     {
       path: "/exams/tmua/dashboard",
-      element: (
-        <RouteFrame>
-          <Suspense fallback={<RouteLoading />}>
-            <TmuaDashboardPage services={services} />
-          </Suspense>
-        </RouteFrame>
-      ),
+      element: <Navigate to="/exams/tmua/coverage" replace />,
     },
     {
       path: "/exams/tmua/diagnostic",
@@ -263,7 +256,7 @@ export function createAppRouter(
       element: (
         <RouteFrame>
           <Suspense fallback={<RouteLoading />}>
-            <TmuaPastPapersPage />
+            <TmuaPastPapersPage services={services} />
           </Suspense>
         </RouteFrame>
       ),
@@ -277,7 +270,7 @@ export function createAppRouter(
       element: (
         <RouteFrame>
           <Suspense fallback={<RouteLoading />}>
-            <LearningLibraryPage examId="tmua" services={services} />
+            <ExamNotesPage examId="tmua" services={services} />
           </Suspense>
         </RouteFrame>
       ),
@@ -324,7 +317,7 @@ export function createAppRouter(
     },
     {
       path: "/exams/esat/dashboard",
-      element: <RouteFrame><Suspense fallback={<RouteLoading />}><EsatDashboardPage /></Suspense></RouteFrame>,
+      element: <Navigate to="/exams/esat/coverage" replace />,
     },
     {
       path: "/exams/esat/past-papers",
@@ -336,7 +329,7 @@ export function createAppRouter(
     },
     {
       path: "/exams/esat/resources",
-      element: <RouteFrame><Suspense fallback={<RouteLoading />}><LearningLibraryPage examId="esat" services={services} /></Suspense></RouteFrame>,
+      element: <RouteFrame><Suspense fallback={<RouteLoading />}><ExamNotesPage examId="esat" services={services} /></Suspense></RouteFrame>,
     },
     {
       path: "/exams/esat/notes/mathematics",
@@ -384,7 +377,7 @@ export function createAppRouter(
     },
     {
       path: "/exams/tara/resources",
-      element: <RouteFrame><Suspense fallback={<RouteLoading />}><LearningLibraryPage examId="tara" services={services} /></Suspense></RouteFrame>,
+      element: <RouteFrame><Suspense fallback={<RouteLoading />}><ExamNotesPage examId="tara" services={services} /></Suspense></RouteFrame>,
     },
     {
       path: "/exams/tara/notes/foundations",
@@ -392,7 +385,7 @@ export function createAppRouter(
     },
     {
       path: "/exams/lnat/resources",
-      element: <RouteFrame><Suspense fallback={<RouteLoading />}><LearningLibraryPage examId="lnat" services={services} /></Suspense></RouteFrame>,
+      element: <RouteFrame><Suspense fallback={<RouteLoading />}><ExamNotesPage examId="lnat" services={services} /></Suspense></RouteFrame>,
     },
     {
       path: "/exams/lnat/notes/foundations",
@@ -400,7 +393,7 @@ export function createAppRouter(
     },
     {
       path: "/exams/ucat/resources",
-      element: <RouteFrame><Suspense fallback={<RouteLoading />}><LearningLibraryPage examId="ucat" services={services} /></Suspense></RouteFrame>,
+      element: <RouteFrame><Suspense fallback={<RouteLoading />}><ExamNotesPage examId="ucat" services={services} /></Suspense></RouteFrame>,
     },
     {
       path: "/exams/ucat/notes/foundations",
@@ -490,6 +483,16 @@ export function createAppRouter(
       path: "/access/complete",
       element: <RouteFrame><Suspense fallback={<RouteLoading />}><AccessCompletePage services={services} /></Suspense></RouteFrame>,
     },
+    ...EXAM_CATALOG.map((exam) => ({
+      path: `${exam.href}/coaching`,
+      element: (
+        <RouteFrame>
+          <Suspense fallback={<RouteLoading />}>
+            <ExpertGuidancePage examId={exam.id} />
+          </Suspense>
+        </RouteFrame>
+      ),
+    })),
     ...EXAM_CATALOG.filter(
       (exam) => exam.availability === "guide" && exam.id !== "esat",
     ).map((exam) => ({

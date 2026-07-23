@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   BookOpenCheck,
   CheckCircle2,
   CircleAlert,
@@ -186,10 +185,6 @@ export function TmuaCoveragePage({ services }: TmuaCoveragePageProps) {
 
       <div className="tmua-stage-actions page-shell">
         <Link className="button button--secondary" to="/exams/tmua/profile">修改课程档案</Link>
-        <Link className="button button--primary" to="/exams/tmua/dashboard">
-          进入我的准备首页
-          <ArrowRight aria-hidden="true" />
-        </Link>
       </div>
 
       <p className="course-coverage-source page-shell">

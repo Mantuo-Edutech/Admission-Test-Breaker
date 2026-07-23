@@ -40,7 +40,7 @@ describe("public official exam guides", () => {
     expect(screen.getByLabelText("专业")).toBeInTheDocument();
     expect(container.querySelector('a[href^="http"]')).not.toBeInTheDocument();
     const navigation = screen.getByRole("navigation", { name: "主要导航" });
-    expect(within(navigation).getByRole("link", { name: "ESAT 专业定位" })).toHaveAttribute(
+    expect(within(navigation).getByRole("link", { name: "ESAT 概览" })).toHaveAttribute(
       "aria-current",
       "page",
     );

@@ -5,13 +5,14 @@ const EXAM_IDS = ["tmua", "esat", "tara", "lnat", "ucat"] as const;
 const EXAM_PAGE_LABELS: Readonly<Record<string, string>> = {
   profile: "课程信息",
   coverage: "知识覆盖",
-  dashboard: "我的准备",
-  preparation: "我的准备",
+  dashboard: "知识覆盖",
+  preparation: "知识覆盖",
   diagnostic: "能力诊断",
-  "past-papers": "历年真题",
+  "past-papers": "在线练习",
   record: "学习记录",
-  resources: "题库与资料",
+  resources: "复习笔记",
   notes: "复习笔记",
+  coaching: "名师指点",
 };
 
 const STATIC_PAGE_TITLES: Readonly<Record<string, string>> = {

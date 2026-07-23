@@ -216,61 +216,37 @@ describe("TMUA staged preparation journey", () => {
     expect(screen.getAllByText("课程档案未显示覆盖")).toHaveLength(3);
   });
 
-  it("recommends the original diagnostic before past papers and starts a Guest-owned session", async () => {
-    const user = userEvent.setup();
-    const store = new JourneySessionStore();
+  it("retires the ambiguous preparation dashboard in favour of the coverage module", async () => {
     const router = createAppRouter(
       ["/exams/tmua/dashboard"],
-      services(store, new JourneyProfileStore(profile())),
+      services(new JourneySessionStore(), new JourneyProfileStore(profile())),
     );
     render(<RouterProvider router={router} />);
 
     expect(
-      await screen.findByRole("heading", { name: "下一步：先做 30 分钟能力诊断" }),
-    ).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "开始 30 分钟诊断" })).toHaveAttribute(
-      "href",
-      "/practice/tmua-diagnostic-v1",
-    );
-    expect(screen.queryByText(/正在独立审核/u)).not.toBeInTheDocument();
-    expect(
-      screen.getByRole("heading", {
-        name: /课程覆盖与补学建议.*Course Coverage Plan/u,
+      await screen.findByRole("heading", {
+        name: /课程覆盖与补学建议.*Course Coverage & Learning Plan/u,
       }),
     ).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "查看学习建议" })).toHaveAttribute(
-      "href",
-      "/exams/tmua/coverage",
-    );
-    expect(screen.getByRole("link", { name: "查看历年真题" })).toHaveAttribute(
-      "href",
-      "/exams/tmua/past-papers",
-    );
-    expect(screen.getByRole("link", { name: "查看题库与学习资料" })).toHaveAttribute(
-      "href",
-      "/exams/tmua/resources",
-    );
-
-    await user.click(screen.getByRole("link", { name: "开始 30 分钟诊断" }));
-    expect(await screen.findByRole("heading", { name: "第 1 题" })).toBeInTheDocument();
-    expect(store.saved).toMatchObject({
-      learningSpaceId: FIXED_GUEST_SPACE.id,
-      startedBy: { kind: "guest", actorId: FIXED_GUEST_SPACE.ownerActorId },
-      paperId: "tmua-diagnostic-v1",
-    });
-    expect(router.state.location.pathname).toBe("/practice/tmua-diagnostic-v1");
+    expect(router.state.location.pathname).toBe("/exams/tmua/coverage");
+    expect(screen.queryByRole("heading", { name: "其他可用内容" })).not.toBeInTheDocument();
   });
 
-  it("resumes a Guest-owned active paper from the dashboard", async () => {
+  it("keeps diagnostics and active-session continuation inside online practice", async () => {
     const user = userEvent.setup();
     const store = new JourneySessionStore({ session: activeSession(), issue: null });
     const router = createAppRouter(
-      ["/exams/tmua/dashboard"],
+      ["/exams/tmua/past-papers"],
       services(store, new JourneyProfileStore(profile())),
     );
     render(<RouterProvider router={router} />);
 
-    await user.click(await screen.findByRole("link", { name: "继续当前练习 · 1 道已作答" }));
+    expect(await screen.findByRole("heading", { name: "先做 30 分钟起点诊断" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /查看诊断/u })).toHaveAttribute(
+      "href",
+      "/exams/tmua/diagnostic",
+    );
+    await user.click(await screen.findByRole("link", { name: "继续练习" }));
     expect(router.state.location.pathname).toBe("/practice/tmua-2023-p1");
   });
 
@@ -326,13 +302,13 @@ describe("TMUA staged preparation journey", () => {
     );
     render(<RouterProvider router={router} />);
 
-    await user.click(await screen.findByRole("button", { name: "添加冰冰，获取资料邀请码" }));
-    const dialog = screen.getByRole("dialog", { name: "添加冰冰，获取已发布复习资料" });
+    await user.click((await screen.findAllByRole("button", { name: /获取深度笔记/u }))[0]!);
+    const dialog = screen.getByRole("dialog", { name: "添加冰冰，获取完整版复习笔记" });
     expect(within(dialog).getByRole("img", { name: "冰冰老师微信二维码" })).toHaveAttribute(
       "src",
       "/brand/bingbing-wechat-qr.jpg",
     );
     expect(within(dialog).getByText(/不会向冰冰开放你的课程信息/u)).toBeInTheDocument();
-    expect(within(dialog).getByText("说明需要「六周训练计划或逐题解析」")).toBeInTheDocument();
+    expect(within(dialog).getByText("说明需要「复习笔记」")).toBeInTheDocument();
   });
 });

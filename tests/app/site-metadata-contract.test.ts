@@ -34,8 +34,10 @@ describe("multi-exam site metadata", () => {
   it("keeps the current task visible before the Mantou brand on inner pages", () => {
     expect(siteTitleForPathname("/")).toBe("满托｜英国入学考试练习与诊断");
     expect(siteTitleForPathname("/exams/tmua")).toBe("TMUA 备考｜满托");
-    expect(siteTitleForPathname("/exams/tmua/past-papers")).toBe("历年真题｜TMUA｜满托");
+    expect(siteTitleForPathname("/exams/tmua/past-papers")).toBe("在线练习｜TMUA｜满托");
     expect(siteTitleForPathname("/exams/esat/coverage")).toBe("知识覆盖｜ESAT｜满托");
+    expect(siteTitleForPathname("/exams/tmua/resources")).toBe("复习笔记｜TMUA｜满托");
+    expect(siteTitleForPathname("/exams/tmua/coaching")).toBe("名师指点｜TMUA｜满托");
     expect(siteTitleForPathname("/practice/tmua-2023-p1")).toBe("在线练习｜满托");
     expect(siteTitleForPathname("/login")).toBe("登录｜满托");
   });

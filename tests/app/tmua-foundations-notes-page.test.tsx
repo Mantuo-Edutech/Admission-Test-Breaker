@@ -59,7 +59,7 @@ describe("TMUA foundations notes page", () => {
     render(<RouterProvider router={router} />);
 
     expect(await screen.findByRole("heading", { name: /TMUA 基础复习笔记/u })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /在线阅读与下载 PDF/u })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "阅读基础笔记" })).toHaveAttribute(
       "href",
       "/exams/tmua/notes/foundations",
     );

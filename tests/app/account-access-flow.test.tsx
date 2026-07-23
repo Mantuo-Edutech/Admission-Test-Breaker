@@ -376,8 +376,11 @@ describe("invite-first account access flow", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByText("完整资料已经解锁")).toBeInTheDocument();
-    expect(screen.getAllByText("已解锁").length).toBeGreaterThanOrEqual(1);
-    expect(screen.queryByRole("link", { name: "输入邀请码" })).not.toBeInTheDocument();
+    expect((await screen.findAllByText("已解锁")).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByRole("link", { name: "完成试卷并打开解析" })).toHaveAttribute(
+      "href",
+      "/practice/tmua-specimen-p1",
+    );
+    expect(screen.queryByRole("button", { name: "获取深度笔记" })).not.toBeInTheDocument();
   });
 });

@@ -242,7 +242,7 @@ export function AccountPage({ services }: AccountPageProps) {
               <Link className="button button--secondary" to="/collaboration"><Handshake aria-hidden="true" />老师／家长协作空间</Link>
             )}
             <Link className="button button--primary" to="/library">查看题库与资料</Link>
-            <Link className="button button--secondary" to="/exams/tmua/dashboard">进入我的准备</Link>
+            <Link className="button button--secondary" to="/exams/tmua/coverage">查看 TMUA 知识覆盖</Link>
             <Link className="button button--secondary" to="/feedback"><MessageSquareWarning aria-hidden="true" />纠错与技术反馈</Link>
           </div>
           {error !== null && <p className="form-error" role="alert">{error}</p>}

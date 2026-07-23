@@ -123,8 +123,8 @@ export function EsatCoveragePage() {
 
       <div className="tmua-stage-actions page-shell">
         <Link className="button button--secondary" to="/exams/esat/profile">修改课程信息</Link>
-        <Link className="button button--primary" to="/exams/esat/dashboard">
-          进入我的准备
+        <Link className="button button--primary" to="/exams/esat/past-papers">
+          进入在线练习
           <ArrowRight aria-hidden="true" />
         </Link>
       </div>

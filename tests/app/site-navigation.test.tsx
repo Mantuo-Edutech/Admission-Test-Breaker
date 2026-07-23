@@ -13,14 +13,14 @@ describe("lightweight exam-context navigation", () => {
     const navigation = await screen.findByRole("navigation", { name: "主要导航" });
     for (const [name, href] of [
       ["TMUA 概览", "/exams/tmua"],
-      ["我的准备", "/exams/tmua/dashboard"],
-      ["历年真题", "/exams/tmua/past-papers"],
-      ["题库与资料", "/exams/tmua/resources"],
-      ["学习记录", "/exams/tmua/record"],
+      ["知识覆盖", "/exams/tmua/coverage"],
+      ["在线练习", "/exams/tmua/past-papers"],
+      ["复习笔记", "/exams/tmua/resources"],
+      ["名师指点", "/exams/tmua/coaching"],
     ] as const) {
       expect(within(navigation).getByRole("link", { name })).toHaveAttribute("href", href);
     }
-    expect(within(navigation).getByRole("link", { name: "历年真题" })).toHaveAttribute(
+    expect(within(navigation).getByRole("link", { name: "在线练习" })).toHaveAttribute(
       "aria-current",
       "page",
     );
@@ -37,26 +37,30 @@ describe("lightweight exam-context navigation", () => {
     );
   });
 
-  it("gives LNAT and UCAT real free-practice routes instead of placeholder anchors", async () => {
+  it("gives every exam the same task-oriented module structure", async () => {
     const router = createAppRouter(["/exams/lnat/past-papers"]);
     render(<RouterProvider router={router} />);
 
     const navigation = await screen.findByRole("navigation", { name: "主要导航" });
-    expect(within(navigation).getByRole("link", { name: "免费在线练习" })).toHaveAttribute(
+    expect(within(navigation).getByRole("link", { name: "在线练习" })).toHaveAttribute(
       "href",
       "/exams/lnat/past-papers",
     );
-    expect(within(navigation).getByRole("link", { name: "免费在线练习" })).toHaveAttribute(
+    expect(within(navigation).getByRole("link", { name: "在线练习" })).toHaveAttribute(
       "aria-current",
       "page",
     );
-    expect(within(navigation).getByRole("link", { name: "我的准备" })).toHaveAttribute(
+    expect(within(navigation).getByRole("link", { name: "知识覆盖" })).toHaveAttribute(
       "href",
       "/exams/lnat/preparation",
     );
-    expect(within(navigation).getByRole("link", { name: "学习记录" })).toHaveAttribute(
+    expect(within(navigation).getByRole("link", { name: "复习笔记" })).toHaveAttribute(
       "href",
-      "/exams/lnat/record",
+      "/exams/lnat/resources",
+    );
+    expect(within(navigation).getByRole("link", { name: "名师指点" })).toHaveAttribute(
+      "href",
+      "/exams/lnat/coaching",
     );
   });
 
@@ -66,15 +70,15 @@ describe("lightweight exam-context navigation", () => {
 
     const navigation = await screen.findByRole("navigation", { name: "主要导航" });
     for (const [name, href] of [
-      ["ESAT 专业定位", "/exams/esat"],
-      ["我的准备", "/exams/esat/dashboard"],
-      ["历年真题", "/exams/esat/past-papers"],
-      ["题库与资料", "/exams/esat/resources"],
-      ["学习记录", "/exams/esat/record"],
+      ["ESAT 概览", "/exams/esat"],
+      ["知识覆盖", "/exams/esat/coverage"],
+      ["在线练习", "/exams/esat/past-papers"],
+      ["复习笔记", "/exams/esat/resources"],
+      ["名师指点", "/exams/esat/coaching"],
     ] as const) {
       expect(within(navigation).getByRole("link", { name })).toHaveAttribute("href", href);
     }
-    expect(within(navigation).getByRole("link", { name: "题库与资料" })).toHaveAttribute(
+    expect(within(navigation).getByRole("link", { name: "复习笔记" })).toHaveAttribute(
       "aria-current",
       "page",
     );
@@ -90,17 +94,17 @@ describe("lightweight exam-context navigation", () => {
     });
     expect(screen.getByText("TMUA 导航", { selector: "summary span" })).toBeInTheDocument();
     const navigation = screen.getByRole("navigation", { name: "移动端主要导航" });
-    expect(within(navigation).getByRole("link", { name: "我的准备" })).toHaveAttribute(
+    expect(within(navigation).getByRole("link", { name: "知识覆盖" })).toHaveAttribute(
       "aria-current",
       "page",
     );
-    expect(within(navigation).getByRole("link", { name: "历年真题" })).toHaveAttribute(
+    expect(within(navigation).getByRole("link", { name: "在线练习" })).toHaveAttribute(
       "href",
       "/exams/tmua/past-papers",
     );
-    expect(within(navigation).getByRole("link", { name: "学习记录" })).toHaveAttribute(
+    expect(within(navigation).getByRole("link", { name: "名师指点" })).toHaveAttribute(
       "href",
-      "/exams/tmua/record",
+      "/exams/tmua/coaching",
     );
   });
 });

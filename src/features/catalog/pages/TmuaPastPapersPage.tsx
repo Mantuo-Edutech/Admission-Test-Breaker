@@ -1,12 +1,40 @@
-import { ArrowUpRight, BookOpenText, LibraryBig } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BookOpenCheck, BookOpenText, LibraryBig } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import type { AppServices } from "../../../app/dependencies.js";
+import { isGuestSpaceOwner } from "../../../platform/learning-space/domain.js";
 import { TmuaPageHeader } from "../components/TmuaPageHeader.js";
 import { TMUA_ONLINE_PAPERS } from "../../practice/content/tmua-online-registry.js";
+import type { PracticeSession } from "../../practice/domain/session.js";
+import { usePreparationProfileContext } from "../../preparation-profile/hooks/usePreparationProfileContext.js";
 import { TMUA_PUBLIC_SUMMARY } from "../tmua-summary.js";
 
 const onlinePaperById = new Map(TMUA_ONLINE_PAPERS.map((paper) => [paper.id, paper]));
 
-export function TmuaPastPapersPage() {
+export function TmuaPastPapersPage({ services }: { readonly services: AppServices }) {
+  const { guestSpace } = usePreparationProfileContext(services);
+  const [recoverable, setRecoverable] = useState<PracticeSession | null>(null);
+
+  useEffect(() => {
+    if (guestSpace === null) return;
+    let active = true;
+    void services.store.loadCurrent().then((result) => {
+      if (!active) return;
+      const belongsToGuest =
+        result.session?.learningSpaceId === guestSpace.id &&
+        isGuestSpaceOwner(guestSpace, result.session.startedBy);
+      const belongsToStudent =
+        result.session?.learningSpaceId.startsWith("lsp_") === true &&
+        result.session.startedBy.kind === "student";
+      setRecoverable(
+        result.session?.status === "active" && (belongsToGuest || belongsToStudent)
+          ? result.session
+          : null,
+      );
+    });
+    return () => { active = false; };
+  }, [guestSpace, services.store]);
+
   return (
     <main className="tmua-stage-page tmua-past-papers-page">
       <TmuaPageHeader />
@@ -17,6 +45,29 @@ export function TmuaPastPapersPage() {
           <span>Past Papers</span>
         </h1>
         <p>18 套历年真题全部可以在线练习。选择年份后即可计时作答、标记和提交评分。</p>
+      </section>
+
+      <section className="tmua-practice-entry page-shell" aria-label="TMUA 练习入口">
+        {recoverable !== null && (
+          <article className="tmua-practice-entry__resume">
+            <span>继续上次练习</span>
+            <h2>{Object.keys(recoverable.answers).length} 道已作答</h2>
+            <Link to={`/practice/${recoverable.paperId}`}>
+              继续练习<ArrowRight aria-hidden="true" />
+            </Link>
+          </article>
+        )}
+        <article className="tmua-practice-entry__diagnostic">
+          <BookOpenCheck aria-hidden="true" />
+          <div>
+            <p>不想先消耗真题？</p>
+            <h2>先做 30 分钟起点诊断</h2>
+            <span>8 道满托原创题，先检查知识、推理和做题节奏。</span>
+          </div>
+          <Link to="/exams/tmua/diagnostic">
+            查看诊断<ArrowRight aria-hidden="true" />
+          </Link>
+        </article>
       </section>
 
       <section className="tmua-archive page-shell" aria-labelledby="tmua-archive-title">

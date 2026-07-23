@@ -60,7 +60,7 @@ export function LoginPage({ services }: LoginPageProps) {
         navigate(pendingReturn ?? "/access/complete");
       } else {
         const requestedReturn = (location.state as { returnTo?: unknown } | null)?.returnTo;
-        const safeReturn = safeInternalReturnPath(requestedReturn) ?? "/exams/tmua/dashboard";
+        const safeReturn = safeInternalReturnPath(requestedReturn) ?? "/exams/tmua/coverage";
         navigate(safeReturn);
       }
     } catch (reason) {

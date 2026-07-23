@@ -51,9 +51,9 @@ export function TmuaHubPage({ services }: TmuaHubPageProps) {
           <div className="tmua-overview-page__actions">
             <Link
               className="button button--primary"
-              to={hasProfile ? "/exams/tmua/dashboard" : "/exams/tmua/profile"}
+              to={hasProfile ? "/exams/tmua/coverage" : "/exams/tmua/profile"}
             >
-              {hasProfile ? "继续我的准备" : "填写课程信息"}
+              {hasProfile ? "查看知识覆盖" : "填写课程信息"}
               <ArrowRight aria-hidden="true" />
             </Link>
             {hasProfile && (
@@ -61,6 +61,9 @@ export function TmuaHubPage({ services }: TmuaHubPageProps) {
                 修改课程信息
               </Link>
             )}
+            <Link className="button button--secondary" to="/exams/tmua/past-papers">
+              在线练习
+            </Link>
           </div>
         </div>
         <dl aria-label="TMUA 真题与在线练习" role="group">
