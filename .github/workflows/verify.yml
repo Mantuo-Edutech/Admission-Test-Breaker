@@ -92,7 +92,11 @@ jobs:
           node-version: 22.18.0
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: docker build --tag admission-test-breaker:ci .
+      - run: docker build --build-arg BUILD_REVISION=${{ github.sha }} --tag admission-test-breaker:ci .
+      - name: Verify immutable image identity
+        run: |
+          test "$(docker image inspect --format '{{index .Config.Labels "org.opencontainers.image.revision"}}' admission-test-breaker:ci)" = "${{ github.sha }}"
+          test "$(docker run --rm --entrypoint cat admission-test-breaker:ci /opt/mantuo/build-revision)" = "${{ github.sha }}"
       - name: Start immutable web container
         run: |
           docker run --detach --name admission-test-breaker-ci \

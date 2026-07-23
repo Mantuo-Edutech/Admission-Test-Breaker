@@ -1198,7 +1198,7 @@
               "route": "/exams/ucat/preparation"
             }
           ],
-          "sourceFingerprint": "sha256:b26a48a7ccf320de5806989d17cfb47e5a0214ddd3fadeda17905370c720600f",
+          "sourceFingerprint": "sha256:83e954e714fb8604dcf41df38e5e3b80a1a3621ce596005758ffea90dd97a9b4",
           "sourceArtifactCount": 20
         },
         {
@@ -1506,7 +1506,7 @@
               "route": "/exams/tmua/profile"
             }
           ],
-          "sourceFingerprint": "sha256:99eb9dc11719139fe9c3106e545db65978f4f7a379a6089f42c2ac4f98b6d84d",
+          "sourceFingerprint": "sha256:a071c5b95c8db3158bb7fbcce0356d5f109b175aa5b6f2437d287ae202961a02",
           "sourceArtifactCount": 26
         },
         {

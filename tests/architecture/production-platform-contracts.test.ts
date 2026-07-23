@@ -7,16 +7,20 @@ async function source(path: string): Promise<string> {
 
 describe("production platform contracts", () => {
   it("builds one immutable, non-root web image with a runtime configuration boundary", async () => {
-    const [dockerfile, index, template, entrypoint] = await Promise.all([
+    const [dockerfile, index, template, entrypoint, releaseWorkflow] = await Promise.all([
       source("Dockerfile"),
       source("index.html"),
       source("deploy/runtime-config.template.js"),
       source("deploy/40-runtime-config.sh"),
+      source(".github/workflows/release-image.yml"),
     ]);
 
     expect(dockerfile).toContain("pnpm build && pnpm verify:private-content-bundle");
     expect(dockerfile).toContain("USER nginx");
     expect(dockerfile).toContain("HEALTHCHECK");
+    expect(dockerfile).toContain("org.opencontainers.image.revision");
+    expect(dockerfile).toContain("/opt/mantuo/build-revision");
+    expect(releaseWorkflow).toContain("BUILD_REVISION=${{ github.sha }}");
     expect(index.indexOf('/runtime-config.js')).toBeLessThan(
       index.indexOf('/src/app/main.tsx'),
     );
@@ -75,6 +79,8 @@ describe("production platform contracts", () => {
     expect(workflow).toContain("pnpm verify:recovery-local");
     expect(workflow).toContain("pnpm verify:beta-load-local");
     expect(workflow).toContain("pnpm verify:deployment");
+    expect(workflow).toContain("--build-arg BUILD_REVISION=${{ github.sha }}");
+    expect(workflow).toContain("/opt/mantuo/build-revision");
     expect(workflow).toContain('BETA_LOAD_USERS: "100"');
     expect(packageJson).toContain("pnpm build && pnpm verify:web-performance");
     expect(performanceGate).toContain("entryJavascriptGzipBytes");
