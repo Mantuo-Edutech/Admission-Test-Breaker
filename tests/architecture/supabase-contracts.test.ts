@@ -14,6 +14,8 @@ const feedbackMigrationPath =
   "supabase/migrations/20260718224500_student_feedback_foundation.sql";
 const assessmentProfileMigrationPath =
   "supabase/migrations/20260718233000_assessment_background_profiles.sql";
+const assessmentCourseProfileMigrationPath =
+  "supabase/migrations/20260723164000_curriculum_specific_assessment_courses.sql";
 const invitePublicationGateMigrationPath =
   "supabase/migrations/20260719090000_invite_publication_gate.sql";
 const tmuaIbApProfileMigrationPath =
@@ -420,6 +422,7 @@ describe("Supabase architecture contracts", () => {
 
   it("stores non-TMUA background profiles per exam behind tenant RLS and validated RPCs", async () => {
     const migration = await readFile(assessmentProfileMigrationPath, "utf8");
+    const courseMigration = await readFile(assessmentCourseProfileMigrationPath, "utf8");
     const databaseTest = await readFile(
       "supabase/tests/database/assessment_background_profiles_rls.test.sql",
       "utf8",
@@ -432,6 +435,11 @@ describe("Supabase architecture contracts", () => {
     expect(migration).toContain("perform private.register_guest_space_claim");
     expect(migration).toContain("revoke all on table public.assessment_background_profiles from public, anon, authenticated;");
     expect(migration).toContain("'assessmentBackgroundProfiles', coalesce((");
+    expect(courseMigration).toContain("check (schema_version in (1, 2))");
+    expect(courseMigration).toContain("private.assessment_course_subject");
+    expect(courseMigration).toContain("coalesce(p_profile->>'schemaVersion' <> '2', true)");
+    expect(courseMigration).toContain("assessment_profile_courses_invalid");
+    expect(courseMigration).toContain("requested_curriculum_id");
     expect(databaseTest).toContain("Bob cannot read Alice profiles");
     expect(databaseTest).toContain("deleting TARA leaves Alice UCAT profile intact");
     const httpVerification = await readFile("scripts/verify-supabase-local.ts", "utf8");

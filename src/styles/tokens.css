@@ -14,6 +14,8 @@
   --color-line: rgba(40, 35, 50, 0.2);
   --font-serif: "Songti SC", "STSong", "Noto Serif CJK SC", Georgia, serif;
   --font-sans: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-exam-serif: "KaTeX_Main", "Times New Roman", "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+  --font-exam-number: "KaTeX_Main", "Times New Roman", serif;
   --space-1: 0.375rem;
   --space-2: 0.625rem;
   --space-3: 0.875rem;
@@ -28,4 +30,8 @@
   --shadow-paper: 0 20px 70px rgba(57, 43, 43, 0.09);
   --focus-ring: 0 0 0 3px rgba(99, 82, 140, 0.28);
   --page-width: 76rem;
+  --practice-card-padding: clamp(1.25rem, 2.2vw, 2rem);
+  --practice-option-min-height: 3.2rem;
+  --practice-option-gap: 0.5rem;
+  --practice-option-marker-size: 1.9rem;
 }

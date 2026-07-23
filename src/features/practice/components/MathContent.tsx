@@ -24,6 +24,10 @@ function InlineContent({ run }: { run: InlineRun }) {
     return <>{run.value}</>;
   }
 
+  if (/^[+-]?(?:\d+(?:\.\d+)?|\.\d+)$/u.test(run.tex.trim())) {
+    return <span className="math-plain-number">{run.tex.trim()}</span>;
+  }
+
   const html = renderMath(run.tex, false);
   return html.length > 0 ? (
     <span

@@ -22,6 +22,7 @@ function rebindProfile(profile: AssessmentBackgroundProfile, guestSpaceId: Guest
     curriculumId: profile.curriculumId,
     learningStage: profile.learningStage,
     subjectAreas: profile.subjectAreas,
+    ...(profile.schemaVersion === 2 ? { courseIds: profile.courseIds } : {}),
     experience: profile.experience,
     weeklyTime: profile.weeklyTime,
     createdAt: profile.createdAt,

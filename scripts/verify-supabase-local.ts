@@ -775,13 +775,14 @@ async function main() {
         headers: authenticatedHeaders,
         body: JSON.stringify({
           p_profile: {
-            schemaVersion: 1,
+            schemaVersion: 2,
             guestSpaceId,
             examId: "ucat",
             entryCycle: "2027",
             curriculumId: "a-level",
             learningStage: "year-12",
             subjectAreas: ["mathematics", "biology"],
+            courseIds: ["al-mathematics", "al-biology"],
             experience: "sampled",
             weeklyTime: "2-4",
             createdAt: "2026-07-18T00:00:00.000Z",

@@ -4652,16 +4652,15 @@
 }
 
 .question-card {
-  min-height: 39rem;
   border: 1px solid var(--color-line);
   border-radius: var(--radius-lg);
-  padding: clamp(1.4rem, 4vw, 3.5rem);
+  padding: var(--practice-card-padding);
   background: var(--color-paper-raised);
   box-shadow: var(--shadow-paper);
 }
 
 .question-card__heading {
-  padding-bottom: 1.4rem;
+  padding-bottom: 0.9rem;
   display: flex;
   align-items: end;
   justify-content: space-between;
@@ -4693,11 +4692,11 @@
 
 .question-card__prompt {
   max-width: 49rem;
-  margin: 2rem auto 2.3rem;
+  margin: 1.25rem auto 1.4rem;
   color: var(--color-ink);
-  font-family: var(--font-serif);
-  font-size: clamp(1rem, 1.7vw, 1.12rem);
-  line-height: 1.85;
+  font-family: var(--font-exam-serif);
+  font-size: clamp(1rem, 1.55vw, 1.08rem);
+  line-height: 1.65;
 }
 
 .question-data-table-wrap {
@@ -4848,12 +4847,12 @@
 
 .question-figure {
   max-width: 34rem;
-  margin: 1.5rem auto;
+  margin: 1rem auto;
 }
 
 .question-figure img {
   width: 100%;
-  max-height: 24rem;
+  max-height: min(20rem, 35vh);
   object-fit: contain;
 }
 
@@ -4898,7 +4897,7 @@
   margin: 0 auto;
   padding: 0;
   display: grid;
-  gap: 0.7rem;
+  gap: var(--practice-option-gap);
   border: 0;
 }
 
@@ -5052,14 +5051,14 @@
 
 .answer-choice {
   position: relative;
-  min-height: 4rem;
+  min-height: var(--practice-option-min-height);
   border: 1px solid var(--color-line);
-  border-radius: var(--radius-md);
-  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.75rem;
   display: grid;
-  grid-template-columns: 2.35rem minmax(0, 1fr);
+  grid-template-columns: var(--practice-option-marker-size) minmax(0, 1fr);
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.65rem;
   background: #fffcf6;
   cursor: pointer;
   transition: border-color 150ms ease, background 150ms ease, transform 150ms ease;
@@ -5088,17 +5087,17 @@
 }
 
 .answer-choice__letter {
-  width: 2.35rem;
-  height: 2.35rem;
+  width: var(--practice-option-marker-size);
+  height: var(--practice-option-marker-size);
   border: 1px solid var(--color-line);
   border-radius: 50%;
   display: grid;
   place-items: center;
   background: var(--color-paper-raised);
   color: var(--color-purple);
-  font-family: ui-monospace, monospace;
-  font-size: 0.85rem;
-  font-weight: 800;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
 }
 
 .answer-choice--selected .answer-choice__letter {
@@ -5109,7 +5108,19 @@
 
 .answer-choice__content {
   min-width: 0;
-  font-family: var(--font-serif);
+  font-family: var(--font-exam-serif);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.answer-choice__content .math-content p {
+  margin: 0;
+}
+
+.math-plain-number {
+  font-family: var(--font-exam-number);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-weight: 400;
 }
 
 .answer-choice__content .math-display {
@@ -5590,7 +5601,7 @@
   }
 
   .question-card__prompt {
-    margin-block: 1.4rem 1.6rem;
+    margin-block: 1rem 1.15rem;
   }
 
   .source-pdf-question iframe {
@@ -5599,14 +5610,14 @@
   }
 
   .answer-choice {
-    min-height: 3.6rem;
-    grid-template-columns: 2.1rem minmax(0, 1fr);
-    padding: 0.65rem 0.75rem;
+    min-height: 3.1rem;
+    grid-template-columns: var(--practice-option-marker-size) minmax(0, 1fr);
+    padding: 0.45rem 0.65rem;
   }
 
   .answer-choice__letter {
-    width: 2.1rem;
-    height: 2.1rem;
+    width: var(--practice-option-marker-size);
+    height: var(--practice-option-marker-size);
   }
 
   .question-actions {
@@ -7531,18 +7542,26 @@
 }
 
 .esat-course-form__curricula strong,
-.esat-course-form__curricula small {
+.esat-course-form__curricula small,
+.esat-course-form__courses strong,
+.esat-course-form__courses small {
   display: block;
 }
 
-.esat-course-form__curricula strong {
+.esat-course-form__curricula strong,
+.esat-course-form__courses strong {
   font-family: var(--font-serif);
   font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.35;
 }
 
-.esat-course-form__curricula small {
+.esat-course-form__curricula small,
+.esat-course-form__courses small {
   margin-top: 0.35rem;
   color: var(--color-slate);
+  font-size: 0.76rem;
+  line-height: 1.5;
 }
 
 .esat-course-form__footer {
@@ -10928,6 +10947,24 @@
 }
 .assessment-profile-form {
   padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.assessment-profile-form__course-note {
+  margin: -0.25rem 0 1rem;
+  color: var(--color-slate);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.assessment-profile-page .tmua-stage-hero h1 > span {
+  margin-top: 0.75rem;
+  display: block;
+  color: var(--color-purple);
+  font-family: var(--font-sans);
+  font-size: clamp(0.82rem, 1.35vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  line-height: 1.45;
 }
 
 .assessment-profile-form__compact-options {

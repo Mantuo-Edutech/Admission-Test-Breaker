@@ -7,17 +7,21 @@ import {
   ASSESSMENT_CURRICULA,
   ASSESSMENT_EXPERIENCE_OPTIONS,
   ASSESSMENT_LEARNING_STAGES,
-  ASSESSMENT_SUBJECT_AREAS,
   ASSESSMENT_WEEKLY_TIME_OPTIONS,
+  coursesForAssessmentCurriculum,
   createAssessmentBackgroundProfile,
   type AssessmentBackgroundProfile,
+  type AssessmentCourseId,
   type AssessmentCurriculumId,
   type AssessmentLearningStage,
   type AssessmentPreparationExperience,
   type AssessmentProfileExamId,
-  type AssessmentSubjectArea,
   type AssessmentWeeklyTime,
 } from "../assessment-profile-domain.js";
+import {
+  legacyCourseIdsForSubjectAreas,
+  subjectAreasForAssessmentCourses,
+} from "../assessment-course-catalog.js";
 
 const examNames: Record<AssessmentProfileExamId, string> = { tara: "TARA", lnat: "LNAT", ucat: "UCAT" };
 
@@ -29,7 +33,7 @@ export function AssessmentProfilePage({ examId, services }: { examId: Assessment
   const [entryCycle, setEntryCycle] = useState<"2027" | "2028">("2027");
   const [curriculumId, setCurriculumId] = useState<AssessmentCurriculumId | null>(null);
   const [learningStage, setLearningStage] = useState<AssessmentLearningStage | null>(null);
-  const [subjectAreas, setSubjectAreas] = useState<readonly AssessmentSubjectArea[]>([]);
+  const [courseIds, setCourseIds] = useState<readonly AssessmentCourseId[]>([]);
   const [experience, setExperience] = useState<AssessmentPreparationExperience | null>(null);
   const [weeklyTime, setWeeklyTime] = useState<AssessmentWeeklyTime | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -49,7 +53,9 @@ export function AssessmentProfilePage({ examId, services }: { examId: Assessment
         setEntryCycle(profile.entryCycle);
         setCurriculumId(profile.curriculumId);
         setLearningStage(profile.learningStage);
-        setSubjectAreas(profile.subjectAreas);
+        setCourseIds(profile.schemaVersion === 2
+          ? profile.courseIds
+          : legacyCourseIdsForSubjectAreas(profile.curriculumId, profile.subjectAreas));
         setExperience(profile.experience);
         setWeeklyTime(profile.weeklyTime);
       }
@@ -59,17 +65,29 @@ export function AssessmentProfilePage({ examId, services }: { examId: Assessment
     return () => { active = false; };
   }, [examId, services.assessmentProfileStore, services.guestSpaceStore]);
 
-  function toggleSubject(subject: AssessmentSubjectArea) {
-    setSubjectAreas((current) => current.includes(subject) ? current.filter((id) => id !== subject) : [...current, subject]);
+  const courseOptions = curriculumId === null ? [] : coursesForAssessmentCurriculum(curriculumId);
+
+  function chooseCurriculum(next: AssessmentCurriculumId) {
+    if (next === curriculumId) return;
+    setCurriculumId(next);
+    setCourseIds([]);
+    setError(null);
+  }
+
+  function toggleCourse(courseId: AssessmentCourseId) {
+    setCourseIds((current) => current.includes(courseId)
+      ? current.filter((id) => id !== courseId)
+      : [...current, courseId]);
     setError(null);
   }
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (guestSpaceId === null || curriculumId === null || learningStage === null || experience === null || weeklyTime === null || subjectAreas.length === 0) {
+    if (guestSpaceId === null || curriculumId === null || learningStage === null || experience === null || weeklyTime === null || courseIds.length === 0) {
       setError("请完成课程体系、年级、学科、练习经历和每周时间后再继续。");
       return;
     }
+    const subjectAreas = subjectAreasForAssessmentCourses(courseIds);
     const now = services.now().toISOString();
     const profile = createAssessmentBackgroundProfile({
       guestSpaceId,
@@ -78,6 +96,7 @@ export function AssessmentProfilePage({ examId, services }: { examId: Assessment
       curriculumId,
       learningStage,
       subjectAreas,
+      courseIds,
       experience,
       weeklyTime,
       createdAt: existing?.createdAt ?? now,
@@ -115,7 +134,7 @@ export function AssessmentProfilePage({ examId, services }: { examId: Assessment
           <fieldset>
             <legend><span>02</span>课程体系 · Curriculum</legend>
             <div className="esat-course-form__curricula">
-              {ASSESSMENT_CURRICULA.map((option) => <label key={option.id}><input type="radio" name="curriculum" checked={curriculumId === option.id} onChange={() => { setCurriculumId(option.id); setError(null); }} /><span><strong>{option.label}</strong><small>{option.detail}</small></span></label>)}
+              {ASSESSMENT_CURRICULA.map((option) => <label key={option.id}><input type="radio" name="curriculum" checked={curriculumId === option.id} onChange={() => chooseCurriculum(option.id)} /><span><strong>{option.label}</strong><small>{option.detail}</small></span></label>)}
             </div>
           </fieldset>
           <fieldset>
@@ -124,12 +143,15 @@ export function AssessmentProfilePage({ examId, services }: { examId: Assessment
               {ASSESSMENT_LEARNING_STAGES.map((option) => <label key={option.id}><input type="radio" name="learning-stage" checked={learningStage === option.id} onChange={() => { setLearningStage(option.id); setError(null); }} /><span>{option.label}</span></label>)}
             </div>
           </fieldset>
-          <fieldset>
-            <legend><span>04</span>正在学习或已经完成的学科 · Subjects</legend>
-            <div className="esat-course-form__courses">
-              {ASSESSMENT_SUBJECT_AREAS.map((option) => <label key={option.id}><input type="checkbox" checked={subjectAreas.includes(option.id)} onChange={() => toggleSubject(option.id)} /><span><strong>{option.labelEn}</strong><small>{option.label}</small></span></label>)}
-            </div>
-          </fieldset>
+          {curriculumId !== null && (
+            <fieldset>
+              <legend><span>04</span>正在学习或已经完成的课程 · Courses</legend>
+              <p className="assessment-profile-form__course-note">只显示 {ASSESSMENT_CURRICULA.find((option) => option.id === curriculumId)?.label} 对应课程；可以多选。</p>
+              <div className="esat-course-form__courses">
+                {courseOptions.map((option) => <label key={option.id}><input type="checkbox" checked={courseIds.includes(option.id as AssessmentCourseId)} onChange={() => toggleCourse(option.id as AssessmentCourseId)} /><span><strong>{option.labelEn}</strong><small>{option.labelZh}</small></span></label>)}
+              </div>
+            </fieldset>
+          )}
           <fieldset>
             <legend><span>05</span>目前做题经历 · Practice experience</legend>
             <div className="esat-course-form__courses assessment-profile-form__compact-options">

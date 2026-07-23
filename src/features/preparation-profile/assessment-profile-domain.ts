@@ -3,27 +3,34 @@ import {
   assertCanonicalUtcTimestamp,
   type GuestSpaceId,
 } from "../../platform/shared/ids.js";
+import {
+  ASSESSMENT_CURRICULA,
+  ASSESSMENT_COURSES,
+  assertAssessmentCoursesMatchCurriculum,
+  legacyCourseIdsForSubjectAreas,
+  subjectAreasForAssessmentCourses,
+  type AssessmentCourseId,
+  type AssessmentCurriculumId,
+  type AssessmentSubjectArea,
+} from "./assessment-course-catalog.js";
+
+export {
+  ASSESSMENT_CURRICULA,
+  ASSESSMENT_COURSES,
+  coursesForAssessmentCurriculum,
+} from "./assessment-course-catalog.js";
+export type {
+  AssessmentCourseId,
+  AssessmentCurriculumId,
+  AssessmentSubjectArea,
+} from "./assessment-course-catalog.js";
 
 export type AssessmentProfileExamId = "tara" | "lnat" | "ucat";
-export type AssessmentCurriculumId = "a-level" | "ib" | "ap" | "other";
 export type AssessmentLearningStage = "year-11-or-below" | "year-12" | "year-13" | "gap-year" | "university";
 export type AssessmentWeeklyTime = "under-2" | "2-4" | "5-7" | "8-plus";
-export type AssessmentSubjectArea =
-  | "mathematics"
-  | "further-mathematics"
-  | "english-language"
-  | "english-literature"
-  | "physics"
-  | "chemistry"
-  | "biology"
-  | "humanities"
-  | "social-sciences"
-  | "other";
-
 export type AssessmentPreparationExperience = "new" | "sampled" | "mocked" | "past-papers";
 
-export interface AssessmentBackgroundProfile {
-  readonly schemaVersion: 1;
+interface AssessmentBackgroundProfileBase {
   readonly guestSpaceId: GuestSpaceId;
   readonly examId: AssessmentProfileExamId;
   readonly entryCycle: "2027" | "2028";
@@ -36,16 +43,21 @@ export interface AssessmentBackgroundProfile {
   readonly updatedAt: string;
 }
 
-export type CreateAssessmentBackgroundProfileInput = Omit<AssessmentBackgroundProfile, "schemaVersion" | "guestSpaceId"> & {
-  readonly guestSpaceId: string;
-};
+export interface LegacyAssessmentBackgroundProfile extends AssessmentBackgroundProfileBase {
+  readonly schemaVersion: 1;
+}
 
-export const ASSESSMENT_CURRICULA: readonly { id: AssessmentCurriculumId; label: string; detail: string }[] = [
-  { id: "a-level", label: "A-Level / IAL", detail: "英国或国际 A-Level 课程" },
-  { id: "ib", label: "IB Diploma", detail: "IBDP 的 HL / SL 课程" },
-  { id: "ap", label: "AP", detail: "美国高中与 AP 课程" },
-  { id: "other", label: "其他课程体系", detail: "国内高中、加拿大或其他课程" },
-];
+export interface AssessmentBackgroundProfileV2 extends AssessmentBackgroundProfileBase {
+  readonly schemaVersion: 2;
+  readonly courseIds: readonly AssessmentCourseId[];
+}
+
+export type AssessmentBackgroundProfile = LegacyAssessmentBackgroundProfile | AssessmentBackgroundProfileV2;
+
+export type CreateAssessmentBackgroundProfileInput = Omit<AssessmentBackgroundProfileBase, "guestSpaceId"> & {
+  readonly guestSpaceId: string;
+  readonly courseIds?: readonly string[];
+};
 
 export const ASSESSMENT_LEARNING_STAGES: readonly { id: AssessmentLearningStage; label: string }[] = [
   { id: "year-11-or-below", label: "Year 11 或以下" },
@@ -91,7 +103,7 @@ const weeklyTimeIds = new Set(ASSESSMENT_WEEKLY_TIME_OPTIONS.map((option) => opt
 
 export function createAssessmentBackgroundProfile(
   input: CreateAssessmentBackgroundProfileInput,
-): AssessmentBackgroundProfile {
+): AssessmentBackgroundProfileV2 {
   const guestSpaceId = asGuestSpaceId(input.guestSpaceId);
   if (!examIds.has(input.examId)) throw new Error("Assessment profile exam is unsupported");
   if (input.entryCycle !== "2027" && input.entryCycle !== "2028") throw new Error("Assessment profile entry cycle is unsupported");
@@ -113,14 +125,26 @@ export function createAssessmentBackgroundProfile(
   if (Date.parse(input.updatedAt) < Date.parse(input.createdAt)) {
     throw new Error("Assessment profile updatedAt cannot precede createdAt");
   }
+  const courseIds = input.courseIds === undefined
+    ? legacyCourseIdsForSubjectAreas(input.curriculumId, input.subjectAreas)
+    : [...input.courseIds];
+  assertAssessmentCoursesMatchCurriculum(input.curriculumId, courseIds);
+  const derivedSubjectAreas = subjectAreasForAssessmentCourses(courseIds);
+  if (
+    derivedSubjectAreas.length !== input.subjectAreas.length ||
+    derivedSubjectAreas.some((subjectArea) => !input.subjectAreas.includes(subjectArea))
+  ) {
+    throw new Error("Assessment subject areas must match the selected curriculum courses");
+  }
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     guestSpaceId,
     examId: input.examId,
     entryCycle: input.entryCycle,
     curriculumId: input.curriculumId,
     learningStage: input.learningStage,
     subjectAreas: [...input.subjectAreas],
+    courseIds,
     experience: input.experience,
     weeklyTime: input.weeklyTime,
     createdAt: input.createdAt,

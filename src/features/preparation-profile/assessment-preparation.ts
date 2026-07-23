@@ -1,12 +1,16 @@
 import {
   ASSESSMENT_CURRICULA,
   ASSESSMENT_LEARNING_STAGES,
-  ASSESSMENT_SUBJECT_AREAS,
   ASSESSMENT_WEEKLY_TIME_OPTIONS,
   type AssessmentBackgroundProfile,
   type AssessmentProfileExamId,
   type AssessmentSubjectArea,
 } from "./assessment-profile-domain.js";
+import {
+  assessmentCoursesById,
+  legacyCourseIdsForSubjectAreas,
+  type AssessmentCourseOption,
+} from "./assessment-course-catalog.js";
 
 export type AssessmentPreparationStatus =
   | "curriculum-transfer"
@@ -183,20 +187,26 @@ const experienceAllowance = {
   "past-papers": [0, 0],
 } as const;
 
-function labelForSubject(subject: AssessmentSubjectArea): string {
-  const definition = ASSESSMENT_SUBJECT_AREAS.find((item) => item.id === subject);
-  if (definition === undefined) throw new Error(`Missing assessment subject label: ${subject}`);
-  return `${definition.labelEn} · ${definition.label}`;
+function coursesForProfile(profile: AssessmentBackgroundProfile): readonly AssessmentCourseOption[] {
+  const courseIds = profile.schemaVersion === 2
+    ? profile.courseIds
+    : legacyCourseIdsForSubjectAreas(profile.curriculumId, profile.subjectAreas);
+  return assessmentCoursesById(courseIds);
+}
+
+function labelForCourse(course: AssessmentCourseOption): string {
+  return `${course.labelEn} · ${course.labelZh}`;
 }
 
 function moduleFromBlueprint(
   blueprint: ModuleBlueprint,
   profile: AssessmentBackgroundProfile,
 ): AssessmentPreparationModule {
-  const matchedSubjects = profile.subjectAreas.filter((subject) => blueprint.relevantSubjects.includes(subject));
+  const matchedCourses = coursesForProfile(profile).filter((course) =>
+    blueprint.relevantSubjects.includes(course.subjectArea));
   const status: AssessmentPreparationStatus = blueprint.alwaysExamSpecific === true
     ? "exam-specific"
-    : matchedSubjects.length > 0
+    : matchedCourses.length > 0
       ? "curriculum-transfer"
       : "foundation-check";
   const statusLabel = status === "curriculum-transfer"
@@ -206,8 +216,8 @@ function moduleFromBlueprint(
       : "先检查基础缺口 · Foundation check";
   const courseEvidence = status === "exam-specific"
     ? "所有课程体系"
-    : matchedSubjects.length > 0
-      ? matchedSubjects.map(labelForSubject).join("、")
+    : matchedCourses.length > 0
+      ? matchedCourses.map(labelForCourse).join("、")
       : "当前档案没有显示直接相关学科";
   return {
     id: blueprint.id,
@@ -248,7 +258,7 @@ export function buildAssessmentPreparationPlan(
     curriculumLabel: curriculum.label,
     learningStageLabel: stage.label,
     weeklyTimeLabel: weekly.label,
-    subjectLabels: profile.subjectAreas.map(labelForSubject),
+    subjectLabels: coursesForProfile(profile).map(labelForCourse),
     modules,
     firstCycleHours: [minHours, maxHours],
     firstCycleWeeks: [minWeeks, maxWeeks],

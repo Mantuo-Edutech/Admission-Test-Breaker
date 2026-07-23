@@ -37,13 +37,14 @@ select lives_ok(
   $$
     select public.save_assessment_background_profile(
       jsonb_build_object(
-        'schemaVersion', 1,
+        'schemaVersion', 2,
         'guestSpaceId', 'gsp_assessment_alice_01',
         'examId', 'ucat',
         'entryCycle', '2027',
         'curriculumId', 'a-level',
         'learningStage', 'year-12',
         'subjectAreas', jsonb_build_array('mathematics', 'biology'),
+        'courseIds', jsonb_build_array('al-mathematics', 'al-biology'),
         'experience', 'sampled',
         'weeklyTime', '2-4',
         'createdAt', '2026-07-18T12:00:00.000Z',
@@ -57,13 +58,14 @@ select lives_ok(
   $$
     select public.save_assessment_background_profile(
       jsonb_build_object(
-        'schemaVersion', 1,
+        'schemaVersion', 2,
         'guestSpaceId', 'gsp_assessment_alice_01',
         'examId', 'tara',
         'entryCycle', '2027',
         'curriculumId', 'ib',
         'learningStage', 'year-12',
         'subjectAreas', jsonb_build_array('english-language'),
+        'courseIds', jsonb_build_array('ib-english-a-language-literature'),
         'experience', 'new',
         'weeklyTime', 'under-2',
         'createdAt', '2026-07-18T12:00:00.000Z',
@@ -92,9 +94,10 @@ select throws_ok(
   $$
     select public.save_assessment_background_profile(
       jsonb_build_object(
-        'schemaVersion', 1, 'guestSpaceId', 'gsp_assessment_alice_01',
+        'schemaVersion', 2, 'guestSpaceId', 'gsp_assessment_alice_01',
         'examId', 'ucat', 'entryCycle', '2027', 'curriculumId', 'ap',
         'learningStage', 'year-12', 'subjectAreas', jsonb_build_array('biology'),
+        'courseIds', jsonb_build_array('ap-biology'),
         'experience', 'sampled', 'weeklyTime', '2-4',
         'createdAt', '2026-07-18T12:00:00.000Z',
         'updatedAt', '2026-07-18T12:00:00.000Z', 'unexpected', true
@@ -109,10 +112,11 @@ select throws_ok(
   $$
     select public.save_assessment_background_profile(
       jsonb_build_object(
-        'schemaVersion', 1, 'guestSpaceId', 'gsp_assessment_alice_01',
+        'schemaVersion', 2, 'guestSpaceId', 'gsp_assessment_alice_01',
         'examId', 'ucat', 'entryCycle', '2027', 'curriculumId', 'ap',
         'learningStage', 'year-12',
         'subjectAreas', jsonb_build_array('biology', 'biology'),
+        'courseIds', jsonb_build_array('ap-biology'),
         'experience', 'sampled', 'weeklyTime', '2-4',
         'createdAt', '2026-07-18T12:00:00.000Z',
         'updatedAt', '2026-07-18T12:00:00.000Z'
@@ -137,9 +141,10 @@ select lives_ok(
   $$
     select public.save_assessment_background_profile(
       jsonb_build_object(
-        'schemaVersion', 1, 'guestSpaceId', 'gsp_assessment_bob_01',
+        'schemaVersion', 2, 'guestSpaceId', 'gsp_assessment_bob_01',
         'examId', 'ucat', 'entryCycle', '2028', 'curriculumId', 'other',
         'learningStage', 'gap-year', 'subjectAreas', jsonb_build_array('other'),
+        'courseIds', jsonb_build_array('other-subject'),
         'experience', 'mocked', 'weeklyTime', '5-7',
         'createdAt', '2026-07-18T12:00:00.000Z',
         'updatedAt', '2026-07-18T12:00:00.000Z'

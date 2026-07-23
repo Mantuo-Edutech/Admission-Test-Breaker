@@ -9,11 +9,13 @@ import {
 } from "react-router-dom";
 import type { AppServices } from "./dependencies.js";
 import { createDefaultAppServices } from "./dependencies.js";
-import { LandingPage } from "../features/practice/pages/LandingPage.js";
 import { EXAM_CATALOG } from "../features/catalog/exams.js";
 import { PreparationProfileGate } from "../features/preparation-profile/components/PreparationProfileGate.js";
 import { applySiteMetadata } from "./site-metadata.js";
 
+const LandingPage = lazy(async () => ({
+  default: (await import("../features/practice/pages/LandingPage.js")).LandingPage,
+}));
 const PracticeRoutePage = lazy(async () => ({
   default: (await import("../features/practice/pages/PracticeRoutePage.js")).PracticeRoutePage,
 }));
@@ -205,7 +207,7 @@ export function createAppRouter(
   const routes = [
     {
       path: "/",
-      element: <RouteFrame><LandingPage services={services} /></RouteFrame>,
+      element: <RouteFrame><Suspense fallback={<RouteLoading />}><LandingPage services={services} /></Suspense></RouteFrame>,
     },
     {
       path: "/exams/tmua",

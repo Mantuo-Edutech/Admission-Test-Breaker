@@ -16,7 +16,11 @@ const base = {
 
 describe("assessment background profile domain", () => {
   it("creates a minimal, exam-scoped student-owned profile", () => {
-    expect(createAssessmentBackgroundProfile(base)).toEqual({ schemaVersion: 1, ...base });
+    expect(createAssessmentBackgroundProfile(base)).toEqual({
+      schemaVersion: 2,
+      ...base,
+      courseIds: ["al-mathematics", "al-biology"],
+    });
   });
 
   it("requires at least one unique supported subject", () => {

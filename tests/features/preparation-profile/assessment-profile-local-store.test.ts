@@ -46,6 +46,35 @@ describe("local assessment background profile store", () => {
     await expect(store.load("gsp_assessment-other", "lnat")).resolves.toEqual({ profile: null, issue: null });
   });
 
+  it("migrates a version 1 broad-subject profile to exact version 2 courses", async () => {
+    const storage = new MemoryStorage();
+    const legacyKey = "admission-breaker:assessment-profile:gsp_assessment-store:tara:v1";
+    storage.setItem(legacyKey, JSON.stringify({
+      schemaVersion: 1,
+      guestSpaceId: "gsp_assessment-store",
+      examId: "tara",
+      entryCycle: "2027",
+      curriculumId: "ib",
+      learningStage: "year-12",
+      subjectAreas: ["further-mathematics", "english-language"],
+      experience: "sampled",
+      weeklyTime: "2-4",
+      createdAt: "2026-07-18T12:00:00.000Z",
+      updatedAt: "2026-07-18T12:00:00.000Z",
+    }));
+    const store = new LocalAssessmentProfileStore(storage);
+
+    await expect(store.load("gsp_assessment-store", "tara")).resolves.toMatchObject({
+      profile: {
+        schemaVersion: 2,
+        courseIds: ["ib-math-aa-hl", "ib-english-a-language-literature"],
+      },
+      issue: null,
+    });
+    expect(storage.getItem(legacyKey)).toBeNull();
+    expect(storage.getItem("admission-breaker:assessment-profile:gsp_assessment-store:tara:v2")).not.toBeNull();
+  });
+
   it("quarantines a profile that crosses its exam boundary", async () => {
     const storage = new MemoryStorage();
     storage.setItem(
@@ -65,7 +94,7 @@ describe("local assessment background profile store", () => {
     await store.save(profile("tara"));
     storage.setItem(
       "admission-breaker:assessment-profile:gsp_assessment-store:lnat:v1",
-      JSON.stringify({ schemaVersion: 2 }),
+      JSON.stringify({ schemaVersion: 3 }),
     );
 
     await expect(store.load("gsp_assessment-store", "lnat")).resolves.toEqual({ profile: null, issue: "unsupported" });

@@ -66,13 +66,32 @@ describe("exam-aware profile-first practice journey", () => {
     );
     await expect(appServices.assessmentProfileStore?.load(FIXED_GUEST_SPACE.id, "ucat")).resolves.toMatchObject({
       profile: {
+        schemaVersion: 2,
         examId: "ucat",
         curriculumId: "a-level",
         learningStage: "year-12",
         subjectAreas: ["mathematics"],
+        courseIds: ["al-mathematics"],
       },
       issue: null,
     });
+  });
+
+  it("shows courses from the selected curriculum instead of one A-Level subject list", async () => {
+    const user = userEvent.setup();
+    const router = createAppRouter(["/exams/tara/profile"], services());
+    render(<RouterProvider router={router} />);
+
+    expect(await screen.findByRole("heading", { name: /填写你的 TARA 背景/u })).toBeInTheDocument();
+    await user.click(screen.getByRole("radio", { name: /IB Diploma/u }));
+    expect(screen.getByRole("checkbox", { name: /Mathematics: Analysis & Approaches HL/u })).toBeInTheDocument();
+    expect(screen.queryByRole("checkbox", { name: /^Further Mathematics/u })).not.toBeInTheDocument();
+    expect(screen.queryByRole("checkbox", { name: /AP Calculus BC/u })).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole("radio", { name: /^AP按已经学习/u }));
+    expect(screen.getByRole("checkbox", { name: /AP Calculus BC/u })).toBeInTheDocument();
+    expect(screen.getByRole("checkbox", { name: /AP Physics C: Electricity/u })).toBeInTheDocument();
+    expect(screen.queryByRole("checkbox", { name: /Mathematics: Analysis & Approaches HL/u })).not.toBeInTheDocument();
   });
 
   it("does not let a UCAT profile unlock LNAT practice", async () => {

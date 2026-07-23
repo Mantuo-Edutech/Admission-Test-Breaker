@@ -40,6 +40,25 @@ test("ESAT Mathematics 1 full mock opens natively and persists at the current vi
   await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "已作答 0 / 27");
   await expect(page.getByText(/ORIGINAL FULL-LENGTH MOCK.*满托原创完整模考/u)).toBeVisible();
 
+  if ((page.viewportSize()?.width ?? 0) >= 1200) {
+    const density = await page.evaluate(() => {
+      const choices = [...document.querySelectorAll<HTMLElement>(".answer-choice")];
+      const card = document.querySelector<HTMLElement>(".question-card");
+      const number = document.querySelector<HTMLElement>(".math-plain-number");
+      return {
+        choiceHeights: choices.map((choice) => choice.getBoundingClientRect().height),
+        cardBottom: card?.getBoundingClientRect().bottom ?? Number.POSITIVE_INFINITY,
+        viewportHeight: globalThis.innerHeight,
+        numberWeight: number === null ? null : getComputedStyle(number).fontWeight,
+      };
+    });
+    expect(density.choiceHeights).toHaveLength(4);
+    expect(Math.min(...density.choiceHeights)).toBeGreaterThanOrEqual(44);
+    expect(Math.max(...density.choiceHeights)).toBeLessThanOrEqual(56);
+    expect(density.cardBottom).toBeLessThanOrEqual(density.viewportHeight);
+    expect(density.numberWeight).toBe("400");
+  }
+
   await page.getByRole("radio", { name: "选项 B" }).check();
   await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "已作答 1 / 27");
   await expectNoDocumentOverflow(page);

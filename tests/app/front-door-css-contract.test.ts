@@ -81,13 +81,7 @@ describe("responsive editorial front-door CSS", () => {
       /@media \(max-width: 35rem\)[\s\S]*?\.tmua-starting-path ol\s*\{[^}]*grid-template-columns:\s*1fr/u,
     );
     expect(stagedJourney).toMatch(
-      /\.tmua-dashboard-grid\s*\{[^}]*grid-template-columns:\s*repeat\(3,/su,
-    );
-    expect(stagedJourney).toMatch(
-      /@media \(max-width: 62rem\)[\s\S]*?\.tmua-dashboard-grid\s*\{[^}]*repeat\(2,/u,
-    );
-    expect(stagedJourney).toMatch(
-      /@media \(max-width: 45rem\)[\s\S]*?\.tmua-dashboard-grid,[\s\S]*?grid-template-columns:\s*1fr/u,
+      /\.tmua-overview-page__actions\s*\{[^}]*flex-wrap:\s*wrap/su,
     );
     expect(stagedJourney).not.toContain("linear-gradient");
   });

@@ -22,6 +22,7 @@
     "verify:invite-operations": "vitest run tests/features/invite-operations tests/app/invite-operations-page.test.tsx tests/app/account-lifecycle.test.tsx",
     "verify:production-platform": "vitest run tests/architecture/production-platform-contracts.test.ts tests/platform/runtime-config.test.ts tests/platform/supabase-auth-protection-config.test.ts tests/platform/deployment-runtime-validation.test.ts",
     "verify:web-performance": "tsx scripts/check-web-performance-budget.ts",
+    "verify:experience-system": "vitest run tests/app/online-question-density-contract.test.tsx tests/features/preparation-profile/assessment-course-catalog.test.ts tests/features/preparation-profile/assessment-profile-domain.test.ts tests/features/preparation-profile/assessment-profile-local-store.test.ts tests/app/assessment-profile-first-journey.test.tsx",
     "verify:content-products": "vitest run tests/features/library tests/app/learning-library-page.test.tsx tests/app/content-product-route-audit.test.tsx",
     "verify:product-lineage": "vitest run tests/features/library/asset-product-lifecycle.test.ts",
     "content:build-release-readiness": "tsx scripts/check-content-release-readiness.ts --write",
