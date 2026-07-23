@@ -37,8 +37,10 @@ flowchart LR
 
 The controller:
 
-- requires a full 40-character commit SHA and an image tagged with the same SHA;
-- resolves that tag to a content-addressed Docker image ID, then requires both
+- requires a full 40-character commit SHA, an image tagged with the same SHA and
+  the manifest digest recorded by the approved release workflow;
+- pulls the tag and requires its registry digest to equal that approved manifest
+  before resolving it to a content-addressed local Docker image ID, then requires both
   the OCI revision label and the image's read-only `build-revision` file to equal
   the same commit; runtime version injection cannot disguise a different build;
 - validates the existing host Nginx proxy but never edits or reloads Nginx;
@@ -75,9 +77,11 @@ evidence recording against the exact public release.
 - Immediate rollback depends on the previous container and its bind-mounted
   runtime directory remaining present. Cleanup is therefore a separate,
   deliberate operation and is not part of promotion.
-- Image download/authentication remains outside the controller. GitHub publishes
-  the immutable artifact; the approved operator must make that image available
-  to Docker before or during promotion.
+- Registry authentication remains outside the controller. GitHub publishes the
+  immutable artifact; a private package must use a scoped `read:packages`
+  credential through Docker's credential store, or the static-Web package may be
+  made public by an explicit owner decision. Tokens never belong in the runtime
+  environment file, release command text or deployment state.
 - The script controls one host, not a fleet. Revisit a registry-driven deployment
   agent or orchestrator only when multiple hosts, zero-downtime load balancing or
   independent scaling creates real need.

@@ -296,14 +296,15 @@ unset SMTP_USER
      install -m 0600 deploy/ecs-host-nginx.env.example \
        /opt/admission-test-breaker/ecs-host-nginx.env.local
    fi
-   # 在批准终端填写浏览器公开值与准确 commit SHA；不放任何 secret。
+   # 在批准终端填写浏览器公开值、准确 commit SHA，以及 release workflow
+   # 输出的 EXPECTED_IMAGE_DIGEST；不放任何 secret。
    set -a
    . /opt/admission-test-breaker/ecs-host-nginx.env.local
    set +a
    deploy/deploy-ecs-host-nginx.sh
    ```
 
-   发布器先验证宿主机 Nginx 仍代理 `127.0.0.1:8090`，并要求 SHA tag、OCI revision label、镜像内只读 build-revision 三者一致；然后才由准确镜像生成 runtime 文件、合并最近 14 天哈希资源、在随机 loopback 端口完成候选验证。候选通过后才保留旧容器并切换 8090；新版本在 loopback 或公开域名验证失败时自动恢复旧版本。它不编辑或 reload Nginx，不绑定 80/443，不清理其他容器或镜像。成功状态写入 `/opt/admission-test-breaker/deployment-state/current.json`，上一容器保持停止但可立即恢复：
+   发布器先验证宿主机 Nginx 仍代理 `127.0.0.1:8090`，强制 pull SHA tag，并要求 release workflow 的 manifest digest、SHA tag、OCI revision label、镜像内只读 build-revision 四者一致；然后才由准确镜像生成 runtime 文件、合并最近 14 天哈希资源、在随机 loopback 端口完成候选验证。GHCR 包保持私有时，应通过 Docker credential store 使用只含 `read:packages` 的凭据；token 不得出现在 runtime env、云助手命令或 release state。候选通过后才保留旧容器并切换 8090；新版本在 loopback 或公开域名验证失败时自动恢复旧版本。它不编辑或 reload Nginx，不绑定 80/443，不清理其他容器或镜像。成功状态写入 `/opt/admission-test-breaker/deployment-state/current.json`，上一容器保持停止但可立即恢复：
 
    ```bash
    deploy/rollback-ecs-host-nginx.sh

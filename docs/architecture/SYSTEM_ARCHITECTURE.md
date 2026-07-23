@@ -398,7 +398,7 @@ Projections ──只消费事件，不反向修改──> Event Ledger
 
 首个生产形态采用满托账号下的 managed hosted Supabase 承载身份、PostgreSQL、RLS、对象存储与 Edge Function；Web 客户端构建为 commit SHA 标记的不可变 Docker 镜像，由非 root/只读 nginx 提供静态页面。专用单站服务器可以使用仓库的 Caddy Compose 终止 TLS；现有香港共享 ECS 则保留宿主机 Nginx 的 80/443 和多站点边界，只把应用容器绑定到 `127.0.0.1:8090`。Supabase URL、publishable key 与公开 Turnstile site key 在容器启动时写入临时 runtime config，同一镜像从 staging 提升到 production 时不重新编译；service-role、数据库密码、Turnstile secret 和平台 access token 永不进入浏览器或 Web 镜像。staging/production 缺少 site key 时注册、登录和密码重置失败关闭；Supabase Auth 通过 Management API 接收 secret 并在服务端验证一次性 token，浏览器校验不被视为安全边界。
 
-共享 ECS 的 Web 提升必须经过独立候选容器：准确 SHA tag、OCI revision label 与镜像内只读 build-revision 必须三者一致，随后才在随机 loopback 端口生成并核对 runtime、版本、健康、安全头和旧标签页资源；通过后才保留旧容器并切到 8090；loopback 或 `uktest.cc` 验证失败会立即恢复旧容器。发布器只读取并验证现有 Nginx 代理，不编辑、不 reload，也不执行全局 Docker 清理。当前/上一 release 的非秘密状态原子写入宿主机，显式回滚使用同一把排他锁。决策和限制见 `docs/architecture/decisions/2026-07-24-shared-ecs-release-control.md`。
+共享 ECS 的 Web 提升必须经过独立候选容器：发布 workflow 记录的 registry manifest digest、准确 SHA tag、OCI revision label 与镜像内只读 build-revision 必须四者一致，随后才在随机 loopback 端口生成并核对 runtime、版本、健康、安全头和旧标签页资源；通过后才保留旧容器并切到 8090；loopback 或 `uktest.cc` 验证失败会立即恢复旧容器。发布器只读取并验证现有 Nginx 代理，不编辑、不 reload，也不执行全局 Docker 清理。当前/上一 release 的非秘密状态原子写入宿主机，显式回滚使用同一把排他锁。决策和限制见 `docs/architecture/decisions/2026-07-24-shared-ecs-release-control.md`。
 
 迁移、函数、Auth bot protection、服务端密码/邮件确认/redirect 基线、自定义 SMTP、GitHub Environment 审批和验证全部保存在仓库并由 CLI/Actions 执行，避免生产配置只存在 GUI。SMTP 自动化只配置 Supabase Auth，发件域名的 SPF/DKIM/DMARC 与真实确认/重置邮件仍需独立交付证据。平台备份或恢复到新项目是 Auth 与托管 schema 的主灾备路径，CLI 逻辑导出只作异地补充；本地全数据库恢复与 100 用户容量脚本持续进入 CI。事件投影、Benchmark 与 AI 任务通过持久任务队列异步执行；只有当数据驻留、成本、独立伸缩或隔离出现实际证据时，再评估自托管 Supabase 或拆分服务。
 
