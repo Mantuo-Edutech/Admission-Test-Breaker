@@ -416,7 +416,16 @@ pnpm production:evidence:run --control managed-backup
 
 每个命令只允许执行控制目录里固定的 `pnpm` 脚本。终端继续显示原验证输出，但账本只保存退出状态、输出字节数和 SHA-256，不保存原文、secret 或临时测试账号。失败也会记录，并作为该控制最新结论覆盖旧成功。
 
-人工控制必须先把已经去除姓名、邮箱、邀请码、学生答案和其他个人数据的证据文件放到 `verification/production/evidence/artifacts/`，再由实际完成者记录。例如：
+人工控制必须先根据固定测试用例生成结构化报告。报告中的全部检查默认失败；只有实际在生产环境观察到预期结果后，测试者才能把对应项改为 `passed`。缺少检查、目标或 release 不一致、命令行结论与检查结果矛盾，或报告含常见邮箱、凭据、邀请码、Token 与 IP 地址时，记录器都会拒绝写入：
+
+```bash
+export PRODUCTION_EVIDENCE_RELEASE='<deployed-commit-sha>'
+pnpm production:evidence:prepare-manual -- \
+  --control identity-journey-uat \
+  --output verification/production/evidence/artifacts/identity-journey-redacted.json
+```
+
+测试者还要去除姓名、学生答案和其他无法自动识别的个人数据，再由实际完成者记录。例如：
 
 ```bash
 export PRODUCTION_EVIDENCE_REVIEWER_REF='approved-reviewer-01'
@@ -426,10 +435,10 @@ pnpm production:evidence:record-manual \
   --control identity-journey-uat \
   --result passed \
   --summary 'Production identity journey passed on approved real devices.' \
-  --artifact verification/production/evidence/artifacts/identity-journey-redacted.md
+  --report verification/production/evidence/artifacts/identity-journey-redacted.json
 ```
 
-法律审核、恢复演练、MFA 所有权、告警接收人和真实设备 UAT 都使用各自 control ID；不得复用一个笼统截图替代多个结论。最后运行：
+法律审核还应把完成后的独立审核 attestation 作为额外 `--artifact`；恢复演练、MFA 所有权、告警接收人和真实设备 UAT 都使用各自 control ID。固定用例来自 `verification/production/manual-control-procedures.json`，不得删除失败项，也不得复用一个笼统截图替代多个结论。最后运行：
 
 ```bash
 PRODUCTION_EVIDENCE_RELEASE='<deployed-commit-sha>' pnpm production:evidence:gate

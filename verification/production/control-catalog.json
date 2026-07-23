@@ -85,7 +85,9 @@
       "gates": ["B100-P0-01"],
       "sourcePaths": [
         "src/features/account/pages/AccountPage.tsx",
-        "src/features/account/supabase-account-service.ts"
+        "src/features/account/supabase-account-service.ts",
+        "src/platform/production-manual-evidence.ts",
+        "verification/production/manual-control-procedures.json"
       ]
     },
     {
@@ -122,7 +124,9 @@
       "gates": ["B100-P0-02"],
       "sourcePaths": [
         "src/features/learner-data/auth-aware-practice-history.ts",
-        "src/features/practice/pages/LearningRecordPage.tsx"
+        "src/features/practice/pages/LearningRecordPage.tsx",
+        "src/platform/production-manual-evidence.ts",
+        "verification/production/manual-control-procedures.json"
       ]
     },
     {
@@ -134,7 +138,9 @@
       "gates": ["B100-P0-02", "B100-P0-03"],
       "sourcePaths": [
         "src/features/collaboration/pages/SharingPage.tsx",
-        "supabase/migrations/20260719210000_student_controlled_collaboration.sql"
+        "supabase/migrations/20260719210000_student_controlled_collaboration.sql",
+        "src/platform/production-manual-evidence.ts",
+        "verification/production/manual-control-procedures.json"
       ]
     },
     {
@@ -148,7 +154,9 @@
         "docs/legal/STUDENT_PRIVACY_AND_DATA_RIGHTS_FOUNDATION.md",
         "docs/legal/PRODUCTION_PRIVACY_REVIEW_PACKET.md",
         "verification/production/templates/privacy-legal-review-attestation.md",
-        "src/features/data-rights/pages/PrivacyPage.tsx"
+        "src/features/data-rights/pages/PrivacyPage.tsx",
+        "src/platform/production-manual-evidence.ts",
+        "verification/production/manual-control-procedures.json"
       ]
     },
     {
@@ -160,7 +168,9 @@
       "gates": ["B100-P0-03"],
       "sourcePaths": [
         "src/features/data-rights/pages/PrivacyPage.tsx",
-        "supabase/migrations/20260718172000_student_data_rights.sql"
+        "supabase/migrations/20260718172000_student_data_rights.sql",
+        "src/platform/production-manual-evidence.ts",
+        "verification/production/manual-control-procedures.json"
       ]
     },
     {
@@ -192,7 +202,9 @@
       "gates": ["B100-P0-04"],
       "sourcePaths": [
         "scripts/restore-supabase-logical.sh",
-        "docs/operations/PRODUCTION_BETA_RUNBOOK.md"
+        "docs/operations/PRODUCTION_BETA_RUNBOOK.md",
+        "src/platform/production-manual-evidence.ts",
+        "verification/production/manual-control-procedures.json"
       ]
     },
     {
@@ -204,7 +216,9 @@
       "gates": ["B100-P0-04"],
       "sourcePaths": [
         ".github/workflows/deployment-smoke.yml",
-        "docs/operations/PRODUCTION_BETA_RUNBOOK.md"
+        "docs/operations/PRODUCTION_BETA_RUNBOOK.md",
+        "src/platform/production-manual-evidence.ts",
+        "verification/production/manual-control-procedures.json"
       ]
     },
     {
@@ -216,7 +230,9 @@
       "gates": ["B100-P0-05"],
       "sourcePaths": [
         "src/features/invite-operations/pages/InviteOperationsPage.tsx",
-        "supabase/migrations/20260719170000_invite_operator_workflow.sql"
+        "supabase/migrations/20260719170000_invite_operator_workflow.sql",
+        "src/platform/production-manual-evidence.ts",
+        "verification/production/manual-control-procedures.json"
       ]
     },
     {
@@ -228,7 +244,9 @@
       "gates": ["B100-P0-05"],
       "sourcePaths": [
         "src/features/invite-operations/pages/InviteOperationsPage.tsx",
-        "docs/operations/PRODUCTION_BETA_RUNBOOK.md"
+        "docs/operations/PRODUCTION_BETA_RUNBOOK.md",
+        "src/platform/production-manual-evidence.ts",
+        "verification/production/manual-control-procedures.json"
       ]
     }
   ]

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "revision": "2026-07-24.1",
+  "procedures": [
+    {
+      "controlId": "identity-journey-uat",
+      "checks": [
+        { "id": "ID-01", "label": "Register a new production test account through the public account page." },
+        { "id": "ID-02", "label": "Confirm that the real confirmation email returns only to the approved production origin." },
+        { "id": "ID-03", "label": "Log in after confirmation and verify that a refresh preserves the authenticated session." },
+        { "id": "ID-04", "label": "Complete password reset from a real email and verify that the old password no longer works." },
+        { "id": "ID-05", "label": "Sign out and verify that authenticated account actions are no longer available." }
+      ]
+    },
+    {
+      "controlId": "private-learning-cross-device-uat",
+      "checks": [
+        { "id": "LD-01", "label": "Create a preparation profile and submit a practice session on the first approved device." },
+        { "id": "LD-02", "label": "Open the same account on a second device and verify the exact immutable session and result." },
+        { "id": "LD-03", "label": "Verify that a second account cannot read or overwrite the first account learning records." },
+        { "id": "LD-04", "label": "Sign out on both devices and verify that private learning data is no longer rendered." }
+      ]
+    },
+    {
+      "controlId": "collaboration-grant-uat",
+      "checks": [
+        { "id": "COL-01", "label": "The student grants a named test collaborator only the selected granular permissions." },
+        { "id": "COL-02", "label": "The collaborator can use every granted action and cannot use an ungranted action." },
+        { "id": "COL-03", "label": "The student revokes the grant and the collaborator immediately loses access." },
+        { "id": "COL-04", "label": "An unrelated account cannot view either the grant or any collaboration artifact." },
+        { "id": "COL-05", "label": "The student export records the grant, artifacts and revocation without exposing another tenant." }
+      ]
+    },
+    {
+      "controlId": "privacy-legal-review",
+      "checks": [
+        { "id": "PRIV-01", "label": "Approve the controller identity and operational privacy contact." },
+        { "id": "PRIV-02", "label": "Approve the child-user scope and age-assurance position." },
+        { "id": "PRIV-03", "label": "Approve the lawful basis separately for every processing purpose." },
+        { "id": "PRIV-04", "label": "Complete and approve the child-focused data protection impact assessment." },
+        { "id": "PRIV-05", "label": "Approve the layered child-readable privacy notice and just-in-time notices." },
+        { "id": "PRIV-06", "label": "Approve the category-specific retention and deletion schedule." },
+        { "id": "PRIV-07", "label": "Approve the processor register, contracts and data processing terms." },
+        { "id": "PRIV-08", "label": "Approve the international transfer mechanism and transfer risk assessment." },
+        { "id": "PRIV-09", "label": "Approve the access, correction, deletion, restriction, objection and portability process." },
+        { "id": "PRIV-10", "label": "Approve handling of authorised teachers, parents, representatives and child best interests." },
+        { "id": "PRIV-11", "label": "Approve the personal data breach response and notification procedure." },
+        { "id": "PRIV-12", "label": "Approve change control before AI, benchmark, marketing or new profiling uses." }
+      ]
+    },
+    {
+      "controlId": "data-rights-uat",
+      "checks": [
+        { "id": "DR-01", "label": "Export authenticated learning data and verify the machine-readable copy contains only that account." },
+        { "id": "DR-02", "label": "Submit a correction request through the published route and verify operational acknowledgement." },
+        { "id": "DR-03", "label": "Verify that account deletion rejects an incorrect current password." },
+        { "id": "DR-04", "label": "Delete the test account and verify login, private rows and active grants are removed." },
+        { "id": "DR-05", "label": "Submit a privacy complaint through the published route and verify owner and escalation handling." }
+      ]
+    },
+    {
+      "controlId": "managed-recovery-drill",
+      "checks": [
+        { "id": "REC-01", "label": "Restore an approved production managed restore point into an isolated recovery target." },
+        { "id": "REC-02", "label": "Verify the restored migration history and immutable content revisions against the release." },
+        { "id": "REC-03", "label": "Verify recorded row counts and integrity checks against the source recovery manifest." },
+        { "id": "REC-04", "label": "Run authentication, RLS and cross-tenant isolation checks against the restored target." },
+        { "id": "REC-05", "label": "Record achieved recovery point and recovery time and confirm both meet the approved target." },
+        { "id": "REC-06", "label": "Remove or retain the isolated recovery target according to the approved recovery policy." }
+      ]
+    },
+    {
+      "controlId": "production-alerting",
+      "checks": [
+        { "id": "ALT-01", "label": "Trigger a production health failure and verify delivery to the designated receiver." },
+        { "id": "ALT-02", "label": "Trigger the approved authentication failure signal and verify delivery." },
+        { "id": "ALT-03", "label": "Trigger a managed backup gate failure and verify delivery." },
+        { "id": "ALT-04", "label": "Trigger the approved security signal and verify delivery without exposing sensitive data." },
+        { "id": "ALT-05", "label": "Verify that the designated owner acknowledges and escalates the alert within the target time." }
+      ]
+    },
+    {
+      "controlId": "invite-operator-uat",
+      "checks": [
+        { "id": "INV-01", "label": "The designated operator issues an invite only for a published access package." },
+        { "id": "INV-02", "label": "A recipient redeems the invite once and receives exactly the intended entitlement." },
+        { "id": "INV-03", "label": "A non-entitled account cannot fetch the protected Notes or deep explanation." },
+        { "id": "INV-04", "label": "Revoking an unused invite prevents its subsequent redemption." },
+        { "id": "INV-05", "label": "An invite cannot grant a different package, exam or tenant scope." }
+      ]
+    },
+    {
+      "controlId": "invite-operator-mfa",
+      "checks": [
+        { "id": "MFA-01", "label": "Verify the production invite-operator account owner in the restricted operator register." },
+        { "id": "MFA-02", "label": "Complete an MFA login challenge with the designated invite-operator account." },
+        { "id": "MFA-03", "label": "Verify the account has invite-operator permission without broader platform administration." },
+        { "id": "MFA-04", "label": "Verify the approved MFA recovery method is stored and tested under the access policy." },
+        { "id": "MFA-05", "label": "Verify a normal authenticated account cannot open or use invite operations." }
+      ]
+    }
+  ]
+}
