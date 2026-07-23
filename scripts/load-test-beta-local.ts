@@ -1,6 +1,12 @@
 import { createHmac, randomUUID } from "node:crypto";
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
+import { createPracticeSession } from "../src/features/practice/domain/session.js";
+import {
+  asGuestSpaceId,
+  asLearningEventId,
+  asPracticeSessionId,
+} from "../src/platform/shared/ids.js";
 
 interface LocalSupabaseStatus {
   API_URL: string;
@@ -166,37 +172,17 @@ try {
     const suffix = user.id.replaceAll("-", "");
     const guestSpaceId = `gsp_load_${runId}_${suffix}`;
     const sessionId = `ses_load_${runId}_${suffix}`;
-    const actor = { kind: "guest", actorId: `guest_load_${suffix}` };
-    const baseEvent = {
-      id: `evt_load_start_${suffix}`,
-      schemaVersion: 1,
-      learningSpaceId: guestSpaceId,
-      sessionId,
-      sequence: 1,
-      type: "session_started",
+    const actor = { kind: "guest" as const, actorId: `guest_load_${suffix}` };
+    const activeSession = createPracticeSession({
+      id: asPracticeSessionId(sessionId),
+      learningSpaceId: asGuestSpaceId(guestSpaceId),
       actor,
-      occurredAt: "2026-07-18T00:00:00.000Z",
-      payload: {
-        paperId: "tmua-specimen-p1",
-        deadlineAt: "2026-07-18T01:15:00.000Z",
-      },
-    };
-    const activeSession = {
-      schemaVersion: 2,
-      id: sessionId,
-      learningSpaceId: guestSpaceId,
-      startedBy: actor,
-      paperId: "tmua-specimen-p1",
-      status: "active",
       startedAt: "2026-07-18T00:00:00.000Z",
-      deadlineAt: "2026-07-18T01:15:00.000Z",
-      currentQuestion: 1,
-      answers: {},
-      markedQuestionIds: [],
-      timingByQuestionMs: {},
-      activeQuestionEnteredAt: "2026-07-18T00:00:00.000Z",
-      events: [baseEvent],
-    };
+      eventId: asLearningEventId(`evt_load_start_${suffix}`),
+      paperId: "tmua-specimen-p1",
+      durationMinutes: 75,
+    });
+    const baseEvent = activeSession.events[0]!;
 
     await requestJson<unknown>(
       `${status.API_URL}/rest/v1/rpc/redeem_invite`,
