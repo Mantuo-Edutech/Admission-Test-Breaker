@@ -241,6 +241,7 @@ describe("student account lifecycle", () => {
     expect(await screen.findByRole("heading", { name: /你的数据属于你/u })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "默认只有学生本人可见" })).toBeInTheDocument();
     expect(screen.getByText(/通过站内反馈提交给满托服务团队/u)).toBeInTheDocument();
+    expect(screen.getByText(/访问日志按日轮转并保留 14 份/u)).toBeInTheDocument();
   });
 
   it("requests a reset without revealing whether the email exists", async () => {

@@ -35,4 +35,27 @@ describe("production evidence architecture contract", () => {
     expect(recorder).not.toContain("SUPABASE_SERVICE_ROLE_KEY=");
     expect(readme).toContain("do not hand-edit");
   });
+
+  it("binds privacy approval to a complete independent-review packet", async () => {
+    const [catalogSource, packet, attestation] = await Promise.all([
+      readFile("verification/production/control-catalog.json", "utf8"),
+      readFile("docs/legal/PRODUCTION_PRIVACY_REVIEW_PACKET.md", "utf8"),
+      readFile("verification/production/templates/privacy-legal-review-attestation.md", "utf8"),
+    ]);
+    const catalog = parseProductionEvidenceCatalog(JSON.parse(catalogSource));
+    const control = catalog.controls.find((item) => item.id === "privacy-legal-review");
+
+    expect(control?.method).toBe("manual");
+    expect(control?.sourcePaths).toContain("docs/legal/PRODUCTION_PRIVACY_REVIEW_PACKET.md");
+    expect(control?.sourcePaths).toContain(
+      "verification/production/templates/privacy-legal-review-attestation.md",
+    );
+    for (let index = 1; index <= 12; index += 1) {
+      const decisionId = `PRIV-${String(index).padStart(2, "0")}`;
+      expect(packet).toContain(decisionId);
+      expect(attestation).toContain(decisionId);
+    }
+    expect(packet).toContain("It is not");
+    expect(attestation).toContain("No unresolved launch-blocking");
+  });
 });
