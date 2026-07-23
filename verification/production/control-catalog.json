@@ -146,6 +146,8 @@
       "gates": ["B100-P0-03"],
       "sourcePaths": [
         "docs/legal/STUDENT_PRIVACY_AND_DATA_RIGHTS_FOUNDATION.md",
+        "docs/legal/PRODUCTION_PRIVACY_REVIEW_PACKET.md",
+        "verification/production/templates/privacy-legal-review-attestation.md",
         "src/features/data-rights/pages/PrivacyPage.tsx"
       ]
     },
