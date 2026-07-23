@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "revision": "2026-07-24.1",
+  "target": {
+    "environment": "production",
+    "origin": "https://uktest.cc",
+    "supabaseProjectRef": "wmhqqxmzxiojrxybqjij"
+  },
+  "controls": [
+    {
+      "id": "deployment-runtime",
+      "label": "线上运行时、Auth 与安全响应头",
+      "method": "automated",
+      "scope": "release",
+      "maxAgeHours": 24,
+      "gates": ["B100-P0-01", "B100-P0-04"],
+      "sourcePaths": [
+        "scripts/verify-deployment.ts",
+        "src/platform/runtime-config.ts",
+        "deploy/security-headers.conf"
+      ],
+      "command": {
+        "program": "pnpm",
+        "args": ["verify:deployment"],
+        "requiredEnvironment": [],
+        "targetEnvironment": {
+          "DEPLOYMENT_BASE_URL": "origin",
+          "EXPECTED_ENVIRONMENT": "environment",
+          "EXPECTED_SUPABASE_PROJECT_REF": "supabaseProjectRef",
+          "EXPECTED_RELEASE": "release"
+        }
+      }
+    },
+    {
+      "id": "auth-protection",
+      "label": "生产 Auth、Turnstile 与密码策略",
+      "method": "automated",
+      "scope": "environment",
+      "maxAgeHours": 24,
+      "gates": ["B100-P0-01"],
+      "sourcePaths": [
+        "scripts/configure-supabase-auth-protection.ts",
+        "src/features/account/components/AccountBotChallenge.tsx"
+      ],
+      "command": {
+        "program": "pnpm",
+        "args": ["supabase:auth-protection:check"],
+        "requiredEnvironment": ["SUPABASE_ACCESS_TOKEN"],
+        "targetEnvironment": {
+          "SUPABASE_PROJECT_REF": "supabaseProjectRef",
+          "PUBLIC_APP_ORIGIN": "origin"
+        }
+      }
+    },
+    {
+      "id": "auth-smtp",
+      "label": "生产自定义 SMTP 配置",
+      "method": "automated",
+      "scope": "environment",
+      "maxAgeHours": 24,
+      "gates": ["B100-P0-01"],
+      "sourcePaths": ["scripts/configure-supabase-auth-smtp.ts"],
+      "command": {
+        "program": "pnpm",
+        "args": ["supabase:auth-smtp:check"],
+        "requiredEnvironment": [
+          "SUPABASE_ACCESS_TOKEN",
+          "SMTP_HOST",
+          "SMTP_PORT",
+          "SMTP_ADMIN_EMAIL",
+          "SMTP_SENDER_NAME",
+          "SMTP_USER"
+        ],
+        "targetEnvironment": {
+          "SUPABASE_PROJECT_REF": "supabaseProjectRef"
+        }
+      }
+    },
+    {
+      "id": "identity-journey-uat",
+      "label": "真实邮件注册、确认、登录与重置 UAT",
+      "method": "manual",
+      "scope": "release",
+      "maxAgeHours": 168,
+      "gates": ["B100-P0-01"],
+      "sourcePaths": [
+        "src/features/account/pages/AccountPage.tsx",
+        "src/features/account/supabase-account-service.ts"
+      ]
+    },
+    {
+      "id": "remote-learner-data-contract",
+      "label": "生产身份、不可变练习、RLS、邀请码与 Notes 契约",
+      "method": "automated",
+      "scope": "release",
+      "maxAgeHours": 24,
+      "gates": ["B100-P0-02", "B100-P0-05"],
+      "sourcePaths": [
+        "scripts/verify-supabase-remote.ts",
+        "supabase/migrations/20260718143000_durable_learner_data.sql",
+        "supabase/migrations/20260719210000_student_controlled_collaboration.sql"
+      ],
+      "command": {
+        "program": "pnpm",
+        "args": ["verify:supabase:remote"],
+        "requiredEnvironment": [
+          "SUPABASE_PUBLISHABLE_KEY",
+          "SUPABASE_SERVICE_ROLE_KEY"
+        ],
+        "targetEnvironment": {
+          "SUPABASE_URL": "supabaseUrl",
+          "REMOTE_SUPABASE_VERIFY_CONFIRM": "remoteVerifyConfirmation"
+        }
+      }
+    },
+    {
+      "id": "private-learning-cross-device-uat",
+      "label": "真实双账号、跨设备学习记录与隔离 UAT",
+      "method": "manual",
+      "scope": "release",
+      "maxAgeHours": 168,
+      "gates": ["B100-P0-02"],
+      "sourcePaths": [
+        "src/features/learner-data/auth-aware-practice-history.ts",
+        "src/features/practice/pages/LearningRecordPage.tsx"
+      ]
+    },
+    {
+      "id": "collaboration-grant-uat",
+      "label": "学生授权、撤销与跨租户协作 UAT",
+      "method": "manual",
+      "scope": "release",
+      "maxAgeHours": 168,
+      "gates": ["B100-P0-02", "B100-P0-03"],
+      "sourcePaths": [
+        "src/features/collaboration/pages/SharingPage.tsx",
+        "supabase/migrations/20260719210000_student_controlled_collaboration.sql"
+      ]
+    },
+    {
+      "id": "privacy-legal-review",
+      "label": "未成年人隐私、保留期与用户权利法律审核",
+      "method": "manual",
+      "scope": "environment",
+      "maxAgeHours": 2160,
+      "gates": ["B100-P0-03"],
+      "sourcePaths": [
+        "docs/legal/STUDENT_PRIVACY_AND_DATA_RIGHTS_FOUNDATION.md",
+        "src/features/data-rights/pages/PrivacyPage.tsx"
+      ]
+    },
+    {
+      "id": "data-rights-uat",
+      "label": "导出、删除、更正与投诉流程 UAT",
+      "method": "manual",
+      "scope": "release",
+      "maxAgeHours": 168,
+      "gates": ["B100-P0-03"],
+      "sourcePaths": [
+        "src/features/data-rights/pages/PrivacyPage.tsx",
+        "supabase/migrations/20260718172000_student_data_rights.sql"
+      ]
+    },
+    {
+      "id": "managed-backup",
+      "label": "Supabase 可恢复备份点",
+      "method": "automated",
+      "scope": "environment",
+      "maxAgeHours": 24,
+      "gates": ["B100-P0-04"],
+      "sourcePaths": [
+        "scripts/verify-supabase-managed-backups.ts",
+        "src/platform/supabase-managed-backups.ts"
+      ],
+      "command": {
+        "program": "pnpm",
+        "args": ["supabase:managed-backups:check"],
+        "requiredEnvironment": ["SUPABASE_ACCESS_TOKEN"],
+        "targetEnvironment": {
+          "SUPABASE_PROJECT_REF": "supabaseProjectRef"
+        }
+      }
+    },
+    {
+      "id": "managed-recovery-drill",
+      "label": "托管备份恢复到隔离项目的 RPO/RTO 演练",
+      "method": "manual",
+      "scope": "environment",
+      "maxAgeHours": 720,
+      "gates": ["B100-P0-04"],
+      "sourcePaths": [
+        "scripts/restore-supabase-logical.sh",
+        "docs/operations/PRODUCTION_BETA_RUNBOOK.md"
+      ]
+    },
+    {
+      "id": "production-alerting",
+      "label": "健康、Auth、备份与安全告警接收人验证",
+      "method": "manual",
+      "scope": "environment",
+      "maxAgeHours": 720,
+      "gates": ["B100-P0-04"],
+      "sourcePaths": [
+        ".github/workflows/deployment-smoke.yml",
+        "docs/operations/PRODUCTION_BETA_RUNBOOK.md"
+      ]
+    },
+    {
+      "id": "invite-operator-uat",
+      "label": "彬彬邀请码签发、兑换、撤销与隔离 UAT",
+      "method": "manual",
+      "scope": "release",
+      "maxAgeHours": 168,
+      "gates": ["B100-P0-05"],
+      "sourcePaths": [
+        "src/features/invite-operations/pages/InviteOperationsPage.tsx",
+        "supabase/migrations/20260719170000_invite_operator_workflow.sql"
+      ]
+    },
+    {
+      "id": "invite-operator-mfa",
+      "label": "彬彬生产账号与 MFA 权限验证",
+      "method": "manual",
+      "scope": "environment",
+      "maxAgeHours": 720,
+      "gates": ["B100-P0-05"],
+      "sourcePaths": [
+        "src/features/invite-operations/pages/InviteOperationsPage.tsx",
+        "docs/operations/PRODUCTION_BETA_RUNBOOK.md"
+      ]
+    }
+  ]
+}
