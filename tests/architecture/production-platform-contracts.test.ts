@@ -86,6 +86,7 @@ describe("production platform contracts", () => {
     expect(capacityCheck).toContain("p_message: capacityFeedbackMessage");
     expect(capacityCheck).not.toContain("Capacity feedback marker ${suffix}");
     expect(supabaseDeployment).toContain("pnpm supabase:migrations:plan");
+    expect(supabaseDeployment).toContain("pnpm supabase:managed-backups:check");
     expect(supabaseDeployment).toContain("pnpm supabase:migrations:apply");
     expect(supabaseDeployment).not.toContain("SUPABASE_DB_PASSWORD");
     expect(supabaseDeployment).toContain("pnpm supabase:auth-protection:apply");
