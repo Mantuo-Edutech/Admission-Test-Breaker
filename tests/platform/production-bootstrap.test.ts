@@ -10,6 +10,17 @@ const requirements: ProductionBootstrapRequirements = {
   schemaVersion: 1,
   policyVersion: "1.0.0",
   repository: "Mantuo-Edutech/Admission-Test-Breaker",
+  protectedBranch: {
+    name: "main",
+    requiredStatusChecks: ["application", "database-and-capacity"],
+    requireBranchesUpToDate: true,
+    enforceAdmins: true,
+    requirePullRequest: true,
+    requiredApprovingReviewCount: 0,
+    requireConversationResolution: true,
+    allowForcePushes: false,
+    allowDeletions: false,
+  },
   requiredWorkflowFiles: [".github/workflows/verify.yml", ".github/workflows/deploy-supabase.yml"],
   environments: [
     {
@@ -36,6 +47,18 @@ function completeSnapshot(): ProductionBootstrapSnapshot {
     workflowFiles: {
       ".github/workflows/verify.yml": true,
       ".github/workflows/deploy-supabase.yml": true,
+    },
+    protectedBranch: {
+      name: "main",
+      exists: true,
+      requiredStatusChecks: ["application", "database-and-capacity"],
+      requireBranchesUpToDate: true,
+      enforceAdmins: true,
+      requirePullRequest: true,
+      requiredApprovingReviewCount: 0,
+      requireConversationResolution: true,
+      allowForcePushes: false,
+      allowDeletions: false,
     },
     environments: [
       {
@@ -106,6 +129,25 @@ describe("production bootstrap assessment", () => {
       expect.objectContaining({ id: "production-secret-SUPABASE_ACCESS_TOKEN", status: "failed" }),
       expect.objectContaining({ id: "production-secret-SUPABASE_PROJECT_REF", status: "failed" }),
     ]));
+  });
+
+  it("fails setup when branch protection can bypass either independent verifier", () => {
+    const snapshot = completeSnapshot();
+    const report = assessProductionBootstrap(requirements, {
+      ...snapshot,
+      protectedBranch: {
+        ...snapshot.protectedBranch,
+        requiredStatusChecks: ["application"],
+        enforceAdmins: false,
+        allowForcePushes: true,
+      },
+    });
+
+    expect(report.githubSetupReady).toBe(false);
+    expect(report.checks.find((item) =>
+      item.id === "branch-required-check-database-and-capacity")?.status).toBe("failed");
+    expect(report.checks.find((item) => item.id === "branch-enforce-admins")?.status).toBe("failed");
+    expect(report.checks.find((item) => item.id === "branch-force-push")?.status).toBe("failed");
   });
 
   it("rejects placeholder/non-HTTPS public origins and missing approval protection", () => {

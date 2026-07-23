@@ -142,7 +142,7 @@ jq -n --argjson reviewer_id "$REVIEWER_ID" \
 unset REVIEWER_ID
 ```
 
-重新运行 `pnpm production:preflight`。机器配置齐全后，`pnpm production:bootstrap-gate` 应成功；正式发布候选还必须位于 `main`、无未提交修改、当前 SHA 已推送，并且该 SHA 自己拥有成功的 GitHub `Verify` 运行，使用 `pnpm production:release-candidate-gate` 复核。任何一个命令通过都不能代替 SMTP、真实邮件、Turnstile hostname、域名/TLS、平台恢复、告警和责任人五项人工生产证据；最终仍以 `pnpm beta:gate` 为准。
+重新运行 `pnpm production:preflight`。机器配置齐全后，`pnpm production:bootstrap-gate` 应成功；它还会只读复核 `main` 必须经过 Pull Request、分支必须最新、`application` 与 `database-and-capacity` 两项检查必需、管理员不可绕过且禁止强推/删除。正式发布候选还必须位于 `main`、无未提交修改、当前 SHA 已推送，并且该 SHA 自己拥有成功的 GitHub `Verify` 运行，使用 `pnpm production:release-candidate-gate` 复核。任何一个命令通过都不能代替 SMTP、真实邮件、Turnstile hostname、域名/TLS、平台恢复、告警和责任人五项人工生产证据；最终仍以 `pnpm beta:gate` 为准。
 
 | Symptom | Likely cause | Fix |
 | --- | --- | --- |
@@ -151,6 +151,7 @@ unset REVIEWER_ID
 | `PUBLIC_APP_ORIGIN` 失败 | 使用 HTTP、localhost、占位域名或包含额外 path | 只写 `https://hostname/` |
 | SMTP variable 失败 | hostname/邮箱仍为占位值、端口不受支持或发件名称为空 | 使用供应商正式 hostname、465/587/2525、已认证发件域名和 2–80 字符名称 |
 | production reviewers 失败 | 未配置 required reviewer 或 protection rule 未保存 | 重新运行 reviewer 配置并用 `gh api .../environments/production` 查看规则 |
+| main branch protection 失败 | required checks、PR 规则、管理员保护或强推/删除设置发生漂移 | 按 `deploy/bootstrap-requirements.json` 恢复保护；不要临时关闭检查来合并 |
 | release candidate 失败 | 不在 main、工作树未提交、当前 SHA 未推送，或该 SHA 没有成功 Verify run | 经 Pull Request 合并 main，等待同一 SHA 的 Verify 全部通过；不要借用其他 commit 的绿灯 |
 
 **Rollback:** 删除错误的 environment variable/secret 名称并重新设置；若 Environment 指向错误项目，立即停止 workflow，撤销相关 token，再由批准人核对后重建。不要通过打印 secret 排查。
