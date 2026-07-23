@@ -6,6 +6,7 @@
       "name": "staging",
       "publicAppOrigin": "https://replace-with-staging-domain.invalid/",
       "publicVariables": {
+        "TURNSTILE_SITE_KEY": "0x-replace-with-staging-site-key",
         "SMTP_HOST": "smtp.replace-with-provider.invalid",
         "SMTP_PORT": "587",
         "SMTP_ADMIN_EMAIL": "no-reply@auth.replace-with-domain.invalid",
@@ -23,6 +24,7 @@
       "name": "production",
       "publicAppOrigin": "https://replace-with-production-domain.invalid/",
       "publicVariables": {
+        "TURNSTILE_SITE_KEY": "0x-replace-with-production-site-key",
         "SMTP_HOST": "smtp.replace-with-provider.invalid",
         "SMTP_PORT": "587",
         "SMTP_ADMIN_EMAIL": "no-reply@auth.replace-with-domain.invalid",

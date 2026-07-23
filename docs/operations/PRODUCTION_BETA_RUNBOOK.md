@@ -230,7 +230,7 @@ select * from public.configure_product_funnel_viewer(
 GitHub 的 `staging` 与 `production` Environments 各自配置：
 
 - Secrets：`SUPABASE_ACCESS_TOKEN`、`SUPABASE_PROJECT_REF`、`TURNSTILE_SECRET_KEY`、`SMTP_USER`、`SMTP_PASS`；
-- Variables：`PUBLIC_APP_ORIGIN`、`SMTP_HOST`、`SMTP_PORT`、`SMTP_ADMIN_EMAIL`、`SMTP_SENDER_NAME`；
+- Variables：`PUBLIC_APP_ORIGIN`、`TURNSTILE_SITE_KEY`、`SMTP_HOST`、`SMTP_PORT`、`SMTP_ADMIN_EMAIL`、`SMTP_SENDER_NAME`；
 - Required reviewers：至少创始人/技术责任人一人；production 不允许无审批自动发布。
 
 服务器从 `deploy/.env.production.example` 创建不进 Git 的 `.env.production`。其中 Supabase publishable key 与 `TURNSTILE_SITE_KEY` 可以进入浏览器；Turnstile secret、数据库 URL、service-role key 和 GitHub token 不得放入该文件或任何 `VITE_*` 变量。
@@ -238,6 +238,20 @@ GitHub 的 `staging` 与 `production` Environments 各自配置：
 Supabase 项目还必须完成：正式域名 redirect allowlist、自定义 SMTP、CAPTCHA/滥用保护、团队 MFA、网络/SSL 安全检查、备份计划和 Auth 邮件模板。平台的现行生产检查清单见：https://supabase.com/docs/guides/deployment/going-into-prod
 
 Turnstile 必须为 staging 和 production 分别创建只允许对应 hostname 的 Managed widget。将公开 site key 放入各环境 Web 服务器的 `TURNSTILE_SITE_KEY`，将 secret 放入对应 GitHub Environment。Supabase 发布工作流会自动应用服务端配置，也可在批准终端中独立执行：
+
+先复制 `deploy/turnstile-bootstrap.example.json` 为不进 Git 的 `deploy/turnstile-bootstrap.local.json`。Cloudflare account ID 与仅含 **Account / Turnstile Sites / Write** 的 API token 放入该配置指定的本机安全环境变量；不得写进 JSON 或聊天记录。先离线审查计划，再显式应用和只读复核：
+
+```bash
+pnpm production:turnstile-plan -- --config deploy/turnstile-bootstrap.local.json
+pnpm production:turnstile-apply -- \
+  --config deploy/turnstile-bootstrap.local.json \
+  --confirm CONFIGURE_MANTUO_TURNSTILE_WIDGETS
+pnpm production:turnstile-check -- --config deploy/turnstile-bootstrap.local.json
+```
+
+apply 会创建或校正两个 Managed widget，把公开 site key 写入 GitHub Environment variable，并通过 stdin 写入私密 secret；随后重新读取 Cloudflare 与 GitHub 做精确比对。它不会打印任何 key。已有 widget region 不正确时会失败关闭，因为 Cloudflare 不允许原地修改；不得为了绕过检查而放宽 hostname。
+
+Supabase 发布工作流会自动应用服务端 CAPTCHA 配置，也可在批准终端中独立执行：
 
 ```bash
 export SUPABASE_ACCESS_TOKEN='<scoped-management-token>'

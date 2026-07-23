@@ -112,6 +112,10 @@ function isValidSmtpSenderName(value: string): boolean {
 
 export function isValidProductionVariable(name: string, value: string): boolean {
   if (name === "PUBLIC_APP_ORIGIN") return isValidProductionOrigin(value);
+  if (name === "TURNSTILE_SITE_KEY") {
+    const sitekey = value.trim();
+    return /^0x[A-Za-z0-9_-]{16,40}$/u.test(sitekey) && !placeholder(sitekey);
+  }
   if (name === "SMTP_HOST") return isValidSmtpHost(value);
   if (name === "SMTP_PORT") {
     const port = value.trim();
@@ -124,6 +128,7 @@ export function isValidProductionVariable(name: string, value: string): boolean 
 
 function productionVariableLabel(name: string): string {
   if (name === "PUBLIC_APP_ORIGIN") return "正式 HTTPS origin";
+  if (name === "TURNSTILE_SITE_KEY") return "正式 Turnstile site key";
   if (name === "SMTP_HOST") return "正式 SMTP hostname";
   if (name === "SMTP_PORT") return "安全 SMTP port";
   if (name === "SMTP_ADMIN_EMAIL") return "正式发件邮箱";
@@ -134,6 +139,7 @@ function productionVariableLabel(name: string): string {
 function productionVariableAction(environment: string, name: string): string {
   const examples: Readonly<Record<string, string>> = {
     PUBLIC_APP_ORIGIN: "https://<该环境正式域名>/",
+    TURNSTILE_SITE_KEY: "<由 Turnstile bootstrap 写入的 0x site key>",
     SMTP_HOST: "smtp.<provider-domain>",
     SMTP_PORT: "587",
     SMTP_ADMIN_EMAIL: "no-reply@auth.<正式域名>",
