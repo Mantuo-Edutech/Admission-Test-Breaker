@@ -1,8 +1,11 @@
 # 题库服务与离线练习架构方案
 
-**状态：** 提议  
-**日期：** 2026-07-23  
-**适用范围：** Admission Test Breaker 的题目导入、审核、发布、分发与学生练习  
+**状态：** 提议
+
+**日期：** 2026-07-23
+
+**适用范围：** Admission Test Breaker 的题目导入、审核、发布、分发与学生练习
+
 **上位约束：** `docs/product/PRODUCT_CHARTER.md`、`docs/architecture/SYSTEM_ARCHITECTURE.md`
 
 ## 1. 决策摘要
