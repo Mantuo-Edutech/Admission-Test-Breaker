@@ -64,7 +64,7 @@ flowchart LR
 | 模块 | 责任 | 明确不负责 |
 | --- | --- | --- |
 | Identity & Learner Space | 登录身份、学生私密空间、成员关系、数据归属 | 具体练习逻辑、第三方授权 |
-| Content Commons | 题目/试卷版本、来源、许可、审核、贡献工作流 | 学生作答与个体统计 |
+| Content Commons | 题目/试卷版本、来源、许可、审核、贡献工作流；详细发布与离线分发方案见 [`CONTENT_SERVICE_AND_OFFLINE_PRACTICE.md`](CONTENT_SERVICE_AND_OFFLINE_PRACTICE.md) | 学生作答与个体统计 |
 | Admissions Registry | 按申请年度维护考试、院校、专业、必需模块、来源和历史参考 | 预测个人录取结果、用旧年度覆盖当前要求 |
 | Practice Engine | 创建和完成练习会话、答案状态、计时、提交幂等性 | 长期分析、AI 解释 |
 | Learning Event Ledger | 追加目的明确、带版本的学习事件 | 修改历史事实、直接渲染报告 |
