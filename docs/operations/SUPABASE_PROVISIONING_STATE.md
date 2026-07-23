@@ -24,6 +24,12 @@ Remote migration history was read back after deployment and matches the local mi
 
 Both projects passed a live two-account contract on 2026-07-23: confirmed-user login, exact `paper_revision_id` and digest persistence, server scoring, cross-tenant session denial, short-lived invite redemption, entitled Notes delivery and non-entitled account denial. Temporary Auth users were deleted after each run.
 
+The `invite-preview` Edge Function is deployed in both projects. Its
+`ALLOWED_ORIGINS` secret is restricted to `https://staging.uktest.cc` in
+staging and `https://uktest.cc,https://www.uktest.cc` in production. A live
+HTTP check on 2026-07-23 returned `200` with the exact configured CORS origin
+and returned `403` for an unlisted origin in both environments.
+
 ## Production origin
 
 - Canonical web origin: `https://uktest.cc`
@@ -42,7 +48,6 @@ The Supabase management token remains in the existing `Supabase CLI` Keychain en
 1. Choose an optional staging subdomain.
 2. Create separate Cloudflare Turnstile widgets restricted to the production and staging hostnames.
 3. Configure custom SMTP and finish the production Auth CAPTCHA baseline.
-4. Deploy `invite-preview` with an exact `ALLOWED_ORIGINS` value.
-5. Add each environment's publishable key to the web runtime; never expose service-role keys.
-6. Complete the browser-level registration, email confirmation, export and deletion acceptance tests; the database-level two-account, invitation and entitlement checks already pass.
-7. Upgrade production to a paid plan before the real student Beta so daily backups are available. Both projects report WAL-G enabled but no physical snapshot yet; this is not accepted as recovery evidence.
+4. Add each environment's publishable key to the web runtime; never expose service-role keys.
+5. Complete the browser-level registration, email confirmation, export and deletion acceptance tests; the database-level two-account, invitation and entitlement checks already pass.
+6. Upgrade production to a paid plan before the real student Beta so daily backups are available. Both projects report WAL-G enabled but no physical snapshot yet; this is not accepted as recovery evidence.
