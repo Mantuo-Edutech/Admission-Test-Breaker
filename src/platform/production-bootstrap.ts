@@ -9,12 +9,38 @@ export interface ProductionBootstrapRequirements {
   readonly schemaVersion: 1;
   readonly policyVersion: string;
   readonly repository: string;
+  readonly protectedBranch: GitHubProtectedBranchRequirement;
   readonly requiredWorkflowFiles: readonly string[];
   readonly environments: readonly ProductionEnvironmentRequirement[];
   readonly manualProductionGates: readonly {
     readonly id: string;
     readonly label: string;
   }[];
+}
+
+export interface GitHubProtectedBranchRequirement {
+  readonly name: "main";
+  readonly requiredStatusChecks: readonly string[];
+  readonly requireBranchesUpToDate: boolean;
+  readonly enforceAdmins: boolean;
+  readonly requirePullRequest: boolean;
+  readonly requiredApprovingReviewCount: number;
+  readonly requireConversationResolution: boolean;
+  readonly allowForcePushes: boolean;
+  readonly allowDeletions: boolean;
+}
+
+export interface GitHubProtectedBranchSnapshot {
+  readonly name: string;
+  readonly exists: boolean;
+  readonly requiredStatusChecks: readonly string[];
+  readonly requireBranchesUpToDate: boolean;
+  readonly enforceAdmins: boolean;
+  readonly requirePullRequest: boolean;
+  readonly requiredApprovingReviewCount: number;
+  readonly requireConversationResolution: boolean;
+  readonly allowForcePushes: boolean;
+  readonly allowDeletions: boolean;
 }
 
 export interface GitHubEnvironmentSnapshot {
@@ -30,6 +56,7 @@ export interface ProductionBootstrapSnapshot {
   readonly githubAuthenticated: boolean;
   readonly githubScopes: readonly string[];
   readonly workflowFiles: Readonly<Record<string, boolean>>;
+  readonly protectedBranch: GitHubProtectedBranchSnapshot;
   readonly environments: readonly GitHubEnvironmentSnapshot[];
   readonly git: {
     readonly branch: string | null;
@@ -195,6 +222,69 @@ export function assessProductionBootstrap(
       `恢复或补齐 ${workflow}。`,
     ));
   }
+  const requiredBranch = requirements.protectedBranch;
+  const actualBranch = snapshot.protectedBranch;
+  checks.push(check(
+    "branch-protection",
+    "repository",
+    actualBranch.exists && actualBranch.name === requiredBranch.name,
+    `${requiredBranch.name} 主分支保护已启用`,
+    `为 ${requiredBranch.name} 启用分支保护。`,
+  ));
+  for (const context of requiredBranch.requiredStatusChecks) {
+    checks.push(check(
+      `branch-required-check-${context}`,
+      "repository",
+      actualBranch.exists && actualBranch.requiredStatusChecks.includes(context),
+      `${requiredBranch.name} 必须通过 ${context}`,
+      `把 ${context} 加入 ${requiredBranch.name} 的 required status checks。`,
+    ));
+  }
+  checks.push(check(
+    "branch-require-up-to-date",
+    "repository",
+    actualBranch.exists && actualBranch.requireBranchesUpToDate === requiredBranch.requireBranchesUpToDate,
+    `${requiredBranch.name} 合并前必须基于最新主分支`,
+    "启用 strict required status checks。",
+  ));
+  checks.push(check(
+    "branch-enforce-admins",
+    "repository",
+    actualBranch.exists && actualBranch.enforceAdmins === requiredBranch.enforceAdmins,
+    `${requiredBranch.name} 保护适用于管理员`,
+    "启用 enforce admins，禁止管理员绕过验证层。",
+  ));
+  checks.push(check(
+    "branch-require-pull-request",
+    "repository",
+    actualBranch.exists
+      && actualBranch.requirePullRequest === requiredBranch.requirePullRequest
+      && actualBranch.requiredApprovingReviewCount >= requiredBranch.requiredApprovingReviewCount,
+    `${requiredBranch.name} 变更必须经过 Pull Request`,
+    "启用 required pull request，并保持批准人数符合生产契约。",
+  ));
+  checks.push(check(
+    "branch-conversation-resolution",
+    "repository",
+    actualBranch.exists
+      && actualBranch.requireConversationResolution === requiredBranch.requireConversationResolution,
+    `${requiredBranch.name} 合并前必须解决 Review 对话`,
+    "启用 required conversation resolution。",
+  ));
+  checks.push(check(
+    "branch-force-push",
+    "repository",
+    actualBranch.exists && actualBranch.allowForcePushes === requiredBranch.allowForcePushes,
+    `${requiredBranch.name} 禁止强制推送`,
+    "关闭主分支 force push。",
+  ));
+  checks.push(check(
+    "branch-deletion",
+    "repository",
+    actualBranch.exists && actualBranch.allowDeletions === requiredBranch.allowDeletions,
+    `${requiredBranch.name} 禁止删除`,
+    "关闭主分支 deletion。",
+  ));
   checks.push(check(
     "docker",
     "repository",

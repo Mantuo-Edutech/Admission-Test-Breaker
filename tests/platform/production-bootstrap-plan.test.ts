@@ -12,6 +12,17 @@ const requirements: ProductionBootstrapRequirements = {
   schemaVersion: 1,
   policyVersion: "1.0.0",
   repository: "Mantuo-Edutech/Admission-Test-Breaker",
+  protectedBranch: {
+    name: "main",
+    requiredStatusChecks: ["application", "database-and-capacity"],
+    requireBranchesUpToDate: true,
+    enforceAdmins: true,
+    requirePullRequest: true,
+    requiredApprovingReviewCount: 0,
+    requireConversationResolution: true,
+    allowForcePushes: false,
+    allowDeletions: false,
+  },
   requiredWorkflowFiles: [],
   environments: [
     {

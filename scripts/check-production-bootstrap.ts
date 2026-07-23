@@ -3,6 +3,7 @@ import { access, readFile } from "node:fs/promises";
 import { promisify } from "node:util";
 import {
   assessProductionBootstrap,
+  type GitHubProtectedBranchSnapshot,
   type GitHubEnvironmentSnapshot,
   type ProductionBootstrapRequirements,
   type ProductionBootstrapSnapshot,
@@ -77,6 +78,56 @@ async function githubEnvironment(
   return { name, exists: true, secretNames, variables, requiredReviewerCount };
 }
 
+async function githubBranchProtection(
+  repository: string,
+  name: "main",
+): Promise<GitHubProtectedBranchSnapshot> {
+  const response = await command("gh", [
+    "api",
+    `repos/${repository}/branches/${name}/protection`,
+  ]);
+  if (!response.ok) {
+    return {
+      name,
+      exists: false,
+      requiredStatusChecks: [],
+      requireBranchesUpToDate: false,
+      enforceAdmins: false,
+      requirePullRequest: false,
+      requiredApprovingReviewCount: 0,
+      requireConversationResolution: false,
+      allowForcePushes: false,
+      allowDeletions: false,
+    };
+  }
+  const raw = JSON.parse(response.stdout) as {
+    required_status_checks?: { strict?: unknown; contexts?: unknown };
+    enforce_admins?: { enabled?: unknown };
+    required_pull_request_reviews?: { required_approving_review_count?: unknown };
+    required_conversation_resolution?: { enabled?: unknown };
+    allow_force_pushes?: { enabled?: unknown };
+    allow_deletions?: { enabled?: unknown };
+  };
+  const contexts = raw.required_status_checks?.contexts;
+  return {
+    name,
+    exists: true,
+    requiredStatusChecks: Array.isArray(contexts)
+      ? contexts.filter((item): item is string => typeof item === "string").sort()
+      : [],
+    requireBranchesUpToDate: raw.required_status_checks?.strict === true,
+    enforceAdmins: raw.enforce_admins?.enabled === true,
+    requirePullRequest: raw.required_pull_request_reviews !== undefined,
+    requiredApprovingReviewCount:
+      typeof raw.required_pull_request_reviews?.required_approving_review_count === "number"
+        ? raw.required_pull_request_reviews.required_approving_review_count
+        : 0,
+    requireConversationResolution: raw.required_conversation_resolution?.enabled === true,
+    allowForcePushes: raw.allow_force_pushes?.enabled === true,
+    allowDeletions: raw.allow_deletions?.enabled === true,
+  };
+}
+
 async function fileExists(filePath: string): Promise<boolean> {
   try {
     await access(filePath);
@@ -144,12 +195,27 @@ async function snapshot(requirements: ProductionBootstrapRequirements): Promise<
       }))
     : await Promise.all(requirements.environments.map((environment) =>
         githubEnvironment(repository, environment.name)));
+  const protectedBranch = repository === null
+    ? {
+        name: requirements.protectedBranch.name,
+        exists: false,
+        requiredStatusChecks: [],
+        requireBranchesUpToDate: false,
+        enforceAdmins: false,
+        requirePullRequest: false,
+        requiredApprovingReviewCount: 0,
+        requireConversationResolution: false,
+        allowForcePushes: false,
+        allowDeletions: false,
+      }
+    : await githubBranchProtection(repository, requirements.protectedBranch.name);
 
   return {
     repository,
     githubAuthenticated: auth.ok && ghUser.ok,
     githubScopes: scopesFromStatus(`${auth.stdout}\n${auth.stderr}`),
     workflowFiles,
+    protectedBranch,
     environments,
     git: {
       branch: branchName,
