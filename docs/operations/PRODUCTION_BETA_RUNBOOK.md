@@ -252,6 +252,8 @@ pnpm supabase:auth-protection:check
    docker compose --env-file .env.production -f compose.production.yml up -d
    ```
 
+   直接替换 Web 容器时，必须先运行 `deploy/prepare-static-asset-archive.sh <当前容器名> <持久资源目录>`，再把该目录只读挂载到 `/usr/share/nginx/html/assets`。资源目录保留最近 14 天的哈希文件，确保发布前已经打开的标签页仍能进入懒加载路由；不得只替换容器并立即删除上一版本的全部静态资源。
+
 5. 验证实际运行版本：
 
    ```bash
