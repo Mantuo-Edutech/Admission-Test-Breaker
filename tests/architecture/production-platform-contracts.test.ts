@@ -129,6 +129,19 @@ describe("production platform contracts", () => {
     expect(smoke).not.toMatch(/redeemInvite|create账号并解锁/u);
   });
 
+  it("keeps the browser fixture delivery explicit and isolated from production builds", async () => {
+    const [config, resolver] = await Promise.all([
+      source("playwright.config.ts"),
+      source("src/features/practice/delivery/resolve-service.ts"),
+    ]);
+
+    expect(config).toContain("vite --mode test");
+    expect(config).toContain('VITE_SUPABASE_URL: ""');
+    expect(config).toContain('VITE_SUPABASE_PUBLISHABLE_KEY: ""');
+    expect(resolver).toContain('import.meta.env.MODE !== "test"');
+    expect(resolver).toContain('import("./test-practice-delivery-service.js")');
+  });
+
   it("keeps production auth bot protection automated and fail-closed", async () => {
     const [packageJson, configurator, runtime] = await Promise.all([
       source("package.json"),

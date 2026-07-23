@@ -47,7 +47,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "pnpm exec vite --host 127.0.0.1 --port 57146 --strictPort",
+    command: "pnpm exec vite --mode test --host 127.0.0.1 --port 57146 --strictPort",
     url: baseURL,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
