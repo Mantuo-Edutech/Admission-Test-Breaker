@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "2026-07-24.2",
+  "revision": "2026-07-24.3",
   "target": {
     "environment": "production",
     "origin": "https://uktest.cc",
@@ -217,6 +217,7 @@
       "gates": ["B100-P0-04"],
       "sourcePaths": [
         ".github/workflows/deployment-smoke.yml",
+        "deploy/monitored-environments.json",
         "docs/operations/PRODUCTION_BETA_RUNBOOK.md",
         "src/platform/production-manual-evidence.ts",
         "verification/production/manual-control-procedures.json"

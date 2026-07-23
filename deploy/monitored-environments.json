@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "environments": {
+    "staging": {
+      "origin": "https://staging.uktest.cc",
+      "supabaseProjectRef": "bhmsclraqqzhwovprdbl"
+    },
+    "production": {
+      "origin": "https://uktest.cc",
+      "supabaseProjectRef": "wmhqqxmzxiojrxybqjij"
+    }
+  }
+}

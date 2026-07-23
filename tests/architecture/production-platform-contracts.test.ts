@@ -123,16 +123,31 @@ describe("production platform contracts", () => {
   });
 
   it("continuously checks the real deployed URL without creating accounts or consuming invites", async () => {
-    const [workflow, config, smoke] = await Promise.all([
+    const [workflow, config, smoke, monitoredTargets, evidenceCatalog] = await Promise.all([
       source(".github/workflows/deployment-smoke.yml"),
       source("playwright.deployment.config.ts"),
       source("tests/e2e/deployment-smoke.spec.ts"),
+      source("deploy/monitored-environments.json"),
+      source("verification/production/control-catalog.json"),
     ]);
 
     expect(workflow).toContain('cron: "17 2,14 * * *"');
     expect(workflow).toContain("pnpm verify:deployment");
     expect(workflow).toContain("pnpm verify:e2e:deployment");
-    expect(workflow).toContain("vars.PUBLIC_APP_ORIGIN");
+    expect(workflow).toContain("deploy/monitored-environments.json");
+    expect(workflow).toContain("issues: write");
+    expect(workflow).toContain("production-monitor");
+    expect(workflow).not.toContain("    environment: ${{");
+    const targets = JSON.parse(monitoredTargets) as {
+      environments: Record<string, { origin: string; supabaseProjectRef: string }>;
+    };
+    const catalog = JSON.parse(evidenceCatalog) as {
+      target: { origin: string; supabaseProjectRef: string };
+    };
+    expect(targets.environments.production).toEqual({
+      origin: catalog.target.origin,
+      supabaseProjectRef: catalog.target.supabaseProjectRef,
+    });
     expect(config).toContain('testMatch: "deployment-smoke.spec.ts"');
     expect(config).not.toContain("webServer");
     expect(smoke).toContain("TMUA AP profile produces coverage");

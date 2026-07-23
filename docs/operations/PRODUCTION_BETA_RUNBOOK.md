@@ -374,7 +374,7 @@ pnpm restore:supabase-logical
 Beta 前至少配置：
 
 - 外部可用性：每分钟请求 `/healthz`，另请求首页确认非 5xx；
-- 关键页面：仓库内 `Deployment smoke` workflow 每日两次检查 production，也可人工选择 staging；它会运行 `verify:deployment`，并在桌面/手机尺寸检查五考试入口、账号入口和 TMUA AP Guest 路径。GitHub Environment 必须配置 `PUBLIC_APP_ORIGIN`，缺失时检查明确失败；
+- 关键页面：仓库内 `Deployment smoke` workflow 每日两次检查 production，也可人工选择 staging；它会运行 `verify:deployment`，并在桌面/手机尺寸检查五考试入口、账号入口和 TMUA AP Guest 路径。公开域名与 Supabase project ref 来自版本化的 `deploy/monitored-environments.json`，因此定时监控不读取生产 secret、也不会被发布 Environment 的 required reviewer 阻塞。定时失败会创建或更新带 `production-monitor` 标签的 GitHub 事故 Issue，恢复后自动关闭；
 - 版本：部署后保存 `/version.json`，事故记录必须包含 release SHA；
 - Supabase：Auth、Database、Edge Function 错误率和连接数告警；
 - 关键旅程：`record_product_funnel_event` 已只允许选择考试、完成档案、开始/提交、主动打开冰冰、邀请码成功六类动作；随机 Journey ID 不连接账号或 Learner Space，表中没有邮箱、IP、设备、课程、答案或自由文本字段。匿名/学生角色只能追加；只有 service-role 或经 service-role 单独授予的 `product_funnel_viewer` 能读取汇总，批准浏览器 RPC 只返回按考试/动作聚合的 event count 与 unique Journey count，不返回 context 或原始行；
