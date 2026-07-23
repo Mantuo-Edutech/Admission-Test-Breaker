@@ -22,6 +22,15 @@ Both projects contain all 19 reviewed migrations from:
 
 Remote migration history was read back after deployment and matches the local migration set in both environments. The migrations establish private account spaces, row-level isolation, practice history, content entitlements, invitation operations, student data rights, collaboration grants and operations review tables.
 
+## Production origin
+
+- Canonical web origin: `https://uktest.cc`
+- `https://www.uktest.cc` redirects to the canonical origin.
+- Production Auth `site_url` is `https://uktest.cc`.
+- Redirect allowlist includes `/auth/confirm` and `/auth/reset` on the canonical origin.
+- Email confirmation, a 10-character mixed-case-and-digit password and refresh-token rotation are enabled.
+- Browser Supabase runtime remains disabled until CAPTCHA and SMTP are ready.
+
 ## Local secret references
 
 The generated database passwords are stored in macOS Keychain entries:
@@ -33,9 +42,9 @@ The Supabase management token remains in the existing `Supabase CLI` Keychain en
 
 ## Required before public account activation
 
-1. Buy and choose the production domain and optional staging subdomain.
-2. Create separate Cloudflare Turnstile widgets restricted to those hostnames.
-3. Configure Supabase Auth site URLs, redirect allowlists, CAPTCHA, password policy and custom SMTP.
+1. Choose an optional staging subdomain.
+2. Create separate Cloudflare Turnstile widgets restricted to the production and staging hostnames.
+3. Configure custom SMTP and finish the production Auth CAPTCHA baseline.
 4. Deploy `invite-preview` with an exact `ALLOWED_ORIGINS` value.
 5. Add each environment's publishable key to the web runtime; never expose service-role keys.
 6. Complete two-account isolation, registration, email confirmation, invitation, export and deletion acceptance tests.
