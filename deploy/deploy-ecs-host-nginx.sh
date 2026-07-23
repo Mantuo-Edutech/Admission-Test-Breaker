@@ -123,7 +123,7 @@ ASSET_ARCHIVE="${ASSET_ARCHIVE:-$DEPLOY_ROOT/runtime-assets}"
 RUNTIME_RELEASES="${RUNTIME_RELEASES:-$DEPLOY_ROOT/runtime-releases}"
 STATE_DIRECTORY="${STATE_DIRECTORY:-$DEPLOY_ROOT/deployment-state}"
 
-for variable in APP_IMAGE APP_RELEASE APP_ENVIRONMENT PUBLIC_APP_ORIGIN \
+for variable in APP_IMAGE APP_RELEASE EXPECTED_IMAGE_DIGEST APP_ENVIRONMENT PUBLIC_APP_ORIGIN \
   SUPABASE_URL EXPECTED_SUPABASE_PROJECT_REF SUPABASE_PUBLISHABLE_KEY \
   TURNSTILE_SITE_KEY; do
   required_value "$variable"
@@ -136,6 +136,8 @@ done
   || die "APP_RELEASE must be a full lowercase 40-character Git commit SHA"
 [[ "$APP_IMAGE" == *":$APP_RELEASE" ]] \
   || die "APP_IMAGE must use APP_RELEASE as its immutable tag"
+[[ "$EXPECTED_IMAGE_DIGEST" =~ ^sha256:[0-9a-f]{64}$ ]] \
+  || die "EXPECTED_IMAGE_DIGEST must be the release workflow manifest digest"
 case "$APP_ENVIRONMENT" in
   staging|production) ;;
   *) die "APP_ENVIRONMENT must be staging or production" ;;
@@ -195,13 +197,26 @@ if container_exists "$APP_CONTAINER_NAME" && [ "$APP_CONTAINER_NAME" != "$curren
   die "target container name already exists: $APP_CONTAINER_NAME"
 fi
 
-if ! docker image inspect "$APP_IMAGE" >/dev/null 2>&1; then
-  [ "$PULL_IMAGE" = "1" ] || die "release image is not present locally: $APP_IMAGE"
+if [ "$PULL_IMAGE" = "1" ]; then
   log "pulling immutable image $APP_IMAGE"
   docker pull "$APP_IMAGE" >/dev/null
+elif ! docker image inspect "$APP_IMAGE" >/dev/null 2>&1; then
+  die "release image is not present locally: $APP_IMAGE"
 fi
 image_id="$(docker image inspect --format '{{.Id}}' "$APP_IMAGE")"
 [[ "$image_id" =~ ^sha256:[0-9a-f]{64}$ ]] || die "release image does not have a content-addressed image ID"
+mapfile -t repository_digests < <(
+  docker image inspect --format '{{range .RepoDigests}}{{println .}}{{end}}' "$APP_IMAGE"
+)
+digest_matches=0
+for repository_digest in "${repository_digests[@]}"; do
+  if [[ "$repository_digest" == *@"$EXPECTED_IMAGE_DIGEST" ]]; then
+    digest_matches=1
+    break
+  fi
+done
+[ "$digest_matches" -eq 1 ] \
+  || die "pulled image manifest digest does not match EXPECTED_IMAGE_DIGEST"
 image_revision_label="$(docker image inspect \
   --format '{{index .Config.Labels "org.opencontainers.image.revision"}}' "$image_id")"
 [ "$image_revision_label" = "$APP_RELEASE" ] \
@@ -325,6 +340,7 @@ jq -n \
   --arg origin "$PUBLIC_APP_ORIGIN" \
   --arg image "$APP_IMAGE" \
   --arg imageId "$image_id" \
+  --arg imageManifestDigest "$EXPECTED_IMAGE_DIGEST" \
   --arg currentRelease "$APP_RELEASE" \
   --arg currentContainer "$APP_CONTAINER_NAME" \
   --arg currentRuntimeDirectory "$runtime_directory" \
@@ -333,6 +349,7 @@ jq -n \
   --arg previousOriginalName "$previous_original_name" \
   '{schemaVersion: 1, deployedAt: $deployedAt, environment: $environment,
     origin: $origin, image: $image, imageId: $imageId,
+    imageManifestDigest: $imageManifestDigest,
     currentRelease: $currentRelease, currentContainer: $currentContainer,
     currentRuntimeDirectory: $currentRuntimeDirectory,
     previousRelease: $previousRelease, previousContainer: $previousContainer,

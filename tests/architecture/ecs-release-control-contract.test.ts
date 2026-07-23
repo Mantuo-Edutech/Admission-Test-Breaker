@@ -59,7 +59,14 @@ describe("shared ECS host-Nginx release control", () => {
     expect(deployment).toContain(
       "APP_IMAGE must use APP_RELEASE as its immutable tag",
     );
+    expect(deployment).toContain(
+      "EXPECTED_IMAGE_DIGEST must be the release workflow manifest digest",
+    );
     expect(deployment).toContain("docker image inspect --format '{{.Id}}'");
+    expect(deployment).toContain("pulled image manifest digest does not match EXPECTED_IMAGE_DIGEST");
+    expect(deployment.indexOf('docker pull "$APP_IMAGE"')).toBeLessThan(
+      deployment.indexOf("pulled image manifest digest does not match EXPECTED_IMAGE_DIGEST"),
+    );
     expect(deployment).toContain("release image revision label does not match APP_RELEASE");
     expect(deployment).toContain("/opt/mantuo/build-revision");
     expect(deployment).toContain("generating browser runtime files from the exact release image");
