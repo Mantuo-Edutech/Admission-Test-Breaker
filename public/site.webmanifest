@@ -1,0 +1,22 @@
+{
+  "name": "满托 UK Test｜英国入学考试练习与诊断",
+  "short_name": "满托 UK Test",
+  "description": "TMUA、ESAT、TARA、LNAT 与 UCAT 的定位、在线练习和复习资料。",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f0e7",
+  "theme_color": "#63528c",
+  "icons": [
+    {
+      "src": "/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

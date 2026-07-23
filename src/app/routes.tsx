@@ -12,6 +12,7 @@ import { createDefaultAppServices } from "./dependencies.js";
 import { LandingPage } from "../features/practice/pages/LandingPage.js";
 import { EXAM_CATALOG } from "../features/catalog/exams.js";
 import { PreparationProfileGate } from "../features/preparation-profile/components/PreparationProfileGate.js";
+import { applySiteMetadata } from "./site-metadata.js";
 
 const PracticeRoutePage = lazy(async () => ({
   default: (await import("../features/practice/pages/PracticeRoutePage.js")).PracticeRoutePage,
@@ -179,6 +180,7 @@ function RouteFrame({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
 
   useLayoutEffect(() => {
+    applySiteMetadata(pathname);
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
   }, [pathname]);
