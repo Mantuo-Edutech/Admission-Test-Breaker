@@ -44,6 +44,7 @@ export type PracticeSessionAction =
       eventId: LearningEventId;
       at: string;
       totalQuestions: number;
+      answeredCount?: number;
     }
   | {
       type: "submit";
@@ -78,7 +79,7 @@ function recordActiveQuestionTime(
     return session;
   }
 
-  const questionId = questionIdForNumber(session.currentQuestion);
+  const questionId = questionIdForNumber(session.currentQuestion, session.paperId);
   const segmentStart = Date.parse(session.activeQuestionEnteredAt);
   const segmentEnd = Math.min(Date.parse(at), Date.parse(session.deadlineAt));
   const paperBudgetMs = Math.max(
@@ -188,7 +189,7 @@ function viewQuestion(
     return session;
   }
 
-  const targetQuestionId = questionIdForNumber(action.questionNumber);
+  const targetQuestionId = questionIdForNumber(action.questionNumber, session.paperId);
   const timed = recordActiveQuestionTime(session, action.timeEventId, action.at);
 
   return appendEvent(
@@ -265,7 +266,7 @@ function openSubmission(
     actor: session.startedBy,
     occurredAt: action.at,
     payload: {
-      unansweredCount: action.totalQuestions - Object.keys(session.answers).length,
+      unansweredCount: action.totalQuestions - (action.answeredCount ?? Object.keys(session.answers).length),
     },
   });
 }

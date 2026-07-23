@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "15   Find the sum of the real solutions of the equation:\n\n                                          √\n                                    3x − ( 3)x+4 + 20 = 0\n\n     A 1\n\n     B 4\n\n     C 9\n\n     D log3 20\n\n     E   2 log3 20\n\n     F   4 log3 20\n\n\n\n\n                                            17"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the sum of the real solutions of the equation:\n\n                                          √\n                                    3x − ( 3)x+4 + 20 = 0"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "1"
+    },
+    {
+      "label": "B",
+      "rawText": "4"
+    },
+    {
+      "label": "C",
+      "rawText": "9"
+    },
+    {
+      "label": "D",
+      "rawText": "log3 20"
+    },
+    {
+      "label": "E",
+      "rawText": "2 log3 20"
+    },
+    {
+      "label": "F",
+      "rawText": "4 log3 20"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "√ \u00012\nWe note that 3 =    3 .\n                   √ \u0001x\nSo if we write y =   3 , the equation becomes\n                                             √ \u00014\n                                      y2 −    3 y + 20 = 0\n\nor\n                                        y 2 − 9y + 20 = 0\nThis factorises to give (y − 4)(y − 5) = 0 so either y = 4 or y = 5\n                      1 \u0001x    1            1           1\nWe can write y = 3 2 = 3 2 x so either 3 2 x = 4 or 3 2 x = 5\nWe can now take logs to base 3 to obtain\n                                  1                   1\n                                  2 x = log3 4   or   2 x = log3 5\n\nso\n                                  x = 2 log3 4   or   x = 2 log3 5\n\nThe question has asked for the sum of the real solutions of the equation. Both of these are real,\nso we can add them to get 2 log3 4 + 2 log3 5 = 2 log3 20 using the log rule log ab = log a + log b\nHence the answer is E.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 17\n\n                                                                                      © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

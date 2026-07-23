@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "id": "esat-mathematics-1-full-mock-v1",
+  "exam": "ESAT",
+  "edition": "Mathematics 1 Full Mock · Original v1",
+  "sectionId": "mathematics-1",
+  "sectionLabel": "Mathematics 1 · Original Full-Length Mock",
+  "sectionLabelZh": "数学 1 · 满托原创完整模考",
+  "durationMinutes": 40,
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本模考依据 ESAT Mathematics 1 公开范围独立命题，不复制或改写官方 Guide、Specimen、ENGAA 或 NSAA 题面。",
+  "sourceAnchors": [
+    {
+      "id": "esat-content-specification",
+      "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+      "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+      "usedFor": "27-question, 40-minute format and Mathematics 1 scope boundary"
+    },
+    {
+      "id": "esat-guide-mathematics-1",
+      "localPath": "content/official/raw/esat/ESAT_Guide_Mathematics_1.pdf",
+      "sha256": "b376810fbd9ffea4c0c70fafb082d4c0287eb35ea16cfc354d06240a9798a3f5",
+      "usedFor": "M1-M7 terminology and topic coverage only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q01", "number": 1, "sourcePage": 1,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"Water enters a tank at a constant rate of "},{"kind":"math","tex":"1.8\\text{ litres per minute}"},{"kind":"text","value":" for 25 minutes. What volume of water enters the tank, in cubic metres?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"0.0045"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"0.045"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"0.45"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"45"}]}]}
+      ],
+      "correctAnswer":"B", "knowledgeTags":["m1-units"], "skillTags":["unit-conversion","rate"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q02", "number": 2, "sourcePage": 2,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"A metal block has mass "},{"kind":"math","tex":"2.4\\text{ kg}"},{"kind":"text","value":" and volume "},{"kind":"math","tex":"300\\text{ cm}^3"},{"kind":"text","value":". What is its density in "},{"kind":"math","tex":"\\text{kg m}^{-3}"},{"kind":"text","value":"?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"8"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"800"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"8000"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"80000"}]}]}
+      ],
+      "correctAnswer":"C", "knowledgeTags":["m1-units"], "skillTags":["density","compound-units"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q03", "number": 3, "sourcePage": 3,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"A positive integer has prime factorisation "},{"kind":"math","tex":"2^3\\times3^2\\times5"},{"kind":"text","value":". How many positive factors does it have?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"10"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"12"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"18"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"24"}]}]}
+      ],
+      "correctAnswer":"D", "knowledgeTags":["m1-number"], "skillTags":["prime-factorisation","factor-counting"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q04", "number": 4, "sourcePage": 4,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"Which fraction is equal to "},{"kind":"math","tex":"0.2\\dot{7}"},{"kind":"text","value":"?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{5}{18}"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{7}{25}"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{11}{40}"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{25}{99}"}]}]}
+      ],
+      "correctAnswer":"A", "knowledgeTags":["m1-number"], "skillTags":["recurring-decimals","fractions"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q05", "number": 5, "sourcePage": 5,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"Simplify "},{"kind":"math","tex":"\\frac{4}{\\sqrt{5}-1}"},{"kind":"text","value":"."}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\sqrt{5}-1"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\sqrt{5}+1"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"4\\sqrt{5}+4"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"5+\\sqrt{5}"}]}]}
+      ],
+      "correctAnswer":"B", "knowledgeTags":["m1-number"], "skillTags":["surds","rationalising"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q06", "number": 6, "sourcePage": 6,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"The length and width of a rectangle are measured as 8.2 cm and 3.4 cm, each correct to the nearest 0.1 cm. What is the upper bound for its area, in "},{"kind":"math","tex":"\\text{cm}^2"},{"kind":"text","value":"?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"27.3025"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"27.88"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"28.29"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"28.4625"}]}]}
+      ],
+      "correctAnswer":"D", "knowledgeTags":["m1-number"], "skillTags":["bounds","measurement"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q07", "number": 7, "sourcePage": 7,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"The quantity "},{"kind":"math","tex":"y"},{"kind":"text","value":" is directly proportional to "},{"kind":"math","tex":"x^2"},{"kind":"text","value":" and inversely proportional to "},{"kind":"math","tex":"z"},{"kind":"text","value":". When "},{"kind":"math","tex":"x=3"},{"kind":"text","value":", "},{"kind":"math","tex":"z=2"},{"kind":"text","value":" and "},{"kind":"math","tex":"y=12"},{"kind":"text","value":". What is "},{"kind":"math","tex":"y"},{"kind":"text","value":" when "},{"kind":"math","tex":"x=6"},{"kind":"text","value":" and "},{"kind":"math","tex":"z=4"},{"kind":"text","value":"?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"12"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"18"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"24"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"48"}]}]}
+      ],
+      "correctAnswer":"C", "knowledgeTags":["m1-ratio"], "skillTags":["direct-proportion","inverse-proportion"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q08", "number": 8, "sourcePage": 8,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"After a 15% discount and then a 20% sales tax, an item costs £204. What was its original price?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"text","value":"£180"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"text","value":"£200"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"text","value":"£204"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"text","value":"£240"}]}]}
+      ],
+      "correctAnswer":"B", "knowledgeTags":["m1-ratio"], "skillTags":["percentage-change","reverse-percentage"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q09", "number": 9, "sourcePage": 9,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"The two positive roots of "},{"kind":"math","tex":"x^2-7x+k=0"},{"kind":"text","value":" are such that one root is twice the other. What is "},{"kind":"math","tex":"k"},{"kind":"text","value":"?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{49}{9}"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{49}{6}"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{98}{9}"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"14"}]}]}
+      ],
+      "correctAnswer":"C", "knowledgeTags":["m1-algebra"], "skillTags":["quadratics","roots"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q10", "number": 10, "sourcePage": 10,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"What is the sum of the real solutions of "},{"kind":"math","tex":"\\frac{2}{x-1}+\\frac{1}{x+1}=1"},{"kind":"text","value":"?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"-2"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"3"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\sqrt{17}"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"5"}]}]}
+      ],
+      "correctAnswer":"B", "knowledgeTags":["m1-algebra"], "skillTags":["rational-equations","vieta"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q11", "number": 11, "sourcePage": 11,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"The function "},{"kind":"math","tex":"f"},{"kind":"text","value":" is defined by "},{"kind":"math","tex":"f(x)=\\frac{x-2}{x+1}"},{"kind":"text","value":". Which expression is equal to "},{"kind":"math","tex":"f(f(x))"},{"kind":"text","value":"?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{x-4}{x+2}"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{x+4}{2x-1}"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{-x-4}{2x-1}"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{-x+4}{2x+1}"}]}]}
+      ],
+      "correctAnswer":"C", "knowledgeTags":["m1-algebra"], "skillTags":["functions","composition"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q12", "number": 12, "sourcePage": 12,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"An arithmetic sequence has fifth term 18 and twelfth term 46. What is the sum of its first 20 terms?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"640"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"720"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"780"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"800"}]}]}
+      ],
+      "correctAnswer":"D", "knowledgeTags":["m1-algebra"], "skillTags":["arithmetic-sequences","series"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q13", "number": 13, "sourcePage": 13,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"How many integer values of "},{"kind":"math","tex":"x"},{"kind":"text","value":" satisfy "},{"kind":"math","tex":"(x-2)(x+3)\\leq0"},{"kind":"text","value":"?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"5"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"6"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"7"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"text","value":"infinitely many"}]}]}
+      ],
+      "correctAnswer":"B", "knowledgeTags":["m1-algebra"], "skillTags":["inequalities","integer-counting"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q14", "number": 14, "sourcePage": 14,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"A chord of a circle has length 16 cm. The perpendicular distance from the centre of the circle to the chord is 6 cm. What is the area of the circle?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"64\\pi\\text{ cm}^2"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"80\\pi\\text{ cm}^2"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"100\\pi\\text{ cm}^2"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"256\\pi\\text{ cm}^2"}]}]}
+      ],
+      "correctAnswer":"C", "knowledgeTags":["m1-geometry"], "skillTags":["circles","pythagoras"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q15", "number": 15, "sourcePage": 15,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"Two geometrically similar solids have surface areas in the ratio "},{"kind":"math","tex":"9:16"},{"kind":"text","value":". What is the ratio of their volumes, smaller to larger?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"27:64"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"9:16"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"81:256"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"3:4"}]}]}
+      ],
+      "correctAnswer":"A", "knowledgeTags":["m1-geometry"], "skillTags":["similarity","scale-factors"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q16", "number": 16, "sourcePage": 16,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"Two sides of a triangle have lengths 7 cm and 9 cm, and the included angle is "},{"kind":"math","tex":"60^\\circ"},{"kind":"text","value":". What is the length of the third side?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\sqrt{49}\\text{ cm}"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\sqrt{67}\\text{ cm}"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\sqrt{130}\\text{ cm}"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"8\\text{ cm}"}]}]}
+      ],
+      "correctAnswer":"B", "knowledgeTags":["m1-geometry"], "skillTags":["cosine-rule","exact-values"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q17", "number": 17, "sourcePage": 17,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"A line passes through "},{"kind":"math","tex":"(2,-1)"},{"kind":"text","value":" and is perpendicular to the line "},{"kind":"math","tex":"3x-2y=7"},{"kind":"text","value":". At what value of "},{"kind":"math","tex":"y"},{"kind":"text","value":" does the perpendicular line cross the y-axis?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{1}{3}"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"-\\frac{1}{3}"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{2}{3}"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"-\\frac{7}{3}"}]}]}
+      ],
+      "correctAnswer":"A", "knowledgeTags":["m1-geometry"], "skillTags":["coordinate-geometry","perpendicular-lines"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q18", "number": 18, "sourcePage": 18,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"The point "},{"kind":"math","tex":"P"},{"kind":"text","value":" divides the line segment from "},{"kind":"math","tex":"A(1,4)"},{"kind":"text","value":" to "},{"kind":"math","tex":"B(7,-2)"},{"kind":"text","value":" internally in the ratio "},{"kind":"math","tex":"AP:PB=2:1"},{"kind":"text","value":". What are the coordinates of "},{"kind":"math","tex":"P"},{"kind":"text","value":"?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"(3,2)"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"(4,1)"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"(5,1)"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"(5,0)"}]}]}
+      ],
+      "correctAnswer":"D", "knowledgeTags":["m1-geometry"], "skillTags":["vectors","section-formula"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q19", "number": 19, "sourcePage": 19,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"A group of 12 students has mean score 14. A second group of 8 students has mean score 20. What is the mean score of all 20 students?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"16"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"16.4"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"17"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"17.6"}]}]}
+      ],
+      "correctAnswer":"B", "knowledgeTags":["m1-statistics"], "skillTags":["weighted-mean","data"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q20", "number": 20, "sourcePage": 20,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"The six values "},{"kind":"math","tex":"3,5,8,10,14,17"},{"kind":"text","value":" are transformed using "},{"kind":"math","tex":"y=2x-1"},{"kind":"text","value":". What is the median of the transformed values?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"15"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"16"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"17"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"18"}]}]}
+      ],
+      "correctAnswer":"C", "knowledgeTags":["m1-statistics"], "skillTags":["median","linear-transformations"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q21", "number": 21, "sourcePage": 21,
+      "prompt": [
+        {"kind":"paragraph","runs":[{"kind":"text","value":"The table shows grouped data. Using class midpoints, estimate the mean."}]},
+        {"kind":"table","caption":"Grouped values and frequencies","headers":["Value","Frequency"],"rows":[["0 < x ≤ 10","4"],["10 < x ≤ 20","7"],["20 < x ≤ 30","9"],["30 < x ≤ 40","5"]]}
+      ],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"21"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"21.5"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"22"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"25"}]}]}
+      ],
+      "correctAnswer":"A", "knowledgeTags":["m1-statistics"], "skillTags":["grouped-data","estimated-mean"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q22", "number": 22, "sourcePage": 22,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"Two fair six-sided dice are rolled. What is the probability that their total is divisible by 4?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{2}{9}"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{1}{4}"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{5}{18}"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{1}{3}"}]}]}
+      ],
+      "correctAnswer":"B", "knowledgeTags":["m1-probability"], "skillTags":["sample-space","combined-events"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q23", "number": 23, "sourcePage": 23,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"In a school, 60% of students take course A and 40% take course B. Of those taking A, 80% pass; of those taking B, 50% pass. Given that a randomly chosen student passed, what is the probability that the student took course A?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{3}{5}"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{2}{3}"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{12}{17}"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{4}{5}"}]}]}
+      ],
+      "correctAnswer":"C", "knowledgeTags":["m1-probability"], "skillTags":["conditional-probability","tree-diagrams"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q24", "number": 24, "sourcePage": 24,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"A biased coin has probability "},{"kind":"math","tex":"\\frac{2}{3}"},{"kind":"text","value":" of landing heads. It is tossed three times. What is the probability of exactly two heads?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{4}{9}"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{8}{27}"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{2}{3}"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"\\frac{20}{27}"}]}]}
+      ],
+      "correctAnswer":"A", "knowledgeTags":["m1-probability"], "skillTags":["independent-events","exactly-events"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q25", "number": 25, "sourcePage": 25,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"A three-letter code is made from A, B, C and D without repetition. The first letter cannot be A. How many different codes are possible?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"8"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"12"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"16"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"18"}]}]}
+      ],
+      "correctAnswer":"D", "knowledgeTags":["m1-number"], "skillTags":["systematic-listing","multiplication-principle"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q26", "number": 26, "sourcePage": 26,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"A right-angled triangle has shorter sides "},{"kind":"math","tex":"x"},{"kind":"text","value":" and "},{"kind":"math","tex":"x+7"},{"kind":"text","value":", and hypotenuse "},{"kind":"math","tex":"x+8"},{"kind":"text","value":". What is its area?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"24"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"30"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"36"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"60"}]}]}
+      ],
+      "correctAnswer":"B", "knowledgeTags":["m1-geometry","m1-algebra"], "skillTags":["pythagoras","quadratic-modelling"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-1-full-mock-v1-q27", "number": 27, "sourcePage": 27,
+      "prompt": [{"kind":"paragraph","runs":[{"kind":"text","value":"A box contains "},{"kind":"math","tex":"r"},{"kind":"text","value":" red counters and 4 blue counters. Two counters are drawn without replacement. The probability that both are red is "},{"kind":"math","tex":"\\frac{1}{3}"},{"kind":"text","value":". What is "},{"kind":"math","tex":"r"},{"kind":"text","value":"?"}]}],
+      "options": [
+        {"label":"A","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"4"}]}]},
+        {"label":"B","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"5"}]}]},
+        {"label":"C","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"6"}]}]},
+        {"label":"D","content":[{"kind":"paragraph","runs":[{"kind":"math","tex":"8"}]}]}
+      ],
+      "correctAnswer":"C", "knowledgeTags":["m1-probability","m1-algebra"], "skillTags":["without-replacement","quadratic-modelling"], "reviewStatus":"verified",
+      "sourceQuestionPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json", "sourceAnswerPath":"content/esat/original-practice/mathematics-1-full-mock-v1.json"
+    }
+  ]
+}

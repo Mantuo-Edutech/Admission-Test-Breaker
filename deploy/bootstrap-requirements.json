@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": "1.0.0",
+  "repository": "Mantuo-Edutech/Admission-Test-Breaker",
+  "requiredWorkflowFiles": [
+    ".github/workflows/verify.yml",
+    ".github/workflows/release-image.yml",
+    ".github/workflows/deploy-supabase.yml",
+    ".github/workflows/deployment-smoke.yml"
+  ],
+  "environments": [
+    {
+      "name": "staging",
+      "requiredSecrets": [
+        "SUPABASE_ACCESS_TOKEN",
+        "SUPABASE_PROJECT_REF",
+        "TURNSTILE_SECRET_KEY"
+      ],
+      "requiredVariables": [
+        "PUBLIC_APP_ORIGIN"
+      ],
+      "minimumRequiredReviewers": 0
+    },
+    {
+      "name": "production",
+      "requiredSecrets": [
+        "SUPABASE_ACCESS_TOKEN",
+        "SUPABASE_PROJECT_REF",
+        "TURNSTILE_SECRET_KEY"
+      ],
+      "requiredVariables": [
+        "PUBLIC_APP_ORIGIN"
+      ],
+      "minimumRequiredReviewers": 1
+    }
+  ],
+  "manualProductionGates": [
+    {
+      "id": "supabase-project-and-mfa",
+      "label": "独立 staging/production Supabase 项目与团队 MFA"
+    },
+    {
+      "id": "trusted-smtp",
+      "label": "可信 SMTP、发件域名与真实确认/重置邮件"
+    },
+    {
+      "id": "turnstile-hostnames",
+      "label": "分别限制 staging/production hostname 的 Turnstile widgets"
+    },
+    {
+      "id": "domain-and-tls",
+      "label": "正式域名、DNS、TLS 与服务器运行环境"
+    },
+    {
+      "id": "backup-alerting-and-owners",
+      "label": "平台备份恢复、外部告警与真实主备责任人"
+    }
+  ]
+}

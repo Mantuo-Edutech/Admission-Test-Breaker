@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q12",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 12,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "12   In this question, p is a real constant.\n\n     The equation sin x cos 2 x = p 2 sin x has n distinct solutions in the range 0 ≤ x ≤ 2π\n\n     Which of the following statements is/are true?\n\n           I      n = 3 is sufficient for p > 1\n\n           II     n = 7 only if –1 < p < 1\n\n     A   none of them\n\n     B   I only\n\n     C   II only\n\n     D   I and II\n\n\n\n\n                                                   14"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "In this question, p is a real constant.\n\n     The equation sin x cos 2 x = p 2 sin x has n distinct solutions in the range 0 ≤ x ≤ 2π\n\n     Which of the following statements is/are true?\n\n           I      n = 3 is sufficient for p > 1\n\n           II     n = 7 only if –1 < p < 1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "I and II"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can rewrite the two statements in if/then language as\n\nI    if n = 3, then p > 1\n\nII   if n = 7, then −1 < p < 1\n\nWe will determine whether these statements are true or false using this if/then formulation.\nThe equation can be rearranged as sin x(cos2 x − p2 ) = 0, so this is true if and only if sin x = 0\nor cos x = ±p. The first of these has solutions x = 0, π, 2π, while the solutions to the second\ndepend on the value of p:\n\n•     If p = 0, then it has solutions x = π2 , 3π\n                                                2 .\n\n•     If −1 < p < 0 or 0 < p < 1, then it has four solutions, one with 0 < x < π2 , one with\n      π                           3π                3π\n      2 < x < π, one with π < x < 2 and one with 2 < x < 2π; these are all different from\n      the solutions to sin x = 0.\n\n•     If p = ±1, then it has three solutions, x = 0, π, 2π, which are exactly the same as the\n      solutions of sin x = 0.\n\n•     If p < −1 or p > 1, then it has no solutions.\n\nTherefore the original equation has:\n\n•     n = 5 distinct solutions if (and only if) p = 0\n\n•     n = 7 distinct solutions if (and only if) −1 < p < 0 or 0 < p < 1\n\n•     n = 3 distinct solutions if (and only if) p = ±1 or p < −1 or p > 1\n\nWe can now return to the statements I and II in our rewritten form:\n\nI    This is false: we could have p = 1 or p ≤ −1\n\nII   This is true, even though p = 0 is included here: if −1 < p < 0 or 0 < p < 1, then certainly\n     −1 < p < 1 is true\n\nThe correct option is therefore C, II only.\n\n\n\n\nVersion 1.0, September 2023                                                                Page 14"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

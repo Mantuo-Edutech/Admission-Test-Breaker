@@ -1,0 +1,110 @@
+schemaVersion: 1
+feature:
+  id: content-release-readiness
+  title: Product-level closed-Beta and final-publication readiness control
+  status: partial
+  userOutcome: >-
+    The team can see exactly which catalog products are technically verified, which
+    still need named human or device checks, and why a product may be shown as a
+    teaching preview without being misrepresented as closed-Beta or final ready.
+
+run:
+  packageScript: verify:content-release-readiness
+
+claims:
+  - id: every-public-product-has-one-primary-feature-gate
+    status: verified
+    statement: >-
+      All 28 public products link exactly one readable machine-verification manifest
+      from their catalog evidence; all automated claims in those primary manifests are
+      currently verified. The one internal ESAT blueprint remains explicitly internal.
+    artifacts:
+      - content/products/catalog.json
+      - content/products/release-readiness.json
+      - src/features/library/content-release-readiness.ts
+      - tests/features/library/content-release-readiness.test.ts
+    automatedChecks:
+      - verify:content-release-readiness
+      - verify:content-products
+
+  - id: beta-and-final-readiness-are-separate
+    status: verified
+    statement: >-
+      Closed-Beta readiness requires a public internal route, one feature manifest,
+      verified automated claims and passed dated manual checks. Final publication also
+      requires published catalog status and verified feature status. The current report
+      therefore records zero of 28 public products as closed-Beta ready instead of
+      treating 28 automated-ready products as human-reviewed products.
+    artifacts:
+      - content/products/release-readiness.json
+      - scripts/check-content-release-readiness.ts
+      - tests/features/library/content-release-readiness.test.ts
+    automatedChecks:
+      - verify:content-release-readiness
+
+  - id: stale-report-fails-closed
+    status: verified
+    statement: >-
+      The checked-in report is deterministically regenerated from the catalog and the
+      linked feature manifests. Any catalog, claim or manual-check change makes the
+      standalone verification command fail until the report is rebuilt and reviewed.
+    artifacts:
+      - scripts/check-content-release-readiness.ts
+      - package.json
+      - content/products/release-readiness.json
+    automatedChecks:
+      - verify:content-release-readiness
+      - verify:architecture
+
+  - id: actionable-manual-review-worklist
+    status: verified
+    statement: >-
+      The 35 remaining feature-level manual checks are deduplicated across shared
+      products and grouped into academic/content, student-calibration and
+      device/accessibility campaigns. Every item names an owner role, exact product
+      versions and routes, required evidence and the owning feature manifest; the
+      generated worklist cannot itself approve a review.
+    artifacts:
+      - content/products/manual-review-worklist.json
+      - src/features/library/manual-review-worklist.ts
+      - scripts/check-manual-review-worklist.ts
+      - tests/features/library/manual-review-worklist.test.ts
+    automatedChecks:
+      - verify:manual-review-worklist
+      - verify:product-lineage
+
+  - id: source-bound-manual-review-decisions
+    status: verified
+    statement: >-
+      Every pending review is pinned to current product versions, routes, requirements
+      and the SHA-256 of product evidence plus feature-claim artifacts. A review decision
+      is accepted only with the required owner role, privacy-safe reviewer references,
+      declared independence, explicit attestation and at least one hashed local evidence
+      report. Changes-requested or stale decisions never release, and editing signed-off
+      evidence fails verification.
+    artifacts:
+      - src/features/library/manual-review-decisions.ts
+      - scripts/lib/manual-review-ledger.ts
+      - scripts/manage-manual-review.ts
+      - verification/reviews/decisions/README.md
+      - verification/reviews/evidence/README.md
+      - tests/features/library/manual-review-decisions.test.ts
+      - tests/features/library/manual-review-ledger.test.ts
+      - docs/architecture/decisions/2026-07-19-source-bound-manual-review-ledger.md
+    automatedChecks:
+      - verify:manual-review-ledger
+      - verify:content-release-readiness
+
+boundaries:
+  - A zero closed-Beta-ready count means manual evidence is missing; it does not mean the existing teaching previews or automated checks are absent.
+  - Passing a manual check requires dated evidence in its owning feature manifest; this report cannot approve a reviewer on their behalf.
+  - Existing inline passed checks record reviewer and reviewerRole; new pending work is approved only through the source-bound decision ledger, never by editing the generated worklist.
+  - Repository decisions are auditable release evidence, not cryptographic identity or a substitute for a qualified human review.
+  - Production identity, privacy, deployment and operator gates remain separate from product-content readiness.
+
+manualChecks:
+  - id: founder-and-content-lead-policy-review
+    status: pending
+    evidence: The founder and a named content lead must approve the closed-Beta versus final-publication policy and assign owners for the grouped pending checks before cohort launch.
+    viewports:
+      - operations

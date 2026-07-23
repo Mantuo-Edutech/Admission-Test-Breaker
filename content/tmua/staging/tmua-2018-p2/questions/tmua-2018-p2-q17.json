@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "17   A positive integer is called a squaresum if and only if it can be written as the sum\n     of the squares of two integers. For example, 61 and 9 are both squaresums since\n     61 = 52 + 62 and 9 = 32 + 02 .\n\n     A prime number is called awkward if and only if it has a remainder of 3 when\n     divided by 4. For example, 23 is awkward since 23 = 5 × 4 + 3.\n\n     A (true) theorem due to Fermat states that:\n\n         A positive integer is a squaresum if and only if each of its awkward prime\n         factors occurs to an even power in its prime factorisation.\n\n     It follows that 5 × 232 is a squaresum, since 23 occurs to the power 2, but 5 × 233 is\n     not, since 23 occurs to the power 3.\n\n\n     Which one of the following statements is not true?\n\n     A Every square number is a squaresum.\n\n     B If N and M are squaresums, then so is N M .\n\n     C If N M is a squaresum, then N and M are squaresums.\n\n     D If N is not a squaresum, then kN is a squaresum for some number k which is a\n       product of awkward primes.\n\n\n\n\n                                             19"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A positive integer is called a squaresum if and only if it can be written as the sum\n     of the squares of two integers. For example, 61 and 9 are both squaresums since\n     61 = 52 + 62 and 9 = 32 + 02 .\n\n     A prime number is called awkward if and only if it has a remainder of 3 when\n     divided by 4. For example, 23 is awkward since 23 = 5 × 4 + 3.\n\n     A (true) theorem due to Fermat states that:\n\n         A positive integer is a squaresum if and only if each of its awkward prime\n         factors occurs to an even power in its prime factorisation.\n\n     It follows that 5 × 232 is a squaresum, since 23 occurs to the power 2, but 5 × 233 is\n     not, since 23 occurs to the power 3.\n\n\n     Which one of the following statements is not true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "Every square number is a squaresum."
+    },
+    {
+      "label": "B",
+      "rawText": "If N and M are squaresums, then so is N M ."
+    },
+    {
+      "label": "C",
+      "rawText": "If N M is a squaresum, then N and M are squaresums."
+    },
+    {
+      "label": "D",
+      "rawText": "If N is not a squaresum, then kN is a squaresum for some number k which is a\n       product of awkward primes."
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We work through the given statements in turn.\n\nA This is a statement about numbers of the form N 2 . If we write N as a product of prime\n  factors, then N 2 will have the same prime factors, but each to double the power. For example,\n  if N = 3 × 173 × 414 then N 2 = 32 × 176 × 418 . So each prime factor occurs to an even power\n  in its prime factorisation, so it is a squaresum.\n   Alternatively, we can ignore the theorem completely, and note that N 2 = N 2 + 02 , so N 2 is\n   a squaresum.\n   So this statement is true.\n\nB If N is a squaresum, then each of its awkward prime factors occurs to an even power in\n  its prime factorisation, by the theorem. Likewise, each of the awkward prime factors of M\n  occurs to an even power in its prime factorisation. The prime factorisation of N M is the\n  product of the prime factorisations of M and N , so each awkward prime occurs to an even\n  power in the prime factorisation of N M , and therefore N M is a squaresum.\n   Thus this statement is also true.\n\nC If N M is a squaresum, then each of its awkward prime factors occurs to an even power in\n  its prime factorisation. But it is not clear why that would mean that each of the awkward\n  prime factors of M and N each occur to an even power in the factorisations of M and N .\n  And we can find a counterexample to this statement: 23 is awkward, so if N = M = 23 then\n  N M = 232 is a squaresum, but neither N nor M is.\n   So this statement is false.\n\nD As N is not a squaresum, some awkward prime factor occurs to an odd power in its prime\n  factorisation. If we multiply N by this awkward prime factor, then the result will have this\n  awkward prime factor to an even power. But N might have more than one awkward prime\n  factor occurring to an odd power, so we multiply by all such awkward prime factors. The\n  result will be a number with every awkward prime factor occurring to an even power. Thus\n  letting k be the product of all the awkward prime factors of N which occur to an odd power,\n  kN is a squaresum.\n   Hence this statement is true.\n\nThe only false statement is C.\n\n\n\n\nVersion 1.0, April 2019                                                                 Page 20"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        20
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

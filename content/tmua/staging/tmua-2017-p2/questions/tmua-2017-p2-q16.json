@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16     Consider the following statement:\n\n               (∗) If f (x) is an integer for every integer x, then f \u0003 (x) is an integer for\n                   every integer x.\n\n        Which one of the following is a counterexample to (∗)?\n\n                  x3 + x + 1\n        A f (x) =\n                      4\n                      x 4 + x2 + x\n        B f (x) =\n                            2\n                      x 4 + x 3 + x2 + x\n        C f (x) =\n                                2\n                      x4 + 2x3 + x2\n        D f (x) =\n                            4\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                        \u0014\u001b"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following statement:\n\n               (∗) If f (x) is an integer for every integer x, then f  (x) is an integer for\n                   every integer x.\n\n        Which one of the following is a counterexample to (∗)?\n\n                  x3 + x + 1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "f (x) =\n                      4\n                      x 4 + x2 + x"
+    },
+    {
+      "label": "B",
+      "rawText": "f (x) =\n                            2\n                      x 4 + x 3 + x2 + x"
+    },
+    {
+      "label": "C",
+      "rawText": "f (x) =\n                                2\n                      x4 + 2x3 + x2"
+    },
+    {
+      "label": "D",
+      "rawText": "f (x) =\n                            4\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "For a function to be a counterexample to (∗), it must be the case that f(x) is an integer for every\ninteger x, but for which f 0 (x) is not an integer for every integer x.\nWe can start by substituting in x = 0 and x = 1 into the given functions to see whether f(x) is\neven potentially an integer for every integer x:\n\nA f(0) = 14 . This cannot be a counterexample.\n\nB f(0) = 0, f(1) = 32 . This cannot be a counterexample.\n\nC f(0) = 0, f(1) = 2. This could potentially be a counterexample.\n\nD f(0) = 0, f(1) = 1. This could potentially be a counterexample.\n\nSo we now only need to consider C and D.\nOur next step is to differentiate them and then substitute x = 0 and x = 1 into the derivatives.\n\n              4x3 + 3x2 + 2x + 1 0\nC f 0 (x) =                     , f (0) = 12 , so this is potentially a counterexample.\n                      2\n              4x3 + 6x2 + 2x 0\nD f 0 (x) =                 , f (0) = 0, f 0 (1) = 4.\n                     4\n\nIt therefore seems most likely that C is a counterexample and D is not. To prove this, we need\nto show that for C, f(x) is an integer for every integer x, and that for D, either f(x) is not an\ninteger for some integer x or that f 0 (x) is an integer for every integer x.\nFor the purposes of the test, it probably makes most sense at this point to choose the answer C\nand move on, but we will go on here to complete the solution.\nFor C, we have\n                                     x(x3 + x2 + x + 1)   x(x + 1)(x2 + 1)\n                            f(x) =                      =\n                                             2                   2\nWe see that x(x + 1) is even if x is even and also if x is odd, so x(x + 1)(x2 + 1) is even for every\ninteger x, hence f(x) is an integer for every integer x. Therefore C is a counterexample.\nFor D, we have\n                                          x2 (x2 + 2x + 1)   x2 (x + 1)2\n                                 f(x) =                    =\n                                                  4               4\nSince x(x + 1) is even for every integer x, as we just showed, x2 (x + 1)2 is a multiple of 4 for\nevery integer x, and thus f(x) is an integer for every integer x.\nFor the derivative,\n                                  x(2x2 + 3x + 1)     x(x + 1)(2x + 1)\n                             f 0 (x) =             =\n                                         2                    2\n                                                 0\nand as before, the numerator is always even, so f (x) is an integer for every integer x. Therefore\nD is not a counterexample.\n\n\n\n\nVersion 1.0, April 2019                                                                       Page 18\n\n                                                                                          © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "17   Which of the following sketches shows the graph of\n\n                                                         1\n                                      sin(x2 + y 2 ) =\n                                                         2\n\n     where x2 + y 2 ≤ 8π ?\n\n                      y                                          y\n     A                                                       B\n\n\n\n\n                                        x                            x\n\n\n\n\n                      y                                          y\n     C                                                       D\n\n\n\n\n                                       x                             x\n\n\n\n\n                      y\n     E\n\n\n\n\n                                       x\n\n\n\n\n                                            \u0014\u001c"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Which of the following sketches shows the graph of\n\n                                                         1\n                                      sin(x2 + y 2 ) =\n                                                         2\n\n     where x2 + y 2 ≤ 8π ?\n\n                      y                                          y\n     A                                                       B\n\n\n\n\n                                        x                            x\n\n\n\n\n                      y                                          y\n     C                                                       D\n\n\n\n\n                                       x                             x\n\n\n\n\n                      y\n     E\n\n\n\n\n                                       x"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    },
+    {
+      "label": "F",
+      "rawText": "[visual option F; transcription required]"
+    },
+    {
+      "label": "G",
+      "rawText": "[visual option G; transcription required]"
+    },
+    {
+      "label": "H",
+      "rawText": "[visual option H; transcription required]"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We note that x2 + y 2 ≥ 0 for all x and y, so we need only consider non-negative values of x2 + y 2\nthat satisfy this equation. Those with x2 + y 2 ≤ 8π are\n                                       π 5π 13π 17π 25π 29π 37π 41π\n                          x2 + y 2 =    , ,    ,   ,   ,   ,   ,\n                                       6 6   6   6   6   6   6   6\n(These were obtained by noting that the solutions with x2 + y 2 ≤ 2π are π6 and 5π 6 , and then\n                          12π\nadding multiples of 2π = 6 to these.)\nConsider the first value; x2 + y 2 = π6 ; this is a circle with radius π/6. Likewise, the other\n                                                                      p\n                    p           p                                        p\ncircles have radii 5π/6, . . . , 41π/6. Taking out a common factor of π/6, we see that the\ncircles have radii:\n                                       √ √ √ √ √ √ √\n                         r\n                           π\n                       ρ     , ρ = 1, 5, 13, 17, 25, 29, 37, 41\n                           6\n\nWe can approximate these square roots to get an idea of how they grow:\n\n                                       ρ ≈ 1, 2, 3.5, 4, 5, 5.5, 6, 6.5\n\nSo the smallest three circles are quite far apart, but after that, they get closer and closer, which\nis graph A. (We can be more precise than this, and observe that the circles appear in close pairs\nwith larger gaps between the pairs, but that is not needed to answer this question.)\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 20"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        20
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required",
+      "option-count-review"
+    ]
+  }
+}

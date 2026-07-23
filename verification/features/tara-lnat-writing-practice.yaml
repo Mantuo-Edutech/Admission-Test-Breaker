@@ -1,0 +1,94 @@
+schemaVersion: 1
+feature:
+  id: tara-lnat-writing-practice
+  title: Private autosaved TARA and LNAT writing practice
+  status: partial
+  userOutcome: >-
+    A student can choose one of three Mantou-original prompts, write against the
+    official time and word boundaries, recover the private draft, submit it and
+    read the complete response without receiving a fabricated automated score.
+
+run:
+  packageScript: verify:essay-practice
+
+claims:
+  - id: source-bounded-original-prompts
+    status: verified
+    statement: >-
+      TARA Writing Task and LNAT Section B each provide three Mantou-original
+      prompts in versioned JSON. Both papers use two local SHA-pinned official
+      assets only to verify section scope, timing, interaction and length limits.
+    artifacts:
+      - content/tara/original-practice/writing-task-v1.json
+      - content/lnat/original-practice/section-b-writing-v1.json
+      - src/features/practice/content/original-essay-paper.ts
+      - tests/features/practice/content/essay-writing-papers.test.ts
+    automatedChecks:
+      - verify:essay-practice
+      - verify:official-research
+      - typecheck
+
+  - id: native-private-autosaved-editor
+    status: verified
+    statement: >-
+      The shared writing editor requires one prompt, enforces the 750-word and
+      20,000-character safety limits, shows a live count, and debounces private
+      session snapshots without creating a learning event for every keystroke.
+    artifacts:
+      - src/features/practice/components/EssayPracticeEditor.tsx
+      - src/features/practice/domain/essay-response.ts
+      - src/features/practice/pages/PracticePage.tsx
+      - tests/app/practice-page.test.tsx
+    automatedChecks:
+      - verify:essay-practice
+      - typecheck
+      - build
+
+  - id: factual-writing-result
+    status: verified
+    statement: >-
+      Submission returns the selected prompt, complete response, word count,
+      active page time and event count. The result explicitly withholds automated
+      scoring until a rubric, independent calibration and authorised review exist.
+    artifacts:
+      - src/features/practice/pages/ResultsPage.tsx
+      - tests/app/results-page.test.tsx
+    automatedChecks:
+      - verify:essay-practice
+      - verify:entitled-content
+      - typecheck
+
+  - id: responsive-writing-entry
+    status: verified
+    statement: >-
+      TARA and LNAT module pages expose direct writing actions; the editor uses a
+      focused single-column desk and a reduced but usable minimum height on phone.
+    artifacts:
+      - src/features/catalog/pages/AssessmentPracticeLibraryPage.tsx
+      - src/styles/practice.css
+      - tests/app/multi-exam-practice-library.test.tsx
+      - tests/app/essay-practice-layout-contract.test.ts
+    automatedChecks:
+      - verify:essay-practice
+      - verify:content-products
+      - build
+
+boundaries:
+  - Both sets are Mantou-original teaching previews, not official questions or a claim of official-equivalent calibration.
+  - The system does not generate a score, admissions prediction or writing-quality judgement from the essay.
+  - Human marking, rubrics, calibrated exemplars and optional AI interpretation remain separate authorised services.
+  - Independent TARA/LNAT writing-teacher and desktop/tablet/phone visual review remain before final publication status.
+
+manualChecks:
+  - id: independent-writing-review
+    status: pending
+    evidence: A separate TARA/LNAT writing teacher must review prompt fairness, construct coverage, language and difficulty.
+    viewports:
+      - content
+  - id: browser-device-review
+    status: pending
+    evidence: Automated component, persistence, type and production-build checks pass; direct desktop, tablet and phone visual review remains explicit.
+    viewports:
+      - desktop
+      - tablet
+      - phone

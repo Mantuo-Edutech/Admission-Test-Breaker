@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "15   The base 10 number 0.03841 has the value\n\n                  0 × 10–1 + 3 × 10–2 + 8 × 10–3 + 4 × 10–4 + 1 × 10–5 = 0.03841\n\n\n     Similarly, the base 2 number 0.01101 has the value\n\n                                                                            13\n                        0 × 2–1 + 1 × 2–2 + 1 × 2–3 + 0 × 2–4 + 1 × 2–5 =\n                                                                            32\n\n                                                          .   .\n     What is the value of the recurring base 2 number 0. 0011 = 0.001100110011 … ?\n\n         1\n     A\n         3\n         1\n     B\n         5\n          1\n     C\n         15\n          2\n     D\n         15\n          4\n     E\n         15\n          3\n     F\n         16\n          5\n     G\n         16\n         6\n     H\n         31\n\n\n\n\n                                               17"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The base 10 number 0.03841 has the value\n\n                  0 × 10–1 + 3 × 10–2 + 8 × 10–3 + 4 × 10–4 + 1 × 10–5 = 0.03841\n\n\n     Similarly, the base 2 number 0.01101 has the value\n\n                                                                            13\n                        0 × 2–1 + 1 × 2–2 + 1 × 2–3 + 0 × 2–4 + 1 × 2–5 =\n                                                                            32\n\n                                                          .   .\n     What is the value of the recurring base 2 number 0. 0011 = 0.001100110011 … ?\n\n         1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "3\n         1"
+    },
+    {
+      "label": "B",
+      "rawText": "5\n          1"
+    },
+    {
+      "label": "C",
+      "rawText": "15\n          2"
+    },
+    {
+      "label": "D",
+      "rawText": "15\n          4"
+    },
+    {
+      "label": "E",
+      "rawText": "15\n          3"
+    },
+    {
+      "label": "F",
+      "rawText": "16\n          5"
+    },
+    {
+      "label": "G",
+      "rawText": "16\n         6"
+    },
+    {
+      "label": "H",
+      "rawText": "31"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Approach 1\nUsing the rule for working out the value of a base 2 number, we have\n\n0.0̇011̇ = 0.001100110011 . . .\n       = 0 × 2−1 + 0 × 2−2 + 1 × 2−3 + 1 × 2−4 + 0 × 2−5 + 0 × 2−6 + 1 × 2−7 + 1 × 2−8 + · · ·\n\nGrouping these into sets of four consecutive terms gives\n\n             0.0̇011̇ = (0 × 2−1 + 0 × 2−2 + 1 × 2−3 + 1 × 2−4 ) +\n                         (0 × 2−5 + 0 × 2−6 + 1 × 2−7 + 1 × 2−8 ) + · · ·\n                     = (0 × 2−1 + 0 × 2−2 + 1 × 2−3 + 1 × 2−4 ) +\n                        2−4 (0 × 2−1 + 0 × 2−2 + 1 × 2−3 + 1 × 2−4 ) + 2−8 (· · · ) + · · ·\n                       \u0012        \u0013       \u0012         \u0013      \u0012        \u0013\n                         1    1      −4 1       1      −8 1     1\n                     =     +      +2        +       +2       +       + ···\n                         8 16             8 16             8 16\n                       3\n                     = (1 + 2−4 + 2−8 + · · · )\n                       16\nThe term in brackets is an infinite geometric series with first term 1 and common ratio 2−4 , so\nits sum is\n                                       1          1      16\n                                         −4\n                                            =        1 = .\n                                     1−2       1 − 16    15\nTherefore\n                                                 3   16    3   1\n                                    0.0̇011̇ =     ×    =    =\n                                                 16 15    15   5\nwhich is option B.\n\nApproach 2\nWe have, on dropping zero terms and rearranging:\n\n0.0̇011̇ = 0.001100110011 . . .\n       = 0 × 2−1 + 0 × 2−2 + 1 × 2−3 + 1 × 2−4 + 0 × 2−5 + 0 × 2−6 + 1 × 2−7 + 1 × 2−8 + · · ·\n       = 2−3 + 2−4 + 2−7 + 2−8 + 2−11 + 2−12 + · · ·\n       = (2−3 + 2−7 + 2−11 + · · · ) + (2−4 + 2−8 + 2−12 + · · · )\n\n(Technical note: we are allowed to rearrange this infinite series as all of the terms are positive.)\nWe can now calculate the sums of these infinite geometric series to get\n\n                                                2−3      2−4\n                                    0.0̇011̇ =        +\n                                              1 − 2−4 1 − 2−4\n                                                 2      1\n                                            =        +\n                                              16 − 1 16 − 1\n                                              3\n                                            =\n                                              15\n                                              1\n                                            =\n                                              5\n\n\n\n\nVersion 1.0, September 2023                                                                   Page 17\n\f\nTest of Mathematics for University Admission (TMUA), 2023 Paper 2 Solutions\n\n\nApproach 3\nWe can adapt the method used to evaluate a base 10 recurring decimal.\nLet x = 0.0̇011̇ = 0.001100110011 . . . . Then writing a subscript ‘2’ to indicate base 2 and a\nsubscript ‘10’ to indicate the usual base 10, we have\n\n                                           x = (0.001100110011 . . . )2\n                              so       1610 x = (11.001100110011 . . . )2\n                              giving   1510 x = 112\n\nNow 112 = 1 × 21 + 1 × 20 = 310 , so we have (in base 10) 15x = 3, yielding x = 51 , which is\noption B.\n\n\n\n\nVersion 1.0, September 2023                                                            Page 18"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        17,
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

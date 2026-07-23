@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "19   The angle θ can take any of the values 1◦ , 2◦ , 3◦ , . . . , 359◦ , 360◦ .\n\n     For how many of these values of θ is it true that\n                     √          √                   √      √\n                sin θ 1 + sin θ 1 − sin θ + cos θ 1 + cos θ 1 − cos θ = 0\n\n     A 0\n\n     B 1\n\n     C 2\n\n     D 4\n\n     E 93\n\n     F 182\n\n     G 271\n\n     H 360\n\n\n\n\n                                                  21"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The angle θ can take any of the values 1◦ , 2◦ , 3◦ , . . . , 359◦ , 360◦ .\n\n     For how many of these values of θ is it true that\n                     √          √                   √      √\n                sin θ 1 + sin θ 1 − sin θ + cos θ 1 + cos θ 1 − cos θ = 0"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0"
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "2"
+    },
+    {
+      "label": "D",
+      "rawText": "4"
+    },
+    {
+      "label": "E",
+      "rawText": "93"
+    },
+    {
+      "label": "F",
+      "rawText": "182"
+    },
+    {
+      "label": "G",
+      "rawText": "271"
+    },
+    {
+      "label": "H",
+      "rawText": "360"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can rewrite the given equation as\n                     p                              p\n                sin θ (1 + sin θ)(1 − sin θ) + cos θ (1 + cos θ)(1 − cos θ) = 0\n\nand then multiply out the brackets to give\n                                p                  p\n                           sin θ 1 − sin2 θ + cos θ 1 − cos2 θ = 0\n\nwhich simplifies to\n                                         √                    p\n                                 sin θ       cos2 θ + cos θ    sin2 θ = 0.\n                                                                 √\nIt would be easy at this point to make the mistake of simplifying cos2 θ to cos θ, but this would\nonly work in the case that cos θ ≥ 0 as square\n                                            √ roots are always positive. We can, though, write\n|cos θ| for this square root: we always have x2 = |x|. Therefore we can rewrite the equation as\n\n                                     sin θ |cos θ| + cos θ |sin θ| = 0.\n\nIf both sin θ and cos θ are positive, then this becomes 2 sin θ cos θ = 0, which cannot be true.\nLikewise, if both sin θ and cos θ are negative, this becomes −2 sin θ cos θ = 0, which again cannot\nbe true. However, if one is positive and one is negative, say sin θ > 0 and cos θ < 0, this becomes\n− sin θ cos θ + sin θ cos θ = 0, which is certainly true. The same holds if sin θ < 0 and cos θ > 0.\nFinally, if either sin θ = 0 or cos θ = 0, the equation is also satisfied.\nWe therefore need to count the number of given angles for which sin θ and cos θ have opposite\nsigns or one of them is zero. A quick sketch helps here:\n\n                                 y\n\n                             1\n\n\n\n                                                                                   x\n                             0            90          180        270         360\n\n\n\n                           −1\n\n\n\nWe see that the relevant ranges are 90◦ ≤ θ ≤ 180◦ and 270◦ ≤ θ ≤ 360◦ ; x = 0◦ would also\nwork, but is not one of the angles in the given list. There are 91 angles in each of the two ranges\n(remembering to include both endpoints), so there are 182 angles in total, which is option F.\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 24"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        24
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

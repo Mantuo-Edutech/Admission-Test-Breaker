@@ -1,0 +1,516 @@
+{
+  "schemaVersion": 1,
+  "id": "esat-chemistry-full-mock-v1",
+  "exam": "ESAT",
+  "edition": "Chemistry Full Mock · Original v1",
+  "sectionId": "chemistry",
+  "sectionLabel": "Chemistry · Original Full-Length Mock",
+  "sectionLabelZh": "化学 · 满托原创完整模考",
+  "durationMinutes": 40,
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本模考依据 ESAT Chemistry 公开范围独立命题，不复制或改写官方 Guide、ENGAA、NSAA 或其他市场资料题面。",
+  "sourceAnchors": [
+    {
+      "id": "esat-content-specification",
+      "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+      "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+      "usedFor": "27-question, 40-minute format and Chemistry scope boundary"
+    },
+    {
+      "id": "esat-guide-chemistry",
+      "localPath": "content/official/raw/esat/ESAT_GUIDE_Chemistry_June2025.pdf",
+      "sha256": "f1cfbc2ec1c44068526deeaac0b8ef7c87e245259cc89f9ed6b7c9124e359353",
+      "usedFor": "C1-C17 terminology and topic coverage only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "esat-chemistry-full-mock-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "An element has two isotopes. 75% of its atoms have mass number 35 and 25% have mass number 37. What is its relative atomic mass?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "35.0" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "35.5" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "36.0" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "36.5" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["chem-atomic"],
+      "skillTags": ["isotopes", "weighted-mean"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q02",
+      "number": 2,
+      "sourcePage": 2,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which electron arrangement identifies an element in Group 1 and Period 3?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2,1" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2,8" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2,8,1" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2,8,8,1" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["chem-periodic"],
+      "skillTags": ["electron-arrangement", "periodic-position"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q03",
+      "number": 3,
+      "sourcePage": 3,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which equation represents the complete combustion of propane?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{C_3H_8+3O_2\\rightarrow3CO+4H_2O}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{C_3H_8+4O_2\\rightarrow3CO_2+4H_2}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{2C_3H_8+7O_2\\rightarrow6CO+8H_2O}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{C_3H_8+5O_2\\rightarrow3CO_2+4H_2O}" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["chem-equations"],
+      "skillTags": ["balancing-equations", "combustion"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q04",
+      "number": 4,
+      "sourcePage": 4,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "How many moles of carbon dioxide are present in 4.4 g of " }, { "kind": "math", "tex": "\\mathrm{CO_2}" }, { "kind": "text", "value": "? Use " }, { "kind": "math", "tex": "A_r(\\mathrm C)=12" }, { "kind": "text", "value": " and " }, { "kind": "math", "tex": "A_r(\\mathrm O)=16" }, { "kind": "text", "value": "." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.10\\ \\text{mol}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.20\\ \\text{mol}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.40\\ \\text{mol}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "10\\ \\text{mol}" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["chem-quantitative"],
+      "skillTags": ["moles", "relative-formula-mass"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q05",
+      "number": 5,
+      "sourcePage": 5,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A solution contains 0.25 mol of solute in 500 cm³. What is its concentration?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.125\\ \\text{mol dm}^{-3}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.25\\ \\text{mol dm}^{-3}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.50\\ \\text{mol dm}^{-3}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.0\\ \\text{mol dm}^{-3}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["chem-quantitative"],
+      "skillTags": ["concentration", "volume-conversion"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q06",
+      "number": 6,
+      "sourcePage": 6,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "In the reaction " }, { "kind": "math", "tex": "\\mathrm{CuO+H_2\\rightarrow Cu+H_2O}" }, { "kind": "text", "value": ", what happens to copper(II) oxide?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It is oxidised because it gains hydrogen." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It is reduced because it loses oxygen." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It is reduced because it gains oxygen." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It is neither oxidised nor reduced." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["chem-redox"],
+      "skillTags": ["redox", "oxygen-transfer"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q07",
+      "number": 7,
+      "sourcePage": 7,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which statement best explains the high melting point of magnesium oxide?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Its molecules have strong intermolecular forces." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Its atoms share a sea of delocalised electrons." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It contains weak forces between separate ion pairs." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Strong electrostatic attractions act throughout a giant ionic lattice." }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["chem-bonding"],
+      "skillTags": ["ionic-bonding", "structure-property"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q08",
+      "number": 8,
+      "sourcePage": 8,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Why is diamond very hard?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Each carbon atom is joined by strong covalent bonds in a rigid three-dimensional network." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It contains layers that slide easily over one another." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It contains mobile ions held by metallic bonds." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Its molecules form hydrogen bonds with each other." }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["chem-bonding"],
+      "skillTags": ["giant-covalent", "structure-property"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q09",
+      "number": 9,
+      "sourcePage": 9,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Why does the reactivity of Group 1 metals increase down the group?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The nuclear charge decreases." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The atoms need to gain more electrons." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The outer electron is farther from the nucleus and more shielded." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The number of occupied electron shells decreases." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["chem-groups"],
+      "skillTags": ["group-one", "periodic-trends"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q10",
+      "number": 10,
+      "sourcePage": 10,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which sequence separates a mixture of sand and sodium chloride and then obtains dry sodium chloride?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Filter, add water, then distil the residue." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Add water, filter, then evaporate the filtrate." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Evaporate, add water, then filter the filtrate." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Use chromatography, then crystallise the solvent front." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["chem-separation"],
+      "skillTags": ["filtration", "evaporation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q11",
+      "number": 11,
+      "sourcePage": 11,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the hydrogen ion concentration of a solution with pH 2?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1.0\\times10^{-2}\\ \\text{mol dm}^{-3}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.0\\times10^{-1}\\ \\text{mol dm}^{-3}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.0\\ \\text{mol dm}^{-3}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1.0\\times10^{2}\\ \\text{mol dm}^{-3}" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["chem-acids"],
+      "skillTags": ["ph", "powers-of-ten"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q12",
+      "number": 12,
+      "sourcePage": 12,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which method prepares pure copper(II) sulfate crystals from dilute sulfuric acid and copper(II) oxide?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Add excess acid to copper(II) oxide and distil immediately." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Mix exactly equal masses and filter off the crystals." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Electrolyse the acid using copper electrodes until dry." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Warm the acid with excess oxide, filter, concentrate the filtrate and cool it." }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["chem-acids"],
+      "skillTags": ["salt-preparation", "crystallisation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q13",
+      "number": 13,
+      "sourcePage": 13,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which change increases the rate of reaction between marble and dilute hydrochloric acid without changing the amount of either reactant?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Use larger marble chips at the same temperature." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Crush the marble into smaller pieces." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Dilute the acid further." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Cool both reactants." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["chem-rates"],
+      "skillTags": ["surface-area", "collision-frequency"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q14",
+      "number": 14,
+      "sourcePage": 14,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "What does a catalyst do?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It increases the enthalpy change of the reaction." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It increases the energy of every reactant particle." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It provides an alternative pathway with lower activation energy." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It is permanently consumed to make more product." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["chem-rates"],
+      "skillTags": ["catalysts", "activation-energy"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q15",
+      "number": 15,
+      "sourcePage": 15,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A reaction raises the temperature of 100 g of water by 5.0 °C. Take the specific heat capacity of water as 4.2 J g⁻¹ °C⁻¹. How much heat is transferred to the water?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.1\\ \\text{kJ}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.084\\ \\text{kJ}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "21\\ \\text{kJ}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "210\\ \\text{kJ}" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["chem-energetics"],
+      "skillTags": ["calorimetry", "unit-conversion"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q16",
+      "number": 16,
+      "sourcePage": 16,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "For " }, { "kind": "math", "tex": "\\mathrm{H_2+Br_2\\rightarrow2HBr}" }, { "kind": "text", "value": ", bond energies are H–H = 436, Br–Br = 193 and H–Br = 366 kJ mol⁻¹. What is the enthalpy change?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "+103\\ \\text{kJ mol}^{-1}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "+629\\ \\text{kJ mol}^{-1}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-732\\ \\text{kJ mol}^{-1}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-103\\ \\text{kJ mol}^{-1}" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["chem-energetics"],
+      "skillTags": ["bond-energies", "enthalpy-change"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q17",
+      "number": 17,
+      "sourcePage": 17,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Molten sodium chloride is electrolysed using inert electrodes. Which products form?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Hydrogen at the cathode and oxygen at the anode" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Sodium at the cathode and chlorine at the anode" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Chlorine at the cathode and sodium at the anode" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Sodium hydroxide at both electrodes" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["chem-electrolysis"],
+      "skillTags": ["molten-electrolysis", "electrode-products"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q18",
+      "number": 18,
+      "sourcePage": 18,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Aqueous copper(II) sulfate is electrolysed using inert electrodes. Which substance is deposited at the cathode?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Oxygen" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Sulfur" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Copper" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Hydrogen" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["chem-electrolysis"],
+      "skillTags": ["aqueous-electrolysis", "preferential-discharge"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q19",
+      "number": 19,
+      "sourcePage": 19,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which molecular formula is an alkene?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{C_5H_{10}}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{C_5H_{12}}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{C_5H_{11}OH}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{C_5H_8O_2}" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["chem-organic"],
+      "skillTags": ["homologous-series", "general-formula"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q20",
+      "number": 20,
+      "sourcePage": 20,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "What are the products of the complete combustion of ethanol?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Carbon monoxide and hydrogen" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Carbon and water only" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Ethene and oxygen" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Carbon dioxide and water" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["chem-organic"],
+      "skillTags": ["alcohols", "complete-combustion"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q21",
+      "number": 21,
+      "sourcePage": 21,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is observed when ethene is shaken with bromine water?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A white precipitate forms." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The orange colour disappears." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A blue solution forms." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A glowing splint relights." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["chem-organic"],
+      "skillTags": ["alkenes", "bromine-water"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q22",
+      "number": 22,
+      "sourcePage": 22,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Why is aluminium extracted from aluminium oxide by electrolysis rather than by heating with carbon?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Aluminium oxide is a gas." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Carbon is more reactive than aluminium." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Aluminium is more reactive than carbon." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Aluminium does not form positive ions." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["chem-metals"],
+      "skillTags": ["metal-extraction", "reactivity-series"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q23",
+      "number": 23,
+      "sourcePage": 23,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which reaction occurs when an iron nail is placed in copper(II) sulfate solution?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{Fe+CuSO_4\\rightarrow FeSO_4+Cu}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{Cu+FeSO_4\\rightarrow CuSO_4+Fe}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{Fe+CuSO_4\\rightarrow FeCu+SO_4}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "No reaction occurs because both substances contain metals." }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["chem-metals"],
+      "skillTags": ["displacement", "reactivity-series"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q24",
+      "number": 24,
+      "sourcePage": 24,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Why does diffusion generally occur faster at a higher temperature?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Particles become larger." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The spaces between particles disappear." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "All particles change from atoms into ions." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Particles have greater average kinetic energy and move faster." }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["chem-particles"],
+      "skillTags": ["diffusion", "kinetic-particle-model"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q25",
+      "number": 25,
+      "sourcePage": 25,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which test gives a positive result for carbon dioxide?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It relights a glowing splint." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It turns limewater milky." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It gives a squeaky pop with a lighted splint." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It bleaches damp litmus paper without first turning it red." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["chem-tests"],
+      "skillTags": ["gas-tests", "carbon-dioxide"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q26",
+      "number": 26,
+      "sourcePage": 26,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A solution is acidified with dilute nitric acid and aqueous silver nitrate is added. A white precipitate forms. Which ion is present?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{Br^-}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{I^-}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{Cl^-}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\mathrm{SO_4^{2-}}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["chem-tests"],
+      "skillTags": ["anion-tests", "halides"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    },
+    {
+      "id": "esat-chemistry-full-mock-v1-q27",
+      "number": 27,
+      "sourcePage": 27,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Approximately what percentage of dry air is nitrogen?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "78%" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "21%" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "1%" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "0.04%" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["chem-air-water"],
+      "skillTags": ["air-composition", "recall"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-full-mock-v1.json"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "generatorVersion": "1.0.2",
+  "publicationStatus": "teaching-preview",
+  "assets": [
+    {
+      "productId": "esat-mathematics-review-notes-v1",
+      "examId": "esat",
+      "version": "0.1.0",
+      "source": "content/notes/esat/mathematics-foundations-v1.json",
+      "sourceSha256": "c454c852c26b7f7197530b9166b8eb0ca50157a6836a6fca07834e964e3ea42e",
+      "output": "output/pdf/esat-mathematics-foundations-v1.pdf",
+      "publicPath": "/notes/esat/esat-mathematics-foundations-v1.pdf",
+      "pageCount": 10,
+      "byteSize": 121274,
+      "sha256": "27da31b382bb1c8dc3841bbe2bfa6b30aafebe3c84f789b34697f8c136b4c145"
+    },
+    {
+      "productId": "esat-science-review-notes-v1",
+      "examId": "esat",
+      "version": "0.1.0",
+      "source": "content/notes/esat/sciences-foundations-v1.json",
+      "sourceSha256": "983d406db0e81843dedb8b8d375820218d723e65bb8364080ab14e1430b35b46",
+      "output": "output/pdf/esat-sciences-foundations-v1.pdf",
+      "publicPath": "/notes/esat/esat-sciences-foundations-v1.pdf",
+      "pageCount": 16,
+      "byteSize": 156789,
+      "sha256": "7eef7e65372f81b7dffdd33bb6036296f11f0eb00062d52d205a26ea88083a02"
+    },
+    {
+      "productId": "tara-review-notes-v1",
+      "examId": "tara",
+      "version": "0.1.0",
+      "source": "content/notes/tara/reasoning-writing-foundations-v1.json",
+      "sourceSha256": "6a2d40fa95741a51c9c1bbfc99f875ae5f0853b80ac2e3bd6f863154264949f2",
+      "output": "output/pdf/tara-reasoning-writing-foundations-v1.pdf",
+      "publicPath": "/notes/tara/tara-reasoning-writing-foundations-v1.pdf",
+      "pageCount": 17,
+      "byteSize": 180196,
+      "sha256": "19263cc19dc100f7813b441a40cb1c380cc907cdde75aacc03399da0d8bf742e"
+    },
+    {
+      "productId": "lnat-review-notes-v1",
+      "examId": "lnat",
+      "version": "0.1.0",
+      "source": "content/notes/lnat/reading-writing-foundations-v1.json",
+      "sourceSha256": "144015a7a9557375cf6f7b0ffb7cb300efa5a3a31bec058678ae5244f2f99e30",
+      "output": "output/pdf/lnat-reading-writing-foundations-v1.pdf",
+      "publicPath": "/notes/lnat/lnat-reading-writing-foundations-v1.pdf",
+      "pageCount": 16,
+      "byteSize": 181891,
+      "sha256": "c703498cc2240c91fa8d3dabe40a63eef1205f63b2d72177b7892e9fe792c0a9"
+    },
+    {
+      "productId": "ucat-review-notes-v1",
+      "examId": "ucat",
+      "version": "0.1.0",
+      "source": "content/notes/ucat/four-subtest-foundations-v1.json",
+      "sourceSha256": "e327f1271dce644e73fbb616b39f011120bd836ed2a16d4ac79a90f526a2a2fe",
+      "output": "output/pdf/ucat-four-subtest-foundations-v1.pdf",
+      "publicPath": "/notes/ucat/ucat-four-subtest-foundations-v1.pdf",
+      "pageCount": 20,
+      "byteSize": 200853,
+      "sha256": "b031b871a888907639319e8e904393270bff1ac08db4bba11cfe7726bcb6f732"
+    }
+  ]
+}

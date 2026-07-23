@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q05",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 5,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "5      Consider the following three statements:\n\n               1    10p2 + 1 and 10p2 − 1 are both prime when p is an odd prime.\n\n               2    Every prime greater than 5 is of the form 6n + 1 for some integer n.\n\n               3    No multiple of 7 greater than 7 is prime.\n\n        The result 91 = 7 × 13 can be used to provide a counterexample to which of the\n        above statements?\n\n        A none of them\n\n        B 1 only\n\n        C 2 only\n\n        D 3 only\n\n        E      1 and 2 only\n\n        F      1 and 3 only\n\n        G 2 and 3 only\n\n        H 1, 2 and 3\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u001a                                    >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following three statements:\n\n               1    10p2 + 1 and 10p2 − 1 are both prime when p is an odd prime.\n\n               2    Every prime greater than 5 is of the form 6n + 1 for some integer n.\n\n               3    No multiple of 7 greater than 7 is prime.\n\n        The result 91 = 7 × 13 can be used to provide a counterexample to which of the\n        above statements?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "1 only"
+    },
+    {
+      "label": "C",
+      "rawText": "2 only"
+    },
+    {
+      "label": "D",
+      "rawText": "3 only"
+    },
+    {
+      "label": "E",
+      "rawText": "1 and 2 only"
+    },
+    {
+      "label": "F",
+      "rawText": "1 and 3 only"
+    },
+    {
+      "label": "G",
+      "rawText": "2 and 3 only"
+    },
+    {
+      "label": "H",
+      "rawText": "1, 2 and 3\n\n\n\n\n8&/(6                                                                          >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We note from the context of the statements that 91 = 7 × 13 shows that 91 is not prime. It also\nshows that 91 is a multiple of 7 and a multiple of 13.\nWe use a counterexample when we are trying to disprove a statement of the form ‘if A then B’;\nthe counterexample will be a case where A is true but B is false. We can also use counterexamples\nto disprove statements of the form ‘for all x, A is true’: a single example of an x for which A is\nfalse shows that the statement is false.\nWe first rewrite each of the statements given into an explicit ‘if . . . then’ statement or an explicit\n‘for all’ statement.\n(With experience, this is not actually necessary; once you have seen enough statements, it\nbecomes clear what a counterexample ‘looks like’. But for the purposes of reaching this point,\nit can be useful to go through these formal steps.)\n\n1 The word ‘when’ in this context has the same logical meaning as ‘if’, so the statement can be\n  rewritten as ‘if p is an odd prime, then 10p2 + 1 and 10p2 − 1 are both prime’.\n  So if 91 = 7 × 13 is to provide a counterexample, we need an odd prime p with 10p2 + 1 = 91\n  or 10p2 − 1 = 91, since in that case, ‘10p2 + 1 and 10p2 − 1 are both prime’ will be false. It is\n  clear that p = 3 achieves this, for then 10p2 + 1 = 91.\n\n2 We can write this statement as an explicit ‘for all’ statement, as ‘Every prime. . . ’ suggests\n  this meaning. The statement becomes: ‘For all primes p where p > 5, p = 6n + 1 for some\n  integer n’.\n  So a counterexample would be a prime p with p > 5 but for which p = 6n+1 is false. However,\n  91 is not prime, so 91 = 7 × 13 does not provide a counterexample. The fact that 91 = 6n + 1\n  for n = 15 is immaterial, and the fact that the statement is false (as 11 = 6 × 2 − 1) does not\n  help either.\n\n3 We can again write this as an explicit ‘for all’ statement; the English is better with the\n  equivalent ‘for each’, though: ‘For each n which is a multiple of 7 greater than 7, n is not\n  prime.’\n  If we now look at 91 = 7 × 13, we see that 91 is a multiple of 7 greater than 7. However,\n  91 is not prime, so 91 is an example of where the statement does hold, rather than being a\n  counterexample. In fact, the given statement is true, so there cannot be any counterexamples,\n  and we need not have looked at 91 = 7 × 13 at all.\n\nSo the answer is B.\n\n\n\n\nVersion 1.0, April 2019                                                                        Page 7\n\n                                                                                          © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

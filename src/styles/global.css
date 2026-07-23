@@ -21,6 +21,61 @@ body {
   background: var(--color-paper);
 }
 
+.stale-release-recovery {
+  position: fixed;
+  z-index: 10000;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  width: min(calc(100% - 2rem), 46rem);
+  margin-inline: auto;
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  border: 1px solid var(--color-purple);
+  background: var(--color-paper-raised);
+  box-shadow: var(--shadow-paper);
+}
+
+.stale-release-recovery h1,
+.stale-release-recovery p {
+  margin: 0;
+}
+
+.stale-release-recovery h1 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.stale-release-recovery p {
+  margin-top: 0.3rem;
+  color: var(--color-slate);
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
+.stale-release-recovery button {
+  min-width: 7rem;
+  min-height: 2.75rem;
+  border: 0;
+  background: var(--color-purple);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+@media (max-width: 35rem) {
+  .stale-release-recovery {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
 button,
 input,
 textarea,

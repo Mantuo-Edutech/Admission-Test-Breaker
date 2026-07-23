@@ -10,18 +10,18 @@ import {
   asUserId,
   assertCanonicalUtcTimestamp,
 } from "../../../platform/shared/ids.js";
-import {
-  TMUA_2023_P1_QUESTION_COUNT,
-  type PracticeSession,
-} from "../domain/session.js";
+import type { PracticeSession } from "../domain/session.js";
 import type {
   PracticeSessionStore,
   SessionLoadResult,
   SessionSaveResult,
 } from "./store.js";
+import type { PracticeHistoryArchive } from "../history/store.js";
+import { publishedContentRefForPaperId } from "../content/published-revisions.js";
 
-export const PRACTICE_SESSION_STORAGE_KEY = "tmua:practice:current:v1";
-const corruptKeyPrefix = "tmua:practice:corrupt:";
+export const PRACTICE_SESSION_STORAGE_KEY = "admission-test-breaker:practice:current:v1";
+const LEGACY_PRACTICE_SESSION_STORAGE_KEY = "tmua:practice:current:v1";
+const corruptKeyPrefix = "admission-test-breaker:practice:corrupt:";
 
 const sessionFields = new Set([
   "schemaVersion",
@@ -29,6 +29,8 @@ const sessionFields = new Set([
   "learningSpaceId",
   "startedBy",
   "paperId",
+  "paperRevisionId",
+  "contentDigest",
   "status",
   "startedAt",
   "deadlineAt",
@@ -40,6 +42,9 @@ const sessionFields = new Set([
   "activeQuestionEnteredAt",
   "events",
 ]);
+const legacySessionFields = new Set(
+  [...sessionFields].filter((field) => field !== "paperRevisionId" && field !== "contentDigest"),
+);
 
 const eventFields = new Set([
   "id",
@@ -120,20 +125,25 @@ function actorsEqual(left: ActorRef, right: ActorRef): boolean {
   return false;
 }
 
-const questionIdPattern = /^tmua-2023-p1-q(?:0[1-9]|1\d|20)$/;
+const paperIdPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
 
-function assertQuestionId(value: string, label: string): void {
-  if (!questionIdPattern.test(value)) {
-    throw new Error(`${label} is not a TMUA 2023 Paper 1 question ID`);
+function assertQuestionId(value: string, paperId: string, label: string): void {
+  const expectedPrefix = `${paperId}-q`;
+  if (!value.startsWith(expectedPrefix) || !/^(?:0[1-9]|[1-9]\d)$/u.test(value.slice(expectedPrefix.length))) {
+    throw new Error(`${label} does not belong to ${paperId}`);
   }
 }
 
-function parseAnswers(value: unknown): Record<string, string> {
+function parseAnswers(value: unknown, paperId: string): Record<string, string> {
   assertRecord(value, "answers");
   const answers: Record<string, string> = {};
   for (const [questionId, answer] of Object.entries(value)) {
-    assertQuestionId(questionId, "Answer question ID");
-    if (typeof answer !== "string" || !/^[A-Z]$/.test(answer)) {
+    assertQuestionId(questionId, paperId, "Answer question ID");
+    if (
+      typeof answer !== "string" ||
+      answer.trim().length === 0 ||
+      answer.length > 20_000
+    ) {
       throw new Error(`Answer for ${questionId} is invalid`);
     }
     answers[questionId] = answer;
@@ -141,22 +151,22 @@ function parseAnswers(value: unknown): Record<string, string> {
   return answers;
 }
 
-function parseMarkedQuestions(value: unknown): string[] {
+function parseMarkedQuestions(value: unknown, paperId: string): string[] {
   if (!Array.isArray(value) || !value.every((item) => typeof item === "string")) {
     throw new Error("markedQuestionIds must be a string array");
   }
-  value.forEach((questionId) => assertQuestionId(questionId, "Marked question ID"));
+  value.forEach((questionId) => assertQuestionId(questionId, paperId, "Marked question ID"));
   if (new Set(value).size !== value.length) {
     throw new Error("markedQuestionIds cannot contain duplicates");
   }
   return [...value];
 }
 
-function parseTiming(value: unknown): Record<string, number> {
+function parseTiming(value: unknown, paperId: string): Record<string, number> {
   assertRecord(value, "timingByQuestionMs");
   const timing: Record<string, number> = {};
   for (const [questionId, activeMs] of Object.entries(value)) {
-    assertQuestionId(questionId, "Timing question ID");
+    assertQuestionId(questionId, paperId, "Timing question ID");
     if (
       typeof activeMs !== "number" ||
       !Number.isInteger(activeMs) ||
@@ -207,12 +217,13 @@ function parseEvents(
   return rebuilt;
 }
 
-function parseSession(value: unknown): PracticeSession {
+export function parseStoredPracticeSession(value: unknown): PracticeSession {
   assertRecord(value, "Practice session");
-  if (value.schemaVersion !== 2) {
+  if (value.schemaVersion !== 2 && value.schemaVersion !== 3) {
     throw new UnsupportedSessionError("Practice session schema is unsupported");
   }
-  assertExactFields(value, sessionFields, "Practice session");
+  const legacy = value.schemaVersion === 2;
+  assertExactFields(value, legacy ? legacySessionFields : sessionFields, "Practice session");
 
   assertNonEmptyString(value.id, "Practice session ID");
   assertNonEmptyString(value.learningSpaceId, "Learning space ID");
@@ -220,8 +231,23 @@ function parseSession(value: unknown): PracticeSession {
   const learningSpaceId = asLearningSpaceId(value.learningSpaceId);
   const startedBy = assertActor(value.startedBy);
 
-  if (value.paperId !== "tmua-2023-p1") {
+  if (typeof value.paperId !== "string" || !paperIdPattern.test(value.paperId)) {
     throw new Error("Practice paper is invalid");
+  }
+  const paperId = value.paperId;
+  const legacyContentRef = legacy ? publishedContentRefForPaperId(paperId) : null;
+  if (legacy && legacyContentRef === null) {
+    throw new UnsupportedSessionError("Legacy practice content revision is no longer available");
+  }
+  const paperRevisionId = legacy ? legacyContentRef!.paperRevisionId : value.paperRevisionId;
+  const contentDigest = legacy ? legacyContentRef!.contentDigest : value.contentDigest;
+  if (
+    typeof paperRevisionId !== "string" ||
+    !new RegExp(`^${paperId.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&")}-r[1-9]\\d*$`, "u").test(paperRevisionId) ||
+    typeof contentDigest !== "string" ||
+    !/^[a-f0-9]{64}$/u.test(contentDigest)
+  ) {
+    throw new Error("Practice content revision is invalid");
   }
   if (
     value.status !== "active" &&
@@ -244,7 +270,7 @@ function parseSession(value: unknown): PracticeSession {
   if (
     !Number.isInteger(value.currentQuestion) ||
     (value.currentQuestion as number) < 1 ||
-    (value.currentQuestion as number) > TMUA_2023_P1_QUESTION_COUNT
+    (value.currentQuestion as number) > 99
   ) {
     throw new Error("currentQuestion is invalid");
   }
@@ -282,11 +308,13 @@ function parseSession(value: unknown): PracticeSession {
   }
 
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
     id,
     learningSpaceId,
     startedBy,
-    paperId: "tmua-2023-p1",
+    paperId,
+    paperRevisionId,
+    contentDigest,
     status: value.status,
     startedAt: value.startedAt,
     deadlineAt: value.deadlineAt,
@@ -294,9 +322,9 @@ function parseSession(value: unknown): PracticeSession {
       ? {}
       : { submittedAt: value.submittedAt as string }),
     currentQuestion: value.currentQuestion as number,
-    answers: parseAnswers(value.answers),
-    markedQuestionIds: parseMarkedQuestions(value.markedQuestionIds),
-    timingByQuestionMs: parseTiming(value.timingByQuestionMs),
+    answers: parseAnswers(value.answers, paperId),
+    markedQuestionIds: parseMarkedQuestions(value.markedQuestionIds, paperId),
+    timingByQuestionMs: parseTiming(value.timingByQuestionMs, paperId),
     activeQuestionEnteredAt,
     events,
   };
@@ -308,12 +336,13 @@ export class LocalPracticeSessionStore implements PracticeSessionStore {
   constructor(
     private readonly storage: Storage,
     private readonly now: () => Date = () => new Date(),
+    private readonly history?: PracticeHistoryArchive,
   ) {}
 
   async loadCurrent(): Promise<SessionLoadResult> {
     let raw: string | null;
     try {
-      raw = this.storage.getItem(PRACTICE_SESSION_STORAGE_KEY);
+      raw = this.storage.getItem(PRACTICE_SESSION_STORAGE_KEY) ?? this.storage.getItem(LEGACY_PRACTICE_SESSION_STORAGE_KEY);
     } catch {
       return { session: this.memorySession, issue: null };
     }
@@ -323,7 +352,7 @@ export class LocalPracticeSessionStore implements PracticeSessionStore {
     }
 
     try {
-      const session = parseSession(JSON.parse(raw) as unknown);
+      const session = parseStoredPracticeSession(JSON.parse(raw) as unknown);
       this.memorySession = session;
       return { session, issue: null };
     } catch (error) {
@@ -338,11 +367,13 @@ export class LocalPracticeSessionStore implements PracticeSessionStore {
 
   async save(session: PracticeSession): Promise<SessionSaveResult> {
     const serialized = JSON.stringify(session);
-    parseSession(JSON.parse(serialized) as unknown);
+    parseStoredPracticeSession(JSON.parse(serialized) as unknown);
     this.memorySession = session;
+    await this.history?.record(session);
 
     try {
       this.storage.setItem(PRACTICE_SESSION_STORAGE_KEY, serialized);
+      this.storage.removeItem(LEGACY_PRACTICE_SESSION_STORAGE_KEY);
       return { persisted: true };
     } catch {
       return { persisted: false };
@@ -353,6 +384,7 @@ export class LocalPracticeSessionStore implements PracticeSessionStore {
     this.memorySession = null;
     try {
       this.storage.removeItem(PRACTICE_SESSION_STORAGE_KEY);
+      this.storage.removeItem(LEGACY_PRACTICE_SESSION_STORAGE_KEY);
     } catch {
       // Memory state is still cleared when browser persistence is unavailable.
     }
@@ -367,6 +399,7 @@ export class LocalPracticeSessionStore implements PracticeSessionStore {
     }
     try {
       this.storage.removeItem(PRACTICE_SESSION_STORAGE_KEY);
+      this.storage.removeItem(LEGACY_PRACTICE_SESSION_STORAGE_KEY);
     } catch {
       // Loading still returns an issue and never trusts the malformed record.
     }

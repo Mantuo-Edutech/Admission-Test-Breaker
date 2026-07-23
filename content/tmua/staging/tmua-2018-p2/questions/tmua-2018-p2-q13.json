@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13   The following is an attempted proof of the conjecture:\n\n\n                               if tan θ > 0, then sin θ + cos θ > 1.\n\n\n         Suppose tan θ > 0, so in particular cos θ \u0004= 0.\n\n                         sin θ\n         Since tan θ =         , then sin θ cos θ = tan θ cos2 θ > 0.     (I)\n                         cos θ\n\n         It follows that 1 + 2 sin θ cos θ > 1.                           (II)\n\n\n         Therefore sin2 θ + 2 sin θ cos θ + cos2 θ > 1,                   (III)\n\n\n         which factorises to give (sin θ + cos θ)2 > 1.                   (IV)\n\n\n         Therefore sin θ + cos θ > 1.                                     (V)\n\n\n\n     Which one of the following is the case?\n\n     A The proof is correct.\n\n     B The proof is incorrect, and the ﬁrst error occurs in line (I).\n\n     C The proof is incorrect, and the ﬁrst error occurs in line (II).\n\n     D The proof is incorrect, and the ﬁrst error occurs in line (III).\n\n     E The proof is incorrect, and the ﬁrst error occurs in line (IV).\n\n     F The proof is incorrect, and the ﬁrst error occurs in line (V).\n\n\n\n\n                                                  15"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The following is an attempted proof of the conjecture:\n\n\n                               if tan θ > 0, then sin θ + cos θ > 1.\n\n\n         Suppose tan θ > 0, so in particular cos θ A= 0.\n\n                         sin θ\n         Since tan θ =         , then sin θ cos θ = tan θ cos2 θ > 0.     (I)\n                         cos θ\n\n         It follows that 1 + 2 sin θ cos θ > 1.                           (II)\n\n\n         Therefore sin2 θ + 2 sin θ cos θ + cos2 θ > 1,                   (III)\n\n\n         which factorises to give (sin θ + cos θ)2 > 1.                   (IV)\n\n\n         Therefore sin θ + cos θ > 1.                                     (V)\n\n\n\n     Which one of the following is the case?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "The proof is correct."
+    },
+    {
+      "label": "B",
+      "rawText": "The proof is incorrect, and the ﬁrst error occurs in line (I)."
+    },
+    {
+      "label": "C",
+      "rawText": "The proof is incorrect, and the ﬁrst error occurs in line (II)."
+    },
+    {
+      "label": "D",
+      "rawText": "The proof is incorrect, and the ﬁrst error occurs in line (III)."
+    },
+    {
+      "label": "E",
+      "rawText": "The proof is incorrect, and the ﬁrst error occurs in line (IV)."
+    },
+    {
+      "label": "F",
+      "rawText": "The proof is incorrect, and the ﬁrst error occurs in line (V)."
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Commentary: One thing we can do when faced with a question like this it to first try\n      different values of θ to see whether the conjecture appears to be true or false. If it is false,\n      as shown by some counterexample, then substituting this value of θ into every line might\n      indicate where the error arises. If, on the other hand, we cannot find a counterexample,\n      then the conjecture and argument may well be true.\n      In this case, given that we are dealing with trigonometric functions, we would do well to\n      think about their graphs and try values of θ in different quadrants.\n\nIf we sketch (or think about) the graphs of sin, cos and tan, we have the following:\n\n                                y\n\n\n\n\n                                                                        x\n                                0         π         π          3π       2π\n                                          2                     2\n\n\n\n\nIf the conjecture is false, we need a value of θ where tan θ > 0 but sin θ + cos θ < 1\nWe see that tan θ > 0 for 0 < θ < π2 but there sin θ+cos θ > 1 looks like it might be true. We also\nhave tan θ > 0 when π < θ < 3π 2 and there sin θ and cos θ are both negative, so sin θ + cos θ > 1\ncannot be true. So if we take θ = 5π4 we may find the source of the error.\nOn line (I), we get sin θ cos θ = (− √12 )(− √12 = 12 and tan θ cos2 θ = 1 · (− √12 )2 = 12 so this line\nlooks reasonable.\nOn line (II), we get 1 + 2 · 21 = 1 + 1 > 1 which is correct.\nOn line (III), we get 21 + 2 · 12 + 12 = 2 > 1 so this is correct.\nOn line (IV), we get (− √12 − √12 )2 = 2 > 1 so this line is correct for this value of θ.\n                                      √          √\nOn line (V), we have − √12 − √12 = − 2 and − 2 > 1 is false. So it appears that the first error\nis likely to occur here: indeed, we have taken the square root of x2 > 1 and obtained x > 1,\nwhich is not necessarily the case, as we could have x < −1\nWe should now go back and check that the earlier steps are actually valid, as there could have\nbeen an earlier error. But with some thinking, we can see that all of them are correct:\n\n(I)    This is obtained by multiplying both sides of tan θ > 0 by cos2 θ > 0 (and we cannot have\n       cos θ = 0), and then noting the equality from the definition of tan θ given.\n\n\nVersion 1.0, April 2019                                                                        Page 15\n\f\nTest of Mathematics for University Admission 2018 Paper 2 Solutions\n\n\n(II)   This is obtained by doubling the previous inequality and then adding 1.\n\n(III) Here, the identity sin2 θ + cos2 θ = 1 has been used to rewrite the left hand side.\n\n(IV) This factorisation is correct.\n\n(V)    As we saw, an error occurs here.\n\nHence the answer is F.\n\n\n\n\nVersion 1.0, April 2019                                                                     Page 16"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        15,
+        16
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

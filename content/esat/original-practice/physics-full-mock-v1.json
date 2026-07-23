@@ -1,0 +1,516 @@
+{
+  "schemaVersion": 1,
+  "id": "esat-physics-full-mock-v1",
+  "exam": "ESAT",
+  "edition": "Physics Full Mock · Original v1",
+  "sectionId": "physics",
+  "sectionLabel": "Physics · Original Full-Length Mock",
+  "sectionLabelZh": "物理 · 满托原创完整模考",
+  "durationMinutes": 40,
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本模考依据 ESAT Physics 公开范围独立命题，不复制或改写官方 Guide、ENGAA、NSAA 或其他市场资料题面。",
+  "sourceAnchors": [
+    {
+      "id": "esat-content-specification",
+      "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+      "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+      "usedFor": "27-question, 40-minute format and Physics scope boundary"
+    },
+    {
+      "id": "esat-guide-physics",
+      "localPath": "content/official/raw/esat/ESAT_Guide_Physics.pdf",
+      "sha256": "234651aa05f87112e3455bae420de782683938d8d28950293649a8352dc4729e",
+      "usedFor": "P1-P7 terminology and topic coverage only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "esat-physics-full-mock-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A charge of " }, { "kind": "math", "tex": "240\\ \\text{C}" }, { "kind": "text", "value": " passes through a wire in 2.0 minutes. What is the average current?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.5\\ \\text{A}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1.0\\ \\text{A}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.0\\ \\text{A}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "120\\ \\text{A}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["physics-electricity"],
+      "skillTags": ["charge-current-time", "unit-conversion"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q02",
+      "number": 2,
+      "sourcePage": 2,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A 4 Ω resistor and an 8 Ω resistor are connected in series across a 24 V supply. What is the potential difference across the 8 Ω resistor?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "8\\ \\text{V}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "16\\ \\text{V}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "20\\ \\text{V}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "24\\ \\text{V}" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["physics-electricity"],
+      "skillTags": ["series-circuits", "potential-difference"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q03",
+      "number": 3,
+      "sourcePage": 3,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A motor draws a current of 3.0 A from a 12 V supply for 50 s. How much electrical energy is transferred?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1800\\ \\text{J}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "600\\ \\text{J}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "200\\ \\text{J}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "36\\ \\text{J}" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["physics-electricity"],
+      "skillTags": ["electrical-power", "energy-transfer"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q04",
+      "number": 4,
+      "sourcePage": 4,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A 6 Ω resistor and a 3 Ω resistor form a potential divider across an 18 V supply. What is the potential difference across the 3 Ω resistor?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2\\ \\text{V}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3\\ \\text{V}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "12\\ \\text{V}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6\\ \\text{V}" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["physics-electricity"],
+      "skillTags": ["potential-divider", "resistance-ratio"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q05",
+      "number": 5,
+      "sourcePage": 5,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "An initially neutral object loses electrons. Which statement describes the object afterwards?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It is negatively charged because it has fewer protons." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It is positively charged because it has fewer electrons than protons." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It remains neutral because only electrons can move." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It is positively charged because each remaining electron becomes positive." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["physics-electricity"],
+      "skillTags": ["electrostatics", "particle-model"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q06",
+      "number": 6,
+      "sourcePage": 6,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "An ideal transformer has 120 turns on its secondary coil and changes 230 V to 46 V. How many turns are on its primary coil?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "24" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "120" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "460" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "600" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["physics-magnetism"],
+      "skillTags": ["transformers", "ratio"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q07",
+      "number": 7,
+      "sourcePage": 7,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A straight wire of length 0.40 m carries a current of 3.0 A perpendicular to a uniform magnetic field of flux density 0.50 T. What force acts on the wire?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.60\\ \\text{N}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1.5\\ \\text{N}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.4\\ \\text{N}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6.0\\ \\text{N}" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["physics-magnetism"],
+      "skillTags": ["motor-effect", "force-on-conductor"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q08",
+      "number": 8,
+      "sourcePage": 8,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which change produces the greatest induced potential difference in a coil, with all other factors unchanged?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Hold a weak magnet stationary inside the coil." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Move a weak magnet slowly through the coil." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Move a strong magnet rapidly through the coil." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Hold a strong magnet stationary outside the coil." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["physics-magnetism"],
+      "skillTags": ["electromagnetic-induction", "rate-of-change"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q09",
+      "number": 9,
+      "sourcePage": 9,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "An object starts from rest and accelerates uniformly at 3.0 m s⁻² for 4.0 s. How far does it travel?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6\\ \\text{m}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "12\\ \\text{m}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "24\\ \\text{m}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "48\\ \\text{m}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["physics-mechanics"],
+      "skillTags": ["kinematics", "uniform-acceleration"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q10",
+      "number": 10,
+      "sourcePage": 10,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A 5.0 kg object accelerates at 2.4 m s⁻². What is the resultant force on it?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "12\\ \\text{N}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "7.4\\ \\text{N}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.1\\ \\text{N}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.48\\ \\text{N}" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["physics-mechanics"],
+      "skillTags": ["newtons-second-law", "resultant-force"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q11",
+      "number": 11,
+      "sourcePage": 11,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the weight of a 60 kg student where the gravitational field strength is 9.8 N kg⁻¹?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6.1\\ \\text{N}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "60\\ \\text{N}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "490\\ \\text{N}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "588\\ \\text{N}" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["physics-mechanics"],
+      "skillTags": ["weight", "gravitational-field"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q12",
+      "number": 12,
+      "sourcePage": 12,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A 0.50 kg ball moving at 8.0 m s⁻¹ rebounds directly backwards at 2.0 m s⁻¹. What is the magnitude of the impulse on the ball?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3.0\\ \\text{N s}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5.0\\ \\text{N s}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "8.0\\ \\text{N s}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "10\\ \\text{N s}" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["physics-mechanics"],
+      "skillTags": ["momentum", "impulse"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q13",
+      "number": 13,
+      "sourcePage": 13,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A constant driving force of 150 N moves a box 20 m in the direction of the force. How much work is done by the driving force?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3000\\ \\text{J}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "750\\ \\text{J}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "170\\ \\text{J}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "7.5\\ \\text{J}" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["physics-mechanics"],
+      "skillTags": ["work-done", "energy-transfer"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q14",
+      "number": 14,
+      "sourcePage": 14,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A 1200 kg car travels at 15 m s⁻¹. What is its kinetic energy?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "9.0\\times10^3\\ \\text{J}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1.8\\times10^4\\ \\text{J}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1.35\\times10^5\\ \\text{J}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.70\\times10^5\\ \\text{J}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["physics-mechanics"],
+      "skillTags": ["kinetic-energy", "substitution"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q15",
+      "number": 15,
+      "sourcePage": 15,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A 200 N force acts 0.30 m from a pivot. What force acting on the opposite side, 0.50 m from the pivot, produces equilibrium?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "40\\ \\text{N}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "60\\ \\text{N}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "100\\ \\text{N}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "120\\ \\text{N}" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["physics-mechanics"],
+      "skillTags": ["moments", "equilibrium"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q16",
+      "number": 16,
+      "sourcePage": 16,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A 0.25 kg metal block of specific heat capacity 900 J kg⁻¹ K⁻¹ is heated through 40 K. How much energy is transferred to the block?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3600\\ \\text{J}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "9000\\ \\text{J}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "22500\\ \\text{J}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "90000\\ \\text{J}" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["physics-thermal"],
+      "skillTags": ["specific-heat-capacity", "energy"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q17",
+      "number": 17,
+      "sourcePage": 17,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The specific latent heat of fusion of ice is 334 kJ kg⁻¹. How much energy is needed to melt 0.150 kg of ice at its melting point?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.23\\times10^3\\ \\text{J}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5.01\\times10^3\\ \\text{J}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5.01\\times10^4\\ \\text{J}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.23\\times10^6\\ \\text{J}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["physics-thermal"],
+      "skillTags": ["latent-heat", "unit-conversion"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q18",
+      "number": 18,
+      "sourcePage": 18,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Four rods have the same dimensions. Which material is most suitable when the fastest possible thermal conduction is required?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Copper" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Glass" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Wood" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Expanded polystyrene" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["physics-thermal"],
+      "skillTags": ["thermal-conduction", "materials"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q19",
+      "number": 19,
+      "sourcePage": 19,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A solid has mass 540 g and volume 200 cm³. What is its density?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.37\\ \\text{g cm}^{-3}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1.7\\ \\text{g cm}^{-3}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.4\\ \\text{g cm}^{-3}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.7\\ \\text{g cm}^{-3}" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["physics-matter"],
+      "skillTags": ["density", "ratio"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q20",
+      "number": 20,
+      "sourcePage": 20,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "What pressure due to the water is experienced 3.0 m below its surface? Take water density as 1000 kg m⁻³ and " }, { "kind": "math", "tex": "g=10\\ \\text{N kg}^{-1}" }, { "kind": "text", "value": "." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3.0\\times10^3\\ \\text{Pa}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3.0\\times10^4\\ \\text{Pa}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1.0\\times10^5\\ \\text{Pa}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3.0\\times10^6\\ \\text{Pa}" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["physics-matter"],
+      "skillTags": ["liquid-pressure", "substitution"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q21",
+      "number": 21,
+      "sourcePage": 21,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A fixed mass of gas occupies a rigid container. Its pressure is 100 kPa at 300 K. What is its pressure at 360 K?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "60\\ \\text{kPa}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "83\\ \\text{kPa}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "120\\ \\text{kPa}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "160\\ \\text{kPa}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["physics-matter"],
+      "skillTags": ["gas-laws", "absolute-temperature"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q22",
+      "number": 22,
+      "sourcePage": 22,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A wave has frequency 80 Hz and wavelength 1.5 m. What is its speed?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "120\\ \\text{m s}^{-1}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "81.5\\ \\text{m s}^{-1}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "53\\ \\text{m s}^{-1}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.019\\ \\text{m s}^{-1}" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["physics-waves"],
+      "skillTags": ["wave-equation", "substitution"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q23",
+      "number": 23,
+      "sourcePage": 23,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A light wave passes from air into glass. Which pair of changes occurs?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Its speed and frequency both increase." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Its speed decreases and its frequency increases." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Its speed is unchanged and its frequency decreases." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Its speed decreases and its frequency is unchanged." }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["physics-waves"],
+      "skillTags": ["refraction", "wave-properties"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q24",
+      "number": 24,
+      "sourcePage": 24,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A sound pulse returns as an echo 0.80 s after it is emitted. The speed of sound is 340 m s⁻¹. How far away is the reflecting surface?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "68\\ \\text{m}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "136\\ \\text{m}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "272\\ \\text{m}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "425\\ \\text{m}" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["physics-waves"],
+      "skillTags": ["echo", "round-trip-distance"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q25",
+      "number": 25,
+      "sourcePage": 25,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "For a wave passing through a gap, when is diffraction most noticeable?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "When the gap is much wider than the wavelength." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "When the frequency is zero." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "When the gap width is similar to the wavelength." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "When the wave speed is greatest." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["physics-waves"],
+      "skillTags": ["diffraction", "scale-comparison"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q26",
+      "number": 26,
+      "sourcePage": 26,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A radioactive source has an initial activity of 640 Bq and a half-life of 4.0 hours. What is its activity after 12 hours?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "80\\ \\text{Bq}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "160\\ \\text{Bq}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "320\\ \\text{Bq}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "480\\ \\text{Bq}" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["physics-radioactivity"],
+      "skillTags": ["half-life", "repeated-change"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    },
+    {
+      "id": "esat-physics-full-mock-v1-q27",
+      "number": 27,
+      "sourcePage": 27,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A neutral atom has proton number 15 and mass number 31. How many neutrons does it contain?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "15" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "16" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "31" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "46" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["physics-radioactivity"],
+      "skillTags": ["atomic-structure", "nucleon-number"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-full-mock-v1.json"
+    }
+  ]
+}

@@ -1,0 +1,1929 @@
+{
+  "schemaVersion": 1,
+  "bundleType": "question-import",
+  "id": "tmua-2021-p1-extraction-v1",
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "generatedAt": "2026-07-17T07:00:00.000Z",
+  "generatedBy": "tmua-extraction-cli",
+  "sourceDocumentIds": {
+    "question": "tmua-official-2021-paper-1",
+    "answerKey": "tmua-official-2021-answer-key",
+    "workedSolution": "tmua-official-2021-paper-1-worked-solutions"
+  },
+  "questionCount": 20,
+  "publishableQuestionCount": 0,
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q01",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 1,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "1   Two circles have the same radius.\n\n    The centre of one circle is (–2, 1).\n\n    The centre of the other circle is (3, –2).\n\n    The circles intersect at two distinct points.\n\n    What is the equation of the straight line through the two points at which the circles\n    intersect?\n\n    A 3x − 5y = 4\n\n    B 3x + 5y = −1\n\n    C 5x − 3y = −4\n\n    D 5x − 3y = −1\n\n    E 5x − 3y = 1\n\n    F 5x − 3y = 4\n\n    G 5x + 3y = 1\n\n\n\n\n                                                 \u0016"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Two circles have the same radius.\n\n    The centre of one circle is (–2, 1).\n\n    The centre of the other circle is (3, –2).\n\n    The circles intersect at two distinct points.\n\n    What is the equation of the straight line through the two points at which the circles\n    intersect?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "3x − 5y = 4"
+        },
+        {
+          "label": "B",
+          "rawText": "3x + 5y = −1"
+        },
+        {
+          "label": "C",
+          "rawText": "5x − 3y = −4"
+        },
+        {
+          "label": "D",
+          "rawText": "5x − 3y = −1"
+        },
+        {
+          "label": "E",
+          "rawText": "5x − 3y = 1"
+        },
+        {
+          "label": "F",
+          "rawText": "5x − 3y = 4"
+        },
+        {
+          "label": "G",
+          "rawText": "5x + 3y = 1"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Approach 1: using the equations of the circles\nWe can find the equation by solving the equations of the circles simultaneously.\nThe equations are\n\n                                       (x + 2)2 + (y − 1)2 = r2\n                                       (x − 3)2 + (y + 2)2 = r2\n\n(We do not know the radius, so we have called it r; we are given that both circles have the same\nradius.)\nWe can expand the brackets to give\n\n                                   x2 + 4x + 4 + y 2 − 2y + 1 = r2\n                                   x2 − 6x + 9 + y 2 + 4y + 4 = r2\n\nSubtracting these equations then gives an equation which must be satisfied by any points lying\non both circles:\n                                       10x − 6y − 8 = 0\nwhich simplifies to 5x − 3y = 4, and so the answer is F.\n\nApproach 2: using geometry\nThe circles have the same radius, so by symmetry, the straight line through the two points of\nintersection must be the perpendicular bisector of the line segment joining the two circle centres,\nas shown in this diagram:\n\n\n\n\nIn our case, the two centres are at (−2, 1) and (3, −2), so the midpoint is as ( 21 , − 12 ). The gradient\n                                      −2−1\nof the line joining the centres is 3−(−2)    = − 35 . Therefore the gradient of the perpendicular\nbisector is 53 , and it has equation\n\n                                         y − (− 12 ) = 35 (x − 12 )\n\nMultiplying by 3 gives\n                                          3y + 23 = 5(x − 12 )\nwhich rearranges to give\n                                              5x − 3y = 4\nwhich is option F.\n\n\nVersion 1.0, March 2022                                                                           Page 3"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            3
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q02",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 2,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "2   The curve y = x3 − 6x + 3 has turning points at x = α and x = β, where β > α.\n\n    Find                           \u0002 β\n                                         x3 − 6x + 3 dx\n                                     α\n\n        √\n    A −8 2\n\n    B −10\n             √\n    C −10 + 6 2\n\n    D      0\n                 √\n    E      12 − 8 2\n            √\n    F      6 2\n\n    G      12\n\n\n\n\n                                           \u0017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The curve y = x3 − 6x + 3 has turning points at x = α and x = β, where β > α.\n\n    Find                            β\n                                         x3 − 6x + 3 dx\n                                     α\n\n        √"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "−8 2"
+        },
+        {
+          "label": "B",
+          "rawText": "−10\n             √"
+        },
+        {
+          "label": "C",
+          "rawText": "−10 + 6 2"
+        },
+        {
+          "label": "D",
+          "rawText": "0\n                 √"
+        },
+        {
+          "label": "E",
+          "rawText": "12 − 8 2\n            √"
+        },
+        {
+          "label": "F",
+          "rawText": "6 2"
+        },
+        {
+          "label": "G",
+          "rawText": "12"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We first find the turning points by differentiation. We have\n                              dy\n                                 = 3x2 − 6 = 0 if and only if x2 = 2\n                              dx\n        √         √\nso α = − 2 and β = 2.\nWe can now compute the integral:\n\n                                            \u0003√ 2\n     Z β\n           x3 − 6x + 3 dx =\n                           \u00021 4       2\n                               x − 3x   + 3x  √\n                            4                − 2\n      α\n                                √        √        √ \u0001          √            √         √ \u0001\n                          = 14 ( 2)4 − 3( 2)2 + 3( 2) −    1\n                                                           4 (−    2)4 − 3(− 2)2 + 3(− 2)\n                            √\n                          =6 2\n\nwhere to get the last line, we note that the first terms in each\n                                                              √ bracket√cancel with each other,\nand similarly for the second terms, so we are left with just 3 2 − (−3 2). This is option F.\n\n\n\n\nVersion 1.0, March 2022                                                                 Page 4"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q03",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 3,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "3   An arithmetic progression and a convergent geometric progression each\n                   1\n    have ﬁrst term\n                   2\n                                                                1\n    The sum of the second terms of the two progressions is\n                                                                2\n                                                            1\n    The sum of the third terms of the two progressions is\n                                                            8\n    What is the sum to inﬁnity of the geometric progression?\n\n    A −2\n\n    B −1\n          1\n    C −\n          2\n          1\n    D −\n          3\n          1\n    E\n          3\n          1\n    F\n          2\n    G     1\n\n    H     2\n\n\n\n\n                                           \u0018"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "An arithmetic progression and a convergent geometric progression each\n                   1\n    have ﬁrst term\n                   2\n                                                                1\n    The sum of the second terms of the two progressions is\n                                                                2\n                                                            1\n    The sum of the third terms of the two progressions is\n                                                            8\n    What is the sum to inﬁnity of the geometric progression?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "−2"
+        },
+        {
+          "label": "B",
+          "rawText": "−1\n          1"
+        },
+        {
+          "label": "C",
+          "rawText": "−\n          2\n          1"
+        },
+        {
+          "label": "D",
+          "rawText": "−\n          3\n          1"
+        },
+        {
+          "label": "E",
+          "rawText": "3\n          1"
+        },
+        {
+          "label": "F",
+          "rawText": "2"
+        },
+        {
+          "label": "G",
+          "rawText": "1"
+        },
+        {
+          "label": "H",
+          "rawText": "2"
+        }
+      ],
+      "correctAnswer": "G",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let us write the arithmetic progression as\n                              1    1           1          1\n                              2,   2 + d,      2 + 2d,    2 + 3d,     ...\n\nand the geometric progression as\n                                   1    1       1 2      1 3\n                                   2,   2 r,    2r ,     2r ,   ...\n\nThen the given information about the second terms and third terms can be written algebraically\nas\n                                            1       1    1\n                                            2 + d + 2r = 2\n                                        1        1 2   1\n                                        2 + 2d + 2 r = 8\n\n\nThe first equation simplifies to give d + 12 r = 0, so d = − 12 r. We can then substitute this into\nthe second equation to give\n                                         1     1 2       1\n                                         2 + 2r − r = 8\n\n(We could equivalently have eliminated d by subtracting twice the first equation from the sec-\nond.) Multiplying by 8 and rearranging slightly gives\n\n                                        4r2 − 8r + 3 = 0.\n\nWe can solve this by factorising or using the formula, for example; this gives\n                                     p\n                                 8 ± (−8)2 − 4 × 4 × 3\n                             r=                            = 21 or 23\n                                           2×4\n\nSince the geometric progression is convergent, we must have |r| < 1, so r = 21 and the sum to\ninfinity is\n                                           a       ( 21 )\n                                   S∞ =        =          =1\n                                         1−r      1 − 21\nso the answer is option G.\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 5"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q04",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 4,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "4   Find the minimum value of the function\n\n\n                                     22x − 2x+3 + 4\n\n    A −16\n\n    B −12\n\n    C −8\n\n    D    0\n\n    E    4\n\n    F    20\n\n\n\n\n                                             \u0019"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the minimum value of the function\n\n\n                                     22x − 2x+3 + 4"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "−16"
+        },
+        {
+          "label": "B",
+          "rawText": "−12"
+        },
+        {
+          "label": "C",
+          "rawText": "−8"
+        },
+        {
+          "label": "D",
+          "rawText": "0"
+        },
+        {
+          "label": "E",
+          "rawText": "4"
+        },
+        {
+          "label": "F",
+          "rawText": "20"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "This function is a quadratic in u = 2x ; we can rewrite it as\n\n                                          u2 − 23 u + 4\n\nor\n                                          u2 − 8u + 4.\nWe can complete the square to express this as\n\n                               (u − 4)2 − 42 + 4 = (u − 4)2 − 12.\n\nThe minimum therefore occurs when u = 4, at which point the function value is 12.\nWe must also check that this value can actually be attained: u = 4 if and only if 2x = 4, which\nhappens when x = 2, so this minimum is attained, and the correct answer is B.\nThe minimum can also be found using calculus: differentiating u2 − 8u + 4 gives 2u − 8; this is\nzero when u = 4, at which point the function value is 42 − 8 × 4 + 4 = −12; this is a minimum\nas the function is a quadratic with positive u2 coefficient.\n\n\n\n\nVersion 1.0, March 2022                                                                 Page 6"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q05",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 5,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "5   The function f is such that\n\n                                  \u0003\n                                      f(m)f(n) if mn is a multiple of 3\n                      f(mn) =\n                                      mn       if mn is not a multiple of 3\n\n    for all positive integers m and n.\n\n    Given that f(9) + f(16) − f(24) = 0, what is the value of f(3)?\n\n      8\n    A\n      3\n       √\n    B 2 2\n\n    C 3\n      16\n    D\n       5\n       √\n    E 3 2\n\n    F 4\n\n\n\n\n                                                 \u001a"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The function f is such that\n\n                                  \n                                      f(m)f(n) if mn is a multiple of 3\n                      f(mn) =\n                                      mn       if mn is not a multiple of 3\n\n    for all positive integers m and n.\n\n    Given that f(9) + f(16) − f(24) = 0, what is the value of f(3)?\n\n      8"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "3\n       √"
+        },
+        {
+          "label": "B",
+          "rawText": "2 2"
+        },
+        {
+          "label": "C",
+          "rawText": "3\n      16"
+        },
+        {
+          "label": "D",
+          "rawText": "5\n       √"
+        },
+        {
+          "label": "E",
+          "rawText": "3 2"
+        },
+        {
+          "label": "F",
+          "rawText": "4"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can rewrite f(9), f(16) and f(24) using the information given about the function:\n\n                          f(9) = f(3 × 3)\n                              = f(3)f(3)         as 9 is a multiple of 3\n                       f(16) = f(16 × 1)\n                              = 16               as 16 is not a multiple of 3\n                       f(24) = f(3 × 8)\n                              = f(3)f(8)         as 24 is a multiple of 3\n                              = f(3)f(8 × 1)\n                              = f(3) × 8         as 8 is not a multiple of 3\n                              = 8f(3)\n\nSubstituting these into the given equation then gives\n                                         \u00012\n                                     f(3) + 16 − 8f(3) = 0\n\nwhich is a quadratic in f(3); we can factorise it to give\n                                                       \u00012\n                                            f(3) − 4        =0\n\nwhich has one (repeated) solution: f(3) = 4. Hence the answer is option F.\n\n\n\n\nVersion 1.0, March 2022                                                                Page 7"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q06",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 6,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "6   The function f is given by\n\n                                               cos x + 3\n                                 f(x) =\n                                          7 + 5 cos x − sin2 x\n\n    Find the positive diﬀerence between the maximum and the minimum values of f(x).\n\n    A 0\n        1\n    B\n        3\n        1\n    C\n        2\n        2\n    D\n        3\n    E 1\n\n    F 2\n\n\n\n\n                                             \u001b"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The function f is given by\n\n                                               cos x + 3\n                                 f(x) =\n                                          7 + 5 cos x − sin2 x\n\n    Find the positive diﬀerence between the maximum and the minimum values of f(x)."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0\n        1"
+        },
+        {
+          "label": "B",
+          "rawText": "3\n        1"
+        },
+        {
+          "label": "C",
+          "rawText": "2\n        2"
+        },
+        {
+          "label": "D",
+          "rawText": "3"
+        },
+        {
+          "label": "E",
+          "rawText": "1"
+        },
+        {
+          "label": "F",
+          "rawText": "2"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "This is almost a function in cos x except for the sin2 x term, so we rewrite this in terms of cos x:\n                                      cos x + 3                cos x + 3\n                     f(x) =                         2\n                                                        =\n                              7 + 5 cos x − (1 − cos x)   6 + 5 cos x + cos2 x\n\nWe can then factorise the denominator to give\n                                                   cos x + 3\n                                   f(x) =\n                                            (cos x + 2)(cos x + 3)\n\nand the cos x + 3 factor cancels. (We should also check that this can never be zero; if it were,\nthe function would be undefined at some points.) Therefore we can write\n                                                       1\n                                          f(x) =\n                                                   cos x + 2\n\nThe maximum value of this function occurs where cos x = −1, giving f(x) = 1, and the minimum\nvalue occurs where cos x = +1, giving f(x) = 13 . The difference between the minimum and\nmaximum values is therefore 1 − 13 = 23 , which is option D.\n\n\n\n\nVersion 1.0, March 2022                                                                      Page 8"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            8
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q07",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 7,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "7   The function f is such that f(0) = 0, and xf(x) > 0 for all non-zero values of x.\n\n    It is given that\n\n                                        \u0002 2\n                                              f(x) dx = 4\n                                         −2\n\n\n    and\n\n                                       \u0002 2\n                                              |f(x)| dx = 8\n                                        −2\n\n\n    Evaluate\n\n                                         \u0002 0\n                                                  f(|x|) dx\n                                             −2\n\n\n    A −8\n\n    B −6\n\n    C −4\n\n    D −2\n\n    E     2\n\n    F     4\n\n    G     6\n\n    H     8\n\n\n\n\n                                                  \u001c"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The function f is such that f(0) = 0, and xf(x) > 0 for all non-zero values of x.\n\n    It is given that\n\n                                         2\n                                              f(x) dx = 4\n                                         −2\n\n\n    and\n\n                                        2\n                                              |f(x)| dx = 8\n                                        −2\n\n\n    Evaluate\n\n                                          0\n                                                  f(|x|) dx\n                                             −2"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "−8"
+        },
+        {
+          "label": "B",
+          "rawText": "−6"
+        },
+        {
+          "label": "C",
+          "rawText": "−4"
+        },
+        {
+          "label": "D",
+          "rawText": "−2"
+        },
+        {
+          "label": "E",
+          "rawText": "2"
+        },
+        {
+          "label": "F",
+          "rawText": "4"
+        },
+        {
+          "label": "G",
+          "rawText": "6"
+        },
+        {
+          "label": "H",
+          "rawText": "8"
+        }
+      ],
+      "correctAnswer": "G",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let us start with the condition xf(x) > 0 for all non-zero values of x. When x > 0, this\nmeans that f(x) > 0, as we can divide the inequality by x and the direction of the inequality is\nunchanged. On the other hand, when x < 0, this gives f(x) < 0, since dividing by x now changes\nthe direction of the inequality. In summary:\n\n                                             f(x) > 0 when x > 0\n                                             f(x) = 0 when x = 0\n                                             f(x) < 0 when x < 0\n\nNow let us turn to the integrals. The final question asks about an integral from −2 to 0, so we\nwould do well to split the two given integrals into the ranges −2 to 0 and 0 to 2:\n\n\n                               Z 2                 Z 0                    Z 2\n                                     f(x) dx =           f(x) dx +                  f(x) dx\n                                −2                  −2                      0\n                                               =4\n\n                            Z 2                    Z 0                     Z 2\n                                    |f(x)| dx =          |f(x)| dx +                    |f(x)| dx\n                               −2                   −2                          0\n                                                   Z 0                      Z 2\n                                               =         −f(x) dx +                      f(x) dx\n                                                    −2                              0\n                                                     Z 0                        Z 2\n                                               =−             f(x) dx +                  f(x) dx\n                                                         −2                         0\n                                               =8\n\nTherefore\n                                         Z 0                  Z 2\n                                               f(x) dx +               f(x) dx = 4\n                                          −2                   0\n                                         Z 0                  Z 2\n                                     −         f(x) dx +               f(x) dx = 8\n                                          −2                   0\n\n                                                                   R0\nIf we now add these two simultaneous equations together, the −2 f(x) dx terms cancel and we\n                R2                  R2                   R0\nare left with 2 0 f(x) dx = 12, so 0 f(x) dx = 6 and −2 f(x) dx = −2.\n                                   R0\nThe question asks us to evaluate −2 f(|x|) dx. Thinking about graph transformations, the graph\nof y = f(x) is transformed into the graph of y = f(|x|) by removing the left half of the graph\n(left of the y-axis) and reflecting the right half of the graph in the y-axis (the line x = 0). The\nintegral of this transformed function from −2 to 0 is therefore equal to the integral of the original\nfunction from 0 to 2, thus         Z     0         Z               2\n                                             f(|x|) dx =               f(x) dx = 6\n                                       −2                      0\nand the correct option is G.\n\n\n\n\nVersion 1.0, March 2022                                                                             Page 9"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q08",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 8,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "8   The line y = 2x + 3 meets the curve y = x2 + bx + c at exactly one point.\n\n    The line y = 4x − 2 also meets the curve y = x2 + bx + c at exactly one point.\n\n    What is the value of b − c ?\n\n    A −9\n\n    B −5.5\n\n    C −1\n\n    D    5\n\n    E    6\n\n    F    14\n\n\n\n\n                                           \u0014\u0013"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The line y = 2x + 3 meets the curve y = x2 + bx + c at exactly one point.\n\n    The line y = 4x − 2 also meets the curve y = x2 + bx + c at exactly one point.\n\n    What is the value of b − c ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "−9"
+        },
+        {
+          "label": "B",
+          "rawText": "−5.5"
+        },
+        {
+          "label": "C",
+          "rawText": "−1"
+        },
+        {
+          "label": "D",
+          "rawText": "5"
+        },
+        {
+          "label": "E",
+          "rawText": "6"
+        },
+        {
+          "label": "F",
+          "rawText": "14"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "A straight line meets a quadratic at exactly one point if and only if there is a repeated root to\nthe simultaneous equations. Substituting for y in the first pair gives\n\n                                      2x + 3 = x2 + bx + c.\n\nThis rearranges to x2 + (b − 2)x + (c − 3) = 0. As this has a repeated root, its discriminant must\nbe zero, so\n                                      (b − 2)2 − 4(c − 3) = 0.\nThe second line likewise gives (b − 4)2 − 4(c + 2) = 0. Expanding and simplifying these two\nequations gives the following simultaneous equations for b and c:\n\n                                       b2 − 4b − 4c = −16\n                                       b2 − 8b − 4c = −8\n\nSubtracting these two equations gives 4b = −8 so b = −2 and hence c = 7. Therefore b−c = −9,\nwhich is option A.\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 10"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q09",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 9,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "9   Find the area enclosed by the graph of\n\n                                       |x| + |y| = 1\n\n        1\n    A\n        2\n    B 1\n\n    C 2\n\n    D 4\n      1√\n    E     2\n      2\n      √\n    F   2\n       √\n    G 2 2\n\n\n\n\n                                             \u0014\u0014"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the area enclosed by the graph of\n\n                                       |x| + |y| = 1\n\n        1"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "2"
+        },
+        {
+          "label": "B",
+          "rawText": "1"
+        },
+        {
+          "label": "C",
+          "rawText": "2"
+        },
+        {
+          "label": "D",
+          "rawText": "4\n      1√"
+        },
+        {
+          "label": "E",
+          "rawText": "2\n      2\n      √"
+        },
+        {
+          "label": "F",
+          "rawText": "2\n       √"
+        },
+        {
+          "label": "G",
+          "rawText": "2 2"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We first need to work out what the graph looks like. There are four cases for x and y depending\non whether there are positive or negative. We list them in a table:\n\n              quadrant    x   y   |x|   |y|    equation    rearranged to y = · · ·\n                1st       +   +     x     y    x+y =1           y = −x + 1\n                2nd       −   +   −x      y   −x + y = 1        y = x+1\n                3rd       −   −   −x    −y    −x − y = 1        y = −x − 1\n                4th       +   −     x   −y     x−y =1           y = x−1\n\nWe therefore have (at most) four lines making up this graph, and we can sketch these. We need\nto recall that we only draw the part of each line that appears within the relevant quadrant; for\nexample, y = x + 1 only appears in the 2nd quadrant.\n\n                                               y\n\n                                               1\n\n\n                                                             x\n                                   −1                  1\n\n\n                                               −1\n\n\n\nThis shape is a square. We can think of it as made up of 4 right angled triangles, each with\nbase and height equal to 1, so each has area 12 × 1 × 1 = 12 , and hence the square has area 2.\nThus the correct option is C.\n\n\n\n\nVersion 1.0, March 2022                                                                 Page 11"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q10",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 10,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "10   Use the trapezium rule with 3 strips to estimate\n                                        \u0002 2\n                                            2 log10 x dx\n                                          1\n                                          2\n\n\n               √\n                  6\n     A log10\n                 2\n\n               3\n     B log10\n               2\n\n               9\n     C log10\n               4\n\n     D log10 3\n\n               81\n     E log10\n               16\n\n               √\n                   23\n     F log10\n                   2\n\n\n\n\n                                              \u0014\u0015"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Use the trapezium rule with 3 strips to estimate\n                                         2\n                                            2 log10 x dx\n                                          1\n                                          2\n\n\n               √\n                  6"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "log10\n                 2\n\n               3"
+        },
+        {
+          "label": "B",
+          "rawText": "log10\n               2\n\n               9"
+        },
+        {
+          "label": "C",
+          "rawText": "log10\n               4"
+        },
+        {
+          "label": "D",
+          "rawText": "log10 3\n\n               81"
+        },
+        {
+          "label": "E",
+          "rawText": "log10\n               16\n\n               √\n                   23"
+        },
+        {
+          "label": "F",
+          "rawText": "log10\n                   2"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The interval has width 2 − 12 = 32 , so each strip will have width 21 . The boundaries of the\nthree strips will be at 12 , 1, 32 and 2. The trapezium rule then gives the estimate (writing\nf(x) = 2 log10 x):\n                         Z 2\n                              f(x) dx ≈ 21 × 21 f( 12 ) + 2f(1) + 2f( 23 ) + f(2)\n                                                                                  \u0001\n                           1\n                           2\n\n\nWe can now work out the individual function values:\n\n                               f( 12 ) = 2 log10 12 = −2 log10 2\n                               f(1) = 2 log10 1 = 0\n                               f( 32 ) = 2 log10 32 = 2 log10 3 − 2 log10 2\n                               f(2) = 2 log10 2\n\nTherefore we get the approximation\n          Z 2\n              f(x) dx ≈ 12 × 12 −2 log10 2 + 2 × 0 + 2(2 log10 3 − 2 log10 2) + 2 log10 2\n                                                                                          \u0001\n             1\n             2\n\n                       = 41 (4 log10 3 − 4 log10 2)\n                       = log10 3 − log10 2\n                       = log10 32\n\nwhich is option B.\n\n\n\n\nVersion 1.0, March 2022                                                                       Page 12"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q11",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 11,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "11   The function f is given by\n\n                                              1\n                                     f(x) = x 7 (x2 − x + 1)\n\n\n     Find the fraction of the interval 0 < x < 1 for which f(x) is decreasing.\n\n          2\n     A\n         15\n\n         1\n     B\n         5\n\n         1\n     C\n         3\n\n         1\n     D\n         2\n\n         2\n     E\n         3\n\n         4\n     F\n         5\n\n         13\n     G\n         15\n\n\n\n\n                                             \u0014\u0016"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The function f is given by\n\n                                              1\n                                     f(x) = x 7 (x2 − x + 1)\n\n\n     Find the fraction of the interval 0 < x < 1 for which f(x) is decreasing.\n\n          2"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "15\n\n         1"
+        },
+        {
+          "label": "B",
+          "rawText": "5\n\n         1"
+        },
+        {
+          "label": "C",
+          "rawText": "3\n\n         1"
+        },
+        {
+          "label": "D",
+          "rawText": "2\n\n         2"
+        },
+        {
+          "label": "E",
+          "rawText": "3\n\n         4"
+        },
+        {
+          "label": "F",
+          "rawText": "5\n\n         13"
+        },
+        {
+          "label": "G",
+          "rawText": "15"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The function is decreasing when f ′ (x) < 0 (and possibly also at points where f ′ (x) = 0). We\nhave\n                                  f(x) = x15/7 − x8/7 + x1/7\nso\n\n                                f ′ (x) = 15\n                                          7 x\n                                              8/7\n                                                  − 87 x1/7 + 17 x−6/7\n                                      = 17 x−6/7 (15x2 − 8x + 1)\n                                      = 71 x−6/7 (5x − 1)(3x − 1)\n\nThis is negative when (5x − 1)(3x − 1) < 0 (note that we are only considering the region x > 0\nhere).\nWe note that (5x − 1)(3x − 1) = 0 exactly when x = 15 or x = 13 and is therefore negative when\n1       1                                                  1       1\n5 < x < 3 . Therefore the function f(x) is decreasing when 5 < x < 3 (and possibly also at the\nendpoints of this interval).\nThus the fraction of the interval 0 < x < 1 for which f(x) is decreasing is 13 − 15 = 15\n                                                                                      2\n                                                                                         , which is\noption A.\n\n\n\n\nVersion 1.0, March 2022                                                                    Page 13"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q12",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 12,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "12   The minimum value of the function x4 − p2 x2 is −9\n\n     p is a real number.\n\n     Find the minimum value of the function x2 − px + 6\n\n     A −3\n           √\n          3 2\n     B 6−\n           2\n         3\n     C\n         2\n     D 3\n         9\n     E\n         2\n           √\n          3 2\n     F 6+\n           2\n\n\n\n\n                                          \u0014\u0017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The minimum value of the function x4 − p2 x2 is −9\n\n     p is a real number.\n\n     Find the minimum value of the function x2 − px + 6"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "−3\n           √\n          3 2"
+        },
+        {
+          "label": "B",
+          "rawText": "6−\n           2\n         3"
+        },
+        {
+          "label": "C",
+          "rawText": "2"
+        },
+        {
+          "label": "D",
+          "rawText": "3\n         9"
+        },
+        {
+          "label": "E",
+          "rawText": "2\n           √\n          3 2"
+        },
+        {
+          "label": "F",
+          "rawText": "6+\n           2"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can complete the square with the first function: we have\n\n                                 x4 − p2 x2 = (x2 − 12 p2 )2 − 41 p4\n\nThis attains its minimum value when the parenthesised expression is 0, that is when x = ± √12 p.\nAt that point, x4 − p2 x2 = − 41 p4 = −9, so p4 = 36. Since p is a real number, we must have\np2 = 6 (rather than −6).\nWe now consider x2 − px + 6. We can again complete the square to get\n\n                              x2 − px + 6 = (x − 12 p)2 − 41 p2 + 6.\n\nThe minimum of this function again occurs when the parenthesised expression is 0, that is when\nx = 12 p. At this point,\n\n                          x2 − px + 6 = − 41 p2 + 6 = − 14 × 6 + 6 = 92\n\nand so the answer is option E.\nAlternatively, we could have used calculus instead of completing the square to find the minima;\nthe results would be the same.\n\n\n\n\nVersion 1.0, March 2022                                                                 Page 14"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            14
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            14
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q13",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 13,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "13   The function f is such that, for every integer n\n\n                                     \u0002 n+1\n                                             f(x) dx = n + 1\n                                       n\n\n\n     Evaluate\n\n                                       8 \u0005\u0002 r\n                                       \u0004                     \u0006\n                                                   f(x) dx\n                                       r=1     0\n\n\n\n     A 36\n\n     B 84\n\n     C 120\n\n     D 165\n\n     E 204\n\n     F 288\n\n\n\n\n                                              \u0014\u0018"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The function f is such that, for every integer n\n\n                                      n+1\n                                             f(x) dx = n + 1\n                                       n\n\n\n     Evaluate\n\n                                       8 B r\n                                       A                     C\n                                                   f(x) dx\n                                       r=1     0"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "36"
+        },
+        {
+          "label": "B",
+          "rawText": "84"
+        },
+        {
+          "label": "C",
+          "rawText": "120"
+        },
+        {
+          "label": "D",
+          "rawText": "165"
+        },
+        {
+          "label": "E",
+          "rawText": "204"
+        },
+        {
+          "label": "F",
+          "rawText": "288"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let us first work out the value of the integral in the summation (the summand). We have\n                     Z r               Z 1               Z 2                       Z r\n                           f(x) dx =         f(x) dx +         f(x) dx + · · · +          f(x) dx\n                      0                 0                 1                         r−1\n                                  = (0 + 1) + (1 + 1) + · · · + ((r − 1) + 1)\n                                  = 1 + 2 + ··· + r\n                                  = 12 r(r + 1).\n\nWe are thus being asked to evaluate\n                                                  8\n                                                  X\n                                                        1\n                                                        2 r(r + 1).\n                                                  r=1\n\nThere are algebraic methods to do this (as mentioned below), but they are not on the specifica-\ntion. The most straightforward approach here is to just perform the calculation manually:\n                     8\n                     X\n                           1\n                           2 r(r + 1) = 1 + 3 + 6 + 10 + 15 + 21 + 28 + 36 = 120,\n                     r=1\n\nwhich is option C.\n\nIn general, it turns out that\n                                   n\n                                   X\n                                            1            1\n                                            2 r(r + 1) = 6 n(n + 1)(n + 2).\n                                   r=1\n\nThe expressions r(r + 1) and n(n + 1)(n + 2) are known as rising powers, and can be written as\nr2 and n3 respectively. On multiplying by 2, the formula then becomes\n                                                  n\n                                                  X\n                                                        r2 = 13 n3 ,\n                                                  r=1\n                                                Rx\nwhich looks very similar to the calculus formula 0 t2 dt = 31 x3 . There is a much longer discussion\nof sums such as this in Graham, Knuth and Patashnik, Concrete Mathematics.\n\n\n\n\nVersion 1.0, March 2022                                                                             Page 15"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            15
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            15
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q14",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 14,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "14   This question uses radians.\n\n     Find the number of distinct values of x that satisfy the equation\n\n\n                               (x + 1)(3 − x) = 2(1 − cos(πx))\n\n     A 2\n\n     B 3\n\n     C 4\n\n     D 5\n\n     E 6\n\n     F 7\n\n\n\n\n                                            \u0014\u0019"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "This question uses radians.\n\n     Find the number of distinct values of x that satisfy the equation\n\n\n                               (x + 1)(3 − x) = 2(1 − cos(πx))"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "2"
+        },
+        {
+          "label": "B",
+          "rawText": "3"
+        },
+        {
+          "label": "C",
+          "rawText": "4"
+        },
+        {
+          "label": "D",
+          "rawText": "5"
+        },
+        {
+          "label": "E",
+          "rawText": "6"
+        },
+        {
+          "label": "F",
+          "rawText": "7"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We do not know a method of solving equations involving both trigonometric functions (on the\nright-hand side) and quadratics (on the left-hand side), but the question only asks us to count\nthe number of solutions, not to solve the equation. So we will instead sketch the graphs of the\nleft-hand and right-hand sides and see how many times they intersect.\nThe graph of y = (x + 1)(3 − x) is a quadratic with roots at x = −1 and x = 3. When expanded,\nit becomes y = −x2 + · · · , so it has a maximum point midway between the roots, at x = 1,\ny = 4.\n\n\n                                     4 y\n                                     2\n                                                                                      x\n      −4      −3      −2      −1     0         1       2       3        4       5         6\n                                    −2\n                                    −4\n\n\nThe graph of y = 2(1 − cos(πx)) is a transformed cosine graph. y = cos(πx) has a period of 2:\nit is the graph of y = cos x scaled by a factor of 1/π in the x-direction, and looks like this:\n\n                                         y\n                                     1\n\n                                                                                      x\n      −4      −3      −2      −1     0         1       2       3        4       5         6\n\n                                    −1\n\n\nWe can then work out the graph of y = 1 − cos(πx) by calculating the values of y at a few key\npoints, or by observing that the graph of y = − cos(πx) is the reflection of y = cos(πx) in the\nx-axis, and then y = 1 − cos(πx) is this translated by 1 unit in the y-direction. The result is:\n\n\n                                     2 y\n\n\n                                     1\n\n                                                                                      x\n      −4      −3      −2      −1     0         1       2       3        4       5         6\n\n\nFinally, the graph of y = 2(1 − cos(πx)) is the previous graph scaled by a factor of 2 in the\ny-direction:\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 16\n\f\nTest of Mathematics for University Admission, 2021 Paper 1 Solutions\n\n\n                                       4 y\n\n\n                                       2\n\n                                                                                          x\n      −4       −3      −2       −1     0         1        2       3        4       5          6\n\n\nWe can now superimpose the graph of y = (x + 1)(3 − x) on top of y = 2(1 − cos(πx)). We see\nthat the trigonometric graph is never below the x-axis, so the only possible points of intersection\nare between x = −1 and x = 3. There is one point of intersection at (1, 4), one between x = −1\nand x = 0 and one between x = 2 and x = 3, so there are three points of intersection in total.\n\n                                       4 y\n\n\n                                       2\n\n                                                                                          x\n      −4       −3      −2       −1     0         1        2       3        4       5          6\n\n\nThus the correct answer is option B.\n\nYou might wonder about a subtle point: we see that the two graphs touch each other at (1, 4),\nbut how do we know that the trigonometric graph is ‘sharper’ there, so does not also cross the\nquadratic graph close to x = 1, something like this:\n\n\n\n\nThis is a plausible possibility, but it turns out not to be the case for reasons that are beyond the\nscope of the specification.\n\n\n\n\nVersion 1.0, March 2022                                                                       Page 17"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            16
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            16,
+            17
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q15",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 15,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "15   The diagram shows the graph of y = f(x).\n\n      y\n\n\n     1\n\n\n\n     0                                                                x\n          0          1       2          3                 4\n\n     The graph consists of alternating straight-line segments of gradient 1 and −1 and\n     continues in this way for all values of x.\n\n     The function g is deﬁned as\n\n\n                                                 \u0004\n                                                 10\n                                                                  \b\n                                     g(x) =            f 2r−1 x\n                                                 r=1\n\n\n     Find the value of\n\n                                            \u0002 1\n                                                  g(x) dx\n                                             0\n\n\n              1023\n     A\n              1024\n              1023\n     B\n               512\n     C 5\n\n     D 10\n              55\n     E\n               2\n     F 55\n\n\n\n\n                                                 \u0014\u001a"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The diagram shows the graph of y = f(x).\n\n      y\n\n\n     1\n\n\n\n     0                                                                x\n          0          1       2          3                 4\n\n     The graph consists of alternating straight-line segments of gradient 1 and −1 and\n     continues in this way for all values of x.\n\n     The function g is deﬁned as\n\n\n                                                 A\n                                                 10\n                                                                  E\n                                     g(x) =            f 2r−1 x\n                                                 r=1\n\n\n     Find the value of\n\n                                             1\n                                                  g(x) dx\n                                             0\n\n\n              1023"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "1024\n              1023"
+        },
+        {
+          "label": "B",
+          "rawText": "512"
+        },
+        {
+          "label": "C",
+          "rawText": "5"
+        },
+        {
+          "label": "D",
+          "rawText": "10\n              55"
+        },
+        {
+          "label": "E",
+          "rawText": "2"
+        },
+        {
+          "label": "F",
+          "rawText": "55"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can write the integral out in full by substituting the value of g(x):\n         Z 1                  10\n                           Z 1X\n               g(x) dx =            f(2r−1 x) dx\n          0                 0 r=1\n                           Z 1\n                      =     f(20 x) + f(21 x) + f(22 x) + · · · + f(29 x) dx\n                            0\n                        Z 1              Z 1                Z 1                      Z 1\n                               0                 1                  2\n                      =     f(2 x) dx +       f(2 x) dx +        f(2 x) dx + · · · +     f(29 x) dx\n                            0                  0             0                       0\n\n\nSo we can calculate the integral of g(x) if we can calculate the integral of each f(2r−1 x).\n     R1               R1\nNow 0 f(20 x) dx = 0 f(x) dx is just the area under the graph of y = f(x) between x = 0 and\nx = 1, which is 21 (it is a right angled triangle with base and height both 1).\n             R1\nTo work out 0 f(2x) dx, we consider the graph of y = f(2x). This is the graph of y = f(x) scaled\nby a factor of 1/2 in the x-direction, so looks like this:\n\n                                                   y\n                                           1\n\n\n                                                                  x\n                                                   0          1\n\nThe area between x = 0 and x = 1 is again 21 .\nThe graph of y = f(22 x) between x = 0 and x = 1 consists of two triangles:\n\n                                                   y\n                                           1\n\n\n                                                                  x\n                                                   0          1\n\nHelpfully, the area under this graph is still 12 : this is perhaps easiest to see by noticing that we\ncan draw a rectangle (actually a square) around the graph:\n\n                                                   y\n                                           1\n\n\n                                                                  x\n                                                   0          1\n\nIn each rectangular slice, half of the area is below the graph and half is above, so the total area\nbelow the graph is 12 .\nThis same reasoning will apply for each of the functions f(2r−1 x), and so the total area is\n10 × 21 = 5, which is option C.\n\n\n\nVersion 1.0, March 2022                                                                               Page 18"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            17
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            18
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q16",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 16,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "16   Consider the expansion of\n                                         (a + bx)n\n\n     The third term, in ascending powers of x, is 105x2\n\n     The fourth term, in ascending powers of x, is 210x3\n\n     The fourth term, in descending powers of x, is 210x3\n                         a 2\n     Find the value of\n                         b\n\n         1\n     A\n         4\n\n         4\n     B\n         9\n\n         25\n     C\n         36\n\n         5\n     D\n         6\n\n     E 1\n\n\n\n\n                                           \u0014\u001b"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the expansion of\n                                         (a + bx)n\n\n     The third term, in ascending powers of x, is 105x2\n\n     The fourth term, in ascending powers of x, is 210x3\n\n     The fourth term, in descending powers of x, is 210x3\n                         a 2\n     Find the value of\n                         b\n\n         1"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "4\n\n         4"
+        },
+        {
+          "label": "B",
+          "rawText": "9\n\n         25"
+        },
+        {
+          "label": "C",
+          "rawText": "36\n\n         5"
+        },
+        {
+          "label": "D",
+          "rawText": "6"
+        },
+        {
+          "label": "E",
+          "rawText": "1"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can expand the binomial expression in ascending powers of x using the binomial theorem:\n                            \u0012 \u0013            \u0012 \u0013             \u0012 \u0013\n                   n   n      n n−1          n n−2 2 2      n n−3 3 3\n           (a + bx) = a +        a    bx +      a    b x +     a    b x + ···+\n                              1              2              3\n                       \u0012        \u0013\n                            n\n                                  abn−1 xn−1 + bn xn\n                         n−1\n\n                                           n n−2 2 2\n                                                   b x = 105x2 .\n                                                \u0001\nThe third term in ascending powers of x is  2 a\nThe fourth term in ascending powers of x is n3 an−3 b3 x3 = 210x3 .\n                                              \u0001\n\n                                                n\n                                                  \u0001 3 n−3 n−3\nThe fourth term in descending powers of x is n−3   a b    x    = 210x3 .\nFrom the last statement, we see that n = 6. Then the first two statements give:\n                                       \u0012 \u0013\n                                        6 4 2\n                                            a b = 105\n                                        2\n                                       \u0012 \u0013\n                                        6 3 3\n                                            a b = 210\n                                        3\n\n      6                 6\n         \u0001               \u0001\nNow   2      = 15 and   3    = 20, so\n\n                                             a4 b2 = 7\n                                                     21\n                                             a3 b3 =\n                                                      2\n\nDividing these two equations gives\n                                               a   2\n                                                 =\n                                               b   3\n             a 2\n                 = 49 , which is option B.\n               \u0001\nand so       b\n\n\n\n\nVersion 1.0, March 2022                                                            Page 19"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            18
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            19
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q17",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 17,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "17   Which of the following sketches shows the graph of\n\n                                                         1\n                                      sin(x2 + y 2 ) =\n                                                         2\n\n     where x2 + y 2 ≤ 8π ?\n\n                      y                                          y\n     A                                                       B\n\n\n\n\n                                        x                            x\n\n\n\n\n                      y                                          y\n     C                                                       D\n\n\n\n\n                                       x                             x\n\n\n\n\n                      y\n     E\n\n\n\n\n                                       x\n\n\n\n\n                                            \u0014\u001c"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Which of the following sketches shows the graph of\n\n                                                         1\n                                      sin(x2 + y 2 ) =\n                                                         2\n\n     where x2 + y 2 ≤ 8π ?\n\n                      y                                          y\n     A                                                       B\n\n\n\n\n                                        x                            x\n\n\n\n\n                      y                                          y\n     C                                                       D\n\n\n\n\n                                       x                             x\n\n\n\n\n                      y\n     E\n\n\n\n\n                                       x"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        },
+        {
+          "label": "F",
+          "rawText": "[visual option F; transcription required]"
+        },
+        {
+          "label": "G",
+          "rawText": "[visual option G; transcription required]"
+        },
+        {
+          "label": "H",
+          "rawText": "[visual option H; transcription required]"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We note that x2 + y 2 ≥ 0 for all x and y, so we need only consider non-negative values of x2 + y 2\nthat satisfy this equation. Those with x2 + y 2 ≤ 8π are\n                                       π 5π 13π 17π 25π 29π 37π 41π\n                          x2 + y 2 =    , ,    ,   ,   ,   ,   ,\n                                       6 6   6   6   6   6   6   6\n(These were obtained by noting that the solutions with x2 + y 2 ≤ 2π are π6 and 5π 6 , and then\n                          12π\nadding multiples of 2π = 6 to these.)\nConsider the first value; x2 + y 2 = π6 ; this is a circle with radius π/6. Likewise, the other\n                                                                      p\n                    p           p                                        p\ncircles have radii 5π/6, . . . , 41π/6. Taking out a common factor of π/6, we see that the\ncircles have radii:\n                                       √ √ √ √ √ √ √\n                         r\n                           π\n                       ρ     , ρ = 1, 5, 13, 17, 25, 29, 37, 41\n                           6\n\nWe can approximate these square roots to get an idea of how they grow:\n\n                                       ρ ≈ 1, 2, 3.5, 4, 5, 5.5, 6, 6.5\n\nSo the smallest three circles are quite far apart, but after that, they get closer and closer, which\nis graph A. (We can be more precise than this, and observe that the circles appear in close pairs\nwith larger gaps between the pairs, but that is not needed to answer this question.)\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 20"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            19
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            20
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required",
+          "option-count-review"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q18",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 18,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "18   The curve with equation\n                                       x = y 2 − 6y + 11\n\n     is rotated 90o clockwise about the point P to give the curve C.\n\n     P has x-coordinate −2 and y-coordinate 3.\n\n     What is the equation of C ?\n\n     A y = −x2 − 4x − 3\n\n     B y = −x2 − 4x − 5\n\n     C y = −x2 − 6x − 7\n\n     D y = −x2 − 6x − 11\n\n     E y=     x2 − 4x + 5\n\n     F y=     x2 + 4x + 3\n\n     G y=     x2 − 6x + 11\n\n     H y=     x2 + 6x + 7\n\n\n\n\n                                            \u0015\u0013"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The curve with equation\n                                       x = y 2 − 6y + 11\n\n     is rotated 90o clockwise about the point P to give the curve C.\n\n     P has x-coordinate −2 and y-coordinate 3.\n\n     What is the equation of C ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "y = −x2 − 4x − 3"
+        },
+        {
+          "label": "B",
+          "rawText": "y = −x2 − 4x − 5"
+        },
+        {
+          "label": "C",
+          "rawText": "y = −x2 − 6x − 7"
+        },
+        {
+          "label": "D",
+          "rawText": "y = −x2 − 6x − 11"
+        },
+        {
+          "label": "E",
+          "rawText": "y=     x2 − 4x + 5"
+        },
+        {
+          "label": "F",
+          "rawText": "y=     x2 + 4x + 3"
+        },
+        {
+          "label": "G",
+          "rawText": "y=     x2 − 6x + 11"
+        },
+        {
+          "label": "H",
+          "rawText": "y=     x2 + 6x + 7"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We should start by sketching the original curve. This is a quadratic in y. It does not factorise,\nbut we can complete the square:\n                                       x = (y − 3)2 + 2\nIt therefore has its vertex at y = 3, x = 2, and x ≥ 2 for all values of y. We can then sketch it:\n\n                                          y\n                                      6\n\n\n                                      4\n                                P\n                                                       (2, 3)\n                                      2\n\n                                                                              x\n                                −2        0        2            4         6\n\n\nThe vertex of the parabola is 4 units to the right of P .\nNow rotating this by 90◦ clockwise about P moves the vertex to 4 units below P , that is (−2, −1),\ngiving the following:\n\n                                               y\n                                           6\n\n\n                                           4\n                                     P\n                                                             (2, 3)\n                                           2\n\n                                                                                  x\n                             −4      −2        0         2            4       6\n\n                                          −2\n\n\n                                          −4\n\n\n\nThis curve then has equation y = −(x + 2)2 − 1, which we can expand to y = −x2 − 4x − 5\ngiving option B.\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 21"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            20
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            21
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q19",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 19,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "19   The equation\n\n                                                      \b 3\n                                     sin2 4cos θ × 60o =\n                                                         4\n\n     has exactly three solutions in the range 0o ≤ θ ≤ xo\n\n     What is the range of all possible values of x ?\n\n     A 90 ≤ x < 120\n\n     B 90 ≤ x < 270\n\n     C 120 ≤ x < 240\n\n     D 270 ≤ x < 300\n\n     E 300 ≤ x < 360\n\n     F 450 ≤ x < 630\n\n\n\n\n                                              \u0015\u0014"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The equation\n\n                                                      E 3\n                                     sin2 4cos θ × 60o =\n                                                         4\n\n     has exactly three solutions in the range 0o ≤ θ ≤ xo\n\n     What is the range of all possible values of x ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "90 ≤ x < 120"
+        },
+        {
+          "label": "B",
+          "rawText": "90 ≤ x < 270"
+        },
+        {
+          "label": "C",
+          "rawText": "120 ≤ x < 240"
+        },
+        {
+          "label": "D",
+          "rawText": "270 ≤ x < 300"
+        },
+        {
+          "label": "E",
+          "rawText": "300 ≤ x < 360"
+        },
+        {
+          "label": "F",
+          "rawText": "450 ≤ x < 630"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can start by solving the equation before considering the possible values of x.\nWe have                                                                   √\n                                                  cos θ      ◦\n                                                                 \u0001         3\n                                          sin 4           × 60       =±\n                                                                          2\nso that\n                                 4cos θ × 60◦ = 60◦ , 120◦ , 240◦ , 300◦ , . . .\n(noting that the left hand side is always positive, so we do not need to consider negative values\nfor the right hand side).\nDividing by 60◦ gives\n                                            4cos θ = 1, 2, 4, 5, . . .\nand so\n                                                cos θ = 0, 21 or 1;\nthere are no values of cos θ for which 4cos θ > 4.\nWe can now find the possible values of θ:\n\n•     cos θ = 0 gives θ = 90◦ , 270◦ , 450◦ , . . . .\n\n•     cos θ = 12 gives θ = 60◦ , 300◦ , 420◦ , . . . .\n\n•     cos θ = 1 gives θ = 0◦ , 360◦ , . . . .\n\nCollecting these solutions and arranging them in increasing order gives θ = 0◦ , 60◦ , 90◦ , 270◦ ,\n300◦ , . . . .\nWe are told that there are exactly three solutions in the range 0◦ ≤ θ ≤ x◦ . Therefore x ≥ 90 to\nget the third solution, and x < 270 to avoid getting the fourth solution. This gives the answer\n90 ≤ x < 270, which is option B.\n\n\n\n\nVersion 1.0, March 2022                                                                    Page 22"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            21
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            22
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p1-q20",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p1",
+      "edition": "2021",
+      "paper": 1,
+      "questionNumber": 20,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "20   Find the length of the curve with equation\n\n\n                        2 log10 (x − y) = log10 (2 − 2x) + log10 (y + 5)\n\n     A 5\n\n     B 10\n\n     C 15\n\n     D 3π\n\n     E 9π\n\n     F 12π\n\n\n\n\n                                            \u0015\u0015"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the length of the curve with equation\n\n\n                        2 log10 (x − y) = log10 (2 − 2x) + log10 (y + 5)"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "5"
+        },
+        {
+          "label": "B",
+          "rawText": "10"
+        },
+        {
+          "label": "C",
+          "rawText": "15"
+        },
+        {
+          "label": "D",
+          "rawText": "3π"
+        },
+        {
+          "label": "E",
+          "rawText": "9π"
+        },
+        {
+          "label": "F",
+          "rawText": "12π"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can combine the logarithms on the right and rearrange the left hand side to give\n\n                           log10 (x − y)2 = log10 (2 − 2x)(y + 5)\n                                                                  \u0001\n\n\nand so\n                                   (x − y)2 = (2 − 2x)(y + 5).\nExpanding the brackets gives\n\n                              x2 − 2xy + y 2 = 2y + 10 − 2xy − 10x\n\nwhich rearranges to\n                                    x2 + y 2 + 10x − 2y = 10.\nCompleting the squares gives\n                                    (x + 5)2 + (y − 1)2 = 36\nwhich is a circle with centre (−5, 1) and radius 6.\nThe obvious answer is therefore 12π, but we must take care: does every point on the circle satisfy\nthe original equation? The manipulations we have performed make assumptions; in particular,\nfor the logarithms to be defined, we require x − y > 0, 2 − 2x > 0 and y + 5 > 0, which we can\nrearrange to\n                              x > y,     x<1       and     y > −5\nLet us sketch the circle and these three inequalities. Here is the circle with two points on the\ncircumference marked:\n\n                                                         y\n\n\n\n\n                                        (−5, 1)\n                                                             (1, 1)   x\n\n\n\n\n                                       (−5, −5)\n\n\nThe restriction x < 1 holds for all of the points on the circle except for the single point (1, 1),\nand the restriction y > −5 holds everywhere except for (−5, −5). The restriction x > y is more\nsignificant for us. We can draw the line x = y on our sketch:\n\n\n\n\nVersion 1.0, March 2022                                                                    Page 23\n\f\nTest of Mathematics for University Admission, 2021 Paper 1 Solutions\n\n\n                                                           y\n\n\n\n\n                                         (−5, 1)\n                                                               (1, 1)   x\n\n\n\n\n                                              (−5, −5)\n\n\nThe region x > y is below this line, and we see that only part of the circle is included in the\nregion. Since the points of intersection of the line x = y with the circle are at (1, 1) and (−5, −5),\nit is clear that exactly one quarter of the circle lies in the region x > y. Therefore the length of\nthe curve with the given equation is 14 of the circumference of the circle, that is, 41 × 12π = 3π,\nand the correct option is D.\n\n\n\n\nVersion 1.0, March 2022                                                                      Page 24\n\f\nThis document was initially designed for print and as such does not reach accessibility standard\nWCAG 2.1 in a number of ways including missing text alternatives and missing document structure.\n\n\n\nIf you need this document in a different format please email\nadmissionstesting@cambridgeassessment.org.uk telling us your name, email address and\nrequirements and we will respond within 15 working days.\n\n\n\nThis document contains maths equations and symbols which at present we are not able to produce\nadequately for accessibility. We are working to improve this.\n\n\n\n\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support: admissionstesting.org/help"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+          "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+          "pages": [
+            22
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+          "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+          "pages": [
+            23,
+            24,
+            25
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    }
+  ]
+}

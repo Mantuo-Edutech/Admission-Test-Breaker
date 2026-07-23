@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "18\n\nͳͻ\u0003     \u0016\u0003 \u0003\u0003 \u0003\u0003\u0003\u0003  \u0003\u0003Ǧ\u0003 \u0003\u0003\u0003\u0003\n        \u0003 \u0003\u0003 Ǥ\u0003\u0003\n\n        \u0016 \u0003\u0003\u0003 \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003Ǧ\u0003ǡ\u0003\u0003\u0003\u0003\n        \u0003\u0003Ǥ\u0003\u0017\u0003 \u0003\u0003 \u0003\u0003\u0003ǡ\u0003\u0003\u0003ǡ\u0003\u0003\u0003\n        \u0003\u0003 Ǥ\u0003\n\n\n\n                                          \u0017\u0003\u0003\u0003\u0003\u0003\u0003\u0003 Ǥ\u0003\n\n                                  \u0003\n\n                                          \u0017\u0003\u0003\u0003\u0003\u0003\u0003\u0003 Ǥ\u0003\n\n                                  \u0003\n\n                                          \u0017\u0003\u0003\u0003\u0003\u0003\u0003\u0003 Ǥ\u0003\n\n                                  \u0003\n        \u0003\u0003\n\n             \u0003\u0003 \u0003\u0003\u0003\u0003  \u0003\u0003 ǫ\u0003\n        \u0003\n\n\u0003       \u0004\u0003      \u0003͸\u0003\n\u0003       \u0003\n        \u0005\u0003     \u0003͸\u0003\u0003͹\u0003\n\u0003       \u0003\n        \u0006\u0003      \u0003͹\u0003\n\u0003       \u0003\n        \u0007\u0003     \u0003͹\u0003\u0003ͺ\u0003\n\u0003       \u0003\n        \b\u0003      \u0003ͺ\u0003\n        \u0003\n      \u0003 \u0003      \u0003ͺ\u0003\u0003ͻ\u0003\n\u0003       \u0003\n          \u0003     \u0003ͻ\u0003\n\n\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "18\n\n19         Ǧ \n          Ǥ\n\n          Ǧǡ\n        Ǥ  ǡǡ\n         Ǥ\n\n\n\n                                           Ǥ\n\n                                  \n\n                                           Ǥ\n\n                                  \n\n                                           Ǥ\n\n                                  \n        \n\n                 ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    },
+    {
+      "label": "F",
+      "rawText": "[visual option F; transcription required]"
+    },
+    {
+      "label": "G",
+      "rawText": "[visual option G; transcription required]"
+    },
+    {
+      "label": "H",
+      "rawText": "[visual option H; transcription required]"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We first note that the object fits within a 3 × 3 cube. We begin with the plan view of the object:\nall of the cubes must be within three layers fitting within this L-shape.\nLet us show the three layers:\n\n                                 ?                   ?                  ?\n\n                                 ?                   ?                  ?\n\n                       ?    ?    ?         ?    ?    ?         ?    ?   ?\n                      bottom layer        middle layer          top layer\n\nWe have used ‘?’ to indicate that we do not yet know where there are cubes. We do, however,\nknow that there must be a cube in at least one of the three layers for each of the five positions.\nNext, let us look at the front elevation. This tells us that in the left hand column, we can see\ntwo cubes. Since there is only one possible location for the cubes in this column, the first two\nlayers must have a cube and the third not. Likewise, for the middle column, there is only a cube\nin the bottom layer. In the right hand column, there must be at least one cube in each layer,\nbut it is not yet clear where these would be, as there are three possible positions in each layer.\nWe now know the following:\n\n                                 ?                   ?                  ?\n\n                                 ?                   ?                  ?\n\n                       Y    Y    ?         Y    x    ?         x   x    ?\n                      bottom layer        middle layer          top layer\n\nNext, let us consider the side elevation. The left hand column, which corresponds to the bottom\nrow of the plan view layers, has height 2, which means that the bottom right corner of the top\nlayer cannot have a cube. The middle column, which corresponds to the middle row of the plan\nview layers, has height three, so all three of these cubes must be present (as there is only one\npossible position in the middle row). Finally, the right column, corresponding to the top row of\nthe plan view layers, has height one, so only the bottom layer has a cube in this position.\nWe thus reach this position:\n\n                                 Y                   x                  x\n\n                                 Y                   Y                  Y\n\n                       Y    Y    ?         Y    x    ?         x   x    x\n\n                      bottom layer        middle layer          top layer\n\nOne of the ‘?’ cubes must be present, to give the required plan view, and the other one may or\nmay not be – it makes no difference to any of the views. So there are either 8 or 9 cubes, and\nthe answer is option F. (Note that we would need the corner of the bottom layer to be ‘Y’ if it\nis a single object.)\n\n\n                                               24\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        24
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required",
+      "option-count-review",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "14\n\n18.    A group of five numbers are such that:\n                       their mean is 0\n                       their range is 20\n       What is the largest possible median of the five numbers?\n\n\n\n       A       0\n\n       B       4\n\n       C       4\n\n       D       6\n\n       E       8\n\n       F       20\n\n\n\n\n© UCLES 2017"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "14\n\n18.    A group of five numbers are such that:\n                       their mean is 0\n                       their range is 20\n       What is the largest possible median of the five numbers?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0"
+    },
+    {
+      "label": "B",
+      "rawText": "4"
+    },
+    {
+      "label": "C",
+      "rawText": "4"
+    },
+    {
+      "label": "D",
+      "rawText": "6"
+    },
+    {
+      "label": "E",
+      "rawText": "8"
+    },
+    {
+      "label": "F",
+      "rawText": "20\n\n\n\n\n© UCLES 2017"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can approach this algebraically or just by reasoning about numbers.\nWe begin with an algebraic approach. Let the five numbers be, in increasing order, a, b, c, d, e,\nso that the median is c. The range is 20, so e − a = 20 or a = e − 20. Also, the mean is zero, so\na + b + c + d + e = 0.\nSince c ⩽ d ⩽ e, a = e − 20 and a ⩽ b ⩽ c, we see that the sum of the five numbers is at least\n\n                         (e − 20) + (e − 20) + c + c + c = 3c + 2e − 40\n\nSince the sum is zero, this means that 0 ⩾ 3c + 2e − 40, or that 3c ⩽ 40 − 2e, so 3c + 2e ⩽ 40.\nBut c ⩽ e, so 5c ⩽ 3c + 2e ⩽ 40, so c ⩽ 8. We can have c = d = e = 8 and then a = b = −12, so\nthe largest possible median is 8, option E.\n\nAlternatively, we can just reason as follows. Let’s say that we have five numbers\n\n                                         a   b   c d e\n\narranged in increasing order, with mean 0 and range 20, and let’s suppose that the median is as\nlarge as possible.\nWe ask if there is any way of increasing c while keeping the mean equal to 0 and the median\nequal to 20.\nIf c < d, then we can increase the median without changing the mean or range by replacing each\nof c and d by their mean. So we must have c = d.\nSimilarly, if d < e, we could increase both c and d by a small amount and decrease e and a by\nthe same small amount. As long as d and e don’t swap order in this process, the mean and\nrange will not change, but the median will increase. (So we must take this small amount to be\nat most 12 (e − d).) Therefore we must have c = d = e.\nNow consider a and b. If a < b, we can do a similar trick: we increase a, c, d and e by a small\namount k and decrease b by 4k; this preserves the mean and range while increasing the median.\n(So that a and b don’t swap places, we require k to be at most 14 (b − a).) It follows that a = b.\nWe therefore have a = b and c = d = e. Since the range is 20, the numbers must be a, a, a + 20,\na + 20, a + 20. Their sum is 5a + 60 = 0, so a = −12 and a + 20 = 8, which is the largest possible\nmedian.\n\n\n\n\n                                                 22\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        22
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

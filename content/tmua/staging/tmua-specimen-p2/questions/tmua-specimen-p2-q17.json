@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13\n\n17.    Let be a set of positive integers, for example could consist of 3, 4, and 8.\n\n       A positive integer is called an -number if and only if for every factor   of   with   > 1,\n       the number is a multiple of some number in .\n\n       So in the above example, 9 is an -number; this is because the factors of 9 greater than 1\n       are 3 and 9, and each of these is a multiple of 3.\n\n       Positive integer   is therefore not an -number if and only if\n\n       A       for every (positive) factor of with      > 1,\n               there is a number in which is not a factor of .\n\n       B       for every (positive) factor of with > 1,\n               there is no number in which is a factor of .\n\n       C       for every (positive) factor of with     > 1,\n               every number in is a factor of .\n\n       D       for some (positive) factor of with > 1,\n               there is a number in which is not a factor of   .\n\n       E       for some (positive) factor of with > 1,\n               there is no number in which is a factor of .\n\n       F       for some (positive) factor of with      > 1,\n               every number in is a factor of .\n\n\n\n\n© UCLES 2017                                                                           [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "13\n\n17.    Let be a set of positive integers, for example could consist of 3, 4, and 8.\n\n       A positive integer is called an -number if and only if for every factor   of   with   > 1,\n       the number is a multiple of some number in .\n\n       So in the above example, 9 is an -number; this is because the factors of 9 greater than 1\n       are 3 and 9, and each of these is a multiple of 3.\n\n       Positive integer   is therefore not an -number if and only if"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "for every (positive) factor of with      > 1,\n               there is a number in which is not a factor of ."
+    },
+    {
+      "label": "B",
+      "rawText": "for every (positive) factor of with > 1,\n               there is no number in which is a factor of ."
+    },
+    {
+      "label": "C",
+      "rawText": "for every (positive) factor of with     > 1,\n               every number in is a factor of ."
+    },
+    {
+      "label": "D",
+      "rawText": "for some (positive) factor of with > 1,\n               there is a number in which is not a factor of   ."
+    },
+    {
+      "label": "E",
+      "rawText": "for some (positive) factor of with > 1,\n               there is no number in which is a factor of ."
+    },
+    {
+      "label": "F",
+      "rawText": "for some (positive) factor of with      > 1,\n               every number in is a factor of .\n\n\n\n\n© UCLES 2017                                                                           [Turn over"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We are being asked to negate the statement ‘n is an S-number’, that is, to negate the statement\n\n     for every factor m of n with m > 1, the number m is a multiple of some number\n     in S.\n\nThe negation of ‘for every m, P’ is ‘there exists m such that not P’, a negation is\n\n     there exists a factor m of n with m > 1 such that it is not the case that the number\n     m is a multiple of some number in S.\n\n(Note that ‘a factor m of n with m > 1’ is the condition on the numbers m which are being\nconsidered by the ‘for every’, so it is not changed by the negation.) ‘There exists’ is the same\nas ‘for some’, so the correct answer is either D, E or F.\nWe next need to simplify the second half of our new statement, namely ‘it is not the case that\nthe number m is a multiple of some number in S’. If it is not the case that ‘the number m is a\nmultiple of some number in S’, then it must be that m is not a multiple of any number in S, or\nequivalently, that no number in S is a factor of m.\nTherefore a full negation is\n\n     for some factor m of n with m > 1, there is no number in S which is a factor of m,\n\nso the correct answer is E.\n\n\n\n\n                                               21\n                                                                                      © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        21
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

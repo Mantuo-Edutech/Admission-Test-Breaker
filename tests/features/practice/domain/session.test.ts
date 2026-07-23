@@ -13,15 +13,34 @@ function createStartedSession() {
 }
 
 describe("practice session domain", () => {
-  it("starts a Guest-owned schema-v2 75-minute session with one ledger event", () => {
+  it("uses exam-specific timing without creating a second session model", () => {
+    const session = createPracticeSession({
+      id: "ses_esat-m1",
+      learningSpaceId: "gsp_browser-one",
+      actor: { kind: "guest", actorId: "guest_browser-one" },
+      paperId: "esat-mathematics-1-starter-v1",
+      durationMinutes: 40,
+      startedAt: "2026-07-13T00:00:00.000Z",
+      eventId: "evt_esat-started",
+    });
+
+    expect(session.deadlineAt).toBe("2026-07-13T00:40:00.000Z");
+    expect(session.paperId).toBe("esat-mathematics-1-starter-v1");
+    expect(session.paperRevisionId).toBe("esat-mathematics-1-starter-v1-r1");
+    expect(session.contentDigest).toMatch(/^[a-f0-9]{64}$/u);
+  });
+
+  it("starts a revision-bound Guest-owned schema-v3 75-minute session with one ledger event", () => {
     const session = createStartedSession();
 
     expect(session).toMatchObject({
-      schemaVersion: 2,
+      schemaVersion: 3,
       id: "ses_reference-one",
       learningSpaceId: "gsp_browser-one",
       startedBy: { kind: "guest", actorId: "guest_browser-one" },
       paperId: "tmua-2023-p1",
+      paperRevisionId: "tmua-2023-p1-r1",
+      contentDigest: expect.stringMatching(/^[a-f0-9]{64}$/u),
       status: "active",
       startedAt: "2026-07-13T00:00:00.000Z",
       deadlineAt: "2026-07-13T01:15:00.000Z",

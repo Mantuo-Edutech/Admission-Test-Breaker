@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q06",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 6,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "6      A sequence u0 , u1 , u2 , . . . is deﬁned as follows:\n\n\n\n                                       u0 = 1\n                                            \u0002 1\n                                       un =     4xun−1 dx for n ⩾ 1\n                                              0\n\n\n\n        What is the value of u1000 ?\n\n\n        A 21000\n\n\n        B 41000\n\n                 4\n        C\n               1000!\n                 4\n        D\n               1001!\n               21000\n        E\n               1000!\n               41000\n        F\n               1000!\n               21000\n        G\n               1001!\n               41000\n        H\n               1001!\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                         \u001b"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A sequence u0 , u1 , u2 , . . . is deﬁned as follows:\n\n\n\n                                       u0 = 1\n                                             1\n                                       un =     4xun−1 dx for n ⩾ 1\n                                              0\n\n\n\n        What is the value of u1000 ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "21000"
+    },
+    {
+      "label": "B",
+      "rawText": "41000\n\n                 4"
+    },
+    {
+      "label": "C",
+      "rawText": "1000!\n                 4"
+    },
+    {
+      "label": "D",
+      "rawText": "1001!\n               21000"
+    },
+    {
+      "label": "E",
+      "rawText": "1000!\n               41000"
+    },
+    {
+      "label": "F",
+      "rawText": "1000!\n               21000"
+    },
+    {
+      "label": "G",
+      "rawText": "1001!\n               41000"
+    },
+    {
+      "label": "H",
+      "rawText": "1001!\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We calculate the first few values of un in the hope that this will show a clear pattern.\nWe have\n\n                                        u0 = 1\n                                             Z 1\n                                        u1 =     4x.1 dx\n                                               0\n                                                  \u00031\n                                           = 2x2 0\n                                             \u0002\n\n                                           =2\n                                             Z 1\n                                        u2 =     4x.2 dx\n                                               0\n                                                  \u00031\n                                           = 4x2 0\n                                             \u0002\n\n                                           =4\n                                             Z 1\n                                        u3 =     4x.4 dx\n                                               0\n                                                  \u00031\n                                           = 8x2 0\n                                             \u0002\n\n                                           =8\n\nThe pattern is now apparent: un = 2n , and so the answer is A.\nIf we wanted to prove this to be true, we could use induction. The result is clearly true when\nn = 0, so assume that it is true when n = k. Then\n                                             Z 1\n                                      uk+1 =     4x.2k dx\n                                              0\n                                             \u0002 k 2 \u00031\n                                           = 2.2 x 0\n                                            = 2.2k\n                                            = 2k+1\n\nand so the result holds for n = k + 1. Hence by induction, un = 2n for all n ⩾ 0.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 8\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

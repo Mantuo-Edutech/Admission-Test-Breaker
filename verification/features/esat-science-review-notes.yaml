@@ -1,0 +1,87 @@
+schemaVersion: 1
+feature:
+  id: esat-science-review-notes
+  title: Programme-aware ESAT Physics, Chemistry and Biology review notes
+  status: partial
+  userOutcome: >-
+    A student who has selected an ESAT programme and completed a course profile can
+    read only the Physics, Chemistry and Biology starting-review modules actually
+    required by that programme, compare A-Level, IB and AP scope, study original
+    methods and examples, and continue to the matching native practice in Mantou.
+
+run:
+  packageScript: verify:review-notes
+
+claims:
+  - id: exact-three-module-scope
+    status: verified
+    statement: >-
+      The versioned content maps all seven Physics, seventeen Chemistry and eleven
+      Biology top-level units already used by the deterministic course-coverage engine.
+      Exam facts and terminology are anchored to the locally preserved Content
+      Specification and three module Guides with four exact SHA-256 hashes.
+    artifacts:
+      - content/notes/esat/sciences-foundations-v1.json
+      - content/esat/knowledge-units.json
+      - tests/features/notes/review-notes.test.ts
+    automatedChecks:
+      - verify:review-notes
+      - verify:esat-assets
+
+  - id: independent-teaching-layer
+    status: verified
+    statement: >-
+      Nine Mantou-authored question methods, three clearly labelled original worked
+      examples and nine active-recall prompts are separated from official scope anchors;
+      the content includes no official question, official explanation, scale score,
+      percentile or admissions prediction.
+    artifacts:
+      - content/notes/esat/sciences-foundations-v1.json
+      - src/features/notes/content/review-notes.ts
+      - tests/features/notes/review-notes.test.ts
+    automatedChecks:
+      - verify:review-notes
+      - typecheck
+
+  - id: programme-filtered-native-page
+    status: verified
+    statement: >-
+      The route first requires a real ESAT programme and course profile, filters the
+      shared science document by the student's selected module IDs, gives a precise
+      no-science state to Mathematics-only programmes, and links to in-site coverage
+      and practice. The same versioned source also produces a profile-first 16-page
+      A4 download. Desktop, tablet and phone Chromium checks prevent horizontal overflow.
+    artifacts:
+      - src/features/notes/pages/EsatScienceNotesPage.tsx
+      - src/features/notes/pages/ReviewNotesPage.tsx
+      - src/app/routes.tsx
+      - content/products/review-notes-pdf-assets.json
+      - public/notes/esat/esat-sciences-foundations-v1.pdf
+      - tests/app/esat-science-notes-page.test.tsx
+      - tests/e2e/esat-review-notes.spec.ts
+    automatedChecks:
+      - verify:review-notes
+      - verify:review-notes-pdfs
+      - verify:content-products
+      - verify:e2e
+      - build
+
+boundaries:
+  - This is a top-level starting-review teaching preview, not a complete textbook, drill bank or full-length mock.
+  - Official sources support exam facts, scope and terminology only; no official question or explanation is republished.
+  - The 16-page downloadable edition remains a top-level preview; unit-level chapters and independent Physics, Chemistry, Biology, bilingual, rights/similarity, student-comprehension and real-device review remain pending.
+  - Curriculum coverage is not individual mastery, a score, a percentile or an admissions prediction.
+
+manualChecks:
+  - id: independent-three-subject-review
+    status: pending
+    evidence: Separate Physics, Chemistry and Biology teachers plus a bilingual and rights/similarity reviewer must approve the full revision before final publication status.
+    viewports:
+      - content
+  - id: student-comprehension-and-real-device-review
+    status: pending
+    evidence: Automated DOM, type, build and Chromium desktop/tablet/phone checks pass; representative A-Level, IB and AP students and real-device reviewers must still validate comprehension and layout.
+    viewports:
+      - desktop
+      - tablet
+      - phone

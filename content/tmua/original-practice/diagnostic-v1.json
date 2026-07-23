@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-diagnostic-v1",
+  "exam": "TMUA",
+  "edition": "30-Minute Starting Diagnostic · Original v1",
+  "sectionLabel": "Paper 1 + Paper 2 Foundations",
+  "sectionLabelZh": "数学知识与推理 · 满托原创起点诊断",
+  "durationMinutes": 30,
+  "deliveryMode": "structured",
+  "calculator": "none",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本诊断依据 TMUA 公开内容范围独立命题，不复制、改写或拆分任何历年真题，也不换算官方分数或录取概率。",
+  "sourceAnchors": [
+    {
+      "id": "tmua-content-specification-2025",
+      "localPath": "content/official/raw/tmua/TMUA_Content_Specification_April2025.pdf",
+      "sha256": "2664e88733d54fba4956e681fce75b8b2c81724aac27d0e76610c5e233948f64",
+      "usedFor": "mathematical content scope only"
+    },
+    {
+      "id": "tmua-esat-mathematics-notes",
+      "localPath": "content/official/raw/shared/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+      "sha256": "12ed684ee2dfb9b53355d54018ba216b5cd32161e5f6c5c9ee5e96b93cbf8844",
+      "usedFor": "mathematical notation and reasoning scope only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "tmua-diagnostic-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A non-zero real number x satisfies" }] },
+        { "kind": "display-math", "tex": "x+\\frac{1}{x}=3." },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the value of" }, { "kind": "math", "tex": "x^3+\\frac{1}{x^3}" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "12" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "15" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "18" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "21" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["algebra-and-functions"],
+      "skillTags": ["algebraic-identity", "structure-before-expansion"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tmua/original-practice/diagnostic-v1.json",
+      "sourceAnswerPath": "content/tmua/original-practice/diagnostic-v1.json"
+    },
+    {
+      "id": "tmua-diagnostic-v1-q02",
+      "number": 2,
+      "sourcePage": 2,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "The equation" }] },
+        { "kind": "display-math", "tex": "x^2-2kx+k+2=0" },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "has equal roots for two possible values of k. What is the sum of these two values?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-3" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-1" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["quadratics"],
+      "skillTags": ["parameter-condition", "discriminant"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tmua/original-practice/diagnostic-v1.json",
+      "sourceAnswerPath": "content/tmua/original-practice/diagnostic-v1.json"
+    },
+    {
+      "id": "tmua-diagnostic-v1-q03",
+      "number": 3,
+      "sourcePage": 3,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A circle has centre" }, { "kind": "math", "tex": "(3,-2)" }, { "kind": "text", "value": "and is tangent to the line" }, { "kind": "math", "tex": "2x-y+1=0" }, { "kind": "text", "value": ". What is its radius?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\sqrt{5}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{3\\sqrt{5}}{5}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{5\\sqrt{5}}{3}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{9\\sqrt{5}}{5}" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["coordinate-geometry-circles"],
+      "skillTags": ["distance-to-line", "geometric-condition"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tmua/original-practice/diagnostic-v1.json",
+      "sourceAnswerPath": "content/tmua/original-practice/diagnostic-v1.json"
+    },
+    {
+      "id": "tmua-diagnostic-v1-q04",
+      "number": 4,
+      "sourcePage": 4,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "The sum of the first n terms of a sequence is" }, { "kind": "math", "tex": "S_n=2n^2+n" }, { "kind": "text", "value": ". What is the tenth term?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "35" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "37" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "39" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "41" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["sequences-and-series"],
+      "skillTags": ["partial-sums", "term-recovery"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tmua/original-practice/diagnostic-v1.json",
+      "sourceAnswerPath": "content/tmua/original-practice/diagnostic-v1.json"
+    },
+    {
+      "id": "tmua-diagnostic-v1-q05",
+      "number": 5,
+      "sourcePage": 5,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "How many solutions does the equation" }, { "kind": "math", "tex": "\\sin(2\\theta)=\\frac12" }, { "kind": "text", "value": "have in the closed interval" }, { "kind": "math", "tex": "0\\leq\\theta\\leq2\\pi" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["trigonometric-equations"],
+      "skillTags": ["solution-count", "interval-control"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tmua/original-practice/diagnostic-v1.json",
+      "sourceAnswerPath": "content/tmua/original-practice/diagnostic-v1.json"
+    },
+    {
+      "id": "tmua-diagnostic-v1-q06",
+      "number": 6,
+      "sourcePage": 6,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "The graph of" }, { "kind": "math", "tex": "y=x^3-3x" }, { "kind": "text", "value": "has two stationary points. What is the equation of the straight line through these points?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "y=-3x" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "y=-2x" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "y=2x" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "y=3x" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["differentiation"],
+      "skillTags": ["stationary-points", "coordinate-connection"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tmua/original-practice/diagnostic-v1.json",
+      "sourceAnswerPath": "content/tmua/original-practice/diagnostic-v1.json"
+    },
+    {
+      "id": "tmua-diagnostic-v1-q07",
+      "number": 7,
+      "sourcePage": 7,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every function that is differentiable at x=a is continuous at x=a. A function f is not continuous at x=a. Which statement must be true?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "f is differentiable at x=a." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "f is continuous at x=a." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "f is not differentiable at x=a." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The derivative of f at x=a is zero." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["mathematical-logic"],
+      "skillTags": ["contrapositive", "necessary-conclusion"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tmua/original-practice/diagnostic-v1.json",
+      "sourceAnswerPath": "content/tmua/original-practice/diagnostic-v1.json"
+    },
+    {
+      "id": "tmua-diagnostic-v1-q08",
+      "number": 8,
+      "sourcePage": 8,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A student claims that" }, { "kind": "math", "tex": "n^2+n+41" }, { "kind": "text", "value": "is prime for every positive integer n. Which value of n is a counterexample?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "40" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["mathematical-proof"],
+      "skillTags": ["counterexample", "claim-testing"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tmua/original-practice/diagnostic-v1.json",
+      "sourceAnswerPath": "content/tmua/original-practice/diagnostic-v1.json"
+    }
+  ]
+}

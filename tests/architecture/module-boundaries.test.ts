@@ -20,6 +20,13 @@ const profileFixturePath = path.join(
   "preparation-profile",
   "__domain-architecture-fixture__.ts",
 );
+const authoringContentFixturePath = path.join(
+  sourceRoot,
+  "features",
+  "practice",
+  "pages",
+  "__authoring-content-fixture__.ts",
+);
 
 async function sourceFiles(directory: string): Promise<string[]> {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -173,6 +180,42 @@ function evaluate(reference: ImportReference): ArchitectureViolation[] {
     }
   }
 
+  if (relativeFile === "src/features/account/domain.ts") {
+    const importsFrameworkOrAdapter =
+      packageIs(reference.specifier, "react") ||
+      packageIs(reference.specifier, "react-router") ||
+      packageIs(reference.specifier, "react-router-dom") ||
+      packageIs(reference.specifier, "@supabase/supabase-js") ||
+      /\/src\/features\/account\/(components|pages|storage)\//.test(target);
+
+    if (importsFrameworkOrAdapter) {
+      violations.push({
+        ...reference,
+        rule: "account access domain must remain UI and provider independent",
+      });
+    }
+  }
+
+  const importsAnswerBearingAuthoringRegistry =
+    target.endsWith("/src/features/practice/content/practice-paper-registry.ts") ||
+    target.endsWith("/src/features/practice/content/tmua-online-registry.ts");
+  const isAuthoringContentModule = relativeFile.startsWith(
+    "src/features/practice/content/",
+  );
+  const isExplicitTestDeliveryAdapter =
+    relativeFile ===
+    "src/features/practice/delivery/test-practice-delivery-service.ts";
+  if (
+    importsAnswerBearingAuthoringRegistry &&
+    !isAuthoringContentModule &&
+    !isExplicitTestDeliveryAdapter
+  ) {
+    violations.push({
+      ...reference,
+      rule: "production runtime must receive practice papers through the safe delivery contract",
+    });
+  }
+
   return violations;
 }
 
@@ -183,6 +226,7 @@ async function architectureViolations(): Promise<ArchitectureViolation[]> {
 afterEach(async () => {
   await rm(fixturePath, { force: true });
   await rm(profileFixturePath, { force: true });
+  await rm(authoringContentFixturePath, { force: true });
 });
 
 describe("module architecture boundaries", () => {
@@ -216,6 +260,40 @@ describe("module architecture boundaries", () => {
     );
   });
 
+  it("reports a production page importing the answer-bearing authoring registry", async () => {
+    await writeFile(
+      authoringContentFixturePath,
+      'import { getPracticePaper } from "../content/practice-paper-registry.js";\nexport { getPracticePaper };\n',
+    );
+
+    expect(await architectureViolations()).toContainEqual(
+      expect.objectContaining({
+        specifier: "../content/practice-paper-registry.js",
+        rule: "production runtime must receive practice papers through the safe delivery contract",
+      }),
+    );
+  });
+
+  it("keeps authored Review Notes out of the shared schema chunk", async () => {
+    const sharedSchema = await readFile(
+      "src/features/notes/content/review-notes.ts",
+      "utf8",
+    );
+    expect(sharedSchema).not.toContain("content/notes/");
+
+    const examModules = [
+      "esat-review-notes.ts",
+      "tara-review-notes.ts",
+      "lnat-review-notes.ts",
+      "ucat-review-notes.ts",
+    ];
+    for (const file of examModules) {
+      const source = await readFile(`src/features/notes/content/${file}`, "utf8");
+      expect(source).toContain("content/notes/");
+      expect(source).toContain("validateReviewNotesDocument");
+    }
+  });
+
   it("exposes standalone architecture and complete verification commands", async () => {
     const packageJson = JSON.parse(await readFile("package.json", "utf8")) as {
       scripts?: Record<string, string>;
@@ -227,8 +305,77 @@ describe("module architecture boundaries", () => {
     expect(packageJson.scripts?.["verify:features"]).toBe(
       "vitest run tests/architecture/feature-manifests.test.ts",
     );
+    expect(packageJson.scripts?.["verify:account-access"]).toBe(
+      "vitest run tests/app/account-access-flow.test.tsx tests/features/account/pending-invite.test.ts",
+    );
+    expect(packageJson.scripts?.["verify:entitled-content"]).toBe(
+      "vitest run tests/features/entitled-content tests/app/tmua-entitled-review-plan.test.tsx tests/app/results-page.test.tsx",
+    );
+    expect(packageJson.scripts?.["verify:private-content-bundle"]).toBe(
+      "tsx scripts/check-private-content-bundle.ts",
+    );
+    expect(packageJson.scripts?.["verify:content-products"]).toBe(
+      "vitest run tests/features/library tests/app/learning-library-page.test.tsx tests/app/content-product-route-audit.test.tsx",
+    );
+    expect(packageJson.scripts?.["verify:content-release-readiness"]).toBe(
+      "tsx scripts/check-content-release-readiness.ts --verify && vitest run tests/features/library/content-release-readiness.test.ts",
+    );
+    expect(packageJson.scripts?.["verify:manual-review-worklist"]).toBe(
+      "tsx scripts/check-manual-review-worklist.ts --verify && vitest run tests/features/library/manual-review-worklist.test.ts",
+    );
+    expect(packageJson.scripts?.["verify:production-platform"]).toBe(
+      "vitest run tests/architecture/production-platform-contracts.test.ts tests/platform/runtime-config.test.ts tests/platform/supabase-auth-protection-config.test.ts tests/platform/supabase-management-migrations.test.ts tests/platform/deployment-runtime-validation.test.ts",
+    );
+    expect(packageJson.scripts?.["verify:web-performance"]).toBe(
+      "tsx scripts/check-web-performance-budget.ts",
+    );
+    expect(packageJson.scripts?.["verify:feedback"]).toBe(
+      "vitest run tests/features/feedback tests/app/student-feedback.test.tsx",
+    );
+    expect(packageJson.scripts?.["verify:product-funnel"]).toBe(
+      "vitest run tests/features/product-funnel tests/app/landing-page.test.tsx tests/app/account-access-flow.test.tsx tests/app/practice-page.test.tsx",
+    );
+    expect(packageJson.scripts?.["verify:learning-record"]).toBe(
+      "vitest run tests/features/practice/content/knowledge-tag-taxonomy.test.ts tests/features/practice/history tests/features/learner-data/auth-aware-practice-history.test.ts tests/features/learner-data/supabase-repository.test.ts tests/app/learning-record-page.test.tsx tests/app/site-navigation.test.tsx",
+    );
+    expect(packageJson.scripts?.["verify:invite-operations"]).toBe(
+      "vitest run tests/features/invite-operations tests/app/invite-operations-page.test.tsx tests/app/account-lifecycle.test.tsx",
+    );
+    expect(packageJson.scripts?.["verify:essay-practice"]).toBe(
+      "vitest run tests/features/practice/content/essay-writing-papers.test.ts tests/app/multi-exam-practice-library.test.tsx tests/app/practice-page.test.tsx tests/app/results-page.test.tsx tests/app/learning-library-page.test.tsx tests/app/essay-practice-layout-contract.test.ts",
+    );
+    expect(packageJson.scripts?.["verify:tmua-diagnostic"]).toBe(
+      "vitest run tests/features/practice/content/tmua-diagnostic-v1.test.ts tests/app/tmua-hub-page.test.tsx tests/app/practice-page.test.tsx tests/app/results-page.test.tsx",
+    );
+    expect(packageJson.scripts?.["verify:review-notes"]).toBe(
+      "vitest run tests/features/notes/review-notes.test.ts tests/app/esat-mathematics-notes-page.test.tsx tests/app/esat-science-notes-page.test.tsx tests/app/tara-review-notes-page.test.tsx tests/app/lnat-review-notes-page.test.tsx tests/app/ucat-review-notes-page.test.tsx tests/app/learning-library-page.test.tsx",
+    );
+    expect(packageJson.scripts?.["verify:review-notes-pdfs"]).toBe(
+      "vitest run tests/features/notes/review-notes-pdf-assets.test.ts",
+    );
+    expect(packageJson.scripts?.["verify:manual-review-ledger"]).toBe(
+      "vitest run tests/features/library/manual-review-decisions.test.ts tests/features/library/manual-review-ledger.test.ts tests/architecture/manual-review-release-gate.test.ts",
+    );
+    expect(packageJson.scripts?.["verify:content-review-operations"]).toBe(
+      "vitest run tests/features/content-review-operations tests/app/content-review-operations-page.test.tsx tests/app/content-review-operations-layout-contract.test.ts tests/app/account-lifecycle.test.tsx",
+    );
+    expect(packageJson.scripts?.["verify:production-bootstrap"]).toBe(
+      "vitest run tests/platform/production-bootstrap.test.ts tests/platform/production-bootstrap-plan.test.ts tests/architecture/production-bootstrap-contract.test.ts",
+    );
+    expect(packageJson.scripts?.["verify:supabase-project-selection"]).toBe(
+      "vitest run tests/platform/supabase-project-selection.test.ts tests/architecture/supabase-project-selection-contract.test.ts",
+    );
+    expect(packageJson.scripts?.["verify:funnel-analytics"]).toBe(
+      "vitest run tests/features/product-funnel/analytics.test.ts tests/app/product-funnel-analytics-page.test.tsx tests/app/product-funnel-analytics-layout-contract.test.ts tests/app/account-lifecycle.test.tsx",
+    );
+    expect(packageJson.scripts?.["verify:collaboration"]).toBe(
+      "vitest run tests/features/collaboration tests/features/data-rights/supabase-data-rights-service.test.ts tests/app/student-collaboration-pages.test.tsx tests/app/student-collaboration-layout-contract.test.ts tests/app/account-lifecycle.test.tsx",
+    );
+    expect(packageJson.scripts?.["verify:esat-full-mock"]).toBe(
+      "vitest run tests/features/practice/content/esat-mathematics-1-full-mock.test.ts tests/features/practice/content/esat-mathematics-2-full-mock.test.ts tests/features/practice/content/esat-physics-full-mock.test.ts tests/features/practice/content/esat-chemistry-full-mock.test.ts tests/features/practice/content/esat-biology-full-mock.test.ts tests/app/multi-exam-practice-library.test.tsx tests/app/practice-page.test.tsx tests/app/results-page.test.tsx",
+    );
     expect(packageJson.scripts?.verify).toBe(
-      "pnpm verify:architecture && pnpm verify:features && pnpm verify:tmua-corpus && pnpm verify:tmua-extractions && pnpm test && pnpm typecheck && pnpm build",
+      "pnpm verify:architecture && pnpm verify:features && pnpm verify:supabase-contracts && pnpm verify:account-access && pnpm verify:invite-operations && pnpm verify:production-platform && pnpm verify:production-bootstrap && pnpm verify:supabase-project-selection && pnpm verify:content-products && pnpm verify:product-lineage && pnpm verify:content-release-readiness && pnpm verify:manual-review-worklist && pnpm verify:manual-review-ledger && pnpm verify:content-review-operations && pnpm verify:entitled-content && pnpm verify:feedback && pnpm verify:product-funnel && pnpm verify:funnel-analytics && pnpm verify:collaboration && pnpm verify:learning-record && pnpm beta:audit && pnpm verify:content-imports && pnpm verify:curriculum-sources && pnpm verify:esat-assets && pnpm verify:esat-full-mock && pnpm verify:esat-starter && pnpm verify:tara-starter && pnpm verify:tara-full-mock && pnpm verify:lnat-starter && pnpm verify:lnat-full-mock && pnpm verify:ucat-starter && pnpm verify:ucat-verbal-full-mock && pnpm verify:ucat-decision-full-mock && pnpm verify:ucat-quantitative-full-mock && pnpm verify:ucat-situational-full-mock && pnpm verify:essay-practice && pnpm verify:tmua-diagnostic && pnpm verify:review-notes && pnpm verify:review-notes-pdfs && pnpm verify:tmua-notes && pnpm verify:tmua-corpus && pnpm verify:tmua-extractions && pnpm verify:tmua-online-papers && pnpm verify:practice-revisions && pnpm verify:server-practice-packages && pnpm test && pnpm typecheck && pnpm build && pnpm verify:web-performance && pnpm verify:private-content-bundle",
     );
   });
 });

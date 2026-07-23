@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q01",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 1,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "1.     The radius of the circle 2   +2      − 8 + 12 + 15 = 0 is\n\n\n\n\n       A\n\n\n       B\n\n\n\n       C\n\n\n       D       √37\n\n       E       √67\n\n\n\n\n                                        (       )"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The radius of the circle 2   +2      − 8 + 12 + 15 = 0 is"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "√37"
+    },
+    {
+      "label": "E",
+      "rawText": "√67\n\n\n\n\n                                        (       )"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We first divide by 2 to get x2 + y 2 + . . . , then complete the square for x and y:\n\n\n\n                                            2x2 + 2y 2 − 8x + 12y + 15 = 0\n                             ⇐⇒                 x2 + y 2 − 4x + 6y + 15\n                                                                     2 =0\n                             ⇐⇒     (x − 2)2 − 22 + (y + 3)2 − 32 + 15\n                                                                    2 =0\n                             ⇐⇒                    (x − 2)2 + (y + 3)2 = 11\n                                                                         2\n                   q\nso the radius is       2 , which is option B.\n                       11\n\n\n\n\n                                                   4\n                                                                                       © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required"
+    ]
+  }
+}

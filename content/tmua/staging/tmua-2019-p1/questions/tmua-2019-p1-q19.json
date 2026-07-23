@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "19   Find the value of\n                         \u0006\n                         90\n                               sin(10 + 90k)◦\n                         k=0\n\n\n     A 0\n\n     B sin 10◦\n\n     C sin 100◦\n\n     D sin 190◦\n\n     E sin 280◦\n\n     F 1\n\n\n\n\n                                 21"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the value of\n                         C\n                         90\n                               sin(10 + 90k)◦\n                         k=0"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0"
+    },
+    {
+      "label": "B",
+      "rawText": "sin 10◦"
+    },
+    {
+      "label": "C",
+      "rawText": "sin 100◦"
+    },
+    {
+      "label": "D",
+      "rawText": "sin 190◦"
+    },
+    {
+      "label": "E",
+      "rawText": "sin 280◦"
+    },
+    {
+      "label": "F",
+      "rawText": "1"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We start by writing out the first few terms of the summation, and writing each of them in terms\nof sin 10◦ or sin 100◦ :\n\n                                 k=0:       sin 10◦\n                                 k=1:      sin 100◦\n                                 k=2:      sin 190◦ = − sin 10◦\n                                 k=3:      sin 280◦ = − sin 100◦\n                                 k=4:      sin 370◦ = sin 10◦\n                                 k=5:      sin 460◦ = sin 100◦\n                                 k=6:      sin 550◦ = − sin 10◦\n                                 k=7:      sin 640◦ = − sin 100◦\n\nand we see that we repeat every four terms. The first four terms sum to zero, as do the next\nfour, and so on.\nIn total, there are 91 terms, and 91 = 22 × 4 + 3, so the only terms which contribute to the final\nsum are the last three. Therefore the whole sum is that from k = 88, k = 89 and k = 90, giving\n\n                           sin 10◦ + sin 100◦ + (− sin 10◦ ) = sin 100◦ .\n\nHence the answer is C.\n\n\n\n\nc UCLES                                                                                   Page 22"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        22
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

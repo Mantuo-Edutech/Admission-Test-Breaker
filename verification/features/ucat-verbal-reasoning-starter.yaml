@@ -1,0 +1,65 @@
+schemaVersion: 1
+feature:
+  id: ucat-verbal-reasoning-starter
+  title: Original UCAT Verbal Reasoning starter
+  status: partial
+  userOutcome: >-
+    A student can complete three original information passages and twelve timed
+    Verbal Reasoning questions in the native responsive passage interface.
+
+run:
+  packageScript: verify:ucat-starter
+
+claims:
+  - id: original-verbal-reasoning-dataset
+    status: verified
+    statement: >-
+      Three Mantou-original passages and twelve questions mix True, False, Can't
+      Tell and best-supported-conclusion tasks. The six-minute timer mirrors the
+      current approximate 30-second-per-question pace without claiming scaled-score
+      calibration.
+    artifacts:
+      - content/ucat/original-practice/verbal-reasoning-starter-v1.json
+      - src/features/practice/content/ucat-verbal-reasoning-starter.ts
+      - tests/features/practice/content/ucat-verbal-reasoning-starter.test.ts
+    automatedChecks:
+      - verify:ucat-starter
+      - verify:official-research
+      - typecheck
+
+  - id: native-verbal-reasoning-entry
+    status: verified
+    statement: >-
+      UCAT's internal practice library exposes the reviewed Verbal Reasoning
+      starter alongside a separately verified Quantitative Reasoning starter. It records answers, timing, marking, submission, factual results
+      and question feedback through the shared passage-linked kernel.
+    artifacts:
+      - src/features/catalog/pages/AssessmentPracticeLibraryPage.tsx
+      - src/features/practice/content/practice-paper-registry.ts
+      - src/features/practice/components/QuestionCard.tsx
+      - tests/app/multi-exam-practice-library.test.tsx
+      - tests/app/practice-page.test.tsx
+    automatedChecks:
+      - verify:ucat-starter
+      - verify:content-products
+      - build
+
+boundaries:
+  - This is a Mantou-original teaching preview, not an official UCAT question bank or a claim of official-equivalent calibration.
+  - Three passages and twelve questions are not a complete 11-passage, 44-question, 22-minute Verbal Reasoning subtest and do not generate a 300–900 score.
+  - Quantitative Reasoning and the two specialist starters now ship under separate verification manifests; none of the four short starters claims complete-length or official-equivalent calibration.
+  - Independent UCAT teacher, English-language, pace, distractor and device visual review remain before final publication status.
+
+manualChecks:
+  - id: independent-ucat-review
+    status: pending
+    evidence: A separate UCAT teacher must verify passage style, answer keys, distractors, pace and difficulty spread.
+    viewports:
+      - content
+  - id: browser-device-review
+    status: pending
+    evidence: Automated component and CSS contracts pass; desktop, tablet and phone visual review remains explicit.
+    viewports:
+      - desktop
+      - tablet
+      - phone

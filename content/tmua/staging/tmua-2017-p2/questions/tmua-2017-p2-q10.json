@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q10",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 10,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "10     f (x) is a function deﬁned for all real values of x.\n                                                                 \u00073\n        Which one of the following is a suﬃcient condition for   1\n                                                                      f (x) dx = 0?\n\n        A f (2) = 0\n\n        B f (1) = f (3) = 0\n\n        C f (−x) = −f (x) for all x\n\n        D f (x + 2) = −f (2 − x) for all x\n\n        E      f (x − 2) = −f (2 − x) for all x\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u0014\u0015"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "f (x) is a function deﬁned for all real values of x.\n                                                                 D3\n        Which one of the following is a suﬃcient condition for   1\n                                                                      f (x) dx = 0?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "f (2) = 0"
+    },
+    {
+      "label": "B",
+      "rawText": "f (1) = f (3) = 0"
+    },
+    {
+      "label": "C",
+      "rawText": "f (−x) = −f (x) for all x"
+    },
+    {
+      "label": "D",
+      "rawText": "f (x + 2) = −f (2 − x) for all x"
+    },
+    {
+      "label": "E",
+      "rawText": "f (x − 2) = −f (2 − x) for all x\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "RTo3 show that a condition is sufficient, we need to show that if the condition is satisfied, then\n  1 f(x) dx = 0\n                                                                                   R3\n Note that it is not enough for us to find an example of a function which satisfies 1 f(x) dx = 0\n and then to check whether the function satisfies the suggested conditions, as this would be\n checking whether the conditions are necessary, not whether they are sufficient.\n\nA Knowing the value of f(x) at a single value of x cannot hope to force the integral to be 0;\n  consider, for example, the quadratic f(x) = (x − 2)2\n\nB Likewise, knowing the value of f(x) at the endpoints is not sufficient; consider, for example,\n  the quadratic f(x) = (x − 1)(x − 3)\n\nC This says that the function is odd: the values of f(x) for negative values of x match those for\n  positive values of x. But it gives no control over the values of f(x) between x = 1 and x = 3,\n  R 3 it cannot be a sufficient condition. For example, f(x) = x satisfies f(−x) = −f(x), but\n  so\n   1 x dx > 0\n\n\nSo it is one of D and E, both of which look complicated. E looks marginally easier to deal\nwith, as x − 2 = −(2 − x). But that means that if we write y = 2 − x, condition E becomes\nf(−y) = −f(y), which is exactly the same as condition C. So condition E is not sufficient.\nBy elimination, therefore, the correct answer must be condition D.\nLet us show that D is, indeed, sufficient. It would help to see what is going on if we write x + 2\nas 2 + x, so the condition becomes f(2 + x) = −f(2 − x). If we take 0 < x ⩽ 1, this shows that\nthere is rotational symmetry about the point (2, 0):\n\n\n\n                                                               x\n                                  2−a          2        2+a\n\n\n\nAnd when x = 0, we get f(2) = −f(2) so f(2) = 0\nSo the graph of y = f(x) itself might look like this:\n\n\n\n                                                               x\n                                               2\n\n\n                                                                                  R2\nSince the graph of y = f(x) has rotational symmetry about (2, 0), the integrals 1 f(x) dx and\nR3                                                                             R3\n 2 f(x) dx will be negative of each other, and so condition D is sufficient for 1 f(x) dx = 0.\n\n\n\n\nVersion 1.0, April 2019                                                                   Page 12\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

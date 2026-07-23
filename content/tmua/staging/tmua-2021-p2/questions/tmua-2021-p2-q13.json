@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13   A region R in the (x, y)-plane is deﬁned by the simultaneous inequalities\n\n                                           y−x<3\n\n                                          y − x2 < 1\n\n\n     Which of the following statements is/are true for every point in R ?\n\n         I    −1 < x < 2\n         II   (y − x)(y − x2 ) < 3\n         III y < 5\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                            15"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A region R in the (x, y)-plane is deﬁned by the simultaneous inequalities\n\n                                           y−x<3\n\n                                          y − x2 < 1\n\n\n     Which of the following statements is/are true for every point in R ?\n\n         I    −1 < x < 2\n         II   (y − x)(y − x2 ) < 3\n         III y < 5"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Manipulating inequalities algebraically requires care. For example, we cannot (in general) mul-\ntiply two inequalities together and obtain a valid inequality (which is what statement II has\ndone). Neither can we subtract two inequalities (which is where statement I comes from).\nIn this case, one approach is to sketch the region R described by the pair of inequalities and then\ndetermine whether the inequalities in statements I–III are satisfied in the whole of R. Another\napproach is to search for counterexamples for each statement, that is, values of x and y that do\nnot satisfy the statement but do satisfy the original inequalities. This, however, might be harder\nto do, and if the inequalities are true, it may take a while to discover this. So let us sketch the\ngiven inequalities.\nThe inequality y − x < 3 can be rearranged as y < x + 3, so it is the region below y = x + 3.\nSimilarly, y − x2 < 1 can be rearranged as y < x2 + 1, so it is the region below the quadratic\ny = x2 + 1. The region R is therefore the shaded area shown here (excluding the boundaries):\n\n                                                  y\n\n\n\n\n                                              3\n\n                                              1\n                                                             x\n                                              0\n\n\n\nWe can now consider the three statements.\n\nI    It is clear that this is not true in general, as the region R extends in all directions. For\n     example, the point (10, 0) lies in R (it is easy to check that this satisfies the original\n     inequalities: 0 − 10 < 3 and 0 − 102 < 1) but x = 10 does not satisfy −1 < x < 2.\n\nII   If we take x = 0, the inequality becomes y 2 < 3, but (0, −2) is in R and (−2)2 = 4. So this\n     statement is not true for all points in R.\n\nIII We could take, for example, (6, 6) as a point in R with y ≥ 5, so this statement is not true\n    in general.\n\nThe correct option is therefore A.\n\n\n\n\nVersion 1.0, March 2022                                                                    Page 16"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        16
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

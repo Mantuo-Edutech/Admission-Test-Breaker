@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-07-19",
+  "publicationPolicy": {
+    "defaultDelivery": "link_only",
+    "reason": "Official UAT-UK and UCAT materials require permission for commercial republication. This registry records provenance without copying source files into the public web bundle."
+  },
+  "sources": [
+    {
+      "id": "uat-2027-candidate-handbook",
+      "exam": "shared",
+      "kind": "candidate_handbook",
+      "title": "UAT-UK Candidate Handbook — 2027 Entry",
+      "publisher": "UAT-UK",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/26111813/Candidate-Handbook-2027-Entry.pdf",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "uat-pearson-specimen-sample-tests",
+      "exam": "shared",
+      "kind": "interactive_practice",
+      "title": "UAT-UK Specimen and Sample Tests",
+      "publisher": "Pearson VUE",
+      "url": "https://www.pearsonvue.com/us/en/uatuk.html",
+      "delivery": "external_interactive",
+      "rightsStatus": "link_only"
+    },
+    {
+      "id": "tmua-2027-specification",
+      "exam": "tmua",
+      "kind": "specification",
+      "title": "TMUA Content Specification",
+      "publisher": "UAT-UK",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "tmua-notes-mathematics-2026",
+      "exam": "tmua",
+      "kind": "official_guide",
+      "title": "Notes on Mathematics for TMUA and ESAT Mathematics 2",
+      "publisher": "UAT-UK",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103537/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "tmua-notes-logic-proof-2025",
+      "exam": "tmua",
+      "kind": "official_guide",
+      "title": "Notes on Logic and Proof",
+      "publisher": "UAT-UK",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/06/25160507/Notes_on_Logic_and_Proof_June2025.pdf",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "tmua-official-archive",
+      "exam": "tmua",
+      "kind": "past_paper_archive",
+      "title": "TMUA Official Past Paper Archive",
+      "publisher": "UAT-UK",
+      "url": "https://esat-tmua.ac.uk/tmua-preparation-materials/",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "esat-2027-specification",
+      "exam": "esat",
+      "kind": "specification",
+      "title": "ESAT Content Specification — October 2026 and January 2027",
+      "publisher": "UAT-UK",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165424/ESAT_Content_Specification.pdf",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "esat-official-guides-and-archive",
+      "exam": "esat",
+      "kind": "official_guide",
+      "title": "ESAT Module Guides and ENGAA/NSAA Archive",
+      "publisher": "UAT-UK",
+      "url": "https://esat-tmua.ac.uk/esat-preparation-materials/",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "tara-2027-specification",
+      "exam": "tara",
+      "kind": "specification",
+      "title": "TARA Content Specification — October 2026 and January 2027",
+      "publisher": "UAT-UK",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/08142350/TARA_Content_Specification.pdf",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "tara-question-guide-2026",
+      "exam": "tara",
+      "kind": "official_guide",
+      "title": "TARA Question Guide",
+      "publisher": "UAT-UK",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/08142344/TARA_Question_Guide.pdf",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "tara-official-archive",
+      "exam": "tara",
+      "kind": "past_paper_archive",
+      "title": "TARA Preparation Materials and BMAT/TSA Archive",
+      "publisher": "UAT-UK",
+      "url": "https://esat-tmua.ac.uk/tara-preparation-materials/",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "ucat-2026-essentials",
+      "exam": "ucat",
+      "kind": "candidate_handbook",
+      "title": "UCAT Essentials — 2026",
+      "publisher": "UCAT Consortium",
+      "url": "https://www.ucat.ac.uk/about-ucat/ucat-essentials/",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "ucat-2026-format-scoring",
+      "exam": "ucat",
+      "kind": "specification",
+      "title": "UCAT Test Format and Scoring",
+      "publisher": "UCAT Consortium",
+      "url": "https://www.ucat.ac.uk/about-ucat/test-format-and-scoring/",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "ucat-official-preparation",
+      "exam": "ucat",
+      "kind": "official_guide",
+      "title": "UCAT Official Preparation Resources",
+      "publisher": "UCAT Consortium",
+      "url": "https://www.ucat.ac.uk/prepare/preparation-resources/",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "ucat-question-banks-practice-tests",
+      "exam": "ucat",
+      "kind": "interactive_practice",
+      "title": "UCAT Practice Tests and Question Banks",
+      "publisher": "UCAT Consortium",
+      "url": "https://www.ucat.ac.uk/prepare/practice-tests/",
+      "delivery": "external_interactive",
+      "rightsStatus": "link_only"
+    },
+    {
+      "id": "gdc-standards-for-the-dental-team",
+      "exam": "ucat",
+      "kind": "professional_standards",
+      "title": "Standards for the Dental Team",
+      "publisher": "General Dental Council",
+      "url": "https://www.gdc-uk.org/standards-guidance/standards-and-guidance/standards-for-the-dental-team",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "lnat-test-format",
+      "exam": "lnat",
+      "kind": "specification",
+      "title": "LNAT Test Format",
+      "publisher": "LNAT Consortium",
+      "url": "https://lnat.ac.uk/what-is-lnat/test-format/",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "lnat-official-preparation",
+      "exam": "lnat",
+      "kind": "official_guide",
+      "title": "LNAT How to Prepare",
+      "publisher": "LNAT Consortium",
+      "url": "https://lnat.ac.uk/how-to-prepare/",
+      "delivery": "link_only",
+      "rightsStatus": "permission_required_for_commercial_republication"
+    },
+    {
+      "id": "lnat-practice-test",
+      "exam": "lnat",
+      "kind": "interactive_practice",
+      "title": "LNAT Official Practice Test",
+      "publisher": "LNAT Consortium",
+      "url": "https://lnat.ac.uk/how-to-prepare/practice-test/",
+      "delivery": "external_interactive",
+      "rightsStatus": "link_only"
+    }
+  ]
+}

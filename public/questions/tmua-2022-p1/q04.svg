@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" role="img" aria-labelledby="title desc">
+  <title id="title">Two similar circular sectors</title>
+  <desc id="desc">The smaller sector has radius r and arc length 6. The larger sector has radius r plus 3.</desc>
+  <g fill="none" stroke="#252137" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path d="M100 210 L210 76 A142 142 0 0 1 258 210 Z"/>
+    <path d="M424 210 L590 36 A240 240 0 0 1 700 210 Z"/>
+  </g>
+  <g fill="#252137" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-style="italic">
+    <text x="125" y="140">r</text>
+    <text x="232" y="126">6</text>
+    <text x="475" y="130">r + 3</text>
+  </g>
+</svg>

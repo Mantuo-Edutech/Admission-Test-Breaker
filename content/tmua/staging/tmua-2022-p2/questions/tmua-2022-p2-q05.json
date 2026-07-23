@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q05",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 5,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "5   A straight line L passes through (1, 2).\n\n    Let P be the statement\n\n              if the y-intercept of L is negative, then the x-intercept of L is positive.\n\n    Which of the following statements must be true?\n\n          I      P\n\n          II     the converse of P\n\n          III    the contrapositive of P\n\n    A   none of them\n\n    B   I only\n\n    C   II only\n\n    D   III only\n\n    E   I and II only\n\n    F   I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                                      7"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A straight line L passes through (1, 2).\n\n    Let P be the statement\n\n              if the y-intercept of L is negative, then the x-intercept of L is positive.\n\n    Which of the following statements must be true?\n\n          I      P\n\n          II     the converse of P\n\n          III    the contrapositive of P"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "I    Let us sketch a line through (1, 2) with a negative y-intercept:\n\n                                                      y\n\n\n                                                  2\n                                                                 x\n                                                          1\n\n\n\n\n     It is clear from this sketch that if the line has a negative y-intercept, it must have a positive\n     x-intercept. (A more formal proof goes as follows: since y < 0 when x = 0 and y > 0 when\n     x = 1, there must be some value of x with 0 < x < 1 where y = 0. Therefore the x-intercept\n     must lie between 0 and 1.)\n\nII   The converse of P reads: If the x-intercept of L is positive, then the y-intercept of L is\n     negative. This is the case if the x-intercept is between 0 and 1, as in the previous sketch,\n     but if the x-intercept is greater than 1, this is no longer true:\n\n                                                      y\n\n\n                                                  2\n                                                                 x\n                                                          1\n\n\n\n\n     So the converse of P is false.\n\nIII The contrapositive of P has the same truth value as P itself, so the contrapositive of P is\n    true.\n\nTherefore only I and III are true, and the correct answer is option F.\n\n\n\n\nVersion 1.0, July 2023                                                                         Page 7"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        7
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

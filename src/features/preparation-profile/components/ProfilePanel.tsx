@@ -17,6 +17,8 @@ interface ProfilePanelProps {
   profile: PreparationProfile | null;
   now: () => Date;
   onSave(profile: PreparationProfile): Promise<{ persisted: boolean }>;
+  onSaved?(profile: PreparationProfile): void;
+  browseHref?: string;
 }
 
 const experienceOptions: readonly {
@@ -40,7 +42,12 @@ function selectionMap(profile: PreparationProfile | null): Record<string, string
 }
 
 function systemLabel(system: CurriculumSystemId): string {
-  return system === "caie" ? "CAIE" : "Pearson Edexcel IAL";
+  return {
+    caie: "CAIE",
+    "pearson-ial": "Pearson Edexcel IAL",
+    ib: "IB Diploma Programme",
+    ap: "AP / US Curriculum",
+  }[system];
 }
 
 function experienceLabel(experience: PreparationExperience): string {
@@ -52,6 +59,8 @@ export function ProfilePanel({
   profile,
   now,
   onSave,
+  onSaved,
+  browseHref,
 }: ProfilePanelProps) {
   const [currentProfile, setCurrentProfile] = useState(profile);
   const [editing, setEditing] = useState(profile === null);
@@ -163,6 +172,7 @@ export function ProfilePanel({
       setCurrentProfile(nextProfile);
       setEditing(false);
       setError(null);
+      onSaved?.(nextProfile);
     } finally {
       setSaving(false);
     }
@@ -173,8 +183,8 @@ export function ProfilePanel({
       <section className="profile-panel profile-panel--summary" aria-labelledby="profile-summary-title">
         <div className="profile-panel__index" aria-hidden="true">01</div>
         <div className="profile-panel__summary-main">
-          <p className="profile-panel__kicker">YOUR STARTING POINT</p>
-          <h2 id="profile-summary-title">你的 TMUA 准备档案</h2>
+          <p className="profile-panel__kicker">已保存</p>
+          <h2 id="profile-summary-title">你的课程信息</h2>
           <dl className="profile-summary-facts">
             <div><dt>申请年份</dt><dd>{currentProfile.entryCycle} Entry</dd></div>
             <div><dt>课程体系</dt><dd>{systemLabel(currentProfile.curriculumSystem)}</dd></div>
@@ -201,8 +211,8 @@ export function ProfilePanel({
         </div>
         <aside className="profile-panel__evidence" aria-label="准备证据状态">
           <BookMarked aria-hidden="true" />
-          <p><strong>课程覆盖</strong><span>等待知识映射</span></p>
-          <p><strong>实战准备度</strong><span>等待诊断证据</span></p>
+          <p><strong>知识覆盖</strong><span>可以查看</span></p>
+          <p><strong>练习表现</strong><span>完成练习后生成</span></p>
           <button className="profile-edit-button" type="button" onClick={beginEditing}>
             <Pencil aria-hidden="true" />修改档案
           </button>
@@ -217,14 +227,16 @@ export function ProfilePanel({
     <section className="profile-panel" aria-labelledby="profile-panel-title">
       <div className="profile-panel__index" aria-hidden="true">01</div>
       <div className="profile-panel__intro">
-        <p className="profile-panel__kicker">START WITH YOUR CONTEXT</p>
-        <h2 id="profile-panel-title">先建立你的 TMUA 准备档案</h2>
-        <p>告诉我们你正在学什么、已经练到哪里。之后的知识展示和练习建议才有可靠的起点。</p>
+        <p className="profile-panel__kicker">课程背景</p>
+        <h2 id="profile-panel-title">告诉我们你正在学什么</h2>
+        <p>系统会根据这些信息对照 TMUA 知识要求，不会把课程覆盖当作能力分数。</p>
         <p className="profile-panel__privacy">
           <ShieldCheck aria-hidden="true" />
           档案当前只保存在这台设备；创建正式账户前不会上传。
         </p>
-        <a className="profile-panel__skip" href="#tmua-content">先浏览 TMUA 内容</a>
+        {browseHref !== undefined && (
+          <a className="profile-panel__skip" href={browseHref}>先浏览 TMUA 内容</a>
+        )}
       </div>
 
       <form className="profile-form" onSubmit={(event) => void submit(event)}>
@@ -240,7 +252,7 @@ export function ProfilePanel({
                   checked={entryCycle === cycle}
                   onChange={() => setEntryCycle(cycle)}
                 />
-                <span><strong>{cycle} Entry</strong><small>{cycle === "2027" ? "当前主要资料版本" : "提前建立准备档案"}</small></span>
+                <span><strong>{cycle} Entry</strong><small>{cycle === "2027" ? "当前主要资料版本" : "提前填写课程信息"}</small></span>
               </label>
             ))}
           </div>
@@ -266,6 +278,24 @@ export function ProfilePanel({
                 onChange={() => chooseSystem("pearson-ial")}
               />
               <span><strong>Pearson Edexcel IAL</strong><small>International Advanced Level</small></span>
+            </label>
+            <label className="profile-choice">
+              <input
+                type="radio"
+                name="curriculum-system"
+                checked={system === "ib"}
+                onChange={() => chooseSystem("ib")}
+              />
+              <span><strong>IB Diploma Programme</strong><small>AA / AI · SL / HL</small></span>
+            </label>
+            <label className="profile-choice">
+              <input
+                type="radio"
+                name="curriculum-system"
+                checked={system === "ap"}
+                onChange={() => chooseSystem("ap")}
+              />
+              <span><strong>AP / US Curriculum</strong><small>Precalculus · Calculus AB / BC</small></span>
             </label>
           </div>
         </fieldset>
@@ -332,7 +362,7 @@ export function ProfilePanel({
 
         {error !== null && <p className="profile-form__error" role="alert">{error}</p>}
         <button className="button button--primary profile-form__submit" type="submit" disabled={saving}>
-          {saving ? "正在保存…" : "保存准备档案"}
+          {saving ? "正在保存…" : "保存并查看知识覆盖"}
         </button>
       </form>
     </section>

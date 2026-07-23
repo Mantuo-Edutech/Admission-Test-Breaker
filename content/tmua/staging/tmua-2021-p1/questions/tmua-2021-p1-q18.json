@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "18   The curve with equation\n                                       x = y 2 − 6y + 11\n\n     is rotated 90o clockwise about the point P to give the curve C.\n\n     P has x-coordinate −2 and y-coordinate 3.\n\n     What is the equation of C ?\n\n     A y = −x2 − 4x − 3\n\n     B y = −x2 − 4x − 5\n\n     C y = −x2 − 6x − 7\n\n     D y = −x2 − 6x − 11\n\n     E y=     x2 − 4x + 5\n\n     F y=     x2 + 4x + 3\n\n     G y=     x2 − 6x + 11\n\n     H y=     x2 + 6x + 7\n\n\n\n\n                                            \u0015\u0013"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The curve with equation\n                                       x = y 2 − 6y + 11\n\n     is rotated 90o clockwise about the point P to give the curve C.\n\n     P has x-coordinate −2 and y-coordinate 3.\n\n     What is the equation of C ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "y = −x2 − 4x − 3"
+    },
+    {
+      "label": "B",
+      "rawText": "y = −x2 − 4x − 5"
+    },
+    {
+      "label": "C",
+      "rawText": "y = −x2 − 6x − 7"
+    },
+    {
+      "label": "D",
+      "rawText": "y = −x2 − 6x − 11"
+    },
+    {
+      "label": "E",
+      "rawText": "y=     x2 − 4x + 5"
+    },
+    {
+      "label": "F",
+      "rawText": "y=     x2 + 4x + 3"
+    },
+    {
+      "label": "G",
+      "rawText": "y=     x2 − 6x + 11"
+    },
+    {
+      "label": "H",
+      "rawText": "y=     x2 + 6x + 7"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We should start by sketching the original curve. This is a quadratic in y. It does not factorise,\nbut we can complete the square:\n                                       x = (y − 3)2 + 2\nIt therefore has its vertex at y = 3, x = 2, and x ≥ 2 for all values of y. We can then sketch it:\n\n                                          y\n                                      6\n\n\n                                      4\n                                P\n                                                       (2, 3)\n                                      2\n\n                                                                              x\n                                −2        0        2            4         6\n\n\nThe vertex of the parabola is 4 units to the right of P .\nNow rotating this by 90◦ clockwise about P moves the vertex to 4 units below P , that is (−2, −1),\ngiving the following:\n\n                                               y\n                                           6\n\n\n                                           4\n                                     P\n                                                             (2, 3)\n                                           2\n\n                                                                                  x\n                             −4      −2        0         2            4       6\n\n                                          −2\n\n\n                                          −4\n\n\n\nThis curve then has equation y = −(x + 2)2 − 1, which we can expand to y = −x2 − 4x − 5\ngiving option B.\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 21"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        21
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

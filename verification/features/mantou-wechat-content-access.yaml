@@ -1,0 +1,59 @@
+schemaVersion: 1
+feature:
+  id: mantou-wechat-content-access
+  title: Mantou WeChat content-access handoff
+  status: partial
+  userOutcome: >-
+    A student can request the currently available TMUA mock or review-note
+    materials by opening Bingbing's WeChat QR code, while the interface states
+    that this handoff does not grant access to preparation or practice data.
+
+run:
+  packageScript: verify
+
+claims:
+  - id: accessible-qr-dialog
+    status: verified
+    statement: >-
+      Mock and review-note requests open an accessible dialog with Bingbing's
+      QR code, request-specific instructions, a mobile-friendly image download,
+      and a clear close action.
+    artifacts:
+      - public/brand/bingbing-wechat-qr.jpg
+      - src/features/service-bridge/components/WechatAccessDialog.tsx
+      - src/features/library/pages/LearningLibraryPage.tsx
+      - src/styles/practice.css
+      - tests/app/tmua-hub-page.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+
+  - id: separate-content-and-data-permissions
+    status: verified
+    statement: >-
+      The content-access handoff visibly states that it does not grant Bingbing
+      access to learner profiles, answers or training data, and it creates no
+      learning-data Grant.
+    artifacts:
+      - src/features/service-bridge/components/WechatAccessDialog.tsx
+      - docs/product/PRODUCT_CHARTER.md
+      - tests/app/tmua-hub-page.test.tsx
+    automatedChecks:
+      - verify:architecture
+      - test
+
+boundaries:
+  - WeChat remains the manual handoff for obtaining a code; the local app can now verify and redeem that code, but the cloud production project is not connected.
+  - The interface does not claim that every planned mock or review-note version is already available.
+  - No preparation profile, practice answer, timing event or learner identifier is sent by opening the dialog.
+  - Free published practice remains available without this verification.
+
+manualChecks:
+  - id: qr-scanning-and-responsive-review
+    status: pending
+    evidence: Verify QR scanning and dialog layout on desktop, tablet and phone before production release.
+    viewports:
+      - 1440x900
+      - 768x1024
+      - 390x844

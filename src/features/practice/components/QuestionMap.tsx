@@ -1,30 +1,32 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { Grid2X2, X } from "lucide-react";
 import type { PracticeSession } from "../domain/session.js";
-import { questionIdForNumber, TMUA_2023_P1_QUESTION_COUNT } from "../domain/session.js";
+import { questionIdForNumber } from "../domain/session.js";
 
 interface QuestionMapProps {
   session: PracticeSession;
+  totalQuestions: number;
+  answeredQuestionIds?: ReadonlySet<string>;
   onSelect(questionNumber: number): void;
 }
 
-function questionState(session: PracticeSession, questionNumber: number) {
-  const questionId = questionIdForNumber(questionNumber);
+function questionState(session: PracticeSession, questionNumber: number, answeredQuestionIds?: ReadonlySet<string>) {
+  const questionId = questionIdForNumber(questionNumber, session.paperId);
   return {
     current: session.currentQuestion === questionNumber,
-    answered: session.answers[questionId] !== undefined,
+    answered: answeredQuestionIds?.has(questionId) ?? session.answers[questionId] !== undefined,
     marked: session.markedQuestionIds.includes(questionId),
   };
 }
 
-export function QuestionMap({ session, onSelect }: QuestionMapProps) {
+export function QuestionMap({ session, totalQuestions, answeredQuestionIds, onSelect }: QuestionMapProps) {
   return (
     <nav className="question-map" aria-label="题目导航">
       {Array.from(
-        { length: TMUA_2023_P1_QUESTION_COUNT },
+        { length: totalQuestions },
         (_, index) => index + 1,
       ).map((questionNumber) => {
-        const state = questionState(session, questionNumber);
+        const state = questionState(session, questionNumber, answeredQuestionIds);
         const stateLabel = [
           state.current ? "当前" : null,
           state.answered ? "已作答" : "未作答",
@@ -55,7 +57,7 @@ export function QuestionMap({ session, onSelect }: QuestionMapProps) {
   );
 }
 
-export function MobileQuestionMap({ session, onSelect }: QuestionMapProps) {
+export function MobileQuestionMap({ session, totalQuestions, answeredQuestionIds, onSelect }: QuestionMapProps) {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
@@ -80,7 +82,7 @@ export function MobileQuestionMap({ session, onSelect }: QuestionMapProps) {
           </div>
           <Dialog.Close asChild>
             <div>
-              <QuestionMap session={session} onSelect={onSelect} />
+              <QuestionMap session={session} totalQuestions={totalQuestions} answeredQuestionIds={answeredQuestionIds} onSelect={onSelect} />
             </div>
           </Dialog.Close>
         </Dialog.Content>

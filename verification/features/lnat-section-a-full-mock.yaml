@@ -1,0 +1,70 @@
+schemaVersion: 1
+feature:
+  id: lnat-section-a-full-mock
+  title: Original complete-structure LNAT Section A mock
+  status: partial
+  userOutcome: >-
+    A student with an LNAT profile can complete twelve original argumentative
+    passages and forty-two four-option questions in one 95-minute native session,
+    with private autosave, raw results and learning-history evidence.
+
+run:
+  packageScript: verify:lnat-full-mock
+
+claims:
+  - id: complete-current-section-a-structure
+    status: verified
+    statement: >-
+      The Mantou-original dataset contains 12 passages and 42 four-option questions,
+      split into six four-question and six three-question groups, with a 95-minute
+      timer. It uses SHA-pinned local LNAT Guide and Practice Test assets for scope
+      and grouping only, never for official item content.
+    artifacts:
+      - content/lnat/original-practice/section-a-full-mock-v1.json
+      - src/features/practice/content/lnat-section-a-full-mock.ts
+      - tests/features/practice/content/lnat-section-a-full-mock.test.ts
+    automatedChecks:
+      - verify:lnat-full-mock
+      - verify:official-research
+      - typecheck
+
+  - id: full-mock-native-delivery
+    status: verified
+    statement: >-
+      The complete dataset loads only on its practice route, then reuses the
+      responsive passage-and-question interface, profile gate, timer, autosave,
+      factual result and private learning-record pipeline without exposing source PDFs.
+    artifacts:
+      - src/features/practice/content/practice-paper-registry.ts
+      - src/features/practice/pages/PracticeRoutePage.tsx
+      - src/features/practice/pages/PracticePage.tsx
+      - tests/e2e/lnat-section-a-full-mock.spec.ts
+    automatedChecks:
+      - verify:lnat-full-mock
+      - verify:web-performance
+      - build
+
+boundaries:
+  - This is Mantou-original teaching-preview content, not an official LNAT paper or an official-equivalent difficulty claim.
+  - Results report only the raw number correct out of 42; no admission benchmark, percentile or official conversion is inferred.
+  - Official practice items remain internal research assets pending separate republication-rights review and are not delivered to the browser.
+  - Worked explanations, calibration and independent LNAT teacher sign-off remain separate release gates.
+
+manualChecks:
+  - id: independent-lnat-full-mock-review
+    status: pending
+    evidence: A separate LNAT teacher and English-language reviewer must verify every passage, construct, distractor, answer key and difficulty spread.
+    viewports:
+      - content
+  - id: full-mock-student-timing-pilot
+    status: pending
+    evidence: Real students must complete the 95-minute session so passage load, pacing and interpretation can be calibrated without claiming official equivalence.
+    viewports:
+      - student
+  - id: full-mock-browser-device-review
+    status: pending
+    evidence: Desktop, tablet and phone review must confirm passage navigation, option selection, autosave and no horizontal overflow across all 42 questions.
+    viewports:
+      - desktop
+      - tablet
+      - phone

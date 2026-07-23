@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "19   A polygon has n vertices, where n  3. It has the following properties:\n\n         •   Every vertex of the polygon lies on the circumference of a circle C.\n         •   The centre of the circle C is inside the polygon.\n         •   The radii from the centre of the circle C to the vertices of the polygon cut the polygon\n             into n triangles of equal area.\n\n     For which values of n are these properties sufficient to deduce that the polygon is regular?\n\n     A   no values of n\n\n     B   n ൌ 3 only\n\n     C   n ൌ 3 and n ൌ 4 only\n\n     D   n ൌ 3 and n  5 only\n\n     E   all values of n\n\n\n\n\n                                                  21"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A polygon has n vertices, where n  3. It has the following properties:\n\n         •   Every vertex of the polygon lies on the circumference of a circle C.\n         •   The centre of the circle C is inside the polygon.\n         •   The radii from the centre of the circle C to the vertices of the polygon cut the polygon\n             into n triangles of equal area.\n\n     For which values of n are these properties sufficient to deduce that the polygon is regular?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "no values of n"
+    },
+    {
+      "label": "B",
+      "rawText": "n ൌ 3 only"
+    },
+    {
+      "label": "C",
+      "rawText": "n ൌ 3 and n ൌ 4 only"
+    },
+    {
+      "label": "D",
+      "rawText": "n ൌ 3 and n  5 only"
+    },
+    {
+      "label": "E",
+      "rawText": "all values of n"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We sketch a part of the polygon with the triangles described in the question:\n\n\n\n\n                                                  θ\n\nSuppose the angle of one of the triangles is θ, as shown. Then the area of the triangle is given\nby 12 r2 sin θ where r is the radius of the circle (using the formula A = 12 ab sin C).\nSince r is the same for each of the triangles, all the triangles will have equal area if and only if\nsin θ is the same for each triangle. This will certainly be the case if the polygon is regular, but\nwe have to determine if this can be true in any other situation.\nIf two of the triangles have angles at the centre of the circle of θ and φ, then sin φ = sin θ if and\nonly if φ = θ or φ = π − θ. Can we have the latter possibility? If so, it would mean we have\nsome angles being θ and some being π − θ.\nSuppose then that θ is acute and π − θ is obtuse. (We cannot have a reflex angle as the centre\nof the circle lies inside the polygon, and if θ is a right angle, then π − θ = θ.) Suppose further\nthat k of the angles of the polygon triangles equal π − θ and the remaining n − k equal θ. Then\nthe sum of these triangle angles is given by\n\n                                     (n − k)θ + k(π − θ) = 2π\n\nsince they form a whole circle. We can rearrange this to (n − 2k)θ = (2 − k)π and hence\n\n                                                (2 − k)π\n                                           θ=            .\n                                                 n − 2k\n\nThere can be at most three obtuse angled triangles (as four would be more than a whole circle),\nso let’s try k = 1, k = 2 and k = 3 in turn.\n                          π\nIf k = 1, we have θ = n−2   . It looks as though this will work for every n, but we have to be\na little careful as we need θ to be acute. When n = 3, we get θ = π, which is not allowed.\nWhen n = 4, we get θ = π2 , which is again not allowed. When n > 4, θ < π2 , so this does work.\nTherefore when n ≥ 5, it is possible for the conditions to be satisfied but for the polygon not to\nbe regular.\n                                   0\nNow consider k = 2, giving θ = n−4    . We only need to consider n = 3 and n = 4, as we have\ndealt with n ≥ 5 above. This is zero when n = 3, so it does not work for a triangle. When n = 4,\nthis formula is not meaningful (it gives 00 ). We can instead go back to the original equation\n(n − 2k)θ = (2 − k)π, which becomes 0 = 0 in this case, meaning that it works for any value\nof θ. And indeed, this gives two angles of θ and two of π − θ, so we get a non-regular polygon\nwith equal area triangles. The simplest example is a non-square rectangle.\nWe are left with the case k = 3 to consider. When n = 3, there would be no acute angles\nand three obtuse ones, and the formula gives θ = −π   π\n                                                 −3 = 3 . And indeed, a triangle with three\n\n\n\nVersion 1.0, July 2023                                                                      Page 21\n\f\nTest of Mathematics for University Admission, 2022 Paper 2 Solutions\n\n\nobtuse angles of π3 is an equilateral triangle satisfying the conditions. Therefore the only triangle\n(n = 3) satisfying the conditions is regular.\nWe have thus been able to construct non-regular polygons satisfying the conditions for every\nn ≥ 4, but not for n = 3. Hence the correct answer is option B.\n\n\n\n\nVersion 1.0, July 2023                                                                      Page 22"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        21,
+        22
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "8   The sum to inﬁnity of a geometric progression is 6.\n\n    The sum to inﬁnity of the squares of each term in the progression is 12.\n\n    Find the sum to inﬁnity of the cubes of each term in the progression.\n\n    A 8\n\n    B 18\n\n    C 24\n        216\n    D    7\n\n    E   72\n\n    F   216\n\n\n\n\n                                           10"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The sum to inﬁnity of a geometric progression is 6.\n\n    The sum to inﬁnity of the squares of each term in the progression is 12.\n\n    Find the sum to inﬁnity of the cubes of each term in the progression."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "8"
+    },
+    {
+      "label": "B",
+      "rawText": "18"
+    },
+    {
+      "label": "C",
+      "rawText": "24\n        216"
+    },
+    {
+      "label": "D",
+      "rawText": "7"
+    },
+    {
+      "label": "E",
+      "rawText": "72"
+    },
+    {
+      "label": "F",
+      "rawText": "216"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let us write the terms of the GP (geometric progression) as a, ar, ar2 and so on. Then we are\ntold that\n                                                          a\n                             S∞ = a + ar + ar2 + · · · =       =6                         (1)\n                                                         1−r\nWe can rearrange this final equation to a = 6 − 6r if we wish to.\nThe squares of each term are a2 , a2 r2 , a2 r4 , a2 r6 and so on. These themselves form a GP with\nfirst term a2 and common ratio r2 . Therefore, given that their sum is 12, we have for this GP\n\n                                                                a2\n                          S∞ = a2 + a2 r2 + a2 r4 + · · · =          = 12\n                                                              1 − r2\n\n                                            a2\nWe can write this last equation as                   = 12\n                                      (1 + r)(1 − r)\nBut we can now substitute in equation (1) to give\n                                        \u0012       \u0013\n                                            a\n                                      6           = 12\n                                          1+r\n         a\nso that     = 2, or a = 2 + 2r\n       1+r\nThus we have simultaneous equations for a and r:\n\n                                             a = 6 − 6r\n                                             a = 2 + 2r\n\nSubtracting these gives 4 − 8r = 0, so r = 21 and a = 3\nWe can now work out the sum to infinity of the cubes: the sequence of terms becomes a3 , a3 r3 ,\na3 r6 and so on, which as before is a GP; this time the first term is a3 and the common ratio is\nr3 . Hence the sum to infinity is\n\n                                       a3        33        27    216\n                               S∞ =       3\n                                            =       1    =  7  =\n                                      1−r     1 − ( 2 )3   (8)    7\n\nand the correct answer is D.\n\n\n\n\nVersion 1.0, April 2019                                                                   Page 10\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

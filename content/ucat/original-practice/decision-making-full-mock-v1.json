@@ -1,0 +1,479 @@
+{
+  "schemaVersion": 1,
+  "id": "ucat-decision-making-full-mock-v1",
+  "exam": "UCAT",
+  "edition": "Decision Making Full Mock · Original v1",
+  "sectionId": "decision-making",
+  "sectionLabel": "Decision Making Full Mock",
+  "sectionLabelZh": "决策判断 · 满托原创完整模考",
+  "durationMinutes": 37,
+  "deliveryMode": "structured",
+  "responseMode": "choice",
+  "calculator": "basic",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本练习依据 UCAT 公开分测验结构、评分与工具范围独立命题，不复制或改写官方 Question Bank、Practice Test、图表或解析。",
+  "sourceAnchors": [
+    {
+      "id": "ucat-format-snapshot",
+      "localPath": "content/official/raw/pages/ucat-format.html",
+      "sha256": "9aa4a93bddcc62bf53c6196f2b38ac40240a1f781154590c772c68f179d52dbf",
+      "usedFor": "current 35-question, 37-minute Decision Making structure and raw partial-credit boundary only"
+    },
+    {
+      "id": "ucat-tools-snapshot",
+      "localPath": "content/official/raw/pages/ucat-tools.html",
+      "sha256": "a659bedc40b1a603cb755e75121a19a633889d2aab62b66d62378e804f7b8c7c",
+      "usedFor": "basic calculator availability boundary only"
+    }
+  ],
+  "passages": [
+    {
+      "id": "clinic-rota",
+      "title": "Clinic rota",
+      "paragraphs": [
+        "Five staff members — A, B, C, D and E — each cover one weekday from Monday to Friday. A works before C. C works on Friday. B works immediately after D. E works neither Monday nor Friday."
+      ]
+    },
+    {
+      "id": "mobile-clinic-data",
+      "title": "Mobile clinic activity",
+      "paragraphs": [
+        "Travel cost is the total travel expenditure for the visits shown. Follow-up rate is follow-ups divided by visits."
+      ],
+      "table": {
+        "caption": "Visits, follow-ups, travel cost and satisfaction",
+        "headers": ["Route", "Visits", "Follow-ups", "Travel cost", "Satisfaction"],
+        "rows": [
+          ["North", "120", "30", "£600", "84%"],
+          ["South", "150", "45", "£750", "78%"],
+          ["West", "90", "18", "£540", "90%"]
+        ]
+      }
+    },
+    {
+      "id": "project-selection",
+      "title": "Project selection",
+      "paragraphs": [
+        "A panel selects exactly three of six projects: J, K, L, M, N and P. If J is selected, K is selected. Exactly one of L and M is selected. N cannot be selected with K. P can be selected only if M is selected."
+      ]
+    },
+    {
+      "id": "training-trial",
+      "title": "Training trial",
+      "paragraphs": [
+        "Improvement and adverse-event rates are calculated within each treatment group."
+      ],
+      "table": {
+        "caption": "Trial participants and outcomes",
+        "headers": ["Treatment", "Participants", "Improved", "Adverse events"],
+        "rows": [
+          ["A", "80", "56", "8"],
+          ["B", "120", "72", "6"],
+          ["C", "100", "65", "10"]
+        ]
+      }
+    },
+    {
+      "id": "warehouse-routes",
+      "title": "Warehouse routes",
+      "paragraphs": [
+        "Delay minutes are the total recorded delay across all deliveries on that route."
+      ],
+      "table": {
+        "caption": "Route distance, deliveries and delays",
+        "headers": ["Route", "Distance", "Deliveries", "Delay minutes"],
+        "rows": [
+          ["A", "120 km", "30", "18"],
+          ["B", "150 km", "50", "25"],
+          ["C", "90 km", "20", "8"]
+        ]
+      }
+    },
+    {
+      "id": "emergency-sites",
+      "title": "Emergency department summary",
+      "paragraphs": [
+        "Return rate is returns within 72 hours divided by attendances."
+      ],
+      "table": {
+        "caption": "Attendances, admissions, waits and returns",
+        "headers": ["Site", "Attendances", "Admitted", "Median wait", "Returned"],
+        "rows": [
+          ["East", "200", "50", "42 min", "8"],
+          ["Central", "240", "72", "55 min", "12"],
+          ["Harbour", "160", "32", "38 min", "4"]
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passageId": "clinic-rota",
+      "prompt": "Which order, from Monday to Friday, satisfies all the rules?",
+      "options": ["A, D, B, E, C", "D, A, B, E, C", "A, E, B, D, C", "E, D, B, A, C"],
+      "correctAnswer": "A",
+      "knowledgeTags": ["ucat-dm-ordering"],
+      "skillTags": ["constraints", "ordering"]
+    },
+    {
+      "number": 2,
+      "passageId": "clinic-rota",
+      "prompt": "If E works on Tuesday, who must work on Monday?",
+      "options": ["A", "B", "C", "D"],
+      "correctAnswer": "A",
+      "knowledgeTags": ["ucat-dm-deduction"],
+      "skillTags": ["conditional-deduction", "must-be-true"]
+    },
+    {
+      "number": 3,
+      "passageId": "clinic-rota",
+      "prompt": "If D works on Monday, which two staff members occupy Wednesday and Thursday, in either order?",
+      "options": ["A and B", "A and E", "B and E", "D and E"],
+      "correctAnswer": "B",
+      "knowledgeTags": ["ucat-dm-ordering"],
+      "skillTags": ["constraints", "pair-deduction"]
+    },
+    {
+      "number": 4,
+      "passageId": "mobile-clinic-data",
+      "prompt": "Which route has the highest travel cost per visit?",
+      "options": ["North", "South", "West", "North and South are jointly highest"],
+      "correctAnswer": "C",
+      "knowledgeTags": ["ucat-dm-data-inference"],
+      "skillTags": ["rate", "table-inference"]
+    },
+    {
+      "number": 5,
+      "passageId": "mobile-clinic-data",
+      "prompt": "For each statement, answer Yes if it follows from the table and No if it does not.",
+      "statements": [
+        { "id": "visits-total", "text": "The three routes record 360 visits in total.", "correctAnswer": "yes" },
+        { "id": "south-follow-up-rate", "text": "South has a follow-up rate of 30%.", "correctAnswer": "yes" },
+        { "id": "north-highest-satisfaction", "text": "North has the highest satisfaction percentage.", "correctAnswer": "no" },
+        { "id": "west-lower-cost", "text": "West has a lower travel cost per visit than North.", "correctAnswer": "no" },
+        { "id": "combined-follow-up-rate", "text": "Exactly 26% of all visits resulted in follow-up.", "correctAnswer": "no" }
+      ],
+      "knowledgeTags": ["ucat-dm-data-inference"],
+      "skillTags": ["five-statements", "table-inference"]
+    },
+    {
+      "number": 6,
+      "passageId": "mobile-clinic-data",
+      "prompt": "If North records 25% more visits with the same travel cost, what is its new travel cost per visit?",
+      "options": ["£4.00", "£4.50", "£5.00", "£6.25"],
+      "correctAnswer": "A",
+      "knowledgeTags": ["ucat-dm-data-inference"],
+      "skillTags": ["percentage-change", "rate"]
+    },
+    {
+      "number": 7,
+      "prompt": "A bag contains 5 red, 3 blue and 2 white counters. Two counters are drawn without replacement. What is the probability that both are the same colour?",
+      "options": ["7/45", "14/45", "1/3", "7/15"],
+      "correctAnswer": "B",
+      "knowledgeTags": ["ucat-dm-probability"],
+      "skillTags": ["without-replacement", "combinations"]
+    },
+    {
+      "number": 8,
+      "prompt": "In 2,000 people, 5% have a condition. A test detects 80% of those who have it and gives a false positive to 10% of those who do not. If one person tests positive, what is the probability that they have the condition?",
+      "options": ["4/27", "8/27", "2/5", "4/5"],
+      "correctAnswer": "B",
+      "knowledgeTags": ["ucat-dm-bayes-table"],
+      "skillTags": ["conditional-probability", "natural-frequencies"]
+    },
+    {
+      "number": 9,
+      "prompt": "A programme has a 60% chance of producing a £500 benefit and a 40% chance of producing a £200 loss. It always costs £100 to run. What is its expected net value?",
+      "options": ["£80", "£100", "£120", "£220"],
+      "correctAnswer": "C",
+      "knowledgeTags": ["ucat-dm-probability"],
+      "skillTags": ["expected-value", "risk"]
+    },
+    {
+      "number": 10,
+      "prompt": "All paramedics are trained. No trained person is uncertified. Some night staff are paramedics. Some certified people are volunteers. For each conclusion, answer Yes if it follows and No if it does not.",
+      "statements": [
+        { "id": "night-trained", "text": "Some night staff are trained.", "correctAnswer": "yes" },
+        { "id": "paramedic-certified", "text": "No paramedic is uncertified.", "correctAnswer": "yes" },
+        { "id": "night-not-uncertified", "text": "Some night staff are not uncertified.", "correctAnswer": "yes" },
+        { "id": "certified-volunteers", "text": "All certified people are volunteers.", "correctAnswer": "no" },
+        { "id": "volunteer-trained", "text": "Some volunteers are trained.", "correctAnswer": "no" }
+      ],
+      "knowledgeTags": ["ucat-dm-syllogisms"],
+      "skillTags": ["five-statements", "set-logic"]
+    },
+    {
+      "number": 11,
+      "prompt": "Should a hospital send automated appointment reminders by text message? Which is the strongest argument?",
+      "options": [
+        "No, because some people dislike receiving any text messages.",
+        "Yes, because a controlled reminder system could reduce avoidable missed appointments at low cost.",
+        "Yes, because every patient always reads every message immediately.",
+        "No, because technology should never be used in healthcare."
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["ucat-dm-strongest-argument"],
+      "skillTags": ["argument-strength", "relevance"]
+    },
+    {
+      "number": 12,
+      "prompt": "Should personal earbuds be prohibited in a sterile preparation area? Which is the strongest argument?",
+      "options": [
+        "No, because some earbuds are expensive.",
+        "Yes, because blocked hearing may prevent staff noticing safety instructions or alarms.",
+        "Yes, because all music reduces concentration in every person.",
+        "No, because workers should decide every workplace rule themselves."
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["ucat-dm-strongest-argument"],
+      "skillTags": ["argument-strength", "practical-consequence"]
+    },
+    {
+      "number": 13,
+      "prompt": "A six-week pilot of later pharmacy opening increased completed collections by 25% without increasing staffing. The pilot involved only one site. Which conclusion is best supported?",
+      "options": [
+        "Later opening will increase collections by exactly 25% at every pharmacy.",
+        "The pilot proves that staffing never affects collection rates.",
+        "The result justifies testing later opening at another site before wider adoption.",
+        "All pharmacies should change their hours immediately."
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["ucat-dm-deduction"],
+      "skillTags": ["evidence-limit", "supported-conclusion"]
+    },
+    {
+      "number": 14,
+      "prompt": "Of 180 students, 110 study biology, 90 study chemistry and 50 study both. How many study neither subject?",
+      "options": ["20", "30", "40", "50"],
+      "correctAnswer": "B",
+      "knowledgeTags": ["ucat-dm-venn-counting"],
+      "skillTags": ["sets", "inclusion-exclusion"]
+    },
+    {
+      "number": 15,
+      "prompt": "Among 70 volunteers, 42 speak French and 38 speak Spanish. What is the minimum possible number who speak both languages?",
+      "options": ["0", "8", "10", "28"],
+      "correctAnswer": "C",
+      "knowledgeTags": ["ucat-dm-venn-counting"],
+      "skillTags": ["set-bound", "minimum-overlap"]
+    },
+    {
+      "number": 16,
+      "prompt": "Of 200 applicants, 120 studied mathematics, 90 studied physics and 50 studied both. For each conclusion, answer Yes if it follows and No if it does not.",
+      "statements": [
+        { "id": "at-least-one", "text": "Exactly 160 applicants studied at least one of the two subjects.", "correctAnswer": "yes" },
+        { "id": "neither-thirty", "text": "Exactly 30 applicants studied neither subject.", "correctAnswer": "no" },
+        { "id": "exactly-one", "text": "Exactly 110 applicants studied only one of the two subjects.", "correctAnswer": "yes" },
+        { "id": "half-maths-physics", "text": "Half of the mathematics students also studied physics.", "correctAnswer": "no" },
+        { "id": "both-quarter", "text": "A randomly selected applicant has probability 1/4 of having studied both subjects.", "correctAnswer": "yes" }
+      ],
+      "knowledgeTags": ["ucat-dm-venn-counting"],
+      "skillTags": ["five-statements", "inclusion-exclusion"]
+    },
+    {
+      "number": 17,
+      "passageId": "project-selection",
+      "prompt": "Which group of projects could be selected?",
+      "options": ["J, K and L", "J, K and N", "L, M and N", "K, L and P"],
+      "correctAnswer": "A",
+      "knowledgeTags": ["ucat-dm-deduction"],
+      "skillTags": ["selection-constraints", "could-be-true"]
+    },
+    {
+      "number": 18,
+      "passageId": "project-selection",
+      "prompt": "If J is selected, which project cannot be selected?",
+      "options": ["K", "L", "M", "N"],
+      "correctAnswer": "D",
+      "knowledgeTags": ["ucat-dm-deduction"],
+      "skillTags": ["conditional-deduction", "exclusion"]
+    },
+    {
+      "number": 19,
+      "passageId": "project-selection",
+      "prompt": "If P is selected, which statement must be true?",
+      "options": ["J is selected", "K is selected", "L is selected", "M is selected"],
+      "correctAnswer": "D",
+      "knowledgeTags": ["ucat-dm-deduction"],
+      "skillTags": ["conditional-deduction", "must-be-true"]
+    },
+    {
+      "number": 20,
+      "prompt": "A fair six-sided die is rolled and a fair coin is tossed. What is the probability of rolling an even number and obtaining heads?",
+      "options": ["1/6", "1/4", "1/3", "1/2"],
+      "correctAnswer": "B",
+      "knowledgeTags": ["ucat-dm-probability"],
+      "skillTags": ["independent-events", "combined-probability"]
+    },
+    {
+      "number": 21,
+      "prompt": "Two independent checks fail with probabilities 0.10 and 0.20. What is the probability that at least one check fails?",
+      "options": ["0.02", "0.20", "0.28", "0.30"],
+      "correctAnswer": "C",
+      "knowledgeTags": ["ucat-dm-probability"],
+      "skillTags": ["complement", "independent-events"]
+    },
+    {
+      "number": 22,
+      "passageId": "training-trial",
+      "prompt": "For each statement, answer Yes if it follows from the table and No if it does not.",
+      "statements": [
+        { "id": "a-improvement", "text": "Treatment A has an improvement rate of 70%.", "correctAnswer": "yes" },
+        { "id": "b-adverse", "text": "Treatment B has an adverse-event rate of 5%.", "correctAnswer": "yes" },
+        { "id": "c-higher-improvement", "text": "Treatment C has a higher improvement rate than Treatment B.", "correctAnswer": "yes" },
+        { "id": "combined-improvement", "text": "Exactly 65% of all participants improved.", "correctAnswer": "no" },
+        { "id": "a-lower-adverse", "text": "Treatment A has a lower adverse-event rate than Treatment B.", "correctAnswer": "no" }
+      ],
+      "knowledgeTags": ["ucat-dm-data-inference"],
+      "skillTags": ["five-statements", "rate-comparison"]
+    },
+    {
+      "number": 23,
+      "prompt": "Should a council publish hourly air-quality readings online? Which is the strongest argument?",
+      "options": [
+        "Yes, because more data is always perfect.",
+        "No, because residents may disagree about pollution.",
+        "Yes, because documented real-time readings can help vulnerable residents adjust exposure and allow public scrutiny.",
+        "No, because websites sometimes require maintenance."
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["ucat-dm-strongest-argument"],
+      "skillTags": ["argument-strength", "evidence-use"]
+    },
+    {
+      "number": 24,
+      "prompt": "If the archive is open, at least two staff members are present. The archive is open. Which conclusion must follow?",
+      "options": [
+        "Exactly two staff members are present.",
+        "At least two staff members are present.",
+        "The archive closes when one staff member leaves.",
+        "Two staff members opened the archive."
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["ucat-dm-deduction"],
+      "skillTags": ["conditional-logic", "must-follow"]
+    },
+    {
+      "number": 25,
+      "prompt": "A survey invited 800 people; 160 replied and 120 respondents supported a proposal. Which conclusion is justified?",
+      "options": [
+        "Exactly 75% of respondents supported the proposal.",
+        "Exactly 75% of all invited people supported the proposal.",
+        "The 640 non-respondents opposed the proposal.",
+        "The survey proves that the whole population supports the proposal."
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["ucat-dm-data-inference"],
+      "skillTags": ["denominator", "sampling-limit"]
+    },
+    {
+      "number": 26,
+      "prompt": "Two different cards are drawn in order without replacement from cards numbered 1, 2 and 3. What is the probability that their numbers sum to 4?",
+      "options": ["1/6", "1/3", "1/2", "2/3"],
+      "correctAnswer": "B",
+      "knowledgeTags": ["ucat-dm-probability"],
+      "skillTags": ["ordered-outcomes", "without-replacement"]
+    },
+    {
+      "number": 27,
+      "prompt": "All red folders are urgent. Some urgent items are digital. No digital item is physical. Which conclusion must follow?",
+      "options": [
+        "Some urgent items are not physical.",
+        "All urgent items are red folders.",
+        "No red folder is physical.",
+        "Some physical items are urgent."
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["ucat-dm-syllogisms"],
+      "skillTags": ["set-logic", "necessary-conclusion"]
+    },
+    {
+      "number": 28,
+      "prompt": "All river samples are labelled. Some labelled samples are frozen. No frozen sample is spoiled. Every tested sample is labelled. For each conclusion, answer Yes if it follows and No if it does not.",
+      "statements": [
+        { "id": "river-labelled", "text": "All river samples are labelled.", "correctAnswer": "yes" },
+        { "id": "labelled-not-spoiled", "text": "Some labelled samples are not spoiled.", "correctAnswer": "yes" },
+        { "id": "river-not-spoiled", "text": "No river sample is spoiled.", "correctAnswer": "no" },
+        { "id": "tested-frozen", "text": "Some tested samples are frozen.", "correctAnswer": "no" },
+        { "id": "spoiled-not-frozen", "text": "No spoiled sample is frozen.", "correctAnswer": "yes" }
+      ],
+      "knowledgeTags": ["ucat-dm-syllogisms"],
+      "skillTags": ["five-statements", "set-logic"]
+    },
+    {
+      "number": 29,
+      "prompt": "Should a vaccination centre offer some evening appointments? Which is the strongest argument?",
+      "options": [
+        "Yes, because evening appointments are always more popular with everyone.",
+        "No, because daylight is preferable to some staff.",
+        "Yes, because a monitored evening trial may improve access for shift workers who cannot attend daytime sessions.",
+        "No, because the current timetable has existed for several years."
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["ucat-dm-strongest-argument"],
+      "skillTags": ["argument-strength", "targeted-benefit"]
+    },
+    {
+      "number": 30,
+      "passageId": "warehouse-routes",
+      "prompt": "Which route has the greatest delay minutes per delivery?",
+      "options": ["Route A", "Route B", "Route C", "Routes A and B are equal"],
+      "correctAnswer": "A",
+      "knowledgeTags": ["ucat-dm-data-inference"],
+      "skillTags": ["rate", "table-comparison"]
+    },
+    {
+      "number": 31,
+      "prompt": "Four samples W, X, Y and Z are processed one per slot. X is after W. Y is not first. Z is before X. Which order could be used?",
+      "options": ["W, X, Z, Y", "Z, W, X, Y", "Y, Z, W, X", "W, Y, X, Z"],
+      "correctAnswer": "B",
+      "knowledgeTags": ["ucat-dm-ordering"],
+      "skillTags": ["constraints", "could-be-true"]
+    },
+    {
+      "number": 32,
+      "prompt": "In 5,000 people, 2% have a condition. A test detects 90% of those who have it and gives a false positive to 5% of those who do not. If one person tests positive, what is the probability that they have the condition?",
+      "options": ["9/100", "18/67", "9/25", "9/10"],
+      "correctAnswer": "B",
+      "knowledgeTags": ["ucat-dm-bayes-table"],
+      "skillTags": ["conditional-probability", "natural-frequencies"]
+    },
+    {
+      "number": 33,
+      "prompt": "In a group of 150 people, 95 use service A, 80 use service B and 140 use at least one of them. How many use both services?",
+      "options": ["25", "35", "45", "55"],
+      "correctAnswer": "B",
+      "knowledgeTags": ["ucat-dm-venn-counting"],
+      "skillTags": ["sets", "inclusion-exclusion"]
+    },
+    {
+      "number": 34,
+      "passageId": "emergency-sites",
+      "prompt": "For each statement, answer Yes if it follows from the table and No if it does not.",
+      "statements": [
+        { "id": "east-admission", "text": "East has an admission rate of 25%.", "correctAnswer": "yes" },
+        { "id": "central-admission", "text": "Central has an admission rate of 30%.", "correctAnswer": "yes" },
+        { "id": "harbour-wait", "text": "Harbour has the lowest median wait.", "correctAnswer": "yes" },
+        { "id": "combined-admission", "text": "Exactly 26% of all attendances resulted in admission.", "correctAnswer": "no" },
+        { "id": "east-return-lower", "text": "East has a lower return rate than Harbour.", "correctAnswer": "no" }
+      ],
+      "knowledgeTags": ["ucat-dm-data-inference"],
+      "skillTags": ["five-statements", "rate-comparison"]
+    },
+    {
+      "number": 35,
+      "prompt": "A small weekday trial of digital check-in shortened the median wait by six minutes, while satisfaction was unchanged. Weekends were not tested. Which conclusion is best supported?",
+      "options": [
+        "Digital check-in improves every aspect of care.",
+        "The same six-minute reduction will occur at weekends.",
+        "The result warrants a weekend evaluation before system-wide adoption.",
+        "Patient satisfaction is unrelated to waiting time in all settings."
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["ucat-dm-deduction"],
+      "skillTags": ["evidence-limit", "supported-conclusion"]
+    }
+  ]
+}

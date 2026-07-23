@@ -1,0 +1,66 @@
+name: Deployment smoke
+
+on:
+  schedule:
+    - cron: "17 2,14 * * *"
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Approved deployed environment to verify
+        required: true
+        default: staging
+        type: choice
+        options:
+          - staging
+          - production
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deployment-smoke-${{ github.event_name == 'workflow_dispatch' && inputs.environment || 'production' }}
+  cancel-in-progress: true
+
+jobs:
+  deployed-journey:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event_name == 'workflow_dispatch' && inputs.environment || 'production' }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22.18.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Require the selected environment URL
+        run: test -n "$DEPLOYMENT_BASE_URL"
+        env:
+          DEPLOYMENT_BASE_URL: ${{ vars.PUBLIC_APP_ORIGIN }}
+      - name: Verify deployed runtime, Auth and security headers
+        run: pnpm verify:deployment
+        env:
+          DEPLOYMENT_BASE_URL: ${{ vars.PUBLIC_APP_ORIGIN }}
+          EXPECTED_ENVIRONMENT: ${{ github.event_name == 'workflow_dispatch' && inputs.environment || 'production' }}
+          EXPECTED_SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+      - run: pnpm exec playwright install --with-deps chromium
+      - name: Verify deployed public and Guest learning journeys
+        run: pnpm verify:e2e:deployment
+        env:
+          DEPLOYMENT_BASE_URL: ${{ vars.PUBLIC_APP_ORIGIN }}
+      - if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: deployment-smoke-report-${{ github.run_id }}
+          path: |
+            playwright-deployment-report/
+            test-results/
+          retention-days: 14
+      - name: Record monitored deployment
+        if: always()
+        run: |
+          echo "Environment: ${{ github.event_name == 'workflow_dispatch' && inputs.environment || 'production' }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Origin: ${{ vars.PUBLIC_APP_ORIGIN }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "This check validates deployed runtime/Auth headers and read-only public/Guest learning journeys. It does not create an account or consume an invite." >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,48 @@
+schemaVersion: 1
+feature:
+  id: ucat-situational-judgement-full-mock
+  title: Original full-length UCAT Situational Judgement mock
+  status: partial
+  userOutcome: A student can complete sixty-nine original Situational Judgement questions in a 26-minute native session across twenty-one scenarios, three response families, private autosave, Mantou raw results and learning history.
+run:
+  packageScript: verify:ucat-situational-full-mock
+claims:
+  - id: current-full-length-situational-structure
+    status: verified
+    statement: The Mantou-original dataset contains 69 questions in 26 minutes across 21 scenarios, with thirty appropriateness ratings, thirty importance ratings and nine most/least items.
+    artifacts:
+      - content/ucat/original-practice/situational-judgement-full-mock-v1.json
+      - src/features/practice/content/ucat-situational-judgement-full-mock.ts
+      - tests/features/practice/content/ucat-situational-judgement-full-mock.test.ts
+    automatedChecks:
+      - verify:ucat-situational-full-mock
+      - typecheck
+  - id: specialist-situational-interaction-and-scoring
+    status: verified
+    statement: Rating questions retain the explicit adjacent partial-credit rule, most/least questions save two distinct choices and require the exact pair under the published Mantou raw rule, and all three viewports preserve responses without exposing official source files.
+    artifacts:
+      - src/features/practice/components/MostLeastQuestionCard.tsx
+      - src/features/practice/domain/most-least-response.ts
+      - src/features/practice/domain/results.ts
+      - tests/e2e/ucat-situational-judgement-full-mock.spec.ts
+    automatedChecks:
+      - verify:ucat-situational-full-mock
+      - verify:web-performance
+      - build
+boundaries:
+  - This is Mantou-original teaching-preview content, not an official UCAT Question Bank, official answer panel or official-equivalent difficulty claim.
+  - The result uses the explicitly published Mantou raw rule; no official SJT Band, percentile, university benchmark or admission probability is inferred.
+  - Official UCAT and professional-standards assets remain internal research sources and are not delivered to the browser.
+manualChecks:
+  - id: independent-ucat-situational-professional-review
+    status: pending
+    evidence: Separate UK medical and dental professionalism reviewers must verify every scenario, response distinction, answer key, cultural-language assumption and scope boundary.
+    viewports: [content]
+  - id: full-situational-student-timing-pilot
+    status: pending
+    evidence: Real students must complete the 26-minute session to calibrate reading load, decision pace and cross-cultural clarity without deriving an official Band.
+    viewports: [student]
+  - id: full-situational-browser-device-review
+    status: pending
+    evidence: Desktop, tablet and phone review must verify every rating scale, most/least control, response persistence, timer and absence of horizontal page overflow.
+    viewports: [desktop, tablet, phone]

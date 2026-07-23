@@ -1,0 +1,100 @@
+schemaVersion: 1
+feature:
+  id: production-beta-platform
+  title: 100 人 Beta 生产发布与恢复底座
+  status: partial
+  userOutcome: 同一份经过验证的不可变镜像可以进入 staging 与 production；运行时只注入浏览器安全配置，并提供健康、版本、恢复和容量证据。
+run:
+  packageScript: verify:production-platform
+claims:
+  - id: immutable-runtime-configured-web
+    status: verified
+    statement: 多阶段 Docker 镜像在构建时执行生产构建和私密正文泄露检查，以非 root nginx 运行；Supabase URL 与 publishable key 在启动时注入，因此 staging 和 production 不需要重新编译不同代码。
+    artifacts:
+      - Dockerfile
+      - deploy/nginx.conf
+      - deploy/runtime-config.template.js
+      - deploy/40-runtime-config.sh
+      - src/platform/runtime-config.ts
+      - tests/platform/runtime-config.test.ts
+    automatedChecks:
+      - verify:production-platform
+      - verify:private-content-bundle
+  - id: continuous-release-gates
+    status: verified
+    statement: GitHub CI 分别运行完整应用验证、本地 Supabase 数据库/HTTP 验证、全数据库恢复演练、100 用户容量检查、首屏与异步资源性能预算和实际容器健康检查；发布工作流只生成 commit SHA 标记的不可变 GHCR 镜像。
+    artifacts:
+      - .github/workflows/verify.yml
+      - .github/workflows/release-image.yml
+      - .github/workflows/deploy-supabase.yml
+      - scripts/verify-deployment.ts
+      - scripts/check-web-performance-budget.ts
+      - src/features/practice/pages/PracticeRoutePage.tsx
+      - tests/architecture/production-platform-contracts.test.ts
+    automatedChecks:
+      - verify:production-platform
+      - verify:web-performance
+  - id: fail-closed-auth-bot-protection
+    status: verified
+    statement: 注册、登录和密码重置共用 Cloudflare Turnstile；staging/production 没有 runtime site key 时账号操作直接停用，已配置时一次性 token 交给 Supabase Auth 服务端验证。Supabase 发布工作流通过 Management API 幂等启用 Turnstile，同时锁定正式 site URL、确认/重置 allowlist、强制邮件确认、10 位大小写字母加数字密码和 refresh-token rotation；检查命令只报告非敏感状态，不输出 secret。
+    artifacts:
+      - src/features/account/components/AccountBotChallenge.tsx
+      - src/features/account/supabase-account-service.ts
+      - src/platform/runtime-config.ts
+      - scripts/configure-supabase-auth-protection.ts
+      - deploy/runtime-config.template.js
+      - deploy/security-headers.conf
+      - .github/workflows/deploy-supabase.yml
+      - tests/features/account/supabase-account-service.test.ts
+      - tests/platform/supabase-auth-protection-config.test.ts
+    automatedChecks:
+      - verify:production-platform
+  - id: deployed-runtime-and-auth-preflight
+    status: verified
+    statement: 部署验证不再只搜索 runtime 字段名；staging/production 必须提供非空、非占位且格式正确的 Supabase URL、publishable key 与 Turnstile site key，可选锁定预期 project ref，并使 runtime/version 的环境与 release 完全一致。验证器还以 publishable key 请求托管 Auth health/settings，确认服务可达、注册开放且邮件不会自动确认。
+    artifacts:
+      - scripts/verify-deployment.ts
+      - tests/platform/deployment-runtime-validation.test.ts
+      - tests/architecture/production-platform-contracts.test.ts
+      - docs/operations/PRODUCTION_BETA_RUNBOOK.md
+    automatedChecks:
+      - verify:production-platform
+      - verify:deployment
+  - id: scheduled-deployment-smoke
+    status: verified
+    statement: staging 可由人工触发、production 每日两次执行真实 URL 检查；先核对 runtime、托管 Auth 与安全响应头，再用桌面/手机 Chromium 检查五考试公开入口、账号入口，以及不创建账号、不消耗邀请码的 TMUA AP 档案 → 知识覆盖 → 原生真题 Guest 路径。缺少环境 URL 会明确失败，不会把跳过当作健康。
+    artifacts:
+      - .github/workflows/deployment-smoke.yml
+      - playwright.deployment.config.ts
+      - tests/e2e/deployment-smoke.spec.ts
+      - scripts/verify-deployment.ts
+      - tests/architecture/production-platform-contracts.test.ts
+    automatedChecks:
+      - verify:production-platform
+      - verify:e2e:deployment
+  - id: recovery-and-capacity-tooling
+    status: verified
+    statement: 本地全数据库恢复演练会创建真实 Auth 与反馈/审计标记，把数据库恢复到隔离数据库，并逐项比对账号、Learner Space、RLS、内容资源、私密正文与反馈指纹；100 用户脚本覆盖邀请码、档案、开始练习、提交和站内反馈。
+    artifacts:
+      - scripts/verify-local-recovery-drill.ts
+      - scripts/load-test-beta-local.ts
+      - scripts/backup-supabase-logical.sh
+      - scripts/restore-supabase-logical.sh
+    automatedChecks:
+      - verify:recovery-local
+      - verify:beta-load-local
+boundaries:
+  - 当前证明的是本地恢复与 100 用户容量、可部署镜像、部署预检、定时真实 URL 验证契约和 CI 契约；尚未证明满托 staging 或 production 已部署，也没有真实云 URL 的 preflight 输出。定时 workflow 只有在 GitHub Environment 配置 `PUBLIC_APP_ORIGIN` 后才会形成远程运行证据。
+  - Supabase 平台物理备份或新项目恢复是账号与托管 schema 的主要灾备路径；逻辑导出只是补充，不能替代平台备份。
+  - CAPTCHA 的客户端、CSP、runtime 和 Management API 自动配置契约已经验证，但满托真实 Turnstile hostname key 与 Supabase 云项目尚未配置；生产域名、SMTP、告警接收人和真实恢复演练仍是 Beta P0。
+manualChecks:
+  - id: staging-production-promotion
+    status: pending
+    evidence: 在满托 GitHub Environment 审批后发布同一 commit SHA 镜像到 staging，再提升至 production，并保存两个环境的 verify:deployment 输出。
+    viewports:
+      - server
+  - id: managed-backup-restore
+    status: pending
+    evidence: 从满托 Supabase 的平台备份恢复到新项目，复验 Auth、RLS、两项 entitlement 资源和跨设备会话，并记录 RPO/RTO。
+    viewports:
+      - server

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q07",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 7,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "7   A curve has equation\n\n\n                                   y = (2q − x2 )(2qx + 3)\n\n    The gradient of the curve at x = −1 is a function of q.\n\n    Find the value of q which minimises the gradient of the curve at x = −1.\n\n    A −1\n\n    B − 34\n\n    C − 12\n\n    D    0\n         1\n    E    2\n\n         3\n    F    4\n\n    G    1\n\n\n\n\n                                            9"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A curve has equation\n\n\n                                   y = (2q − x2 )(2qx + 3)\n\n    The gradient of the curve at x = −1 is a function of q.\n\n    Find the value of q which minimises the gradient of the curve at x = −1."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−1"
+    },
+    {
+      "label": "B",
+      "rawText": "− 34"
+    },
+    {
+      "label": "C",
+      "rawText": "− 12"
+    },
+    {
+      "label": "D",
+      "rawText": "0\n         1"
+    },
+    {
+      "label": "E",
+      "rawText": "2\n\n         3"
+    },
+    {
+      "label": "F",
+      "rawText": "4"
+    },
+    {
+      "label": "G",
+      "rawText": "1"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We expand the given expression to get\n\n                                       y = 4q 2 x − 2qx3 + 6q − 3x2\n\nDifferentiating gives\n                                          dy\n                                             = 4q 2 − 6qx2 − 6x\n                                          dx\nso the gradient of the curve at x = −1 is 4q 2 − 6q + 6. We can minimise this either by using\ncalculus or by completing the square.\n                             d\nUsing calculus, we have         (4q 2 − 6q + 6) = 8q − 6, and 8q − 6 = 0 when q = 68 = 34 , so the\n                             dq\nanswer is F.\nAlternatively, completing the square, we have\n\n                        4q 2 − 6q + 6 = 4(q 2 − 32 q) + 6 = 4 (q − 43 )2 − ( 34 )2 + 6\n                                                                                  \u0001\n\n\nso the minimum occurs when q = 34 , as before.\n\n\n\n\nc UCLES                                                                                    Page 9"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

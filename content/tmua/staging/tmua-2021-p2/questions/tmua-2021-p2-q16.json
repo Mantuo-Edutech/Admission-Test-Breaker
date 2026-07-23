@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16   p and q are real numbers, and the equation\n\n                                          x |x| = px + q\n\n     has exactly k distinct real solutions for x.\n\n     Which one of the following is the complete list of possible values for k ?\n\n     A 0, 1, 2\n\n     B 0, 1, 2, 3\n\n     C 0, 1, 2, 3, 4\n\n     D 0, 2, 4\n\n     E 1, 2, 3\n\n     F 1, 2, 3, 4\n\n\n\n\n                                              18"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "p and q are real numbers, and the equation\n\n                                          x |x| = px + q\n\n     has exactly k distinct real solutions for x.\n\n     Which one of the following is the complete list of possible values for k ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0, 1, 2"
+    },
+    {
+      "label": "B",
+      "rawText": "0, 1, 2, 3"
+    },
+    {
+      "label": "C",
+      "rawText": "0, 1, 2, 3, 4"
+    },
+    {
+      "label": "D",
+      "rawText": "0, 2, 4"
+    },
+    {
+      "label": "E",
+      "rawText": "1, 2, 3"
+    },
+    {
+      "label": "F",
+      "rawText": "1, 2, 3, 4"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Approach 1: graph sketching\nWe are looking for the intersections of the graphs of y = x |x| and y = px + q. The latter is just\na straight line graph, while the former is y = x2 when x ≥ 0 and y = −x2 when x < 0:\n\n                                                   y\n\n\n\n\n                                                                     x\n                                               0\n\n\n\n\nThis graph looks quite similar to the graph of y = x3 : it has a point of inflexion at the origin.\nAny straight line will meet this graph at least once: if q > 0, then it will meet it for some x > 0,\nand if q < 0, then it will meet it for some x < 0. A straight line can meet the graph twice if it\nis tangent to the curve somewhere, and it can meet it three times, for example y = x.\nBut a straight line cannot meet the curve four times. It can meet the curve at most twice for\nx ≥ 0, and at most twice for x < 0 (as each half of the curve is a quadratic, and a straight line\nand quadratic can meet at most twice). But if a straight line meets the quadratic twice in the\nregion x < 0, then it must have q > 0, for example:\n\n                                                   y\n\n\n\n\n                                                                     x\n                                               0\n\n\n\n\nIt can then meet the curve only once in the region x > 0. The same applies if it meets the curve\ntwice in the region x > 0. And if the line passes through the origin, then it can meet the curve\nin at most two other locations.\nSo the correct answer is option E.\n\nApproach 2: algebraic\n\n\n\nVersion 1.0, March 2022                                                                     Page 19\n\f\nTest of Mathematics for University Admission, 2021 Paper 2 Solutions\n\n\nIf x is a solution, then either x ≤ 0 and −x2 = px + q or x > 0 and x2 = px + q; we can rewrite\nthese as x2 + px + q = 0 and x2 − px − q = 0 respectively.\nIf q < 0, then the quadratic equations\n                               p        both have positive discriminant. The first quadratic\n                                  2\nhas roots of opposite signs (as p − 4q > p), so there is exactly one negative solution. The\nsecond quadratic (corresponding to x > 0) may have 0, 1 or 2 positive solutions, giving 1, 2 or 3\nsolutions in total.\nIf q > 0, exactly the opposite is true, and we still end up with 1, 2 or 3 solutions.\nIf q = 0, then x = 0 is a root of both quadratics, and there are 0, 1 or 2 other roots.\nThus the possible values are 1, 2 and 3.\nExamples with these numbers are: p = q = 0; p = −1, q = 0, and p = −2, q = 1 respectively.\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 20"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        19,
+        20
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "20   Find the value of\n\n         sin2 0◦ + sin2 1◦ + sin2 2◦ + sin2 3◦ + · · · + sin2 87◦ + sin2 88◦ + sin2 89◦ + sin2 90◦\n\n     A 0.5\n\n     B 1\n\n     C 1.5\n\n     D 45\n\n     E    45.5\n\n     F    46\n\n\n\n\n                                           \b\u0011\u0007\u0003\u0012 \u0003\u0017\b\u0016\u0017\n\n\n\n                                                  22"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the value of\n\n         sin2 0◦ + sin2 1◦ + sin2 2◦ + sin2 3◦ + · · · + sin2 87◦ + sin2 88◦ + sin2 89◦ + sin2 90◦"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0.5"
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "1.5"
+    },
+    {
+      "label": "D",
+      "rawText": "45"
+    },
+    {
+      "label": "E",
+      "rawText": "45.5"
+    },
+    {
+      "label": "F",
+      "rawText": "46\n\n\n\n\n                                           ED E"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "This reminds us of adding the terms of an arithmetic series. One way to do so is to write out\nthe series twice, once forwards and once backwards, and then add corresponding pairs of terms\ntogether. If we do that here, we obtain\n\n               S = sin2 0◦ + sin2 1◦ + sin2 2◦ + · · · + sin2 88◦ + sin2 89◦ + sin2 90◦\n               S = sin2 90◦ + sin2 89◦ + sin2 88◦ + · · · + sin2 2◦ + sin2 1◦ + sin2 0◦\n\nso that\n            2S = (sin2 0◦ + sin2 90◦ ) + (sin2 1◦ + sin2 89◦ ) + · · · + (sin2 90◦ + sin2 0◦ )\nNow we know that sin2 x + cos2 x = 1 for all x, and since sin(90◦ − x) = cos x (by, for example,\nthinking about a right-angled triangle or by looking at the graphs of the functions), we can\nrewrite this sum as\n\n            2S = (sin2 0◦ + cos2 0◦ ) + (sin2 1◦ + cos2 1◦ ) + · · · + (sin2 90◦ + cos2 90◦ )\n                = 1 + 1 + ··· + 1\n                = 91\n\n(since there are 91 terms), therefore S = 45.5, which is option E.\n\n\n\n\nVersion 1.0, April 2019                                                                             Page 23\n\n                                                                                                © UCLES 2019\n\f\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support:\nadmissionstesting.org/help"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        24,
+        25
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

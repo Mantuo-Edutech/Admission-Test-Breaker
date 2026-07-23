@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q04",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 4,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "4   A student attempts to answer the following question.\n\n             What is the largest number of consecutive odd integers that are all prime?\n\n    The student’s attempt is as follows:\n\n         I       There are two consecutive odd integers that are prime (for example: 17, 19).\n\n         II      Any three consecutive odd integers can be written in the form n – 2, n, n + 2 for\n                 some n.\n         III     If n is one more than a multiple of 3, then n + 2 is a multiple of 3.\n\n         IV      If n is two more than a multiple of 3, then n – 2 is a multiple of 3.\n\n         V       The only other possibility is that n is a multiple of 3.\n\n         VI      In each case, one of the integers is a multiple of 3, so not prime.\n\n         VII     Therefore the largest number of consecutive odd integers that are all prime is two.\n\n    Which of the following best describes this attempt?\n\n    A   It is completely correct.\n\n    B   It is incorrect, and the first error is on line I.\n\n    C   It is incorrect, and the first error is on line II.\n\n    D   It is incorrect, and the first error is on line III.\n\n    E   It is incorrect, and the first error is on line IV.\n\n    F   It is incorrect, and the first error is on line V.\n\n    G   It is incorrect, and the first error is on line VI.\n\n    H   It is incorrect, and the first error is on line VII.\n\n\n\n\n                                                      6"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A student attempts to answer the following question.\n\n             What is the largest number of consecutive odd integers that are all prime?\n\n    The student’s attempt is as follows:\n\n         I       There are two consecutive odd integers that are prime (for example: 17, 19).\n\n         II      Any three consecutive odd integers can be written in the form n – 2, n, n + 2 for\n                 some n.\n         III     If n is one more than a multiple of 3, then n + 2 is a multiple of 3.\n\n         IV      If n is two more than a multiple of 3, then n – 2 is a multiple of 3.\n\n         V       The only other possibility is that n is a multiple of 3.\n\n         VI      In each case, one of the integers is a multiple of 3, so not prime.\n\n         VII     Therefore the largest number of consecutive odd integers that are all prime is two.\n\n    Which of the following best describes this attempt?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "It is completely correct."
+    },
+    {
+      "label": "B",
+      "rawText": "It is incorrect, and the first error is on line I."
+    },
+    {
+      "label": "C",
+      "rawText": "It is incorrect, and the first error is on line II."
+    },
+    {
+      "label": "D",
+      "rawText": "It is incorrect, and the first error is on line III."
+    },
+    {
+      "label": "E",
+      "rawText": "It is incorrect, and the first error is on line IV."
+    },
+    {
+      "label": "F",
+      "rawText": "It is incorrect, and the first error is on line V."
+    },
+    {
+      "label": "G",
+      "rawText": "It is incorrect, and the first error is on line VI."
+    },
+    {
+      "label": "H",
+      "rawText": "It is incorrect, and the first error is on line VII."
+    }
+  ],
+  "correctAnswer": "G",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The argument looks very convincing and there is no obvious error. However, writing down the\nfirst few odd integers and underlining those which are prime shows that there is a problem:\n\n                                  1, 3, 5, 7, 9, 11, 13, 15, 17, 19, . . .\n\nThere are three consecutive odd numbers that are all prime right at the start (3, 5, 7), so the\nstudent’s final answer in line VII is incorrect. We must therefore find the first error in the\nargument.\n\nI    This line is correct: 17 and 19 are consecutive odd integers that are prime.\n\nII   This is correct: consecutive odd integers differ by 2, and we can call the middle one n.\n\nIII If n = 3k + 1, then n + 2 = 3k + 3 = 3(k + 1), which is a multiple of 3, so this line is correct.\n\nIV If n = 3k + 2, then n − 2 = 3k, which is a multiple of 3, so this line is correct.\n\nV    All integers are either multiples of 3, one more than a multiple of 3 or two more than a\n     multiple of 3; a number which is three more than a multiple of 3 is itself a multiple of 3.\n     Similarly, a number which is four more than a multiple of 3 is one more than the next\n     multiple of 3 (in algebraic notation: 3k + 4 = 3(k + 1) + 1), and so on. So this statement\n     is correct.\n\nVI In each case, one of n + 2, n − 2 and n is a multiple of 3. But our example of 3, 5, 7 shows\n   that the last part of this statement is false: 3 is a multiple of 3, but is prime.\n\nSo the first error is on line VI, which is option G.\n\n\n\n\nVersion 1.0, September 2023                                                                   Page 6"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

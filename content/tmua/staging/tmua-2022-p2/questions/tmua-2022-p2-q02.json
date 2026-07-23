@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "2   Find the coefficient of the x 5 term in the expansion of\n\n                                                           5\n                                                      5\n                                              (1+ x ) ×   ¦x\n                                                          i =0\n                                                                 i\n\n\n\n\n    A   1\n\n    B   5\n\n    C   16\n\n    D   25\n\n    E   32\n\n\n\n\n                                                  4"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the coefficient of the x 5 term in the expansion of\n\n                                                           5\n                                                      5\n                                              (1+ x ) ×   ¦x\n                                                          i =0\n                                                                 i"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "1"
+    },
+    {
+      "label": "B",
+      "rawText": "5"
+    },
+    {
+      "label": "C",
+      "rawText": "16"
+    },
+    {
+      "label": "D",
+      "rawText": "25"
+    },
+    {
+      "label": "E",
+      "rawText": "32"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We expand the brackets in the first term using the binomial theorem and write out the sum in\nfull to get\n             (1 + 5x + 10x2 + 10x3 + 5x4 + x5 ) × (1 + x + x2 + x3 + x4 + x5 ).\nThe x5 term in the product is obtained by taking all possible pairs of a term in the first bracket\nand a term in the second whose product is cx5 for some number c, and then adding these\ntogether. Therefore the x5 term in the product is\n\n 1 · x5 + 5x · x4 + 10x2 · x3 + 10x3 · x2 + 5x4 · x + x5 · 1 = (1 + 5 + 10 + 10 + 5 + 1)x5 = 32x5 .\n\nTherefore the correct answer is option E.\n\n\n\n\nVersion 1.0, July 2023                                                                       Page 4"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

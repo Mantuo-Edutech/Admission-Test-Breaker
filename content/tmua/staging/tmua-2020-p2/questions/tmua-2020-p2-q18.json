@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "18   In this question, f(x) = ax3 + bx2 + cx + d and g(x) = px3 + qx2 + rx + s are cubic\n     polynomials.\n\n     If f (x) − g(x) > 0 for every real x, which of the following is/are necessarily true?\n\n         I    a>p\n         II   if b = q then c = r\n         III d > s\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                             20"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "In this question, f(x) = ax3 + bx2 + cx + d and g(x) = px3 + qx2 + rx + s are cubic\n     polynomials.\n\n     If f (x) − g(x) > 0 for every real x, which of the following is/are necessarily true?\n\n         I    a>p\n         II   if b = q then c = r\n         III d > s"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "G",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let us write f(x) − g(x) explicitly:\n\nf(x) − g(x) = (ax3 + bx2 + cx + d) − (px3 + qx2 + rx + s) = (a − p)x3 + (b − q)x2 + (c − r)x + (d − s).\n\nWe are given that this cubic is positive for every real x. But a cubic always crosses the x-axis!\nThe only way to reconcile this is if the cubic f(x)−g(x) is not actually a cubic, because a−p = 0.\nSo we have a − p = 0 and statement I is false. We can also now write\n\n                           f(x) − g(x) = (b − q)x2 + (c − r)x + (d − s).\n\nIf this function is always positive, then there are two possibilities: either b − q is nonzero and\nthe quadratic has a negative discriminant, or b − q = 0 and this is not actually a quadratic. The\nsecond option looks quite like statement II: if b − q = 0, that is, b = q, then we have\n\n                                  f(x) − g(x) = (c − r)x + (d − s).\n\nSince a linear function always crosses the x-axis, this cannot be always positive unless c − r = 0,\nin which case the function is actually just the constant f(x) − g(x) = (d − s). (To be more\nprecise, this is still a linear function, just with zero x coefficient.) Therefore, if f(x) − g(x) > 0\nfor all real x, it follows that if b = q, then c = r, and so statement II is true.\nWe have reached the end of this line of reasoning, and we have not stumbled upon anything that\nlooks like statement III. But d and s are the constant coefficients in the polynomials f and g, so\nif we take x = 0, we have f(0) = d and g(0) = s. Since f(0) − g(0) > 0, this shows that d − s > 0,\nor d > s, hence statement III is true.\nThe correct option is G.\n\n\n\n\nVersion 1.0, April 2021                                                                       Page 21\n\n                                             © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        21
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

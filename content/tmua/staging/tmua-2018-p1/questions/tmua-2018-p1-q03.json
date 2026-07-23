@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "3   Find the shortest distance between the two circles with equations:\n\n\n                                  (x + 2)2 + (y − 3)2 = 18\n\n                                  (x − 7)2 + (y + 6)2 = 2\n\n    A 0\n\n    B 4\n\n    C 16\n       √\n    D 2 2\n       √\n    E 5 2\n\n\n\n\n                                           5"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the shortest distance between the two circles with equations:\n\n\n                                  (x + 2)2 + (y − 3)2 = 18\n\n                                  (x − 7)2 + (y + 6)2 = 2"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0"
+    },
+    {
+      "label": "B",
+      "rawText": "4"
+    },
+    {
+      "label": "C",
+      "rawText": "16\n       √"
+    },
+    {
+      "label": "D",
+      "rawText": "2 2\n       √"
+    },
+    {
+      "label": "E",
+      "rawText": "5 2"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "√   √\nThe first circle has centre (−2, 3) and radius 18 = 3 2\n                                                √\nThe second circle has centre (7, −6) and radius 2\nIt would help to draw a quick sketch of the situation.\n\n                                                 y\n\n\n\n\n                                (−2, 3)\n\n\n                                                                        x\n\n\n\n\n                                                              (7, −6)\n\n\n\n\nIt seems clear from the sketch that to find the shortest distance between the circles, we should\ndraw a line between their centres and find the length of the segment which lies outside both of\nthem:\n\n                                                 y\n\n\n\n\n                                (−2, 3)\n\n\n                                                                        x\n\n\n\n\n                                                              (7, −6)\n\n\n\n\nThe distance between the centres is\n                          p                              √            √\n                            ((−2) − 7)2 + (3 − (−6))2 = 81 + 81 = 9 2\n                                      √       √\nand if we subtract the two √  radii\n                                  √ (3  2\n                                        √ and  √2) for the parts of the line which lie within the\ncircles, we are left with 9 2 − 3 2 − 2 = 5 2. The correct answer is E.\nThis can also be proved by taking an arbitrary point on each of the circles, finding the distance\nbetween them and then minimising this, but that is far more complicated than needed.\n\n\nVersion 1.0, April 2019                                                                   Page 5\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

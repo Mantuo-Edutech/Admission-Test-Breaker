@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q06",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 6,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                   \u0003\n                                                   \u0003\n                                                   \u0003\n\n͸\u0003     \u0004\u0003\u0003\u0003\u0003  \u0003‫ ݔ‬ଶ ൅ ‫ ݕ‬ଶ ൌ ͳͶͶ\u0003\u0003\u0003\u0003\u0003ሺʹͲǡ Ͳሻ\u0003\u0003 \u0003\u0003\n       \u0003‫ݕ‬ǦǤ\u0003\n\n       \u001a\u0003\u0003\u0003\u0003\u0003‫ݕ\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003ݕ‬Ǧ\u0003ǫ\u0003\n\u0003      \u0003\n\u0003      A   ͳʹ\u0003\n\n\u0003      B   ͳͷ\u0003\n\n\u0003          Ͷͻ\n       C      \u0003\n            ͵\n\u0003      D   ʹͲ\u0003\n\n\u0003          ͸Ͷ\n       E      \u0003\n            ͵\n\u0003          ͺͲ\n       F      \u0003\n            ͵\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u001b"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A  ‫ ݔ‬ଶ ൅ ‫ ݕ‬ଶ ൌ 144ሺ20ǡ 0ሻ \n       ‫ݕ‬ǦǤ\n\n       ‫ݕݕ‬Ǧǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "12"
+    },
+    {
+      "label": "B",
+      "rawText": "15\n\n          49"
+    },
+    {
+      "label": "C",
+      "rawText": "3"
+    },
+    {
+      "label": "D",
+      "rawText": "20\n\n          64"
+    },
+    {
+      "label": "E",
+      "rawText": "3\n          80"
+    },
+    {
+      "label": "F",
+      "rawText": "3\n\n\n\n\n\n\n\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "This calls for a sketch. The circle x2 + y 2 = 144 is centred on the origin and has radius 12:\n\n                                            y\n\n                                        k\n\n\n\n\n                                                                           x\n                                            0         12       20\n\n\n\n\nIt’s not exact, and it’s not drawn to scale, but it’s good enough to work with. The blue radius\nis perpendicular to the tangent line. We are trying to find the value of k.\n\nApproach 1\nWe could work out the equation of the tangent line. It has gradient m (which we don’t know)\nand passes through (20, 0), so it has equation y = m(x − 20). Since it is tangent to the circle,\nsolving the two equations simultaneously must give one repeated root.\nWe have x2 + y 2 = 144 into which we can substitute y = m(x − 20) giving\n\n                                                   x2 + m2 (x − 20)2 = 144\n                          ⇐⇒                x2 + m2 (x2 − 40x + 400) = 144\n                          ⇐⇒    (m2 + 1)x2 − 40m2 x + 400m2 − 144 = 0\n\nWe want this to have exactly one root for x, so we need the discriminant to equal zero, giving\n\n                           (−40m2 )2 − 4(m2 + 1)(400m2 − 144) = 0.\n\nWe can take out a factor of 42 :\n\n                               (10m2 )2 − (m2 + 1)(100m2 − 36) = 0\n\nand then expand the brackets to give\n\n                           100m4 − 100m4 + 36m2 − 100m2 + 36 = 0\n\nso 64m2 = 36, or 8m = ±6. Since m < 0 (as the line intersects the positive y-axis), we have\nm = − 86 = − 34 . Thus the tangent line has equation\n\n                                         y = − 43 (x − 20)\n\nSubstituting in (x, y) = (0, k) gives k = 15, and hence the answer is B.\n\n\nVersion 1.1, March 2019                                                                    Page 8\n\n                                                                                      © UCLES 2019\n\f\nTest of Mathematics for University Admission, 2017 Paper 1 Solutions\n\n\nApproach 2\nWe might notice from the sketch that we have some similar triangles, since the radius meets\nthe tangent at right angles. If we label all of the vertices and equal angles, we will be able to\ndescribe things more precisely:\n\n                                            y\n                                            P\n                                        k\n\n                                                    Q\n\n\n\n                                                                R\n                                                                        x\n                                            O        12       20\n\n\n\n\nSo the triangles 4OQR, 4P QO and 4P OR are all similar. We also know the lengths OR = 20\nand OQ = 12 (as it is a radius). By Pythagoras’s Theorem, applied to 4OQR, we can calculate\nQR = 16 (and we might note that 4OQR is a 3-4-5 triangle). We can then use the similarity\nof triangles 4P QO and 4OQR to find k:\n                                   PO   OR    k    20\n                                      =    =⇒    =\n                                   QO   QR    12   16\ngiving k = 15, as before.\n\n      Commentary: You might prefer one or other of these approaches. The second is shorter,\n      but requires some confidence with geometry and recognising similar triangles.\n\n\n\n\nVersion 1.1, March 2019                                                                   Page 9\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        9,
+        10
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "8\n\nͺ\u0003     \u0004\u0003\u0003\u0003\u0003\u0003\u0003\u0003‫ ݔ‬൅ ‫ ݕ‬൐ ͸\u0003\u0003‫ ݔ‬െ ‫ ݕ‬൐ െͶ\u0003\n       \u0003\n       \u0006\u0003\u0003\u0003ǣ\u0003\n\u0003      \u0003\n\u0003      \u0003    ͳ\u0003 ‫ \u0003ݔ‬൐ \u0003ͳ\u0003\n\n\u0003      \u0003       \u0003ʹ\u0003   ‫ \u0003ݕ‬൐ \u0003ͷ\u0003\n\n\u0003      \u0003       \u0003͵\u0003   ሺ‫ ݔ‬൅ ‫ݕ‬ሻሺ‫ ݔ‬െ ‫ݕ‬ሻ ൐ െʹͶ\u0003\n\n\u0003      \u0003\n       \u001a \u0003\u0003\u0003\u0003\u0003Ȁ\u0003\u0003\u0003\u0003\u0003\u0003\u0003ǫ\u0003\n       \u0003\n\u0003      \u0003    \u0003\n\u0003      \u0004\u0003 \u0003\n       \u0003\n     \u0003 \u0005\u0003 ͳ\u0003\u0003\n\u0003      \u0003\n       \u0006\u0003 ʹ\u0003\u0003\n\u0003      \u0003\n       \u0007\u0003 ͵\u0003\u0003\n\u0003      \u0003\n       \b\u0003 ͳ\u0003\u0003ʹ\u0003\u0003\n\u0003      \u0003\n         \u0003 ͳ\u0003\u0003͵\u0003\u0003\n\u0003      \u0003\n         \u0003 ʹ\u0003\u0003͵\u0003\u0003\n\u0003      \u0003\n          \u0003 ͳǡ\u0003ʹ\u0003\u0003͵\u0003\n\n\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "8     A‫ ݔ‬൅ ‫ ݕ‬൐ 6‫ ݔ‬െ ‫ ݕ‬൐ െ4\n       \n       Cǣ\n      \n          1 ‫ ݔ‬൐ 1\n\n             2   ‫ ݕ‬൐ 5\n\n             3   ሺ‫ ݔ‬൅ ‫ݕ‬ሻሺ‫ ݔ‬െ ‫ݕ‬ሻ ൐ െ24\n\n      \n        Ȁǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": ""
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "2"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "12\n      \n          13\n      \n          23\n      \n           1ǡ23\n\n\n\n\n© UCLES 2016"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "A useful way to approach this question is to sketch the graph of these inequalities; we shade the\ninvalid regions. (You might find it helpful to rewrite the inequalities as y > 6 − x and y < x + 4.)\n\n                                           y\n\n\n                                               6\n\n\n\n                                               4\n\n\n\n\n                                               0              6         x\n\n\n\n\nThe boundaries of the regions intersect when x + y = 6 and x − y = −4; adding these equations\ngives 2x = 2, so x = 1 and y = 5, that is, they intersect at (1, 5).\nTherefore for every point in the white region, condition 1, x > 1, is satisfied.\nHowever, there are clearly points for which condition 2, y > 5, is not satisfied, for example (7, 0).\nFinally, (x + y)(x − y) > −24 is not immediately clear. This is obtained by multiplying the\ntwo inequalities together, but is this permissible? We could try finding a counterexample to\nthis condition. x + y > 6 means that x + y is always positive, so a counterexample must have\nx − y < 0 (that is, y > x) to give a product less than −24. We could take y = x + 3, giving\nx − y = −3, and then if we had x + y > 8, the product would be less than −24. (Recall that the\nfirst inequality is equivalent to x + y > 6, so we may do this.) So we have a counterexample:\ntake x = 5, y = 8, giving x + y = 13, and (x + y)(x − y) = −39 < −24. Hence this third\ncondition is not true for every point in the region.\nTherefore the answer is option B.\n\n\n\n\n                                                   11\n                                                                                        © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

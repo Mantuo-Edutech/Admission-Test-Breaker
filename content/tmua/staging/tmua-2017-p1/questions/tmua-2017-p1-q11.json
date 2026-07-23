@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                                        \u0003\n                                                                        \u0003\n                                                                        \u0003\n\nͳͳ\u0003    \u0017\u0003 \u0003‫ݔ‬௡ \u0003\u0003\u0003\u0003\u0003\u0003\u0003\n\n       \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003‫ݔ‬ଵ ൌ ͹\u0003\n                                                                  ଶଷ௫೙ ିହଷ\n       \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003‫ݔ‬௡ାଵ ൌ             \u0003\n                                                                   ହ௫೙ ାଵ\n\n       \u0017\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003͹ǡ\u0003͵ǡ\u0003ͳ\u0003\n\n       \u001a\u0003\u0003\u0003\u0003\u0003‫ݔ‬ଵ଴଴ \u0003ǫ\u0003\n\u0003      \u0003\n\u0003      A     െͷ\u0003\n\n\u0003      B     Ͳ\u0003\n\n\u0003      C     ͳ\u0003\n\n\u0003      D     ͵\u0003\n\n\u0003      E     ͹\u0003\n\u0003\n\n\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                                           \u0014\u0016       >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": " ‫ݔ‬௡ \n\n       ‫ݔ‬ଵ ൌ 7\n                                                                  ଶଷ௫೙ ିହଷ\n       ‫ݔ‬௡ାଵ ൌ             \n                                                                   ହ௫೙ ାଵ\n\n        7ǡ3ǡ1\n\n       ‫ݔ‬ଵ଴଴ ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "െ5"
+    },
+    {
+      "label": "B",
+      "rawText": "0"
+    },
+    {
+      "label": "C",
+      "rawText": "1"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "7\n\n\n\n\n\n\n\n\n\n8&/(6                                                                  >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We have x1 = 7, x2 = 3, x3 = 1. It is not at all clear what the pattern here is, so we calculate\nthe next few terms:\n                                    23 × 1 − 53   −30\n                               x4 =             =     = −5\n                                     5×1+1         6\n                                    23 × (−5) − 53   −168\n                               x5 =                =      =7\n                                     5 × (−5) + 1     −24\n\nso x6 = 3, x7 = 1, x8 = −5 and so on. Thus the terms repeat in a cycle with length 4, and as\n100 = 25 × 4, we see that x100 = −5, which is option A.\n\n\n\n\nVersion 1.1, March 2019                                                                 Page 14\n\n                                                                                    © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

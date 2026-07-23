@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "15\n\n19.    The positive real numbers , , and are such that the equation\n\n                                             +      =       +\n\n       has three real roots, one positive and two negative.\n\n       Which one of the following correctly describes the real roots of the equation\n\n                                            + =         +       ?\n\n\n\n       A       It has three real roots, one positive and two negative.\n\n       B       It has three real roots, two positive and one negative.\n\n       C       It has three real roots, but their signs differ depending on , , and .\n\n       D       It has exactly one real root, which is positive.\n\n       E       It has exactly one real root, which is negative.\n\n       F       It has exactly one real root, whose sign differs depending on , , and .\n\n       G       The number of real roots can be one or three, but the number of roots differs\n               depending on , , and .\n\n\n\n\n© UCLES 2017                                                                             [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "15\n\n19.    The positive real numbers , , and are such that the equation\n\n                                             +      =       +\n\n       has three real roots, one positive and two negative.\n\n       Which one of the following correctly describes the real roots of the equation\n\n                                            + =         +       ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "It has three real roots, one positive and two negative."
+    },
+    {
+      "label": "B",
+      "rawText": "It has three real roots, two positive and one negative."
+    },
+    {
+      "label": "C",
+      "rawText": "It has three real roots, but their signs differ depending on , , and ."
+    },
+    {
+      "label": "D",
+      "rawText": "It has exactly one real root, which is positive."
+    },
+    {
+      "label": "E",
+      "rawText": "It has exactly one real root, which is negative."
+    },
+    {
+      "label": "F",
+      "rawText": "It has exactly one real root, whose sign differs depending on , , and ."
+    },
+    {
+      "label": "G",
+      "rawText": "The number of real roots can be one or three, but the number of roots differs\n               depending on , , and .\n\n\n\n\n© UCLES 2017                                                                             [Turn over"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The first equation can be rewritten as\n\n                                  f(x) = x3 + ax2 − bx − c = 0                                (1)\n\nand the second equation as\n                                 g(x) = x3 − ax2 − bx + c = 0.                                (2)\nComparing these two equations, we see that the coefficient of x2 and the constant term have\nbeen negated. We can also negate equation (2) to give\n\n                               − g(x) = −x3 + ax2 + bx − c = 0.                               (3)\n\nThis is similar to equation (1), but now the coefficients of x3 and x have been negated. This\nindicates that we can relate this to equation (1) by substituting in −x. We find that\n\n             f(−x) = (−x)3 + a(−x)2 − b(−x) − c = −x3 + ax2 + bx − c = −g(x)\n\nand so equation (3) becomes\n                                           f(−x) = 0.\nSince we are told that f(x) = 0 has three real roots, one positive and two negative, and f(−x) = 0\nmust have three real roots, one negative and two positive. (It might be helpful to note here that\ny = f(−x) is the reflection of y = f(x) in the y-axis.)\nHence the answer is B.\n\n\n\n\n                                               23\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        23
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

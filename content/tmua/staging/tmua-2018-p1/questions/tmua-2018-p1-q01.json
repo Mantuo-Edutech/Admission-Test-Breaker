@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q01",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 1,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "1   Find the value of\n\n                        \u0002 4\n                              3 − 2x\n                                √ dx\n                         1     x x\n\n    A     − 13\n             2\n\n    B     − 85\n            16\n\n    C     − 13\n             8\n\n    D     −1\n\n    E     − 14\n          7\n    F     4\n\n    G    7\n\n\n\n\n                              3"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the value of\n\n                         4\n                              3 − 2x\n                                √ dx\n                         1     x x"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "− 13\n             2"
+    },
+    {
+      "label": "B",
+      "rawText": "− 85\n            16"
+    },
+    {
+      "label": "C",
+      "rawText": "− 13\n             8"
+    },
+    {
+      "label": "D",
+      "rawText": "−1"
+    },
+    {
+      "label": "E",
+      "rawText": "− 14\n          7"
+    },
+    {
+      "label": "F",
+      "rawText": "4"
+    },
+    {
+      "label": "G",
+      "rawText": "7"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We write the integrand (the thing being integrated) in terms of powers of x and split up the\nfraction in order to be able to compute the integral:\n                      Z 4             Z 4\n                          3 − 2x          3 − 2x\n                            √ dx =               3   dx\n                       1   x x          1     x2\n                                      Z 4\n                                                  3        1\n                                    =     3x− 2 − 2x− 2 dx\n                                        1\n                                      \"       1        1\n                                                         #4\n                                        3x− 2       2x 2\n                                    =            − 1\n                                        (− 12 )      2     1\n                                                1       1 \u00034\n                                             −2\n                                      \u0002\n                                    = −6x − 4x 1        2\n\n\n                                  = (−6 × 12 − 4 × 2) − (−6 × 1 − 4 × 1)\n                                  = −11 − (−10)\n                                  = −1\n\nso the correct answer is D.\n\n\n\n\nVersion 1.0, April 2019                                                              Page 3\n\n                                                                                © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

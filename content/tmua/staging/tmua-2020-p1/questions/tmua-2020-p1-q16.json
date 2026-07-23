@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16   The circle C1 has equation (x + 2)2 + (y − 1)2 = 3\n\n     The circle C2 has equation (x − 4)2 + (y − 1)2 = 3\n\n     The straight line l is a tangent to both C1 and C2 and has positive gradient.\n\n     The acute angle between l and the x-axis is θ\n\n     Find the value of tan θ\n\n     A   1\n         2\n\n     B 2\n         √\n     C   2\n          2\n\n         √\n     D       2\n         √\n     E   2\n          6\n\n         √\n     F   3\n          6\n\n         √\n     G   3\n          3\n\n         √\n     H       3\n\n\n\n\n                                            18"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The circle C1 has equation (x + 2)2 + (y − 1)2 = 3\n\n     The circle C2 has equation (x − 4)2 + (y − 1)2 = 3\n\n     The straight line l is a tangent to both C1 and C2 and has positive gradient.\n\n     The acute angle between l and the x-axis is θ\n\n     Find the value of tan θ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "1\n         2"
+    },
+    {
+      "label": "B",
+      "rawText": "2\n         √"
+    },
+    {
+      "label": "C",
+      "rawText": "2\n          2\n\n         √"
+    },
+    {
+      "label": "D",
+      "rawText": "2\n         √"
+    },
+    {
+      "label": "E",
+      "rawText": "2\n          6\n\n         √"
+    },
+    {
+      "label": "F",
+      "rawText": "3\n          6\n\n         √"
+    },
+    {
+      "label": "G",
+      "rawText": "3\n          3\n\n         √"
+    },
+    {
+      "label": "H",
+      "rawText": "3"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "It is helpful √\n              to sketch the situation before going any further. The\n                                                                √ circle C1 has centre (−2, 1)\nand radius 3, while circle C2 has centre (4, 1) and radius 3. A quick sketch shows the\nconfiguration:\n\n                                             y\n                             C1                                   C2\n\n\n\n\n                                                                              x\n                                             0\n\n\n\n\nThere are four straight lines which are tangent to both of these circles: two of these are horizontal,\nand the other two are not. We want the one with a positive gradient, so we sketch it on the\ngraph along with the radii which meet it.\n\n                                             y\n                             C1                                   C2\n                                                           D\n\n                                                 E    θ\n                              O1                                 O2\n                                                                              x\n                                             0\n\n                                   l\n\n\nBy joining the two circle centres, we see that the angle the line l makes with the x-axis, which\nis θ, is the same as the angle marked on this diagram. We have also labelled some of the points\nso that we can refer to them later.\nSince the radius at D meets the tangent l at right angles, we can work out the side lengths of\nthe triangle O2 DE and hence tan θ. The distance between the circle centres\n                                                                      √      is 4 − (−2) = 6,\nso the hypotenuse EO2 has length 3. The circle C2 has radius√O2 D = 3, so by Pythagoras’s\nTheorem, DE 2 = (EO2 )2 − (DO2 )2 = 9 − 3 = 6. Thus DE = 6 and hence\n                                          √             √\n                                            3     1       2\n                                  tan θ = √ = √ =\n                                            6      2     2\n\nand the correct answer is option C.\n\n\n\n\nVersion 1.0, April 2021                                                                      Page 18\n\n                                            © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

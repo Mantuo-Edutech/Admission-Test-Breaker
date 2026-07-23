@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "17     A set S of whole numbers is called stapled if and only if for every whole number a\n        which is in S there exists a prime factor of a which divides at least one other number\n        in S.\n\n        Let T be a set of whole numbers. Which of the following is true if and only if T is\n        not stapled?\n\n        A For every number a which is in T , there is no prime factor of a which\n          divides every other number in T .\n\n        B For every number a which is in T , there is no prime factor of a which\n          divides at least one other number in T .\n\n        C For every number a which is in T , there is a prime factor of a which\n          does not divide any other number in T .\n\n        D For every number a which is in T , there is a prime factor of a which\n          does not divide at least one other number in T .\n\n        E      There exists a number a which is in T such that there is no prime factor of a\n               which divides every other number in T .\n\n        F      There exists a number a which is in T such that there is no prime factor of a\n               which divides at least one other number in T .\n\n        G There exists a number a which is in T such that there is a prime factor of a\n          which does not divide any other number in T .\n\n        H There exists a number a which is in T such that there is a prime factor of a\n          which does not divide at least one other number in T .\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u0014\u001c                                    >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A set S of whole numbers is called stapled if and only if for every whole number a\n        which is in S there exists a prime factor of a which divides at least one other number\n        in S.\n\n        Let T be a set of whole numbers. Which of the following is true if and only if T is\n        not stapled?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "For every number a which is in T , there is no prime factor of a which\n          divides every other number in T ."
+    },
+    {
+      "label": "B",
+      "rawText": "For every number a which is in T , there is no prime factor of a which\n          divides at least one other number in T ."
+    },
+    {
+      "label": "C",
+      "rawText": "For every number a which is in T , there is a prime factor of a which\n          does not divide any other number in T ."
+    },
+    {
+      "label": "D",
+      "rawText": "For every number a which is in T , there is a prime factor of a which\n          does not divide at least one other number in T ."
+    },
+    {
+      "label": "E",
+      "rawText": "There exists a number a which is in T such that there is no prime factor of a\n               which divides every other number in T ."
+    },
+    {
+      "label": "F",
+      "rawText": "There exists a number a which is in T such that there is no prime factor of a\n               which divides at least one other number in T ."
+    },
+    {
+      "label": "G",
+      "rawText": "There exists a number a which is in T such that there is a prime factor of a\n          which does not divide any other number in T ."
+    },
+    {
+      "label": "H",
+      "rawText": "There exists a number a which is in T such that there is a prime factor of a\n          which does not divide at least one other number in T .\n\n\n\n\n8&/(6                                                                          >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We begin with the original statement with S replaced by T :\n\n      T is stapled if and only if for every whole number a which is in T , there exists\n      a prime factor of a which divides at least one other number in T .\n\nTherefore, negating this:\n\n      T is not stapled if and only if it is not the case that for every whole number a\n      which is in T , there exists a prime factor of a which divides at least one other\n      number in T .\n\nWe can negate the outer ‘for every’ to get ‘there exists . . . such that it is not the case\nthat . . . ’:\n\n      T is not stapled if and only if there exists a whole number a which is in T such\n      that it is not the case that there exists a prime factor of a which divides at least\n      one other number in T .\n\nSo the answer is one of E, F, G, H.\nOur current phrasing is ‘it is not the case that there exists’; we could convert this into ‘for\nevery . . . , it is not the case that . . . ’, but none of these options use this wording. Instead, E,\nF and G use the wording ‘there is no prime factor’, which is the same as ‘there does not exist a\nprime factor’, which in turn is the same as ‘it is not the case that there exists a prime factor’.\nSo we can rewrite the previous statement as:\n\n      T is not stapled if and only if there exists a whole number a which is in T such\n      that there is no prime factor of a which divides at least one other number in T .\n\nHence the correct answer is F.\n\n\n\n\nVersion 1.0, April 2019                                                                      Page 19\n\n                                                                                         © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        20
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

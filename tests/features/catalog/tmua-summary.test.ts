@@ -15,7 +15,7 @@ describe("TMUA public summary runtime boundary", () => {
       exam: "TMUA",
       paperCount: 18,
       questionShellCount: 360,
-      publishedQuestionCount: 20,
+      publishedQuestionCount: 360,
     });
     expect(TMUA_PUBLIC_SUMMARY.editions).toHaveLength(9);
     expect(TMUA_PUBLIC_SUMMARY.editions.flatMap((edition) => edition.papers)).toHaveLength(18);

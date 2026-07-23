@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "9   Consider the following statements about a polynomial f(x):\n\n         I    f(x) = px3 + qx2 + rx + s, where p \u0004= 0.\n         II   There is a real number t for which f \u0002 (t) = 0.\n         III There are real numbers u and v for which f(u) f(v) < 0.\n\n    Which of these statements is/are suﬃcient for the equation f(x) = 0 to have a real\n    solution?\n\n              Statement I is           Statement II is          Statement III is\n                suﬃcient                  suﬃcient                 suﬃcient\n     A             Yes                      Yes                       Yes\n     B             Yes                      Yes                       No\n     C             Yes                       No                       Yes\n     D             Yes                       No                       No\n     E             No                       Yes                       Yes\n     F             No                       Yes                       No\n     G             No                        No                       Yes\n     H             No                        No                       No\n\n\n\n\n                                              11"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following statements about a polynomial f(x):\n\n         I    f(x) = px3 + qx2 + rx + s, where p A= 0.\n         II   There is a real number t for which f  (t) = 0.\n         III There are real numbers u and v for which f(u) f(v) < 0.\n\n    Which of these statements is/are suﬃcient for the equation f(x) = 0 to have a real\n    solution?\n\n              Statement I is           Statement II is          Statement III is\n                suﬃcient                  suﬃcient                 suﬃcient"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "Yes                      Yes                       Yes"
+    },
+    {
+      "label": "B",
+      "rawText": "Yes                      Yes                       No"
+    },
+    {
+      "label": "C",
+      "rawText": "Yes                       No                       Yes"
+    },
+    {
+      "label": "D",
+      "rawText": "Yes                       No                       No"
+    },
+    {
+      "label": "E",
+      "rawText": "No                       Yes                       Yes"
+    },
+    {
+      "label": "F",
+      "rawText": "No                       Yes                       No"
+    },
+    {
+      "label": "G",
+      "rawText": "No                        No                       Yes"
+    },
+    {
+      "label": "H",
+      "rawText": "No                        No                       No"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "I    Every cubic crosses the x-axis, so this condition is sufficient for f(x) = 0 to have a real root.\n     This also follows from III below if we take u to be a very large positive number and v to\n     be a very large negative number.\n\nII   Consider, for example, f(x) = x2 + 1. This quadratic has f ′ (x) = 2x so f ′ (0) = 0, but there\n     is no real x for which x2 + 1 = 0. So this condition is not sufficient.\n\nIII As f(u) f(v) < 0, we must have f(u) < 0 and f(v) > 0 or the other way round; either way,\n    the graph of y = f(x) has values above and below the x-axis. Since f(x) is a polynomial,\n    it must therefore cross the x-axis, and so the equation f(x) = 0 has a real root. (If we did\n    not know that f(x) was a polynomial, this would not be sufficient; consider f(x) = x1 for\n    example.)\n\nThe correct option is therefore C.\n\n\n\n\nVersion 1.0, March 2022                                                                      Page 12"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

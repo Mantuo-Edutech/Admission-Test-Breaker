@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11\n\nͳͳ\u0003     ݂ሺ‫ݔ‬ሻ\u0003\u0003\u0003\u0003\u0003\u0003  Ǥ\u0003\u0003\u0003\n        \u0003\n        \u0017\u0003\u0003݂ሺ‫ݔ‬ሻ ൌ Ͳ\u0003\u0003 \u0003\u0003\u0003ǡ\u0003‫ ݔ‬ൌ െ‫ ݔ\u0003\u0003\u0003݌‬ൌ ‫݌‬ǡ\u0003\u0003‫ \u0003݌‬൐ \u0003ͲǤ\u0003\u0003\u0003\n        \u0003\n        \u0006\u0003\u0003\u0003\u0003ǣ\u0003\n\n\u0003       \u0003      ͳ\u0003    ݂Ԣሺ‫ݔ‬ሻ ൌ Ͳ\u0003\u0003 \u0003\u0003\u0003\u0003‫\u0003\u0003ݔ‬െ‫\u0003݌\u0003\u0003݌‬\n\n\u0003       \u0003      \u0003ʹ\u0003   \u0017\u0003\u0003\u0003\u0003 \u0003‫ ݕ‬ൌ ݂ሺ‫ݔ‬ሻǡ\u0003\u0003‫ݔ‬Ǧ\u0003\u0003\u0003\u0003‫ ݔ‬ൌ െ‫\u0003\u0003\u0003݌‬\n                                           ௣\n                     ‫ ݔ‬ൌ ‫׬ ʹ\u0003\u0003\u0003\u0003\u0003݌‬଴ ݂ሺ‫ݔ‬ሻ\u0003‫\u0003 ݔ‬\n\u0003       \u0003      \u0003͵\u0003   \u0017\u0003\u0003\u0003\u0003‫ ݕ‬ൌ െ݂ሺെ‫ݔ‬ሻ\u0003 \u0003\u0003‫ݔ‬Ǧ\u0003\u0003\u0003\u0003‫ ݔ‬ൌ െ‫\u0003\u0003݌‬\n                     ‫ ݔ‬ൌ ‫\u0003\u0003݌‬\n\u0003       \u0003\n        \u001a \u0003\u0003\u0003\u0003\u0003\u0003\u0003ǫ\u0003\n        \u0003\n        \u0003\n\u0003       \u0004\u0003 \u0003\n\u0003       \u0003\n        \u0005\u0003 ͳ\u0003\u0003\n\u0003       \u0003\n        \u0006\u0003 ʹ\u0003\u0003\n        \u0003\n      \u0003 \u0007\u0003 ͵\u0003\u0003\n\u0003       \u0003\n        \b\u0003 ͳ\u0003\u0003ʹ\u0003\u0003\n\u0003       \u0003\n          \u0003 ͳ\u0003\u0003͵\u0003\u0003\n\u0003       \u0003\n          \u0003 ʹ\u0003\u0003͵\u0003\u0003\n\u0003       \u0003\n           \u0003 ͳǡ\u0003ʹ\u0003\u0003͵\u0003\n\n\n\n\n© UCLES 2016                                                                               [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "11     ݂ሺ‫ݔ‬ሻ  Ǥ\n        \n        ݂ሺ‫ݔ‬ሻ ൌ 0 ǡ‫ ݔ‬ൌ െ‫ ݔ݌‬ൌ ‫݌‬ǡ‫ ݌‬൐ 0Ǥ\n        \n        Cǣ\n\n             1    ݂Ԣሺ‫ݔ‬ሻ ൌ 0 ‫ݔ‬െ‫݌݌‬\n\n             2    ‫ ݕ‬ൌ ݂ሺ‫ݔ‬ሻǡ‫ݔ‬Ǧ‫ ݔ‬ൌ െ‫݌‬\n                                           ௣\n                     ‫ ݔ‬ൌ ‫׬ 2݌‬଴ ݂ሺ‫ݔ‬ሻ‫ ݔ‬\n             3   ‫ ݕ‬ൌ െ݂ሺെ‫ݔ‬ሻ ‫ݔ‬Ǧ‫ ݔ‬ൌ െ‫݌‬\n                     ‫ ݔ‬ൌ ‫݌‬\n       \n         ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": ""
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "2"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "12\n       \n           13\n       \n           23\n       \n            1ǡ23\n\n\n\n\n© UCLES 2016                                                                               [Turn over"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We know that the polynomial intersects the x-axis at x = −p and x = p only. It may touch\nthe x-axis at those points or it may cross it – we are not told whether x = p is a single root or\ndouble root, for example. We consider the three statements in turn.\n\n1 It is entirely possible that y = f(x) has multiple stationary points between x = −p and x = p\n  without crossing the x-axis, for example in this sketch:\n\n                                                     y\n\n\n\n\n                                                                     x\n                                        −p                   p\n\n\n\n\n  Therefore this statement need not be true.\n\n2 This is not necessarily true for (at least) two different reasons:\n\n  •    If the graph of y = f(x) is entirely\n                                         R p below the x-axis between x = p and x = −p, as in the\n       above sketch, then the integral 0 f(x) dx will be negative, but the area is positive.\n  •    If the graph\n               R p of y = f(x) is not symmetrical  about x = 0, then there is no reason that the\n       integal −p f(x) dx will be twice 0 f(x) dx. An example is this sketch, which is of the\n                                         Rp\n\n       graph of y = (x + 1)(x − 1)(x2 + x + 1); here p = 1, and the graph of y = x2 + x + 1 is\n       always positive, but it is not symmetrical about x = 0:\n                                                         y\n\n\n\n\n                                                                         x\n                                          −p                     p\n\n\n\n\n3 The graph of y = f(−x) is obtained by reflecting the graph of y = f(x) in the y-axis, so this\n  graph intersects the x-axis at x = −p and x = p. The graph of y = −f(−x) is obtained from\n  this by reflecting the graph in the x-axis, which does not change the points of intersection\n  with the x-axis. Therefore this statement must be true.\n  The graph obtained by combining these two transformations is the rotation of the original\n  graph about the origin by 180◦ .\n\nThe answer is therefore option D.\n\n\n                                                14\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

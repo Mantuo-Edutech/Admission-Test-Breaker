@@ -1,0 +1,573 @@
+{
+  "schemaVersion": 1,
+  "id": "esat-mathematics-2-full-mock-v1",
+  "exam": "ESAT",
+  "edition": "Mathematics 2 Full Mock · Original v1",
+  "sectionId": "mathematics-2",
+  "sectionLabel": "Mathematics 2 · Original Full-Length Mock",
+  "sectionLabelZh": "数学 2 · 满托原创完整模考",
+  "durationMinutes": 40,
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本模考依据 ESAT Mathematics 2 公开范围独立命题，不复制或改写官方 Guide、ENGAA、NSAA、TMUA 或其他市场资料题面。",
+  "sourceAnchors": [
+    {
+      "id": "esat-content-specification",
+      "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+      "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+      "usedFor": "27-question, 40-minute format and Mathematics 2 scope boundary"
+    },
+    {
+      "id": "esat-guide-mathematics-2",
+      "localPath": "content/official/raw/shared/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+      "sha256": "12ed684ee2dfb9b53355d54018ba216b5cd32161e5f6c5c9ee5e96b93cbf8844",
+      "usedFor": "MM1-MM8 terminology and topic coverage only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A non-zero real number " }, { "kind": "math", "tex": "x" }, { "kind": "text", "value": " satisfies " }, { "kind": "math", "tex": "x+\\frac{1}{x}=5" }, { "kind": "text", "value": ". What is the value of " }, { "kind": "math", "tex": "x^2+\\frac{1}{x^2}" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "21" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "23" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "25" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "27" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m2-algebra-functions"],
+      "skillTags": ["algebraic-identities", "deduction"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q02",
+      "number": 2,
+      "sourcePage": 2,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "The polynomial " }, { "kind": "math", "tex": "p(x)=x^3+ax^2-4x+6" }, { "kind": "text", "value": " is divisible by " }, { "kind": "math", "tex": "x-2" }, { "kind": "text", "value": ". What is the value of " }, { "kind": "math", "tex": "a" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-\\frac{1}{2}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{1}{2}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{3}{2}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-\\frac{3}{2}" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["m2-algebra-functions"],
+      "skillTags": ["factor-theorem", "polynomials"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q03",
+      "number": 3,
+      "sourcePage": 3,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the coefficient of " }, { "kind": "math", "tex": "x^3" }, { "kind": "text", "value": " in the expansion of " }, { "kind": "math", "tex": "(2-x)^5" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-40" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-20" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "20" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "40" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["m2-algebra-functions"],
+      "skillTags": ["binomial-expansion", "coefficient-selection"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q04",
+      "number": 4,
+      "sourcePage": 4,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Let " }, { "kind": "math", "tex": "f(x)=2x+3" }, { "kind": "text", "value": " and " }, { "kind": "math", "tex": "g(x)=x^2" }, { "kind": "text", "value": ". Which pair gives all real values of " }, { "kind": "math", "tex": "x" }, { "kind": "text", "value": " satisfying " }, { "kind": "math", "tex": "g(f(x))=25" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-1,\\ 4" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-4,\\ -1" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-4,\\ 1" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1,\\ 4" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m2-algebra-functions"],
+      "skillTags": ["composite-functions", "quadratic-equations"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q05",
+      "number": 5,
+      "sourcePage": 5,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "In a geometric sequence, the third term is 12 and the sixth term is 96. The common ratio is positive. What is the first term?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{3}{2}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m2-sequences-series"],
+      "skillTags": ["geometric-sequences", "simultaneous-deduction"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q06",
+      "number": 6,
+      "sourcePage": 6,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "An arithmetic sequence has first term 5 and common difference 3. The sum of its first " }, { "kind": "math", "tex": "n" }, { "kind": "text", "value": " terms is 185. What is " }, { "kind": "math", "tex": "n" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "9" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "10" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "11" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "12" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m2-sequences-series"],
+      "skillTags": ["arithmetic-series", "quadratic-equations"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q07",
+      "number": 7,
+      "sourcePage": 7,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A convergent geometric series has first term 12 and second term " }, { "kind": "math", "tex": "-4" }, { "kind": "text", "value": ". What is its sum to infinity?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "9" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "8" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "12" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["m2-sequences-series"],
+      "skillTags": ["geometric-series", "sum-to-infinity"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q08",
+      "number": 8,
+      "sourcePage": 8,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which equation is the line through " }, { "kind": "math", "tex": "(2,-1)" }, { "kind": "text", "value": " that is perpendicular to " }, { "kind": "math", "tex": "3x-2y=7" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3x-2y=8" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2x-3y=7" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3x+2y=4" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2x+3y=1" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["m2-coordinate-geometry"],
+      "skillTags": ["straight-lines", "perpendicular-gradients"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q09",
+      "number": 9,
+      "sourcePage": 9,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A circle has equation" }] },
+        { "kind": "display-math", "tex": "x^2+y^2+4x-6y-12=0" },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is its radius?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\sqrt{13}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\sqrt{21}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["m2-coordinate-geometry"],
+      "skillTags": ["circles", "completing-the-square"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q10",
+      "number": 10,
+      "sourcePage": 10,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "The line " }, { "kind": "math", "tex": "y=3" }, { "kind": "text", "value": " cuts the circle " }, { "kind": "math", "tex": "x^2+y^2=25" }, { "kind": "text", "value": " in a chord. What is the length of the chord?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "8" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "10" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "16" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m2-coordinate-geometry"],
+      "skillTags": ["circles", "chord-length"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q11",
+      "number": 11,
+      "sourcePage": 11,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "How many solutions does the equation " }, { "kind": "math", "tex": "2\\cos^2\\theta-3\\cos\\theta+1=0" }, { "kind": "text", "value": " have in the interval " }, { "kind": "math", "tex": "0\\leq\\theta<2\\pi" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["m2-trigonometry"],
+      "skillTags": ["trigonometric-equations", "interval-solutions"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q12",
+      "number": 12,
+      "sourcePage": 12,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "The angle " }, { "kind": "math", "tex": "\\theta" }, { "kind": "text", "value": " is obtuse and " }, { "kind": "math", "tex": "\\sin\\theta=\\frac{3}{5}" }, { "kind": "text", "value": ". What is " }, { "kind": "math", "tex": "\\tan\\theta" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{3}{4}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-\\frac{4}{3}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-\\frac{3}{4}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{4}{3}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m2-trigonometry"],
+      "skillTags": ["exact-trigonometry", "quadrants"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q13",
+      "number": 13,
+      "sourcePage": 13,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the maximum possible value of " }, { "kind": "math", "tex": "3\\sin x+4\\cos x" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "7" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["m2-trigonometry"],
+      "skillTags": ["compound-trigonometry", "range"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q14",
+      "number": 14,
+      "sourcePage": 14,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A sector has radius 6 and angle " }, { "kind": "math", "tex": "\\frac{5\\pi}{6}" }, { "kind": "text", "value": " radians. What is the length of its arc?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{5\\pi}{6}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3\\pi" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5\\pi" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "10\\pi" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m2-trigonometry"],
+      "skillTags": ["radians", "arc-length"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q15",
+      "number": 15,
+      "sourcePage": 15,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Solve " }, { "kind": "math", "tex": "2^{x+1}=8^{x-1}" }, { "kind": "text", "value": "." }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{3}{2}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{5}{2}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["m2-exponentials-logs"],
+      "skillTags": ["exponential-equations", "common-base"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q16",
+      "number": 16,
+      "sourcePage": 16,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "For " }, { "kind": "math", "tex": "x>3" }, { "kind": "text", "value": ", solve " }, { "kind": "math", "tex": "\\ln x+\\ln(x-3)=\\ln 4" }, { "kind": "text", "value": "." }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m2-exponentials-logs"],
+      "skillTags": ["logarithm-laws", "domain-check"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q17",
+      "number": 17,
+      "sourcePage": 17,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A population is modelled by " }, { "kind": "math", "tex": "P=800e^{kt}" }, { "kind": "text", "value": ", where " }, { "kind": "math", "tex": "t" }, { "kind": "text", "value": " is measured in years. The population doubles every 5 years. What is the population after 15 years?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3200" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4800" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6400" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "12800" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m2-exponentials-logs"],
+      "skillTags": ["exponential-models", "doubling-time"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q18",
+      "number": 18,
+      "sourcePage": 18,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "For " }, { "kind": "math", "tex": "y=x^2e^x" }, { "kind": "text", "value": ", what is the value of " }, { "kind": "math", "tex": "\\frac{dy}{dx}" }, { "kind": "text", "value": " at " }, { "kind": "math", "tex": "x=1" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "e" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2e" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "e^2" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3e" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["m2-differentiation"],
+      "skillTags": ["product-rule", "gradient"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q19",
+      "number": 19,
+      "sourcePage": 19,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "The curve " }, { "kind": "math", "tex": "y=x^3-3x^2-9x+5" }, { "kind": "text", "value": " has a local maximum. At what value of " }, { "kind": "math", "tex": "x" }, { "kind": "text", "value": " does it occur?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-1" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["m2-differentiation"],
+      "skillTags": ["stationary-points", "classification"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q20",
+      "number": 20,
+      "sourcePage": 20,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which equation is the tangent to " }, { "kind": "math", "tex": "y=\\ln x" }, { "kind": "text", "value": " at " }, { "kind": "math", "tex": "x=e" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "y=\\frac{x}{e}+1" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "y=\\frac{x}{e}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "y=ex" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "y=\\frac{x}{e}-1" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m2-differentiation"],
+      "skillTags": ["tangents", "logarithmic-differentiation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q21",
+      "number": 21,
+      "sourcePage": 21,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A rectangle in the first quadrant has sides on the coordinate axes and its upper-right vertex on " }, { "kind": "math", "tex": "y=12-x^2" }, { "kind": "text", "value": ". What is the maximum possible area of the rectangle?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "8" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "12" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "18" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "16" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["m2-differentiation"],
+      "skillTags": ["optimisation", "modelling"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q22",
+      "number": 22,
+      "sourcePage": 22,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Evaluate" }] },
+        { "kind": "display-math", "tex": "\\int_0^2(3x^2-2x+1)\\,dx" }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "8" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m2-integration"],
+      "skillTags": ["definite-integration", "polynomials"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q23",
+      "number": 23,
+      "sourcePage": 23,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A curve satisfies " }, { "kind": "math", "tex": "\\frac{dy}{dx}=6x-4" }, { "kind": "text", "value": " and passes through " }, { "kind": "math", "tex": "(1,5)" }, { "kind": "text", "value": ". What is the value of " }, { "kind": "math", "tex": "y" }, { "kind": "text", "value": " when " }, { "kind": "math", "tex": "x=2" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "8" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "10" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "12" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "14" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m2-integration"],
+      "skillTags": ["indefinite-integration", "initial-condition"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q24",
+      "number": 24,
+      "sourcePage": 24,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the area enclosed between " }, { "kind": "math", "tex": "y=x" }, { "kind": "text", "value": " and " }, { "kind": "math", "tex": "y=x^2" }, { "kind": "text", "value": " for " }, { "kind": "math", "tex": "0\\leq x\\leq1" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{1}{6}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{1}{3}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{1}{2}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{2}{3}" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["m2-integration"],
+      "skillTags": ["area-between-curves", "definite-integration"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q25",
+      "number": 25,
+      "sourcePage": 25,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Starting from the graph of " }, { "kind": "math", "tex": "y=f(x)" }, { "kind": "text", "value": ", which description gives the graph of " }, { "kind": "math", "tex": "y=f(2(x-3))" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Horizontal stretch by factor 2, then translate 3 units right" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Horizontal compression by factor 2, then translate 6 units right" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Horizontal compression by factor 2, then translate 3 units right" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Vertical stretch by factor 2, then translate 3 units right" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m2-graphs"],
+      "skillTags": ["function-transformations", "horizontal-scale"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q26",
+      "number": 26,
+      "sourcePage": 26,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "At which values of " }, { "kind": "math", "tex": "x" }, { "kind": "text", "value": " do the graphs " }, { "kind": "math", "tex": "y=|x-1|" }, { "kind": "text", "value": " and " }, { "kind": "math", "tex": "y=2" }, { "kind": "text", "value": " intersect?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-1,\\ 3" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-2,\\ 2" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1,\\ 3" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-1,\\ 1" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["m2-graphs"],
+      "skillTags": ["modulus-graphs", "intersections"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-full-mock-v1-q27",
+      "number": 27,
+      "sourcePage": 27,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "What are the vertical and horizontal asymptotes, respectively, of " }, { "kind": "math", "tex": "y=\\frac{2x+1}{x-3}" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "x=-3,\\ y=2" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "x=3,\\ y=-2" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "x=-3,\\ y=-2" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "x=3,\\ y=2" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["m2-graphs"],
+      "skillTags": ["rational-functions", "asymptotes"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-full-mock-v1.json"
+    }
+  ]
+}

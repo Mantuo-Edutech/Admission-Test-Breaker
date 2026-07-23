@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p1-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p1",
+  "edition": "specimen",
+  "paper": 1,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "15.    The smallest possible value of                 as   varies is\n\n\n\n       A\n\n\n       B\n\n\n       C\n\n\n       D\n\n\n       E         2\n\n\n\n© UCLES 2017"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The smallest possible value of                 as   varies is"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "2\n\n\n\n© UCLES 2017"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We start by evaluating the integral to obtain\n                            Z 1               Z 1\n                                (x − a)2 dx =     x2 − 2ax + a2 dx\n                              0                0\n                                                               \u00031\n                                            = 3 x − ax2 + a2 x 0\n                                              \u00021 3\n\n                                              = 31 − a + a2\n\nWe can now complete the square on this final expression to obtain\n\n                              (a − 12 )2 − ( 21 )2 + 13 = (a − 12 )2 + 12\n                                                                       1\n\n\n                                      1\nand so the smallest possible value is 12 , which is option A.\nWe could alternatively have used calculus to find the stationary point of 13 − a + a2 (by differen-\ntiating with respect to a), and then noting that this is a local minimum, and that the function\nis greater than this at all other points.\n\n\n\n\nVersion 1.1, November 2020                                                                 Page 17"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+      "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+      "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+      "pages": [
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required"
+    ]
+  }
+}

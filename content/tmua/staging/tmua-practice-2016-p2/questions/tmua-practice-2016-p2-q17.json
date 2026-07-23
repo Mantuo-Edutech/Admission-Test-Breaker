@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16\n\nͳ͹\u0003   \u0006\u0003\u0003\u0003ǡ\u0003\u0003ܿ\u0003\u0003\u0003 ǣ\u0003\n      \u0003\n                                           \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003‫ ݕ‬ൌ ͵  ‫ ݔ‬൅ ʹ\u0003\n      \u0003\n                                                     ‫ ݕ‬ൌ ‫ ݔ‬൅ ܿ\u0003\n      \u0003\n      \u001a \u0003\u0003\u0003\u0003\u0003Ȁ\u0003ǫ\u0003\n      \u0003\n      \u0003\n      \u0003    ͳ\u0003    \u0003\u0003\u0003\u0003ܿǣ\u0003\u0003\u0003\u0003 \u0003\u0003\u0003\u0003Ͳ ൑ ‫ ݔ‬൑ ߨ\u0003\u0003\u0003\u0003\n               \u0003\u0003\u0003\u0003\u0003\u0003Ȃ ߨ ൏ ‫ ݔ‬൏ ͲǤ\u0003\n      \u0003    \u0003\n           ʹ\u0003    \u0003\u0003\u0003\u0003ܿǣ\u0003\u0003\u0003\u0003 \u0003\u0003\u0003\u0003Ͳ ൑ ‫ ݔ‬൑ ߨ\u0003\u0003\u0003\u0003\n                     \u0003\u0003\u0003\u0003Ȃ ߨ ൏ ‫ ݔ‬൏ ͲǤ\u0003\n      \u0003        \u0003͵\u0003    \u0003\u0003\u0003\u0003ܿǣ\u0003\u0003\u0003\u0003 \u0003\u0003\u0003\u0003Ͳ ൑ ‫ ݔ‬൑ ߨ\u0003\u0003\u0003\u0003\n                     \u0003\u0003\u0003\u0003\u0003‫ ݔ‬൐ ߨǤ\u0003\n      \u0003\n      \u0003      \u0003\n      \u0004\u0003     \u0003\n      \u0003\n      \u0005\u0003     ͳ\u0003\u0003\n      \u0003\n      \u0006\u0003     ʹ\u0003\u0003\n      \u0003\n      \u0007\u0003     ͵\u0003\u0003\n      \u0003\n      \b\u0003     ͳ\u0003\u0003ʹ\u0003\u0003\n      \u0003\n        \u0003    ͳ\u0003\u0003͵\u0003\u0003\n      \u0003\n        \u0003    ʹ\u0003\u0003͵\u0003\u0003\n      \u0003\n         \u0003   ͳǡ\u0003ʹ\u0003\u0003͵\u0003\n\n\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "16\n\n17   Cǡܿ ǣ\n      \n                                           ‫ ݕ‬ൌ 3  ‫ ݔ‬൅ 2\n      \n                                                     ‫ ݕ‬ൌ ‫ ݔ‬൅ ܿ\n      \n       Ȁǫ\n      \n      \n          1    ܿǣ 0 ൑ ‫ ݔ‬൑ ߨ\n               Ȃ ߨ ൏ ‫ ݔ‬൏ 0Ǥ\n          \n           2    ܿǣ 0 ൑ ‫ ݔ‬൑ ߨ\n                     Ȃ ߨ ൏ ‫ ݔ‬൏ 0Ǥ\n              3    ܿǣ 0 ൑ ‫ ݔ‬൑ ߨ\n                     ‫ ݔ‬൐ ߨǤ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    },
+    {
+      "label": "F",
+      "rawText": "[visual option F; transcription required]"
+    },
+    {
+      "label": "G",
+      "rawText": "[visual option G; transcription required]"
+    },
+    {
+      "label": "H",
+      "rawText": "[visual option H; transcription required]"
+    }
+  ],
+  "correctAnswer": "H",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The graph of y = 3 sin x + 2 is the standard sine graph stretched vertically by a factor of 3 and\nthen translated in the y-direction by 2. It thus oscillates between 2 − 3 = −1 and 2 + 3 = 5, and\nits y-axis intercept is 2.\ny = x + c has gradient 1 and y-intercept c.\nWe sketch the graph of y = 3 sin x + 2 to help us:\n\n                                                y\n\n                                                5\n\n\n\n\n                                                2\n\n\n                                                                                         x\n       −2π                 −π                                     π                 2π\n\n                                                −1\n\n\nWe now consider the statements in turn:\n\n1 To have exactly one solution with 0 ⩽ x ⩽ π and at least one solution with −π < x < 0, we\n  could take c to be just less than 2. So this statement is true.\n\n2 We want to choose c to be negative for this case; if c is such that y = x + c intersects the\n  sine curve at x = π, there will be exactly one solution with 0 ⩽ x ⩽ π. This value of c must\n  satisfy 2 = π + c, so c = 2 − π < −1, so there are no solutions with x < 0. So this statement\n  is true.\n\n3 The same value of c as in statement 2 will work here: c = 2 − π. At x = 2π, x + c = 2 + π > 5,\n  so there cannot be any solutions with x ⩾ 2π. As the sine graph is below 2 for π < x < 2π,\n  there are no solutions there either. So this statement is true.\n\nThe correct option is therefore H.\n\n\n\n\n                                               22\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        22
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required",
+      "option-count-review",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

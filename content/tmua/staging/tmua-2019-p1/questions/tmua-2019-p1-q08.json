@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "8   The function f is such that 0 < f(x) < 1 for 0 ≤ x ≤ 1.\n                                                                    \u00021\n    The trapezium rule with n equal intervals is used to estimate   0\n                                                                         f(x) dx and\n    produces an underestimate.\n\n    Using the same number of equal intervals, for which one of the following does the\n    trapezium rule produce an overestimate?\n\n        \u00021\n    A    0\n             (f(x) + 1) dx\n        \u00021\n    B    0\n             2f(x) dx\n        \u00020\n    C    −1\n              f(x + 1) dx\n        \u00020\n    D    −1\n              f(−x) dx\n        \u00021\n    E    0\n             (1 − f(x)) dx\n\n\n\n\n                                           10"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The function f is such that 0 < f(x) < 1 for 0 ≤ x ≤ 1.\n                                                                    1\n    The trapezium rule with n equal intervals is used to estimate   0\n                                                                         f(x) dx and\n    produces an underestimate.\n\n    Using the same number of equal intervals, for which one of the following does the\n    trapezium rule produce an overestimate?\n\n        1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0\n             (f(x) + 1) dx\n        1"
+    },
+    {
+      "label": "B",
+      "rawText": "0\n             2f(x) dx\n        0"
+    },
+    {
+      "label": "C",
+      "rawText": "−1\n              f(x + 1) dx\n        0"
+    },
+    {
+      "label": "D",
+      "rawText": "−1\n              f(−x) dx\n        1"
+    },
+    {
+      "label": "E",
+      "rawText": "0\n             (1 − f(x)) dx"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "A This translates the graph upwards (in the positive y-direction) by 1 unit, so the trapezia will\n  just be 1 unit taller. The approximation will therefore still be an underestimate.\n\nB This stretches the graph by a factor of 2 in the y-direction, and the trapezia with it, so the\n  approximation will still be an underestimate.\n\nC This translates the graph by 1 unit leftwards (in the negative x-direction), and correspond-\n  ingly calculates the area between −1 and 0 rather than between 0 and 1; the trapezia are\n  correspondingly translated leftwards by 1 unit, and so we will still get an underestimate.\n\nD This reflects the graph in the y-axis, and correspondingly calculates the area between −1\n  and 0. The trapezia are correspondingly reflected, so we will still get an underestimate.\n\nE The graph is reflected in the x-axis and then translated upwards by 1 unit. Whether the\n  approximation using the trapezium rule is an over- or underestimate is not affected by the\n  vertical\n       R 1 translation, as we noted in A, so we may as well not translate the graph at all, giving\n  just 0 (−f(x)) dx. Let us sketch an example using just two intervals:\n\n                               y                         y\n\n\n\n\n                                             x                          x\n\n\n\n\n   The original (blue) trapezia give an underestimate for the integral. The red trapezia give\n   an underestimate for the area of the region, but since the integral is negative (the graph lies\n   below the x-axis), the trapezium rule gives an overestimate for the integral (for example, it\n   may estimate −0.6 instead of the correct −0.65, and −0.6 > −0.65).\n\nHence the correct answer is E.\n\n\n\n\nc UCLES                                                                                   Page 10"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        10
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

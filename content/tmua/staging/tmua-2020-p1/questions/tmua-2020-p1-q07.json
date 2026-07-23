@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q07",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 7,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "7   Given that\n\n\n                                     23x = 8(y+3)\n\n    and\n\n\n                                              16(y+1)\n                                   4(x+1) =\n                                               8(y+3)\n\n    what is the value of x + y ?\n\n    A −23\n\n    B −22\n\n    C −15\n\n    D −14\n\n    E −11\n\n    F −10\n\n\n\n\n                                        9"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Given that\n\n\n                                     23x = 8(y+3)\n\n    and\n\n\n                                              16(y+1)\n                                   4(x+1) =\n                                               8(y+3)\n\n    what is the value of x + y ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−23"
+    },
+    {
+      "label": "B",
+      "rawText": "−22"
+    },
+    {
+      "label": "C",
+      "rawText": "−15"
+    },
+    {
+      "label": "D",
+      "rawText": "−14"
+    },
+    {
+      "label": "E",
+      "rawText": "−11"
+    },
+    {
+      "label": "F",
+      "rawText": "−10"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We write these two equations in powers of 2, giving:\n\n                               23x = 23y+9\n                                       24y+4\n                             22x+2 =         = 2(4y+4)−(3y+9) = 2y−5\n                                       23y+9\n\nTherefore we have\n\n                                             3x = 3y + 9\n                                         2x + 2 = y − 5\n\nWe can divide the first of these equations by 3 for simplicity, giving\n\n                                               x=y+3\n                                          2x + 2 = y − 5\n\nWe can now solve these simultaneous equations; subtracting the first from the seconds gives\nx + 2 = −8, so x = −10 and y = −13, so x + y = −23, which is option A.\n\n\n\n\nVersion 1.0, April 2021                                                             Page 9\n\n                                           © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

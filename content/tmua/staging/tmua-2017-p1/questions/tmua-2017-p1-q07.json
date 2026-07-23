@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q07",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 7,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                  \u0003\n                                                  \u0003\n                                                  \u0003\n\n͹\u0003     \u0017\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003\u0003‫݌‬ǡ\u0003‫݌\u0003\u0003ݍ‬ଶ \u0003 ǡ\u0003\u0003\n       ‫ \u0003݌‬൏ \u0003Ͳ\u0003\u0003\u0003\n       \u0003\n       \u0017\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003\u0003‫݌‬ǡ\u0003‫݌‬ଶ \u0003\u0003‫ \u0003ݍ‬Ǥ\u0003\u0003\n       \u0003\n         \u0003\u0003\u0003\u0003\u0003\u0003ͳͲ\u0003\u0003\u0003\u0003 \u0003Ǥ\u0003\n\u0003      \u0003\n\u0003          ʹ͵\n       A      \u0003\n            ͺ\n\u0003          ͻͷ\n       B      \u0003\n            ͺ\n\u0003          ͳͳͷ\n       C       \u0003\n            ͺ\n\u0003          ͳͺͷ\n       D       \u0003\n            ͺ\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u001c                                      >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": " ‫݌‬ǡ‫݌ݍ‬ଶ  ǡ\n       ‫ ݌‬൏ 0\n       \n        ‫݌‬ǡ‫݌‬ଶ ‫ ݍ‬Ǥ\n       \n         10 Ǥ\n      \n          23"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "8\n          95"
+    },
+    {
+      "label": "B",
+      "rawText": "8\n          115"
+    },
+    {
+      "label": "C",
+      "rawText": "8\n          185"
+    },
+    {
+      "label": "D",
+      "rawText": "8\n\n\n\n\n\n\n\n\n\n\n\n8&/(6                                                                            >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let the common difference of the arithmetic progression be d and the common ratio of the\ngeometric progression be r. Then we can write the first three terms of each as\n\n                   p, q = p + d, p2 = p + 2d       and      p, p2 = pr, q = pr2 .\n\nThe second term of the geometric progression shows that r = p (as p is non-zero), so the third\nterm gives q = p3\nLooking again at the arithmetic progression, using q = p3 now shows that the second and third\nterms are\n\n                                            p3 = p + d\n                                            p2 = p + 2d\n\nWe can eliminate d from these by subtracting twice the first equation from the second, giving\np2 − 2p3 = −p. This rearranges to\n                                     2p3 − p2 − p = 0\nThis factorises as p(2p2 − p − 1) = 0, and then to p(2p + 1)(p − 1) = 0. This has the three\nsolutions p = 0, p = − 12 and p = 1. We were told that p < 0, so we must have p = − 12 .\nThus d = p3 − p = − 18 − (− 21 ) = 38 and the sum of the first 10 terms of the arithmetic progression\nis given, using the formula Sn = 12 n(2a + (n − 1)d), by\n                                   \u0012     \u0012 \u0013             \u0013      \u0012          \u0013\n                          1                  1         3                27      95\n                   S10 = × 10 2 × −             +9×         = 5 −1 +         =\n                          2                  2         8                8        8\n\nand the correct answer is B.\n\n\n\n\nVersion 1.1, March 2019                                                                     Page 10\n\n                                                                                        © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

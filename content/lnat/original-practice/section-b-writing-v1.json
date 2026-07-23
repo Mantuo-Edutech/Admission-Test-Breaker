@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "lnat-section-b-writing-v1",
+  "exam": "LNAT",
+  "edition": "Section B Writing · Original v1",
+  "sectionId": "section-b",
+  "sectionLabel": "Section B",
+  "sectionLabelZh": "论证写作 · 满托原创",
+  "durationMinutes": 40,
+  "deliveryMode": "structured",
+  "responseMode": "essay",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "三道题目均为满托独立命题；官方资料只用于核对三选一、40 分钟、建议篇幅与 750 词上限。",
+  "sourceAnchors": [
+    {
+      "id": "lnat-preparation-guide",
+      "localPath": "content/official/raw/lnat/Your-Guide-To-Preparing-For-The-LNAT.pdf",
+      "sha256": "b876afae5e82ef0f43cb714c37ed26a08369b3d6714b40e1fca89288829ced08",
+      "usedFor": "Section B argument-writing scope only"
+    },
+    {
+      "id": "lnat-sample-essay-arts",
+      "localPath": "content/official/raw/lnat/sample_arts.pdf",
+      "sha256": "bc27b9799f47bf6234a20b1996d5ae0ae1003e8dd391fe15586c249a014f1f2c",
+      "usedFor": "essay presentation and length boundary only"
+    }
+  ],
+  "essayTask": {
+    "maxWords": 750,
+    "recommendedWords": { "min": 500, "max": 600 },
+    "prompts": [
+      {
+        "id": "official-diaries",
+        "title": "Public accountability",
+        "prompt": "Should elected officials be required to publish a complete diary of their meetings?"
+      },
+      {
+        "id": "local-admissions",
+        "title": "University admissions",
+        "prompt": "Universities should give preference to qualified applicants who live in the surrounding region. Discuss."
+      },
+      {
+        "id": "civil-disobedience",
+        "title": "Law and protest",
+        "prompt": "Is civil disobedience a necessary feature of a healthy democracy?"
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": "lnat-section-b-writing-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Choose one of the three prompts and construct a concise, well-supported argument in English." }] }],
+      "options": [],
+      "correctAnswer": "",
+      "knowledgeTags": ["lnat-writing-argument"],
+      "skillTags": ["thesis", "structure", "counterargument", "judgement"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/lnat/original-practice/section-b-writing-v1.json",
+      "sourceAnswerPath": "content/lnat/original-practice/section-b-writing-v1.json"
+    }
+  ]
+}

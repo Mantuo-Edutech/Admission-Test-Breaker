@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q05",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 5,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "5\n\nͷ\u0003    \u0006\u0003\u0003ǣ\u0003\n      \u0003\n            ሺȗሻ\u0003\u0004\u0003\u0003\u0003݊\u0003\u0003\u0003\u0003\u0003\u0003ͳ\u0003\u0003\u0003ͷ\u0003\u0003\u0003\u0003\u0003\u0003͸Ǥ\u0003\n      \u0003\n        \u0003\u0003 \u0003\u0003ሺȗሻ\u0003\u0003\u0003\u0003\u0003\u0003Ͳ ൏ ݊ ൏ ͷͲ\u0003ǫ\u0003\n\n\n      \u0004\u0003   ʹ\u0003\n      \u0003\n      \u0005\u0003   ͵\u0003\n      \u0003\n      \u0006\u0003   Ͷ\u0003\n      \u0003\n      \u0007\u0003   ͷ\u0003\n      \u0003\n      \b\u0003   ͸\u0003\n\n\n\n\n© UCLES 2016                                                                                 [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "5    Cǣ\n      \n            ሺȗሻA݊156Ǥ\n      \n         ሺȗሻ0 ൏ ݊ ൏ 50ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "2"
+    },
+    {
+      "label": "B",
+      "rawText": "3"
+    },
+    {
+      "label": "C",
+      "rawText": "4"
+    },
+    {
+      "label": "D",
+      "rawText": "5"
+    },
+    {
+      "label": "E",
+      "rawText": "6\n\n\n\n\n© UCLES 2016                                                                                 [Turn over"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can rewrite the statement (∗) in the form\n\n      If a whole number n is 1 less or 5 less than a multiple of 6, then n is prime.\n\nA counterexample to this statement is a whole number n which makes this if statement false,\nthat is, it is a whole number n that is 1 less or 5 less than a multiple of 6, but which is not\nprime. So we list these numbers and check whether they are prime:\n n    Prime?\n 1      no\n 5      yes\n 7      yes\n 11     yes\n 13     yes\n 17     yes\n 19     yes\n 23     yes\n 25     no\n 29     yes\n 31     yes\n 35     no\n 37     yes\n 41     yes\n 43     yes\n 47     yes\n 49     no\nThus there are 4 numbers which are counterexamples in this range, and so the answer is C.\n\n\n\n\n                                               8\n                                                                                       © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

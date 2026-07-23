@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q06",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 6,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "6   Find the number of solutions of the equation\n\n                                     x sin 2x = cos 2x\n\n    with 0 ≤ x ≤ 2π.\n\n    A 0\n\n    B 1\n\n    C 2\n\n    D 3\n\n    E   4\n\n\n\n\n                                           8"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the number of solutions of the equation\n\n                                     x sin 2x = cos 2x\n\n    with 0 ≤ x ≤ 2π."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0"
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "2"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "4"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "This equation has trigonometric functions and an x on its own. Our best bet is to first rearrange\nit to bring all of the trigonometric functions together. We have a sin 2x on one side and a cos 2x\non the other, which suggests that we should divide by cos 2x to obtain tan 2x. This gives\n\n                                           x tan 2x = 1\n\nWe should check, though, that we cannot have cos 2x = 0, so that we are allowed to divide by\nit. If cos 2x = 0, this would require x sin 2x = 0, so either sin 2x = 0, which is impossible if\ncos 2x = 0, or x = 0. But if x = 0, then cos 2x = 1, so this is also impossible. So we cannot\nhave cos 2x = 0.\nReturning to x tan 2x = 1, we can divide by x to get\n                                                      1\n                                           tan 2x =\n                                                      x\nThis equation is not possible to solve exactly. But the question (thankfully) only asks us how\nmany solutions there are in the range 0 ⩽ x ⩽ 2π\nSo we can sketch the graphs of y = tan 2x and y = x1 and see how many times they intersect.\n\n                               y\n\n                           2\n\n\n                           1\n\n                                                                         x\n                               0       π        π         3π        2π\n                                       2                   2\n                          −1\n\n\n                          −2\n\n\n\n\nWe see that the graph of y = x1 intersects every positive branch of y = tan 2x once. Since there\nare four branches of y = tan 2x in the range 0 ⩽ x ⩽ 2π, there are four solutions, so the correct\nanswer is E.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 8\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

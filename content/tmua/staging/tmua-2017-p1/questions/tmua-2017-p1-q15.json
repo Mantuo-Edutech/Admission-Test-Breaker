@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                        \u0003\n                                                        \u0003\n                                                        \u0003\n\nͳͷ\u0003        \u0003\u0003\u0003\u0003݂ሺ‫ݔ‬ሻ ൌ െʹ‫ ݔ‬ଶ ൅ ͳͲ\u0003\u0003\n\n       \u0006\u0003\u0003\u0003\u0003 ǣ\u0003\n\n       \u0003         \u0003        ሺ૚ሻ\u0003‫ ݕ‬ൌ ݂ሺ‫ݔ‬ሻ\u0003\u0003\n\n       \u0003         \u0003        ሺ૛ሻ\u0003‫ ݕ‬ൌ ݂ሺ‫ ݔ‬൅ ͳሻ\u0003\n\n       \u0003         \u0003        ሺ૜ሻ\u0003\u0003 \u0003‫ ݕ‬ൌ ݂ሺ‫ ݔ‬൅ ͳሻ\u0003 \u0003\u0003\u0003\u0003‫ ݕ‬ൌ ͸\u0003\n\n       \u0017\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003\u0003\u0003 \u0003\u0003\n       ‫ ݔ‬ൌ Ͳ\u0003\u0003‫ ݔ‬ൌ ͳǤ\u0003\n\n       \u0016\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003\u0003\n       Ǥ\n\u0003      \u0003\n\u0003                         ሺ૚ሻ                         ሺ૛ሻ                      ሺ૜ሻ\n\n\u0003      A             \u0003              \u0003           \u0003     \u0003\n\n\u0003      B             \u0003              \u0003           \u0003      \u0003\n\n\u0003      C             \u0003              \u0003            \u0003     \u0003\n\n\u0003      D             \u0003              \u0003            \u0003      \u0003\n\n\u0003      E             \u0003               \u0003           \u0003     \u0003\n\n\u0003      F             \u0003               \u0003           \u0003      \u0003\n\n\u0003      G             \u0003               \u0003            \u0003     \u0003\n\n\u0003      H             \u0003               \u0003            \u0003      \u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                           \u0014\u001a                                  >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "݂ሺ‫ݔ‬ሻ ൌ െ2‫ ݔ‬ଶ ൅ 10\n\n       C ǣ\n\n                        ሺ૚ሻ‫ ݕ‬ൌ ݂ሺ‫ݔ‬ሻ\n\n                        ሺ૛ሻ‫ ݕ‬ൌ ݂ሺ‫ ݔ‬൅ 1ሻ\n\n                        ሺ૜ሻ ‫ ݕ‬ൌ ݂ሺ‫ ݔ‬൅ 1ሻ ‫ ݕ‬ൌ 6\n\n         \n       ‫ ݔ‬ൌ 0‫ ݔ‬ൌ 1Ǥ\n\n        \n       Ǥ\n      \n                         ሺ૚ሻ                         ሺ૛ሻ                      ሺ૜ሻ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "                         "
+    },
+    {
+      "label": "B",
+      "rawText": "                         "
+    },
+    {
+      "label": "C",
+      "rawText": "                          "
+    },
+    {
+      "label": "D",
+      "rawText": "                          "
+    },
+    {
+      "label": "E",
+      "rawText": "                          "
+    },
+    {
+      "label": "F",
+      "rawText": "                          "
+    },
+    {
+      "label": "G",
+      "rawText": "                           "
+    },
+    {
+      "label": "H",
+      "rawText": "                                 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8&/(6                                                                             >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can either proceed by sketching the graph or by using a general theorem about the trapezium\nrule. We start with sketching. The simplest case of the trapezium rule is where we only have\none trapezium, so that is what we will draw.\n\n                                                y\n\n\n                                                       y = f(x)\n\n\n\n\n                                                                   x\n                                                0 1\n\n\n\n\nWe see here that the trapezium rule underestimates the area of y = f(x)\nFor the case y = f(x + 1) the graph of y = f(x) is translated one unit to the left:\n\n                                                y\n\n\n                                                    y = f(x + 1)\n\n\n\n\n                                                                   x\n                                                0 1\n\n\n\n\nAgain, the trapezium rule gives an underestimate.\nFor the third case, we need to reflect this graph in the line y = 6, which gives the following\ngraph:\n\n\n\n\nVersion 1.1, March 2019                                                                   Page 18\n\n                                                                                      © UCLES 2019\n\f\nTest of Mathematics for University Admission, 2017 Paper 1 Solutions\n\n\n                                                 y\n\n\n\n\n                                                                x\n                                                 0 1\n\n\n\n\nWe see that this time, the trapezium rule gives an overestimate.\nSo the correct answer is B.\n\nAn alternative approach is given by noting that the trapezium rule gives an overestimate of the\narea under the graph of y = f(x) if f 00 (x) > 0 throughout the range and an underestimate if\nf 00 (x) < 0 throughout. In our case, f 00 (x) = −4, so the trapezium rule gives an underestimate\nfor (1). For case (2), f 00 (x + 1) = −4 again, so we still have an underestimate. For the third\ncase, the equation of the graph is y = 12 − f(x + 1), so the second derivative is −f 00 (x + 1) = 4,\nand therefore we have an overestimate.\n\n\n\n\nVersion 1.1, March 2019                                                                     Page 19\n\n                                                                                       © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        19,
+        20
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

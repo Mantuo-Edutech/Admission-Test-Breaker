@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-07-18",
+  "exams": [
+    {
+      "id": "tmua",
+      "name": "TMUA",
+      "sourceUrl": "https://esat-tmua.ac.uk/about-the-tests/tmua-test/",
+      "sections": [
+        { "id": "paper-1", "label": "Paper 1", "labelZh": "数学知识应用", "questionCount": 20, "durationMinutes": 75, "responseMode": "single-choice", "calculator": "none" },
+        { "id": "paper-2", "label": "Paper 2", "labelZh": "数学推理", "questionCount": 20, "durationMinutes": 75, "responseMode": "single-choice", "calculator": "none" }
+      ]
+    },
+    {
+      "id": "esat",
+      "name": "ESAT",
+      "sourceUrl": "https://esat-tmua.ac.uk/about-the-tests/esat-test/",
+      "sections": [
+        { "id": "mathematics-1", "label": "Mathematics 1", "labelZh": "数学 1", "questionCount": 27, "durationMinutes": 40, "responseMode": "single-choice", "calculator": "none" },
+        { "id": "mathematics-2", "label": "Mathematics 2", "labelZh": "数学 2", "questionCount": 27, "durationMinutes": 40, "responseMode": "single-choice", "calculator": "none" },
+        { "id": "physics", "label": "Physics", "labelZh": "物理", "questionCount": 27, "durationMinutes": 40, "responseMode": "single-choice", "calculator": "none" },
+        { "id": "chemistry", "label": "Chemistry", "labelZh": "化学", "questionCount": 27, "durationMinutes": 40, "responseMode": "single-choice", "calculator": "none" },
+        { "id": "biology", "label": "Biology", "labelZh": "生物", "questionCount": 27, "durationMinutes": 40, "responseMode": "single-choice", "calculator": "none" }
+      ]
+    },
+    {
+      "id": "tara",
+      "name": "TARA",
+      "sourceUrl": "https://esat-tmua.ac.uk/about-the-tests/tara/",
+      "sections": [
+        { "id": "critical-thinking", "label": "Critical Thinking", "labelZh": "批判思维", "questionCount": 22, "durationMinutes": 40, "responseMode": "single-choice", "calculator": "none" },
+        { "id": "problem-solving", "label": "Problem Solving", "labelZh": "问题解决", "questionCount": 22, "durationMinutes": 40, "responseMode": "single-choice", "calculator": "none" },
+        { "id": "writing-task", "label": "Writing Task", "labelZh": "限时论证写作", "questionCount": 1, "promptCount": 3, "durationMinutes": 40, "responseMode": "essay", "calculator": "none" }
+      ]
+    },
+    {
+      "id": "lnat",
+      "name": "LNAT",
+      "sourceUrl": "https://lnat.ac.uk/what-is-lnat/test-format/",
+      "sections": [
+        { "id": "section-a", "label": "Section A", "labelZh": "文章阅读与推理", "questionCount": 42, "durationMinutes": 95, "responseMode": "passage-choice", "calculator": "none" },
+        { "id": "section-b", "label": "Section B", "labelZh": "论证写作", "questionCount": 1, "promptCount": 3, "durationMinutes": 40, "responseMode": "essay", "calculator": "none" }
+      ]
+    },
+    {
+      "id": "ucat",
+      "name": "UCAT",
+      "sourceUrl": "https://www.ucat.ac.uk/about-ucat/test-format-and-scoring/",
+      "sections": [
+        { "id": "verbal-reasoning", "label": "Verbal Reasoning", "labelZh": "文字推理", "questionCount": 44, "durationMinutes": 22, "responseMode": "passage-choice", "calculator": "none" },
+        { "id": "decision-making", "label": "Decision Making", "labelZh": "决策判断", "questionCount": 35, "durationMinutes": 37, "responseMode": "mixed-choice", "calculator": "basic" },
+        { "id": "quantitative-reasoning", "label": "Quantitative Reasoning", "labelZh": "数量推理", "questionCount": 36, "durationMinutes": 26, "responseMode": "data-choice", "calculator": "basic" },
+        { "id": "situational-judgement", "label": "Situational Judgement", "labelZh": "情境判断", "questionCount": 69, "durationMinutes": 26, "responseMode": "partial-credit-choice", "calculator": "none" }
+      ]
+    }
+  ],
+  "accessPolicy": {
+    "attempt": "public",
+    "basicResult": "public",
+    "answerKey": "public",
+    "workedExplanation": "entitled",
+    "personalisedInterpretation": "entitled"
+  },
+  "contentBoundary": {
+    "questionPublicationRequires": ["source_review", "rights_review", "content_review"],
+    "officialStructuralFactsAreNotQuestionPublication": true
+  }
+}

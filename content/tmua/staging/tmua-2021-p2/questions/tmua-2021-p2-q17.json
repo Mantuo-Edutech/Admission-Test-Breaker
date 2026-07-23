@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "17   Consider the following functions deﬁned for x > 1 :\n                                                \u0007    √ \b\n                                     f(x) = log2 log2 x\n\n                                                    \u0007\u0005            \b\n                                      g(x) = log2        log2 x\n\n\n     Which one of the following is true for all values of x > 1 ?\n\n     A 0 ≤ f(x) ≤ g(x) or g(x) ≤ f(x) ≤ 0\n\n     B 0 ≤ g(x) ≤ f(x) or f(x) ≤ g(x) ≤ 0\n         1\n     C   2\n           ≤ f(x) ≤ g(x)   or g(x) ≤ f(x) ≤ 12\n         1\n     D   2\n           ≤ g(x) ≤ f(x)   or f(x) ≤ g(x) ≤ 12\n\n     E 1 ≤ f(x) ≤ g(x) or g(x) ≤ f(x) ≤ 1\n\n     F 1 ≤ g(x) ≤ f(x) or f(x) ≤ g(x) ≤ 1\n\n\n\n\n                                             19"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following functions deﬁned for x > 1 :\n                                                D    √ E\n                                     f(x) = log2 log2 x\n\n                                                    DB            E\n                                      g(x) = log2        log2 x\n\n\n     Which one of the following is true for all values of x > 1 ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0 ≤ f(x) ≤ g(x) or g(x) ≤ f(x) ≤ 0"
+    },
+    {
+      "label": "B",
+      "rawText": "0 ≤ g(x) ≤ f(x) or f(x) ≤ g(x) ≤ 0\n         1"
+    },
+    {
+      "label": "C",
+      "rawText": "2\n           ≤ f(x) ≤ g(x)   or g(x) ≤ f(x) ≤ 12\n         1"
+    },
+    {
+      "label": "D",
+      "rawText": "2\n           ≤ g(x) ≤ f(x)   or f(x) ≤ g(x) ≤ 12"
+    },
+    {
+      "label": "E",
+      "rawText": "1 ≤ f(x) ≤ g(x) or g(x) ≤ f(x) ≤ 1"
+    },
+    {
+      "label": "F",
+      "rawText": "1 ≤ g(x) ≤ f(x) or f(x) ≤ g(x) ≤ 1"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The expressions for f(x) and g(x) look quite complicated, so we start by simplifying them using\nthe laws of logarithms:\n                                                    √ \u0001\n                                    f(x) = log2 log2 x\n                                          = log2 ( 21 log2 x)\n                                          = −1 + log2 (log2 x)\n                                                 p        \u0001\n                                     g(x) = log2   log2 x\n                                          = 12 log2 (log2 x)\n\nWe now see that both f(x) and g(x) can be written as a function of log2 (log2 x). As x > 1,\nlog2 x > 0 and log2 (log2 x) can take any real value.\nLet us write z = log2 (log2 x), so that we have f(x) = z − 1 and g(x) = 21 z. We can sketch a\ngraph showing these two functions of z:\n\n\n\n\n                                                         f(x) = z − 1\n\n\n\n                                             1                      g(x) = 21 z\n\n\n                                                 0              2           z\n\n\n\n\nWe can calculate the intersection of y = z − 1 and y = 12 z, obtaining z = 2, y = 1.\nWe can then see from the graph that f(x) ≥ g(x) when both are at least 1, and f(x) ≤ g(x) when\nboth are at most 1, so either f(x) ≥ g(x) ≥ 1 or f(x) ≤ g(x) ≤ 1 (or both), which is option F.\n(Note that the ‘or’ in the options is inclusive ‘or’, so we are allowed to have both of the inequal-\nities being true.)\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 21"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        21
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

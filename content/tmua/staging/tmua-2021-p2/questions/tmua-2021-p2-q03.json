@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "3   A student is chosen at random from a class. Each student is equally likely to be\n    chosen.\n\n    Which of the following conditions is/are necessary for the probability that the\n                                   4\n    student wears glasses to equal    ?\n                                   15\n\n        I    Exactly 11 students in the class do not wear glasses.\n        II   The number of students in the class is divisible by 3.\n        III The class contains 30 students, and 8 of them wear glasses.\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                            5"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A student is chosen at random from a class. Each student is equally likely to be\n    chosen.\n\n    Which of the following conditions is/are necessary for the probability that the\n                                   4\n    student wears glasses to equal    ?\n                                   15\n\n        I    Exactly 11 students in the class do not wear glasses.\n        II   The number of students in the class is divisible by 3.\n        III The class contains 30 students, and 8 of them wear glasses."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The probability is given as a fraction in its lowest terms.\nThe probability that a student does not wear glasses is 11\n                                                        15 , so the ratio of glasses to non-glasses\nis 4 : 11, in its lowest terms.\nTherefore the number of glasses/non-glasses wearers could be 4 and 11 (total 15), or 8 and 22\n(total 30), or . . .\nNecessary means that it follows as a consequence.\nTherefore I and III are not necessary (there could be 22 non-glasses wearers or the class could\ncontain 15 students.\nThe total must be a multiple of 15, and so the number of students is divisible by 3.\nThe correct answer is therefore C.\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 5"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

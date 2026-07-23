@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mantuo.org/schemas/content/normalized-imported-document.schema.json",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "source",
+    "parserRun",
+    "reviewStatus",
+    "publishable",
+    "blocks",
+    "warnings"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "minLength": 1 },
+    "source": {
+      "type": "object",
+      "required": ["sourceId", "sha256"],
+      "properties": {
+        "sourceId": { "type": "string", "minLength": 1 },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      },
+      "additionalProperties": false
+    },
+    "parserRun": {
+      "type": "object",
+      "required": ["provider", "providerVersion", "backend", "parsedAt"],
+      "properties": {
+        "provider": { "const": "mineru" },
+        "providerVersion": { "type": "string", "minLength": 1 },
+        "backend": { "enum": ["pipeline", "vlm", "hybrid"] },
+        "parsedAt": { "type": "string", "format": "date-time" }
+      },
+      "additionalProperties": false
+    },
+    "reviewStatus": { "const": "needs_review" },
+    "publishable": { "const": false },
+    "blocks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "page", "order", "kind", "rawType", "bbox", "text", "assetPath"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "page": { "type": "integer", "minimum": 1 },
+          "order": { "type": "integer", "minimum": 1 },
+          "kind": {
+            "enum": ["title", "text", "equation", "image", "table", "chart", "list", "code", "other"]
+          },
+          "rawType": { "type": "string", "minLength": 1 },
+          "bbox": {
+            "oneOf": [
+              { "type": "null" },
+              {
+                "type": "object",
+                "required": ["x0", "y0", "x1", "y1"],
+                "properties": {
+                  "x0": { "type": "number", "minimum": 0, "maximum": 1000 },
+                  "y0": { "type": "number", "minimum": 0, "maximum": 1000 },
+                  "x1": { "type": "number", "minimum": 0, "maximum": 1000 },
+                  "y1": { "type": "number", "minimum": 0, "maximum": 1000 }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "text": { "type": ["string", "null"] },
+          "assetPath": { "type": ["string", "null"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

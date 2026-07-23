@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "9\n\nͻ\u0003    \u0017\u0003‫\u0003\u0003\u0003\u0003ܼܻܺ\u0003\u0003ܥܤܣ‬Ǥ\u0003\u0003\n      \u0003\n      \u001a \u0003\u0003\u0003\u0003 ǡ\u0003\u0003ǡ\u0003\u0003\u0003\u0003\u0003\u0003\n        ǫ\u0003\n\n\u0003     \u0003         ሺͳሻ\u0003 ‫ ܤܣ‬ൌ ܻܺ\u0003‫ ܥܤ\u0003܌ܖ܉‬ൌ ܻܼ\u0003\n\n\u0003     \u0003         \u0003ሺʹሻ\u0003 ‫ ܤܣ‬ൌ ܻܺ\u0003‫ ܥܤܣס\u0003܌ܖ܉‬ൌ ‫\u0003ܼܻܺס‬\n\n\u0003     \u0003         \u0003ሺ͵ሻ\u0003 ‫ ܥܤܣס‬ൌ ‫ ܣܥܤס\u0003\u0003܌ܖ܉\u0003ܼܻܺס‬ൌ ‫\u0003ܼܻܺס‬\n\n\n                     \u0006\u0003ሺͳሻ\u0003              \u0006\u0003ሺʹሻ\u0003              \u0006\u0003ሺ͵ሻ\u0003\n      \u0004\u0003 \u0003\u0007\u0003\u0003\u0003 \u0003\n                                        \u0003                           \u0003\n                                        \u0007\u0003\u0003\u0003 \u0003   \u0007\u0003\u0003\u0003 \u0003\n      \u0003\u0005\u0003 \u0003\u0007\u0003\u0003\u0003 \u0003    \u0003\n                                        \u0007\u0003\u0003\u0003 \u0003   \u0003\n                                                                        \u0003 \u0003\n      \u0003\u0006\u0003   \u0003\n            \u0007\u0003\u0003\u0003 \u0003\n                                        \u0003\n                                            \u0003 \u0003\n                                                                    \u0003\n                                                                    \u0007\u0003\u0003\u0003 \u0003\n      \u0003\u0007\u0003 \u0003\u0007\u0003\u0003\u0003 \u0003    \u0003\n                                            \u0003 \u0003       \u0003\n                                                                        \u0003 \u0003\n      \u0003\b\u0003 \u0003 \u0003 \u0003           \u0003\n                                        \u0007\u0003\u0003\u0003 \u0003   \u0003\n                                                                    \u0007\u0003\u0003\u0003 \u0003\n      \u0003\u0003    \u0003\n                \u0003 \u0003       \u0003\n                                        \u0007\u0003\u0003\u0003 \u0003   \u0003\n                                                                        \u0003 \u0003\n      \u0003 \u0003 \u0003 \u0003 \u0003           \u0003\n                                            \u0003 \u0003       \u0003\n                                                                    \u0007\u0003\u0003\u0003 \u0003\n      \u0003 \u0003 \u0003 \u0003 \u0003           \u0003\n                                            \u0003 \u0003       \u0003\n                                                                        \u0003 \u0003\n\n\n\n\n© UCLES 2016                                                                                [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "9    ‫ܼܻܺܥܤܣ‬Ǥ\n      \n        ǡǡ\n        ǫ\n\n              ሺ1ሻ ‫ ܤܣ‬ൌ ܻܺ‫ ܥܤ܌ܖ܉‬ൌ ܻܼ\n\n              ሺ2ሻ ‫ ܤܣ‬ൌ ܻܺ‫ ܥܤܣס܌ܖ܉‬ൌ ‫ܼܻܺס‬\n\n              ሺ3ሻ ‫ ܥܤܣס‬ൌ ‫ ܣܥܤס܌ܖ܉ܼܻܺס‬ൌ ‫ܼܻܺס‬\n\n\n                     Cሺ1ሻ              Cሺ2ሻ              Cሺ3ሻ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "D \n                                                                   \n                                        D    D "
+    },
+    {
+      "label": "B",
+      "rawText": "D     \n                                        D    \n                                                                         "
+    },
+    {
+      "label": "C",
+      "rawText": "D \n                                        \n                                             \n                                                                    \n                                                                    D "
+    },
+    {
+      "label": "D",
+      "rawText": "D     \n                                                    \n                                                                         "
+    },
+    {
+      "label": "E",
+      "rawText": "            \n                                        D    \n                                                                    D \n          \n                        \n                                        D    \n                                                                         \n                     \n                                                    \n                                                                    D \n                     \n                                                    \n                                                                         \n\n\n\n\n© UCLES 2016                                                                                [Turn over"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We work through the conditions in the order given. We recall three relevant conditions for these\ntwo triangles to be congruent:\n\n•    side-side-side (SSS): all three corresponding pairs of sides are equal in length\n\n•    side-angle-side (SAS): two corresponding pairs of sides are equal in length, and the corre-\n     sponding included angles are equal\n\n•    angle-side-angle (ASA): two corresponding pairs of angles are equal, and the corresponding\n     sides between these angles are equal in length\n\n(1) If we knew that either AC = XZ or the angle B equals the angle Y , then they would\n    certainly be congruent by SSS or SAS. We know that the areas are equal, so we have\n    2 AB.BC sin B = 2 XY.Y Z sin Y , and so sin B = sin Y . This does not imply that B = Y\n    1                 1\n\n    though: we could have Y = 180◦ − B, for example:\n\n                             A                                    X\n\n\n\n\n                                             B=Y                      C=Z\n\n\n(2) We now have an angle at the end of the given side, so we can use the equal-area property\n    to work out a second side: the angle ∠ABC is included between AB and BC, and likewise\n    for XY Z. Therefore, as the areas are 12 AB.BC sin(∠ABC) and 12 XY.Y Z sin(∠XY Z), it\n    follows that BC = Y Z. The triangles are therefore congruent by SAS.\n\n(3) We now have two pairs of corresponding equal angles, and so the third pair of corresponding\n    angles is also equal and the triangles are similar. Since the areas are equal, they must be\n    congruent.\n\nHence conditions (2) and (3) each imply that the triangles are congruent, and the answer is\noption D.\n\n\n\n\n                                               12\n                                                                                        © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

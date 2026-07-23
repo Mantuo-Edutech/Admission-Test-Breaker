@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q05",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 5,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "5   The two diagonals of the quadrilateral Q are perpendicular.\n\n    Consider the following statements:\n\n        I   One of the diagonals of Q is a line of symmetry of Q.\n        II The midpoints of the sides of Q are the vertices of a square.\n\n    Which of these statements is/are necessarily true for the quadrilateral Q ?\n\n    A neither of them\n\n    B I only\n\n    C II only\n\n    D I and II\n\n\n\n\n                                           7"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The two diagonals of the quadrilateral Q are perpendicular.\n\n    Consider the following statements:\n\n        I   One of the diagonals of Q is a line of symmetry of Q.\n        II The midpoints of the sides of Q are the vertices of a square.\n\n    Which of these statements is/are necessarily true for the quadrilateral Q ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "neither of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "I and II"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Commentary: With a question such as this, it is very wise to try drawing a sketch.\n      We are told that the two diagonals of Q are perpendicular, so it makes sense to start by\n      drawing the two diagonals.\n\nIf statement I is necessarily true for Q, it means that it is always true, no matter how we\nchoose to draw Q (subject to the condition that it has perpendicular diagonals), and likewise\nfor statement II.\nWe could therefore either try proving these statements or start by looking for counterexamples.\nFollowing the above comments, we start by drawing two perpendicular lines, and mark vertices\non them with the aim of finding a counterexample to each statement. This turns out not to be\nthat difficult after some playing around.\nTo make a diagonal not be a line of symmetry, we simply need the off-diagonal vertices to be\ndifferent distances from the diagonal. So this will do it:\n\n\n\n\nFor II, to make the midpoints of the sides not be the vertices of a square, we can make the\nquadrilateral be “long and skinny”:\n\n\n\n\nSo neither I nor II is necessarily true, so the correct answer is A.\n\n      Commentary: It turns out that the midpoints of the sides of Q are always the vertices of\n      a rectangle, and for a general quadrilateral, they are always the vertices of a parallelogram,\n      with sides parallel to the diagonals of the original quadrilateral.\n\n\n\n\nVersion 1.0, April 2019                                                                      Page 7"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        7
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

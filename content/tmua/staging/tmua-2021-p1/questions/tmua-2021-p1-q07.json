@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q07",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 7,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "7   The function f is such that f(0) = 0, and xf(x) > 0 for all non-zero values of x.\n\n    It is given that\n\n                                        \u0002 2\n                                              f(x) dx = 4\n                                         −2\n\n\n    and\n\n                                       \u0002 2\n                                              |f(x)| dx = 8\n                                        −2\n\n\n    Evaluate\n\n                                         \u0002 0\n                                                  f(|x|) dx\n                                             −2\n\n\n    A −8\n\n    B −6\n\n    C −4\n\n    D −2\n\n    E     2\n\n    F     4\n\n    G     6\n\n    H     8\n\n\n\n\n                                                  \u001c"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The function f is such that f(0) = 0, and xf(x) > 0 for all non-zero values of x.\n\n    It is given that\n\n                                         2\n                                              f(x) dx = 4\n                                         −2\n\n\n    and\n\n                                        2\n                                              |f(x)| dx = 8\n                                        −2\n\n\n    Evaluate\n\n                                          0\n                                                  f(|x|) dx\n                                             −2"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−8"
+    },
+    {
+      "label": "B",
+      "rawText": "−6"
+    },
+    {
+      "label": "C",
+      "rawText": "−4"
+    },
+    {
+      "label": "D",
+      "rawText": "−2"
+    },
+    {
+      "label": "E",
+      "rawText": "2"
+    },
+    {
+      "label": "F",
+      "rawText": "4"
+    },
+    {
+      "label": "G",
+      "rawText": "6"
+    },
+    {
+      "label": "H",
+      "rawText": "8"
+    }
+  ],
+  "correctAnswer": "G",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let us start with the condition xf(x) > 0 for all non-zero values of x. When x > 0, this\nmeans that f(x) > 0, as we can divide the inequality by x and the direction of the inequality is\nunchanged. On the other hand, when x < 0, this gives f(x) < 0, since dividing by x now changes\nthe direction of the inequality. In summary:\n\n                                             f(x) > 0 when x > 0\n                                             f(x) = 0 when x = 0\n                                             f(x) < 0 when x < 0\n\nNow let us turn to the integrals. The final question asks about an integral from −2 to 0, so we\nwould do well to split the two given integrals into the ranges −2 to 0 and 0 to 2:\n\n\n                               Z 2                 Z 0                    Z 2\n                                     f(x) dx =           f(x) dx +                  f(x) dx\n                                −2                  −2                      0\n                                               =4\n\n                            Z 2                    Z 0                     Z 2\n                                    |f(x)| dx =          |f(x)| dx +                    |f(x)| dx\n                               −2                   −2                          0\n                                                   Z 0                      Z 2\n                                               =         −f(x) dx +                      f(x) dx\n                                                    −2                              0\n                                                     Z 0                        Z 2\n                                               =−             f(x) dx +                  f(x) dx\n                                                         −2                         0\n                                               =8\n\nTherefore\n                                         Z 0                  Z 2\n                                               f(x) dx +               f(x) dx = 4\n                                          −2                   0\n                                         Z 0                  Z 2\n                                     −         f(x) dx +               f(x) dx = 8\n                                          −2                   0\n\n                                                                   R0\nIf we now add these two simultaneous equations together, the −2 f(x) dx terms cancel and we\n                R2                  R2                   R0\nare left with 2 0 f(x) dx = 12, so 0 f(x) dx = 6 and −2 f(x) dx = −2.\n                                   R0\nThe question asks us to evaluate −2 f(|x|) dx. Thinking about graph transformations, the graph\nof y = f(x) is transformed into the graph of y = f(|x|) by removing the left half of the graph\n(left of the y-axis) and reflecting the right half of the graph in the y-axis (the line x = 0). The\nintegral of this transformed function from −2 to 0 is therefore equal to the integral of the original\nfunction from 0 to 2, thus         Z     0         Z               2\n                                             f(|x|) dx =               f(x) dx = 6\n                                       −2                      0\nand the correct option is G.\n\n\n\n\nVersion 1.0, March 2022                                                                             Page 9"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16   Consider the expansion of\n                                         (a + bx)n\n\n     The third term, in ascending powers of x, is 105x2\n\n     The fourth term, in ascending powers of x, is 210x3\n\n     The fourth term, in descending powers of x, is 210x3\n                         a 2\n     Find the value of\n                         b\n\n         1\n     A\n         4\n\n         4\n     B\n         9\n\n         25\n     C\n         36\n\n         5\n     D\n         6\n\n     E 1\n\n\n\n\n                                           \u0014\u001b"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the expansion of\n                                         (a + bx)n\n\n     The third term, in ascending powers of x, is 105x2\n\n     The fourth term, in ascending powers of x, is 210x3\n\n     The fourth term, in descending powers of x, is 210x3\n                         a 2\n     Find the value of\n                         b\n\n         1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "4\n\n         4"
+    },
+    {
+      "label": "B",
+      "rawText": "9\n\n         25"
+    },
+    {
+      "label": "C",
+      "rawText": "36\n\n         5"
+    },
+    {
+      "label": "D",
+      "rawText": "6"
+    },
+    {
+      "label": "E",
+      "rawText": "1"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can expand the binomial expression in ascending powers of x using the binomial theorem:\n                            \u0012 \u0013            \u0012 \u0013             \u0012 \u0013\n                   n   n      n n−1          n n−2 2 2      n n−3 3 3\n           (a + bx) = a +        a    bx +      a    b x +     a    b x + ···+\n                              1              2              3\n                       \u0012        \u0013\n                            n\n                                  abn−1 xn−1 + bn xn\n                         n−1\n\n                                           n n−2 2 2\n                                                   b x = 105x2 .\n                                                \u0001\nThe third term in ascending powers of x is  2 a\nThe fourth term in ascending powers of x is n3 an−3 b3 x3 = 210x3 .\n                                              \u0001\n\n                                                n\n                                                  \u0001 3 n−3 n−3\nThe fourth term in descending powers of x is n−3   a b    x    = 210x3 .\nFrom the last statement, we see that n = 6. Then the first two statements give:\n                                       \u0012 \u0013\n                                        6 4 2\n                                            a b = 105\n                                        2\n                                       \u0012 \u0013\n                                        6 3 3\n                                            a b = 210\n                                        3\n\n      6                 6\n         \u0001               \u0001\nNow   2      = 15 and   3    = 20, so\n\n                                             a4 b2 = 7\n                                                     21\n                                             a3 b3 =\n                                                      2\n\nDividing these two equations gives\n                                               a   2\n                                                 =\n                                               b   3\n             a 2\n                 = 49 , which is option B.\n               \u0001\nand so       b\n\n\n\n\nVersion 1.0, March 2022                                                            Page 19"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

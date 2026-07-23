@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "18   Find the shortest distance between the curve y = x2 + 4 and the line y = 2x − 2.\n\n     A 2\n       √\n     B   5\n          √\n         6 5\n     C    5\n\n     D 3\n          √\n         5 5\n     E    3\n\n     F 5\n\n     G 6\n\n\n\n\n                                            20"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the shortest distance between the curve y = x2 + 4 and the line y = 2x − 2."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "2\n       √"
+    },
+    {
+      "label": "B",
+      "rawText": "5\n          √\n         6 5"
+    },
+    {
+      "label": "C",
+      "rawText": "5"
+    },
+    {
+      "label": "D",
+      "rawText": "3\n          √\n         5 5"
+    },
+    {
+      "label": "E",
+      "rawText": "3"
+    },
+    {
+      "label": "F",
+      "rawText": "5"
+    },
+    {
+      "label": "G",
+      "rawText": "6"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "From the given options, it is clear that the curve and line do not intersect.\nOne way to do this would be to take a point on the curve, say (a, a2 + 4), and a point on the line,\nsay (b, 2b − 2), find the (square of) the distance between them, and then try to find some way\nof minimising it. That, though, seems quite challenging, as there are two independent variables\ninvolved.\nAnother way is to draw a sketch of the situation and to think about what the question means\ngeometrically.\n\n                                                   y\n\n\n\n\n                                                          x\n\n\n\n\nThe shortest distance from any point on the curve to the straight line is found by drawing a\nperpendicular from the curve to the straight line, like this:\n\n                                               y\n\n\n\n\n                                                              x\n\n\n\n\nThis may give us a few different ideas; any of the following would work:\n\n•    We can use this to find the distance of any point (a, a2 + 4) to the line; we then find the\n     smallest possible such distance.\n\n\nc UCLES                                                                                    Page 20\n\f\nTest of Mathematics for University Admission, 2019 Paper 1 Solutions\n\n\n•    The smallest distance will be when the perpendicular to the line is also perpendicular to\n     the curve; in the above sketch, it is clear that if we move the joining line closer to the\n     origin, its length will become shorter. We can find this position by finding the gradient of\n     the normal to the curve and finding a point at which this is perpendicular to the line.\n\n•    Taking this one step further, if we translate the line (without changing its gradient), we\n     shorten the minimum distance of the curve from the line, but as long as we don’t cross the\n     curve, the point which is closest to the line will remain so. Therefore the closest point to\n     the line is the point on the curve where the curve’s gradient equals the line’s gradient, for\n     when the line just touches the curve, this point will be at zero distance from the curve.\n\nWe will use the final approach to solve this problem.\n                                                          dy          dy\nThe gradient of the line is 2, and the curve has gradient dx = 2x, so dx = 2 when x = 1, so\n(1, 5) is the closest point on the curve to the line.\nThe line through (1, 5) perpendicular to the line y = 2x − 2 has equation y − 5 = − 12 (x − 1).\nThis intersects the line y = 2x − 2 when\n\n                                    (2x − 2) − 5 = − 12 (x − 1)\n\nso 2x − 7 = − 21 (x − 1). Multiplying this by 2 gives\n\n                                        4x − 14 = −x + 1\n\nso 5x = 15, giving x = 3, y = 4.\n                                            p                     √\nThe distance between (1, 5) and (3, 4) is    (3 − 1)2 + (4 − 5)2 = 5, so the correct answer is B.\n\n      Commentary: Though we dismissed the original two-variable idea, it turns out that\n      we could have used it in a similar way to the first idea listed above: if we fix a value for a,\n      we can find the value of b which gives the smallest distance from that point to the line.\n      This gives us a formula for the smallest distance from a given point to the line in terms\n      of a; we can then find the value of a which makes this as small as possible. This changes\n      the problem from one two-variable problem to two one-variable problems, which we know\n      how to solve.\n\n\n\n\nc UCLES                                                                                     Page 21"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        20,
+        21
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

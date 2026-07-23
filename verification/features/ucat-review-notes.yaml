@@ -1,0 +1,86 @@
+schemaVersion: 1
+feature:
+  id: ucat-review-notes
+  title: Profile-first UCAT four-subtest and pacing review notes
+  status: partial
+  userOutcome: >-
+    A student who has completed a private UCAT background profile can study a
+    bilingual in-site starting review of VR, DM, QR, SJT and the test tools or
+    pacing system, then continue to Mantou's four native starters.
+
+run:
+  packageScript: verify:review-notes
+
+claims:
+  - id: current-official-structure-tools-and-preparation
+    status: verified
+    statement: >-
+      The versioned document records the current four-subtest structure, question
+      counts, timings, scoring boundaries, tool constraints and official preparation
+      sequence, anchored to two local official page snapshots plus the 2026 checklist
+      and exact SHA-256 hashes without republishing official questions.
+    artifacts:
+      - content/notes/ucat/four-subtest-foundations-v1.json
+      - content/official/research-asset-inventory.json
+      - tests/features/notes/review-notes.test.ts
+    automatedChecks:
+      - verify:review-notes
+      - test
+
+  - id: original-four-subtest-teaching-layer
+    status: verified
+    statement: >-
+      Five modules contain twenty-five stable knowledge units, fifteen Mantou-authored
+      methods, five clearly labelled original worked examples and fifteen active-recall
+      prompts, including A-Level, IB, AP and other-curriculum bridges.
+    artifacts:
+      - content/notes/ucat/four-subtest-foundations-v1.json
+      - src/features/notes/content/review-notes.ts
+      - tests/features/notes/review-notes.test.ts
+    automatedChecks:
+      - verify:review-notes
+      - typecheck
+
+  - id: private-profile-first-native-page
+    status: verified
+    statement: >-
+      The responsive route checks the exam-isolated UCAT background profile before
+      showing Notes, links to the deterministic starting point and four native practice
+      starters, exposes a 20-page A4 edition after that profile gate, and is registered
+      as a real public teaching-preview product.
+    artifacts:
+      - src/features/notes/pages/AssessmentReviewNotesPage.tsx
+      - src/features/notes/pages/UcatReviewNotesPage.tsx
+      - src/features/notes/pages/ReviewNotesPage.tsx
+      - src/app/routes.tsx
+      - content/products/review-notes-pdf-assets.json
+      - public/notes/ucat/ucat-four-subtest-foundations-v1.pdf
+      - tests/app/ucat-review-notes-page.test.tsx
+      - tests/e2e/ucat-review-notes.spec.ts
+    automatedChecks:
+      - verify:review-notes
+      - verify:review-notes-pdfs
+      - verify:content-products
+      - verify:e2e
+      - build
+
+boundaries:
+  - This is a top-level teaching preview, not a complete UCAT textbook, official-bank replacement or full-length mock.
+  - No official question, passage, scenario, option or explanation is republished, and official files remain internal research assets.
+  - The 20-page downloadable edition is a top-level preview; more combined question types, full four-subtest mocks, SJT clinical specialist review and human teaching review remain pending.
+  - The official 30-hour and 6-8-week guidance is a broad preparation reference, not an individual time or score promise.
+  - The page reports no official score conversion, percentile or admissions prediction.
+
+manualChecks:
+  - id: independent-ucat-medical-bilingual-and-rights-review
+    status: pending
+    evidence: A separate UCAT teacher, UK medical professional, bilingual reviewer and rights/similarity reviewer must approve the complete revision before final publication.
+    viewports:
+      - content
+  - id: student-comprehension-and-real-device-review
+    status: pending
+    evidence: Automated route, DOM, type, build and Chromium viewport checks run independently; representative students and real-device reviewers must still validate comprehension and layout.
+    viewports:
+      - desktop
+      - tablet
+      - phone

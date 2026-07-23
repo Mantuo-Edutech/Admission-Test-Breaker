@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "8\n\nͳͳ\u0003    \u0017\u0003\u0003\u0003\u0003\u0003\u0003Ͷଶ௫ ൅ ͳʹ ൌ ʹଶ௫ାଷ \u0003\u0003‫ݍ\u0003\u0003݌‬ǡ\u0003\u0003‫ ݌‬൐ ‫ݍ‬Ǥ\u0003\u0003\u0003\n       \u0003\n       \u0017\u0003\u0003\u0003‫ ݌‬െ ‫\u0003\u0003\u0003\u0003 \u0003ݍ‬\n       \u0003\n\n\u0003           ͵\n       \u0004\u0003    \u0003\n            Ͷ\n\u0003       \u0003\n        \u0005\u0003 ͳ\u0003\n\u0003       \u0003\n        \u0006\u0003 Ͷ\u0003\n\u0003       \u0003\n              ͳ      ͵\n        \u0007\u0003 െ ൅ ଵ଴ \u0003\u0003\u0003\n              ʹ      ʹ\n      \u0003 \u0003   ଵ଴ ͵\n        \b\u0003         \u0003\n            ଵ଴ Ͷ\n\u0003       \u0003   ଵ଴ ͵\n          \u0003        \u0003\n            ଵ଴ ʹ\n        \u0003\n\n\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "8\n\n11    4ଶ௫ ൅ 12 ൌ 2ଶ௫ାଷ ‫ݍ݌‬ǡ‫ ݌‬൐ ‫ݍ‬Ǥ\n       \n       ‫ ݌‬െ ‫ ݍ‬\n       \n\n           3"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "4"
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "4\n       \n              1      3"
+    },
+    {
+      "label": "D",
+      "rawText": "െ ൅ ଵ଴ \n              2      2\n          ଵ଴ 3"
+    },
+    {
+      "label": "E",
+      "rawText": "ଵ଴ 4\n          ଵ଴ 3\n                  \n            ଵ଴ 2\n        \n\n\n\n\n© UCLES 2016"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "This is a quadratic in 22x , so we write y = 22x and solve for y. The quadratic becomes\n\n                                           y 2 + 12 = 8y\n\nas 42x = (22 )2x = 24x = (22x )2 and 22x+3 = 22x × 23 .\nThis rearranges to y 2 − 8y + 12 = 0, which factorises as (y − 6)(y − 2) = 0, so y = 6 or y = 2.\nThus 22x = 6 or 22x = 2, with the value of x being larger in the first than in the second, so\n22p = 6 and 22q = 2. The options are given in terms of log to base 10, so we take log10 of the\nfirst equation. Thus 2p log10 2 = log10 6 and 2q = 1, and hence\n\n                                         log10 6                1\n                                   p=                    and q = .\n                                        2 log10 2               2\n\nTherefore\n                                              log10 6     1\n                                     p−q =            −\n                                             2 log10 2 2\n                                             log10 6 − log10 2\n                                           =\n                                                 2 log10 2\n                                             log10 3\n                                           =\n                                             log10 4\n\nso the answer is option E.\n\n\n\n\n                                                    14\n                                                                                    © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

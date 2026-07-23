@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "19\n\n                                                                   ଷ\nʹͲ\u0003      \b \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003݊\u0003\u0003\u0003\u0003ସ\u0003\u0003\u0003 \u0003\u0003\u0003\u0003\u0003 \u0003\n         \u0003\u0003\u0003݉\u0003Ǥ\u0003\u0003\n\n           \u0003\u0003\u0003\u0003\u0003\u0003݊\u0003\u0003݉\u0003\u0003\u0003\u0003 \u0003\u0003\u0003\u0003ǫ\u0003\n        \u0003\n\u0003       \u0003\n\u0003       \u0004\u0003     \u0003\n\u0003       \u0003\n        \u0005\u0003     ͳ\u0003\n\u0003       \u0003\n        \u0006\u0003     ʹ\u0003\n\u0003       \u0003\n        \u0007\u0003     ͵\u0003\n        \u0003\n      \u0003 \b\u0003     Ͷ\u0003\n\u0003       \u0003\n          \u0003    ͷ\u0003\n\u0003       \u0003\n          \u0003    ͸\u0003\n\u0003       \u0003\n           \u0003   \u0003\u0003\n\n\n\n\n                                            END OF TEST\n\n                                                      \u0003\n\n                                                      \u0003\n\n                                                      \u0003\n\n                                                      \u0003\n\n                                                      \u0003\n\n                                                      \u0003\n\n                                                      \u0003\n\n                                                      \u0003\n\n                                                      \u0003\n\n                                                      \u0003\n\n                                                      \u0003\n\n\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "19\n\n                                                                   ଷ\n20      E ݊ସ  \n         ݉Ǥ\n\n           ݊݉ ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": ""
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "2"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "4\n       \n              5\n       \n              6\n       \n              \n\n\n\n\n                                            END OF TEST\n\n                                                      \n\n                                                      \n\n                                                      \n\n                                                      \n\n                                                      \n\n                                                      \n\n                                                      \n\n                                                      \n\n                                                      \n\n                                                      \n\n                                                      \n\n\n\n\n© UCLES 2016"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can find the interior angle of a regular polygon with n sides as follows. The exterior angle\n    n , so the interior angle is 180 − n . Therefore the given condition can be written as\nis 360\n      ◦\n                                    ◦  360◦\n\n\n                                       360◦              360◦\n                                                \u0012             \u0013\n                                    ◦         3      ◦\n                                 180 −      =     180 −         .\n                                         n    4           m\nWe start by dividing by 180◦ for simplicity, giving\n                                                 \u0012     \u0013\n                                         2     3     2\n                                    1− =          1−     .\n                                         n     4     m\nNow multiplying both sides by 4 and expanding the brackets gives\n                                             8    6\n                                        4−     =3− ,\n                                             n    m\nwhich rearranges to\n                                          8   6\n                                            −   = 1.                                          (∗)\n                                          n m\nWe will look at two methods of solving this equation, starting with a case-based approach.\nWe know that n and m must each be at least 3. If n ⩾ 8, then n8 ⩽ 1, and so this cannot give a\nsolution to (∗). So we need only consider n = 3, 4, 5, 6 and 7. For each of these, we can solve\nthe equation to find m; if m is an integer greater than 2, we have a solution.\n\n                                             n    m\n                                             3    18\n                                                  5\n                                             4     6\n                                             5    10\n                                             6    18\n                                             7    42\n\nThere are four pairs of n and m, and the answer is E.\nA second approach to solving (∗) is to multiply both sides by mn to eliminate the fractions; this\ngives\n                                        8m − 6n = mn.\nWe can rearrange this to give mn + 6n − 8m = 0, and we can factorise the left hand side by\nadding or subtracting a constant to get\n\n                                    (m + 6)(n − 8) = −48.\n\nSo we need to find two integers which multiply to −48. Since m and n are both positive, we\nmust have n − 8 < 0 and m + 6 ⩾ 9 (as m ⩾ 3), so the possibilities are:\n\n                                     m+6     n−8       m    n\n                                      12      −4       6    4\n                                      16      −3       10   5\n                                      24      −2       18   6\n                                      48      −1       42   7\n\nas before.\n\n\n                                                 25\n                                                                                     © UCLES 2019\n\f\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support:\nadmissionstesting.org/help"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        25,
+        26
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

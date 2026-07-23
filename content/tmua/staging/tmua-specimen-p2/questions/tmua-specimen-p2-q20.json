@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16\n\n\n20.    Five logicians each make a statement, as follows:\n\n               Mr P: Of these five statements, an odd number are true.\n               Ms Q: Both statements made by women are true.\n               Mr R: My first name is Robert and Mr P’s statement is true.\n               Ms S: Exactly one statement made by a man is true.\n               Mr T: Neither statement made by a woman is true.\n\n\n\n       How many of the five statements can be simultaneously true?\n\n\n       A       none\n       B       1 only\n       C       2 only\n       D       3 only\n       E       4 only\n       F       none or 1 only\n       G       1 or 2 only\n       H       2 or 3 only\n\n\n\n\n                                         END OF TEST\n\n\n\n\n© UCLES 2017"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "16\n\n\n20.    Five logicians each make a statement, as follows:\n\n               Mr P: Of these five statements, an odd number are true.\n               Ms Q: Both statements made by women are true.\n               Mr R: My first name is Robert and Mr P’s statement is true.\n               Ms S: Exactly one statement made by a man is true.\n               Mr T: Neither statement made by a woman is true.\n\n\n\n       How many of the five statements can be simultaneously true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none"
+    },
+    {
+      "label": "B",
+      "rawText": "1 only"
+    },
+    {
+      "label": "C",
+      "rawText": "2 only"
+    },
+    {
+      "label": "D",
+      "rawText": "3 only"
+    },
+    {
+      "label": "E",
+      "rawText": "4 only"
+    },
+    {
+      "label": "F",
+      "rawText": "none or 1 only"
+    },
+    {
+      "label": "G",
+      "rawText": "1 or 2 only"
+    },
+    {
+      "label": "H",
+      "rawText": "2 or 3 only\n\n\n\n\n                                         END OF TEST\n\n\n\n\n© UCLES 2017"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "For ease of explanation, we say ‘Mr X is true/false’ as a shorthand for ‘Mr X’s statement is\ntrue/false’.\nOf these statements, Ms Q and Mr T give the most explicit information, so we start with them.\nThey cannot both be true, as they contradict each other, though they could both be false. So\nwe look at these three possibilities in turn.\n\n•    Ms Q true, Mr T false.\n     Since Ms Q is true, Ms S is also true, which means that either Mr P or Mr R is true (as\n     Mr T is false).\n     If Mr R is true, then Mr P is also true, contradicting Ms S. So Mr R must be false.\n     Since Ms S is true, Mr P must be true; this does not pose a problem with Mr R being\n     false, as it could be that Mr R’s first name is not Robert. We must, though, check whether\n     Mr P’s statement being true is consistent with the remaining statements.\n     We have Mr P, Ms Q and Ms S true and the other two false, giving three true statements.\n     Thus Mr P’s statement is, indeed, true, and this is a possible set of truth values for the\n     statements.\n•    Ms Q false, Mr T true.\n     Since Mr T is true, Ms S is false, and so either Mr P, Mr R or both must be true (as Mr T\n     is already true).\n     If Mr P is true, there are two true statements from Mr P, Ms Q, Ms S and Mr T, which is\n     an even number, so Mr R must also be true. This is consistent, as Mr R says that Mr P’s\n     statement is true, which it is.\n     If Mr R is true, then Mr P must also be true, and this is feasible as we have just seen.\n     So in this case, we have Mr T, Mr P and Mr R all true, with the other two false, giving\n     three true statements.\n•    Both Ms Q and Mr T false.\n     Then exactly one statement made by a woman must be true, hence Ms S must be true.\n     This requires exactly one of Mr P and Mr R to be true (as Mr T is false). If Mr R is true,\n     then Mr P would also be true, which is not possible.\n     If, on the other hand, Mr P is true and Mr R is false (say his first name is not Robert, as\n     before), then we would have only Mr P and Ms S being true, and that is an even number\n     of true statements. So this is not possible (as Mr P says there are an odd number of true\n     statements).\n\nHence we must have one of the first two possibilities, and there are exactly three true statements;\nthe answer is option D.\n\n      Commentary: You might find this question easier to work out using a little table with\n      ticks and crosses, for example something like:\n\n                              Mr P    Ms Q    Mr R     Ms S    Mr T\n                               X       ×                        X\n\n      where Mr R and Ms S are not yet determined.\n\n\n\n                                                24\n                                                                                      © UCLES 2019\n\f\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support:\nadmissionstesting.org/help"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        24,
+        25
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "20   Let f be a polynomial with real coefficients.\n\n     The integral Ip,q where p < q is defined by\n\n                                                  q\n\n                                         Ip,q = ∫ ( f ( x )) − ( f ( | x| ) ) dx\n                                                            2              2\n\n                                                  p\n\n\n     Which of the following statements must be true?\n\n           1   Ip,q = 0 only if 0 < p\n\n           2   f ′(x) < 0 for all x only if Ip,q < 0 for all p < q < 0\n\n           3   Ip,q > 0 only if p < 0\n\n     A   none of them\n\n     B   1 only\n\n     C   2 only\n\n     D   3 only\n\n     E   1 and 2 only\n\n     F   1 and 3 only\n\n     G   2 and 3 only\n\n     H   1, 2 and 3\n\n\n\n\n                                                       22"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Let f be a polynomial with real coefficients.\n\n     The integral Ip,q where p < q is defined by\n\n                                                  q\n\n                                         Ip,q = ∫ ( f ( x )) − ( f ( | x| ) ) dx\n                                                            2              2\n\n                                                  p\n\n\n     Which of the following statements must be true?\n\n           1   Ip,q = 0 only if 0 < p\n\n           2   f ′(x) < 0 for all x only if Ip,q < 0 for all p < q < 0\n\n           3   Ip,q > 0 only if p < 0"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "1 only"
+    },
+    {
+      "label": "C",
+      "rawText": "2 only"
+    },
+    {
+      "label": "D",
+      "rawText": "3 only"
+    },
+    {
+      "label": "E",
+      "rawText": "1 and 2 only"
+    },
+    {
+      "label": "F",
+      "rawText": "1 and 3 only"
+    },
+    {
+      "label": "G",
+      "rawText": "2 and 3 only"
+    },
+    {
+      "label": "H",
+      "rawText": "1, 2 and 3"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "\u00012\nWe note first that when x ≥ 0, f (|x|) = f (x), and so for x ≥ 0, the integrand is just f (x)        −\n     \u00012\nf (x) = 0. When x < 0, though, the integrand could take any value.\n\n1 We present a complicated approach first.\n  There seems to be no obvious reason why this must be true; one could imagine a polynomial\n  for which the values of the integrand are positive for some negative values of x and negative\n  for others, so the positive parts and negative parts cancel out making the integral zero even\n  though p < 0. Here is one example: consider a quartic f (x) that looks roughly like this:\n\n                                                             y\n\n\n\n\n                                                                       x\n                                                    x0   0       −x0\n                                                \u00012          \u00012\n  For negative values of x close to x = 0, f (x) > f (|x|) . But once x < x0 , we have\n        \u00012         \u00012\n   f (x) < f (|x|) as f (|x|) > f (x). We can therefore take q = 0 and find some p < x0 for\n  which Ip,q = 0.\n  A much simpler approach is that we can take p = 0, q > 0 and then Ip,q = 0, so this statement\n  is not true. Were the question to have said 0 ≤ p instead of 0 < p, though, we would not have\n  been able to use this simpler approach.\n2 We could take f (x) = 1 − x, with f 0 (x) = −1 < 0 for all x.\n\n                                                     y\n\n\n\n\n                                                                       x\n                                                0\n\n\n\n\n            \u00012        \u00012\n  Then f (x) > f (|x|) for all x < 0, so Ip,q > 0 for all p < q < 0.\n3 We observedR at the start of this question that the integrand is zero for all x ≥ 0. So if p ≥ 0,\n                q\n  then Ip,q = p 0 dx = 0. The contrapositive of this statement is: if Ip,q 6= 0, then p < 0. The\n  given statement (Ip,q > 0 only if p < 0, which is the same as saying: if Ip,q > 0, then p < 0)\n  is a special case of the more general result and is therefore true.\n\nThe correct answer is therefore option D, 3 only.\n\n\nVersion 1.0, September 2023                                                                Page 23"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        23
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

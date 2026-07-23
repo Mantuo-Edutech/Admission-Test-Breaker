@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q15",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 15,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "15   A circle has equation\n                                   x2 + ax + y 2 + by + c = 0\n     where a, b and c are non-zero real constants.\n\n     Which one of the following is a necessary and suﬃcient condition for the circle to\n     be tangent to the y-axis?\n\n     A a2 = 4c\n\n     B b2 = 4c\n            …\n       a       a2 + b 2\n     C    =             −c\n       2          4\n            …\n       b       a2 + b 2\n     D    =             −c\n       2          4\n             …\n         a       a2 + b 2\n     E − =                −c\n         2          4\n             …\n         b       a2 + b 2\n     F − =                −c\n         2          4\n\n\n\n\n                                             17"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A circle has equation\n                                   x2 + ax + y 2 + by + c = 0\n     where a, b and c are non-zero real constants.\n\n     Which one of the following is a necessary and suﬃcient condition for the circle to\n     be tangent to the y-axis?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "a2 = 4c"
+    },
+    {
+      "label": "B",
+      "rawText": "b2 = 4c\n            …\n       a       a2 + b 2"
+    },
+    {
+      "label": "C",
+      "rawText": "=             −c\n       2          4\n            …\n       b       a2 + b 2"
+    },
+    {
+      "label": "D",
+      "rawText": "=             −c\n       2          4\n             …\n         a       a2 + b 2"
+    },
+    {
+      "label": "E",
+      "rawText": "− =                −c\n         2          4\n             …\n         b       a2 + b 2"
+    },
+    {
+      "label": "F",
+      "rawText": "− =                −c\n         2          4"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Approach 1\nWe start by completing the square to find the centre and radius of the circle:\n\n                             (x + 21 a)2 − ( 12 a)2 + (y + 12 b)2 − ( 12 b)2 + c = 0\n\nwhich gives\n                             (x + 12 a)2 + (y + 12 b)2 = ( 12 a)2 + ( 21 b)2 − c\n                                                     q\nso the circle has centre (− 21 a, − 21 b) and radius ( 21 a)2 + ( 12 b)2 − c.\nNow let us sketch a circle tangent to the y-axis:\n\n                                                    y\n\n\n\n\n                                                        0                     x\n\n\n\n\nWe can see that the circle is tangent to the y-axis if and only if its radius is equal to the\ndistance of its centre from the y-axis. This is not the same as saying the radius is equal to the\nx-coordinate of the centre, as the centre may have a negative x-coordinate. As an equation, this\ncondition is then                  q\n                                     ( 12 a)2 + ( 12 b)2 − c = − 12 a\nwhich, on squaring, is equivalent to\n\n                                         ( 21 a)2 + ( 12 b)2 − c = ( 12 a)2\n\n(This is equivalent to the previous equation because both sides of the first equation are non-\nnegative.)\nSubtracting ( 21 a)2 from both sides gives 14 b2 − c = 0 or b2 = 4c, so this condition is necessary\nand sufficient for the circle to be tangent to the y-axis, which is option B.\n\nApproach 2\nThe circle is tangent to the y-axis, x = 0, if and only if the pair of simultaneous equations\nx2 + ax + y 2 + by + c = 0 and x = 0 has a repeated root.\nSubstituting x = 0 into the circle equation gives y 2 + by + c = 0, which has discriminant b2 − 4c.\nSo there is a repeated root if and only if b2 − 4c = 0, which is equivalent to option B.\n\n\n\nVersion 1.0, March 2022                                                                    Page 18"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

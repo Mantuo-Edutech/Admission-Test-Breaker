@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p1-q01",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p1",
+  "edition": "specimen",
+  "paper": 1,
+  "questionNumber": 1,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "1.     The sum of the two values of         that satisfy the simultaneous equations\n\n               3       1     0 and 3    7     5 is\n\n\n\n       A               8.5\n\n       B               7.5\n\n       C               1.5\n\n       D           3.5\n\n       E           4.5\n\n       F           5"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The sum of the two values of         that satisfy the simultaneous equations\n\n               3       1     0 and 3    7     5 is"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "8.5"
+    },
+    {
+      "label": "B",
+      "rawText": "7.5"
+    },
+    {
+      "label": "C",
+      "rawText": "1.5"
+    },
+    {
+      "label": "D",
+      "rawText": "3.5"
+    },
+    {
+      "label": "E",
+      "rawText": "4.5"
+    },
+    {
+      "label": "F",
+      "rawText": "5"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can rearrange the first equation to\n\n                                            x = 3y − 1.\n\nSubstituting this into the second equation gives\n\n                                   3(3y − 1)2 − 7(3y − 1)y = 5\n\nwhich expands to\n                                  27y 2 − 18y + 3 − 21y 2 + 7y = 5\nso\n                                         6y 2 − 11y − 2 = 0.\n\nWe can either factorise this as (y − 2)(6y + 1) = 0, giving y = 2 or y = − 16 or use the quadratic\nformula to obtain                     p\n                                11 + 112 − 4 × 6 × (−2)        11 ± 13\n                           y=                               =\n                                            12                   12\ngiving y = 2 or y = − 61 again.\nThese give x = 5 or x = − 32 , so the sum is 3.5, and the answer is D.\nAlternatively, we could have rearranged the first equation to get\n                                                  x+1\n                                             y=\n                                                   3\nand then substitute this into the second equation. This has the advantage that we obtain the\nvalues of x directly, but the disadvantage that there are fractions involved throughout.\n\n\n\n\nVersion 1.1, November 2020                                                                 Page 3"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+      "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+      "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "id": "esat-mathematics-2-starter-v1",
+  "exam": "ESAT",
+  "edition": "Mathematics 2 Starter · Original v1",
+  "sectionLabel": "Mathematics 2 · Original Diagnostic",
+  "sectionLabelZh": "数学 2 · 满托原创短诊断",
+  "durationMinutes": 20,
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本练习依据 ESAT Mathematics 2 公开范围独立命题，不复制或改写官方 Guide、ENGAA、NSAA 或 TMUA 题面。",
+  "sourceAnchors": [
+    {
+      "id": "esat-content-specification",
+      "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+      "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+      "usedFor": "Mathematics 2 scope boundary"
+    },
+    {
+      "id": "esat-guide-mathematics-2",
+      "localPath": "content/official/raw/shared/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+      "sha256": "12ed684ee2dfb9b53355d54018ba216b5cd32161e5f6c5c9ee5e96b93cbf8844",
+      "usedFor": "notation and topic coverage only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "esat-mathematics-2-starter-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A non-zero number " }, { "kind": "math", "tex": "x" }, { "kind": "text", "value": " satisfies " }, { "kind": "math", "tex": "x+\\frac{1}{x}=3" }, { "kind": "text", "value": ". What is the value of " }, { "kind": "math", "tex": "x^2+\\frac{1}{x^2}" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "7" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "9" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "11" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m2-algebra-functions"],
+      "skillTags": ["algebraic-identities", "deduction"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-starter-v1-q02",
+      "number": 2,
+      "sourcePage": 2,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "In an arithmetic sequence, the fifth term is 18 and the twelfth term is 46. What is the first term?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["m2-sequences-series"],
+      "skillTags": ["arithmetic-sequences", "simultaneous-deduction"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-starter-v1-q03",
+      "number": 3,
+      "sourcePage": 3,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A circle has equation" }] },
+        { "kind": "display-math", "tex": "x^2+y^2-6x+4y=12" },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is its radius?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\sqrt{29}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m2-coordinate-geometry"],
+      "skillTags": ["completing-the-square", "circles"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-starter-v1-q04",
+      "number": 4,
+      "sourcePage": 4,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A sector of a circle has radius 4 cm and area 12 cm². What is its angle in radians?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{3}{4}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "\\frac{3}{2}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m2-trigonometry"],
+      "skillTags": ["radians", "sector-area"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-starter-v1-q05",
+      "number": 5,
+      "sourcePage": 5,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "For " }, { "kind": "math", "tex": "x>1" }, { "kind": "text", "value": ", solve" }] },
+        { "kind": "display-math", "tex": "\\log_2(x-1)+\\log_2(x+1)=3" }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m2-exponentials-logs"],
+      "skillTags": ["logarithm-laws", "domain-check"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-starter-v1-q06",
+      "number": 6,
+      "sourcePage": 6,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "The curve " }, { "kind": "math", "tex": "y=x^3-6x^2+9x" }, { "kind": "text", "value": " has two stationary points. At which value of " }, { "kind": "math", "tex": "x" }, { "kind": "text", "value": " is there a local maximum?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-1" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m2-differentiation"],
+      "skillTags": ["stationary-points", "classification"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-starter-v1-q07",
+      "number": 7,
+      "sourcePage": 7,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the area between the curve " }, { "kind": "math", "tex": "y=6x-x^2" }, { "kind": "text", "value": " and the " }, { "kind": "math", "tex": "x" }, { "kind": "text", "value": "-axis from " }, { "kind": "math", "tex": "x=0" }, { "kind": "text", "value": " to " }, { "kind": "math", "tex": "x=3" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "9" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "12" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "18" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "27" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m2-integration"],
+      "skillTags": ["definite-integration", "area"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-starter-v1-q08",
+      "number": 8,
+      "sourcePage": 8,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Starting from the graph of " }, { "kind": "math", "tex": "y=f(x)" }, { "kind": "text", "value": ", which description gives the graph of " }, { "kind": "math", "tex": "y=f(2x-4)" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A horizontal stretch by factor 2, then a translation 2 units right" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A horizontal compression by factor 2, then a translation 2 units right" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A horizontal compression by factor 2, then a translation 4 units right" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A vertical stretch by factor 2, then a translation 4 units down" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["m2-graphs"],
+      "skillTags": ["function-transformations", "horizontal-scale"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-starter-v1-q09",
+      "number": 9,
+      "sourcePage": 9,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A function satisfies " }, { "kind": "math", "tex": "\\frac{dy}{dx}=2x" }, { "kind": "text", "value": " and " }, { "kind": "math", "tex": "y=4" }, { "kind": "text", "value": " when " }, { "kind": "math", "tex": "x=1" }, { "kind": "text", "value": ". What is the value of " }, { "kind": "math", "tex": "y" }, { "kind": "text", "value": " when " }, { "kind": "math", "tex": "x=3" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "9" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "10" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "11" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "12" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["m2-integration"],
+      "skillTags": ["differential-equations", "initial-condition"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-starter-v1.json"
+    },
+    {
+      "id": "esat-mathematics-2-starter-v1-q10",
+      "number": 10,
+      "sourcePage": 10,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the coefficient of " }, { "kind": "math", "tex": "x^2" }, { "kind": "text", "value": " in the expansion of " }, { "kind": "math", "tex": "(1+2x)^5" }, { "kind": "text", "value": "?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "20" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "32" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "40" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "80" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["m2-algebra-functions"],
+      "skillTags": ["binomial-expansion", "coefficient-selection"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/mathematics-2-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/mathematics-2-starter-v1.json"
+    }
+  ]
+}

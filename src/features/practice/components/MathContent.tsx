@@ -1,4 +1,5 @@
 import katex from "katex";
+import "katex/dist/katex.min.css";
 import type {
   InlineRun,
   QuestionBlock,
@@ -21,6 +22,10 @@ function renderMath(tex: string, displayMode: boolean): string {
 function InlineContent({ run }: { run: InlineRun }) {
   if (run.kind === "text") {
     return <>{run.value}</>;
+  }
+
+  if (/^[+-]?(?:\d+(?:\.\d+)?|\.\d+)$/u.test(run.tex.trim())) {
+    return <span className="math-plain-number">{run.tex.trim()}</span>;
   }
 
   const html = renderMath(run.tex, false);
@@ -54,6 +59,41 @@ function BlockContent({ block }: { block: QuestionBlock }) {
       />
     ) : (
       <pre className="math-fallback">{block.tex}</pre>
+    );
+  }
+
+  if (block.kind === "table") {
+    return (
+      <div className="question-data-table-wrap">
+        <table className="question-data-table">
+          <caption>{block.caption}</caption>
+          <thead>
+            <tr>{block.headers.map((header) => <th key={header} scope="col">{header}</th>)}</tr>
+          </thead>
+          <tbody>
+            {block.rows.map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                {row.map((cell, cellIndex) => cellIndex === 0
+                  ? <th key={cellIndex} scope="row">{cell}</th>
+                  : <td key={cellIndex}>{cell}</td>)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+
+  if (block.kind === "source-pdf") {
+    const source = `${block.src}#page=${block.page}&view=FitH`;
+    return (
+      <section className="source-pdf-question" aria-label={block.title}>
+        <iframe src={source} title={block.title} loading="lazy" />
+        <p>
+          当前定位到原卷第 {block.page} 页。
+          <a href={source} target="_blank" rel="noreferrer">在新窗口打开完整试卷</a>
+        </p>
+      </section>
     );
   }
 

@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "id": "esat-mathematics-foundations-v1",
+  "version": "0.1.0",
+  "publicationStatus": "teaching-preview",
+  "examId": "esat",
+  "examCycle": "October 2026 and January 2027",
+  "titleZh": "ESAT 数学起点复习笔记",
+  "titleEn": "ESAT Mathematics Starting Review Notes",
+  "subtitleZh": "按 Mathematics 1 与 Mathematics 2 的真实知识单元整理课程差距、无计算器方法和第一轮复习动作。",
+  "subtitleEn": "A curriculum-aware starting review for Mathematics 1 and Mathematics 2.",
+  "authorship": "满托教研 · MANTUO ORIGINAL",
+  "rightsNotice": "本资料由满托独立撰写。官方文件仅用于核对考试事实、知识范围和术语；不复制官方题目、例题、练习或讲解。",
+  "scope": {
+    "includedZh": "本版包含考试地图、A-Level/IAL、IB、AP 课程桥接、Mathematics 1 的 7 个一级知识单元、Mathematics 2 的 8 个一级知识单元、6 个解题方法、2 道原创逐步例题和 6 组主动回忆。",
+    "includedEn": "This revision covers the exam map, three curriculum bridges, 15 top-level mathematics units, six methods, two original worked examples and six active-recall checks.",
+    "remainingZh": "Physics、Chemistry、Biology 正文、完整模块练习、下载版 PDF、独立数学教师复核、相似度复核、双语术语终审和真实学生理解度测试仍待完成。"
+  },
+  "officialAnchors": [
+    {
+      "id": "esat-content-specification-2027",
+      "title": "ESAT Content Specification — October 2026 and January 2027",
+      "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165424/ESAT_Content_Specification.pdf",
+      "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+      "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+      "usedForZh": "核对五模块结构、27 题/40 分钟、独立计时、无计算器、计分规则和 Mathematics 1/2 的一级知识范围。"
+    },
+    {
+      "id": "uat-notes-on-mathematics-2026",
+      "title": "Notes on Mathematics for TMUA and ESAT Mathematics 2",
+      "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103537/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+      "localPath": "content/official/raw/shared/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+      "sha256": "12ed684ee2dfb9b53355d54018ba216b5cd32161e5f6c5c9ee5e96b93cbf8844",
+      "usedForZh": "只核对 Mathematics 2 的 MM1–MM8 范围与官方术语；本站方法、例题和课程桥接均为独立创作。"
+    }
+  ],
+  "examFacts": [
+    { "labelZh": "每个模块", "labelEn": "PER MODULE", "valueZh": "27 道选择题", "valueEn": "27 multiple-choice questions" },
+    { "labelZh": "模块时间", "labelEn": "TIME", "valueZh": "40 分钟，独立计时", "valueEn": "40 minutes, separately timed" },
+    { "labelZh": "工具", "labelEn": "TOOLS", "valueZh": "不可使用计算器", "valueEn": "Calculators are not permitted" },
+    { "labelZh": "计分", "labelEn": "SCORING", "valueZh": "答对 1 分，答错不倒扣", "valueEn": "One mark per correct answer; no negative marking" },
+    { "labelZh": "共同基础", "labelEn": "SHARED FOUNDATION", "valueZh": "所有模块都默认 Mathematics 1 知识", "valueEn": "All modules assume Mathematics 1 knowledge" }
+  ],
+  "curriculumBridges": [
+    {
+      "curriculum": "A-Level / International A-Level Mathematics",
+      "status": "strong-start",
+      "statusZh": "大部分知识通常已出现",
+      "likelyCoveredZh": ["代数、函数、三角、指数对数与基础微积分", "数列、坐标几何、统计与概率的核心概念"],
+      "confirmZh": ["无计算器下的分数、根式、单位换算和数量级估算", "条件概率、函数图像变换与圆的坐标几何是否能在限时内直接调用"],
+      "firstActionZh": "先逐项检查 15 个知识单元，再用一套 40 分钟练习判断问题属于知识调用还是节奏。"
+    },
+    {
+      "curriculum": "IB Mathematics AA / AI",
+      "status": "partial",
+      "statusZh": "课程路径决定覆盖程度",
+      "likelyCoveredZh": ["AA HL 通常对函数、三角与微积分起点较强", "AI 课程通常对数据、统计与建模表述更熟悉"],
+      "confirmZh": ["精确代数、根式、无计算器运算与坐标几何", "数列、弧度、对数恒等式以及不依赖图形计算器的图像判断"],
+      "firstActionZh": "不要只按 AA/AI 标签判断；回到本人完成的单元，逐项确认能否脱离公式表与图形计算器。"
+    },
+    {
+      "curriculum": "AP Precalculus / Calculus / Statistics",
+      "status": "partial",
+      "statusZh": "需要组合课程证据",
+      "likelyCoveredZh": ["Precalculus 与 Calculus 可覆盖部分函数、三角和微积分", "Statistics 可覆盖部分数据表示和概率"],
+      "confirmZh": ["SI 单位、复合单位、比例与英国课程中的精确数值技巧", "数列、圆的坐标几何、条件概率、指数对数和无计算器三角"],
+      "firstActionZh": "把修过 Calculus 与数学全覆盖分开；先补没有课程证据的 Mathematics 1 单元，再检查 Mathematics 2。"
+    }
+  ],
+  "modules": [
+    {
+      "id": "mathematics-1",
+      "number": "01",
+      "titleZh": "Mathematics 1：共同数学基础",
+      "titleEn": "Mathematics 1 — Shared Mathematical Foundation",
+      "summaryZh": "所有 ESAT 模块都默认能够调用 Mathematics 1。重点不是背更多公式，而是在无计算器条件下准确翻译单位、数量、比例、代数与图表。",
+      "learningOutcomes": ["按 M1–M7 逐项检查课程证据", "先处理单位和关系，再进行运算", "用估算、边界与选项检查结果"],
+      "knowledgeUnits": [
+        { "id": "m1-units", "code": "M1", "labelZh": "单位与复合单位", "labelEn": "Units" },
+        { "id": "m1-number", "code": "M2", "labelZh": "数与精确计算", "labelEn": "Number" },
+        { "id": "m1-ratio", "code": "M3", "labelZh": "比、比例与变化率", "labelEn": "Ratio and proportion" },
+        { "id": "m1-algebra", "code": "M4", "labelZh": "代数、方程与函数", "labelEn": "Algebra" },
+        { "id": "m1-geometry", "code": "M5", "labelZh": "几何、三角与向量", "labelEn": "Geometry" },
+        { "id": "m1-statistics", "code": "M6", "labelZh": "统计与数据表示", "labelEn": "Statistics" },
+        { "id": "m1-probability", "code": "M7", "labelZh": "概率与条件概率", "labelEn": "Probability" }
+      ],
+      "methods": [
+        { "nameZh": "先统一单位", "nameEn": "NORMALISE UNITS", "signalZh": "题目同时出现分钟、秒、升、毫升或复合单位。", "methodZh": "在第一行写出目标单位；只做必要换算，再代入数量关系。", "checkZh": "答案的单位、数量级和方向必须同时合理。" },
+        { "nameZh": "把文字变成关系", "nameEn": "TRANSLATE RELATIONSHIPS", "signalZh": "题目使用“每”“增加到”“减少了”“成比例”等表达。", "methodZh": "先定义基准量与变化因子，不要直接抓住页面上的数字相乘。", "checkZh": "把结果代回原句，确认比较基准没有被交换。" },
+        { "nameZh": "先估算再精算", "nameEn": "ESTIMATE FIRST", "signalZh": "选项相距较远，或精确运算容易产生符号/小数错误。", "methodZh": "先确定正负、数量级和合理区间，再完成最少的精确运算。", "checkZh": "若精确答案离估算区间很远，优先检查单位或比例方向。" }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "esat-m1-original-units-01",
+          "titleZh": "满托原创例题：流量与时间单位",
+          "titleEn": "Mantou original — flow rate and time units",
+          "problemZh": "水以每分钟 1.8 升的恒定流量流入容器，持续 35 秒。流入多少毫升？",
+          "problemEn": "Water flows into a container at 1.8 litres per minute for 35 seconds. How many millilitres enter?",
+          "steps": [
+            { "labelZh": "确定目标单位", "bodyZh": "答案需要毫升；先把时间写成分钟，流量单位暂时保持升/分钟。", "math": { "tex": "35\\text{ s}=\\frac{35}{60}\\text{ min}", "text": "35 seconds equals 35 over 60 minutes" } },
+            { "labelZh": "应用流量关系", "bodyZh": "体积等于流量乘时间。", "math": { "tex": "1.8\\times\\frac{35}{60}=1.05\\text{ L}", "text": "1.8 times 35 over 60 equals 1.05 litres" } },
+            { "labelZh": "换成题目单位", "bodyZh": "一升等于一千毫升。", "math": { "tex": "1.05\\text{ L}=1050\\text{ mL}", "text": "1.05 litres equals 1050 millilitres" } }
+          ],
+          "answerZh": "流入 1050 mL。",
+          "trapZh": "把 35 秒直接与“每分钟”相乘，会得到量纲错误的结果；单位一致必须发生在运算前。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "看到复合单位时，第一行应该写什么？", "promptEn": "What should your first line show when compound units appear?", "answerZh": "写出目标单位，并把所有相关量换到相容单位。", "answerEn": "State the target unit and convert the relevant quantities to compatible units." },
+        { "promptZh": "为什么估算不是精确运算后的附加步骤？", "promptEn": "Why should estimation come before exact calculation?", "answerZh": "它先锁定符号、数量级和区间，可以在精算前后捕捉比例或单位错误。", "answerEn": "It fixes sign, scale and range, exposing unit or ratio errors before and after calculation." },
+        { "promptZh": "“增加了 20%”与“增加到 120%”的乘数分别是什么？", "promptEn": "What multipliers represent an increase by 20% and an increase to 120%?", "answerZh": "两者在该例中都对应乘以 1.2，但必须先辨认原始基准量。", "answerEn": "Both correspond to multiplying by 1.2 here, but the original reference quantity must be identified first." }
+      ]
+    },
+    {
+      "id": "mathematics-2",
+      "number": "02",
+      "titleZh": "Mathematics 2：结构与推理",
+      "titleEn": "Mathematics 2 — Structure and Reasoning",
+      "summaryZh": "Mathematics 2 需要 Mathematics 1 的全部基础，并进一步要求在代数、图像、数列、三角与微积分之间切换表示。更多课程内容不会自动转化为更好的限时判断。",
+      "learningOutcomes": ["按 MM1–MM8 建立完整缺口清单", "先识别结构与约束，再选择算法", "用图像、判别式、边界或选项减少运算"],
+      "knowledgeUnits": [
+        { "id": "m2-algebra-functions", "code": "MM1", "labelZh": "代数与函数", "labelEn": "Algebra and functions" },
+        { "id": "m2-sequences-series", "code": "MM2", "labelZh": "数列与级数", "labelEn": "Sequences and series" },
+        { "id": "m2-coordinate-geometry", "code": "MM3", "labelZh": "坐标几何与圆", "labelEn": "Coordinate geometry" },
+        { "id": "m2-trigonometry", "code": "MM4", "labelZh": "三角函数与弧度", "labelEn": "Trigonometry" },
+        { "id": "m2-exponentials-logs", "code": "MM5", "labelZh": "指数与对数", "labelEn": "Exponentials and logarithms" },
+        { "id": "m2-differentiation", "code": "MM6", "labelZh": "微分及其应用", "labelEn": "Differentiation" },
+        { "id": "m2-integration", "code": "MM7", "labelZh": "积分、面积与微分方程", "labelEn": "Integration" },
+        { "id": "m2-graphs", "code": "MM8", "labelZh": "函数图像与变换", "labelEn": "Graphs of functions" }
+      ],
+      "methods": [
+        { "nameZh": "先找结构", "nameEn": "IDENTIFY STRUCTURE", "signalZh": "题目可以展开计算，但条件暗示对称、因式、判别式或图像关系。", "methodZh": "写出决定答案的最小结构，例如根的个数、单调区间或不变量。", "checkZh": "如果解法需要长串展开，先问是否忽略了题目给出的结构。" },
+        { "nameZh": "切换表示", "nameEn": "SWITCH REPRESENTATIONS", "signalZh": "代数式难以直接比较，但可以画图、配方、参数化或解释为面积/斜率。", "methodZh": "选择能最直接暴露约束的表示，而不是坚持第一眼看到的形式。", "checkZh": "转换后确认定义域、符号与端点没有丢失。" },
+        { "nameZh": "利用选项验证", "nameEn": "TEST THE OPTIONS", "signalZh": "选择题选项数量少，反向代入比完整求解更短。", "methodZh": "先用符号、范围和特殊值排除，再对剩余选项做最小验证。", "checkZh": "选项法必须满足全部条件，不能只匹配其中一个等式。" }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "esat-m2-original-discriminant-01",
+          "titleZh": "满托原创例题：用根的个数锁定参数",
+          "titleEn": "Mantou original — determine a parameter from the number of roots",
+          "problemZh": "函数 f(x)=x²−4x+k 的图像与 x 轴恰好有一个公共点。求 k。",
+          "problemEn": "The graph of f(x)=x²−4x+k has exactly one point in common with the x-axis. Find k.",
+          "steps": [
+            { "labelZh": "把图像语言翻译为根", "bodyZh": "恰好一个公共点表示二次方程有一个重根，因此判别式为零。" },
+            { "labelZh": "写出最小条件", "bodyZh": "对 ax²+bx+c，判别式是 b²−4ac。", "math": { "tex": "(-4)^2-4(1)(k)=0", "text": "negative four squared minus four times one times k equals zero" } },
+            { "labelZh": "解参数并检查", "bodyZh": "得到 k=4；此时 f(x)=(x−2)²，只在 x=2 接触 x 轴。", "math": { "tex": "k=4,\\qquad f(x)=(x-2)^2", "text": "k equals 4 and f of x equals x minus 2 squared" } }
+          ],
+          "answerZh": "k=4。",
+          "trapZh": "只说“有实根”会得到 k≤4；题目要求恰好一个公共点，所以必须使用判别式等于零。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "二次函数与 x 轴恰有一个交点，对判别式意味着什么？", "promptEn": "What does exactly one x-intercept imply about the discriminant?", "answerZh": "判别式等于零，对应一个重根。", "answerEn": "The discriminant is zero, giving a repeated root." },
+        { "promptZh": "何时应该从代数式切换到图像？", "promptEn": "When should you switch from algebra to a graph?", "answerZh": "当问题关心根的个数、符号、交点、单调或变换，而展开不能直接暴露这些关系时。", "answerEn": "When roots, sign, intersections, monotonicity or transformations matter more directly than expansion." },
+        { "promptZh": "用选项反代时，最容易漏掉什么？", "promptEn": "What is most often missed when testing answer options?", "answerZh": "只验证部分条件，或忘记定义域、端点与符号限制。", "answerEn": "Checking only part of the conditions, or losing domain, endpoint or sign restrictions." }
+      ]
+    }
+  ],
+  "reviewWorkflow": [
+    { "stepZh": "标记单元", "stepEn": "TAG THE UNIT", "actionZh": "每道错题先对应到 M1–M7 或 MM1–MM8，不用“粗心”代替原因。" },
+    { "stepZh": "区分知识与调用", "stepEn": "SEPARATE KNOWLEDGE FROM RETRIEVAL", "actionZh": "判断是没有学过、知道但无法无提示调用，还是时间压力下选择了低效表示。" },
+    { "stepZh": "写下最短正确路径", "stepEn": "RECORD THE SHORTEST VALID PATH", "actionZh": "只记录决定答案的关键关系、检查点和应当放弃的错误入口。" },
+    { "stepZh": "安排下一动作", "stepEn": "ASSIGN THE NEXT ACTION", "actionZh": "知识缺口进入复习；调用问题做同标签短组；节奏问题进入独立 40 分钟模块。" }
+  ]
+}

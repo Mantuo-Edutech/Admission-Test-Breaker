@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "2   Find the value of the constant term in the expansion of\n                                       \u0002          \u000312\n                                           6    1\n                                          x − 2\n                                               x\n\n    A −495\n\n    B −220\n\n    C −66\n\n    D 66\n\n    E 220\n\n    F 495\n\n\n\n\n                                           4"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the value of the constant term in the expansion of\n                                                 12\n                                           6    1\n                                          x − 2\n                                               x"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−495"
+    },
+    {
+      "label": "B",
+      "rawText": "−220"
+    },
+    {
+      "label": "C",
+      "rawText": "−66"
+    },
+    {
+      "label": "D",
+      "rawText": "66"
+    },
+    {
+      "label": "E",
+      "rawText": "220"
+    },
+    {
+      "label": "F",
+      "rawText": "495"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The constant term is the one with x0 . The expansion is\n\n                                                             1 k           1 12\n                    \u0012 \u0013        \u0012    \u0013       \u0012 \u0013          \u0012     \u0013        \u0012    \u0013\n           6 12      12   6 11    1          12   6 12−k\n        (x )      +     (x )    − 2 + ··· +     (x )       − 2   + ··· + − 2\n                     1           x           k              x             x\n\n(This notation for binomial coefficients is much clearer than the older n Cr notation, and is\nrecommended.)\nThe kth term is therefore\n           \u0012 \u0013                        \u0012 \u0013                    \u0012 \u0013\n             12 6(12−k)       k −2k    12     k 6(12−k)−2k    12\n                 x        (−1) x    =     (−1) x           =     (−1)k x72−8k\n             k                         k                      k\n\nThe value of k which makes the power zero is therefore k = 9, so the constant term is\n               \u0012 \u0013            \u0012 \u0013\n                12              12       12 × 11 × 10\n                    (−1)9 = −       =−                 = −2 × 11 × 10 = −220\n                 9              3          3×2×1\n                    \u0012 \u0013 \u0012         \u0013\n                     n        n\nwhere we have used      =           to simplify the calculation. Thus the answer is B.\n                     k      n−k\n\n      Commentary: We have used k here (beginning our counting with k = 0). You might\n      prefer to use another letter such as r.\n\n\n\n\nVersion 1.0, April 2019                                                                  Page 4"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

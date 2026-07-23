@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q12",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 12,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "12   The minimum value of the function x4 − p2 x2 is −9\n\n     p is a real number.\n\n     Find the minimum value of the function x2 − px + 6\n\n     A −3\n           √\n          3 2\n     B 6−\n           2\n         3\n     C\n         2\n     D 3\n         9\n     E\n         2\n           √\n          3 2\n     F 6+\n           2\n\n\n\n\n                                          \u0014\u0017"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The minimum value of the function x4 − p2 x2 is −9\n\n     p is a real number.\n\n     Find the minimum value of the function x2 − px + 6"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−3\n           √\n          3 2"
+    },
+    {
+      "label": "B",
+      "rawText": "6−\n           2\n         3"
+    },
+    {
+      "label": "C",
+      "rawText": "2"
+    },
+    {
+      "label": "D",
+      "rawText": "3\n         9"
+    },
+    {
+      "label": "E",
+      "rawText": "2\n           √\n          3 2"
+    },
+    {
+      "label": "F",
+      "rawText": "6+\n           2"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can complete the square with the first function: we have\n\n                                 x4 − p2 x2 = (x2 − 12 p2 )2 − 41 p4\n\nThis attains its minimum value when the parenthesised expression is 0, that is when x = ± √12 p.\nAt that point, x4 − p2 x2 = − 41 p4 = −9, so p4 = 36. Since p is a real number, we must have\np2 = 6 (rather than −6).\nWe now consider x2 − px + 6. We can again complete the square to get\n\n                              x2 − px + 6 = (x − 12 p)2 − 41 p2 + 6.\n\nThe minimum of this function again occurs when the parenthesised expression is 0, that is when\nx = 12 p. At this point,\n\n                          x2 − px + 6 = − 41 p2 + 6 = − 14 × 6 + 6 = 92\n\nand so the answer is option E.\nAlternatively, we could have used calculus instead of completing the square to find the minima;\nthe results would be the same.\n\n\n\n\nVersion 1.0, March 2022                                                                 Page 14"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

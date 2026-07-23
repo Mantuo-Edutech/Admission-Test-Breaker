@@ -1,0 +1,93 @@
+schemaVersion: 1
+feature:
+  id: exam-aware-profile-first-practice
+  title: Exam-aware student profile-first practice
+  status: partial
+  userOutcome: >-
+    Students establish a minimal private background profile for the exam they
+    selected before entering practice; one exam profile cannot unlock another.
+run:
+  packageScript: verify:release
+claims:
+  - id: exam-aware-practice-gate
+    status: verified
+    statement: >-
+      The practice route resolves the paper exam first, preserves the existing
+      TMUA and ESAT specialist journeys, and sends TARA, LNAT and UCAT to their
+      own background profile rather than the TMUA mathematics profile.
+    artifacts:
+      - src/features/preparation-profile/components/ExamPracticeProfileGate.tsx
+      - src/features/preparation-profile/components/AssessmentProfileRequiredState.tsx
+      - src/app/routes.tsx
+      - tests/app/assessment-profile-first-journey.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+  - id: private-exam-scoped-profile
+    status: verified
+    statement: >-
+      Background profiles contain only entry cycle, curriculum, stage, subjects,
+      practice experience and weekly availability. Local data is partitioned by
+      Guest Space and exam; authenticated data is partitioned by Learner Space
+      and exam behind forced RLS and validated RPC writes.
+    artifacts:
+      - src/features/preparation-profile/assessment-profile-domain.ts
+      - src/features/preparation-profile/storage/assessment-profile-local-store.ts
+      - src/features/preparation-profile/storage/supabase-assessment-profile-store.ts
+      - supabase/migrations/20260718233000_assessment_background_profiles.sql
+      - supabase/tests/database/assessment_background_profiles_rls.test.sql
+      - tests/features/preparation-profile/assessment-profile-domain.test.ts
+      - tests/features/preparation-profile/assessment-profile-local-store.test.ts
+      - tests/features/preparation-profile/assessment-profile-supabase-store.test.ts
+    automatedChecks:
+      - verify:supabase
+      - verify:supabase-contracts
+      - typecheck
+  - id: deterministic-module-starting-point
+    status: verified
+    statement: >-
+      Saving a TARA, LNAT or UCAT background profile opens an independent,
+      zero-token starting-point page before practice. Versioned rules list the
+      transferable course evidence, concrete bilingual gaps, first-cycle time
+      range and native practice action for every module without claiming an
+      ability score or total preparation benchmark.
+    artifacts:
+      - src/features/preparation-profile/assessment-preparation.ts
+      - src/features/preparation-profile/pages/AssessmentPreparationPage.tsx
+      - content/products/catalog.json
+      - tests/features/preparation-profile/assessment-preparation.test.ts
+      - tests/app/assessment-profile-first-journey.test.tsx
+    automatedChecks:
+      - test
+      - verify:content-products
+      - verify:e2e
+      - typecheck
+  - id: responsive-critical-browser-journey
+    status: verified
+    statement: >-
+      Headless Chromium exercises the Mantou front door at desktop, iPad and
+      phone dimensions, then completes exam profile, native UCAT practice,
+      persistence, submission and specialist scoring paths without horizontal
+      document overflow.
+    artifacts:
+      - playwright.config.ts
+      - tests/e2e/front-door.spec.ts
+      - tests/e2e/practice-critical-journey.spec.ts
+      - .github/workflows/verify.yml
+    automatedChecks:
+      - verify:e2e
+      - verify:features
+boundaries:
+  - A background profile is student-provided context, not an ability result, official score, admissions probability or training-time benchmark.
+  - First-cycle hours cover orientation, foundation review and a short diagnostic only; they are not total preparation time or an individual performance prediction.
+  - Invite entitlements do not grant Mantou, Bingbing, teachers, parents or agents access to the learner profile.
+  - Chromium viewport emulation is automated regression evidence, not a substitute for real Safari, iOS, Android, keyboard or screen-reader UAT.
+  - Production Supabase remains unlinked; local RLS and HTTP evidence must be repeated in staging and production.
+manualChecks:
+  - id: real-device-accessibility-uat
+    status: pending
+    evidence: Complete the same profile-to-result journey on real iPhone Safari, iPad Safari and desktop browsers, including keyboard-only, screen-reader and reduced-motion checks.
+    viewports:
+      - desktop
+      - tablet
+      - phone

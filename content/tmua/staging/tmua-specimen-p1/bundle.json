@@ -1,0 +1,1858 @@
+{
+  "schemaVersion": 1,
+  "bundleType": "question-import",
+  "id": "tmua-specimen-p1-extraction-v1",
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p1",
+  "edition": "specimen",
+  "paper": 1,
+  "generatedAt": "2026-07-17T07:00:00.000Z",
+  "generatedBy": "tmua-extraction-cli",
+  "sourceDocumentIds": {
+    "question": "tmua-official-specimen-paper-1",
+    "answerKey": "tmua-official-specimen-answer-key",
+    "workedSolution": "tmua-official-specimen-paper-1-worked-solutions"
+  },
+  "questionCount": 20,
+  "publishableQuestionCount": 0,
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q01",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 1,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "1.     The sum of the two values of         that satisfy the simultaneous equations\n\n               3       1     0 and 3    7     5 is\n\n\n\n       A               8.5\n\n       B               7.5\n\n       C               1.5\n\n       D           3.5\n\n       E           4.5\n\n       F           5"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The sum of the two values of         that satisfy the simultaneous equations\n\n               3       1     0 and 3    7     5 is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "8.5"
+        },
+        {
+          "label": "B",
+          "rawText": "7.5"
+        },
+        {
+          "label": "C",
+          "rawText": "1.5"
+        },
+        {
+          "label": "D",
+          "rawText": "3.5"
+        },
+        {
+          "label": "E",
+          "rawText": "4.5"
+        },
+        {
+          "label": "F",
+          "rawText": "5"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can rearrange the first equation to\n\n                                            x = 3y − 1.\n\nSubstituting this into the second equation gives\n\n                                   3(3y − 1)2 − 7(3y − 1)y = 5\n\nwhich expands to\n                                  27y 2 − 18y + 3 − 21y 2 + 7y = 5\nso\n                                         6y 2 − 11y − 2 = 0.\n\nWe can either factorise this as (y − 2)(6y + 1) = 0, giving y = 2 or y = − 16 or use the quadratic\nformula to obtain                     p\n                                11 + 112 − 4 × 6 × (−2)        11 ± 13\n                           y=                               =\n                                            12                   12\ngiving y = 2 or y = − 61 again.\nThese give x = 5 or x = − 32 , so the sum is 3.5, and the answer is D.\nAlternatively, we could have rearranged the first equation to get\n                                                  x+1\n                                             y=\n                                                   3\nand then substitute this into the second equation. This has the advantage that we obtain the\nvalues of x directly, but the disadvantage that there are fractions involved throughout.\n\n\n\n\nVersion 1.1, November 2020                                                                 Page 3"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q02",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 2,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "2.     The number of solutions in the interval 0             4 of the equation\n        sin            3 cos     3 is\n\n\n\n       A           0\n\n       B           1\n\n       C           2\n\n       D           3\n\n       E           4\n\n       F           5\n\n       G           6\n\n\n\n\n© UCLES 2017                                                                          [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The number of solutions in the interval 0             4 of the equation\n        sin            3 cos     3 is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0"
+        },
+        {
+          "label": "B",
+          "rawText": "1"
+        },
+        {
+          "label": "C",
+          "rawText": "2"
+        },
+        {
+          "label": "D",
+          "rawText": "3"
+        },
+        {
+          "label": "E",
+          "rawText": "4"
+        },
+        {
+          "label": "F",
+          "rawText": "5"
+        },
+        {
+          "label": "G",
+          "rawText": "6\n\n\n\n\n© UCLES 2017                                                                          [Turn over"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We rewrite sin2 θ as 1 − cos2 θ to give\n\n                                     1 − cos2 θ + 3 cos θ = 3.\n\nThis is now a quadratic in u = cos θ, giving\n\n                                          1 − u2 + 3u = 3\n\nor u2 − 3u + 2 = 0. This factorises as (u − 1)(u − 2) = 0, so u = 1 or u = 2, that is, cos θ = 1 or\ncos θ = 2.\ncos θ = 2 has no real solutions. The solutions of cos θ = 1 in the given range are θ = 0, θ = 2π,\nθ = 4π. So there are three solutions, and the answer is option D.\n\n\n\n\nVersion 1.1, November 2020                                                                  Page 4"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q03",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 3,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "3.     The perpendicular bisector of the line segment joining the points 2, 6 and 5, 4 cuts\n       the ‐axis at the point with ‐coordinate\n\n\n\n\n       A\n\n\n       B\n\n\n       C\n\n\n       D\n\n\n       E"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The perpendicular bisector of the line segment joining the points 2, 6 and 5, 4 cuts\n       the ‐axis at the point with ‐coordinate"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We find the equation of the perpendicular bisector first, and then find the x-coordinate of this\nline when y = 0.\nThe midpoint of the line segment joining (2, −6) and (5, 4) is ( 27 , −1), and the gradient of this\nline segment is 4−(−6)  10\n                 5−2 = 3 .\n\nTherefore the perpendicular bisector passes through ( 27 , −1) and has gradient − 10\n                                                                                  3\n                                                                                     . Its equation\nis therefore\n                                                 3\n                                                    x − 72 .\n                                                            \u0001\n                                   y − (−1) = − 10\n\nWe could expand and simplify this equation, but that is not necessary for our purposes. Instead,\nwe substitute y = 0 to obtain\n                                             3\n                                                x − 27\n                                                       \u0001\n                                      1 = − 10\ngiving\n                                          x − 72 = − 10\n                                                     3\n\nso x = 27 − 10  21  20  1\n            3 = 6 − 6 = 6 showing that the correct answer is option B.\n\n\n\n\nVersion 1.1, November 2020                                                                  Page 5"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q04",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 4,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "4.     The complete set of values of for which       1      2    0 is\n\n\n\n\n       A            1, 1            2\n\n       B            1,          2\n\n       C       1           2\n\n       D           1,       2\n\n       E       1           1,       2\n\n\n\n\n© UCLES 2017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The complete set of values of for which       1      2    0 is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "1, 1            2"
+        },
+        {
+          "label": "B",
+          "rawText": "1,          2"
+        },
+        {
+          "label": "C",
+          "rawText": "1           2"
+        },
+        {
+          "label": "D",
+          "rawText": "1,       2"
+        },
+        {
+          "label": "E",
+          "rawText": "1           1,       2\n\n\n\n\n© UCLES 2017"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can factorise the given inequality to give (x + 1)(x − 1)(x − 2) > 0. The function f(x) =\n(x + 1)(x − 1)(x − 2) is zero when x = −1, x = 1 and x = 2.\nWe can now make a table showing the signs of the three factors for different values of x. (This\nis a useful technique in general.)\n\n                 x < −1      x = −1   −1 < x < 1   x=1     1<x<2       x=2     x>2\n         x+1       −            0         +         +        +          +       +\n         x−1       −           −          −         0        +          +       +\n         x−2       −           −          −         −        −          0       +\n         f(x)      −            0         +         0        −          0       +\n\nTherefore f(x) is positive when −1 < x < 1 and when x > 2, so the answer is E.\n\n\n\n\nVersion 1.1, November 2020                                                              Page 6"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q05",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 5,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "5\n\n\n5.     Given that            log      1       for    1, find   in terms of .\n\n\n\n\n       A\n\n\n       B               1    log\n\n       C               1    log\n\n       D               1    10\n\n       E               10         1\n\n       F               10"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "5.     Given that            log      1       for    1, find   in terms of ."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "1    log"
+        },
+        {
+          "label": "C",
+          "rawText": "1    log"
+        },
+        {
+          "label": "D",
+          "rawText": "1    10"
+        },
+        {
+          "label": "E",
+          "rawText": "10         1"
+        },
+        {
+          "label": "F",
+          "rawText": "10"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "y = − log10 (1 − x)\n                 ⇐⇒           −y = log10 (1 − x)        negate\n                                 −y\n                 ⇐⇒          10       =1−x              exponentiate to base 10\n                                 −y\n                 ⇐⇒     x + 10        =1                add x\n                                             −y\n                 ⇐⇒               x = 1 − 10            subtract 10−y\n\nso the answer is D.\n\n\n\n\nVersion 1.1, November 2020                                                        Page 7"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            8
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q06",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 6,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "6.     It is given that           2 is a factor of    4              1     6.\n\n       The sum of the possible values of is\n\n\n\n       A           10\n\n       B           6\n\n       C       0\n\n       D       6\n\n       E       10\n\n\n\n\n© UCLES 2017                                                                    [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "It is given that           2 is a factor of    4              1     6.\n\n       The sum of the possible values of is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "10"
+        },
+        {
+          "label": "B",
+          "rawText": "6"
+        },
+        {
+          "label": "C",
+          "rawText": "0"
+        },
+        {
+          "label": "D",
+          "rawText": "6"
+        },
+        {
+          "label": "E",
+          "rawText": "10\n\n\n\n\n© UCLES 2017                                                                    [Turn over"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Since x + 2 is a factor, substituting x = −2 into the polynomial must yield zero by the factor\ntheorem:\n                            (−2)3 + 4c(−2)2 + (−2)(c + 1)2 − 6 = 0.\nSimplifying gives\n                                −8 + 16c − 2(c2 + 2c + 1) − 6 = 0\nso\n                                       −2c2 + 12c − 16 = 0.\nDividing by −2 now gives\n                                          c2 − 6c + 8 = 0\nso (c − 2)(c − 4) = 0 and the roots are c = 2 and c = 4, with a sum of 6. Hence the answer is D.\nWe could also find the sum of the roots directly from the quadratic c2 −6c+8 = 0 without solving\nit: if the roots are c = p and c = q, then the quadratic can be written as (c − p)(c − q) = 0, which\nexpands to c2 − (p + q)c + pq = 0. So the sum of the roots is the negative of the c coefficient,\nwhich is 6, and the product of the roots is the constant, which is 7.\n\n\n\n\nVersion 1.1, November 2020                                                                   Page 8"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q07",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 7,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "6\n\n\n7.     A bag contains    red balls,   yellow balls, and   blue balls.\n\n       One ball is selected at random and not replaced.\n\n       A second ball is then selected at random and not replaced.\n\n       Each ball is equally likely to be chosen.\n\n       The probability that the two balls are not the same colour is\n\n\n\n       A\n\n\n       B\n\n\n       C\n\n\n       D\n\n\n       E\n\n\n       F\n\n\n\n\n© UCLES 2017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "6\n\n\n7.     A bag contains    red balls,   yellow balls, and   blue balls.\n\n       One ball is selected at random and not replaced.\n\n       A second ball is then selected at random and not replaced.\n\n       Each ball is equally likely to be chosen.\n\n       The probability that the two balls are not the same colour is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        },
+        {
+          "label": "F",
+          "rawText": "© UCLES 2017"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We could do this using a tree diagram, but it would have 3 × 3 branches, which is somewhat\nunwieldly in a short test.\nHere are two alternative approaches.\n\nApproach 1: use symmetry\nThe first ball can be anything; it does not matter what. We are left with n − 1 balls of the same\ncolour and 2n balls of different colours; there are 3n − 1 balls left in total. (This is because\nthere are equal numbers of each colour to begin with. Were there different numbers of different\ncolours, we would have to treat each colour separately.)\n                                                                       2n\nSo the probability that the two balls are not the same colour is            , which is option C.\n                                                                     3n − 1\nApproach 2: use negation\nThe probability that the two balls not the same colour is 1 minus the probability that they are\nthe same colour. This gives\n                          \u0012                                            \u0013\n                            n     n−1       n    n−1        n    n−1\n                      1−      ×          +    ×         +     ×\n                            3n 3n − 1 3n 3n − 1 3n 3n − 1\n\nwhere we have added the three colours separately. This simplifies to\n                                            n−1        2n\n                                       1−          =        .\n                                            3n − 1   3n − 1\nWe could have simplified the calculation in the same way as in approach 1: the probability that\n                                                    n−1\nthe second ball is the same colour as the first is        , so the probability that they are different\n                                                   3n − 1\ncolours is 1 minus this.\n\n\n\n\nVersion 1.1, November 2020                                                                     Page 9"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q08",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 8,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "8.     Given that             2, where , , and are positive real numbers, then\n\n\n\n       A       log\n\n       B\n\n       C\n\n       D\n\n       E       log\n\n       F\n\n       G\n\n       H"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Given that             2, where , , and are positive real numbers, then"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "log"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "log"
+        },
+        {
+          "label": "F",
+          "rawText": "[visual option F; transcription required]"
+        },
+        {
+          "label": "G",
+          "rawText": "[visual option G; transcription required]"
+        },
+        {
+          "label": "H",
+          "rawText": "[visual option H; transcription required]"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The options all involve logarithm to base 10, so we start by taking logarithms of the given\nequation. This gives\n                                  log10 (ax b2x c3x = log10 2\nso\n                          log10 (ax ) + log10 (b2x ) + log10 (c3x ) = log10 2.\nWe now use the index rule for logarithms to give\n\n                              x log10 a + 2x log10 b + 3x log10 c = log10 2\n\nwhich factorises to\n                              x(log10 a + 2 log10 b + 3 log10 c) = log10 2\nand hence\n                                                   log10 2\n                                  x=                                   .\n                                       log10 a + 2 log10 b + 3 log10 c\nThis, though, is not one of the offered options; we now have to apply the logarithm rules in\nreverse to give\n                                               log10 2\n                              x=\n                                   log10 a + log10 (b2 ) + log10 (c3 )\nwhich simplifies further to\n                                                   log10 2\n                                           x=\n                                                log10 (ab2 c3 )\nand so the answer is F.\n\n\n\n\nVersion 1.1, November 2020                                                          Page 10"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q09",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 9,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "9.     The roots of the equation 2   11           0 differ by 2. The value of is\n\n\n\n       A\n\n\n       B\n\n\n       C\n\n\n       D\n\n\n\n\n© UCLES 2017                                                                       [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The roots of the equation 2   11           0 differ by 2. The value of is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "© UCLES 2017                                                                       [Turn over"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The roots of the equation, using the quadratic formula, are\n                                               √\n                                         11 ± 112 − 8c\n                                     x=\n                                                 4\nand these differ by                          √\n                                            2 112 − 8c\n                                         x=            =2\n                                                4\n                √\nso we require       112 − 8c = 4, or 121 − 8c = 16. Thus 8c = 105, so c = 105\n                                                                           8 and the answer is A.\n\n\n\n\nVersion 1.1, November 2020                                                               Page 11"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q10",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 10,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "10.    The curve         cos is reflected in the line         1 and the resulting curve is then\n       translated by         units in the positive ‐direction. The equation of this new curve is\n\n\n\n\n       A             2   cos\n\n\n       B             2   cos\n\n\n       C             2   cos\n\n\n       D             2   cos\n\n."
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The curve         cos is reflected in the line         1 and the resulting curve is then\n       translated by         units in the positive ‐direction. The equation of this new curve is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "2   cos"
+        },
+        {
+          "label": "B",
+          "rawText": "2   cos"
+        },
+        {
+          "label": "C",
+          "rawText": "2   cos"
+        },
+        {
+          "label": "D",
+          "rawText": "2   cos\n\n."
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "When the graph is reflected in the line y = 1, we obtain the following:\n\n                                                  y\n\n                                                  3\n\n                                                  2\n\n                                                  1\n                                                                                x\n                   −2π           −π               0           π            2π\n\n\n\n\nWe can find the equation of the reflected curve in a variety of ways. One is to observe that the\nreflection is centred about y = 2, as the values go from y = 1 to y = 3. The cosine curve is\n‘upside-down’, so the equation must be y = −(cos x) + 2 = 2 − cos x.\nAnother way to see this is as follows. The refletion of y = f(x) in the x-axis (y = 0) is y = −f(x).\nWhen the line of reflection is translated, the whole reflection is translated. Since y = 0 is\ntransformed to y = 2, the reflection of the function must be translated to give y = 2 − f(x).\nThe result is then translated by π4 in the positive x-direction, so that x is replaced by x − π4 .\n(We can see this because the new x = π4 corresponds to the old x = 0.)\nTherefore, the equation of the resulting graph is\n                                                  \u0010    π\u0011\n                                       y = 2 − cos x −    .\n                                                       4\nThus the correct answer is option D.\n\n\n\n\nVersion 1.1, November 2020                                                                  Page 12"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q11",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 11,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "11.    The sum of the roots of the equation 2             8   2     15   0 is\n\n\n\n\n       A       3\n\n       B       8\n\n       C       2 log     2\n\n       D       log\n\n\n       E\n\n\n\n\n© UCLES 2017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The sum of the roots of the equation 2             8   2     15   0 is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "3"
+        },
+        {
+          "label": "B",
+          "rawText": "8"
+        },
+        {
+          "label": "C",
+          "rawText": "2 log     2"
+        },
+        {
+          "label": "D",
+          "rawText": "log"
+        },
+        {
+          "label": "E",
+          "rawText": "© UCLES 2017"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Writing y = 2x , the equation becomes y 2 −8y +15 = 0, which factorises to give (y −3)(y −5) = 0.\nThus y = 3 or y = 5, so 2x = 3 or 2x = 5.\nThe given options all use logarithms to base 10, so we will take logarithms of these two equations\n                                                          log10 3\nto base 10. The first gives x log10 2 = log10 3, so x =           . Likewise, the second equation\n                                                          log10 2\n          log10 5\ngives x =         . Finally, we can add these to obtain\n          log10 2\n\n                             log10 3 log10 15    log10 (3 × 5   log10 15\n                                     +         =              =\n                             log10 2   log10 2     log10 2       log10 2\n\nand the answer is option E.\nAn alternative is to take logarithms to base 2, giving the roots as log2 3 and log2 5. These sum\nto log2 15. Unfortunately, this is not one of the options offered, as they are all given using\nlogarithms to base 10. If you know the change of base rule for logarithms, though, which states\n              logc b\nthat loga b =        , you can put c = 10 to obtain the correct option.\n              logc a\n\n\n\n\nVersion 1.1, November 2020                                                                Page 13"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            14
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q12",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 12,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "12.    The cross‐section of a triangular prism is an equilateral triangle with side 2 cm.\n       The length of the prism is cm.\n\n       Let the total surface area of the prism be cm2. Given that the volume of the prism is\n       cm3, which one of the following is an expression for in terms of ?\n\n\n\n       A\n\n\n       B\n                       √\n\n\n       C\n                   √\n\n\n       D\n                   √\n\n\n       E\n                   √"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The cross‐section of a triangular prism is an equilateral triangle with side 2 cm.\n       The length of the prism is cm.\n\n       Let the total surface area of the prism be cm2. Given that the volume of the prism is\n       cm3, which one of the following is an expression for in terms of ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "√"
+        },
+        {
+          "label": "C",
+          "rawText": "√"
+        },
+        {
+          "label": "D",
+          "rawText": "√"
+        },
+        {
+          "label": "E",
+          "rawText": "√"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The volume of the prism is the length times the cross-sectional area, so we need to work out the\narea of the equilateral triangle:\n\n                                                  C\n\n                                            2x         2x\n\n                                        A        x M        B\n\n\nWe could use trigonometry and the formula for the area of a triangle, area = 12 ab sin C; this\n                                          √\ngives the area as 12 (2x)(2x) sin 60◦ = x2 3.\n                                                                              2      2\nAlternatively, we could\n 2     2\n                      √find the length CM using Pythagoras’s\n                                                        1\n                                                                          √ CM = (2x) −\n                                                             theorem, giving\n                                                                        2\nx = 3x , so CM = x 3. Thus the area of the triangle is 2 AB × CM = x 3.\n                                        √\nThus the volume of the prism is T = x2 d 3.\nThe total surface area of the prism is twice the area of the triangle, plus the area of the three\nrectangular faces, so                √                   √\n                             T = 2x2 3 + 3(2xd) = 2x2 3 + 6xd.\n\nThese expressions for T are equal, so\n                                        √       √\n                                    x2 d 3 = 2x2 3 + 6xd.\n\nCollecting the d terms to the left hand side gives\n                                         √             √\n                                     x2 d 3 − 6xd = 2x2 3\n\nso                                      √             √\n                                    d(x2 3 − 6x) = 2x2 3\nhence                                    √          √\n                                      2x2 3       2x 3\n                                d= √          = √       .\n                                    x2 3 − 6x    x 3−6\n                                                  √\nIf we now divide the numerator and denominator by 3, we obtain\n                                                  2x\n                                         d=         √ ,\n                                                 x−2 3\nwhich is option D.\n\n\n\n\nVersion 1.1, November 2020                                                               Page 14"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            15
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q13",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 13,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "13.    How many real roots does the equation          4     4      10    0 have?\n\n\n\n\n       A       0\n\n       B       1\n\n       C       2\n\n       D       3\n\n       E       4\n\n\n\n\n© UCLES 2017                                                                       [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "How many real roots does the equation          4     4      10    0 have?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0"
+        },
+        {
+          "label": "B",
+          "rawText": "1"
+        },
+        {
+          "label": "C",
+          "rawText": "2"
+        },
+        {
+          "label": "D",
+          "rawText": "3"
+        },
+        {
+          "label": "E",
+          "rawText": "4\n\n\n\n\n© UCLES 2017                                                                       [Turn over"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can determine the answer to this question by locating the stationary points of the function\nf(x) = x4 − 4x3 + 4x2 − 10. We have\n\n                f 0 (x) = 4x3 − 12x2 + 8x = 4x(x2 − 3x + 2) = 4x(x − 1)(x − 2).\n\nThere are therefore stationary points at x = 0, x = 1 and x = 2. Substituting these values\ninto f(x) gives us the y-coordinates of these points on the graph of y = f(x): they are (0, −10),\n(1, −9) and (2, −10). Since f(x) tends to +∞ as x tends to +∞ or −∞, the graph looks roughly\nlike this:\n\n                                          y\n\n\n\n\n                                                                 x\n                                          0    1     2\n\n\n\n\nThere are thus only two real solutions to f(x) = 0, and the answer is option C.\n\n\n\n\nVersion 1.1, November 2020                                                               Page 15"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            16
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q14",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 14,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "14.        , , , and   are real and positive.\n\n           and are constants.\n\n           and   are related.\n\n       A graph of log against log is drawn.\n\n       For which one of the following relationships will this graph be a straight line?\n\n\n\n\n       A\n\n       B\n\n       C\n\n       D\n\n       E"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": ", , , and   are real and positive.\n\n           and are constants.\n\n           and   are related.\n\n       A graph of log against log is drawn.\n\n       For which one of the following relationships will this graph be a straight line?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "If the graph is a straight line, then we must have\n\n                                       (log y) = m(log x) + c\n\nfor some m and c; this is just the usual straight-line equation with x and y replaced by log x\nand log y.\nThis can be written as\n                                        log y = log(xm ) + c.\nIf we now write c = log C for some C, then this becomes\n\n                                log y = log xm + log C = log(Cxm ).\n\nExponentiating both sides gives\n                                              y = Cxm\nwhich is in the form of option D.\nAn alternative to writing c = log C is just to exponentiate the equation log y = log(xm ) + c. If\nwe suppose that the base of the logarithms is k, then this gives\n\n                                             y = xm k c\n\n(using k u+v = k u k v and k log u = u for any u and v). Since k c is a constant, this equation can be\nrewritten as y = axm where a = k c , and we again obtain option D.\n\n\n\n\nVersion 1.1, November 2020                                                                   Page 16"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            17
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q15",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 15,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "15.    The smallest possible value of                 as   varies is\n\n\n\n       A\n\n\n       B\n\n\n       C\n\n\n       D\n\n\n       E         2\n\n\n\n© UCLES 2017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The smallest possible value of                 as   varies is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "2\n\n\n\n© UCLES 2017"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We start by evaluating the integral to obtain\n                            Z 1               Z 1\n                                (x − a)2 dx =     x2 − 2ax + a2 dx\n                              0                0\n                                                               \u00031\n                                            = 3 x − ax2 + a2 x 0\n                                              \u00021 3\n\n                                              = 31 − a + a2\n\nWe can now complete the square on this final expression to obtain\n\n                              (a − 12 )2 − ( 21 )2 + 13 = (a − 12 )2 + 12\n                                                                       1\n\n\n                                      1\nand so the smallest possible value is 12 , which is option A.\nWe could alternatively have used calculus to find the stationary point of 13 − a + a2 (by differen-\ntiating with respect to a), and then noting that this is a local minimum, and that the function\nis greater than this at all other points.\n\n\n\n\nVersion 1.1, November 2020                                                                 Page 17"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            18
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q16",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 16,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "16.    Given that and      are non‐zero integers, the expression               is an integer if\n\n\n\n       A           0\n\n       B           0\n\n       C           0 and       0\n\n       D           0 and       0\n\n       E           0 and       0\n\n       F           0 and       0\n\n       G           0\n\n       H           0"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Given that and      are non‐zero integers, the expression               is an integer if"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0"
+        },
+        {
+          "label": "B",
+          "rawText": "0"
+        },
+        {
+          "label": "C",
+          "rawText": "0 and       0"
+        },
+        {
+          "label": "D",
+          "rawText": "0 and       0"
+        },
+        {
+          "label": "E",
+          "rawText": "0 and       0"
+        },
+        {
+          "label": "F",
+          "rawText": "0 and       0"
+        },
+        {
+          "label": "G",
+          "rawText": "0"
+        },
+        {
+          "label": "H",
+          "rawText": "0"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We begin by simplifying this expression; we write each term as a product of prime powers to\nobtain:\n                          10c−2d × 202c+d   (2 × 5)c−2d × (22 × 5)2c+d\n                                          =\n                            8c × 125c+d           (23 )c × (53 )c+d\n                                              2c−2d+2(2c+d) × 5c−2d+(2c+d)\n                                            =\n                                                      23c × 53(c+d)\n                                              25c) × 53c−d\n                                            = 3c\n                                              2 × 53c+3d\n                                            = 22c × 5−4d\n\nFor this to be an integer, we require 2c and −4d to be non-negative integers. Since c and d are\nnon-zero integers, we need c > 0 and d < 0, which is option E.\n(In fact, this is an “if and only if” condition; options C, D and F would make the expression\nnon-integer, as would A and G; while conditions B and H are necessary, they are not sufficient:\nif d < 0, it is still possible that c < 0, so it is not true that the given expression is (necessarily)\nan integer if d < 0.)\n\n\n\n\nVersion 1.1, November 2020                                                                    Page 18"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            19
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q17",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 17,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "17.    For what values of the non‐zero real number     does the quadratic equation\n                  2      2 have real distinct roots?\n\n\n       A       All values of\n\n       B               2\n\n       C               2\n\n       D               2\n\n       E       No values of\n\n\n\n\n© UCLES 2017                                                                    [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "For what values of the non‐zero real number     does the quadratic equation\n                  2      2 have real distinct roots?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "All values of"
+        },
+        {
+          "label": "B",
+          "rawText": "2"
+        },
+        {
+          "label": "C",
+          "rawText": "2"
+        },
+        {
+          "label": "D",
+          "rawText": "2"
+        },
+        {
+          "label": "E",
+          "rawText": "No values of\n\n\n\n\n© UCLES 2017                                                                    [Turn over"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The quadratic equation can be written as ax2 + (a − 2)x − 2 = 0, which has discriminant\n\n                (a − 2)2 − 4a(−2) = a2 − 4a + 4 + 8a = a2 + 4a + 4 = (a + 2)2 .\n\nThe quadratic has real distinct roots when the disciminant is positive, so when (a + 2)2 > 0.\nNow (a + 2)2 = 0 when a = −2, and (a + 2)2 ⩾ 0 for all values of a, so (a + 2)2 > 0 when a 6= −2,\nwhich is option D.\n\n\n\n\nVersion 1.1, November 2020                                                               Page 19"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            20
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q18",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 18,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "18.    The angle is measured in radians and is such that 0            .\n\n       The total length of any intervals for which      1   tan   1 and sin 2    0.5 is\n\n\n\n       A\n\n       B\n\n       C\n\n       D\n\n\n       E\n\n       F\n\n\n       G"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The angle is measured in radians and is such that 0            .\n\n       The total length of any intervals for which      1   tan   1 and sin 2    0.5 is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        },
+        {
+          "label": "F",
+          "rawText": "[visual option F; transcription required]"
+        },
+        {
+          "label": "G",
+          "rawText": "[visual option G; transcription required]"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We first consider each of the inequalities separately.\nA sketch of the graph of y = tan x for 0 ⩽ x ⩽ π is as follows:\n\n                                        y\n\n\n\n\n                                                             x\n                                                    π\n                                        0           2    π\n\n\n\n\nNoting that tan pi            3π\n                4 = 1 and tan 4 = −1, we see from the sketch that −1 ⩽ tan x ⩽ 1 when\n        π          3π\n0 ⩽ x ⩽ 4 and when 4 ⩽ x ⩽ π.\nNext, we sketch the graph of y = sin 2x over the same interval:\n\n                                        y\n\n                                                             x\n                                                π\n                                        0       2        π\n\n\n\n\nNoting that sin π6 = sin 5π                                                      π        5π\n                          6 = 0.5, we see from the sketch that sin 2x ⩾ 0.5 when 6 ⩽ 2x ⩽ 6 ,\n              π\nthat is, when 12  ⩽ x ⩽ 5π\n                         12 .\nNow comparing the intervals for the tangent and sine inequalities, we note that they are both\n               π\nsatisfied when 12 ⩽ x ⩽ π4 , and the length of this interval is π4 − 12\n                                                                     π\n                                                                        = π6 , so the answer is B.\n\n\n\n\nVersion 1.1, November 2020                                                                Page 20"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            21
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q19",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 19,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "19.    A geometric series has first term 4 and common ratio , where 0           1.\n\n       The first, second, and fourth terms of this geometric series form three successive terms of\n       an arithmetic series.\n\n       The sum to infinity of the geometric series is\n\n\n\n       A        √5    1\n\n       B       2 3   √5\n\n       C       2 1   √5\n\n       D       2 3   √5\n\n\n\n\n© UCLES 2017"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A geometric series has first term 4 and common ratio , where 0           1.\n\n       The first, second, and fourth terms of this geometric series form three successive terms of\n       an arithmetic series.\n\n       The sum to infinity of the geometric series is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "√5    1"
+        },
+        {
+          "label": "B",
+          "rawText": "2 3   √5"
+        },
+        {
+          "label": "C",
+          "rawText": "2 1   √5"
+        },
+        {
+          "label": "D",
+          "rawText": "2 3   √5\n\n\n\n\n© UCLES 2017"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The first four terms are 4, 4r, 4r2 and 4r3 . We are also given that 4, 4r and 4r3 are three\nsuccessive terms of an arithmetic series. We thus have\n\n                                           4r = 4 + d\n                                          4r3 = 4 + 2d\n\nwhere d is the common difference of this arithmetic series.\nTherefore d = 4(r − 1) from the first equation, and d = 4r(r2 − 1) on subtracting the two\nequations.\nEquating these expressions for d gives\n\n                                      4(r − 1) = 4r(r2 − 1)\n\nso r − 1 = r(r − 1)(r + 1) on factorising and dividing by 4.\nSince 0 < r < 1, we can divide by r − 1 to obtain 1 = r(r + 1), so r2 + r − 1 = 0. The solutions\nto this quadratic are                     √                 √\n                                    −1 ± 12 + 4      −1 ± 5\n                                r=                 =           .\n                                           2              2\n                               √\nSince r > 0, we have r = −1+2 5 , and so the sum to infinity (given by the standard formula\n       a\nS∞ = 1−r ) is\n\n                                      4                  8\n                                           √ =          √\n                                   1 − −1+2 5  2 − (−1 + 5)\n                                                  8\n                                             =     √\n                                               3− 5\n                                                     √\n                                               8(3 + 5)\n                                             =\n                                                  9−5\n                                                    √\n                                             = 2(3 + 5)\n\nand the answer is D.\n\n\n\n\nVersion 1.1, November 2020                                                              Page 21"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            22
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-specimen-p1-q20",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-specimen-p1",
+      "edition": "specimen",
+      "paper": 1,
+      "questionNumber": 20,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "13\n\n\n20.    The coefficient of   in the expansion of 4    1   2   3   1    4      is\n\n\n\n       A       28\n\n       B       72\n\n       C       78\n\n       D       192\n\n       E       240\n\n       F       310\n\n       G       312\n\n\n\n\n                                       END OF TEST\n\n\n\n\n© UCLES 2017                                                         [Turn over"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "13\n\n\n20.    The coefficient of   in the expansion of 4    1   2   3   1    4      is"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "28"
+        },
+        {
+          "label": "B",
+          "rawText": "72"
+        },
+        {
+          "label": "C",
+          "rawText": "78"
+        },
+        {
+          "label": "D",
+          "rawText": "192"
+        },
+        {
+          "label": "E",
+          "rawText": "240"
+        },
+        {
+          "label": "F",
+          "rawText": "310"
+        },
+        {
+          "label": "G",
+          "rawText": "312\n\n\n\n\n                                       END OF TEST\n\n\n\n\n© UCLES 2017                                                         [Turn over"
+        }
+      ],
+      "correctAnswer": "G",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We expand each of the terms up to the term in x2 using the binomial theorem:\n\n                     (1 + 2x + 3x2 )6 = 1 + 6(2x + 3x2 ) + 15(2x + 3x2 )2 + · · ·\n                                       = 1 + 12x + 18x2 + 15(4x2 + · · · ) + · · ·\n                                       = 1 + 12x + 78x2 + · · ·\n                           (1 + 4x3 )5 = 1 + 5(4x3 ) + · · · = 1 + · · ·\n\nso the whole expression is\n\n     (4 − x2 )[(1 + 2x + 3x2 )6 − (1 + 4x3 )5 ] = (4 − x2 )[(1 + 12x + 78x2 + · · · ) − (1 + · · · )]\n                                                 = (4 − x2 )(12x + 78x2 + · · · )\n                                                 = 4(12x + 78x2 + · · · ) − · · ·\n                                                 = 48x + 312x2 + · · ·\n\nso the coefficient of x2 is 312, and the answer is G.\n\n\n\n\nVersion 1.1, November 2020                                                                        Page 22\n\f\nThis document was initially designed for print and as such does not reach accessibility standard\nWCAG 2.1 in a number of ways, including missing text alternatives and missing document structure.\n\nIf you need this document in a different format, please email\nadmissionstesting@cambridgeassessment.org.uk telling us your name, email address and\nrequirements and we will respond within 15 working days.\n\n\n\n\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\nAdmissions tests support:\n\nadmissionstesting.org/help"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-specimen-paper-1",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+          "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-specimen-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+          "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+          "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+          "pages": [
+            23,
+            24
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    }
+  ]
+}

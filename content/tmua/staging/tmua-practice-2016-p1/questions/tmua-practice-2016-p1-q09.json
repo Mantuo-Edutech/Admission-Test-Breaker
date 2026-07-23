@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "ͻ\u0003    \u0017\u0003\u0003\u0003\u0003\u0003\u0003ሺ͵ǡ\u0003͵ሻ\u0003\u0003ሺ͹ǡ\u0003ͷሻ\u0003\u0003\u0003\u0003\u0003\u0003  Ǥ\u0003\u0003\u0003\n      \u0003\n      \u0017\u0003  \u0003\u0003\u0003\u0003͵\u0003\u0003\u0003\u0003\u0003‫ݔ‬Ǧ ǡ\u0003\u0003 \u0003\u0003\u0003‫ݔ‬Ǧǡ\u0003\n      \u0003\u0003\u0003\u0003\u0003 \u0003 \u0003\u0003Ͷ\u0003\u0003\u0003 \u0003\u0003\u0003\u0003  Ǥ\u0003\u0003\u0003\n      \u0003\n      \u0017\u0003\u0003\u0003\u0003\u0003  \u0003\u0003\u0003\n      \u0003\n      \u0003\n      \u0004\u0003 ሺ‫ ݔ‬െ ʹሻଶ ൅ ሺ‫ ݕ‬െ Ͷሻଶ ൌ ͵ʹͲ\u0003\n      \u0003\n      \u0005\u0003 ሺ‫ ݔ‬െ ʹሻଶ ൅ ሺ‫ ݕ‬൅ Ͷሻଶ ൌ ͵ʹͲ\u0003\n      \u0003\n      \u0006\u0003 ሺ‫ ݔ‬െ ʹሻଶ ൅ ሺ‫ ݕ‬െ Ͷሻଶ ൌ ͺͲ\u0003\n      \u0003\n      \u0007\u0003 ሺ‫ ݔ‬െ ʹሻଶ ൅ ሺ‫ ݕ‬൅ Ͷሻଶ ൌ ͺͲ\u0003\n      \u0003\n      \b\u0003 ሺ‫ ݔ‬െ ʹሻଶ ൅ ሺ‫ ݕ‬െ Ͷሻଶ ൌ ʹͲ\u0003\n      \u0003\n        \u0003 ሺ‫ ݔ‬െ ʹሻଶ ൅ ሺ‫ ݕ‬൅ Ͷሻଶ ൌ ʹͲ\u0003\n      \u0003"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "ሺ3ǡ3ሻሺ7ǡ5ሻ  Ǥ\n      \n        3‫ݔ‬Ǧ ǡ ‫ݔ‬Ǧǡ\n        4   Ǥ\n      \n        "
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "ሺ‫ ݔ‬െ 2ሻଶ ൅ ሺ‫ ݕ‬െ 4ሻଶ ൌ 320"
+    },
+    {
+      "label": "B",
+      "rawText": "ሺ‫ ݔ‬െ 2ሻଶ ൅ ሺ‫ ݕ‬൅ 4ሻଶ ൌ 320"
+    },
+    {
+      "label": "C",
+      "rawText": "ሺ‫ ݔ‬െ 2ሻଶ ൅ ሺ‫ ݕ‬െ 4ሻଶ ൌ 80"
+    },
+    {
+      "label": "D",
+      "rawText": "ሺ‫ ݔ‬െ 2ሻଶ ൅ ሺ‫ ݕ‬൅ 4ሻଶ ൌ 80"
+    },
+    {
+      "label": "E",
+      "rawText": "ሺ‫ ݔ‬െ 2ሻଶ ൅ ሺ‫ ݕ‬െ 4ሻଶ ൌ 20\n      \n         ሺ‫ ݔ‬െ 2ሻଶ ൅ ሺ‫ ݕ‬൅ 4ሻଶ ൌ 20"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The initial circle looks like this:\n\n                                       y\n\n                                                          (7, 5)\n\n                                        (3, 3)\n\n\n                                                            x\n\n                                                                         \u00103 + 7 3 + 5\u0011\nThe centre of the circle is at the midpoint of this diameter, which is         ,       = (5, 4),\n                                                                            2     2\nand the radius is therefore        p                      √\n                                     (5 − 3)2 + (4 − 3)2 = 5.\n\nThe transformations do the following to the centre and radius of the circle:\n\n                                                      Centre    Radius\n                                                                  √\n                                      original         (5, 4)     √5\n                                 after translation     (2, 4)     √5\n                                  after reflection    (2, −4)     √5\n                                after enlargement     (2, −4)    4 5\n\nTherefore the final circle has equation\n                                                         √\n                                 (x − 2)2 + (y + 4)2 = (4 5)2 = 80\n\nand the answer is D.\n\n\n\n\n                                                 12\n                                                                                    © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

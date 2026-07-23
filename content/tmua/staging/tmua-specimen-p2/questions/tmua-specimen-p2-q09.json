@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "9.     Consider the statement about Fred:\n\n               (*) Every day next week, Fred will do at least one maths problem.\n\n       If statement (*) is not true, which of the following is certainly true?\n\n\n       A       Every day next week, Fred will do more than one maths problem.\n       B       Some day next week, Fred will do more than one maths problem.\n       C       On no day next week will Fred do more than one maths problem.\n       D       Every day next week, Fred will do no maths problems.\n       E       Some day next week, Fred will do no maths problems.\n       F       On no day next week will Fred do no maths problems.\n\n\n\n\n© UCLES 2017"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the statement about Fred:\n\n               (*) Every day next week, Fred will do at least one maths problem.\n\n       If statement (*) is not true, which of the following is certainly true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "Every day next week, Fred will do more than one maths problem."
+    },
+    {
+      "label": "B",
+      "rawText": "Some day next week, Fred will do more than one maths problem."
+    },
+    {
+      "label": "C",
+      "rawText": "On no day next week will Fred do more than one maths problem."
+    },
+    {
+      "label": "D",
+      "rawText": "Every day next week, Fred will do no maths problems."
+    },
+    {
+      "label": "E",
+      "rawText": "Some day next week, Fred will do no maths problems."
+    },
+    {
+      "label": "F",
+      "rawText": "On no day next week will Fred do no maths problems.\n\n\n\n\n© UCLES 2017"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "If a statement is false, then its negation is true.\nThe negation of ‘for all x, P’ is ‘there exists x such that not P’. So in this case, a negation is\n\n      There exists a day next week such that it is not the case that Fred will do at least\n      one maths problem.\n\n‘It is not the case that Fred will do at least one maths problem’ is equivalent to ‘Fred will do less\nthan one maths problem’; assuming that one cannot do a fraction of a maths problem, this is\nequivalent to ‘Fred will do no maths problems’. So the whole negation can be written as ‘Some\nday next week, Fred will do no maths problems’, which is option E.\n\n\n\n\n                                                 12\n                                                                                        © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

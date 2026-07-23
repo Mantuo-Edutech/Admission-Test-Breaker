@@ -1,0 +1,1905 @@
+{
+  "schemaVersion": 1,
+  "bundleType": "question-import",
+  "id": "tmua-2019-p2-extraction-v1",
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "generatedAt": "2026-07-17T07:00:00.000Z",
+  "generatedBy": "tmua-extraction-cli",
+  "sourceDocumentIds": {
+    "question": "tmua-official-2019-paper-2",
+    "answerKey": "tmua-official-2019-answer-key",
+    "workedSolution": "tmua-official-2019-paper-2-worked-solutions"
+  },
+  "questionCount": 20,
+  "publishableQuestionCount": 0,
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q01",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 1,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "1   Find the coeﬃcient of the x4 term in the expansion of\n                                          \u0002       \u00036\n                                        2       1\n                                       x 2x +\n                                                x\n\n    A 15\n\n    B 30\n\n    C 60\n\n    D 120\n\n    E 240\n\n\n\n\n                                           3"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the coeﬃcient of the x4 term in the expansion of\n                                                 6\n                                        2       1\n                                       x 2x +\n                                                x"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "15"
+        },
+        {
+          "label": "B",
+          "rawText": "30"
+        },
+        {
+          "label": "C",
+          "rawText": "60"
+        },
+        {
+          "label": "D",
+          "rawText": "120"
+        },
+        {
+          "label": "E",
+          "rawText": "240"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We need the coefficient of x2 in the bracketed term to get the term in x4 in the whole expansion.\nWe expand this using the binomial theorem to get\n                                                                                   !\n                     1 6\n             \u0012         \u0013                  \u0012 \u0013       \u0012 \u0013 \u0012 \u0013             \u0012 \u00132\n           2                   2       6    6      5 1        6        4 1\n          x 2x +           = x (2x) +          (2x)       +       (2x)        + ··· .\n                     x                      1         x       2          x\n\nWe stop here as the power of x in this last term is x4−2 = x2 , as we require. This term is then\n                                \u0012 \u0013     \u0012 \u00132\n                                 6     4 1\n                              x2\n                                   (2x)      = 15x2 .16x4 .x−2\n                                 2       x\n                                                 = 240x4\n\nso the answer is E.\n\n\n\n\nc UCLES                                                                                   Page 3"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            3
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q02",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 2,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "2   (2x + 1) and (x − 2) are factors of 2x3 + px2 + q.\n\n    What is the value of 2p + q?\n\n    A −10\n\n    B − 38\n        5\n\n    C − 22\n        3\n\n        22\n    D   3\n\n        38\n    E   5\n\n    F 10\n\n\n\n\n                                            4"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "(2x + 1) and (x − 2) are factors of 2x3 + px2 + q.\n\n    What is the value of 2p + q?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "−10"
+        },
+        {
+          "label": "B",
+          "rawText": "− 38\n        5"
+        },
+        {
+          "label": "C",
+          "rawText": "− 22\n        3\n\n        22"
+        },
+        {
+          "label": "D",
+          "rawText": "3\n\n        38"
+        },
+        {
+          "label": "E",
+          "rawText": "5"
+        },
+        {
+          "label": "F",
+          "rawText": "10"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Since 2x + 1 = 2(x + 21 ) is a factor of f(x) = 2x3 + px2 + q, it follows that f(− 21 ) = 0. Similarly,\nf(2) = 0.\nSubstituting these values in to f(x) gives\n\n                                     2(− 12 )3 + p(− 12 )2 + q = 0\n                                          2(2)3 + p(22 ) + q = 0\n\nso\n\n                                          − 14 + 41 p + q = 0\n                                           16 + 4p + q = 0\n\nMultiplying the first equation by 16 gives\n\n                                         −4 + 4p + 16q = 0.\n\nSubtracting 16 + 4p + q = 0 from this gives −20 + 15q = 0, so q = 43 , hence 4p = −16 − q = − 52\n                                                                                              3 .\n                     26    4     22\nTherefore 2p + q = − 3 + 3 = − 3 , which is option C.\n\n\n\n\nc UCLES                                                                                        Page 4"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q03",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 3,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "3   a, b and c are real numbers.\n\n    Given that ab = ac, which of the following statements must be true?\n\n        I    a=0\n        II   b = 0 or c = 0\n        III b = c\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                          5"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "a, b and c are real numbers.\n\n    Given that ab = ac, which of the following statements must be true?\n\n        I    a=0\n        II   b = 0 or c = 0\n        III b = c"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "It might be tempting to divide by a to get b = c, but a might be zero, and we cannot divide by\nzero. Instead, we can rearrange and factorise to get ab − ac = 0, so a(b − c) = 0. From this, we\ncan deduce that a = 0 or b − c = 0 (or both).\n\nI    This might not be true; we could have b = c instead.\n\nII   This might not be true; we could have b = c = 1, for example.\n\nIII This might not be true; we could have a = 0 instead.\n\nSo the correct answer is A.\n\n\n\n\nc UCLES                                                                                  Page 5"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q04",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 4,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "4   Consider the following conjecture:\n\n            If N is a positive integer that consists of the digit 1 followed by an odd\n            number of 0 digits and then a ﬁnal digit 1, then N is a prime number.\n\n    Here are three numbers:\n\n        I       N = 101 (which is a prime number)\n        II      N = 1001 (which equals 7 × 11 × 13)\n        III N = 10001 (which equals 73 × 137)\n\n    Which of these provide(s) a counterexample to the conjecture?\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                               6"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following conjecture:\n\n            If N is a positive integer that consists of the digit 1 followed by an odd\n            number of 0 digits and then a ﬁnal digit 1, then N is a prime number.\n\n    Here are three numbers:\n\n        I       N = 101 (which is a prime number)\n        II      N = 1001 (which equals 7 × 11 × 13)\n        III N = 10001 (which equals 73 × 137)\n\n    Which of these provide(s) a counterexample to the conjecture?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "A counterexample with have the antecedent (“N is a positive integer that consists of the digit 1\nfollowed by an odd number of 0 digits and then a final digit 1”) true, and the consequent (“N is\na prime number”) false. We can now check each of the three offered values of N :\n\nI    The form of N is correct: there is 1 zero, and 1 is odd, so the antecedent is true. However,\n     the consequent is also true, so this is not a counterexample.\n\nII   The form of N is not correct, as there are 2 zeros, so the antecedent is false. Hence this is\n     not a counterexample.\n\nIII The form of N is correct, as there are 3 zeros, and the consequent is false, as N is not\n    prime. Hence this is a counterexample.\n\nThe correct solution is D.\n\n\n\n\nc UCLES                                                                                    Page 6"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q05",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 5,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "5   Consider the following statement about the positive integers a, b and n:\n\n         (∗): ab is divisible by n\n\n    The condition ‘either a or b is divisible by n’ is:\n\n    A necessary but not suﬃcient for (∗)\n\n    B suﬃcient but not necessary for (∗)\n\n    C necessary and suﬃcient for (∗)\n\n    D not necessary and not suﬃcient for (∗)\n\n\n\n\n                                               7"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following statement about the positive integers a, b and n:\n\n         (∗): ab is divisible by n\n\n    The condition ‘either a or b is divisible by n’ is:"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "necessary but not suﬃcient for (∗)"
+        },
+        {
+          "label": "B",
+          "rawText": "suﬃcient but not necessary for (∗)"
+        },
+        {
+          "label": "C",
+          "rawText": "necessary and suﬃcient for (∗)"
+        },
+        {
+          "label": "D",
+          "rawText": "not necessary and not suﬃcient for (∗)"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Saying that ‘either a or b is divisible by n’ is necessary for (∗) is the same as saying that if\nab is divisibly by n, then either a or b is divisible by n. We can look for a counterexample or\nproof for this assertion.\nOn the surface of it, it seems surprising: when a product is divisible by a number, why should\none of the two factors also be? We know something similar to this for a product which equals\nzero, and we may know that if a product is divisible by a prime, then one of the factors must\nbe. But there is no mention of zero or primes here. So let us try a simple example where n is\nnot prime, such as n = 4 (the smallest non-prime other than 1). Then the statement becomes:\nif ab is divisible by 4, then either a or b is divisible by 4. A small amount of exploration finds\ncounterexamples, such as a = 2, b = 2 or a = 6, b = 2. So the condition is not necessary\nfor (∗).\nWhat about sufficiency? Saying that ‘either a or b is divisible by n’ is sufficient for (∗) is the\nsame as saying that if either a or b is divisible by n, then ab is divisibly by n. We can again\nlook for a counterexample or proof for this assertion.\nThis time, though, a proof is clear: if a is divisible by n, then a is a multiple of n, so ab is also\na multiple of n (as b is an integer). This means that ab is divisible by n. The same is the case\nif b is divisible by n, so the condition is sufficient.\nThe correct answer is therefore B.\n\n\n\n\nc UCLES                                                                                       Page 7"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q06",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 6,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "6   A student attempts to solve the equation\n\n                                 cos x + sin x tan x = 2 sin x − 1\n\n    in the range 0 ≤ x ≤ 2π.\n\n    The student’s attempt is as follows:\n\n        cos x + sin x tan x = 2 sin x − 1\n\n\n        So   cos x − sin x + sin x tan x − sin x = −1                         (I)\n\n\n        So   (sin x − cos x)(tan x − 1) = −1                                  (II)\n\n\n        So   sin x − cos x = −1 or tan x − 1 = −1                             (III)\n\n\n        So   (sin x − cos x)2 = 1 or tan x = 0                                (IV)\n\n\n        So   2 sin x cos x = 0 or tan x = 0                                   (V)\n\n\n        So   x = 0, π2 , π, 3π\n                             2\n                               , 2π                                           (VI)\n\n\n\n    Which of the following best describes this attempt?\n\n    A It is completely correct\n\n    B It is incorrect, and the ﬁrst error occurs on line (I)\n\n    C It is incorrect, and the ﬁrst error occurs on line (II)\n\n    D It is incorrect, and the ﬁrst error occurs on line (III)\n\n    E It is incorrect, and the ﬁrst error is that extra solutions were introduced on\n      line (IV)\n\n    F It is incorrect, and the ﬁrst error is that extra solutions were introduced on\n      line (V)\n\n    G It is incorrect, and the ﬁrst error is not eliminating the values where tan x is\n      undeﬁned on line (VI)\n\n\n\n                                               8"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A student attempts to solve the equation\n\n                                 cos x + sin x tan x = 2 sin x − 1\n\n    in the range 0 ≤ x ≤ 2π.\n\n    The student’s attempt is as follows:\n\n        cos x + sin x tan x = 2 sin x − 1\n\n\n        So   cos x − sin x + sin x tan x − sin x = −1                         (I)\n\n\n        So   (sin x − cos x)(tan x − 1) = −1                                  (II)\n\n\n        So   sin x − cos x = −1 or tan x − 1 = −1                             (III)\n\n\n        So   (sin x − cos x)2 = 1 or tan x = 0                                (IV)\n\n\n        So   2 sin x cos x = 0 or tan x = 0                                   (V)\n\n\n        So   x = 0, π2 , π, 3π\n                             2\n                               , 2π                                           (VI)\n\n\n\n    Which of the following best describes this attempt?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "It is completely correct"
+        },
+        {
+          "label": "B",
+          "rawText": "It is incorrect, and the ﬁrst error occurs on line (I)"
+        },
+        {
+          "label": "C",
+          "rawText": "It is incorrect, and the ﬁrst error occurs on line (II)"
+        },
+        {
+          "label": "D",
+          "rawText": "It is incorrect, and the ﬁrst error occurs on line (III)"
+        },
+        {
+          "label": "E",
+          "rawText": "It is incorrect, and the ﬁrst error is that extra solutions were introduced on\n      line (IV)"
+        },
+        {
+          "label": "F",
+          "rawText": "It is incorrect, and the ﬁrst error is that extra solutions were introduced on\n      line (V)"
+        },
+        {
+          "label": "G",
+          "rawText": "It is incorrect, and the ﬁrst error is not eliminating the values where tan x is\n      undeﬁned on line (VI)"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The following is just one approach to checking an argument.\nWe start by checking the final solutions on line (VI). x = 0 makes the LHS (left hand side) equal 1\nbut the RHS (right hand side) equal −1, so the attempt cannot be correct. Furthermore, this\nis not a value of x for which tan x is undefined, so G is not the correct answer. We must then\nidentify where the error arose.\nWe can now test the incorrect solution x = 0 at various stages of the argument to see where\nthings first go wrong. Rather than working line-by-line, we start about half way through to see\nwhether the mistake happens in the first half of the argument or the second half; this is a little\nmore efficient.\nLet us try the incorrect solution x = 0 in line (III) (which is midway between (I) and (V)): this\ngives −1 = −1 or −1 = −1, so x = 0 is valid at this point. This tells us that the error must\noccur on line (I), (II) or (III).\nOn line (I), x = 0 gives 1 = −1, while on line (II), x = 0 gives (−1) × (−1) = −1. So it is most\nlikely that the first error occurs on line (III).\nWe check the algebra on line (I): all that has happened is that 2 sin x has been subtracted from\nboth sides, so this is correct.\nWe likewise check the algebra on line (II): by multiplying out the brackets, we get the equation\non line (I), so this is correct. (We might be concerned about the case cos x = 0 here, but this is\nnot possible on either line (I) or line (II) because of the tan x terms on each line.)\nFinally, we are left with line (III). The implication here is that because two numbers multiply\nto give −1, one of them must be −1. This would be true if we were dealing with integers, but\nwe are not, so this is an invalid implication.\nThe correct solution is therefore D: the first error occurs on line (III).\n\n\n\n\nc UCLES                                                                                     Page 8"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            8
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q07",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 7,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "7   For which one of the following statements can the fact that 122 + 162 = 202 be used\n    to produce a counterexample?\n\n    A If a, b and c are positive integers which satisfy the equation a2 + b2 = c2 , and the\n      three numbers have no common divisor, then two of them are odd and the other\n      is even.\n\n    B The equation a4 + b2 = c2 has no solutions for which a, b and c are positive\n      integers.\n\n    C The equation a4 + b4 = c4 has no solutions for which a, b and c are positive\n      integers.\n\n    D If a, b and c are positive integers which satisfy the equation a2 + b2 = c2 , then\n      one is the arithmetic mean of the other two.\n\n\n\n\n                                             9"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "For which one of the following statements can the fact that 122 + 162 = 202 be used\n    to produce a counterexample?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "If a, b and c are positive integers which satisfy the equation a2 + b2 = c2 , and the\n      three numbers have no common divisor, then two of them are odd and the other\n      is even."
+        },
+        {
+          "label": "B",
+          "rawText": "The equation a4 + b2 = c2 has no solutions for which a, b and c are positive\n      integers."
+        },
+        {
+          "label": "C",
+          "rawText": "The equation a4 + b4 = c4 has no solutions for which a, b and c are positive\n      integers."
+        },
+        {
+          "label": "D",
+          "rawText": "If a, b and c are positive integers which satisfy the equation a2 + b2 = c2 , then\n      one is the arithmetic mean of the other two."
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We work through these in turn:\n\nA A counterexample here is a case for which the antecedent (the ‘if’ part) is true but the\n  consequent (the ‘then’ part) is false. In this case, taking a = 12, b = 16, c = 20 to match\n  122 + 162 = 202 does not satisfy the antecedent, as they do have a common divisor of 4.\n  Even if we were to divide all three by 4 to get 32 + 42 = 52 , we would still not have a\n  counterexample, as two of them are odd and the other is even. (The statement is actually\n  true, so there are no counterexamples.)\n\nB A counterexample in this case is an example to show that there is a solution. Since 16 = 42 ,\n  we can rewrite 122 + 162 = 202 as 44 + 122 = 202 , so this does provide a counterexample.\n\nC Since neither 12 nor 20 is a perfect square, we cannot use this fact to obtain a counterexample.\n  (And that is quite a relief, since Fermat proved that this statement is true! It is the simplest\n  case of Fermat’s Last Theorem.)\n\nD We note that 122 + 162 = 202 satisfies the antecedent, but as 16 is the arithmetic mean of 12\n  and 20, this does not provide a counterexample. (The statement is false, and a counterex-\n  ample is 52 + 122 = 132 .)\n\nThe correct answer is therefore B.\n\n\n\n\nc UCLES                                                                                    Page 9"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q08",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 8,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "8   a, b and c are real numbers with a < b < c < 0\n\n    Which of the following statements must be true?\n\n        I     ac < ab < a2\n        II    b(c + a) > 0\n              c   a\n        III     >\n              b   b\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                           10"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "a, b and c are real numbers with a < b < c < 0\n\n    Which of the following statements must be true?\n\n        I     ac < ab < a2\n        II    b(c + a) > 0\n              c   a\n        III     >\n              b   b"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "When thinking about inequalities involving negative numbers, we must take care to reverse the\nsign of any inequality when multiplying or dividing by a negative number. In this case, all three\nof a, b and c are negative.\n\nI    We start with a < b < c and multiply by a < 0 to obtain\n\n                                             a2 > ab > ac\n\n     so this statement must be true.\n\nII   Since a < 0 and c < 0, a + c < 0. Since b < 0, it follows that b(a + c) > 0. So this statement\n     must be true.\n\nIII We start with c > a (since a < c). Dividing by b < 0 then gives\n                                                 c   a\n                                                   <\n                                                 b   b\n     and so this statement must be false.\n\nThe correct answer is E.\n\n\n\n\nc UCLES                                                                                    Page 10"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q09",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 9,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "9   A large circular table has 40 chairs round it.\n\n    What is the smallest number of people who can be sitting at the table already such\n    that the next person to sit down must sit next to someone?\n\n    A 9\n\n    B 10\n\n    C 13\n\n    D 14\n\n    E 19\n\n    F 20\n\n\n\n\n                                            11"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A large circular table has 40 chairs round it.\n\n    What is the smallest number of people who can be sitting at the table already such\n    that the next person to sit down must sit next to someone?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "9"
+        },
+        {
+          "label": "B",
+          "rawText": "10"
+        },
+        {
+          "label": "C",
+          "rawText": "13"
+        },
+        {
+          "label": "D",
+          "rawText": "14"
+        },
+        {
+          "label": "E",
+          "rawText": "19"
+        },
+        {
+          "label": "F",
+          "rawText": "20"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "If the next person must sit next to someone, there cannot be three spaces between one person\nand the next. But if there are only two spaces between them, someone sitting down in one of\nthose spaces must sit next to someone. So the smallest number of people will be achieved when\nall of the gaps are exactly two spaces, except perhaps for the final person to the first person.\nSo counting the seats around the table as 1, 2, 3, . . . , we place people in seats 1, 4, 7, 10, . . . , 37,\n40. (The final person is sitting immediately next to the first person, but that does not matter.)\nThere are 14 seats in this list, so the answer is D.\n\n\n\n\nc UCLES                                                                                            Page 11"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q10",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 10,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "10   P QRS is a quadrilateral, labelled anticlockwise.\n\n     Which one of the following is a necessary but not suﬃcient condition for P QRS\n     to be a parallelogram?\n\n     A P Q = SR and P S is parallel to QR\n\n     B P Q = SR and P Q is parallel to SR\n\n     C P Q = QR = SR = P S\n\n     D P R = QS\n\n\n\n\n                                             12"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "P QRS is a quadrilateral, labelled anticlockwise.\n\n     Which one of the following is a necessary but not suﬃcient condition for P QRS\n     to be a parallelogram?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "P Q = SR and P S is parallel to QR"
+        },
+        {
+          "label": "B",
+          "rawText": "P Q = SR and P Q is parallel to SR"
+        },
+        {
+          "label": "C",
+          "rawText": "P Q = QR = SR = P S"
+        },
+        {
+          "label": "D",
+          "rawText": "P R = QS"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We sketch a quadrilateral for ease of reference.\n\n                                                                R\n\n                               S\n\n\n                                       P                 Q\n\n\nA The sides P Q and SR are equal in length, which is certainly necessary if P QRS is a par-\n  allelogram, and P S being parallel to QR is also necessary. If these are both the case, then\n  on first glance it may seem that P QRS must be a parallelogram. However, if we draw two\n  parallel lines and ask how we can join them with two equal-length sides. We discover there\n  are two ways:\n\n                   S                       R       S                                R\n\n\n\n\n               P                   Q                     P                  Q\n\n\n   So this condition is necessary but not sufficient.\n\nB As before, P Q = SR is necessary, and P Q being parallel to SR is obviously necessary, so\n  the whole condition is necessary.\n   Unlike in the previous part, though, this is also sufficient: if two sides of the quadrilateral\n   are both equal and parallel, the remaining two sides must also be equal and parallel. (This\n   may seem obvious, and it can be proven using geometric or vector methods; see below for\n   details.)\n\nC This condition is not necessary, as not all four sides of a parallelogram need to be the same\n  length. It does mean that the parallelogram is a rhombus, so it is a sufficient condition.\n\nD The diagonals of a parallelogram need not be equal in length, so this is not a necessary\n  condition. It is also not sufficient.\n\nThe correct answer is therefore A.\n\nWe now give two proofs that condition B is sufficient, that is, if P Q = SR and P Q is parallel\nto SR, then P QRS is a parallelogram.\n                                                                        −−→   −→\nWe first give a vector proof. Since P Q = SR and they are parallel, P Q = SR; we call this\n              −→\nvector a. Let P S = b, as shown in this diagram:\n\n\n\n\nc UCLES                                                                                   Page 12\n\f\nTest of Mathematics for University Admission, 2019 Paper 2 Solutions\n\n\n                                          S       a       R\n\n                                      b\n\n\n                                  P           a       Q\n\n\nThen\n                        −−→ −−→ −→ −→\n                        QR = QP + P S + SR = (−a) + b + a = b\n   −−→ −→\nso QR = P S, showing that P S and QR are equal and parallel, and thus P QRS is a parallelo-\ngram.\n\nAnd here is a geometric approach. We are given that P Q = RS and that they are parallel.\nDraw in the diagonal QS, as shown.\n\n                                          S               R\n\n\n\n\n                                  P                   Q\n\n\nThen ∠P QS = ∠RSQ as they are alternating angles.\nTherefore triangles P QS and RSQ are congruent by side-angle-side, as P Q = RS (given),\nQS = SQ (common side) and ∠P QS = ∠RSQ.\nThus ∠QSP = ∠SQR, so SP is parallel to QR (by alternating angles) and P S = RQ.\nHence P QRS is a parallelogram.\n\n\n\n\nc UCLES                                                                            Page 13"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            12,
+            13
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q11",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 11,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "11   An arithmetic series has n terms, all of which are integers.\n\n     The sum of the series is 20.\n\n     Which of the following statements must be true?\n\n         I    The ﬁrst term of the series is even.\n         II   n is even.\n         III The common diﬀerence is even.\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                             13"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "An arithmetic series has n terms, all of which are integers.\n\n     The sum of the series is 20.\n\n     Which of the following statements must be true?\n\n         I    The ﬁrst term of the series is even.\n         II   n is even.\n         III The common diﬀerence is even."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Let the first term of the series be a and the common difference be d, as usual. Therefore we\nhave\n                                     1\n                                     2 n(2a + (n − 1)d) = 20.\n\nMultiplying by 2 gives\n                                     n(2a + (n − 1)d) = 40,\nso we need to find integers n, a and d which satisfy this. We list values of n which are factors\nof 40 and the corresponding value of 2a + (n − 1)d.\n\n                                          n    2a + (n − 1)d\n                                          1       40 = 2a\n                                          2     20 = 2a + d\n                                          4    10 = 2a + 3d\n                                          5     8 = 2a + 4d\n                                          8     5 = 2a + 7d\n                                          10    4 = 2a + 9d\n                                          20   2 = 2a + 19d\n                                          40   1 = 2a + 39d\n\nWith this table to hand, we consider the possibilities for each of the statements.\n\nI    n = 1 gives a = 20, which is even.\n     n = 2 gives 2a + d = 20. If we take d = 2, this gives a = 9, and indeed 9 + 11 = 20, so this\n     statement need not be true.\n\nII   The table shows that we could have n = 1 and a = 20, or n = 5, a = 2, d = 1, giving\n     2 + 3 + 4 + 5 + 6 = 20. So this statement need not be true.\n\nIII The example in the previous part, 2 + 3 + 4 + 5 + 6 = 20 shows that this is not necessarily\n    true.\n\nTherefore the correct answer is A.\n\n\n\n\nc UCLES                                                                                  Page 14"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            14
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q12",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 12,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "12   Most students in a large college study Mathematics. A teacher chooses three\n     diﬀerent students at random, one after the other.\n\n     Consider these three probabilities:\n\n               R = P(At least one of the students chosen studies Mathematics)\n               S = P(The second student chosen studies Mathematics)\n               T = P(All three of the students chosen study Mathematics)\n\n\n     Which of the following is true?\n\n     A R<S<T\n\n     B R<T <S\n\n     C S<R<T\n\n     D S<T <R\n\n     E T <R<S\n\n     F T <S<R\n\n\n\n\n                                           14"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Most students in a large college study Mathematics. A teacher chooses three\n     diﬀerent students at random, one after the other.\n\n     Consider these three probabilities:\n\n               R = P(At least one of the students chosen studies Mathematics)\n               S = P(The second student chosen studies Mathematics)\n               T = P(All three of the students chosen study Mathematics)\n\n\n     Which of the following is true?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "R<S<T"
+        },
+        {
+          "label": "B",
+          "rawText": "R<T <S"
+        },
+        {
+          "label": "C",
+          "rawText": "S<R<T"
+        },
+        {
+          "label": "D",
+          "rawText": "S<T <R"
+        },
+        {
+          "label": "E",
+          "rawText": "T <R<S"
+        },
+        {
+          "label": "F",
+          "rawText": "T <S<R"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "One way to answer this question is to draw a tree diagram and to work out the probabilities of\nthe three events.\nAnother way is to reason as follows.\nIf all three students study Mathematics, then certainly the second student chosen studies Math-\nematics and at least one of the students chosen studies Mathematics. Therefore T < S and\nT < R.\nLikewise, if the second student chosen studies Mathematics, certainly at least one of the students\nchosen studies Mathematics. Therefore S < R.\nPutting these together gives T < S < R, and the answer is F.\n\n\n\n\nc UCLES                                                                                   Page 15"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            14
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            15
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q13",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 13,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "\u0004b\n13   A student approximates the integral a sin2 x dx using the trapezium rule with\n     4 strips. The resulting approximation is an overestimate.\n\n     Which of the following is/are necessarily true?\n                                           \u0004 −a\n         I   If the student approximates    −b\n                                                  sin2 x dx in the same way, the result\n             will be an overestimate.\n                                           \u0004b\n         II If the student approximates     a\n                                                cos2 x dx in the same way, the result\n            will be an underestimate.\n\n     A neither of them\n\n     B I only\n\n     C II only\n\n     D I and II\n\n\n\n\n                                                15"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Ab\n13   A student approximates the integral a sin2 x dx using the trapezium rule with\n     4 strips. The resulting approximation is an overestimate.\n\n     Which of the following is/are necessarily true?\n                                           A −a\n         I   If the student approximates    −b\n                                                  sin2 x dx in the same way, the result\n             will be an overestimate.\n                                           Ab\n         II If the student approximates     a\n                                                cos2 x dx in the same way, the result\n            will be an underestimate."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "neither of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "I and II"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "It will help us to draw a sketch of this situation, remembering that we do not know that values\nof a and b. The exact shape of the graph does not matter; the only thing that is important for\nthis question is that it is symmetrical about the y-axis, since sin2 (−x) = (− sin x)2 = sin2 x.\n\n                                                  y\n\n\n                                                                                                x\n                                                             a                         b\n\n\n\n                                                                                      R −a   2\nI    We can now add to our sketch the trapezium rule calculation for the integral      −b sin x dx:\n\n\n                                                      y\n\n\n                                                                                                    x\n            −b                        −a                         a                         b\n\n\n\n\n     We see that the strips are just a reflection of the original 4 strips. Since the original\n     approximation was an overestimate, this approximation is also an overestimate.\n\nII   We note that cos2 x is related to sin2 x by the identity sin2 x + cos2 x = 1, so cos2 x =\n     1 − sin2 x. Thus the graph of y = cos2 x is a reflection of the graphR of y = sin2 x in the line\n                                                                            b\n     y = 21 (why?). Therefore the sketch of the graph and trapezia for a cos2 x dx is:\n\n                                                      y\n\n\n                                                                                                    x\n                                                                 a                         b\n\n\n\n\n     Since cos2 x = 1 − sin2 x, we can also draw on the original trapezia, coming down from the\n     line y = 1:\n\n                                                      y\n\n\n                                                                                                    x\n                                                                 a                         b\n\n\n\n\nc UCLES                                                                                        Page 16\n\f\nTest of Mathematics for University Admission, 2019 Paper 2 Solutions\n\n\n                                                                                  Rb\n    We can see from this sketch that the blue and red trapezia exactly sum to a sin2 x dx +\n    Rb    2\n     a cos x dx; since the blue trapezia give an overestimate, the red ones must give an under-\n    estimate.\n    Hence this statement is also necessarily true.\n\nTherefore the correct answer is D.\n\n\n\n\nc UCLES                                                                                Page 17"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            15
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            16,
+            17
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q14",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 14,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "14   Consider the following statements about the polynomial p(x), where a < b:\n\n         I    p(a) ≤ p(b)\n         II   p\u0002 (a) ≤ p\u0002 (b)\n         III p\u0002\u0002 (a) ≤ p\u0002\u0002 (b)\n\n     Which of these statements is a necessary condition for p(x) to be increasing for\n     a ≤ x ≤ b?\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                            16"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following statements about the polynomial p(x), where a < b:\n\n         I    p(a) ≤ p(b)\n         II   p (a) ≤ p (b)\n         III p (a) ≤ p (b)\n\n     Which of these statements is a necessary condition for p(x) to be increasing for\n     a ≤ x ≤ b?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "A necessary condition is one which must follow. To show that a condition is not necessary, we\nneed to exhibit a counterexample, while to show that a condition is necessary, we need to give\na justification.\n\nI    If p(x) is increasing for a ≤ x ≤ b, the value of the polynomial is not decreasing in this\n     interval, so we must have p(a) ≤ p(b), and this is therefore a necessary condition.\n\nII   A quadratic such as p(x) = 9−x2 provides a counterexample: it is increasing for −3 ≤ x ≤ 0,\n     but p(−3) > 0 while p(0) = 0. Hence this is not a necessary condition.\n\nIII It is not clear why this should be the case, and we need to look beyond quadratics (as p00 (x)\n    is constant for every quadratic). Let us see if we can construct a counterexample. Let us\n    take p00 (x) = −x, so that it is decreasing. Then p0 (x) = − 21 x2 + c, giving p(x) = − 16 x3 + cx.\n    (There is a further constant of integration here, but we can choose it to be zero, as it has\n    no impact on where p(x) is increasing.)\n     If we now choose some c > 1, then p0 (x) will be positive for 0 ≤ x ≤ 1, so p(x) will be\n     increasing there, yet p00 (0) < p00 (1).\n     Therefore this condition is not necessary.\n\nAnother way of thinking about this is: to say that p(x) is increasing for a ≤ x ≤ b only tells us\nabout the function values; it does not tell us anything about the derivatives, so neither II nor\nIII could possibly be necessary conditions.\nEither way, the correct answer is B.\n\n\n\n\nc UCLES                                                                                       Page 18"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            16
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            18
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q15",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 15,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "15   The numbers a, b and c are each greater than 1.\n\n     The following logarithms are all to the same base:\n\n                                          log(ab2 c) = 7\n                                         log(a2 bc2 ) = 11\n                                        log(a2 b2 c3 ) = 15\n\n\n     What is this base?\n\n     A a\n\n     B b\n\n     C c\n\n     D It is possible to determine the base, but the base is not a, b or c.\n\n     E There is insuﬃcient information given to determine the base.\n\n\n\n\n                                              17"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The numbers a, b and c are each greater than 1.\n\n     The following logarithms are all to the same base:\n\n                                          log(ab2 c) = 7\n                                         log(a2 bc2 ) = 11\n                                        log(a2 b2 c3 ) = 15\n\n\n     What is this base?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "a"
+        },
+        {
+          "label": "B",
+          "rawText": "b"
+        },
+        {
+          "label": "C",
+          "rawText": "c"
+        },
+        {
+          "label": "D",
+          "rawText": "It is possible to determine the base, but the base is not a, b or c."
+        },
+        {
+          "label": "E",
+          "rawText": "There is insuﬃcient information given to determine the base."
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We expand the expressions using the logarithm rules, namely log(ab) = log a + log b and log an =\nn log a when a > 1. This gives\n\n                                    log a + 2 log b + log c = 7\n                                  2 log a + log b + 2 log c = 11\n                                  2 log a + 2 log b + 3 log c = 15\n\nThis is a set of simultaneous equations! If we write A = log a, B = log b and C = log c, they\nbecome\n\n                                        A + 2B + C = 7                                         (1)\n                                       2A + B + 2C = 11                                        (2)\n                                       2A + 2B + 3C = 15                                       (3)\n\nSubtracting (3) − (2) and (3) − 2 × (1) to eliminate A gives\n\n                                             B+C =4                                            (4)\n                                          −2B + C = 1                                          (5)\n\nSubtracting these then gives\n                                             3B = 3\nso B = 1 (and thus C = 3, A = 2).\nTherefore log b = 1, so the base of logarithms is b (and also a = b2 , c = b3 ). The correct answer\nis option B.\n\n\n\n\nc UCLES                                                                                    Page 19"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            17
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            19
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q16",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 16,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "16   The graph of the quadratic\n                                        y = px2 + qx + p\n     where p > 0, intersects the x-axis at two distinct points.\n\n     In which one of the following graphs does the shaded region show the complete set\n     of possible values that p and q could take?\n\n      A                         B                          C\n          q                         q                          q\n       4                         4                          4\n       3                         3                          3\n       2                         2                          2\n       1                         1                          1\n       0               p         0               p          0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6           −1 0 1 2 3 4 5 6\n      −2                        −2                         −2\n      −3                        −3                         −3\n      −4                        −4                         −4\n\n      D                         E                          F\n          q                         q                          q\n       4                         4                          4\n       3                         3                          3\n       2                         2                          2\n       1                         1                          1\n       0               p         0               p          0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6           −1 0 1 2 3 4 5 6\n      −2                        −2                         −2\n      −3                        −3                         −3\n      −4                        −4                         −4\n\n      G                         H\n          q                         q\n       4                         4\n       3                         3\n       2                         2\n       1                         1\n       0               p         0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6\n      −2                        −2\n      −3                        −3\n      −4                        −4\n\n\n\n\n                                             18"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The graph of the quadratic\n                                        y = px2 + qx + p\n     where p > 0, intersects the x-axis at two distinct points.\n\n     In which one of the following graphs does the shaded region show the complete set\n     of possible values that p and q could take?\n\n      A                         B                          C\n          q                         q                          q\n       4                         4                          4\n       3                         3                          3\n       2                         2                          2\n       1                         1                          1\n       0               p         0               p          0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6           −1 0 1 2 3 4 5 6\n      −2                        −2                         −2\n      −3                        −3                         −3\n      −4                        −4                         −4\n\n      D                         E                          F\n          q                         q                          q\n       4                         4                          4\n       3                         3                          3\n       2                         2                          2\n       1                         1                          1\n       0               p         0               p          0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6           −1 0 1 2 3 4 5 6\n      −2                        −2                         −2\n      −3                        −3                         −3\n      −4                        −4                         −4\n\n      G                         H\n          q                         q\n       4                         4\n       3                         3\n       2                         2\n       1                         1\n       0               p         0               p\n      −1 0 1 2 3 4 5 6          −1 0 1 2 3 4 5 6\n      −2                        −2\n      −3                        −3\n      −4                        −4"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "[visual option A; transcription required]"
+        },
+        {
+          "label": "B",
+          "rawText": "[visual option B; transcription required]"
+        },
+        {
+          "label": "C",
+          "rawText": "[visual option C; transcription required]"
+        },
+        {
+          "label": "D",
+          "rawText": "[visual option D; transcription required]"
+        },
+        {
+          "label": "E",
+          "rawText": "[visual option E; transcription required]"
+        },
+        {
+          "label": "F",
+          "rawText": "[visual option F; transcription required]"
+        },
+        {
+          "label": "G",
+          "rawText": "[visual option G; transcription required]"
+        },
+        {
+          "label": "H",
+          "rawText": "[visual option H; transcription required]"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "For the quadratic to intersect the x-axis at two distinct points, we require the discriminant to\nbe positive. In this case, this gives\n                                          q 2 − 4p2 > 0.\n\nWe can either deduce the correct graph by solving this inequality, or decide between the given\noptions by checking various points. We show both approaches here.\nFirst, we can write the inequality as (q − 2p)(q + 2p) > 0. Therefore, this inequality holds when\neither q − 2p > 0 and q + 2p > 0, or when q − 2p < 0 and q + 2p < 0. The first case gives q > 2p\nand q > −2p. As p > 0, this simplifies to q > 2p. The second case gives q < 2p and q < −2p,\nwhich simplifies to q < −2p. So the solution is q > 2p or q < −2p, and this is shown in graph F.\nAlternatively, we can check values of p and q. When p = 1, q = 0, q 2 − 4p2 = −4 < 0, so this\npoint cannot lie in the region. This eliminates options A, C, E and G. Next, we test a point\nwith q < 0, say p = 1, q = −4. This gives q 2 − 4p2 = 12 > 0, so this point is in the region. This\neliminates options B and D, so we are left with F or H. Finally, we can check a point which\ndistinguishes the two, say p = 2, q = 3, which gives q 2 − 4p2 = −7 < 0, so this point is not in\nthe region. Therefore the correct answer is graph F.\n\n\n\n\nc UCLES                                                                                   Page 20"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            18
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            20
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required",
+          "visual-option-transcription-required",
+          "option-count-review"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q17",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 17,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "17   A multiple-choice test question oﬀered the following four options relating to a certain\n     statement:\n\n     A The statement is true if and only if x > 1\n\n     B The statement is true if x > 1\n\n     C The statement is true if and only if x > 2\n\n     D The statement is true if x > 2\n\n     Given that exactly one of these options was correct, which one was it?\n\n\n\n\n                                             19"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A multiple-choice test question oﬀered the following four options relating to a certain\n     statement:"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "The statement is true if and only if x > 1"
+        },
+        {
+          "label": "B",
+          "rawText": "The statement is true if x > 1"
+        },
+        {
+          "label": "C",
+          "rawText": "The statement is true if and only if x > 2"
+        },
+        {
+          "label": "D",
+          "rawText": "The statement is true if x > 2\n\n     Given that exactly one of these options was correct, which one was it?"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "As exactly one of the options was correct, if option X is implied by option Y, then option Y\ncannot be correct (as then option X would also be correct).\nOption A implies option B: if A is correct, then the statement is true if and only if x > 1,\nwhich means the statement is true if x > 1 and the statement is true only if x > 1, so option B\nis also correct. Therefore option A cannot be the correct option.\nFor the same reason, option C cannot be correct, as it implies option D.\nWe must therefore consider options B and D. Let us assume that option B is correct and ask\nwhether option D follows from it. Option B tells us that whenever x > 1, the statement is true,\nso certainly whenever x > 2, the statement is true. Therefore option D follows from option B,\nand option B cannot be the correct option. The opposite direction does not follow, though: the\nstatement could be true for all x > 2, but be false for x = 32 , for example.\nTherefore the correct option must have been option D.\n\n\n\n\nc UCLES                                                                                Page 21"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            19
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            21
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q18",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 18,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "18   Consider the following inequality:\n\n          (∗):    a|x| + 1 ≤ |x − 2|\n\n     where a is a real constant.\n\n     Which one of the following describes the complete set of values of a such that (∗) is\n     true for all real x?\n\n     A a ≤ 32\n\n     B a≤1\n\n     C a ≤ 12\n\n     D a≤0\n\n     E a ≤ − 12\n\n     F a ≤ −1\n\n     G a ≤ − 32\n\n     H There are no such values of a.\n\n\n\n\n                                             20"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following inequality:\n\n          (∗):    a|x| + 1 ≤ |x − 2|\n\n     where a is a real constant.\n\n     Which one of the following describes the complete set of values of a such that (∗) is\n     true for all real x?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "a ≤ 32"
+        },
+        {
+          "label": "B",
+          "rawText": "a≤1"
+        },
+        {
+          "label": "C",
+          "rawText": "a ≤ 12"
+        },
+        {
+          "label": "D",
+          "rawText": "a≤0"
+        },
+        {
+          "label": "E",
+          "rawText": "a ≤ − 12"
+        },
+        {
+          "label": "F",
+          "rawText": "a ≤ −1"
+        },
+        {
+          "label": "G",
+          "rawText": "a ≤ − 32"
+        },
+        {
+          "label": "H",
+          "rawText": "There are no such values of a."
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We would do well to sketch a graph for this question! There are two functions involved, y =\na|x| + 1 and y = |x − 2|, so we sketch these for different values of a.\nThe graph of y = a|x|+1 is the graph of y = |x| first stretched by a factor of a in the y-direction,\nand then translated by 1 in the positive y-direction.\nThe graph of y = |x − 2| is the graph of y = |x| translated by 2 in the positive x-direction.\nThis gives us the following sketch:\n\n                                                 y\n\n\n                                                         a=2\n\n                                                 2\n\n                                                 1\n                                                                           x\n                                                            2\n\n\n\n\n                                                                a = −2\n\n\n\nWhat we can see from this sketch is that y = a|x| + 1 will be below y = |x − 2| when a is\nsufficiently negative; when a is positive, it will certainly intersect the graph of y = |x − 2|. We\ncan find the value of a at which the behaviour changes by sketching the graph at this point and\nthen doing some algebra:\n\n                                                 y\n\n\n\n\n                                                 2\n\n                                                 1\n                                                                           x\n                                                            2\n\n\n\n\nc UCLES                                                                                     Page 22\n\f\nTest of Mathematics for University Admission, 2019 Paper 2 Solutions\n\n\nWe can work out the value of a by noting that the graph passes through (2, 0):\n\n                                           a|2| + 1 = 0\n\ntherefore a = − 12 , and hence the correct answer is a ≤ − 12 , which is option E.\n\n\n\n\nc UCLES                                                                              Page 23"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            20
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            22,
+            23
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q19",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 19,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "19   Find the value of the expression\n                               \u0005              \u0005\n                                      √              √\n                                 8 − 4 2 + 1 + 9 − 12 2 + 8\n\n       \u0006        √\n     A   26 − 16 2\n        √\n     B 4 2−4\n\n     C −2\n          √\n     D 4−4 2\n\n     E 2\n       √       √\n     F   26 − 4 2\n\n     G 1\n\n\n\n\n                                         21"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the value of the expression\n                               B              B\n                                      √              √\n                                 8 − 4 2 + 1 + 9 − 12 2 + 8\n\n       C        √"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "26 − 16 2\n        √"
+        },
+        {
+          "label": "B",
+          "rawText": "4 2−4"
+        },
+        {
+          "label": "C",
+          "rawText": "−2\n          √"
+        },
+        {
+          "label": "D",
+          "rawText": "4−4 2"
+        },
+        {
+          "label": "E",
+          "rawText": "2\n       √       √"
+        },
+        {
+          "label": "F",
+          "rawText": "26 − 4 2"
+        },
+        {
+          "label": "G",
+          "rawText": "1"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "This is a rather ugly looking expression! Let us consider the first square root to begin with:\n                                                √\n                                         q\n                                           8−4 2+1\n                            p     √\nWe could simplify this to    9 − 4 2, but it seems likely that the examiners have written it in\nthis way to help us.\nOne way to approach this question is to square the given expression, see what comes out, and\nthen compare the answer with the squares of the given options. We will try this approach below.\nAnother approach\n               √ is to see if we can write the inside of the square√root as the square of something.\nWe have 8 = (2 2)2 and 1 = 12 , which suggests\n                                            √       that we try 2 2 + 1. But as the middle term\nhas a minus sign, we should actually try 2 2 − 1. Squaring this gives\n                                      √      \u00012          √\n                                     2 2−1 =8−4 2+1\n\nand so\n                                          √         √\n                                    q\n                                     8 − 4 2 + 1 = 2 2 − 1.\n                                                              √\nIt is important that we take the positive square root; since 2 2 > 1, this is the positive square\nroot.\nSimilarly,\n                                          √             √\n                                   q\n                                    9 − 12 2 + 8 = 3 − 2 2,\n                              √\nwhere again we note that 3 > 2 2, so this is the positive square root.\nThese sum to 2, and hence the answer is E.\n\nThe alternative approach was to square the given expression. Writing it as\n                                         √              √\n                                 q             q\n                                   9 − 4 2 + 17 − 12 2\n\nwe can square it to get\n                        √           √     q      √ \u0001        √ \u0001\n                   9 − 4 2 + 17 − 12 2 + 2 9 − 4 2 17 − 12 2\n                                         √              √       √\n                                               q\n                                = 26 − 16 2 + 2 153 − 68 2 − 108 2 + 96\n                                         √               √\n                                               q\n                                = 26 − 16 2 + 2 249 − 176 2\n\nUnfortunately, we are now left in an even worse situation than we started√with, as we have √\n                                                                                           to find\n                                                                              2\n                    √ this square root; can we find a and b with (a2− b 2)\nsome way of simplifying                                                      √ =2 249 − 176 2? It\nturns out that 11−8\n                √     2 does  the job; this, however, is negative (as 11 < (8\n                                                                            √ 2) ), so\n                                                                                    √ the positive\nsquare root is 8 2 − 11. Thus√the whole expression simplifies to 26 − 16 2 + 2(8 2 − 11) = 4,\nand so the correct solution is 4 = 2, which is option E.\nThe first approach was certainly simpler.\n\n\n\n\nc UCLES                                                                                     Page 24"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            21
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            24
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2019-p2-q20",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2019-p2",
+      "edition": "2019",
+      "paper": 2,
+      "questionNumber": 20,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "20   When the graph of the function y = f(x), deﬁned on the real numbers, is reﬂected in\n     the y-axis and then translated by 2 units in the negative x-direction, the result is the\n     graph of the function y = g(x).\n\n     When the graph of the same function y = f(x) is translated by 2 units in the\n     negative x-direction and then reﬂected in the y-axis, the result is the graph of the\n     function y = h(x).\n\n     Which one of the following conditions on y = f(x) is necessary and suﬃcient for\n     the functions g(x) and h(x) to be identical?\n\n     A f(x) = f(x + 2) for all x\n\n     B f(x) = f(x + 4) for all x\n\n     C f(x) = f(x + 8) for all x\n\n     D f(x) = f(−x) for all x\n\n     E f(x) = f(2 − x) for all x\n\n     F f(x) = f(4 − x) for all x\n\n     G f(x) = f(8 − x) for all x\n\n\n\n\n                                             22"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "When the graph of the function y = f(x), deﬁned on the real numbers, is reﬂected in\n     the y-axis and then translated by 2 units in the negative x-direction, the result is the\n     graph of the function y = g(x).\n\n     When the graph of the same function y = f(x) is translated by 2 units in the\n     negative x-direction and then reﬂected in the y-axis, the result is the graph of the\n     function y = h(x).\n\n     Which one of the following conditions on y = f(x) is necessary and suﬃcient for\n     the functions g(x) and h(x) to be identical?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "f(x) = f(x + 2) for all x"
+        },
+        {
+          "label": "B",
+          "rawText": "f(x) = f(x + 4) for all x"
+        },
+        {
+          "label": "C",
+          "rawText": "f(x) = f(x + 8) for all x"
+        },
+        {
+          "label": "D",
+          "rawText": "f(x) = f(−x) for all x"
+        },
+        {
+          "label": "E",
+          "rawText": "f(x) = f(2 − x) for all x"
+        },
+        {
+          "label": "F",
+          "rawText": "f(x) = f(4 − x) for all x"
+        },
+        {
+          "label": "G",
+          "rawText": "f(x) = f(8 − x) for all x"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Commentary: It could be helpful for this question to take a piece of paper and physically\n      move it around following the given instructions to get a feel for what’s going on. This\n      suggests that we may be looking for a periodic function.\n      We could then try to see what happens with a sine or cosine function, but these turn\n      out to have too much symmetry, and could lead us to the wrong answer. A tan graph is\n      periodic, but does not have line symmetry, so is likely to be better for our needs.\n      With all of this, though, we might still get ourselves in quite a muddle, so beginning with\n      an algebraic approach is likely to be more successful.\n\nWhen we reflect the graph of y = f(x) in the y-axis, we obtain the graph of y = f(−x). When\nwe translate this by 2 units in the negative x-direction, we obtain the graph of y = f(−(x + 2)),\nso g(x) = f(−(x + 2)) = f(−x − 2).\nSimilarly, when we translate the graph of y = f(x) by 2 units in the negative x-direction, we\nobtain the graph of y = f(x + 2). When we reflect this in the y-axis, we obtain the graph of\ny = f(−x + 2), so h(x) = f(−x + 2).\nIf the functions g(x) and h(x) are identical, then we require\n\n                                f(−x − 2) = f(−x + 2) for all x.\n\nThis is quite close to what we want, so let us let u = −x − 2, so that −x + 2 = u + 4. Then the\nabove becomes\n                                   f(u) = f(u + 4) for all u,\nwhich is option B, just with x replaced by u.\nThis means that the function is periodic with a period of 4 (though it may have a smaller period\nsuch as 2 or 71 , as long as it repeats every 4).\n\n\n\n\nc UCLES                                                                                  Page 25"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2019-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+          "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+          "pages": [
+            22
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2019-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+          "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+          "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+          "pages": [
+            25
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    }
+  ]
+}

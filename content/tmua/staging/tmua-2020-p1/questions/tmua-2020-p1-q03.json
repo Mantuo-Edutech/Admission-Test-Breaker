@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "3   Find the complete set of values of x for which\n\n\n                     (x + 4)(x + 3)(1 − x) > 0 and (x + 2)(x − 2) < 0\n\n    A    1<x<2\n\n    B −2 < x < 1\n\n    C −2 < x < 2\n\n    D    x < −2 or x > 1\n\n    E    x < −4 or x > 2\n\n    F    x < −4 or − 3 < x < 1\n\n    G −4 < x < −2 or x > 1\n\n\n\n\n                                            5"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the complete set of values of x for which\n\n\n                     (x + 4)(x + 3)(1 − x) > 0 and (x + 2)(x − 2) < 0"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "1<x<2"
+    },
+    {
+      "label": "B",
+      "rawText": "−2 < x < 1"
+    },
+    {
+      "label": "C",
+      "rawText": "−2 < x < 2"
+    },
+    {
+      "label": "D",
+      "rawText": "x < −2 or x > 1"
+    },
+    {
+      "label": "E",
+      "rawText": "x < −4 or x > 2"
+    },
+    {
+      "label": "F",
+      "rawText": "x < −4 or − 3 < x < 1"
+    },
+    {
+      "label": "G",
+      "rawText": "−4 < x < −2 or x > 1"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We first work on each inequality separately. Each one is a product of factors, so we consider\nwhen each factor is positive or negative.\nFor the first inequality, (x + 4)(x + 3)(1 − x) > 0, we have the following table:\n\n                                      (x + 4)    (x + 3)   (1 − x)   product\n                        x < −4           −          −         +         +\n                      −4 < x < −3        +          −         +         −\n                       −3 < x < 1        +          +         +         +\n                         x>1             +          +         −         −\n\nThus the first inequality holds when x < −4 and when −3 < x < 1.\nLikewise for the second inequality, (x + 2)(x − 2) < 0:\n\n                                          (x + 2)    (x − 2)   product\n                            x < −2           −          −         +\n                           −2 < x < 2        +          −         −\n                             x>2             +          +         +\n\nTherefore the second inequality holds when −2 < x < 2.\nWe can combine these by illustrating them on a number line:\n\n\n\n\n                     −5    −4    −3    −2       −1   0     1     2       3     4 x\n\n\nCombining these two conditions, they both hold when −2 < x < 1, which is option B.\n\n\n\n\nVersion 1.0, April 2021                                                               Page 5\n\n                                            © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

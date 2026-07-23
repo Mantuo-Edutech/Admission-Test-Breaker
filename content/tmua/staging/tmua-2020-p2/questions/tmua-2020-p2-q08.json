@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "8   A student is asked to prove whether the following statement (∗) is true or false:\n\n         (∗) For all real numbers a and b, |a + b| < |a| + |b|\n\n    The student’s proof is as follows:\n\n         Statement (∗) is false. A counterexample is a = 3, b = 4, as |3 + 4| = 7\n         and |3| + |4| = 7, but 7 < 7 is false.\n\n    Which of the following best describes the student’s proof?\n\n    A The statement (∗) is true, and the student’s proof is not correct.\n\n    B The statement (∗) is false, but the student’s proof is not correct: the\n      counterexample is not valid.\n\n    C The statement (∗) is false, but the student’s proof is not correct: the student\n      needs to give all the values of a and b where |a + b| < |a| + |b| is false.\n\n    D The statement (∗) is false, but the student’s proof is not correct: the student\n      should have instead stated that for all real numbers a and b, |a + b| ≤ |a| + |b|.\n\n    E The statement (∗) is false, and the student’s proof is fully correct.\n\n\n\n\n                                            10"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A student is asked to prove whether the following statement (∗) is true or false:\n\n         (∗) For all real numbers a and b, |a + b| < |a| + |b|\n\n    The student’s proof is as follows:\n\n         Statement (∗) is false. A counterexample is a = 3, b = 4, as |3 + 4| = 7\n         and |3| + |4| = 7, but 7 < 7 is false.\n\n    Which of the following best describes the student’s proof?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "The statement (∗) is true, and the student’s proof is not correct."
+    },
+    {
+      "label": "B",
+      "rawText": "The statement (∗) is false, but the student’s proof is not correct: the\n      counterexample is not valid."
+    },
+    {
+      "label": "C",
+      "rawText": "The statement (∗) is false, but the student’s proof is not correct: the student\n      needs to give all the values of a and b where |a + b| < |a| + |b| is false."
+    },
+    {
+      "label": "D",
+      "rawText": "The statement (∗) is false, but the student’s proof is not correct: the student\n      should have instead stated that for all real numbers a and b, |a + b| ≤ |a| + |b|."
+    },
+    {
+      "label": "E",
+      "rawText": "The statement (∗) is false, and the student’s proof is fully correct."
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "To prove that a ‘for all’ statement is true, it is necessary to show that the formula holds for every\nchoice of the variables. On the other hand, to show that it is false, it is sufficient to just find a\nsingle counterexample, because that shows that it is not true for all choices of the variables.\nThis student has provided a correct counterexample (and it is easy to check that their arithmetic\nis correct). Therefore the student has correctly shown that (∗) is false, and the correct option\nis E.\nOne can also observe that ‘for all real numbers a and b, |a + b| ≤ |a| + |b|’ is a true statement,\nbut noting that is different from showing that (∗) is false.\n\n\n\n\nVersion 1.0, April 2021                                                                     Page 10\n\n                                            © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        10
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

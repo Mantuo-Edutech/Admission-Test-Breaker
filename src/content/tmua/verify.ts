@@ -1,5 +1,5 @@
 import { assertAllowedOfficialUrl } from "./official-sources.js";
-import { TMUA_EDITIONS } from "./past-papers.js";
+import { TMUA_EDITIONS, TMUA_PUBLISHED_PAPER_IDS } from "./past-papers.js";
 import {
   validateQuestionTaxonomy,
   validateTaxonomy,
@@ -59,7 +59,7 @@ function expectedPublicSummary(
     officialSupplementCount: 4,
     paperCount: 18,
     questionShellCount: 360,
-    publishedQuestionCount: 20,
+    publishedQuestionCount: TMUA_PUBLISHED_PAPER_IDS.length * 20,
     editions: TMUA_EDITIONS.map((edition) => ({
       id: edition.id,
       label: edition.label,
@@ -187,7 +187,10 @@ export function verifyCorpus(artifacts: CorpusArtifacts): ValidationIssue[] {
         );
       }
     }
-    if (paper.contentStage === "published" && paper.id !== "tmua-2023-p1") {
+    if (
+      paper.contentStage === "published" &&
+      !TMUA_PUBLISHED_PAPER_IDS.includes(paper.id)
+    ) {
       issues.push(
         p0(
           "false_published_status",
@@ -249,7 +252,9 @@ export function verifyCorpus(artifacts: CorpusArtifacts): ValidationIssue[] {
         );
       }
     }
-    const allowedPublished = question.id.startsWith("tmua-2023-p1-q");
+    const allowedPublished = TMUA_PUBLISHED_PAPER_IDS.some((paperId) =>
+      question.id.startsWith(`${paperId}-q`),
+    );
     if (question.contentStage === "published" && !allowedPublished) {
       issues.push(
         p0(
@@ -280,14 +285,16 @@ export function verifyCorpus(artifacts: CorpusArtifacts): ValidationIssue[] {
     (question) => question.contentStage === "published",
   );
   if (
-    publishedPapers.length !== 1 ||
-    publishedPapers[0]?.id !== "tmua-2023-p1" ||
-    publishedQuestions.length !== 20
+    publishedPapers.length !== TMUA_PUBLISHED_PAPER_IDS.length ||
+    !TMUA_PUBLISHED_PAPER_IDS.every((paperId) =>
+      publishedPapers.some((paper) => paper.id === paperId),
+    ) ||
+    publishedQuestions.length !== TMUA_PUBLISHED_PAPER_IDS.length * 20
   ) {
     issues.push(
       p0(
         "published_content_count",
-        "Only 2023 Paper 1 and its 20 verified questions may be published",
+        `Only independently verified native papers and their ${TMUA_PUBLISHED_PAPER_IDS.length * 20} questions may be published`,
       ),
     );
   }

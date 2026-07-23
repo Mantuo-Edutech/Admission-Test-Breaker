@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "15\n\nͳ͸\u0003\n\n\n\n\n                                                                                                       \u0003\u0003\n\n\n\n\n                                                                                                   \u0003\n            \u0003\n            \u0003\n                \u0003\u0003ǡ\u0003ܴܲܳܵ\u0003\u0003\u0003\u0003\u0003ܲܳ\u0003\u0003\u0003ܴܵǤ\u0003\u0003\n            \u0003\n            \u0017\u0003\u0003\u0003\u0003\u0003\u0003\u0003ܺǤ\u0003\n            \u0003\n            ܷ\u0003\u0003 \u0003 ܵܲ\u0003 \u0003 ܶ\u0003 \u0003 \u0003 ܴܳ\u0003  \u0003 \u0003 ܷܶ\u0003 \u0003 \u0003 \u0003 \u0003 \u0003 ܺ\u0003\u0003 \u0003\n            \u0003\u0003ܲܳ Ǥ\u0003\n            \u0003\n            \u0017\u0003\u0003\u0003ܲܳ\u0003\u0003ͳʹ\u0003 \u0003\u0003\u0003\u0003\u0003ܴܵ\u0003\u0003͵\u0003 Ǥ\u0003\n            \u0003\n            \u001aǡ\u0003\u0003 ǡ\u0003\u0003\u0003\u0003\u0003ܷܶǫ\u0003\n        \u0003\n            \u0003\n\n\u0003       \u0004\u0003        ͶǤʹ\u0003\n\u0003       \u0003\n        \u0005\u0003        ͶǤͷ\u0003\n        \u0003\n      \u0003 \u0006\u0003        ͶǤͺ\u0003\n\u0003       \u0003\n        \u0007\u0003        ͷǤʹͷ\u0003\n\u0003       \u0003\n        \b\u0003        ͸\u0003\n\n\n\n\n© UCLES 2016                                                                                           [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "15\n\n16\n\n\n\n\n                                                                                                       \n\n\n\n\n                                                                                                   \n            \n            \n                ǡܴܲܳܵܲܳܴܵǤ\n            \n            ܺǤ\n            \n            ܷ  ܵܲ  ܶ   ܴܳ    ܷܶ      ܺ \n            ܲܳ Ǥ\n            \n            ܲܳ12 ܴܵ3 Ǥ\n            \n            ǡ ǡܷܶǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "4Ǥ2"
+    },
+    {
+      "label": "B",
+      "rawText": "4Ǥ5"
+    },
+    {
+      "label": "C",
+      "rawText": "4Ǥ8"
+    },
+    {
+      "label": "D",
+      "rawText": "5Ǥ25"
+    },
+    {
+      "label": "E",
+      "rawText": "6\n\n\n\n\n© UCLES 2016                                                                                           [Turn over"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "There are several pairs of similar triangles in this diagram.\nWe note that SU X and SP Q are similar, RXT and RP Q are similar, and XSR and XQP are\nsimilar.\nThe last pair is the most helpful to start with, as we know the lengths of two corresponding\nsides: SR = 3 and QP = 12, so the scale factor is 123 = 4. Thus the height of XQP (from X)\nis 4 times the height of XSR (again from X).\nIt follows that U P = 4SU , and so SP = 5SU . Since SU X is similar to SP Q, and SP = 5SU ,\nwe must have P Q = 5U X, so U X = 15 P Q = 12\n                                           5 . Likewise, XT = 5 , so U T = 5 = 4.8 and the\n                                                               12            24\n\ncorrect answer is C.\nWe could alternatively have used the similarity of triangles P U X and P SR, and of triangles\nQXT and QSR; we would reach the same result.\n\n\n\n\n                                                21\n                                                                                 © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        21
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

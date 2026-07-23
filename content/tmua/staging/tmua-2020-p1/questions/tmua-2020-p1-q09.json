@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "9   The quadratic expression x2 − 14x + 9 factorises as (x − α)(x − β), where α and β\n    are positive real numbers.\n                                                          √        √\n    Which quadratic expression can be factorised as (x − α )(x − β ) ?\n\n             √\n    A x2 −       10x + 3\n             √\n    B x2 −       14x + 3\n             √\n    C x2 −       20x + 3\n\n    D x2 − 178x + 81\n\n    E x2 − 176x + 81\n\n    F x2 + 196x + 81\n\n\n\n\n                                          11"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The quadratic expression x2 − 14x + 9 factorises as (x − α)(x − β), where α and β\n    are positive real numbers.\n                                                          √        √\n    Which quadratic expression can be factorised as (x − α )(x − β ) ?\n\n             √"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "x2 −       10x + 3\n             √"
+    },
+    {
+      "label": "B",
+      "rawText": "x2 −       14x + 3\n             √"
+    },
+    {
+      "label": "C",
+      "rawText": "x2 −       20x + 3"
+    },
+    {
+      "label": "D",
+      "rawText": "x2 − 178x + 81"
+    },
+    {
+      "label": "E",
+      "rawText": "x2 − 176x + 81"
+    },
+    {
+      "label": "F",
+      "rawText": "x2 + 196x + 81"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "As x2 − 14x + 9 = (x − α)(x − β), the roots of the quadratic x2 − 14x + 9 = 0 are α and β.\nApproach 1: calculate α and β\nThe most obvious approach to answering this question is to calculate α and β directly using the\nquadratic formula:\n                √                        √\n            14 ± 142 − 4 × 1 × 9   14 ± 2 72 − 9          p              √            √\n    α, β =                       =                 = 7 ± 72 − 9 = 7 ± 40 = 7 ± 2 10\n                     2                   2\n\nBut now\n     √ we need to find the square root of these expressions. We can guess that it has the form\np + q 10 for some integers p and q. Squaring this gives\n                                  √ \u00012                       √\n                             p + q 10 = (p2 + 10q 2 ) + 2pq 10\n                                                                                √\nWe cannot make p2 + 10q 2 = 7,√but if we take √\n                                              p = 2 and q = ±1, we get 14 ± 4 10, which\nis 2α or 2β. So if we divide by 2, taking p = 2 and q = ± √12 , we will obtain ±α and ±β.\nTherefore                        √ p          √    √\n                                   α, β = ±( 2 ± 5) .\nHowever, we must take the positive values for α and β, so we must have\n                                   √ p         √    √\n                                     α, β = 5 ± 2) .\n\nTherefore\n             √ \u0001   p \u0001         √    p \u0001 √ p\n        x−    α x − β = x2 −     α+ β + α β\n                                √   √ \u0001  √   √ \u0001\u0001  √   √ \u0001 √   √ \u0001\n                       = x2 −     5+ 2 +   5− 2 x+   5+ 2    5− 2\n                               √\n                       = x2 − 2 5x + 3\n                              √\n                       = x2 − 20x + 3\n\nwhich is option C.\n\nApproach 2: use properties of α and β\nAn alternative way of approaching this question is as follows.\nIf we expand the two quadratics of interest, we have\n\n                        (x − α)(x − β) = x2 − (α + β)x + αβ = x2 − 14x + 9\n                        √ \u0001       p \u0001          √     p \u0001     √ p\n                     x − α x − β = x2 −          α+ β x+ α β\n\n                                                         √        √           √ √\nThus α + β = 14 and αβ = 9, and we need to determine         α+       β and    α β. We can take the\n                               √ √\nsquare root of αβ = 9 to obtain α β = 3.\nNext,                     √  p \u00012             √ p\n                               β = α + β + 2 α β = 14 + 2 × 3 = 20\n                              α+\n                                                   √   √     √\nusing the values we have determined already, and so α + β = 20. Therefore the correct\nanswer is option C, as before.\n\n\n\n\nVersion 1.0, April 2021                                                                     Page 11\n\n                                          © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

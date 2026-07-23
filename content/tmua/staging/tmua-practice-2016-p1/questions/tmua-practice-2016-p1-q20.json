@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "14\n\nʹͲ\u0003     \u0017\u0003\u0003\u0003\u0003Ǧ\u0003\u0003\u0003\u0003ܴܲܳܵ\u0003\u0003\u0003ܱǤ\u0003\u0003\u0004\u0003\u0003\u0003\n        \u0003\u0003\u0003\u0003\u0003\u0003ʹͲ\u0003Ǥ\u0003\u0003\u0003\n\n\n\n\n                                                                      \u0003\n        \u0003\n           \u0003\u0003\u0003 ǡ\u0003\u0003ǡ\u0003\u0003\u0003\u0003 \u0003\u0003\u0003\u0003\u0003ܲ\u0003\u0003\u0003\n         \u0003\u0003ܱܴǤ\u0003\u0003\n         \u0003\n\u0003        \u0003\n\u0003        \u0004\u0003 ͳͲඥͷ െ ʹξ͵\u0003\n\u0003        \u0003\n         \u0005\u0003 ͳͲξ͵\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\n\u0003        \u0003\n         \u0006\u0003 ͳͲξͷ\u0003\n      \u0003 \u0003\u0007\u0003 ͳͲξ͹\u0003\n\n\u0003        \u0003\n         \b\u0003 ͳͲඥͷ ൅ ʹξ͵\u0003\n         \u0003\n\n\n\n                                           END OF TEST\n\n                                                    \u0003\n\n                                                    \u0003\n\n                                                    \u0003\n\n                                                    \u0003\n\n                                                    \u0003\n\n                                                    \u0003\n\n                                                    \u0003\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "14\n\n20     ǦܴܲܳܵܱǤA\n        20Ǥ\n\n\n\n\n                                                                      \n        \n            ǡǡ ܲ\n         ܱܴǤ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "10ඥ5 െ 2ξ3"
+    },
+    {
+      "label": "B",
+      "rawText": "10ξ3"
+    },
+    {
+      "label": "C",
+      "rawText": "10ξ5"
+    },
+    {
+      "label": "D",
+      "rawText": "10ξ7"
+    },
+    {
+      "label": "E",
+      "rawText": "10ඥ5 ൅ 2ξ3\n         \n\n\n\n                                           END OF TEST\n\n                                                    \n\n                                                    \n\n                                                    \n\n                                                    \n\n                                                    \n\n                                                    \n\n                                                    \n\n\n© UCLES 2016"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let us label the midpoint of OR as T , so that we can refer to it.\nWe first observe that since all the edges of the pyramid are of length 20m, the triangles are all\nequilateral.\nThere are two ways to get from P to the midpoint of OR in a short distance: one can either\ntravel along the base to RS and then along the triangular face to T , or one could travel along\nthe triangular face OP S to the edge OS and from there to T . It is not obvious which route is\nshorter, so we will calculate both. (There are also routes which are mirror-reflections of these\ngoing via the edge QR or OQ.)\nTo find these distances, we can “unfold” the tetrahedron, that is, make a net for the tetrahedron.\nFor the first route, we draw just the faces P QRS and ORS:\n\n                                                   O\n\n                                                        T\n\n                                        S                   R\n\n\n\n\n                                            P            Q\n\n                                                       √       √            √\nThe height of the triangle OSR is 20 sin 60◦ = 20 × 23 = 10 3, so T lies 5 3 above the line SR;\nT also lies 34 × 20 = 15 to the right of S (as it is at the midpoint of OR). We can therefore find\nthe length P T using Pythagoras’s theorem:\n                                                         √\n                                  P T 2 = 152 + (20 + 5 3)2\n                                                            √\n                                        = 225 + 400 + 200 3 + 75\n                                                     √\n                                        = 700 + 200 3\n\nWe now look at the other route, which we can do by drawing the triangles OP S and OSR:\n\n                                                    O\n                                                        T\n                                    P                            R\n\n\n                                                    S\n\n                                                                   √\nUsing\n √    the  height  of the triangle as calculated above, P  lies 10   3 to the left of OS and T lies\n5 3 to its right, while T lies 5 above P (being a quarter of OS). Pythagoras’s theorem therefore\ngives\n                                                  √\n                                       P T 2 = (15 3)2 + 52\n                                                = 225 × 3 + 25\n                                                = 700\n\n\n                                                   23\n                                                                                      © UCLES 2019\n\f\n√           √\nThis is therefore the shorter of the two routes, and its length is       700 = 10 7, hence the solution\nis option D.\n\n\n\n\n                                                 24\n                                                                                           © UCLES 2019\n\f\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support:\nadmissionstesting.org/help"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        23,
+        24,
+        25
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

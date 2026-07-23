@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q07",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 7,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "7      The graphs of two functions are shown here:\n\n               •   y = ax is shown with a solid line, where a is a positive real number\n               •   y = f (x) is shown with a dashed line\n\n\n\n\n        Which of the following statements (1, 2, 3, 4) could be true?\n\n               1    f (x) = bx for some b > a\n               2    f (x) = bx for some b < a\n               3    f (x) = akx for some k > 1\n               4    f (x) = akx for some k < 1\n\n        A 1 only\n\n        B 2 only\n\n        C 3 only\n\n        D 4 only\n\n        E      1 and 3 only\n\n        F      1 and 4 only\n\n        G 2 and 3 only\n\n        H 2 and 4 only\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u001c                                       >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The graphs of two functions are shown here:\n\n               •   y = ax is shown with a solid line, where a is a positive real number\n               •   y = f (x) is shown with a dashed line\n\n\n\n\n        Which of the following statements (1, 2, 3, 4) could be true?\n\n               1    f (x) = bx for some b > a\n               2    f (x) = bx for some b < a\n               3    f (x) = akx for some k > 1\n               4    f (x) = akx for some k < 1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "1 only"
+    },
+    {
+      "label": "B",
+      "rawText": "2 only"
+    },
+    {
+      "label": "C",
+      "rawText": "3 only"
+    },
+    {
+      "label": "D",
+      "rawText": "4 only"
+    },
+    {
+      "label": "E",
+      "rawText": "1 and 3 only"
+    },
+    {
+      "label": "F",
+      "rawText": "1 and 4 only"
+    },
+    {
+      "label": "G",
+      "rawText": "2 and 3 only"
+    },
+    {
+      "label": "H",
+      "rawText": "2 and 4 only\n\n\n\n\n8&/(6                                                                             >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The graph of y = f(x) looks like an exponential graph, so all of the four given statements\ncertainly seem plausible.\nOne approach to this question is to think about the shapes of different exponential graphs.\nAnother is to consider a specific value of x, and see what happens.\nIf we take x = 1, ax = a, and f(1) > a. We can now substitute x = 1 into the two expressions\nfor f(x) offered: f(x) = bx gives f(1) = b, so we would need b > a. Similarly, f(x) = akx gives\nf(1) = ak . But it is clear from the solid line that a > 1 (as a0 = 1 and a1 = a > 1), so ak > a\nrequires k > 1.\nSo both statements 1 and 3 could be true, but not 2 or 4.\nWe can be even more careful and show that we cannot have just one of 1 and 3 being true. If\nstatement 3 is true, we have f(x) = akx = (ak )x , so writing b = ak > a shows that statement 1\nis true; likewise, if statement 1 is true, we have f(x) = bx = (aloga b )x = a(loga b)x and loga b > 1,\nso statement 3 is also true.\nHence the correct answer is E.\n\n\n\n\nVersion 1.0, April 2019                                                                        Page 9\n\n                                                                                          © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        10
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

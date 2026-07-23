@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "ʹ\u0003                                                      ሺ‫ ݔ‬ଶ ൅ ͷሻሺʹ‫ݔ‬ሻ\n                                              ݂ሺ‫ݔ‬ሻ ൌ           ర        \u0003ǡ\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003‫ ݔ‬൐ Ͳ\u0003\n                                                               ξ‫ ݔ‬ଷ\n      \u0003\n      \u0003\n      \u001a \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003݂ ᇱ ሺ‫ݔ‬ሻ\u0003ǫ\u0003\n      \u0003\n      \u0003\n            ଽ   ͶͲ ଵ\n      \u0004\u0003 ͺ‫ ݔ‬ସ ൅    ‫ݔ‬ସ\u0003\n                 ͵\n      \u0003\n              ͻ ହ ͷ ି\u0003ଷ\n      \u0005\u0003        ‫ ݔ‬ସ ൅ ‫ ݔ‬ସ\u0003\n              ʹ      ʹ\n      \u0003\n                   ଽ   ͶͲ ି\u0003ଵ\n      \u0006\u0003 ͺ‫ ݔ‬ସ ൅           ‫ ݔ‬ସ\u0003\n                        ͵\n      \u0003\n               ͺ ଵଷ       ହ\n      \u0007\u0003         ‫ ݔ‬ସ ൅ ͺ‫ ݔ‬ସ \u0003\n              ͳ͵\n\n\n\n© UCLES 2016                                                                               [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "ሺ‫ ݔ‬ଶ ൅ 5ሻሺ2‫ݔ‬ሻ\n                                              ݂ሺ‫ݔ‬ሻ ൌ           ర        ǡ‫ ݔ‬൐ 0\n                                                               ξ‫ ݔ‬ଷ\n      \n      \n       ݂ ᇱ ሺ‫ݔ‬ሻǫ\n      \n      \n            ଽ   40 ଵ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "8‫ ݔ‬ସ ൅    ‫ݔ‬ସ\n                 3\n      \n              9 ହ 5 ିଷ"
+    },
+    {
+      "label": "B",
+      "rawText": "‫ ݔ‬ସ ൅ ‫ ݔ‬ସ\n              2      2\n      \n                   ଽ   40 ିଵ"
+    },
+    {
+      "label": "C",
+      "rawText": "8‫ ݔ‬ସ ൅           ‫ ݔ‬ସ\n                        3\n      \n               8 ଵଷ       ହ"
+    },
+    {
+      "label": "D",
+      "rawText": "‫ ݔ‬ସ ൅ 8‫ ݔ‬ସ \n              13\n\n\n\n© UCLES 2016                                                                               [Turn over"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We begin by expanding the brackets and simplifying the powers of x:\n\n                                               2x3 + 10x\n                                     f(x) =         3\n                                                x4\n                                              9      1\n                                          = 2x + 10x 4\n                                              4\n\n\n\nso\n                                                5                3\n                               f 0 (x) = 2 × 94 x 4 + 10 × 14 x− 4\n                                           5            3\n                                     = 92 x 4 + 52 x− 4\n\nwhich is option B.\n\n\n\n\n                                                5\n                                                                      © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

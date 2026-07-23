@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "id": "ucat-quantitative-reasoning-full-mock-v1",
+  "exam": "UCAT",
+  "edition": "Quantitative Reasoning Full Mock · Original v1",
+  "sectionId": "quantitative-reasoning",
+  "sectionLabel": "Quantitative Reasoning Full Mock",
+  "sectionLabelZh": "数量推理完整模考 · 满托原创",
+  "durationMinutes": 26,
+  "deliveryMode": "structured",
+  "responseMode": "choice",
+  "calculator": "basic",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本模考依据 UCAT 公开分测验结构与工具范围独立命题，不复制或改写官方 Question Bank、Practice Test、数据表或解析。",
+  "sourceAnchors": [
+    {
+      "id": "ucat-format-snapshot",
+      "localPath": "content/official/raw/pages/ucat-format.html",
+      "sha256": "9aa4a93bddcc62bf53c6196f2b38ac40240a1f781154590c772c68f179d52dbf",
+      "usedFor": "current Quantitative Reasoning identity, question-count and timing boundary only"
+    },
+    {
+      "id": "ucat-tools-snapshot",
+      "localPath": "content/official/raw/pages/ucat-tools.html",
+      "sha256": "a659bedc40b1a603cb755e75121a19a633889d2aab62b66d62378e804f7b8c7c",
+      "usedFor": "basic calculator availability boundary only"
+    }
+  ],
+  "passages": [
+    {
+      "id": "outpatient-clinics",
+      "title": "Outpatient clinics",
+      "paragraphs": ["The table shows one day's booked appointments. Treat all percentages as exact and use expected values where necessary."],
+      "table": {
+        "caption": "Bookings, expected attendance and consultation capacity",
+        "headers": ["Clinic", "Booked", "No-show rate", "Consultation", "Rooms"],
+        "rows": [
+          ["North", "240", "15%", "18 min", "6"],
+          ["Central", "300", "8%", "15 min", "8"],
+          ["South", "200", "12.5%", "20 min", "5"],
+          ["East", "220", "10%", "16 min", "4"]
+        ]
+      }
+    },
+    {
+      "id": "supply-orders",
+      "title": "Medical supply orders",
+      "paragraphs": ["The discount applies to the item cost before delivery. Delivery is then added once to each order."],
+      "table": {
+        "caption": "Order quantities and charges",
+        "headers": ["Item", "Quantity", "Unit price", "Discount", "Delivery"],
+        "rows": [
+          ["Bandages", "600", "£1.80", "10%", "£30"],
+          ["Test kits", "180", "£7.50", "8%", "£40"],
+          ["Gloves", "250", "£4.20", "12%", "£25"],
+          ["Syringes", "320", "£3.60", "5%", "£35"]
+        ]
+      }
+    },
+    {
+      "id": "vaccination-programme",
+      "title": "Vaccination programme",
+      "paragraphs": ["Completed is the number who received every required dose. Percentages should be calculated using the population specified in each question."],
+      "table": {
+        "caption": "Regional vaccination pathway",
+        "headers": ["Region", "Eligible", "Invited", "Attended", "Completed"],
+        "rows": [
+          ["A", "12,000", "9,000", "7,200", "6,840"],
+          ["B", "15,000", "11,200", "8,400", "7,980"],
+          ["C", "10,000", "8,000", "6,200", "5,890"],
+          ["D", "8,000", "6,400", "5,120", "4,864"]
+        ]
+      }
+    },
+    {
+      "id": "patient-transport",
+      "title": "Patient transport routes",
+      "paragraphs": ["Distance is one way. Fuel applies to every kilometre of the round trip, while the toll is paid once for the complete round trip."],
+      "table": {
+        "caption": "Route distance, time and direct costs",
+        "headers": ["Route", "One-way distance", "Outward time", "Return time", "Fuel per km", "Toll", "Driver per hour"],
+        "rows": [
+          ["A", "75 km", "65 min", "75 min", "£0.18", "£6", "£15"],
+          ["B", "92 km", "80 min", "85 min", "£0.16", "£0", "£16"],
+          ["C", "68 km", "60 min", "70 min", "£0.20", "£4", "£14"],
+          ["D", "105 km", "90 min", "95 min", "£0.14", "£8", "£17"]
+        ]
+      }
+    },
+    {
+      "id": "trial-retention",
+      "title": "Clinical trial retention",
+      "paragraphs": ["A response is recorded only for a participant who remained at week 12."],
+      "table": {
+        "caption": "Participant retention and recorded responses",
+        "headers": ["Group", "Started", "Week 4", "Week 12", "Responses at week 12"],
+        "rows": [
+          ["P", "240", "216", "192", "120"],
+          ["Q", "300", "270", "225", "153"],
+          ["R", "180", "162", "144", "90"],
+          ["S", "280", "238", "196", "119"]
+        ]
+      }
+    },
+    {
+      "id": "hospital-energy",
+      "title": "Hospital energy use",
+      "paragraphs": ["Energy figures are measured in kilowatt-hours (kWh). Floor area is unchanged throughout the period."],
+      "table": {
+        "caption": "Monthly energy use and floor area",
+        "headers": ["Department", "January", "February", "March", "Floor area"],
+        "rows": [
+          ["A", "42,000 kWh", "39,900 kWh", "37,800 kWh", "1,200 m²"],
+          ["B", "51,200 kWh", "49,920 kWh", "48,640 kWh", "1,600 m²"],
+          ["C", "36,000 kWh", "34,200 kWh", "33,300 kWh", "900 m²"],
+          ["D", "28,800 kWh", "28,224 kWh", "27,360 kWh", "720 m²"]
+        ]
+      }
+    },
+    {
+      "id": "nutrition-products",
+      "title": "Nutrition products",
+      "paragraphs": ["Protein is measured in grams per serving and sodium in milligrams per serving. One gram equals 1,000 milligrams."],
+      "table": {
+        "caption": "Nutrition and pack information",
+        "headers": ["Product", "Protein per serving", "Servings per pack", "Pack cost", "Sodium per serving"],
+        "rows": [
+          ["A", "18 g", "8", "£6.40", "240 mg"],
+          ["B", "24 g", "6", "£6.30", "310 mg"],
+          ["C", "15 g", "10", "£7.00", "180 mg"],
+          ["D", "30 g", "5", "£6.75", "400 mg"]
+        ]
+      }
+    },
+    {
+      "id": "laboratory-lines",
+      "title": "Laboratory testing lines",
+      "paragraphs": ["Defect rates are expected rates. Operating time includes only the stated batch-processing time."],
+      "table": {
+        "caption": "Daily batch output",
+        "headers": ["Line", "Batches", "Tests per batch", "Defect rate", "Minutes per batch"],
+        "rows": [
+          ["A", "18", "120", "1.25%", "35"],
+          ["B", "16", "150", "2%", "40"],
+          ["C", "20", "100", "1%", "30"],
+          ["D", "15", "180", "2%", "45"]
+        ]
+      }
+    },
+    {
+      "id": "community-screening",
+      "title": "Community screening",
+      "paragraphs": ["The programme cost includes all screening and follow-up expenditure for the district."],
+      "table": {
+        "caption": "District screening outcomes and cost",
+        "headers": ["District", "Participants", "Screened positive", "Follow-up completed", "Programme cost"],
+        "rows": [
+          ["North", "1,250", "175", "140", "£18,750"],
+          ["Central", "1,600", "208", "176", "£22,400"],
+          ["South", "980", "147", "126", "£15,680"],
+          ["East", "1,170", "152", "130", "£17,550"]
+        ]
+      }
+    }
+  ],
+  "questions": [
+    { "number": 1, "passageId": "outpatient-clinics", "prompt": "How many patients were expected to attend the North clinic?", "options": ["198", "204", "210", "216"], "correctAnswer": "B", "knowledgeTags": ["ucat-qr-percentage-decrease"], "skillTags": ["percentage", "one-step"] },
+    { "number": 2, "passageId": "outpatient-clinics", "prompt": "If every expected attendee at Central receives one consultation, how many consultation hours are scheduled?", "options": ["66 hours", "69 hours", "72 hours", "75 hours"], "correctAnswer": "B", "knowledgeTags": ["ucat-qr-time-conversion"], "skillTags": ["percentage", "minutes-to-hours"] },
+    { "number": 3, "passageId": "outpatient-clinics", "prompt": "What is the total expected attendance across all four clinics?", "options": ["833", "843", "853", "863"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-weighted-percentage"], "skillTags": ["aggregate", "multi-row-table"] },
+    { "number": 4, "passageId": "outpatient-clinics", "prompt": "If consultation time is shared equally between the rooms in each clinic, which clinic has the greatest scheduled consultation time per room?", "options": ["North", "Central", "South", "East"], "correctAnswer": "D", "knowledgeTags": ["ucat-qr-rate-per-time"], "skillTags": ["comparison", "multi-step"] },
+
+    { "number": 5, "passageId": "supply-orders", "prompt": "What is the final cost of the bandages order?", "options": ["£972.00", "£1,002.00", "£1,026.00", "£1,110.00"], "correctAnswer": "B", "knowledgeTags": ["ucat-qr-multi-step-cost"], "skillTags": ["discount", "delivery"] },
+    { "number": 6, "passageId": "supply-orders", "prompt": "What is the delivered cost per test kit, to the nearest penny?", "options": ["£6.90", "£7.00", "£7.12", "£7.35"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-rate-per-time"], "skillTags": ["unit-cost", "rounding"] },
+    { "number": 7, "passageId": "supply-orders", "prompt": "How much is saved on the gloves order because of the discount?", "options": ["£126.00", "£130.00", "£136.00", "£151.00"], "correctAnswer": "A", "knowledgeTags": ["ucat-qr-percentage-decrease"], "skillTags": ["discount", "difference"] },
+    { "number": 8, "passageId": "supply-orders", "prompt": "What is the total final cost of all four orders?", "options": ["£4,326.40", "£4,352.40", "£4,362.40", "£4,397.40"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-multi-step-cost"], "skillTags": ["aggregate", "multi-step"] },
+
+    { "number": 9, "passageId": "vaccination-programme", "prompt": "What percentage of invited people in Region A attended?", "options": ["75%", "80%", "85%", "90%"], "correctAnswer": "B", "knowledgeTags": ["ucat-qr-percentage-of-total"], "skillTags": ["denominator-choice", "percentage"] },
+    { "number": 10, "passageId": "vaccination-programme", "prompt": "What percentage of attendees in Region B completed the programme?", "options": ["90%", "92.5%", "95%", "97.5%"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-percentage-of-total"], "skillTags": ["completion-rate", "percentage"] },
+    { "number": 11, "passageId": "vaccination-programme", "prompt": "What percentage of all eligible people completed the programme, to one decimal place?", "options": ["55.8%", "56.3%", "56.8%", "57.4%"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-weighted-percentage"], "skillTags": ["aggregate", "percentage"] },
+    { "number": 12, "passageId": "vaccination-programme", "prompt": "Region C increases attendance by 10% and keeps the same completion rate among attendees. How many additional people are expected to complete?", "options": ["558", "589", "620", "651"], "correctAnswer": "B", "knowledgeTags": ["ucat-qr-percentage-increase"], "skillTags": ["successive-percentage", "difference"] },
+
+    { "number": 13, "passageId": "patient-transport", "prompt": "What is the average outward speed on route B?", "options": ["66.0 km/h", "67.5 km/h", "69.0 km/h", "72.0 km/h"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-speed"], "skillTags": ["rate", "time-conversion"] },
+    { "number": 14, "passageId": "patient-transport", "prompt": "What is the fuel-and-toll cost of one round trip on route A?", "options": ["£27.00", "£30.00", "£33.00", "£39.00"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-multi-step-cost"], "skillTags": ["round-trip", "cost"] },
+    { "number": 15, "passageId": "patient-transport", "prompt": "Including fuel, toll and driver time, what is the total direct cost of route C, to the nearest penny?", "options": ["£57.53", "£59.20", "£61.53", "£63.87"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-rate-per-time"], "skillTags": ["time-cost", "multi-step"] },
+    { "number": 16, "passageId": "patient-transport", "prompt": "Which route has the highest average speed over its complete round trip?", "options": ["Route A", "Route B", "Route C", "Route D"], "correctAnswer": "D", "knowledgeTags": ["ucat-qr-speed"], "skillTags": ["comparison", "round-trip"] },
+
+    { "number": 17, "passageId": "trial-retention", "prompt": "What was the percentage attrition from the start to week 12 in Group P?", "options": ["15%", "18%", "20%", "22%"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-percentage-decrease"], "skillTags": ["attrition", "percentage"] },
+    { "number": 18, "passageId": "trial-retention", "prompt": "What percentage of Group Q participants remaining at week 12 recorded a response?", "options": ["64%", "66%", "68%", "70%"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-percentage-of-total"], "skillTags": ["response-rate", "denominator-choice"] },
+    { "number": 19, "passageId": "trial-retention", "prompt": "What percentage of all participants who started remained at week 12?", "options": ["74.7%", "75.2%", "75.7%", "76.3%"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-weighted-percentage"], "skillTags": ["aggregate", "retention"] },
+    { "number": 20, "passageId": "trial-retention", "prompt": "The week-12 response rate in Group Q exceeded that in Group S by approximately how many percentage points?", "options": ["5.3", "6.4", "7.3", "8.1"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-percentage-points"], "skillTags": ["compare-rates", "rounding"] },
+
+    { "number": 21, "passageId": "hospital-energy", "prompt": "By what percentage did Department A reduce energy use from January to March?", "options": ["8%", "9%", "10%", "12%"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-percentage-decrease"], "skillTags": ["change", "percentage"] },
+    { "number": 22, "passageId": "hospital-energy", "prompt": "What was Department B's mean monthly energy use across the three months?", "options": ["48,640 kWh", "49,280 kWh", "49,920 kWh", "50,560 kWh"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-weighted-percentage"], "skillTags": ["arithmetic-mean", "three-period"] },
+    { "number": 23, "passageId": "hospital-energy", "prompt": "Which department had the lowest March energy use per square metre?", "options": ["Department A", "Department B", "Department C", "Department D"], "correctAnswer": "B", "knowledgeTags": ["ucat-qr-rate-per-time"], "skillTags": ["unit-rate", "comparison"] },
+    { "number": 24, "passageId": "hospital-energy", "prompt": "By what percentage did total energy use across all departments fall from January to March, to one decimal place?", "options": ["6.2%", "6.5%", "6.9%", "7.4%"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-weighted-percentage"], "skillTags": ["aggregate", "percentage-change"] },
+
+    { "number": 25, "passageId": "nutrition-products", "prompt": "What is the cost per 100 g of protein in one pack of Product B, to the nearest penny?", "options": ["£4.20", "£4.38", "£4.50", "£4.67"], "correctAnswer": "B", "knowledgeTags": ["ucat-qr-rate-per-time"], "skillTags": ["unit-cost", "unit-conversion"] },
+    { "number": 26, "passageId": "nutrition-products", "prompt": "How much sodium is contained in three servings of Product B?", "options": ["720 mg", "900 mg", "930 mg", "960 mg"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-inventory-balance"], "skillTags": ["multiplication", "units"] },
+    { "number": 27, "passageId": "nutrition-products", "prompt": "How much would enough Product C for 420 servings cost?", "options": ["£280", "£287", "£294", "£300"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-multi-step-cost"], "skillTags": ["packs", "proportion"] },
+    { "number": 28, "passageId": "nutrition-products", "prompt": "Which product provides the greatest amount of protein relative to sodium?", "options": ["Product A", "Product B", "Product C", "Product D"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-percentage-of-total"], "skillTags": ["ratio", "unit-conversion"] },
+
+    { "number": 29, "passageId": "laboratory-lines", "prompt": "How many non-defective tests is Line A expected to produce in one day?", "options": ["2,106", "2,124", "2,133", "2,148"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-percentage-decrease"], "skillTags": ["yield", "percentage"] },
+    { "number": 30, "passageId": "laboratory-lines", "prompt": "For how long does Line B operate each day?", "options": ["9 h 40 min", "10 h 20 min", "10 h 40 min", "11 h 20 min"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-time-conversion"], "skillTags": ["minutes-to-hours", "multiplication"] },
+    { "number": 31, "passageId": "laboratory-lines", "prompt": "Which line produces the highest expected number of non-defective tests per operating minute?", "options": ["Line A", "Line B", "Line C", "Line D"], "correctAnswer": "D", "knowledgeTags": ["ucat-qr-rate-per-time"], "skillTags": ["unit-rate", "comparison"] },
+    { "number": 32, "passageId": "laboratory-lines", "prompt": "Line C increases its number of batches by 15% while all other values remain unchanged. How many additional non-defective tests are expected?", "options": ["285", "294", "297", "300"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-percentage-increase"], "skillTags": ["successive-percentage", "difference"] },
+
+    { "number": 33, "passageId": "community-screening", "prompt": "Which district had the highest positive screening rate?", "options": ["North", "Central", "South", "East"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-percentage-of-total"], "skillTags": ["compare-rates", "denominator-choice"] },
+    { "number": 34, "passageId": "community-screening", "prompt": "What percentage of all positive screens resulted in completed follow-up, to one decimal place?", "options": ["82.9%", "83.4%", "83.9%", "84.5%"], "correctAnswer": "C", "knowledgeTags": ["ucat-qr-weighted-percentage"], "skillTags": ["aggregate", "completion-rate"] },
+    { "number": 35, "passageId": "community-screening", "prompt": "Which district had the lowest programme cost per participant?", "options": ["North", "Central", "South", "East"], "correctAnswer": "B", "knowledgeTags": ["ucat-qr-rate-per-time"], "skillTags": ["unit-cost", "comparison"] },
+    { "number": 36, "passageId": "community-screening", "prompt": "By approximately what percentage was South's cost per participant higher than Central's?", "options": ["12.5%", "14.3%", "15.0%", "16.7%"], "correctAnswer": "B", "knowledgeTags": ["ucat-qr-percentage-increase"], "skillTags": ["relative-change", "unit-cost"] }
+  ]
+}

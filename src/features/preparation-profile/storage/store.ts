@@ -8,6 +8,10 @@ export interface PreparationProfileLoadResult {
 
 export interface PreparationProfileStore {
   load(guestSpaceId: GuestSpaceId): Promise<PreparationProfileLoadResult>;
-  save(profile: PreparationProfile): Promise<{ persisted: boolean }>;
+  save(profile: PreparationProfile): Promise<{
+    persisted: boolean;
+    durable?: boolean;
+    issue?: "unavailable";
+  }>;
   clear(guestSpaceId: GuestSpaceId): Promise<void>;
 }

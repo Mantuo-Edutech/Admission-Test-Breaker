@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q12",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 12,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "12   A curve has equation y = f(x), where\n\n                                f(x) = x(x − p)(x − q)(r − x)\n\n     with 0 < p < q < r.\n\n     You are given that:\n                                       \u0002 r\n                                             f(x) dx = 0\n                                        0\n                                       \u0002 q\n                                             f(x) dx = −2\n                                        0\n                                       \u0002 r\n                                             f(x) dx = −3\n                                        p\n\n\n\n\n     What is the total area enclosed by the curve and the x-axis for 0 ≤ x ≤ r ?\n\n     A 0\n\n     B 1\n\n     C 4\n\n     D 5\n\n     E   6\n\n     F   10\n\n\n\n\n                                              14"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A curve has equation y = f(x), where\n\n                                f(x) = x(x − p)(x − q)(r − x)\n\n     with 0 < p < q < r.\n\n     You are given that:\n                                        r\n                                             f(x) dx = 0\n                                        0\n                                        q\n                                             f(x) dx = −2\n                                        0\n                                        r\n                                             f(x) dx = −3\n                                        p\n\n\n\n\n     What is the total area enclosed by the curve and the x-axis for 0 ≤ x ≤ r ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0"
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "4"
+    },
+    {
+      "label": "D",
+      "rawText": "5"
+    },
+    {
+      "label": "E",
+      "rawText": "6"
+    },
+    {
+      "label": "F",
+      "rawText": "10"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "This curve intercepts the x-axis at 0, p, q and r. As the leading power of x is −x4 , the curve\ntends to −∞ as x gets very large (both positive and negative), and so the curve looks something\nlike this:\n\n                              y\n\n\n\n\n                                  A                        C\n                                                                              x\n                              0           p         q           r\n                                              B\n\n\n\n\nWe have labelled the three areas as A, B and C, and we want to know the value of A + B + C.\nWe can then write the three integrals we have been given in terms of these, referring to the\nsketch:\n                               Z r\n                                    f(x) dx = A − B + C = 0                              (1)\n                                 0\n                               Z q\n                                    f(x) dx = A − B = −2                                 (2)\n                               Z0 r\n                                    f(x) dx = −B + C = −3                                (3)\n                                      p\n\n\nSubtracting (3) from (1) gives A = 3, from which (2) gives B = 5 and so C = 2. Therefore\nA + B + C = 10, hence the correct option is F.\n\n      Commentary: Although our sketch turns out to be not very accurate, it was sufficient\n      to help us understand what was going on and to solve the problem. This is what we seek\n      from sketches: they should be good enough to give us insight, but they do not need to be\n      perfect.\n      Incidentally, there do exist values of p, q and r which make the statements of this question\n      true, namely p = 1.25, q = 3.16 and r = 4.25, correct to two decimal places.\n\n\n\n\nVersion 1.0, April 2019                                                                   Page 14\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11   Consider the equation 2x = mx + c, where m and c are real constants.\n\n     Which of the following statements is/are true?\n\n         I    The equation has a negative real solution only if c > 1.\n         II   The equation has two distinct real solutions if c > 1.\n         III The equation has two distinct positive real solutions if and only if c ≤ 1.\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                            13"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the equation 2x = mx + c, where m and c are real constants.\n\n     Which of the following statements is/are true?\n\n         I    The equation has a negative real solution only if c > 1.\n         II   The equation has two distinct real solutions if c > 1.\n         III The equation has two distinct positive real solutions if and only if c ≤ 1."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We sketch the graph of y = 2x . We know that y = mx + c is a straight line with gradient m\nand a y-intercept of c, and we will imagine this line for different values of m and c. Solutions to\nthe equation 2x = mx + c correspond to the x-coordinates where these two graphs meet.\n\n                                                    y\n\n\n\n\n                                                    1\n                                                                  x\n\n\n\nI    Recall that ‘P only if Q’ is the same as saying ‘if P then Q’, so in this case, the statement\n     becomes ‘if the equation 2x = mx + c has a negative real solution, then c > 1’. But we see\n     that the line y = −x, with c = 0, has a solution with negative real x, so this statement is\n     false.\n\nII   We can rewrite this statement as ‘if c > 1 then the equation has two distinct real solutions’.\n     So we imagine straight lines passing through some point above (0, 1), and we see that if\n     this straight line has a negative gradient, then it can only intercept the curve once. So this\n     statement is false.\n\nIII If c ⩽ 1, then a line with a negative gradient will still only intercept the curve once, so this\n    is also false.\n\nTherefore none of the statements is true, and the correct option is A.\n\n\n\n\nVersion 1.0, April 2019                                                                     Page 13"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

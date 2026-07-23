@@ -1,0 +1,89 @@
+schemaVersion: 1
+feature:
+  id: review-notes-download-editions
+  title: Same-source downloadable A4 Review Notes editions
+  status: partial
+  userOutcome: >-
+    After completing the relevant ESAT plan or exam-isolated learner profile, a student
+    can read the teaching preview in Mantou and download a consistent A4 edition without
+    encountering a second, manually maintained copy of the content.
+
+run:
+  packageScript: verify:review-notes-pdfs
+
+claims:
+  - id: five-deterministic-a4-editions
+    status: verified
+    statement: >-
+      Five shared Review Notes JSON revisions produce 79 deterministic A4 pages: ESAT
+      Mathematics 10, ESAT Sciences 16, TARA 17, LNAT 16 and UCAT 20. The generated
+      manifest pins each source digest, output path, public path, byte size, page count
+      and PDF digest, and validation rejects any mismatch.
+    artifacts:
+      - scripts/build-review-notes-pdfs.py
+      - scripts/build-review-notes-pdfs.sh
+      - content/products/review-notes-pdf-assets.json
+      - tests/features/notes/review-notes-pdf-assets.test.ts
+      - public/notes/esat/esat-mathematics-foundations-v1.pdf
+      - public/notes/esat/esat-sciences-foundations-v1.pdf
+      - public/notes/tara/tara-reasoning-writing-foundations-v1.pdf
+      - public/notes/lnat/lnat-reading-writing-foundations-v1.pdf
+      - public/notes/ucat/ucat-four-subtest-foundations-v1.pdf
+    automatedChecks:
+      - verify:review-notes-pdfs
+
+  - id: portable-embedded-cjk-font
+    status: verified
+    statement: >-
+      Every generated edition embeds the reviewed Noto Sans CJK Simplified Chinese
+      variable font. Its expected SHA-256 and OFL licence are stored with the generator,
+      preventing machine-specific Chinese glyph substitutions or silent font changes.
+    artifacts:
+      - scripts/assets/fonts/NotoSansCJKsc-VF.ttf
+      - scripts/assets/fonts/OFL-NOTO-CJK.txt
+      - scripts/assets/fonts/README.md
+      - tests/features/notes/review-notes-pdf-assets.test.ts
+    automatedChecks:
+      - verify:review-notes-pdfs
+
+  - id: profile-first-web-and-download-delivery
+    status: verified
+    statement: >-
+      The same catalog entries expose native pages and internal PDF download paths. The
+      ordinary interface reveals the download action only after the existing ESAT plan
+      or exam profile gate, while route, catalog, page count and lifecycle evidence stay
+      machine-consistent.
+    artifacts:
+      - content/products/catalog.json
+      - content/products/asset-lifecycle.json
+      - src/features/notes/pages/ReviewNotesPage.tsx
+      - src/features/notes/pages/AssessmentReviewNotesPage.tsx
+      - tests/features/library/content-product-registry.test.ts
+      - tests/features/library/asset-product-lifecycle.test.ts
+    automatedChecks:
+      - verify:review-notes-pdfs
+      - verify:content-products
+      - verify:product-lineage
+
+boundaries:
+  - These are Mantou-original top-level teaching previews, not official publications, final textbooks, full-length mocks or admissions predictions.
+  - The files are static public Web assets. The normal interface is profile-first, but the file URL is not an entitlement or anti-download security boundary.
+  - Independent subject, bilingual terminology, rights/similarity, student-comprehension and real-device or printer review remain required before final publication status.
+
+manualChecks:
+  - id: all-page-a4-render-inspection
+    status: passed
+    reviewer: codex-agent
+    reviewerRole: document-qa
+    checkedAt: 2026-07-19
+    evidence: All 79 pages were rendered at 90 DPI on 2026-07-19 and inspected as five complete contact sheets; orphaned curriculum and source pages were corrected, then two consecutive complete rebuilds produced identical SHA-256 hashes, byte sizes and page counts.
+    viewports:
+      - printable-a4
+  - id: real-device-and-printer-review
+    status: pending
+    evidence: Representative phones, tablets, desktop PDF viewers and a physical A4 print sample still require independent review.
+    viewports:
+      - phone
+      - tablet
+      - desktop
+      - printable-a4

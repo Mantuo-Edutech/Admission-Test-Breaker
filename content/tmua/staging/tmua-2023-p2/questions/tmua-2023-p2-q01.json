@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q01",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 1,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "1   Given that\n\n                                1        1     3\n                                    −        =\n                               x −6     x +6   11\n\n    what is the value of x ?\n\n    A    2 15\n\n    B    4 5\n\n    C   5 2\n\n    D     58\n\n    E   50\n\n    F   58\n\n    G   60\n\n    H   80\n\n\n\n\n                                    3"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Given that\n\n                                1        1     3\n                                    −        =\n                               x −6     x +6   11\n\n    what is the value of x ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "2 15"
+    },
+    {
+      "label": "B",
+      "rawText": "4 5"
+    },
+    {
+      "label": "C",
+      "rawText": "5 2"
+    },
+    {
+      "label": "D",
+      "rawText": "58"
+    },
+    {
+      "label": "E",
+      "rawText": "50"
+    },
+    {
+      "label": "F",
+      "rawText": "58"
+    },
+    {
+      "label": "G",
+      "rawText": "60"
+    },
+    {
+      "label": "H",
+      "rawText": "80"
+    }
+  ],
+  "correctAnswer": "H",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "√       √\nWe first multiply both sides of the equation by 11( x − 6)( x + 6) to eliminate all of the\nfractions, giving        √      \u0001      √      \u0001    √     \u0001 √     \u0001\n                      11 x + 6 − 11 x − 6 = 3 x − 6          x+6 .\nWe can now expand all of the brackets to give\n                              √             √\n                            11 x + 66 − 11 x + 66 = 3x − 108,\n\nwhich simplifies to\n                                          240 = 3x.\nDividing by 3 gives x = 80, which is option H.\n\n\n\n\nVersion 1.0, September 2023                                                        Page 3"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        3
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

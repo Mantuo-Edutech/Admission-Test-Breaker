@@ -1,0 +1,95 @@
+schemaVersion: 1
+feature:
+  id: tmua-complete-online-paper-practice
+  title: Complete TMUA online past-paper practice
+  status: partial
+  userOutcome: >-
+    A student with a local preparation profile can choose any of the 18
+    imported TMUA papers and complete a timed, saved and scored online session.
+
+run:
+  packageScript: verify:tmua-online-papers
+
+claims:
+  - id: complete-online-paper-registry
+    status: verified
+    statement: >-
+      The online manifest contains 18 unique papers and 360 questions, with 20
+      source pages and 20 official answers for every paper.
+    artifacts:
+      - content/tmua/online-papers.json
+      - src/content/tmua/build-online-papers.ts
+      - src/features/practice/content/tmua-online-registry.ts
+      - tests/features/practice/content/online-papers.test.ts
+    automatedChecks:
+      - verify:tmua-online-papers
+      - typecheck
+
+  - id: no-complete-pdf-delivery
+    status: verified
+    statement: >-
+      All 18 papers use native structured delivery, expose no complete PDF path,
+      and automatic extraction drafts cannot be published directly.
+    artifacts:
+      - src/features/practice/content/tmua-specimen-p1.ts
+      - src/features/practice/content/tmua-practice-2016-p1.ts
+      - src/features/practice/content/tmua-2022-p2.ts
+      - tests/features/practice/content/online-papers.test.ts
+    automatedChecks:
+      - verify:tmua-online-papers
+
+  - id: shared-evidence-safe-runtime
+    status: verified
+    statement: >-
+      All native papers open directly on question 1 and use the same session,
+      answer, mark, timing, submission and scoring runtime while keeping question
+      IDs scoped to the selected paper.
+    artifacts:
+      - src/features/practice/pages/PracticePage.tsx
+      - src/features/practice/pages/ResultsPage.tsx
+      - src/features/practice/domain/session.ts
+      - src/features/practice/storage/local-store.ts
+      - tests/app/practice-page.test.tsx
+      - tests/app/results-page.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+
+  - id: native-content-delivery-policy
+    status: verified
+    statement: >-
+      All 18 TMUA papers use semantic question blocks, KaTeX and safe
+      repository-owned SVG figures where needed; structured papers reject PDF
+      blocks and remove stale complete-PDF assets from the public build.
+    artifacts:
+      - src/features/practice/content/tmua-2022-p1.ts
+      - src/features/practice/content/tmua-practice-2016-p1.ts
+      - src/features/practice/content/tmua-specimen-p2.ts
+      - src/features/practice/content/tmua-2023-p1.ts
+      - src/features/practice/content/tmua-2023-p2.ts
+      - src/features/practice/content/validate.ts
+      - public/questions/tmua-2022-p1/q04.svg
+      - public/questions/tmua-2022-p1/q17.svg
+      - tests/features/practice/content/tmua-2022-p1.test.ts
+      - tests/features/practice/content/paper.test.ts
+      - tests/features/practice/content/tmua-2023-p2.test.ts
+    automatedChecks:
+      - verify:tmua-online-papers
+      - test
+      - build
+
+boundaries:
+  - The current sessions are stored in the local Guest Space, not the cloud learner-space tables.
+  - Early Specimen Paper 1 now includes a separately entitled 20-question worked review; the other 17 papers do not yet include complete worked explanations or final teacher-authored knowledge tagging.
+  - Public static assets in the local preview are not production DRM; private per-question delivery, rate limits, watermarking and access audit remain required before launch.
+  - The 30-minute original diagnostic, mock papers and review notes are separate deliverables.
+
+manualChecks:
+  - id: native-and-migration-responsive-review
+    status: pending
+    evidence: Review the 18 native papers at desktop, tablet and phone sizes in the browser.
+    viewports:
+      - 1440x900
+      - 768x1024
+      - 390x844

@@ -3,5 +3,15 @@
 .superpowers/
 node_modules/
 /dist/
+/playwright-report/
+/playwright-deployment-report/
+/test-results/
+/output/
 /Tmua
 /tmp/
+/.backups/
+/content/official/raw/
+.env.local
+.env.*.local
+deploy/bootstrap-input.local.json
+deploy/supabase-project-selection.local.json

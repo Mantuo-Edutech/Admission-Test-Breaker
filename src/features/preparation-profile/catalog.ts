@@ -1,4 +1,4 @@
-export type CurriculumSystemId = "caie" | "pearson-ial";
+export type CurriculumSystemId = "caie" | "pearson-ial" | "ib" | "ap";
 
 export interface CurriculumUnitOption {
   readonly id: string;
@@ -11,7 +11,7 @@ export interface QualificationOption {
   readonly system: CurriculumSystemId;
   readonly label: string;
   readonly specificationVersion: string;
-  readonly sourceRegistryId: "caie" | "pearson-ial";
+  readonly sourceRegistryId: "caie" | "pearson-ial" | "ibo" | "college-board";
   readonly sourceDocument: string;
   readonly units: readonly CurriculumUnitOption[];
   readonly certificationRules?: readonly string[];
@@ -123,7 +123,111 @@ export const PREPARATION_CATALOG: readonly QualificationOption[] = [
       "A total of six different units is required for IAL certification.",
     ],
   },
+  {
+    id: "ib-aa-sl-first-assessment-2021",
+    system: "ib",
+    label: "IB Mathematics: Analysis & Approaches SL · 分析与方法 SL",
+    specificationVersion: "First assessment 2021",
+    sourceRegistryId: "ibo",
+    sourceDocument:
+      "https://ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-analysis-and-approaches-en.pdf",
+    units: ibMathematicsUnits(),
+  },
+  {
+    id: "ib-aa-hl-first-assessment-2021",
+    system: "ib",
+    label: "IB Mathematics: Analysis & Approaches HL · 分析与方法 HL",
+    specificationVersion: "First assessment 2021",
+    sourceRegistryId: "ibo",
+    sourceDocument:
+      "https://ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-analysis-and-approaches-en.pdf",
+    units: ibMathematicsUnits(),
+  },
+  {
+    id: "ib-ai-sl-first-assessment-2021",
+    system: "ib",
+    label: "IB Mathematics: Applications & Interpretation SL · 应用与解释 SL",
+    specificationVersion: "First assessment 2021",
+    sourceRegistryId: "ibo",
+    sourceDocument:
+      "https://ibo.org/contentassets/40de1280e31f4cd582b96d9ffd7e31f2/subject-brief-dp-math-applications-and-interpretations-en.pdf",
+    units: ibMathematicsUnits(),
+  },
+  {
+    id: "ib-ai-hl-first-assessment-2021",
+    system: "ib",
+    label: "IB Mathematics: Applications & Interpretation HL · 应用与解释 HL",
+    specificationVersion: "First assessment 2021",
+    sourceRegistryId: "ibo",
+    sourceDocument:
+      "https://ibo.org/contentassets/40de1280e31f4cd582b96d9ffd7e31f2/subject-brief-dp-math-applications-and-interpretations-en.pdf",
+    units: ibMathematicsUnits(),
+  },
+  {
+    id: "ap-precalculus-effective-fall-2026",
+    system: "ap",
+    label: "AP Precalculus · AP 预备微积分",
+    specificationVersion: "Effective Fall 2026",
+    sourceRegistryId: "college-board",
+    sourceDocument:
+      "https://apcentral.collegeboard.org/media/pdf/ap-precalculus-course-and-exam-description.pdf",
+    units: [
+      { id: "u1", label: "Unit 1 · Polynomial & Rational Functions · 多项式与有理函数", requirement: "compulsory" },
+      { id: "u2", label: "Unit 2 · Exponential & Logarithmic Functions · 指数与对数函数", requirement: "compulsory" },
+      { id: "u3", label: "Unit 3 · Trigonometric & Polar Functions · 三角与极坐标函数", requirement: "compulsory" },
+      { id: "u4", label: "Unit 4 · Parameters, Vectors & Matrices · 参数、向量与矩阵", requirement: "optional" },
+    ],
+  },
+  {
+    id: "ap-calculus-ab-2020-current",
+    system: "ap",
+    label: "AP Calculus AB · AP 微积分 AB",
+    specificationVersion: "CED 2020 · current framework",
+    sourceRegistryId: "college-board",
+    sourceDocument:
+      "https://apcentral.collegeboard.org/media/pdf/ap-calculus-ab-and-bc-course-and-exam-description.pdf",
+    units: apCalculusUnits(false),
+  },
+  {
+    id: "ap-calculus-bc-2020-current",
+    system: "ap",
+    label: "AP Calculus BC · AP 微积分 BC",
+    specificationVersion: "CED 2020 · current framework",
+    sourceRegistryId: "college-board",
+    sourceDocument:
+      "https://apcentral.collegeboard.org/media/pdf/ap-calculus-ab-and-bc-course-and-exam-description.pdf",
+    units: apCalculusUnits(true),
+  },
 ];
+
+function ibMathematicsUnits(): readonly CurriculumUnitOption[] {
+  return [
+    { id: "number-algebra", label: "Number & Algebra · 数与代数", requirement: "compulsory" },
+    { id: "functions", label: "Functions · 函数", requirement: "compulsory" },
+    { id: "geometry-trigonometry", label: "Geometry & Trigonometry · 几何与三角", requirement: "compulsory" },
+    { id: "statistics-probability", label: "Statistics & Probability · 统计与概率", requirement: "compulsory" },
+    { id: "calculus", label: "Calculus · 微积分", requirement: "compulsory" },
+  ];
+}
+
+function apCalculusUnits(includeBcOnly: boolean): readonly CurriculumUnitOption[] {
+  const common: CurriculumUnitOption[] = [
+    { id: "u1", label: "Unit 1 · Limits & Continuity · 极限与连续", requirement: "compulsory" },
+    { id: "u2", label: "Unit 2 · Differentiation: Definition & Fundamental Properties · 微分定义与基本性质", requirement: "compulsory" },
+    { id: "u3", label: "Unit 3 · Composite, Implicit & Inverse Functions · 复合、隐函数与反函数微分", requirement: "compulsory" },
+    { id: "u4", label: "Unit 4 · Contextual Applications of Differentiation · 微分的情境应用", requirement: "compulsory" },
+    { id: "u5", label: "Unit 5 · Analytical Applications of Differentiation · 微分的分析应用", requirement: "compulsory" },
+    { id: "u6", label: "Unit 6 · Integration & Accumulation of Change · 积分与变化累积", requirement: "compulsory" },
+    { id: "u7", label: "Unit 7 · Differential Equations · 微分方程", requirement: "compulsory" },
+    { id: "u8", label: "Unit 8 · Applications of Integration · 积分应用", requirement: "compulsory" },
+  ];
+  if (!includeBcOnly) return common;
+  return [
+    ...common,
+    { id: "u9", label: "Unit 9 · Parametric, Polar & Vector-Valued Functions · 参数、极坐标与向量函数", requirement: "compulsory" },
+    { id: "u10", label: "Unit 10 · Infinite Sequences & Series · 无穷数列与级数", requirement: "compulsory" },
+  ];
+}
 
 export function qualificationsForSystem(
   system: CurriculumSystemId,

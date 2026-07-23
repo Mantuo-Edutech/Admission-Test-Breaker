@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "8   The line y = 2x + 3 meets the curve y = x2 + bx + c at exactly one point.\n\n    The line y = 4x − 2 also meets the curve y = x2 + bx + c at exactly one point.\n\n    What is the value of b − c ?\n\n    A −9\n\n    B −5.5\n\n    C −1\n\n    D    5\n\n    E    6\n\n    F    14\n\n\n\n\n                                           \u0014\u0013"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The line y = 2x + 3 meets the curve y = x2 + bx + c at exactly one point.\n\n    The line y = 4x − 2 also meets the curve y = x2 + bx + c at exactly one point.\n\n    What is the value of b − c ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−9"
+    },
+    {
+      "label": "B",
+      "rawText": "−5.5"
+    },
+    {
+      "label": "C",
+      "rawText": "−1"
+    },
+    {
+      "label": "D",
+      "rawText": "5"
+    },
+    {
+      "label": "E",
+      "rawText": "6"
+    },
+    {
+      "label": "F",
+      "rawText": "14"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "A straight line meets a quadratic at exactly one point if and only if there is a repeated root to\nthe simultaneous equations. Substituting for y in the first pair gives\n\n                                      2x + 3 = x2 + bx + c.\n\nThis rearranges to x2 + (b − 2)x + (c − 3) = 0. As this has a repeated root, its discriminant must\nbe zero, so\n                                      (b − 2)2 − 4(c − 3) = 0.\nThe second line likewise gives (b − 4)2 − 4(c + 2) = 0. Expanding and simplifying these two\nequations gives the following simultaneous equations for b and c:\n\n                                       b2 − 4b − 4c = −16\n                                       b2 − 8b − 4c = −8\n\nSubtracting these two equations gives 4b = −8 so b = −2 and hence c = 7. Therefore b−c = −9,\nwhich is option A.\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 10"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        10
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

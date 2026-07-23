@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13   f(x) is a function for which\n                            \u0004 3            \u0004 3           \u0004 1\n                                \u0006    \u00072\n                                 f(x) dx +     f(x) dx =     f(x) dx\n                              0                   0       0\n\n\n\n     Which of the following claims about f(x) is/are necessarily true?\n\n             I    f(x) ≤ 0 for some x with 1 ≤ x ≤ 3\n                  \u00053               \u00051\n             II   0\n                       f(x) dx ≤   0\n                                        f(x) dx\n\n     A neither of them\n\n     B I only\n\n     C II only\n\n     D I and II\n\n\n\n\n                                                  15"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "f(x) is a function for which\n                            A 3            A 3           A 1\n                                C    D2\n                                 f(x) dx +     f(x) dx =     f(x) dx\n                              0                   0       0\n\n\n\n     Which of the following claims about f(x) is/are necessarily true?\n\n             I    f(x) ≤ 0 for some x with 1 ≤ x ≤ 3\n                  B3               B1\n             II   0\n                       f(x) dx ≤   0\n                                        f(x) dx"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "neither of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "I and II"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "This \u0001question is about inequalities. To begin with, the only thing that we Rknow for certain\n                                                                                          R 3 is that\n       2                                                                      1\n f(x) ≥ 0 for all x, as it is the square of a real number. It follows that 0 f(x) dx ≥ 0 f(x) dx,\n                                             R3               R1\nas we are adding a non-negative number to 0 f(x) dx to get 0 f(x) dx. Therefore II is necessarily\ntrue.\nLet us now take II and rewrite the integral from 0 to 3 as the sum of the integrals from 0 to 1\nand from 1 to 3; this is so that we can match the integral on the right hand side. We obtain:\n                              Z 1           Z 3           Z 1\n                                  f(x) dx +     f(x) dx ≤     f(x) dx\n                                0              1            0\n\nand we can now subtract the integral from 0 to 1 to get\n                                       Z 3\n                                           f(x) dx ≤ 0.\n                                           1\n\nSince the integral is negative or zero, the function itself must be so somewhere between 1 and 3;\nif it were positive throughout the interval, the integral would be positive. Therefore condition I\nmust also be true.\nHence the correct answer is option D.\n\n\n\n\nVersion 1.0, April 2021                                                                     Page 15\n\n                                            © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

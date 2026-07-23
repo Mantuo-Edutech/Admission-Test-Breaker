@@ -50,6 +50,19 @@ describe("preparation profile domain", () => {
   });
 
   it.each([
+    ["ib", "ib-aa-hl-first-assessment-2021", ["functions", "calculus"]],
+    ["ap", "ap-precalculus-effective-fall-2026", ["u1", "u2", "u3"]],
+  ] as const)("accepts a validated %s mathematics profile", (curriculumSystem, qualificationId, unitIds) => {
+    const profile = createPreparationProfile({
+      ...validInput,
+      curriculumSystem,
+      selections: [{ qualificationId, unitIds }],
+    });
+
+    expect(profile).toMatchObject({ curriculumSystem, selections: [{ qualificationId, unitIds }] });
+  });
+
+  it.each([
     {
       name: "has no qualification",
       input: { ...validInput, selections: [] },

@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q14",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 14,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "14.    The graph of the polynomial function\n\n                                  =    +      +        +   +    + ,\n\n       is sketched, where , , , , , and    are real constants with    ≠ 0.\n\n       Which one of the following is not possible?\n\n\n       A       The graph has two local minima and two local maxima.\n       B       The graph has one local minimum and two local maxima.\n       C       The graph has one local minimum and one local maximum.\n       D       The graph has no local minima or local maxima.\n\n\n\n\n© UCLES 2017                                                                         [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The graph of the polynomial function\n\n                                  =    +      +        +   +    + ,\n\n       is sketched, where , , , , , and    are real constants with    ≠ 0.\n\n       Which one of the following is not possible?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "The graph has two local minima and two local maxima."
+    },
+    {
+      "label": "B",
+      "rawText": "The graph has one local minimum and two local maxima."
+    },
+    {
+      "label": "C",
+      "rawText": "The graph has one local minimum and one local maximum."
+    },
+    {
+      "label": "D",
+      "rawText": "The graph has no local minima or local maxima.\n\n\n\n\n© UCLES 2017                                                                         [Turn over"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can work out the locations of the local maxima and minima by solving dx\n                                                                        dy\n                                                                           = 0. We have\n\n                              dy\n                                 = 5ax4 + 4bx3 + 3cx2 + 2dx + e,\n                              dx\nwhich is a quartic (a degree 4 polynomial). This can have at most 4 roots, so there are at most 4\nstationary points.\nThis does not seem to help us that much, as all of the options have at most 4 stationary points!\nWe also observe that we are starting with a degree 5 polynomial, so if a > 0, y tends to +∞ as\nx tends to +∞ and y tends to −∞ as x tends to −∞. Similarly, if a < 0, we have the reverse\nof this. If we now try sketching the four possibilities offered, we will see what happens:\n\nA Two local minima and two local maxima might look like this:\n\n                                         y\n\n\n\n\n                                                                     x\n                                         0\n\n\n\n\n   This seems plausible.\n\nB One local minimum and two local maxima might look like this:\n\n                                         y\n\n\n\n\n                                                                     x\n                                         0\n\n\n\n\n   This is not possible, because y tends to −∞ both when x tends to +∞ and to −∞.\n\n\n\n\n                                               17\n                                                                                     © UCLES 2019\n\f\nC One local minimum and one local maximum might look like this:\n\n                                          y\n\n\n\n\n                                                                       x\n                                          0\n\n\n\n\n   This seems plausible; there is no requirement that the quartic dx\n                                                                  dy\n                                                                     = 0 has four real roots, so\n   there need not be exactly four stationary points.\n\nD The curve y = x5 has no local minima or local maxima (though it does have a point of\n  inflection at the origin), so this is certainly possible.\n\nSo the only one which is not possible is B.\nIf we want to construct explicit examples of A and C, we could start by choosing dx dy\n                                                                                       as a quartic\nwhich has exactly four real roots (such as (x − 1)(x − 2)(x − 3)(x − 4)) or exactly two real roots\n(such as (x2 + 1)(x − 1)(x − 2)) and then integrating it to obtain our desired function. Similarly,\nif we wanted to find an example for D which has no stationary points at all, we could integrate\na function such as (x2 + 1)2 .\n\n\n\n\n                                                18\n                                                                                      © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        17,
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

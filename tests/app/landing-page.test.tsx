@@ -1,7 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { RouterProvider } from "react-router-dom";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import type { AppServices } from "../../src/app/dependencies.js";
 import { createAppRouter } from "../../src/app/routes.js";
 import type {
@@ -58,7 +58,7 @@ describe("Mantou multi-exam homepage", () => {
     expect(screen.getByText("Admission Test Breaker")).toBeInTheDocument();
     expect(
       screen.getByText(
-        "从了解考试、诊断水平，到系统训练、模考复盘和准备进度判断，都在这里完成。",
+        "选择考试，填写课程信息，查看需要补充的知识，然后完成诊断与真题练习。",
       ),
     ).toBeInTheDocument();
     expect(
@@ -66,7 +66,7 @@ describe("Mantou multi-exam homepage", () => {
     ).toBeInTheDocument();
   });
 
-  it("shows four direct exam entries with honest status text", async () => {
+  it("shows five direct exam entries with useful course context", async () => {
     const router = createAppRouter(["/"], services(new TrackingStore()));
     render(<RouterProvider router={router} />);
 
@@ -75,6 +75,7 @@ describe("Mantou multi-exam homepage", () => {
       ["TMUA", "/exams/tmua"],
       ["ESAT", "/exams/esat"],
       ["TARA", "/exams/tara"],
+      ["LNAT", "/exams/lnat"],
       ["UCAT", "/exams/ucat"],
     ] as const) {
       expect(screen.getByRole("link", { name: new RegExp(name, "u") })).toHaveAttribute(
@@ -82,8 +83,16 @@ describe("Mantou multi-exam homepage", () => {
         href,
       );
     }
-    expect(screen.getByText("现已开放")).toBeInTheDocument();
-    expect(screen.getAllByText("资料馆建设中")).toHaveLength(3);
+    for (const description of [
+      "数学、计算机、经济及相关量化专业",
+      "工程、自然科学、化学与生命科学相关专业",
+      "人文、社会科学及部分跨学科专业",
+      "法学及相关本科专业",
+      "医学、牙科及相关临床专业",
+    ]) {
+      expect(screen.getByText(description)).toBeInTheDocument();
+    }
+    expect(screen.queryByText(/在线真题|专业要求|官方资料已整理/u)).not.toBeInTheDocument();
   });
 
   it("presents the common preparation path in order", async () => {
@@ -94,11 +103,11 @@ describe("Mantou multi-exam homepage", () => {
     expect(
       within(path).getAllByRole("listitem").map((item) => item.textContent),
     ).toEqual([
-      "了解考试",
-      "完成诊断",
-      "系统训练",
-      "模考复盘",
-      "判断准备进度",
+      "选择考试",
+      "填写课程信息",
+      "查看知识差距",
+      "完成诊断与真题",
+      "跟踪准备进度",
     ]);
   });
 
@@ -130,20 +139,28 @@ describe("Mantou multi-exam homepage", () => {
 
   it("routes the open TMUA entry to its own exam space", async () => {
     const user = userEvent.setup();
-    const router = createAppRouter(["/"], services(new TrackingStore()));
+    const appServices = services(new TrackingStore());
+    const track = vi.fn(async () => undefined);
+    appServices.funnel = { track };
+    const router = createAppRouter(["/"], appServices);
     render(<RouterProvider router={router} />);
 
     document.documentElement.scrollTop = 640;
     document.body.scrollTop = 640;
 
     await user.click(
-      await screen.findByRole("link", { name: /TMUA.*现已开放/u }),
+      await screen.findByRole("link", { name: /TMUA.*数学、计算机、经济/u }),
     );
     expect(router.state.location.pathname).toBe("/exams/tmua");
     expect(
-      await screen.findByRole("heading", { name: "TMUA 备考中心" }),
+      await screen.findByRole("heading", { name: /先了解起点.*再开始练习/u }),
     ).toBeInTheDocument();
     expect(document.documentElement.scrollTop).toBe(0);
     expect(document.body.scrollTop).toBe(0);
+    expect(track).toHaveBeenCalledWith({
+      eventType: "exam_selected",
+      examId: "tmua",
+      contextCode: "home-exam-selector",
+    });
   });
 });

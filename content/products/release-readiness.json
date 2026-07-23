@@ -1,0 +1,1851 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": "1.0.0",
+  "catalogRevision": "2026-07-19.33",
+  "assessedAt": "2026-07-19",
+  "policy": {
+    "closedBeta": [
+      "Product is public and has an internal route.",
+      "Exactly one readable feature manifest is linked from catalog evidence.",
+      "Every automated claim is verified.",
+      "Every manual check is passed with dated evidence."
+    ],
+    "finalPublication": [
+      "Every closed-Beta requirement passes.",
+      "Catalog status is published.",
+      "Feature manifest status is verified."
+    ]
+  },
+  "summary": {
+    "totalProducts": 41,
+    "publicProducts": 40,
+    "internalProducts": 1,
+    "automatedReadyProducts": 40,
+    "manualReadyProducts": 0,
+    "closedBetaReadyProducts": 0,
+    "finalPublicationReadyProducts": 0,
+    "closedBetaCoveragePercent": 0
+  },
+  "products": [
+    {
+      "productId": "tmua-online-past-papers",
+      "examId": "tmua",
+      "kind": "practice-library",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/tmua-complete-online-paper-practice.yaml",
+      "featureId": "tmua-complete-online-paper-practice",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "native-and-migration-responsive-review",
+          "status": "pending",
+          "evidence": "Review the 18 native papers at desktop, tablet and phone sizes in the browser.",
+          "viewports": [
+            "1440x900",
+            "768x1024",
+            "390x844"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:native-and-migration-responsive-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:native-and-migration-responsive-review",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "tmua-course-coverage",
+      "examId": "tmua",
+      "kind": "coverage-map",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/tmua-profile-first-staged-journey.yaml",
+      "featureId": "tmua-profile-first-staged-journey",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "staged-responsive-route-review",
+          "status": "pending",
+          "evidence": "Review the new overview, profile, coverage, dashboard and module pages at desktop, tablet and phone sizes.",
+          "viewports": [
+            "1440x900",
+            "768x1024",
+            "390x844"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:staged-responsive-route-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:staged-responsive-route-review",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "tmua-diagnostic-v1",
+      "examId": "tmua",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/tmua-original-diagnostic.yaml",
+      "featureId": "tmua-original-diagnostic",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-mathematics-review",
+          "status": "pending",
+          "evidence": "由未参与命题的 TMUA 数学教师逐题核对答案、措辞、干扰项、难度分布与无计算器可行性。",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "real-student-timing-calibration",
+          "status": "pending",
+          "evidence": "由封闭学生样本完成并检查中位完成时间、弃题点和题目区分度；样本不足时不发布 Benchmark。",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-mathematics-review",
+        "pending-manual-check:real-student-timing-calibration"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-mathematics-review",
+        "pending-manual-check:real-student-timing-calibration",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "tmua-foundations-notes-v2",
+      "examId": "tmua",
+      "kind": "review-notes",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/tmua-foundations-notes.yaml",
+      "featureId": "tmua-foundations-notes",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [
+        {
+          "id": "a4-page-render",
+          "source": "feature-manifest",
+          "reviewerRole": "document-qa",
+          "reviewedAt": "2026-07-18",
+          "evidence": "All 25 pages were rendered at 110 dpi and inspected as a contact sheet; representative chapter, checkpoint, sources and closing pages were then inspected at original or 150 dpi after the final footer correction."
+        }
+      ],
+      "pendingManualChecks": [
+        {
+          "id": "independent-subject-and-similarity-review",
+          "status": "pending",
+          "evidence": "A separate mathematics teacher and rights/similarity reviewer must approve the complete revision before final publication status.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "browser-device-review",
+          "status": "pending",
+          "evidence": "Automated DOM, accessibility-name, type and production-build checks pass; the in-app browser runtime could not be attached in this run, so desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-subject-and-similarity-review",
+        "pending-manual-check:browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-subject-and-similarity-review",
+        "pending-manual-check:browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "esat-course-module-planner",
+      "examId": "esat",
+      "kind": "admissions-planner",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/esat-course-module-planner.yaml",
+      "featureId": "esat-course-module-planner",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "esat-planner-responsive-review",
+          "status": "pending",
+          "evidence": "Review course selection, optional combinations and conflict states on desktop, tablet and phone.",
+          "viewports": [
+            "1440x900",
+            "768x1024",
+            "390x844"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:esat-planner-responsive-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:esat-planner-responsive-review",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "esat-course-coverage",
+      "examId": "esat",
+      "kind": "coverage-map",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/esat-course-module-planner.yaml",
+      "featureId": "esat-course-module-planner",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "esat-planner-responsive-review",
+          "status": "pending",
+          "evidence": "Review course selection, optional combinations and conflict states on desktop, tablet and phone.",
+          "viewports": [
+            "1440x900",
+            "768x1024",
+            "390x844"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:esat-planner-responsive-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:esat-planner-responsive-review",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "esat-module-starters-v1",
+      "examId": "esat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/esat-module-starters.yaml",
+      "featureId": "esat-module-starters",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-subject-review",
+          "status": "pending",
+          "evidence": "Independent Mathematics, Physics, Chemistry and Biology teachers must verify wording, distractors, difficulty spread and answer keys before final publication.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "browser-device-review",
+          "status": "pending",
+          "evidence": "Automated component, type, production-build and shared-kernel tests pass; desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-subject-review",
+        "pending-manual-check:browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-subject-review",
+        "pending-manual-check:browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "esat-mathematics-1-full-mock-v1",
+      "examId": "esat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/esat-mathematics-1-full-mock.yaml",
+      "featureId": "esat-mathematics-1-full-mock",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-mathematics-and-language-review",
+          "status": "pending",
+          "evidence": "A separate Mathematics 1 teacher and bilingual reviewer must verify all 27 prompts, distractors, answer keys, terminology and difficulty progression.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "student-timing-calibration",
+          "status": "pending",
+          "evidence": "Run the complete mock with representative A-Level, IB and AP students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.",
+          "viewports": [
+            "student-session"
+          ]
+        },
+        {
+          "id": "real-device-review",
+          "status": "pending",
+          "evidence": "Verify question navigation, tables, KaTeX and submission on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-mathematics-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-mathematics-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "esat-mathematics-2-full-mock-v1",
+      "examId": "esat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/esat-mathematics-2-full-mock.yaml",
+      "featureId": "esat-mathematics-2-full-mock",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-mathematics-and-language-review",
+          "status": "pending",
+          "evidence": "A separate Mathematics 2 teacher and bilingual reviewer must verify all 27 prompts, distractors, answer keys, terminology and difficulty progression.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "student-timing-calibration",
+          "status": "pending",
+          "evidence": "Run the complete mock with representative A-Level, IB and AP students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.",
+          "viewports": [
+            "student-session"
+          ]
+        },
+        {
+          "id": "real-device-review",
+          "status": "pending",
+          "evidence": "Verify question navigation and KaTeX rendering on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-mathematics-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-mathematics-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "esat-physics-full-mock-v1",
+      "examId": "esat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/esat-physics-full-mock.yaml",
+      "featureId": "esat-physics-full-mock",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-physics-and-language-review",
+          "status": "pending",
+          "evidence": "A separate Physics teacher and bilingual reviewer must verify all 27 prompts, distractors, answer keys, units, terminology and difficulty progression.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "student-timing-calibration",
+          "status": "pending",
+          "evidence": "Run the complete mock with representative A-Level, IB and AP students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.",
+          "viewports": [
+            "student-session"
+          ]
+        },
+        {
+          "id": "real-device-review",
+          "status": "pending",
+          "evidence": "Verify question navigation, units and KaTeX rendering on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-physics-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-physics-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "esat-chemistry-full-mock-v1",
+      "examId": "esat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/esat-chemistry-full-mock.yaml",
+      "featureId": "esat-chemistry-full-mock",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-chemistry-and-language-review",
+          "status": "pending",
+          "evidence": "A separate Chemistry teacher and bilingual reviewer must verify all 27 prompts, distractors, answer keys, units, terminology and difficulty progression.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "student-timing-calibration",
+          "status": "pending",
+          "evidence": "Run the complete mock with representative A-Level, IB and AP students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.",
+          "viewports": [
+            "student-session"
+          ]
+        },
+        {
+          "id": "real-device-review",
+          "status": "pending",
+          "evidence": "Verify question navigation, units and KaTeX rendering on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-chemistry-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-chemistry-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "esat-biology-full-mock-v1",
+      "examId": "esat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/esat-biology-full-mock.yaml",
+      "featureId": "esat-biology-full-mock",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-biology-and-language-review",
+          "status": "pending",
+          "evidence": "A separate Biology teacher and bilingual reviewer must verify all 27 prompts, distractors, answer keys, terminology and difficulty progression.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "student-timing-calibration",
+          "status": "pending",
+          "evidence": "Run the complete mock with representative A-Level, IB and AP students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.",
+          "viewports": [
+            "student-session"
+          ]
+        },
+        {
+          "id": "real-device-review",
+          "status": "pending",
+          "evidence": "Verify question navigation and scientific notation rendering on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-biology-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-biology-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "tara-reasoning-starter-v1",
+      "examId": "tara",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/tara-reasoning-starter.yaml",
+      "featureId": "tara-reasoning-starter",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-reasoning-review",
+          "status": "pending",
+          "evidence": "A separate TARA/TSA reasoning teacher must verify wording, distractors, taxonomy, answer keys and difficulty spread.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "browser-device-review",
+          "status": "pending",
+          "evidence": "Automated component, type and production-build checks pass; desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-reasoning-review",
+        "pending-manual-check:browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-reasoning-review",
+        "pending-manual-check:browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "tara-critical-thinking-full-mock-v1",
+      "examId": "tara",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/tara-full-reasoning-mocks.yaml",
+      "featureId": "tara-full-reasoning-mocks",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-reasoning-and-language-review",
+          "status": "pending",
+          "evidence": "A separate TARA/TSA reasoning teacher and bilingual reviewer must verify all 44 prompts, distractors, answer keys, official family labels and difficulty progression.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "student-timing-calibration",
+          "status": "pending",
+          "evidence": "Run both complete modules with representative students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.",
+          "viewports": [
+            "student-session"
+          ]
+        },
+        {
+          "id": "real-device-review",
+          "status": "pending",
+          "evidence": "Verify long argument text, tables, five-option navigation and persistence on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-reasoning-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-reasoning-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "tara-problem-solving-full-mock-v1",
+      "examId": "tara",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/tara-full-reasoning-mocks.yaml",
+      "featureId": "tara-full-reasoning-mocks",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-reasoning-and-language-review",
+          "status": "pending",
+          "evidence": "A separate TARA/TSA reasoning teacher and bilingual reviewer must verify all 44 prompts, distractors, answer keys, official family labels and difficulty progression.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "student-timing-calibration",
+          "status": "pending",
+          "evidence": "Run both complete modules with representative students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.",
+          "viewports": [
+            "student-session"
+          ]
+        },
+        {
+          "id": "real-device-review",
+          "status": "pending",
+          "evidence": "Verify long argument text, tables, five-option navigation and persistence on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-reasoning-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-reasoning-and-language-review",
+        "pending-manual-check:student-timing-calibration",
+        "pending-manual-check:real-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "tara-exam-guide",
+      "examId": "tara",
+      "kind": "exam-guide",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/multi-exam-official-guides.yaml",
+      "featureId": "multi-exam-official-guides",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "multi-exam-responsive-visual-review",
+          "status": "pending",
+          "evidence": "Review the exam switcher, four contextual tabs, year cards and three official guide pages at desktop, tablet and phone sizes.",
+          "viewports": [
+            "1440x900",
+            "768x1024",
+            "390x844"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:multi-exam-responsive-visual-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:multi-exam-responsive-visual-review",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "tara-starting-point-v1",
+      "examId": "tara",
+      "kind": "preparation-map",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/exam-aware-profile-first-practice.yaml",
+      "featureId": "exam-aware-profile-first-practice",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "real-device-accessibility-uat",
+          "status": "pending",
+          "evidence": "Complete the same profile-to-result journey on real iPhone Safari, iPad Safari and desktop browsers, including keyboard-only, screen-reader and reduced-motion checks.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:real-device-accessibility-uat"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:real-device-accessibility-uat",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "tara-writing-task-v1",
+      "examId": "tara",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/tara-lnat-writing-practice.yaml",
+      "featureId": "tara-lnat-writing-practice",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-writing-review",
+          "status": "pending",
+          "evidence": "A separate TARA/LNAT writing teacher must review prompt fairness, construct coverage, language and difficulty.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "browser-device-review",
+          "status": "pending",
+          "evidence": "Automated component, persistence, type and production-build checks pass; direct desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-writing-review",
+        "pending-manual-check:browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-writing-review",
+        "pending-manual-check:browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "lnat-section-a-starter-v1",
+      "examId": "lnat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/lnat-section-a-starter.yaml",
+      "featureId": "lnat-section-a-starter",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-lnat-review",
+          "status": "pending",
+          "evidence": "A separate LNAT teacher must verify passage quality, construct coverage, distractors, answer keys and difficulty spread.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "browser-device-review",
+          "status": "pending",
+          "evidence": "Automated component, type and production-build checks pass; desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-lnat-review",
+        "pending-manual-check:browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-lnat-review",
+        "pending-manual-check:browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "lnat-section-a-full-mock-v1",
+      "examId": "lnat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/lnat-section-a-full-mock.yaml",
+      "featureId": "lnat-section-a-full-mock",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-lnat-full-mock-review",
+          "status": "pending",
+          "evidence": "A separate LNAT teacher and English-language reviewer must verify every passage, construct, distractor, answer key and difficulty spread.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "full-mock-student-timing-pilot",
+          "status": "pending",
+          "evidence": "Real students must complete the 95-minute session so passage load, pacing and interpretation can be calibrated without claiming official equivalence.",
+          "viewports": [
+            "student"
+          ]
+        },
+        {
+          "id": "full-mock-browser-device-review",
+          "status": "pending",
+          "evidence": "Desktop, tablet and phone review must confirm passage navigation, option selection, autosave and no horizontal overflow across all 42 questions.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-lnat-full-mock-review",
+        "pending-manual-check:full-mock-student-timing-pilot",
+        "pending-manual-check:full-mock-browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-lnat-full-mock-review",
+        "pending-manual-check:full-mock-student-timing-pilot",
+        "pending-manual-check:full-mock-browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "lnat-exam-guide",
+      "examId": "lnat",
+      "kind": "exam-guide",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/multi-exam-official-guides.yaml",
+      "featureId": "multi-exam-official-guides",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "multi-exam-responsive-visual-review",
+          "status": "pending",
+          "evidence": "Review the exam switcher, four contextual tabs, year cards and three official guide pages at desktop, tablet and phone sizes.",
+          "viewports": [
+            "1440x900",
+            "768x1024",
+            "390x844"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:multi-exam-responsive-visual-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:multi-exam-responsive-visual-review",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "lnat-starting-point-v1",
+      "examId": "lnat",
+      "kind": "preparation-map",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/exam-aware-profile-first-practice.yaml",
+      "featureId": "exam-aware-profile-first-practice",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "real-device-accessibility-uat",
+          "status": "pending",
+          "evidence": "Complete the same profile-to-result journey on real iPhone Safari, iPad Safari and desktop browsers, including keyboard-only, screen-reader and reduced-motion checks.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:real-device-accessibility-uat"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:real-device-accessibility-uat",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "lnat-section-b-writing-v1",
+      "examId": "lnat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/tara-lnat-writing-practice.yaml",
+      "featureId": "tara-lnat-writing-practice",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-writing-review",
+          "status": "pending",
+          "evidence": "A separate TARA/LNAT writing teacher must review prompt fairness, construct coverage, language and difficulty.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "browser-device-review",
+          "status": "pending",
+          "evidence": "Automated component, persistence, type and production-build checks pass; direct desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-writing-review",
+        "pending-manual-check:browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-writing-review",
+        "pending-manual-check:browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "ucat-verbal-reasoning-starter-v1",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/ucat-verbal-reasoning-starter.yaml",
+      "featureId": "ucat-verbal-reasoning-starter",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-ucat-review",
+          "status": "pending",
+          "evidence": "A separate UCAT teacher must verify passage style, answer keys, distractors, pace and difficulty spread.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "browser-device-review",
+          "status": "pending",
+          "evidence": "Automated component and CSS contracts pass; desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-ucat-review",
+        "pending-manual-check:browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-ucat-review",
+        "pending-manual-check:browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "ucat-verbal-reasoning-full-mock-v1",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/ucat-verbal-reasoning-full-mock.yaml",
+      "featureId": "ucat-verbal-reasoning-full-mock",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-ucat-vr-full-mock-review",
+          "status": "pending",
+          "evidence": "A separate UCAT verbal-reasoning and English-language reviewer must verify every passage, evidence boundary, distractor, answer key and difficulty spread.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "full-vr-student-timing-pilot",
+          "status": "pending",
+          "evidence": "Real students must complete the 22-minute session to calibrate reading load and pacing without deriving an official scale score.",
+          "viewports": [
+            "student"
+          ]
+        },
+        {
+          "id": "full-vr-browser-device-review",
+          "status": "pending",
+          "evidence": "Desktop, tablet and phone review must verify all eleven passage groups, response persistence, timer and no horizontal overflow.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-ucat-vr-full-mock-review",
+        "pending-manual-check:full-vr-student-timing-pilot",
+        "pending-manual-check:full-vr-browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-ucat-vr-full-mock-review",
+        "pending-manual-check:full-vr-student-timing-pilot",
+        "pending-manual-check:full-vr-browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "ucat-exam-guide",
+      "examId": "ucat",
+      "kind": "exam-guide",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/multi-exam-official-guides.yaml",
+      "featureId": "multi-exam-official-guides",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "multi-exam-responsive-visual-review",
+          "status": "pending",
+          "evidence": "Review the exam switcher, four contextual tabs, year cards and three official guide pages at desktop, tablet and phone sizes.",
+          "viewports": [
+            "1440x900",
+            "768x1024",
+            "390x844"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:multi-exam-responsive-visual-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:multi-exam-responsive-visual-review",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "ucat-starting-point-v1",
+      "examId": "ucat",
+      "kind": "preparation-map",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/exam-aware-profile-first-practice.yaml",
+      "featureId": "exam-aware-profile-first-practice",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "real-device-accessibility-uat",
+          "status": "pending",
+          "evidence": "Complete the same profile-to-result journey on real iPhone Safari, iPad Safari and desktop browsers, including keyboard-only, screen-reader and reduced-motion checks.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:real-device-accessibility-uat"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:real-device-accessibility-uat",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "ucat-quantitative-reasoning-starter-v1",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/ucat-quantitative-reasoning-starter.yaml",
+      "featureId": "ucat-quantitative-reasoning-starter",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-quantitative-review",
+          "status": "pending",
+          "evidence": "A separate UCAT quantitative teacher must verify every calculation, distractor, data presentation, pace and difficulty spread.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "browser-device-review",
+          "status": "pending",
+          "evidence": "Automated component, table and CSS contracts pass; direct desktop, tablet and phone visual review remains explicit.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-quantitative-review",
+        "pending-manual-check:browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-quantitative-review",
+        "pending-manual-check:browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "ucat-quantitative-reasoning-full-mock-v1",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/ucat-quantitative-reasoning-full-mock.yaml",
+      "featureId": "ucat-quantitative-reasoning-full-mock",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-ucat-quantitative-full-mock-review",
+          "status": "pending",
+          "evidence": "A separate UCAT Quantitative Reasoning reviewer must verify every calculation, unit, rounding rule, distractor, data presentation and difficulty spread.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "full-quantitative-student-timing-pilot",
+          "status": "pending",
+          "evidence": "Real students must complete the 26-minute session to calibrate calculation load and pacing without deriving an official scale score.",
+          "viewports": [
+            "student"
+          ]
+        },
+        {
+          "id": "full-quantitative-browser-device-review",
+          "status": "pending",
+          "evidence": "Desktop, tablet and phone review must verify every table, calculator, response persistence, timer and absence of horizontal page overflow.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-ucat-quantitative-full-mock-review",
+        "pending-manual-check:full-quantitative-student-timing-pilot",
+        "pending-manual-check:full-quantitative-browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-ucat-quantitative-full-mock-review",
+        "pending-manual-check:full-quantitative-student-timing-pilot",
+        "pending-manual-check:full-quantitative-browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "ucat-decision-making-starter-v1",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/ucat-specialist-starters.yaml",
+      "featureId": "ucat-specialist-starters",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-specialist-review",
+          "status": "pending",
+          "evidence": "Separate UCAT subject reviewers must verify every answer key, scoring case, professional judgement, distractor and time expectation.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "browser-device-review",
+          "status": "pending",
+          "evidence": "Automated interaction and CSS contracts pass; direct desktop, tablet, phone, keyboard and screen-reader review remains explicit.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-specialist-review",
+        "pending-manual-check:browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-specialist-review",
+        "pending-manual-check:browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "ucat-decision-making-full-mock-v1",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/ucat-decision-making-full-mock.yaml",
+      "featureId": "ucat-decision-making-full-mock",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-ucat-decision-full-mock-review",
+          "status": "pending",
+          "evidence": "A separate UCAT Decision Making reviewer must verify every rule set, statistical calculation, syllogism, argument, distractor, answer key and difficulty spread.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "full-decision-student-timing-pilot",
+          "status": "pending",
+          "evidence": "Real students must complete the 37-minute session to calibrate reasoning load and pacing without deriving an official scale score.",
+          "viewports": [
+            "student"
+          ]
+        },
+        {
+          "id": "full-decision-browser-device-review",
+          "status": "pending",
+          "evidence": "Desktop, tablet and phone review must verify all tables, five-statement sets, calculator, response persistence, timer and no horizontal overflow.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-ucat-decision-full-mock-review",
+        "pending-manual-check:full-decision-student-timing-pilot",
+        "pending-manual-check:full-decision-browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-ucat-decision-full-mock-review",
+        "pending-manual-check:full-decision-student-timing-pilot",
+        "pending-manual-check:full-decision-browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "ucat-situational-judgement-starter-v1",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/ucat-specialist-starters.yaml",
+      "featureId": "ucat-specialist-starters",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-specialist-review",
+          "status": "pending",
+          "evidence": "Separate UCAT subject reviewers must verify every answer key, scoring case, professional judgement, distractor and time expectation.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "browser-device-review",
+          "status": "pending",
+          "evidence": "Automated interaction and CSS contracts pass; direct desktop, tablet, phone, keyboard and screen-reader review remains explicit.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-specialist-review",
+        "pending-manual-check:browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-specialist-review",
+        "pending-manual-check:browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "ucat-situational-judgement-full-mock-v1",
+      "examId": "ucat",
+      "kind": "practice-library",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/ucat-situational-judgement-full-mock.yaml",
+      "featureId": "ucat-situational-judgement-full-mock",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-ucat-situational-professional-review",
+          "status": "pending",
+          "evidence": "Separate UK medical and dental professionalism reviewers must verify every scenario, response distinction, answer key, cultural-language assumption and scope boundary.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "full-situational-student-timing-pilot",
+          "status": "pending",
+          "evidence": "Real students must complete the 26-minute session to calibrate reading load, decision pace and cross-cultural clarity without deriving an official Band.",
+          "viewports": [
+            "student"
+          ]
+        },
+        {
+          "id": "full-situational-browser-device-review",
+          "status": "pending",
+          "evidence": "Desktop, tablet and phone review must verify every rating scale, most/least control, response persistence, timer and absence of horizontal page overflow.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-ucat-situational-professional-review",
+        "pending-manual-check:full-situational-student-timing-pilot",
+        "pending-manual-check:full-situational-browser-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-ucat-situational-professional-review",
+        "pending-manual-check:full-situational-student-timing-pilot",
+        "pending-manual-check:full-situational-browser-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "tmua-specimen-p1-worked-explanations-v1",
+      "examId": "tmua",
+      "kind": "review-notes",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/tmua-specimen-p1-deep-review.yaml",
+      "featureId": "tmua-specimen-p1-deep-review",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "responsive-result-review",
+          "status": "pending",
+          "evidence": "在手机、iPad 和电脑上提交 Specimen Paper 1，检查锁定与解锁结果页、KaTeX 溢出及 20 份解析的阅读节奏。",
+          "viewports": [
+            "390x844",
+            "768x1024",
+            "1440x900"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:responsive-result-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:responsive-result-review",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "tmua-six-week-review-plan-v1",
+      "examId": "tmua",
+      "kind": "review-notes",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/tmua-invite-bound-review-plan.yaml",
+      "featureId": "tmua-invite-bound-review-plan",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "responsive-entitled-plan-review",
+          "status": "pending",
+          "viewports": [
+            "phone",
+            "tablet",
+            "desktop"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:responsive-entitled-plan-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:responsive-entitled-plan-review",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "esat-mathematics-review-notes-v1",
+      "examId": "esat",
+      "kind": "review-notes",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/esat-mathematics-review-notes.yaml",
+      "featureId": "esat-mathematics-review-notes",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-mathematics-bilingual-and-similarity-review",
+          "status": "pending",
+          "evidence": "A separate mathematics teacher, bilingual terminology reviewer and rights/similarity reviewer must approve the complete revision before final publication status.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "student-comprehension-and-device-review",
+          "status": "pending",
+          "evidence": "Automated route, DOM, type, build and Chromium desktop/tablet/phone overflow checks pass; representative A-Level, IB and AP students plus real-device reviewers still need to validate comprehension and layout.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-mathematics-bilingual-and-similarity-review",
+        "pending-manual-check:student-comprehension-and-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-mathematics-bilingual-and-similarity-review",
+        "pending-manual-check:student-comprehension-and-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "esat-science-review-notes-v1",
+      "examId": "esat",
+      "kind": "review-notes",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/esat-science-review-notes.yaml",
+      "featureId": "esat-science-review-notes",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-three-subject-review",
+          "status": "pending",
+          "evidence": "Separate Physics, Chemistry and Biology teachers plus a bilingual and rights/similarity reviewer must approve the full revision before final publication status.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "student-comprehension-and-real-device-review",
+          "status": "pending",
+          "evidence": "Automated DOM, type, build and Chromium desktop/tablet/phone checks pass; representative A-Level, IB and AP students and real-device reviewers must still validate comprehension and layout.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-three-subject-review",
+        "pending-manual-check:student-comprehension-and-real-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-three-subject-review",
+        "pending-manual-check:student-comprehension-and-real-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "esat-review-notes-v1",
+      "examId": "esat",
+      "kind": "review-notes",
+      "catalogStatus": "internal-review",
+      "visibility": "internal",
+      "featureManifest": null,
+      "featureId": null,
+      "featureStatus": null,
+      "automatedReady": false,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [],
+      "closedBetaBlockers": [
+        "internal-product",
+        "missing-feature-manifest"
+      ],
+      "finalPublicationBlockers": [
+        "internal-product",
+        "missing-feature-manifest",
+        "catalog-status:internal-review"
+      ]
+    },
+    {
+      "productId": "tara-review-notes-v1",
+      "examId": "tara",
+      "kind": "review-notes",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/tara-review-notes.yaml",
+      "featureId": "tara-review-notes",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-reasoning-writing-and-bilingual-review",
+          "status": "pending",
+          "evidence": "A separate reasoning teacher, writing teacher, bilingual reviewer and rights/similarity reviewer must approve the complete revision before final publication.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "student-comprehension-and-real-device-review",
+          "status": "pending",
+          "evidence": "Automated route, DOM, type, build and Chromium viewport checks pass; representative students and real-device reviewers still need to validate comprehension and layout.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-reasoning-writing-and-bilingual-review",
+        "pending-manual-check:student-comprehension-and-real-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-reasoning-writing-and-bilingual-review",
+        "pending-manual-check:student-comprehension-and-real-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "lnat-review-notes-v1",
+      "examId": "lnat",
+      "kind": "review-notes",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/lnat-review-notes.yaml",
+      "featureId": "lnat-review-notes",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-reading-writing-bilingual-and-rights-review",
+          "status": "pending",
+          "evidence": "A separate LNAT reading teacher, writing teacher, bilingual reviewer and rights/similarity reviewer must approve the complete revision before final publication.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "student-comprehension-and-real-device-review",
+          "status": "pending",
+          "evidence": "Automated route, DOM, type, build and Chromium viewport checks run independently; representative students and real-device reviewers must still validate comprehension and layout.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-reading-writing-bilingual-and-rights-review",
+        "pending-manual-check:student-comprehension-and-real-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-reading-writing-bilingual-and-rights-review",
+        "pending-manual-check:student-comprehension-and-real-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    },
+    {
+      "productId": "ucat-review-notes-v1",
+      "examId": "ucat",
+      "kind": "review-notes",
+      "catalogStatus": "teaching-preview",
+      "visibility": "public",
+      "featureManifest": "verification/features/ucat-review-notes.yaml",
+      "featureId": "ucat-review-notes",
+      "featureStatus": "partial",
+      "automatedReady": true,
+      "manualReady": false,
+      "closedBetaReady": false,
+      "finalPublicationReady": false,
+      "manualApprovals": [],
+      "pendingManualChecks": [
+        {
+          "id": "independent-ucat-medical-bilingual-and-rights-review",
+          "status": "pending",
+          "evidence": "A separate UCAT teacher, UK medical professional, bilingual reviewer and rights/similarity reviewer must approve the complete revision before final publication.",
+          "viewports": [
+            "content"
+          ]
+        },
+        {
+          "id": "student-comprehension-and-real-device-review",
+          "status": "pending",
+          "evidence": "Automated route, DOM, type, build and Chromium viewport checks run independently; representative students and real-device reviewers must still validate comprehension and layout.",
+          "viewports": [
+            "desktop",
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "closedBetaBlockers": [
+        "pending-manual-check:independent-ucat-medical-bilingual-and-rights-review",
+        "pending-manual-check:student-comprehension-and-real-device-review"
+      ],
+      "finalPublicationBlockers": [
+        "pending-manual-check:independent-ucat-medical-bilingual-and-rights-review",
+        "pending-manual-check:student-comprehension-and-real-device-review",
+        "catalog-status:teaching-preview",
+        "feature-status:partial"
+      ]
+    }
+  ]
+}

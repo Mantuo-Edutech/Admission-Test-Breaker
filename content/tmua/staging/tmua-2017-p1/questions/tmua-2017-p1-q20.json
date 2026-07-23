@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                 \u0003\n                                                 \u0003\n                                                 \u0003\n\nʹͲ\u0003    \u0017\u0003\u0003\u0003\u0003\u0003ܴܳǡ\u0003ܴܲ\u0003\u0003ܲܳ\u0003\u0003\u0003ܴܲܳ\u0003\u0003ܽǡ\u0003\u0003ܽ ൅ ݀\u0003\u0003ܽ ൅ ʹ݀\u0003\n        ǡ\u0003\u0003ܽ\u0003\u0003݀\u0003\u0003\u0003\u0003 \u0003\u0003͵݀ ൐ ʹܽǤ\u0003\n       \u0003\u0003\n       \u001a\u0003\u0003\u0003\u0003ǡ\u0003\u0003ǡ\u0003\u0003\u0003\u0003\u0003\u0003ܴܲܳǫ\u0003\n\u0003\n       A   Ͳ\u0003 ൏ \u0003\u0003ܴܲܳ\u0003 ൏ \u0003͸Ͳ\u0003\n\n\u0003\n       B   Ͳ\u0003 ൏ \u0003\u0003ܴܲܳ\u0003 ൏ \u0003ͳʹͲ\u0003\n\n\u0003\n       C   ͸Ͳ\u0003 ൏ \u0003\u0003ܴܲܳ\u0003 ൏ \u0003ͳʹͲ\u0003\n\n\u0003\n       D   ͸Ͳ\u0003 ൏ \u0003\u0003ܴܲܳ\u0003 ൏ \u0003ͳͺͲ\u0003\n\n\u0003\n       E   ͳʹͲ\u0003 ൏ \u0003\u0003ܴܲܳ\u0003 ൏ \u0003ͳͺͲ\u0003\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n                                           \b\u0011\u0007\u0003\u0012 \u0003\u0017\b\u0016\u0017\u0003\n\n\u0003\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0015\u0015"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "ܴܳǡܴܲܲܳܴܲܳܽǡܽ ൅ ݀ܽ ൅ 2݀\n        ǡܽ݀ 3݀ ൐ 2ܽǤ\n       \n       ǡǡܴܲܳǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0 ൏ ܴܲܳ ൏ 60"
+    },
+    {
+      "label": "B",
+      "rawText": "0 ൏ ܴܲܳ ൏ 120"
+    },
+    {
+      "label": "C",
+      "rawText": "60 ൏ ܴܲܳ ൏ 120"
+    },
+    {
+      "label": "D",
+      "rawText": "60 ൏ ܴܲܳ ൏ 180"
+    },
+    {
+      "label": "E",
+      "rawText": "120 ൏ ܴܲܳ ൏ 180\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n                                           ED E\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "It would be really helpful to sketch this triangle so that we don’t get confused! We will write θ\nfor the angle ∠P RQ.\n\n                                                      R\n\n                                                      θ       a\n                                      a+d\n                                                                    Q\n\n                                                 a + 2d\n                                 P\n\n\nIt is clear that we want to use the cosine rule to relate the three sides and the angle θ. Using\n‘c2 = a2 + b2 − 2ab cos C’, we have\n\n                             (a + 2d)2 = a2 + (a + d)2 − 2a(a + d) cos θ\n\nwhich we can expand and simplify to give\n\n                          a2 + 4ad + 4d2 = 2a2 + 2ad + d2 − 2a(a + d) cos θ\n\nRearranging gives\n                                                 a2 − 2ad − 3d2\n                                       cos θ =\n                                                    2a(a + d)\nWe can simplify this by noticing that the numerator factorises:\n\n                                            (a + d)(a − 3d)   a − 3d\n                                  cos θ =                   =\n                                               2a(a + d)        2a\n\nSince 3d > 2a, a − 3d < −a, and so cos θ < −a     1                     ◦\n                                           2a = − 2 . This gives θ > 120 , and so the answer\nmust be option E.\nWe can go further and show that θ < 180◦ . Since P QR is a triangle, the length P Q must be less\nthan the sum of P R and RQ, that is a + 2d < a + d + a, so d < a. This gives cos θ > −2a\n                                                                                      2a = −1\nso θ < 180◦ .\n\nAn alternative approach is to just try values for d. We are given that d > 23 a, so we could try\nd = 23 a. This gives side lengths of a, 53 a, 73 a, which we can take to be 3, 5, 7 if we choose a = 3.\nPlugging these lengths into the cosine rule gives θ = 120◦ , so this is one limit.\nWe are allowed larger values of d. If we take d too large, then we will no longer have a triangle,\nas P Q > P R + RQ. So as d increases, the angle θ must increase too. Therefore the answer must\nbe E: 120◦ < θ < 180◦ .\n\n\n\n\nVersion 1.1, March 2019                                                                       Page 24\n\n                                                                                          © UCLES 2019\n\f\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support:\nadmissionstesting.org/help"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        25,
+        26
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

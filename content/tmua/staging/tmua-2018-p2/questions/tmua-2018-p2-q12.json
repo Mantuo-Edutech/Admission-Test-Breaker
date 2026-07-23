@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q12",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 12,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "12   Consider the following statement:\n\n         For any positive integer N there is a positive integer K such that\n         N (Km + 1) − 1 is not prime for any positive integer m.\n\n     Which one of the following is the negation of this statement?\n\n     A For any positive integer N there is a positive integer K such that\n       there is a positive integer m for which N (Km + 1) − 1 is prime.\n\n     B For any positive integer N there is a positive integer K such that\n       there is a positive integer m for which N (Km + 1) − 1 is not prime.\n\n     C For any positive integer N there is a positive integer K such that\n       for any positive integer m, N (Km + 1) − 1 is not prime.\n\n     D For any positive integer N , any positive integer K\n       and any positive integer m, N (Km + 1) − 1 is not prime.\n\n     E There is a positive integer N such that for any positive integer K\n       there is a positive integer m for which N (Km + 1) − 1 is not prime.\n\n     F There is a positive integer N such that for any positive integer K\n       there is a positive integer m for which N (Km + 1) − 1 is prime.\n\n     G There is a positive integer N such that for any positive integer K\n       and any positive integer m, N (Km + 1) − 1 is prime.\n\n     H There is a positive integer N and a positive integer K for which\n       there is no positive integer m for which N (Km + 1) − 1 is prime.\n\n\n\n\n                                            14"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following statement:\n\n         For any positive integer N there is a positive integer K such that\n         N (Km + 1) − 1 is not prime for any positive integer m.\n\n     Which one of the following is the negation of this statement?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "For any positive integer N there is a positive integer K such that\n       there is a positive integer m for which N (Km + 1) − 1 is prime."
+    },
+    {
+      "label": "B",
+      "rawText": "For any positive integer N there is a positive integer K such that\n       there is a positive integer m for which N (Km + 1) − 1 is not prime."
+    },
+    {
+      "label": "C",
+      "rawText": "For any positive integer N there is a positive integer K such that\n       for any positive integer m, N (Km + 1) − 1 is not prime."
+    },
+    {
+      "label": "D",
+      "rawText": "For any positive integer N , any positive integer K\n       and any positive integer m, N (Km + 1) − 1 is not prime."
+    },
+    {
+      "label": "E",
+      "rawText": "There is a positive integer N such that for any positive integer K\n       there is a positive integer m for which N (Km + 1) − 1 is not prime."
+    },
+    {
+      "label": "F",
+      "rawText": "There is a positive integer N such that for any positive integer K\n       there is a positive integer m for which N (Km + 1) − 1 is prime."
+    },
+    {
+      "label": "G",
+      "rawText": "There is a positive integer N such that for any positive integer K\n       and any positive integer m, N (Km + 1) − 1 is prime."
+    },
+    {
+      "label": "H",
+      "rawText": "There is a positive integer N and a positive integer K for which\n       there is no positive integer m for which N (Km + 1) − 1 is prime."
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The negation of ‘for any N , P ’ is ‘there exists N such that not P ’. So none of options A-D\ncan be a negation of the original statement, but all of E-H still have the potential to be.\nIn this case, the statement P is ‘there is a postiive integer K such that N (Km + 1) − 1 is not\nprime for any positive integer m’; this is a statement of the form ‘there exists’, and we wish\nto negate it. The negation of ‘there exists K such that Q’ is ‘for all K, not Q’, so we are\nlooking for a statement which continues with ‘for all positive integers K’, and this eliminates\noption H. (‘For any’ and ‘for all’ are equivalent ways of expressing this.) So we are now looking\nat options E, F and G.\nThe statement Q that we wish to negate is ‘N (Km + 1) − 1 is not prime for any positive\ninteger m’, which we can rewrite with the quantifier (‘for any’) at the start of the statement to\ngive ‘for any positive integer m, N (Km + 1) − 1 is not prime’. And the negation of ‘for all m,\nR’ is ‘there exists m such that not R’, which in this case is ‘there exists a positive integer m\nsuch that it is not the case that N (Km + 1) − 1 is not prime’, so option G is not correct.\nNow ‘not not S’ is equivalent to S, so this becomes ‘there exists a positive integer m such that\nN (Km + 1) − 1 is prime’. The only option which matches this is option F, and this is therefore\nthe correct answer.\n\n\n\n\nVersion 1.0, April 2019                                                                  Page 14"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

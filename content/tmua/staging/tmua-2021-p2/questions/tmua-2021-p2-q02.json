@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "2   A(0, 2) and C(4, 0) are opposite vertices of the square ABCD.\n\n    What is the equation of the straight line through B and D ?\n\n    A y = −2x + 5\n\n    B y = − 12 x − 3\n\n    C y = − 12 x + 2\n\n    D y=x\n\n    E y = 2x − 3\n\n    F y = 2x + 2\n\n\n\n\n                                           4"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A(0, 2) and C(4, 0) are opposite vertices of the square ABCD.\n\n    What is the equation of the straight line through B and D ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "y = −2x + 5"
+    },
+    {
+      "label": "B",
+      "rawText": "y = − 12 x − 3"
+    },
+    {
+      "label": "C",
+      "rawText": "y = − 12 x + 2"
+    },
+    {
+      "label": "D",
+      "rawText": "y=x"
+    },
+    {
+      "label": "E",
+      "rawText": "y = 2x − 3"
+    },
+    {
+      "label": "F",
+      "rawText": "y = 2x + 2"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can sketch the situation:\n\n                                y\n\n\n                                                   D\n\n\n                               A\n\n\n\n\n                                    0                    C              x\n\n                                        B\n\n\n\n\nWe know that the two diagonals of the square bisect each other at right angles, so this question\nrequires us to find the perpendicular bisector of AC.\nThe midpoint of AC is 0+4     2+0\n                                  \u0001\n                           2 , 2    = (2, 1), which is the centre of the square.\nThe gradient of AC is 0−2     1\n                      4−0 = − 2 , so the gradient of BD is 2.\nThe equation of BD is therefore y − 1 = 2(x − 2), which rearranges to give y = 2x − 3, which is\noption E.\n\n\n\n\nVersion 1.0, March 2022                                                                  Page 4"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

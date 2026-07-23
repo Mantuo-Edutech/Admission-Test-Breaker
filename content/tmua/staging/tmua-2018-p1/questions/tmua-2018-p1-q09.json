@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "9   Find the complete set of values of the constant c for which the cubic equation\n\n\n                                    2x3 − 3x2 − 12x + c = 0\n\n    has three distinct real solutions.\n\n    A −20 < c < 7\n\n    B −7 < c < 20\n\n    C c>7\n\n    D c > −7\n\n    E   c < 20\n\n    F   c < −20\n\n\n\n\n                                            11"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the complete set of values of the constant c for which the cubic equation\n\n\n                                    2x3 − 3x2 − 12x + c = 0\n\n    has three distinct real solutions."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−20 < c < 7"
+    },
+    {
+      "label": "B",
+      "rawText": "−7 < c < 20"
+    },
+    {
+      "label": "C",
+      "rawText": "c>7"
+    },
+    {
+      "label": "D",
+      "rawText": "c > −7"
+    },
+    {
+      "label": "E",
+      "rawText": "c < 20"
+    },
+    {
+      "label": "F",
+      "rawText": "c < −20"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Commentary: We want the cubic equation 2x3 −3x2 −12x+c = 0 to have three distinct\n      real solutions. We don’t know any techniques for finding the roots of a cubic equation,\n      so we will have to be creative. (Actually, there is a formula, often known as Cardano’s\n      formula, for solving a cubic equation, but you are not expected to know this.)\n      What we do know how to do is to sketch a cubic graph by finding its turning points and\n      y-axis intercept, even if we don’t know the x-axis intercepts, so we will do this.\n\nWe can find the stationary points on the graph of y = 2x3 − 3x2 − 12x + c by differentiating.\nWe have\n                    dy\n                       = 6x2 − 6x − 12 = 6(x2 − x − 2) = 6(x − 2)(x + 1)\n                    dx\n                                                          dy\nso there are stationary points at x = 2 and x = −1 (where dx = 0)\nThese have coordinates\n                                (−1, 7 + c)   and   (2, −20 + c)\nFor the equation 2x3 − 3x2 − 12x + c = 0 to have three distinct real solutions, we need the two\nturning points of the cubic to be on opposite sides of the x-axis, one above it and one below it.\nIt is clear that −20 + c < 7 + c, so we need −20 + c < 0 and 7 + c > 0. The first inequality\nbecomes c < 20 and the second c > −7.\nCombining these, there are three distinct real solutions if and only if −7 < c < 20, which is\noption B.\n\n\n\n\nVersion 1.0, April 2019                                                                  Page 11\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

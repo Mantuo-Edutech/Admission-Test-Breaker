@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "ͺ\u0003     Find the maximum angle ‫ ݔ‬in the range Ͳι ൑ ‫ ݔ‬൑ ͵͸Ͳι which satisfies the equation\n\n                                                                                ͹\n                 \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003  ଶ ሺʹ‫ݔ‬ሻ ൅ ξ͵ ሺʹ‫ݔ‬ሻ െ     ൌͲ\n                                                                                Ͷ\n\n       A      30ι\n\n       B      60ι\n\n       C      120ι\n\n       D      150ι\n\n       E      210ι\n\n       F      240ι\n\n       G      300ι\n\n       H      330ι\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the maximum angle ‫ ݔ‬in the range 0ι ൑ ‫ ݔ‬൑ 360ι which satisfies the equation\n\n                                                                                7\n                   ଶ ሺ2‫ݔ‬ሻ ൅ ξ3 ሺ2‫ݔ‬ሻ െ     ൌ0\n                                                                                4"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "30ι"
+    },
+    {
+      "label": "B",
+      "rawText": "60ι"
+    },
+    {
+      "label": "C",
+      "rawText": "120ι"
+    },
+    {
+      "label": "D",
+      "rawText": "150ι"
+    },
+    {
+      "label": "E",
+      "rawText": "210ι"
+    },
+    {
+      "label": "F",
+      "rawText": "240ι"
+    },
+    {
+      "label": "G",
+      "rawText": "300ι"
+    },
+    {
+      "label": "H",
+      "rawText": "330ι\n\n\n© UCLES 2016"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We note that the only angle involved is 2x, and 0◦ ⩽ x ⩽ 360◦ gives 0◦ ⩽ 2x ⩽ 720◦ .\nWe start by writing everything in terms of sin 2x, giving:\n                                               √\n                              (1 − sin2 2x) + 3 sin 2x − 74 = 0\n\nwhich rearranges to give                     √\n                                 sin2 2x −       3 sin 2x + 34 = 0.\nWe can apply the quadratic formula to this to obtain\n                                        √      √       √\n                                           3± 3−3        3\n                               sin 2x =              =\n                                               2       2\nand hence the possible values of 2x in the range are 2x = 60◦ , 120◦ , 420◦ and 480◦ . Thus the\nlargest possible value of x in the range 0◦ ⩽ x ⩽ 360◦ is 240◦ , and the answer is F.\n\n\n\n\n                                                  11\n                                                                                   © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

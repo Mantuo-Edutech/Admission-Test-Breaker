@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "id": "tara-reasoning-starter-v1",
+  "exam": "TARA",
+  "edition": "Reasoning Starter · Original v1",
+  "sectionLabel": "Critical Thinking + Problem Solving",
+  "sectionLabelZh": "批判思维与问题解决 · 满托原创短诊断",
+  "durationMinutes": 20,
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本练习依据 TARA 公开题型范围独立命题，不复制或改写 TARA、BMAT 或 TSA 的官方题面。",
+  "sourceAnchors": [
+    {
+      "id": "tara-content-specification",
+      "localPath": "content/official/raw/shared/TARA_Content_Specification.pdf",
+      "sha256": "d326e78305aefd999c42953de3024d403f27357ecbc0f3dd562134e8105822cd",
+      "usedFor": "Critical Thinking and Problem Solving scope boundary"
+    },
+    {
+      "id": "tara-question-guide",
+      "localPath": "content/official/raw/shared/TARA_Question_Guide.pdf",
+      "sha256": "afcee1ff9dd35025000cd7c5a4cef804fa31fb3e8870d5748ec8d3ac2c45a6cb",
+      "usedFor": "question-family terminology only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "tara-reasoning-starter-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A town park currently closes at 7 pm. A three-month pilot kept it open until 10 pm. During the pilot, evening visitor numbers rose substantially, while reported incidents did not increase. The lit paths were already maintained overnight, so the extra staffing cost was modest. The council should therefore make the later closing time permanent." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which option states the main conclusion of the argument?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The park's paths are lit overnight." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Evening visitor numbers rose during the pilot." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The extra staffing cost was modest." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The council should permanently close the park at 10 pm." }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["tara-critical-main-conclusion"],
+      "skillTags": ["argument-structure", "main-conclusion"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tara/original-practice/reasoning-starter-v1.json",
+      "sourceAnswerPath": "content/tara/original-practice/reasoning-starter-v1.json"
+    },
+    {
+      "id": "tara-reasoning-starter-v1-q02",
+      "number": 2,
+      "sourcePage": 2,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A university lecturer argues: ‘All lectures should be recorded. Students who miss a class could then watch it later, so recording lectures would improve their opportunity to learn the missed material.’" }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which assumption is required by this argument?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every student prefers recordings to live lectures." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "At least some students who miss class would be able and willing to use the recording." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Recorded lectures never contain technical problems." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Attendance at live lectures would remain unchanged." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["tara-critical-assumption"],
+      "skillTags": ["necessary-assumption", "argument-gap"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tara/original-practice/reasoning-starter-v1.json",
+      "sourceAnswerPath": "content/tara/original-practice/reasoning-starter-v1.json"
+    },
+    {
+      "id": "tara-reasoning-starter-v1-q03",
+      "number": 3,
+      "sourcePage": 3,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Schools with debate clubs report higher levels of civic participation among former pupils. Therefore, if every school creates a debate club, civic participation will necessarily rise." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "What is the principal flaw in this reasoning?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It assumes that civic participation can never be measured." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It gives too much detail about former pupils." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It treats an association as proof that the debate club caused the difference." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It concludes that debate should be removed from schools." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["tara-critical-flaw"],
+      "skillTags": ["correlation-causation", "evaluation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tara/original-practice/reasoning-starter-v1.json",
+      "sourceAnswerPath": "content/tara/original-practice/reasoning-starter-v1.json"
+    },
+    {
+      "id": "tara-reasoning-starter-v1-q04",
+      "number": 4,
+      "sourcePage": 4,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "A college plans to replace printed handbooks with digital copies, arguing that this will reduce the environmental impact of producing and distributing the handbooks." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which finding would most strengthen the argument?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Almost all students already own a suitable device, and producing the printed handbooks creates substantially more emissions than storing and downloading the files." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Some students like the smell of newly printed paper." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The handbook's cover was redesigned last year." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Digital files can use several different fonts." }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["tara-critical-evidence"],
+      "skillTags": ["strengthen-argument", "relevant-evidence"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tara/original-practice/reasoning-starter-v1.json",
+      "sourceAnswerPath": "content/tara/original-practice/reasoning-starter-v1.json"
+    },
+    {
+      "id": "tara-reasoning-starter-v1-q05",
+      "number": 5,
+      "sourcePage": 5,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "All research fellows submit a report. No incomplete report is published. Arun is a research fellow, and Arun's report was published." }] },
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which conclusion follows?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every submitted report is published." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Only research fellows write complete reports." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Arun submitted more than one report." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Arun's published report was complete." }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["tara-critical-inference"],
+      "skillTags": ["deduction", "necessary-conclusion"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tara/original-practice/reasoning-starter-v1.json",
+      "sourceAnswerPath": "content/tara/original-practice/reasoning-starter-v1.json"
+    },
+    {
+      "id": "tara-reasoning-starter-v1-q06",
+      "number": 6,
+      "sourcePage": 6,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Four talks, A, B, C and D, are scheduled one after another. A is before B. C is immediately after A. D is last. Which order is possible?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A, B, C, D" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A, C, B, D" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "B, A, C, D" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "C, A, B, D" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["tara-problem-ordering"],
+      "skillTags": ["ordering", "constraint-satisfaction"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tara/original-practice/reasoning-starter-v1.json",
+      "sourceAnswerPath": "content/tara/original-practice/reasoning-starter-v1.json"
+    },
+    {
+      "id": "tara-reasoning-starter-v1-q07",
+      "number": 7,
+      "sourcePage": 7,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Red, Blue and Green laboratories are inspected on Monday, Tuesday and Wednesday, one per day. Red is not inspected on Monday. Blue is inspected before Red. Green is inspected on Wednesday. When is Red inspected?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Monday" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Wednesday" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Tuesday" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It cannot be determined" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["tara-problem-constraints"],
+      "skillTags": ["scheduling", "elimination"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tara/original-practice/reasoning-starter-v1.json",
+      "sourceAnswerPath": "content/tara/original-practice/reasoning-starter-v1.json"
+    },
+    {
+      "id": "tara-reasoning-starter-v1-q08",
+      "number": 8,
+      "sourcePage": 8,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Adult tickets cost £12 and child tickets cost £7. A group buys 17 tickets for £159. How many adult tickets are bought?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "8" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "9" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "10" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "11" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["tara-problem-arithmetic"],
+      "skillTags": ["linear-modelling", "integer-solution"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tara/original-practice/reasoning-starter-v1.json",
+      "sourceAnswerPath": "content/tara/original-practice/reasoning-starter-v1.json"
+    },
+    {
+      "id": "tara-reasoning-starter-v1-q09",
+      "number": 9,
+      "sourcePage": 9,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "In a group of 60 students, 35 study French, 28 study German and 12 study both. How many study neither language?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "7" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "8" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "9" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["tara-problem-sets"],
+      "skillTags": ["inclusion-exclusion", "sets"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tara/original-practice/reasoning-starter-v1.json",
+      "sourceAnswerPath": "content/tara/original-practice/reasoning-starter-v1.json"
+    },
+    {
+      "id": "tara-reasoning-starter-v1-q10",
+      "number": 10,
+      "sourcePage": 10,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "Machine A processes 6 items per minute and Machine B processes 4 items per minute. Working together at constant rates, how long do they take to process 240 items?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "20 minutes" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "24 minutes" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "30 minutes" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "40 minutes" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["tara-problem-rates"],
+      "skillTags": ["combined-rate", "time"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tara/original-practice/reasoning-starter-v1.json",
+      "sourceAnswerPath": "content/tara/original-practice/reasoning-starter-v1.json"
+    }
+  ]
+}

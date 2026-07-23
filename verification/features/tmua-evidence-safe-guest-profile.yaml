@@ -3,12 +3,12 @@ feature:
   id: tmua-evidence-safe-guest-profile
   title: TMUA evidence-safe Guest preparation foundation
   status: verified
-  verifiedAt: 2026-07-14
+  verifiedAt: 2026-07-19
   userOutcome: >-
     A student can enter the TMUA space without an account, describe an exact
-    CAIE or Pearson IAL starting point, keep that profile inside the current
-    local Guest Space, and begin or resume a timed 2023 Paper 1 session with
-    honest storage and evidence boundaries.
+    CAIE, Pearson IAL, IB or AP mathematics starting point, keep that profile
+    inside the current Guest or authenticated Learner Space, and begin or
+    resume a timed native paper with honest storage and evidence boundaries.
 
 run:
   packageScript: verify
@@ -51,21 +51,26 @@ claims:
       knowledge coverage or readiness scores.
     artifacts:
       - src/features/preparation-profile/catalog.ts
+      - content/official/curriculum-source-registry.json
       - src/features/preparation-profile/domain.ts
       - src/features/preparation-profile/storage/local-store.ts
       - src/features/preparation-profile/components/ProfilePanel.tsx
       - tests/features/preparation-profile/domain.test.ts
+      - tests/content/official/curriculum-source-registry.test.ts
       - tests/features/preparation-profile/storage/local-store.test.ts
       - tests/features/preparation-profile/components/profile-panel.test.tsx
     automatedChecks:
+      - verify:curriculum-sources
       - test
       - typecheck
 
   - id: responsive-progressive-interface
     status: verified
     statement: >-
-      The profile is optional, AI is absent from the first interaction, and
-      the editorial layout adapts across desktop, tablet and phone widths.
+      Public exam information remains available before a profile, the local
+      course profile is required before personalised module choices, AI is
+      absent from the first interaction, and the editorial layout adapts
+      across desktop, tablet and phone widths.
     artifacts:
       - src/styles/practice.css
       - tests/app/front-door-accessibility.test.tsx
@@ -96,14 +101,20 @@ claims:
 boundaries:
   - This is local browser persistence, not production server storage.
   - Guest Space isolation is not a claim of production multi-tenant RLS.
-  - Course coverage and practical readiness remain unknown until reviewed mappings and learner evidence exist.
-  - Only TMUA 2023 Paper 1 currently has 20 published online questions.
-  - TMUA 2022 Paper 1 is structured staging data and remains unavailable to students until formula, figure and content review is complete.
+  - Course coverage is limited to the versioned CAIE/Pearson/IB/AP mapping; practical readiness remains unknown until learner evidence exists.
+  - >-
+    An official source URL is not treated as a local asset: the AP files have
+    verified internal hashes, while the IB origin-blocked files remain
+    explicitly un-downloaded.
+  - All 18 TMUA papers and 360 questions use native structured delivery; complete source PDFs are not exposed by the public practice runtime.
+  - Extraction staging for all remaining source papers stays non-publishable review evidence; separately reviewed typed datasets are the published student content.
   - No benchmark, admissions probability, paid interpretation or AI recommendation is produced by this feature.
 
 manualChecks:
   - id: responsive-viewport-review
     status: passed
+    reviewer: codex-agent
+    reviewerRole: interface-qa
     checkedAt: 2026-07-14
     evidence: Browser-rendered profile layout with no horizontal content overflow.
     viewports:

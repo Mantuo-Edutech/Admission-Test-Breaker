@@ -1,0 +1,1953 @@
+{
+  "schemaVersion": 1,
+  "bundleType": "question-import",
+  "id": "tmua-2021-p2-extraction-v1",
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "generatedAt": "2026-07-17T07:00:00.000Z",
+  "generatedBy": "tmua-extraction-cli",
+  "sourceDocumentIds": {
+    "question": "tmua-official-2021-paper-2",
+    "answerKey": "tmua-official-2021-answer-key",
+    "workedSolution": "tmua-official-2021-paper-2-worked-solutions"
+  },
+  "questionCount": 20,
+  "publishableQuestionCount": 0,
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q01",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 1,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "1   Find the value of   \u0002 4\u0003\n                              √    4\u0004\n                             3 x + 2 dx\n                         1        x\n\n    A −0.75\n\n    B 7.125\n\n    C 11\n\n    D 17\n\n    E 18\n\n    F 21.875\n\n    G 34.5\n\n\n\n\n                               3"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Find the value of    4\n                              √    4A\n                             3 x + 2 dx\n                         1        x"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "−0.75"
+        },
+        {
+          "label": "B",
+          "rawText": "7.125"
+        },
+        {
+          "label": "C",
+          "rawText": "11"
+        },
+        {
+          "label": "D",
+          "rawText": "17"
+        },
+        {
+          "label": "E",
+          "rawText": "18"
+        },
+        {
+          "label": "F",
+          "rawText": "21.875"
+        },
+        {
+          "label": "G",
+          "rawText": "34.5"
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We write the integral as powers of x and then integrate:\n                    Z 4\u0010                  Z 4\n                          √     4\u0011                 1\n                         3 x + 2 dx =           3x 2 + 4x−2 dx\n                     1          x          1\n                                          \" 3             #4\n                                           3x 2      4x−1\n                                       =           +\n                                            ( 32 )    −1\n                                                            1\n                                          \u0002 3            \u00034\n                                       = 2x 2 − 4x−1 1\n                                        = (2 × 8 − 4 × 41 ) − (2 × 1 − 4 × 1)\n                                        = 15 − (−2)\n                                        = 17\n\n\n\n\nVersion 1.0, March 2022                                                         Page 3"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            3
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q02",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 2,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "2   A(0, 2) and C(4, 0) are opposite vertices of the square ABCD.\n\n    What is the equation of the straight line through B and D ?\n\n    A y = −2x + 5\n\n    B y = − 12 x − 3\n\n    C y = − 12 x + 2\n\n    D y=x\n\n    E y = 2x − 3\n\n    F y = 2x + 2\n\n\n\n\n                                           4"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A(0, 2) and C(4, 0) are opposite vertices of the square ABCD.\n\n    What is the equation of the straight line through B and D ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "y = −2x + 5"
+        },
+        {
+          "label": "B",
+          "rawText": "y = − 12 x − 3"
+        },
+        {
+          "label": "C",
+          "rawText": "y = − 12 x + 2"
+        },
+        {
+          "label": "D",
+          "rawText": "y=x"
+        },
+        {
+          "label": "E",
+          "rawText": "y = 2x − 3"
+        },
+        {
+          "label": "F",
+          "rawText": "y = 2x + 2"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can sketch the situation:\n\n                                y\n\n\n                                                   D\n\n\n                               A\n\n\n\n\n                                    0                    C              x\n\n                                        B\n\n\n\n\nWe know that the two diagonals of the square bisect each other at right angles, so this question\nrequires us to find the perpendicular bisector of AC.\nThe midpoint of AC is 0+4     2+0\n                                  \u0001\n                           2 , 2    = (2, 1), which is the centre of the square.\nThe gradient of AC is 0−2     1\n                      4−0 = − 2 , so the gradient of BD is 2.\nThe equation of BD is therefore y − 1 = 2(x − 2), which rearranges to give y = 2x − 3, which is\noption E.\n\n\n\n\nVersion 1.0, March 2022                                                                  Page 4"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q03",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 3,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "3   A student is chosen at random from a class. Each student is equally likely to be\n    chosen.\n\n    Which of the following conditions is/are necessary for the probability that the\n                                   4\n    student wears glasses to equal    ?\n                                   15\n\n        I    Exactly 11 students in the class do not wear glasses.\n        II   The number of students in the class is divisible by 3.\n        III The class contains 30 students, and 8 of them wear glasses.\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                            5"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A student is chosen at random from a class. Each student is equally likely to be\n    chosen.\n\n    Which of the following conditions is/are necessary for the probability that the\n                                   4\n    student wears glasses to equal    ?\n                                   15\n\n        I    Exactly 11 students in the class do not wear glasses.\n        II   The number of students in the class is divisible by 3.\n        III The class contains 30 students, and 8 of them wear glasses."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The probability is given as a fraction in its lowest terms.\nThe probability that a student does not wear glasses is 11\n                                                        15 , so the ratio of glasses to non-glasses\nis 4 : 11, in its lowest terms.\nTherefore the number of glasses/non-glasses wearers could be 4 and 11 (total 15), or 8 and 22\n(total 30), or . . .\nNecessary means that it follows as a consequence.\nTherefore I and III are not necessary (there could be 22 non-glasses wearers or the class could\ncontain 15 students.\nThe total must be a multiple of 15, and so the number of students is divisible by 3.\nThe correct answer is therefore C.\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 5"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q04",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 4,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "4   Consider the following claim about positive integers a, b and c :\n\n\n                if a is a factor of bc, then a is a factor of b or a is a factor of c\n\n\n    Which of the following provide(s) a counterexample to this claim?\n\n        I    a = 5, b = 10, c = 20\n        II   a = 8, b = 4, c = 4\n        III a = 6, b = 7, c = 12\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                               6"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following claim about positive integers a, b and c :\n\n\n                if a is a factor of bc, then a is a factor of b or a is a factor of c\n\n\n    Which of the following provide(s) a counterexample to this claim?\n\n        I    a = 5, b = 10, c = 20\n        II   a = 8, b = 4, c = 4\n        III a = 6, b = 7, c = 12"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "I    bc = 200, a is a factor of 200, a is a factor of b, so not a counterexample.\n\nII   bc = 16, a is a factor of 16, a is not a factor of b and a is not a factor of c, so this is a\n     counterexample.\n\nIII bc = 84, a is a factor of 84, a is not a factor of b but a is a factor of c, so not a counterexample.\n\nThe correct option is therefore C.\n\n\n\n\nVersion 1.0, March 2022                                                                          Page 6"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q05",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 5,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "5   On which line is the ﬁrst error in the following argument?\n\n    A sin2 x + cos2 x = 1 for all values of x.\n                         \u0005\n    B Therefore cos x = 1 − sin2 x for all values of x.\n                              \u0005\n    C Hence 1 + cos x = 1 + 1 − sin2 x for all values of x.\n                            \u0003     \u0005            \u00042\n    D Thus (1 + cos x)2 = 1 + 1 − sin2 x for all values of x.\n\n    E Substituting x = π gives 0 = 4.\n\n\n\n\n                                            7"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "On which line is the ﬁrst error in the following argument?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "sin2 x + cos2 x = 1 for all values of x."
+        },
+        {
+          "label": "B",
+          "rawText": "B Therefore cos x = 1 − sin2 x for all values of x.\n                              B"
+        },
+        {
+          "label": "C",
+          "rawText": "Hence 1 + cos x = 1 + 1 − sin2 x for all values of x.\n                                 B            A2"
+        },
+        {
+          "label": "D",
+          "rawText": "Thus (1 + cos x)2 = 1 + 1 − sin2 x for all values of x."
+        },
+        {
+          "label": "E",
+          "rawText": "Substituting x = π gives 0 = 4."
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Line A is a known identity, so this is fine.\nLine B rearranges the identity to get cos2 x = 1 − sin2 x and then takes the square root of both\nsides. However, when we take the square root, we always get the positive (or zero) root, but\ncos x is negative for some values of x. So this is where the error is introduced.\nAnother way of seeing this is to start with the nonsensical 0 = 4 of line E, and substitute x = π\nin each line to find the first one which fails; it is, indeed, line B, as this gives −1 = 1.\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 7"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q06",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 6,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "6   Consider the following two statements about the polynomial f(x):\n\n        P : f(x) = 0 for exactly three real values of x\n        Q: f \u0002 (x) = 0 for exactly two real values of x\n\n    Which one of the following is correct?\n\n    A P is necessary but not suﬃcient for Q.\n\n    B P is suﬃcient but not necessary for Q.\n\n    C P is necessary and suﬃcient for Q.\n\n    D P is not necessary and not suﬃcient for Q.\n\n\n\n\n                                             8"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following two statements about the polynomial f(x):\n\n        P : f(x) = 0 for exactly three real values of x\n        Q: f  (x) = 0 for exactly two real values of x\n\n    Which one of the following is correct?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "P is necessary but not suﬃcient for Q."
+        },
+        {
+          "label": "B",
+          "rawText": "P is suﬃcient but not necessary for Q."
+        },
+        {
+          "label": "C",
+          "rawText": "P is necessary and suﬃcient for Q."
+        },
+        {
+          "label": "D",
+          "rawText": "P is not necessary and not suﬃcient for Q."
+        }
+      ],
+      "correctAnswer": "D",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "If f(x) = 0 has exactly three roots then there must be a stationary point between the first and\nsecond root, and another stationary point between the second and third roots, but there may be\nother stationary points. For example, here is a sketch of a degree 5 polynomial y = f(x) which\nhas f(x) = 0 for three real values of x but f ′ (x) = 0 for five real values of x:\n\n                                         y\n\n\n\n\n                                                                  x\n                                     0\n\n\n\n\nA second example is f(x) = x4 − x2 . Here, the graph of y = f(x) touches the x-axis at x = 0,\nso f(x) = 0 has exactly three real roots x = −1, 0, and 1, but three stationary points x = ± √12\nand x = 0:\n\n                                                 y\n\n\n\n\n                                                                  x\n                                −1           0               1\n\n\n\n\nSo P is not sufficient for Q.\nIt is also not necessary, for example f (x) = x3 − x + 1 has exactly two stationary points but\nonly one real root:\n\n\n\n\nVersion 1.0, March 2022                                                                  Page 8\n\f\nTest of Mathematics for University Admission, 2021 Paper 2 Solutions\n\n\n                                             y\n\n\n\n\n                                                            x\n                               −1        0           1\n\n\n\n\nSo option D is correct.\n\n\n\n\nVersion 1.0, March 2022                                                Page 9"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            8,
+            9
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q07",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 7,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "7   A circle has equation (x − 9)2 + (y + 2)2 = 4\n\n    A square has vertices at (1, 0), (1, 2), (−1, 2) and (−1, 0).\n\n    A straight line bisects both the area of the circle and the area of the square.\n\n    What is the x-coordinate of the point where this straight line meets the x-axis?\n\n    A 2\n\n    B 3\n\n    C 4\n\n    D 4.5\n\n    E 5\n\n    F 6\n\n    G The straight line is not uniquely determined by the information given, so there is\n      more than one possible point of intersection.\n\n    H There is no straight line that bisects both the area of the circle and the area of\n      the square.\n\n\n\n\n                                              9"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A circle has equation (x − 9)2 + (y + 2)2 = 4\n\n    A square has vertices at (1, 0), (1, 2), (−1, 2) and (−1, 0).\n\n    A straight line bisects both the area of the circle and the area of the square.\n\n    What is the x-coordinate of the point where this straight line meets the x-axis?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "2"
+        },
+        {
+          "label": "B",
+          "rawText": "3"
+        },
+        {
+          "label": "C",
+          "rawText": "4"
+        },
+        {
+          "label": "D",
+          "rawText": "4.5"
+        },
+        {
+          "label": "E",
+          "rawText": "5"
+        },
+        {
+          "label": "F",
+          "rawText": "6"
+        },
+        {
+          "label": "G",
+          "rawText": "The straight line is not uniquely determined by the information given, so there is\n      more than one possible point of intersection."
+        },
+        {
+          "label": "H",
+          "rawText": "There is no straight line that bisects both the area of the circle and the area of\n      the square."
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We start by drawing the square and the circle. Since the straight line bisects the area of each\nshape, it must pass through their centres, as shown.\n\n                              y\n\n\n\n\n                                  0                                  x\n\n\n\n\nThis straight line therefore passes through the centre of the square at (0, 1) and the centre of\nthe circle at (9, −2). The gradient of this line is then −2−1       1\n                                                          9−0 = − 3 , so the line has equation\n       1\ny = − 3 x + 1.\nThe line meets the x-axis where y = 0, so 0 = − 31 x + 1, giving x = 3.\nHence the correct answer is B.\n\n\n\n\nVersion 1.0, March 2022                                                                 Page 10"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q08",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 8,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "8   Consider the following statement about the polynomial p(x), where a and b are real\n    numbers with a < b :\n\n      (∗) There exists a number c with a < c < b such that p\u0002 (c) = 0.\n\n    Which one of the following is true?\n\n    A The condition p(a) = p(b) is necessary and suﬃcient for (∗)\n\n    B The condition p(a) = p(b) is necessary but not suﬃcient for (∗)\n\n    C The condition p(a) = p(b) is suﬃcient but not necessary for (∗)\n\n    D The condition p(a) = p(b) is not necessary and not suﬃcient for (∗)\n\n\n\n\n                                          10"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following statement about the polynomial p(x), where a and b are real\n    numbers with a < b :\n\n      (∗) There exists a number c with a < c < b such that p (c) = 0.\n\n    Which one of the following is true?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "The condition p(a) = p(b) is necessary and suﬃcient for (∗)"
+        },
+        {
+          "label": "B",
+          "rawText": "The condition p(a) = p(b) is necessary but not suﬃcient for (∗)"
+        },
+        {
+          "label": "C",
+          "rawText": "The condition p(a) = p(b) is suﬃcient but not necessary for (∗)"
+        },
+        {
+          "label": "D",
+          "rawText": "The condition p(a) = p(b) is not necessary and not suﬃcient for (∗)"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "If p(a) = p(b) = c, say, then if the graph of y = p(x) (strictly) increases as it leaves (a, c) towards\nx = b, but then it must decrease again to get back to (b, c), so there must be a stationary point\nbetween x = a and x = b. Similarly, if the graph (strictly) decreases as it leaves (a, c), it must\nthen increase again, which also results in a stationary point. The only other possibility is that\nthe graph of y = p(x) is constant, in which case p′ (x) = 0 throughout. In all cases, (∗) holds,\nso p(a) = p(b) is sufficient for (∗).\nHowever, it is not necessary for (∗): if p(x) = x2 and a = −1, b = 2, then this satisfies (∗) (with\nc = 0) but p(a) ̸= p(b).\nThus the correct option is C.\n\n\n\n\nVersion 1.0, March 2022                                                                       Page 11"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q09",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 9,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "9   Consider the following statements about a polynomial f(x):\n\n         I    f(x) = px3 + qx2 + rx + s, where p \u0004= 0.\n         II   There is a real number t for which f \u0002 (t) = 0.\n         III There are real numbers u and v for which f(u) f(v) < 0.\n\n    Which of these statements is/are suﬃcient for the equation f(x) = 0 to have a real\n    solution?\n\n              Statement I is           Statement II is          Statement III is\n                suﬃcient                  suﬃcient                 suﬃcient\n     A             Yes                      Yes                       Yes\n     B             Yes                      Yes                       No\n     C             Yes                       No                       Yes\n     D             Yes                       No                       No\n     E             No                       Yes                       Yes\n     F             No                       Yes                       No\n     G             No                        No                       Yes\n     H             No                        No                       No\n\n\n\n\n                                              11"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following statements about a polynomial f(x):\n\n         I    f(x) = px3 + qx2 + rx + s, where p A= 0.\n         II   There is a real number t for which f  (t) = 0.\n         III There are real numbers u and v for which f(u) f(v) < 0.\n\n    Which of these statements is/are suﬃcient for the equation f(x) = 0 to have a real\n    solution?\n\n              Statement I is           Statement II is          Statement III is\n                suﬃcient                  suﬃcient                 suﬃcient"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "Yes                      Yes                       Yes"
+        },
+        {
+          "label": "B",
+          "rawText": "Yes                      Yes                       No"
+        },
+        {
+          "label": "C",
+          "rawText": "Yes                       No                       Yes"
+        },
+        {
+          "label": "D",
+          "rawText": "Yes                       No                       No"
+        },
+        {
+          "label": "E",
+          "rawText": "No                       Yes                       Yes"
+        },
+        {
+          "label": "F",
+          "rawText": "No                       Yes                       No"
+        },
+        {
+          "label": "G",
+          "rawText": "No                        No                       Yes"
+        },
+        {
+          "label": "H",
+          "rawText": "No                        No                       No"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "I    Every cubic crosses the x-axis, so this condition is sufficient for f(x) = 0 to have a real root.\n     This also follows from III below if we take u to be a very large positive number and v to\n     be a very large negative number.\n\nII   Consider, for example, f(x) = x2 + 1. This quadratic has f ′ (x) = 2x so f ′ (0) = 0, but there\n     is no real x for which x2 + 1 = 0. So this condition is not sufficient.\n\nIII As f(u) f(v) < 0, we must have f(u) < 0 and f(v) > 0 or the other way round; either way,\n    the graph of y = f(x) has values above and below the x-axis. Since f(x) is a polynomial,\n    it must therefore cross the x-axis, and so the equation f(x) = 0 has a real root. (If we did\n    not know that f(x) was a polynomial, this would not be sufficient; consider f(x) = x1 for\n    example.)\n\nThe correct option is therefore C.\n\n\n\n\nVersion 1.0, March 2022                                                                      Page 12"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            11
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q10",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 10,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "10   The ﬁrst seven terms of a sequence of positive integers are:\n\n                                            u1 = 15\n                                            u2 = 21\n                                            u3 = 30\n                                            u4 = 37\n                                            u5 = 44\n                                            u6 = 51\n                                            u7 = 59\n\n\n     Consider the following statement about this sequence:\n\n       (∗) If n is a prime number, then un is a multiple of 3 or un is a multiple\n           of 5.\n\n     What is the smallest value of n that provides a counterexample to (∗)?\n\n     A 1\n\n     B 2\n\n     C 3\n\n     D 4\n\n     E 5\n\n     F 6\n\n     G 7\n\n\n\n\n                                             12"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The ﬁrst seven terms of a sequence of positive integers are:\n\n                                            u1 = 15\n                                            u2 = 21\n                                            u3 = 30\n                                            u4 = 37\n                                            u5 = 44\n                                            u6 = 51\n                                            u7 = 59\n\n\n     Consider the following statement about this sequence:\n\n       (∗) If n is a prime number, then un is a multiple of 3 or un is a multiple\n           of 5.\n\n     What is the smallest value of n that provides a counterexample to (∗)?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "1"
+        },
+        {
+          "label": "B",
+          "rawText": "2"
+        },
+        {
+          "label": "C",
+          "rawText": "3"
+        },
+        {
+          "label": "D",
+          "rawText": "4"
+        },
+        {
+          "label": "E",
+          "rawText": "5"
+        },
+        {
+          "label": "F",
+          "rawText": "6"
+        },
+        {
+          "label": "G",
+          "rawText": "7"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "To be a counterexample, we need the antecedent (the ‘if’ part) to be true but the consequent\n(the ‘then’ part) to be false.\n\n                            n   n is prime   an multiple of 3 or 5\n                            1      false               –\n                            2      true              true\n                            3      true              true\n                            4      false               –\n                            5      true             false\n                            6      false               –\n                            7      true             false\n\nTherefore n = 5 and n = 7 are both counterexamples, and the smallest counterexample is n = 5,\nwhich is option E.\n\n\n\n\nVersion 1.0, March 2022                                                              Page 13"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q11",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 11,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "11   A student attempts to solve the following problem, where a and b are non-zero real\n     numbers:\n\n       Show that if a2 − 4b3 ≥ 0 then there exist real numbers x and y such that\n       a = xy(x + y) and b = xy.\n\n     Consider the following attempt:\n\n         (x − y)2 ≥ 0                                                          (I)\n\n\n         so x2 + y 2 − 2xy ≥ 0                                                 (II)\n\n\n         so (x + y)2 − 4xy ≥ 0                                                 (III)\n\n\n         so x2 y 2 (x + y)2 − 4x3 y 3 ≥ 0                                      (IV)\n\n\n         so a2 − 4b3 ≥ 0                                                       (V)\n\n     Which of the following best describes this attempt?\n\n     A It is completely correct.\n\n     B It is incorrect, but it would be correct if written in the reverse order.\n\n     C It is incorrect, but the student has correctly proved the converse.\n\n     D It is incorrect because there is an error in line (II).\n\n     E It is incorrect because there is an error in line (III).\n\n     F It is incorrect because there is an error in line (IV).\n\n\n\n\n                                              13"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A student attempts to solve the following problem, where a and b are non-zero real\n     numbers:\n\n       Show that if a2 − 4b3 ≥ 0 then there exist real numbers x and y such that\n       a = xy(x + y) and b = xy.\n\n     Consider the following attempt:\n\n         (x − y)2 ≥ 0                                                          (I)\n\n\n         so x2 + y 2 − 2xy ≥ 0                                                 (II)\n\n\n         so (x + y)2 − 4xy ≥ 0                                                 (III)\n\n\n         so x2 y 2 (x + y)2 − 4x3 y 3 ≥ 0                                      (IV)\n\n\n         so a2 − 4b3 ≥ 0                                                       (V)\n\n     Which of the following best describes this attempt?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "It is completely correct."
+        },
+        {
+          "label": "B",
+          "rawText": "It is incorrect, but it would be correct if written in the reverse order."
+        },
+        {
+          "label": "C",
+          "rawText": "It is incorrect, but the student has correctly proved the converse."
+        },
+        {
+          "label": "D",
+          "rawText": "It is incorrect because there is an error in line (II)."
+        },
+        {
+          "label": "E",
+          "rawText": "It is incorrect because there is an error in line (III)."
+        },
+        {
+          "label": "F",
+          "rawText": "It is incorrect because there is an error in line (IV)."
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We start by checking that each step works.\nLine (II) follows from line (I) by expanding the brackets.\nThe algebraic expression in line (III) expands as x2 + 2xy + y 2 − 4xy, so it follows from line (II).\nLine (IV) follows from line (III) by multiplying by x2 y 2 . Since x2 y 2 ≥ 0, the inequality keeps\nthe same direction, so this is a valid deduction.\nHowever, how does line (V) follow from line (IV)? It assumes that a = xy(x + y) and b = xy in\norder to make the deduction.\nThis argument has therefore shown that if a = xy(x + y) and b = xy, then a2 − 4b3 ≥ 0, or\neven more explicitly: if there exist real numbers x and y such that a = xy(x + y) and b = xy,\nthen a2 − 4b3 ≥ 0. However, the problem posed is the converse: ‘show that if a2 − 4b3 ≥ 0, then\nthere exist real numbers x and y such that a = xy(x + y) and b = xy.\nSo this attempt has proved the converse, though the argument would have been slightly better\npresented if the student had explicitly stated ‘assume that x and y are real numbers with\na = xy(x + y) and b = xy’.\nThe correct option is therefore C.\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 14"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            14
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q12",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 12,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "12   Which of the following statements about polynomials f and g is/are true?\n                                                   \u0006x               \u0006x\n         I    If f(x) ≥ g(x) for all x ≥ 0, then    0\n                                                        f(t) dt ≥   0\n                                                                         g(t) dt for all x ≥ 0.\n\n         II   If f(x) ≥ g(x) for all x ≥ 0, then f \u0002 (x) ≥ g\u0002 (x) for all x ≥ 0.\n\n         III If f \u0002 (x) ≥ g\u0002 (x) for all x ≥ 0, then f(x) ≥ g(x) for all x ≥ 0.\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                              14"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Which of the following statements about polynomials f and g is/are true?\n                                                   Cx               Cx\n         I    If f(x) ≥ g(x) for all x ≥ 0, then    0\n                                                        f(t) dt ≥   0\n                                                                         g(t) dt for all x ≥ 0.\n\n         II   If f(x) ≥ g(x) for all x ≥ 0, then f  (x) ≥ g (x) for all x ≥ 0.\n\n         III If f  (x) ≥ g (x) for all x ≥ 0, then f(x) ≥ g(x) for all x ≥ 0."
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Rx\nI    We can think of the integral 0 f(t) dt as being the (signed) area under the graph of y = f(x)\n     from 0 to x. Since f(x) ≥ g(x) for all x ≥ 0, the area under the graph of y = f(x) will also\n     be greater than that under the graph of y = g(x), so this statement is true.\n     You might be concerned about values of x for which g(x) is negative. We could therefore\n     demonstrate this algebraically as well.\n     We have                  Z x               Z x               Z x\n                                    f(t) dt −         g(t) dt =         (f(t) − g(t)) dt.\n                               0                 0                 0\n     Since f(t) − g(t) ≥ 0 for all x ≥ 0, we are integrating a non-negative\n                                                                  Rx        function,\n                                                                              Rx      and so the\n     integral must be non-negative, that is to say, we must have 0 f(t) dt ≥ 0 g(t) dt.\n\nII   It is not clear why f(x) ≥ g(x) should imply that the gradient (derivative) of f(x) is greater\n     than that of g(x), and it is relatively straightforward to find a counterexample. Here is one:\n\n                                                         y\n                                                                   f(x) = (x − 1)2\n\n\n\n\n                                                                       g(x) = 0     x\n                                                     0\n\n\n     In this example, f(x) ≥ g(x) for all x, but f ′ (0) < 0 while g′ (x) = 0 for all x.\n\nIII This is not necessarily true, as we could add a constant to g(x) without changing g′ (x). For\n    example, we could have f ′ (x) = g′ (x) = 1 for all x, but f(x) = x while g(x) = x + 1, so\n    f(x) < g(x) for all x.\n\nThe correct option is therefore B.\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 15"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            14
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            15
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q13",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 13,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "13   A region R in the (x, y)-plane is deﬁned by the simultaneous inequalities\n\n                                           y−x<3\n\n                                          y − x2 < 1\n\n\n     Which of the following statements is/are true for every point in R ?\n\n         I    −1 < x < 2\n         II   (y − x)(y − x2 ) < 3\n         III y < 5\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                            15"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A region R in the (x, y)-plane is deﬁned by the simultaneous inequalities\n\n                                           y−x<3\n\n                                          y − x2 < 1\n\n\n     Which of the following statements is/are true for every point in R ?\n\n         I    −1 < x < 2\n         II   (y − x)(y − x2 ) < 3\n         III y < 5"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "A",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Manipulating inequalities algebraically requires care. For example, we cannot (in general) mul-\ntiply two inequalities together and obtain a valid inequality (which is what statement II has\ndone). Neither can we subtract two inequalities (which is where statement I comes from).\nIn this case, one approach is to sketch the region R described by the pair of inequalities and then\ndetermine whether the inequalities in statements I–III are satisfied in the whole of R. Another\napproach is to search for counterexamples for each statement, that is, values of x and y that do\nnot satisfy the statement but do satisfy the original inequalities. This, however, might be harder\nto do, and if the inequalities are true, it may take a while to discover this. So let us sketch the\ngiven inequalities.\nThe inequality y − x < 3 can be rearranged as y < x + 3, so it is the region below y = x + 3.\nSimilarly, y − x2 < 1 can be rearranged as y < x2 + 1, so it is the region below the quadratic\ny = x2 + 1. The region R is therefore the shaded area shown here (excluding the boundaries):\n\n                                                  y\n\n\n\n\n                                              3\n\n                                              1\n                                                             x\n                                              0\n\n\n\nWe can now consider the three statements.\n\nI    It is clear that this is not true in general, as the region R extends in all directions. For\n     example, the point (10, 0) lies in R (it is easy to check that this satisfies the original\n     inequalities: 0 − 10 < 3 and 0 − 102 < 1) but x = 10 does not satisfy −1 < x < 2.\n\nII   If we take x = 0, the inequality becomes y 2 < 3, but (0, −2) is in R and (−2)2 = 4. So this\n     statement is not true for all points in R.\n\nIII We could take, for example, (6, 6) as a point in R with y ≥ 5, so this statement is not true\n    in general.\n\nThe correct option is therefore A.\n\n\n\n\nVersion 1.0, March 2022                                                                    Page 16"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            15
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            16
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q14",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 14,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "14   Consider the following simultaneous equations, where p is a real number:\n\n                                       p2x + log2 y = 2\n\n                                        2x + log2 y = 1\n\n\n     What is the complete range of p for which these simultaneous equations have a real\n     solution (x, y)?\n\n     A p<1\n\n     B p \u0004= 1\n\n     C p>1\n\n     D p < 1 or p > 2\n\n     E p \u0004= 1 and p < 2\n\n     F p > 1 and p < 2\n\n     G p>2\n\n     H All real values of p\n\n\n\n\n                                            16"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following simultaneous equations, where p is a real number:\n\n                                       p2x + log2 y = 2\n\n                                        2x + log2 y = 1\n\n\n     What is the complete range of p for which these simultaneous equations have a real\n     solution (x, y)?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "p<1"
+        },
+        {
+          "label": "B",
+          "rawText": "p A= 1"
+        },
+        {
+          "label": "C",
+          "rawText": "p>1"
+        },
+        {
+          "label": "D",
+          "rawText": "p < 1 or p > 2"
+        },
+        {
+          "label": "E",
+          "rawText": "p A= 1 and p < 2"
+        },
+        {
+          "label": "F",
+          "rawText": "p > 1 and p < 2"
+        },
+        {
+          "label": "G",
+          "rawText": "p>2"
+        },
+        {
+          "label": "H",
+          "rawText": "All real values of p"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Writing X = 2x and Y = log2 y gives the simultaneous equations\n\n                                          pX + Y = 2\n                                           X +Y =1\n                                                                   1\nSubtracting gives (p − 1)X = 1, so as long as p ̸= 1, we have X = p−1 and so Y = p−2\n                                                                                 p−1 .\n                              p−2\nNow the equation log2 y = p−1      gives a real value for y for any value of p ̸= 1 (specifically\n     (p−2)/(p−1)                            1                                  1\ny=2              ), but the equation 2x = p−1   has a solution if and only if p−1 > 0, which is if\nand only if p > 1.\nTherefore the original simultaneous equations have a real solution (x, y) if and only if p > 1,\nwhich is option C.\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 17"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            16
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            17
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q15",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 15,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "15   A circle has equation\n                                   x2 + ax + y 2 + by + c = 0\n     where a, b and c are non-zero real constants.\n\n     Which one of the following is a necessary and suﬃcient condition for the circle to\n     be tangent to the y-axis?\n\n     A a2 = 4c\n\n     B b2 = 4c\n            …\n       a       a2 + b 2\n     C    =             −c\n       2          4\n            …\n       b       a2 + b 2\n     D    =             −c\n       2          4\n             …\n         a       a2 + b 2\n     E − =                −c\n         2          4\n             …\n         b       a2 + b 2\n     F − =                −c\n         2          4\n\n\n\n\n                                             17"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A circle has equation\n                                   x2 + ax + y 2 + by + c = 0\n     where a, b and c are non-zero real constants.\n\n     Which one of the following is a necessary and suﬃcient condition for the circle to\n     be tangent to the y-axis?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "a2 = 4c"
+        },
+        {
+          "label": "B",
+          "rawText": "b2 = 4c\n            …\n       a       a2 + b 2"
+        },
+        {
+          "label": "C",
+          "rawText": "=             −c\n       2          4\n            …\n       b       a2 + b 2"
+        },
+        {
+          "label": "D",
+          "rawText": "=             −c\n       2          4\n             …\n         a       a2 + b 2"
+        },
+        {
+          "label": "E",
+          "rawText": "− =                −c\n         2          4\n             …\n         b       a2 + b 2"
+        },
+        {
+          "label": "F",
+          "rawText": "− =                −c\n         2          4"
+        }
+      ],
+      "correctAnswer": "B",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Approach 1\nWe start by completing the square to find the centre and radius of the circle:\n\n                             (x + 21 a)2 − ( 12 a)2 + (y + 12 b)2 − ( 12 b)2 + c = 0\n\nwhich gives\n                             (x + 12 a)2 + (y + 12 b)2 = ( 12 a)2 + ( 21 b)2 − c\n                                                     q\nso the circle has centre (− 21 a, − 21 b) and radius ( 21 a)2 + ( 12 b)2 − c.\nNow let us sketch a circle tangent to the y-axis:\n\n                                                    y\n\n\n\n\n                                                        0                     x\n\n\n\n\nWe can see that the circle is tangent to the y-axis if and only if its radius is equal to the\ndistance of its centre from the y-axis. This is not the same as saying the radius is equal to the\nx-coordinate of the centre, as the centre may have a negative x-coordinate. As an equation, this\ncondition is then                  q\n                                     ( 12 a)2 + ( 12 b)2 − c = − 12 a\nwhich, on squaring, is equivalent to\n\n                                         ( 21 a)2 + ( 12 b)2 − c = ( 12 a)2\n\n(This is equivalent to the previous equation because both sides of the first equation are non-\nnegative.)\nSubtracting ( 21 a)2 from both sides gives 14 b2 − c = 0 or b2 = 4c, so this condition is necessary\nand sufficient for the circle to be tangent to the y-axis, which is option B.\n\nApproach 2\nThe circle is tangent to the y-axis, x = 0, if and only if the pair of simultaneous equations\nx2 + ax + y 2 + by + c = 0 and x = 0 has a repeated root.\nSubstituting x = 0 into the circle equation gives y 2 + by + c = 0, which has discriminant b2 − 4c.\nSo there is a repeated root if and only if b2 − 4c = 0, which is equivalent to option B.\n\n\n\nVersion 1.0, March 2022                                                                    Page 18"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            17
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            18
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q16",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 16,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "16   p and q are real numbers, and the equation\n\n                                          x |x| = px + q\n\n     has exactly k distinct real solutions for x.\n\n     Which one of the following is the complete list of possible values for k ?\n\n     A 0, 1, 2\n\n     B 0, 1, 2, 3\n\n     C 0, 1, 2, 3, 4\n\n     D 0, 2, 4\n\n     E 1, 2, 3\n\n     F 1, 2, 3, 4\n\n\n\n\n                                              18"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "p and q are real numbers, and the equation\n\n                                          x |x| = px + q\n\n     has exactly k distinct real solutions for x.\n\n     Which one of the following is the complete list of possible values for k ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0, 1, 2"
+        },
+        {
+          "label": "B",
+          "rawText": "0, 1, 2, 3"
+        },
+        {
+          "label": "C",
+          "rawText": "0, 1, 2, 3, 4"
+        },
+        {
+          "label": "D",
+          "rawText": "0, 2, 4"
+        },
+        {
+          "label": "E",
+          "rawText": "1, 2, 3"
+        },
+        {
+          "label": "F",
+          "rawText": "1, 2, 3, 4"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Approach 1: graph sketching\nWe are looking for the intersections of the graphs of y = x |x| and y = px + q. The latter is just\na straight line graph, while the former is y = x2 when x ≥ 0 and y = −x2 when x < 0:\n\n                                                   y\n\n\n\n\n                                                                     x\n                                               0\n\n\n\n\nThis graph looks quite similar to the graph of y = x3 : it has a point of inflexion at the origin.\nAny straight line will meet this graph at least once: if q > 0, then it will meet it for some x > 0,\nand if q < 0, then it will meet it for some x < 0. A straight line can meet the graph twice if it\nis tangent to the curve somewhere, and it can meet it three times, for example y = x.\nBut a straight line cannot meet the curve four times. It can meet the curve at most twice for\nx ≥ 0, and at most twice for x < 0 (as each half of the curve is a quadratic, and a straight line\nand quadratic can meet at most twice). But if a straight line meets the quadratic twice in the\nregion x < 0, then it must have q > 0, for example:\n\n                                                   y\n\n\n\n\n                                                                     x\n                                               0\n\n\n\n\nIt can then meet the curve only once in the region x > 0. The same applies if it meets the curve\ntwice in the region x > 0. And if the line passes through the origin, then it can meet the curve\nin at most two other locations.\nSo the correct answer is option E.\n\nApproach 2: algebraic\n\n\n\nVersion 1.0, March 2022                                                                     Page 19\n\f\nTest of Mathematics for University Admission, 2021 Paper 2 Solutions\n\n\nIf x is a solution, then either x ≤ 0 and −x2 = px + q or x > 0 and x2 = px + q; we can rewrite\nthese as x2 + px + q = 0 and x2 − px − q = 0 respectively.\nIf q < 0, then the quadratic equations\n                               p        both have positive discriminant. The first quadratic\n                                  2\nhas roots of opposite signs (as p − 4q > p), so there is exactly one negative solution. The\nsecond quadratic (corresponding to x > 0) may have 0, 1 or 2 positive solutions, giving 1, 2 or 3\nsolutions in total.\nIf q > 0, exactly the opposite is true, and we still end up with 1, 2 or 3 solutions.\nIf q = 0, then x = 0 is a root of both quadratics, and there are 0, 1 or 2 other roots.\nThus the possible values are 1, 2 and 3.\nExamples with these numbers are: p = q = 0; p = −1, q = 0, and p = −2, q = 1 respectively.\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 20"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            18
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            19,
+            20
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q17",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 17,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "17   Consider the following functions deﬁned for x > 1 :\n                                                \u0007    √ \b\n                                     f(x) = log2 log2 x\n\n                                                    \u0007\u0005            \b\n                                      g(x) = log2        log2 x\n\n\n     Which one of the following is true for all values of x > 1 ?\n\n     A 0 ≤ f(x) ≤ g(x) or g(x) ≤ f(x) ≤ 0\n\n     B 0 ≤ g(x) ≤ f(x) or f(x) ≤ g(x) ≤ 0\n         1\n     C   2\n           ≤ f(x) ≤ g(x)   or g(x) ≤ f(x) ≤ 12\n         1\n     D   2\n           ≤ g(x) ≤ f(x)   or f(x) ≤ g(x) ≤ 12\n\n     E 1 ≤ f(x) ≤ g(x) or g(x) ≤ f(x) ≤ 1\n\n     F 1 ≤ g(x) ≤ f(x) or f(x) ≤ g(x) ≤ 1\n\n\n\n\n                                             19"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "Consider the following functions deﬁned for x > 1 :\n                                                D    √ E\n                                     f(x) = log2 log2 x\n\n                                                    DB            E\n                                      g(x) = log2        log2 x\n\n\n     Which one of the following is true for all values of x > 1 ?"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0 ≤ f(x) ≤ g(x) or g(x) ≤ f(x) ≤ 0"
+        },
+        {
+          "label": "B",
+          "rawText": "0 ≤ g(x) ≤ f(x) or f(x) ≤ g(x) ≤ 0\n         1"
+        },
+        {
+          "label": "C",
+          "rawText": "2\n           ≤ f(x) ≤ g(x)   or g(x) ≤ f(x) ≤ 12\n         1"
+        },
+        {
+          "label": "D",
+          "rawText": "2\n           ≤ g(x) ≤ f(x)   or f(x) ≤ g(x) ≤ 12"
+        },
+        {
+          "label": "E",
+          "rawText": "1 ≤ f(x) ≤ g(x) or g(x) ≤ f(x) ≤ 1"
+        },
+        {
+          "label": "F",
+          "rawText": "1 ≤ g(x) ≤ f(x) or f(x) ≤ g(x) ≤ 1"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "The expressions for f(x) and g(x) look quite complicated, so we start by simplifying them using\nthe laws of logarithms:\n                                                    √ \u0001\n                                    f(x) = log2 log2 x\n                                          = log2 ( 21 log2 x)\n                                          = −1 + log2 (log2 x)\n                                                 p        \u0001\n                                     g(x) = log2   log2 x\n                                          = 12 log2 (log2 x)\n\nWe now see that both f(x) and g(x) can be written as a function of log2 (log2 x). As x > 1,\nlog2 x > 0 and log2 (log2 x) can take any real value.\nLet us write z = log2 (log2 x), so that we have f(x) = z − 1 and g(x) = 21 z. We can sketch a\ngraph showing these two functions of z:\n\n\n\n\n                                                         f(x) = z − 1\n\n\n\n                                             1                      g(x) = 21 z\n\n\n                                                 0              2           z\n\n\n\n\nWe can calculate the intersection of y = z − 1 and y = 12 z, obtaining z = 2, y = 1.\nWe can then see from the graph that f(x) ≥ g(x) when both are at least 1, and f(x) ≤ g(x) when\nboth are at most 1, so either f(x) ≥ g(x) ≥ 1 or f(x) ≤ g(x) ≤ 1 (or both), which is option F.\n(Note that the ‘or’ in the options is inclusive ‘or’, so we are allowed to have both of the inequal-\nities being true.)\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 21"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            19
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            21
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q18",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 18,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "18   A student chooses two distinct real numbers x and y with 0 < x < y < 1.\n\n     The student then attempts to draw a triangle ABC with:\n\n                                            AB = 1\n                                          sin A = x\n                                          sin B = y\n\n\n     Which of the following statements is/are correct?\n\n         I    For some choice of x and y, there is exactly one triangle the student\n              could draw.\n         II   For some choice of x and y, there are exactly two diﬀerent triangles\n              the student could draw.\n         III For some choice of x and y, there are exactly three diﬀerent\n             triangles the student could draw.\n\n     (Note that congruent triangles are considered to be the same.)\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                            20"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A student chooses two distinct real numbers x and y with 0 < x < y < 1.\n\n     The student then attempts to draw a triangle ABC with:\n\n                                            AB = 1\n                                          sin A = x\n                                          sin B = y\n\n\n     Which of the following statements is/are correct?\n\n         I    For some choice of x and y, there is exactly one triangle the student\n              could draw.\n         II   For some choice of x and y, there are exactly two diﬀerent triangles\n              the student could draw.\n         III For some choice of x and y, there are exactly three diﬀerent\n             triangles the student could draw.\n\n     (Note that congruent triangles are considered to be the same.)"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "none of them"
+        },
+        {
+          "label": "B",
+          "rawText": "I only"
+        },
+        {
+          "label": "C",
+          "rawText": "II only"
+        },
+        {
+          "label": "D",
+          "rawText": "III only"
+        },
+        {
+          "label": "E",
+          "rawText": "I and II only"
+        },
+        {
+          "label": "F",
+          "rawText": "I and III only"
+        },
+        {
+          "label": "G",
+          "rawText": "II and III only"
+        },
+        {
+          "label": "H",
+          "rawText": "I, II and III"
+        }
+      ],
+      "correctAnswer": "C",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "Since we are only given a condition on sin A, the angle A could be acute or obtuse, and similarly\nfor angle B.\nLet us write θ = sin−1 x and ϕ = sin−1 y for the acute angles; the respective obtuse angles are\nthen 180◦ − θ and 180◦ − ϕ.\nAs we are given x < y, we have θ < ϕ.\nWe can now consider the four possible cases.\n\n•    Case 1: both A and B are acute. Then we have this situation:\n\n\n\n\n                                                            ϕ\n                                         θ\n                                A                 1                 B\n\n     We therefore know the three angles of the triangle ABC (as given two, we automati-\n     cally know the third) and one side, and this determines the triangle uniquely (regarding\n     congruent triangles as the same).\n     So we always obtain exactly one triangle from this case.\n•    Case 2: A is obtuse and B is acute. Then A = 180◦ − θ and we have this situation:\n\n\n\n\n                                                                         ϕ\n                                    θ\n                                             A               1                 B\n\n     Since θ < ϕ, the two lines (rays) from A and B shown in this diagram will never meet.\n     Alternatively, we could note that A + B = 180◦ − θ + ϕ, and since ϕ − θ > 0, this means\n     that the angles A and B sum to more than 180◦ .\n     Therefore this case can never produce a triangle.\n•    Case 3: A is acute and B is obtuse. Then B = 180◦ − ϕ and we have this situation:\n\n\n\n\n                                                                     ϕ\n                                 θ\n                          A               1                 B\n\n     Since θ < ϕ, the two lines (rays) from A and B shown will eventually meet, and so we get\n     a unique triangle. Alternatively, we have A + B = θ + 180◦ − ϕ = 180◦ − (ϕ − θ), and since\n     ϕ − θ > 0, this means that the angles A and B sum to less than 180◦ , so they can be two\n     angles of a triangle.\n     So we always obtain exactly one triangle from this case.\n\n\nVersion 1.0, March 2022                                                                  Page 22\n\f\nTest of Mathematics for University Admission, 2021 Paper 2 Solutions\n\n\n•    Case 4: A and B are both obtuse. This is impossible in a triangle.\n     Therefore this case can never produce a triangle.\n\nIn summary, cases 1 and 3 always produce a unique triangle, and cases 2 and 4 never produce a\ntriangle, so the student can always draw exactly two different triangles, regardless of the values\nof x and y.\nTherefore the correct answer is C.\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 23"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            20
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            22,
+            23
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q19",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 19,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "19   The angle θ can take any of the values 1◦ , 2◦ , 3◦ , . . . , 359◦ , 360◦ .\n\n     For how many of these values of θ is it true that\n                     √          √                   √      √\n                sin θ 1 + sin θ 1 − sin θ + cos θ 1 + cos θ 1 − cos θ = 0\n\n     A 0\n\n     B 1\n\n     C 2\n\n     D 4\n\n     E 93\n\n     F 182\n\n     G 271\n\n     H 360\n\n\n\n\n                                                  21"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "The angle θ can take any of the values 1◦ , 2◦ , 3◦ , . . . , 359◦ , 360◦ .\n\n     For how many of these values of θ is it true that\n                     √          √                   √      √\n                sin θ 1 + sin θ 1 − sin θ + cos θ 1 + cos θ 1 − cos θ = 0"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0"
+        },
+        {
+          "label": "B",
+          "rawText": "1"
+        },
+        {
+          "label": "C",
+          "rawText": "2"
+        },
+        {
+          "label": "D",
+          "rawText": "4"
+        },
+        {
+          "label": "E",
+          "rawText": "93"
+        },
+        {
+          "label": "F",
+          "rawText": "182"
+        },
+        {
+          "label": "G",
+          "rawText": "271"
+        },
+        {
+          "label": "H",
+          "rawText": "360"
+        }
+      ],
+      "correctAnswer": "F",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "We can rewrite the given equation as\n                     p                              p\n                sin θ (1 + sin θ)(1 − sin θ) + cos θ (1 + cos θ)(1 − cos θ) = 0\n\nand then multiply out the brackets to give\n                                p                  p\n                           sin θ 1 − sin2 θ + cos θ 1 − cos2 θ = 0\n\nwhich simplifies to\n                                         √                    p\n                                 sin θ       cos2 θ + cos θ    sin2 θ = 0.\n                                                                 √\nIt would be easy at this point to make the mistake of simplifying cos2 θ to cos θ, but this would\nonly work in the case that cos θ ≥ 0 as square\n                                            √ roots are always positive. We can, though, write\n|cos θ| for this square root: we always have x2 = |x|. Therefore we can rewrite the equation as\n\n                                     sin θ |cos θ| + cos θ |sin θ| = 0.\n\nIf both sin θ and cos θ are positive, then this becomes 2 sin θ cos θ = 0, which cannot be true.\nLikewise, if both sin θ and cos θ are negative, this becomes −2 sin θ cos θ = 0, which again cannot\nbe true. However, if one is positive and one is negative, say sin θ > 0 and cos θ < 0, this becomes\n− sin θ cos θ + sin θ cos θ = 0, which is certainly true. The same holds if sin θ < 0 and cos θ > 0.\nFinally, if either sin θ = 0 or cos θ = 0, the equation is also satisfied.\nWe therefore need to count the number of given angles for which sin θ and cos θ have opposite\nsigns or one of them is zero. A quick sketch helps here:\n\n                                 y\n\n                             1\n\n\n\n                                                                                   x\n                             0            90          180        270         360\n\n\n\n                           −1\n\n\n\nWe see that the relevant ranges are 90◦ ≤ θ ≤ 180◦ and 270◦ ≤ θ ≤ 360◦ ; x = 0◦ would also\nwork, but is not one of the angles in the given list. There are 91 angles in each of the two ranges\n(remembering to include both endpoints), so there are 182 angles in total, which is option F.\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 24"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            21
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            24
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tmua-2021-p2-q20",
+      "revision": 1,
+      "exam": "TMUA",
+      "paperId": "tmua-2021-p2",
+      "edition": "2021",
+      "paper": 2,
+      "questionNumber": 20,
+      "sourceType": "past_paper",
+      "contentStage": "extracted",
+      "reviewStatus": "needs_review",
+      "sourcePage": {
+        "format": "pdf-layout-text",
+        "rawText": "20   A sequence of functions f1 , f2 , f3 , . . . is deﬁned by\n\n                                      f1 (x) = |x|\n\n                                   fn+1 (x) = |fn (x) + x| for n ≥ 1\n\n\n     Find the value of\n\n                                              \u0002 1\n                                                     f99 (x) dx\n                                                −1\n\n\n     A 0\n\n     B 0.5\n\n     C 1\n\n     D 49.5\n\n     E 50\n\n     F 99\n\n     G 99.5\n\n     H 100\n\n\n\n\n                                                     22"
+      },
+      "stem": {
+        "format": "pdf-layout-text",
+        "rawText": "A sequence of functions f1 , f2 , f3 , . . . is deﬁned by\n\n                                      f1 (x) = |x|\n\n                                   fn+1 (x) = |fn (x) + x| for n ≥ 1\n\n\n     Find the value of\n\n                                               1\n                                                     f99 (x) dx\n                                                −1"
+      },
+      "options": [
+        {
+          "label": "A",
+          "rawText": "0"
+        },
+        {
+          "label": "B",
+          "rawText": "0.5"
+        },
+        {
+          "label": "C",
+          "rawText": "1"
+        },
+        {
+          "label": "D",
+          "rawText": "49.5"
+        },
+        {
+          "label": "E",
+          "rawText": "50"
+        },
+        {
+          "label": "F",
+          "rawText": "99"
+        },
+        {
+          "label": "G",
+          "rawText": "99.5"
+        },
+        {
+          "label": "H",
+          "rawText": "100"
+        }
+      ],
+      "correctAnswer": "E",
+      "solution": {
+        "format": "pdf-layout-text",
+        "rawText": "It is helpful to get a feeling for what this sequence of functions looks like, so we will sketch the\nfirst few. We are only interested in the range from −1 to 1 (because that is what the integral\nasks for). The first function, f1 (x) = |x| is standard:\n\n                                                 y\n\n\n                                             1\n\n                                                             y = f1 (x)\n\n\n\n\n                                                                     x\n                               −1            0                 1\n\n\n\nNote that when x < 0, this is the graph of y = −x, and when x ≥ 0, this is the graph of y = x.\nWe next have f2 (x) = |f1 (x) + x|. We can calculate this on the two regions x < 0 and x ≥ 0\nseparately: when x < 0, we get f2 (x) = |−x+x| = 0, and when x > 0, we get f2 (x) = |x+x| = 2x,\ngiving this graph:\n\n                                                 y\n\n\n                                             1\n\n                                                        y = f2 (x)\n\n\n\n\n                                                                     x\n                               −1            0                 1\n\n\n\nWe can determine f3 (x) and f4 (x) in a similar way:\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 25\n\f\nTest of Mathematics for University Admission, 2021 Paper 2 Solutions\n\n\n                          y                                               y\n\n\n                     1                                                1\n\n                                y = f3 (x)                                       y = f4 (x)\n\n\n\n\n                                             x                                                 x\n       −1            0                1                 −1            0                1\n\n\n\nHere, the graphs for x ≥ 0 are y = 3x and y = 4x respectively.\nWe can see a pattern forming: when n is odd, the graph of y = fn (x) looks like y = f3 (x), with\ny = −x for x < 0 and y = nx for x ≥ 0, and when n is even, it looks like y = f4 (x), with y = 0\nfor x < 0 and y = nx for x ≥ 0.\n\n                                      R 1 like y = f3 (x): it is y = −x for x < 0 and y = 99x for\nWe are interested in f99 (x), which looks\nx ≥ 0. We can calculate the integral −1 f99 (x) dx by finding the area under the graph, which is\njust the sum of two triangles.\nThe area between x = −1 and x = 0 is 21 × 1 × 1 and the area between x = 0 and x = 1 is\n1                                  1       1        1\n2 × 1 × 99, so the integral equals 2 × 1 + 2 × 99 = 2 × 100 = 50; the correct option is therefore E.\n\n\n\n\nVersion 1.0, March 2022                                                                       Page 26\n\f\nThis document was initially designed for print and as such does not reach accessibility standard\nWCAG 2.1 in a number of ways including missing text alternatives and missing document structure.\n\n\n\nIf you need this document in a different format please email\nadmissionstesting@cambridgeassessment.org.uk telling us your name, email address and\nrequirements and we will respond within 15 working days.\n\n\n\nThis document contains maths equations and symbols which at present we are not able to produce\nadequately for accessibility. We are working to improve this.\n\n\n\n\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support: admissionstesting.org/help"
+      },
+      "sourceRefs": [
+        {
+          "role": "question",
+          "sourceId": "tmua-official-2021-paper-2",
+          "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+          "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+          "pages": [
+            22
+          ]
+        },
+        {
+          "role": "answer_key",
+          "sourceId": "tmua-official-2021-answer-key",
+          "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+          "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "role": "worked_solution",
+          "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+          "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+          "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+          "pages": [
+            25,
+            26,
+            27
+          ]
+        }
+      ],
+      "knowledgeTags": [],
+      "skillTags": [],
+      "errorTypes": [],
+      "extraction": {
+        "generatedAt": "2026-07-17T07:00:00.000Z",
+        "generatedBy": "tmua-extraction-cli",
+        "method": "poppler-layout-text",
+        "mathFidelity": "needs_review",
+        "warnings": [
+          "math-transcription-required"
+        ]
+      }
+    }
+  ]
+}

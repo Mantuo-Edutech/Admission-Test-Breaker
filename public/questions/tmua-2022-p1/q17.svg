@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" role="img" aria-labelledby="title desc">
+  <title id="title">Triangle for the ambiguous case</title>
+  <desc id="desc">The right-hand angle is 30 degrees. Its opposite side is x minus 1 and the adjacent sloping side is negative x squared plus 6x minus 5.</desc>
+  <g fill="none" stroke="#252137" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path d="M125 260 L230 40 L795 260 Z"/>
+    <path d="M742 260 A53 53 0 0 1 750 233"/>
+  </g>
+  <g fill="#252137" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-style="italic">
+    <text x="98" y="153">x − 1</text>
+    <text x="470" y="117">−x² + 6x − 5</text>
+    <text x="698" y="244">30°</text>
+  </g>
+</svg>

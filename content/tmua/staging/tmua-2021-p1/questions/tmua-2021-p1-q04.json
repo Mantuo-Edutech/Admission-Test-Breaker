@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q04",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 4,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "4   Find the minimum value of the function\n\n\n                                     22x − 2x+3 + 4\n\n    A −16\n\n    B −12\n\n    C −8\n\n    D    0\n\n    E    4\n\n    F    20\n\n\n\n\n                                             \u0019"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the minimum value of the function\n\n\n                                     22x − 2x+3 + 4"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−16"
+    },
+    {
+      "label": "B",
+      "rawText": "−12"
+    },
+    {
+      "label": "C",
+      "rawText": "−8"
+    },
+    {
+      "label": "D",
+      "rawText": "0"
+    },
+    {
+      "label": "E",
+      "rawText": "4"
+    },
+    {
+      "label": "F",
+      "rawText": "20"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "This function is a quadratic in u = 2x ; we can rewrite it as\n\n                                          u2 − 23 u + 4\n\nor\n                                          u2 − 8u + 4.\nWe can complete the square to express this as\n\n                               (u − 4)2 − 42 + 4 = (u − 4)2 − 12.\n\nThe minimum therefore occurs when u = 4, at which point the function value is 12.\nWe must also check that this value can actually be attained: u = 4 if and only if 2x = 4, which\nhappens when x = 2, so this minimum is attained, and the correct answer is B.\nThe minimum can also be found using calculus: differentiating u2 − 8u + 4 gives 2u − 8; this is\nzero when u = 4, at which point the function value is 42 − 8 × 4 + 4 = −12; this is a minimum\nas the function is a quadratic with positive u2 coefficient.\n\n\n\n\nVersion 1.0, March 2022                                                                 Page 6"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

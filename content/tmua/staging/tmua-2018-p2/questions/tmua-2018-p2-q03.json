@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "3   Consider the following statement:\n\n        A car journey consists of two parts. In the ﬁrst part, the average speed is\n        u km/h. In the second part, the average speed is v km/h. Hence the average\n        speed for the whole journey is 12 (u + v) km/h.\n\n    Which of the following examples of car journeys provide(s) a counterexample to\n    the statement?\n\n        I    In the ﬁrst part of the journey, the car travels at a constant speed of\n             50 km/h for 100 km. In the second part of the journey, the car travels\n             at a constant speed of 40 km/h for 100 km.\n        II   In the ﬁrst part of the journey, the car travels at a constant speed\n             of 50 km/h for one hour. In the second part of the journey, the car\n             travels at a constant speed of 40 km/h for one hour.\n        III In the ﬁrst part of the journey, the car travels at a constant speed of\n            50 km/h for 80 km. In the second part of the journey, the car travels\n            at a constant speed of 40 km/h for 100 km.\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n\n                                            5"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following statement:\n\n        A car journey consists of two parts. In the ﬁrst part, the average speed is\n        u km/h. In the second part, the average speed is v km/h. Hence the average\n        speed for the whole journey is 12 (u + v) km/h.\n\n    Which of the following examples of car journeys provide(s) a counterexample to\n    the statement?\n\n        I    In the ﬁrst part of the journey, the car travels at a constant speed of\n             50 km/h for 100 km. In the second part of the journey, the car travels\n             at a constant speed of 40 km/h for 100 km.\n        II   In the ﬁrst part of the journey, the car travels at a constant speed\n             of 50 km/h for one hour. In the second part of the journey, the car\n             travels at a constant speed of 40 km/h for one hour.\n        III In the ﬁrst part of the journey, the car travels at a constant speed of\n            50 km/h for 80 km. In the second part of the journey, the car travels\n            at a constant speed of 40 km/h for 100 km."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "A counterexample to this statement is an example which shows that it is not true.\nSo we consider the journeys described, and determine whether or not the average speed for the\nwhole journey is, indeed, 12 (u + v).\nPerhaps the simplest way to do this is to make a table. We know that average speed is distance\ntravelled divided by time, so we will need these for each part of the journey.\nFilling in the information given, we end up with the following. We write d1 , d2 and D for the\ndistances (in km) in the first part, second part and total, respectively. Likewise, t stands for\ntime (in h), and we use V for the average speed for the whole journey (in km/h).\n\n\n                                   First part                   Second part                Overall\n                                  d1        t1        u         d2        t2       v    D     T     V\n                           I     100                  50     100                40\n                          II                1         50                  1     40\n                          III     80                  50     100                40\n\n\nWe can now use u = d1 /t1 and so on to fill in the rest of the first and second part of the\njourney, and then sum the distances and times for the overall journey. We can finally calculate\nthe average speed. This gives:\n\n\n                                First part                 Second part                       Overall\n                            d1         t1        u         d2        t2        v       D       T        V\n                                                                                                        400\n                    I      100       2           50        100       2.5       40      200    4.5        9\n                   II      50        1           50        40         1        40      90      2        45\n                                                                                                        1800\n                   III     80       1.6          50        100       2.5       40      180    4.1        41\n\n\nIn every case, 12 (u + v) = 45 so both I and III are counterexamples (as the fractions cannot be\nsimplified, so they cannot equal 45), and the answer is F.\n\n\n\n\nVersion 1.0, April 2019                                                                                        Page 5"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

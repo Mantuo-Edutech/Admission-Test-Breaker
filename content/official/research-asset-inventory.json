@@ -1,0 +1,3477 @@
+{
+  "schemaVersion": 1,
+  "syncedAt": "2026-07-19T04:53:45.000Z",
+  "policy": {
+    "purpose": "internal_research_only",
+    "rawFilesInPublicBundle": false,
+    "rawFilesTrackedByGit": false,
+    "downloadDoesNotGrantRepublicationRights": true,
+    "publicationRequiresSeparateWrittenPermissionOrLegalClearance": true
+  },
+  "summary": {
+    "sourcePages": 23,
+    "discoveredDownloads": 184,
+    "downloaded": 184,
+    "failed": 0,
+    "bytes": 146760498,
+    "byExam": {
+      "shared": 9,
+      "tmua": 48,
+      "esat": 36,
+      "tara": 75,
+      "lnat": 12,
+      "ucat": 4
+    }
+  },
+  "sourcePages": [
+    {
+      "id": "uat-prepare",
+      "exam": "shared",
+      "title": "UAT-UK preparation materials",
+      "url": "https://esat-tmua.ac.uk/prepare/",
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/uat-prepare.html",
+      "bytes": 105696,
+      "sha256": "6c5d81097981b15a366e2374abb2a735a68e2bf2e816e07f279d2fd557d5304d",
+      "publishable": false
+    },
+    {
+      "id": "uat-terms",
+      "exam": "shared",
+      "title": "UAT-UK website terms",
+      "url": "https://esat-tmua.ac.uk/website-terms-of-use/",
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/uat-terms.html",
+      "bytes": 91090,
+      "sha256": "2636c270c4b6bbed3e77ffd50bbcf8880e4d2d2c5de9d9d13d12cbfb05368c97",
+      "publishable": false
+    },
+    {
+      "id": "tmua-overview",
+      "exam": "tmua",
+      "title": "TMUA overview",
+      "url": "https://esat-tmua.ac.uk/about-the-tests/tmua-test/",
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/tmua-overview.html",
+      "bytes": 134762,
+      "sha256": "452a74b0bfdfb8a37c7b102fa3dcee6f901365471a343164ded0306dd790807f",
+      "publishable": false
+    },
+    {
+      "id": "tmua-preparation",
+      "exam": "tmua",
+      "title": "TMUA preparation archive",
+      "url": "https://esat-tmua.ac.uk/tmua-preparation-materials/",
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/tmua-preparation.html",
+      "bytes": 93607,
+      "sha256": "48b9e3ac1471c5933c360b1fa0924add02bebb32871b995c4953fd8c3cee3060",
+      "publishable": false
+    },
+    {
+      "id": "esat-overview",
+      "exam": "esat",
+      "title": "ESAT overview",
+      "url": "https://esat-tmua.ac.uk/about-the-tests/esat-test/",
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/esat-overview.html",
+      "bytes": 132289,
+      "sha256": "740f4b3a77d89036daa49a6b72ca296b03cffcef5eca0d586978f0566cab043c",
+      "publishable": false
+    },
+    {
+      "id": "esat-preparation",
+      "exam": "esat",
+      "title": "ESAT guide and historic archive",
+      "url": "https://esat-tmua.ac.uk/esat-preparation-materials/",
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/esat-preparation.html",
+      "bytes": 92336,
+      "sha256": "0a3fd395984259df1b0b474ca104a258b18201632f8259789701187af5d7afce",
+      "publishable": false
+    },
+    {
+      "id": "tara-overview",
+      "exam": "tara",
+      "title": "TARA overview",
+      "url": "https://esat-tmua.ac.uk/about-the-tests/tara/",
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/tara-overview.html",
+      "bytes": 129655,
+      "sha256": "6f09a971e8e6c93669b01d715df6e8d1c41fdc2a7802b84587acaa78ba6cdcca",
+      "publishable": false
+    },
+    {
+      "id": "tara-preparation",
+      "exam": "tara",
+      "title": "TARA guide and historic archive",
+      "url": "https://esat-tmua.ac.uk/tara-preparation-materials/",
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/tara-preparation.html",
+      "bytes": 101081,
+      "sha256": "77dd47d3325b42bac97984538f0ac246c63c7564905ac334b9962e4dd3216f4d",
+      "publishable": false
+    },
+    {
+      "id": "lnat-format",
+      "exam": "lnat",
+      "title": "LNAT test format",
+      "url": "https://lnat.ac.uk/what-is-lnat/test-format/",
+      "rightsStatus": "rights_review_required_before_republication",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/lnat-format.html",
+      "bytes": 39392,
+      "sha256": "99a513fdffed547bc293092783175468909237606d717ebee21d491de2fa01bc",
+      "publishable": false
+    },
+    {
+      "id": "lnat-prepare",
+      "exam": "lnat",
+      "title": "LNAT preparation overview",
+      "url": "https://lnat.ac.uk/how-to-prepare/",
+      "rightsStatus": "rights_review_required_before_republication",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/lnat-prepare.html",
+      "bytes": 42982,
+      "sha256": "6ee381ec7e624175e6751f11b6892564d7ccacff5a6ecbeb0567b11f1fcc411a",
+      "publishable": false
+    },
+    {
+      "id": "lnat-guide",
+      "exam": "lnat",
+      "title": "LNAT preparation guide",
+      "url": "https://lnat.ac.uk/how-to-prepare/preparation-guide/",
+      "rightsStatus": "rights_review_required_before_republication",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/lnat-guide.html",
+      "bytes": 38929,
+      "sha256": "78e15e2835ae74975ea3fd6b1265dac920cc3c76fba30c0ac0f3c261a1419f5d",
+      "publishable": false
+    },
+    {
+      "id": "lnat-hints",
+      "exam": "lnat",
+      "title": "LNAT hints and tips",
+      "url": "https://lnat.ac.uk/how-to-prepare/hints-and-tips/",
+      "rightsStatus": "rights_review_required_before_republication",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/lnat-hints.html",
+      "bytes": 45728,
+      "sha256": "3558fe30ec108d14e9ad2a2d3c6f795472a301869a5fadc39a13362e34348bb5",
+      "publishable": false
+    },
+    {
+      "id": "lnat-practice",
+      "exam": "lnat",
+      "title": "LNAT practice tests",
+      "url": "https://lnat.ac.uk/how-to-prepare/practice-test/",
+      "rightsStatus": "rights_review_required_before_republication",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/lnat-practice.html",
+      "bytes": 48346,
+      "sha256": "50cf416dd2e9586eb8a36673247f043680d53ab68cdd38260d75864baf9e9650",
+      "publishable": false
+    },
+    {
+      "id": "lnat-essays",
+      "exam": "lnat",
+      "title": "LNAT sample essays",
+      "url": "https://lnat.ac.uk/how-to-prepare/sample-essays/",
+      "rightsStatus": "rights_review_required_before_republication",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/lnat-essays.html",
+      "bytes": 41541,
+      "sha256": "d01a2593221d9391fb11f867ab5707669db5fea4d575452d493e2dc933c84b7a",
+      "publishable": false
+    },
+    {
+      "id": "ucat-format",
+      "exam": "ucat",
+      "title": "UCAT format and scoring",
+      "url": "https://www.ucat.ac.uk/about-ucat/test-format-and-scoring/",
+      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/ucat-format.html",
+      "bytes": 25566,
+      "sha256": "9aa4a93bddcc62bf53c6196f2b38ac40240a1f781154590c772c68f179d52dbf",
+      "publishable": false
+    },
+    {
+      "id": "ucat-essentials",
+      "exam": "ucat",
+      "title": "UCAT essentials",
+      "url": "https://www.ucat.ac.uk/about-ucat/ucat-essentials/",
+      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/ucat-essentials.html",
+      "bytes": 22526,
+      "sha256": "4d51e76e5a109699d32d95c8ecef441ed243e19834fa5a2f0c1c634a3f197a5f",
+      "publishable": false
+    },
+    {
+      "id": "ucat-preparation",
+      "exam": "ucat",
+      "title": "UCAT preparation resources",
+      "url": "https://www.ucat.ac.uk/prepare/preparation-resources/",
+      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/ucat-preparation.html",
+      "bytes": 18715,
+      "sha256": "29792ee991393f94331dfbe7852a4a7eac5fb04c3781e70eb5d987c0e67f1963",
+      "publishable": false
+    },
+    {
+      "id": "ucat-tools",
+      "exam": "ucat",
+      "title": "UCAT test tools",
+      "url": "https://www.ucat.ac.uk/prepare/test-tools/",
+      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/ucat-tools.html",
+      "bytes": 28560,
+      "sha256": "a659bedc40b1a603cb755e75121a19a633889d2aab62b66d62378e804f7b8c7c",
+      "publishable": false
+    },
+    {
+      "id": "ucat-tutorials",
+      "exam": "ucat",
+      "title": "UCAT question tutorials",
+      "url": "https://www.ucat.ac.uk/prepare/question-tutorials/",
+      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/ucat-tutorials.html",
+      "bytes": 18553,
+      "sha256": "f847c156d8c6f31f77dff7edd761251a656ab29a9ab5f8614ca41594ebd9df7d",
+      "publishable": false
+    },
+    {
+      "id": "ucat-practice",
+      "exam": "ucat",
+      "title": "UCAT practice tests and question banks",
+      "url": "https://www.ucat.ac.uk/prepare/practice-tests/",
+      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/ucat-practice.html",
+      "bytes": 23618,
+      "sha256": "f6e5f1a7e3d81887f996b3818e3e5779f47ac66900da1eadc75c6c88b1b7d204",
+      "publishable": false
+    },
+    {
+      "id": "ucat-candidate-advice",
+      "exam": "ucat",
+      "title": "UCAT candidate advice",
+      "url": "https://www.ucat.ac.uk/candidate-advice/advice-from-past-candidates/",
+      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/ucat-candidate-advice.html",
+      "bytes": 23863,
+      "sha256": "e21a4585f2b9cb54acd8ce21b719349997543d919d36f4898fc0bb0970cd0303",
+      "publishable": false
+    },
+    {
+      "id": "ucat-teacher-resources",
+      "exam": "ucat",
+      "title": "UCAT teacher and adviser resources",
+      "url": "https://www.ucat.ac.uk/teachers-and-advisers/resources/",
+      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/ucat-teacher-resources.html",
+      "bytes": 18723,
+      "sha256": "8fc3e6f087305d96122013935ca6583cf603640703ace1eed9c3896998e5f909",
+      "publishable": false
+    },
+    {
+      "id": "ucat-terms",
+      "exam": "ucat",
+      "title": "UCAT website terms",
+      "url": "https://www.ucat.ac.uk/legal-notice/",
+      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
+      "snapshotStatus": "downloaded",
+      "localPath": "content/official/raw/pages/ucat-terms.html",
+      "bytes": 27095,
+      "sha256": "08a57d48ba3a091713c3300ba5affec78019e281bfc66deca4a05294c5ce1152",
+      "publishable": false
+    }
+  ],
+  "assets": [
+    {
+      "id": "esat-engaa-2016-s1-answerkey-43c62203",
+      "exam": "esat",
+      "title": "2016 ENGAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07112109/ENGAA_2016_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2016_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 6598,
+      "sha256": "b86766da1e0c44adb8232e16c8aa66ba56dd983824d0ebe4420b3335983caecf"
+    },
+    {
+      "id": "esat-engaa-2016-s1-questionpaper-d8e59780",
+      "exam": "esat",
+      "title": "2016 ENGAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07112055/ENGAA_2016_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2016_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 333284,
+      "sha256": "1af7452d8ce390184905e891b2d64c96fef239a750dd680bd368dbb8002ddbc3"
+    },
+    {
+      "id": "esat-engaa-2017-s1-answerkey-754af422",
+      "exam": "esat",
+      "title": "2017 ENGAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07112228/ENGAA_2017_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2017_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 38303,
+      "sha256": "e5899182138bf2a701f15151d045ff9b784a229adfb676e98e4db716b62c97ba"
+    },
+    {
+      "id": "esat-engaa-2017-s1-questionpaper-b69c10e3",
+      "exam": "esat",
+      "title": "2017 ENGAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07112231/ENGAA_2017_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2017_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 350953,
+      "sha256": "a4fb8e7c9322fd8efc6374006108eac91774de3b20d86f822237a825c9208ca5"
+    },
+    {
+      "id": "esat-engaa-2018-s1-answerkey-b9954416",
+      "exam": "esat",
+      "title": "2018 ENGAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07113023/ENGAA_2018_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2018_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 21544,
+      "sha256": "a10522cc172ead80dba7b36b4b5b2556593ed37bef82b54bbb57ffa943d75ea9"
+    },
+    {
+      "id": "esat-engaa-2018-s1-questionpaper-e5d3b22d",
+      "exam": "esat",
+      "title": "2018 ENGAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07113017/ENGAA_2018_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2018_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 319594,
+      "sha256": "11d0ec9946da2841ed50f209fd3cf1f63d4b0075e57e9871622ddb88ece030f2"
+    },
+    {
+      "id": "esat-engaa-2019-s1-answerkey-b2ccf41d",
+      "exam": "esat",
+      "title": "2019 ENGAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115515/ENGAA_2019_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2019_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 6321,
+      "sha256": "18ae1767b1a0ffdf4bcd8ac749a4a5d9315f835c506eba3b23fdf572fa6a8f28"
+    },
+    {
+      "id": "esat-engaa-2019-s1-questionpaper-f1bd77f4",
+      "exam": "esat",
+      "title": "2019 ENGAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115511/ENGAA_2019_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2019_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 328910,
+      "sha256": "2446ed91abc070a3f7dab661771b50e6fa3b5de18542e2f77b90f9d47cec163f"
+    },
+    {
+      "id": "esat-engaa-2020-s1-answerkey-734d7012",
+      "exam": "esat",
+      "title": "2020 ENGAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115614/ENGAA_2020_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2020_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 35763,
+      "sha256": "57f0893b0198d5903cefd5ae3d0cddbdabe3fece91633c316d16380d16d0c432"
+    },
+    {
+      "id": "esat-engaa-2020-s1-questionpaper-ecedeb10",
+      "exam": "esat",
+      "title": "2020 ENGAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115613/ENGAA_2020_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2020_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 303625,
+      "sha256": "c3c9baf1459798a5b2deae611961943e3b52f206a46fc90d379fb37ed53b8f5d"
+    },
+    {
+      "id": "esat-engaa-2021-s1-answerkey-9e98895f",
+      "exam": "esat",
+      "title": "2021 ENGAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115613/ENGAA_2021_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2021_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 35471,
+      "sha256": "fabe98d38c65a54dec215825277474cdfd9303cf172eac37cbeb891d39150f56"
+    },
+    {
+      "id": "esat-engaa-2021-s1-questionpaper-e658b1c7",
+      "exam": "esat",
+      "title": "2021 ENGAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115611/ENGAA_2021_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2021_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 312175,
+      "sha256": "98a6a26f9556b34dcef3f907be497fce4892a089d6c42c26177fe906824b7eac"
+    },
+    {
+      "id": "esat-engaa-2022-s1-answerkey-5ed77823",
+      "exam": "esat",
+      "title": "2022 ENGAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115612/ENGAA_2022_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2022_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 38268,
+      "sha256": "9c418485775342ab8afb88ccec2c3fb359af3193b2f2ff77073b505fde76bdd4"
+    },
+    {
+      "id": "esat-engaa-2022-s1-questionpaper-17de4153",
+      "exam": "esat",
+      "title": "2022 ENGAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115611/ENGAA_2022_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2022_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 333234,
+      "sha256": "77811e0ca9de806352b45f9426394fec73c670580390173dfe046541ad96251d"
+    },
+    {
+      "id": "esat-engaa-2023-s1-answerkey-b688ac0a",
+      "exam": "esat",
+      "title": "2023 ENGAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115610/ENGAA_2023_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2023_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 37198,
+      "sha256": "d16eada95c2471284b81c968fb6ba8067be9d56d539750523bba29f8166fadd4"
+    },
+    {
+      "id": "esat-engaa-2023-s1-questionpaper-2aa55146",
+      "exam": "esat",
+      "title": "2023 ENGAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115605/ENGAA_2023_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ENGAA_2023_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 264676,
+      "sha256": "72440b55385be7cbafe998dd482a1ae047fe92440370210a01879b02cf7ee310"
+    },
+    {
+      "id": "esat-esat-guide-biology-june-2025-294569f8",
+      "exam": "esat",
+      "title": "Biology",
+      "kind": "official_guide",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/07/06120052/ESAT_Guide_Biology_June_2025.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ESAT_Guide_Biology_June_2025.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 7320366,
+      "sha256": "cd5fd84f56ef0e55722841fcbdacb86eec15b0eddd16a05ea56c5d902d9e125b"
+    },
+    {
+      "id": "esat-esat-guide-chemistry-june2025-fdef8058",
+      "exam": "esat",
+      "title": "Chemistry",
+      "kind": "official_guide",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/06/25103142/ESAT_GUIDE_Chemistry_June2025.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ESAT_GUIDE_Chemistry_June2025.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 13876717,
+      "sha256": "f1cfbc2ec1c44068526deeaac0b8ef7c87e245259cc89f9ed6b7c9124e359353"
+    },
+    {
+      "id": "esat-esat-guide-mathematics-1-589a2da4",
+      "exam": "esat",
+      "title": "Mathematics 1",
+      "kind": "official_guide",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103534/ESAT_Guide_Mathematics_1.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ESAT_Guide_Mathematics_1.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 13548145,
+      "sha256": "b376810fbd9ffea4c0c70fafb082d4c0287eb35ea16cfc354d06240a9798a3f5"
+    },
+    {
+      "id": "esat-esat-guide-physics-6fef239b",
+      "exam": "esat",
+      "title": "Physics",
+      "kind": "official_guide",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103558/ESAT_Guide_Physics.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/ESAT_Guide_Physics.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 8194759,
+      "sha256": "234651aa05f87112e3455bae420de782683938d8d28950293649a8352dc4729e"
+    },
+    {
+      "id": "esat-nsaa-2016-s1-answerkey-d1d5e0b3",
+      "exam": "esat",
+      "title": "2016 NSAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120540/NSAA_2016_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2016_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 7013,
+      "sha256": "25f74dcd8efc66d264dd22e15e11ae4caaf5904ce750350792b70330e07b53a7"
+    },
+    {
+      "id": "esat-nsaa-2016-s1-questionpaper-f70525e7",
+      "exam": "esat",
+      "title": "2016 NSAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120539/NSAA_2016_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2016_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 2462501,
+      "sha256": "edb357e04cee67dfd839a6118d47c36ea1d97a84f747210c1101ca8d9ee19cc5"
+    },
+    {
+      "id": "esat-nsaa-2017-s1-answerkey-87a11309",
+      "exam": "esat",
+      "title": "2017 NSAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120538/NSAA_2017_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2017_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 40529,
+      "sha256": "a0f4b543bd0c3532169cc46897101fa7a9c2c5523fbd0347b12e3ee5595f8659"
+    },
+    {
+      "id": "esat-nsaa-2017-s1-questionpaper-bd969561",
+      "exam": "esat",
+      "title": "2017 NSAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120538/NSAA_2017_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2017_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 501485,
+      "sha256": "ac4657dffc3c1b83346500534235e327b6d07243a57d05a16672e004ac9787b8"
+    },
+    {
+      "id": "esat-nsaa-2018-s1-answerkey-15c134cc",
+      "exam": "esat",
+      "title": "2018 NSAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120537/NSAA_2018_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2018_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 23991,
+      "sha256": "a5bc00f44894e7f4f4eea2c78f9a06302f470a0ade4588d6c846b4c0b03d45ba"
+    },
+    {
+      "id": "esat-nsaa-2018-s1-questionpaper-b318de6e",
+      "exam": "esat",
+      "title": "2018 NSAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120537/NSAA_2018_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2018_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 6230738,
+      "sha256": "fdcffb3fb71f05a65497d066f393cb0df0cffa913ec1e75b228ecb989cf77d07"
+    },
+    {
+      "id": "esat-nsaa-2019-s1-answerkey-f7dc6a34",
+      "exam": "esat",
+      "title": "2019 NSAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120535/NSAA_2019_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2019_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 7241,
+      "sha256": "e9a1cfd104e6b143fac26db2344897e6210f587cda9ee2861e62197f65a0d12a"
+    },
+    {
+      "id": "esat-nsaa-2019-s1-questionpaper-b6d04536",
+      "exam": "esat",
+      "title": "2019 NSAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120534/NSAA_2019_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2019_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 2347456,
+      "sha256": "a2adee70d5655a3a24cd549330463ab47695dedcf08faca1bcdae02d5ad3aa5b"
+    },
+    {
+      "id": "esat-nsaa-2020-s1-answerkey-14f2683e",
+      "exam": "esat",
+      "title": "2020 NSAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120535/NSAA_2020_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2020_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 7238,
+      "sha256": "52095c632a1d3fbe2734054aee4f3707a747f9f89f67aa2a0791a4aa479aebd9"
+    },
+    {
+      "id": "esat-nsaa-2020-s1-questionpaper-e03fecde",
+      "exam": "esat",
+      "title": "2020 NSAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120533/NSAA_2020_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2020_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 439274,
+      "sha256": "9317791955d614a76136810e1b249a33a31419573fa64ea7b133a585a7010fd9"
+    },
+    {
+      "id": "esat-nsaa-2021-s1-answerkey-6d8dbf91",
+      "exam": "esat",
+      "title": "2021 NSAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120532/NSAA_2021_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2021_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 160338,
+      "sha256": "e54cd91dbff672a3383937f6d524349974b4be419ea9ccb4f6fe65dfa66eccff"
+    },
+    {
+      "id": "esat-nsaa-2021-s1-questionpaper-ab7000bc",
+      "exam": "esat",
+      "title": "2021 NSAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120532/NSAA_2021_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2021_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 437307,
+      "sha256": "6ed0f51bfb311666949b4ee037ff1ace9f070f98cb35a2f1a98736c0191099ab"
+    },
+    {
+      "id": "esat-nsaa-2022-s1-answerkey-bbff76e2",
+      "exam": "esat",
+      "title": "2022 NSAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120531/NSAA_2022_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2022_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 45781,
+      "sha256": "82578e18af80317ac9f4925c21b2cbc5eb365fb02ac8df37e2e318d153807e77"
+    },
+    {
+      "id": "esat-nsaa-2022-s1-questionpaper-57f5b897",
+      "exam": "esat",
+      "title": "2022 NSAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120525/NSAA_2022_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2022_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 533136,
+      "sha256": "be9ebd5624787340333c5802893592dbf17e00088d25107f9fff957f54cdeadf"
+    },
+    {
+      "id": "esat-nsaa-2023-s1-answerkey-00b9e17b",
+      "exam": "esat",
+      "title": "2023 NSAA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120531/NSAA_2023_S1_AnswerKey.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2023_S1_AnswerKey.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 39210,
+      "sha256": "cd4c1edce2e032576480b42e2726fd31e3389cfdcc7e2fca763ab4e15a53c328"
+    },
+    {
+      "id": "esat-nsaa-2023-s1-questionpaper-3f15eed5",
+      "exam": "esat",
+      "title": "2023 NSAA Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120523/NSAA_2023_S1_QuestionPaper.pdf",
+      "discoveredOn": [
+        "esat-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/esat/NSAA_2023_S1_QuestionPaper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 2362132,
+      "sha256": "5c79484adcb68679fc4ca22a111f365aaddbbc0fd473ead9f2e4646906f8f349"
+    },
+    {
+      "id": "lnat-practice-test-2010-paper-1-1a611109",
+      "exam": "lnat",
+      "title": "Practice test paper 1 (PDF)",
+      "kind": "question_paper",
+      "url": "https://lnat.ac.uk/wp-content/uploads/2014/05/Practice-Test-2010-paper-1.pdf",
+      "discoveredOn": [
+        "lnat-practice"
+      ],
+      "rightsStatus": "rights_review_required_before_republication",
+      "publishable": false,
+      "localPath": "content/official/raw/lnat/Practice-Test-2010-paper-1.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 97272,
+      "sha256": "6e251cb2cf2eb0d803abe0747707b9f752ccae1d7334e414832bd56625f8f628"
+    },
+    {
+      "id": "lnat-practice-test-2010-paper-1-72791ac7",
+      "exam": "lnat",
+      "title": "Practice test paper 1 (RTF)",
+      "kind": "question_paper",
+      "url": "https://lnat.ac.uk/wp-content/uploads/2014/05/Practice-Test-2010-paper-1.rtf",
+      "discoveredOn": [
+        "lnat-practice"
+      ],
+      "rightsStatus": "rights_review_required_before_republication",
+      "publishable": false,
+      "localPath": "content/official/raw/lnat/Practice-Test-2010-paper-1.rtf",
+      "mediaType": "application/rtf",
+      "downloadStatus": "downloaded",
+      "bytes": 1644834,
+      "sha256": "b9bc3b66c0295b1b8a2d136d5a1dae5ad27bc4ab1c7bb488234f93c958a6fb44"
+    },
+    {
+      "id": "lnat-practice-test-2010-paper-2-53cd5c6a",
+      "exam": "lnat",
+      "title": "Practice test paper 2 (PDF)",
+      "kind": "question_paper",
+      "url": "https://lnat.ac.uk/wp-content/uploads/2014/05/Practice-Test-2010-paper-2.pdf",
+      "discoveredOn": [
+        "lnat-practice"
+      ],
+      "rightsStatus": "rights_review_required_before_republication",
+      "publishable": false,
+      "localPath": "content/official/raw/lnat/Practice-Test-2010-paper-2.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 118865,
+      "sha256": "b4d2a4e55ce6f9a4603d9791f46a9c63f4b33bdbc14ed6c1939a4b88e7ada737"
+    },
+    {
+      "id": "lnat-practice-test-2010-paper-2-86a625b3",
+      "exam": "lnat",
+      "title": "Practice test paper 2 (RTF)",
+      "kind": "question_paper",
+      "url": "https://lnat.ac.uk/wp-content/uploads/2014/05/Practice-Test-2010-paper-2.rtf",
+      "discoveredOn": [
+        "lnat-practice"
+      ],
+      "rightsStatus": "rights_review_required_before_republication",
+      "publishable": false,
+      "localPath": "content/official/raw/lnat/Practice-Test-2010-paper-2.rtf",
+      "mediaType": "application/rtf",
+      "downloadStatus": "downloaded",
+      "bytes": 1602501,
+      "sha256": "397868d931c413f8177da03ee9a72ea48626c5ace5c1ffec72e7f94060a0b97c"
+    },
+    {
+      "id": "lnat-practice-tests-2010-commentary-21ef0c36",
+      "exam": "lnat",
+      "title": "Practice test commentary (PDF)",
+      "kind": "worked_explanation",
+      "url": "https://lnat.ac.uk/wp-content/uploads/2014/05/Practice-Tests-2010-Commentary.pdf",
+      "discoveredOn": [
+        "lnat-practice"
+      ],
+      "rightsStatus": "rights_review_required_before_republication",
+      "publishable": false,
+      "localPath": "content/official/raw/lnat/Practice-Tests-2010-Commentary.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 44328,
+      "sha256": "a9e4447e2e53f9fd06bacd317814e961dad9174e76b487720b954a62d0f238a2"
+    },
+    {
+      "id": "lnat-practice-tests-2010-commentary-a8c24a9a",
+      "exam": "lnat",
+      "title": "Practice test commentary (RTF)",
+      "kind": "worked_explanation",
+      "url": "https://lnat.ac.uk/wp-content/uploads/2014/05/Practice-Tests-2010-Commentary.rtf",
+      "discoveredOn": [
+        "lnat-practice"
+      ],
+      "rightsStatus": "rights_review_required_before_republication",
+      "publishable": false,
+      "localPath": "content/official/raw/lnat/Practice-Tests-2010-Commentary.rtf",
+      "mediaType": "application/rtf",
+      "downloadStatus": "downloaded",
+      "bytes": 1241328,
+      "sha256": "63a861b97bc3691aa0922dbbd0b70ef0ae492cb342b02860acb3833598f40daa"
+    },
+    {
+      "id": "lnat-practice-tests-2010-mark-scheme-356986e9",
+      "exam": "lnat",
+      "title": "Practice test marking scheme (PDF)",
+      "kind": "mark_scheme",
+      "url": "https://lnat.ac.uk/wp-content/uploads/2014/05/Practice-Tests-2010-mark-scheme.pdf",
+      "discoveredOn": [
+        "lnat-practice"
+      ],
+      "rightsStatus": "rights_review_required_before_republication",
+      "publishable": false,
+      "localPath": "content/official/raw/lnat/Practice-Tests-2010-mark-scheme.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 23291,
+      "sha256": "23f11d36b54a343a469dd36585f50eb78cb6d08f067d0259ddb85b43919d7ce3"
+    },
+    {
+      "id": "lnat-practice-tests-2010-mark-scheme-74b81ac8",
+      "exam": "lnat",
+      "title": "Practice test marking scheme (RTF)",
+      "kind": "mark_scheme",
+      "url": "https://lnat.ac.uk/wp-content/uploads/2014/04/Practice-Tests-2010-mark-scheme.rtf",
+      "discoveredOn": [
+        "lnat-practice"
+      ],
+      "rightsStatus": "rights_review_required_before_republication",
+      "publishable": false,
+      "localPath": "content/official/raw/lnat/Practice-Tests-2010-mark-scheme.rtf",
+      "mediaType": "application/rtf",
+      "downloadStatus": "downloaded",
+      "bytes": 1360733,
+      "sha256": "5706b8433f6cba7212e3155d06114f517442ce4c6f3e391964abf4b088eb5397"
+    },
+    {
+      "id": "lnat-sample-arts-be0b4133",
+      "exam": "lnat",
+      "title": "Answer",
+      "kind": "official_document",
+      "url": "https://lnat.ac.uk/wp-content/uploads/2014/04/sample_arts.pdf",
+      "discoveredOn": [
+        "lnat-essays"
+      ],
+      "rightsStatus": "rights_review_required_before_republication",
+      "publishable": false,
+      "localPath": "content/official/raw/lnat/sample_arts.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 133120,
+      "sha256": "bc27b9799f47bf6234a20b1996d5ae0ae1003e8dd391fe15586c249a014f1f2c"
+    },
+    {
+      "id": "lnat-sample-political-e5278d7a",
+      "exam": "lnat",
+      "title": "Answer",
+      "kind": "official_document",
+      "url": "https://lnat.ac.uk/wp-content/uploads/2014/04/sample_political.pdf",
+      "discoveredOn": [
+        "lnat-essays"
+      ],
+      "rightsStatus": "rights_review_required_before_republication",
+      "publishable": false,
+      "localPath": "content/official/raw/lnat/sample_political.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 129977,
+      "sha256": "4fb6610ac78f8f12f0e91bcbcd2cd61c3004254926e3f8610a4a7209a20f90b3"
+    },
+    {
+      "id": "lnat-sample-species-bfd922b1",
+      "exam": "lnat",
+      "title": "Answer",
+      "kind": "official_document",
+      "url": "https://lnat.ac.uk/wp-content/uploads/2014/04/sample_species.pdf",
+      "discoveredOn": [
+        "lnat-essays"
+      ],
+      "rightsStatus": "rights_review_required_before_republication",
+      "publishable": false,
+      "localPath": "content/official/raw/lnat/sample_species.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 173227,
+      "sha256": "7a5a3d7f67c8ef2da2419326aeab957c93a61c6cd030991ba3d6aa14e470b224"
+    },
+    {
+      "id": "lnat-your-guide-to-preparing-for-the-lnat-64ada412",
+      "exam": "lnat",
+      "title": "Your guide to Preparing for the LNAT",
+      "kind": "official_guide",
+      "url": "https://lnat.ac.uk/wp-content/uploads/2014/05/Your-Guide-To-Preparing-For-The-LNAT.pdf",
+      "discoveredOn": [
+        "lnat-guide"
+      ],
+      "rightsStatus": "rights_review_required_before_republication",
+      "publishable": false,
+      "localPath": "content/official/raw/lnat/Your-Guide-To-Preparing-For-The-LNAT.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 146537,
+      "sha256": "b876afae5e82ef0f43cb714c37ed26a08369b3d6714b40e1fca89288829ced08"
+    },
+    {
+      "id": "shared-candidate-handbook-2027-entry-2b5dc34c",
+      "exam": "shared",
+      "title": "UAT-UK Candidate Handbook - 2027 Entry",
+      "kind": "official_document",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/26111813/Candidate-Handbook-2027-Entry.pdf",
+      "discoveredOn": [
+        "uat-prepare"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/shared/Candidate-Handbook-2027-Entry.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 2974297,
+      "sha256": "f41a0fd1de83e9ac1bf1492fc633da0988360ba1a1eac9086ede3d6658930584"
+    },
+    {
+      "id": "shared-citbtermsandconditions-54642203",
+      "exam": "shared",
+      "title": "Privacy and Cookie Policy",
+      "kind": "official_document",
+      "url": "https://www.pearsonvue.com/citb/privacy/CITBTermsandConditions.pdf",
+      "discoveredOn": [
+        "uat-terms"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/shared/CITBTermsandConditions.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 37808,
+      "sha256": "5c83f7840b19a2f5c22433ab625621edc24d1e52c0c2b8134b28f9858e3802f6"
+    },
+    {
+      "id": "shared-esat-content-specification-367a3cf8",
+      "exam": "shared",
+      "title": "ESAT Specification",
+      "kind": "specification",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165424/ESAT_Content_Specification.pdf",
+      "discoveredOn": [
+        "uat-prepare"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 2163955,
+      "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3"
+    },
+    {
+      "id": "shared-notes-on-logic-and-proof-june2025-66a8e9a0",
+      "exam": "shared",
+      "title": "Notes on Logic and Proof – for TMUA Paper 2",
+      "kind": "official_guide",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/06/25160507/Notes_on_Logic_and_Proof_June2025.pdf",
+      "discoveredOn": [
+        "uat-prepare"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/shared/Notes_on_Logic_and_Proof_June2025.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1518322,
+      "sha256": "940e7ea3e18cf504387730d099d14dddb632393d3604ce5a4257e73edbd2067c"
+    },
+    {
+      "id": "shared-notes-on-mathematics-for-tmua-and-esat-m2-45ec0414",
+      "exam": "shared",
+      "title": "Notes on Mathematics",
+      "kind": "official_guide",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103537/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+      "discoveredOn": [
+        "esat-preparation",
+        "uat-prepare"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/shared/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 2640396,
+      "sha256": "12ed684ee2dfb9b53355d54018ba216b5cd32161e5f6c5c9ee5e96b93cbf8844"
+    },
+    {
+      "id": "shared-tara-content-specification-606a66ec",
+      "exam": "shared",
+      "title": "TARA Specification",
+      "kind": "specification",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/08142350/TARA_Content_Specification.pdf",
+      "discoveredOn": [
+        "uat-prepare"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/shared/TARA_Content_Specification.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 553012,
+      "sha256": "d326e78305aefd999c42953de3024d403f27357ecbc0f3dd562134e8105822cd"
+    },
+    {
+      "id": "shared-tara-question-guide-1a62ba04",
+      "exam": "shared",
+      "title": "TARA Question Guide",
+      "kind": "official_guide",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/08142344/TARA_Question_Guide.pdf",
+      "discoveredOn": [
+        "uat-prepare"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/shared/TARA_Question_Guide.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 603239,
+      "sha256": "afcee1ff9dd35025000cd7c5a4cef804fa31fb3e8870d5748ec8d3ac2c45a6cb"
+    },
+    {
+      "id": "shared-tmua-content-specification-30c0a17d",
+      "exam": "shared",
+      "title": "TMUA Specification",
+      "kind": "specification",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165619/TMUA_Content_Specification.pdf",
+      "discoveredOn": [
+        "uat-prepare"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/shared/TMUA_Content_Specification.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 3389778,
+      "sha256": "4e6ec1c29b795aa5e5002309c60988546bd16b6cfb6d237336bb414b5d5760b8"
+    },
+    {
+      "id": "shared-uat-uk-ltd-privacy-notice-june-2025-7062d822",
+      "exam": "shared",
+      "title": "Data Privacy Notice",
+      "kind": "official_document",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/07/02201830/UAT-UK_Ltd_Privacy_Notice_June_2025.pdf",
+      "discoveredOn": [
+        "uat-terms"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/shared/UAT-UK_Ltd_Privacy_Notice_June_2025.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 165836,
+      "sha256": "0450fec1973627e5b5021eb4262149b0a9a2775a201bb99acf24673801516f6d"
+    },
+    {
+      "id": "tara-bmat-2003-section-1-answer-key-8d918229",
+      "exam": "tara",
+      "title": "2003 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104327/BMAT-2003-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2003-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 10676,
+      "sha256": "3a23a4ca03113551cdf1e129935e6ed65dcfb8d007cff9a4398e4939cebe4c5d"
+    },
+    {
+      "id": "tara-bmat-2003-section-1-question-paper-78dd09bf",
+      "exam": "tara",
+      "title": "2003 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104328/BMAT-2003-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2003-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 67723,
+      "sha256": "b50f7fbc103ff29820627ec26639fff3605acad5649eb0685a1bf828da200726"
+    },
+    {
+      "id": "tara-bmat-2004-section-1-answer-key-04815868",
+      "exam": "tara",
+      "title": "2004 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104329/BMAT-2004-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2004-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 13212,
+      "sha256": "ea3463d1c954e79250db355ca5625660b9ed1ee73b4302090c375083dea5d6e8"
+    },
+    {
+      "id": "tara-bmat-2004-section-1-question-paper-5b646408",
+      "exam": "tara",
+      "title": "2004 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104330/BMAT-2004-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2004-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 70318,
+      "sha256": "bf878c35d9f91132da01ebe934510162b8e4aa77a5b04c9c6a75f7bfe8657c32"
+    },
+    {
+      "id": "tara-bmat-2005-section-1-answer-key-a78420be",
+      "exam": "tara",
+      "title": "2005 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104331/BMAT-2005-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2005-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 10376,
+      "sha256": "e9ff04e8b9debfd54078546b01fbad1e48c3a4a940b49f508a7efb3e81cc19da"
+    },
+    {
+      "id": "tara-bmat-2005-section-1-question-paper-1a4d4911",
+      "exam": "tara",
+      "title": "2005 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104332/BMAT-2005-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2005-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 198233,
+      "sha256": "4196ce29c047cb9135f4978536d5bb841edbf573c4371d6d4a00461f2335f6d5"
+    },
+    {
+      "id": "tara-bmat-2006-section-1-answer-key-bdc08952",
+      "exam": "tara",
+      "title": "2006 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104333/BMAT-2006-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2006-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 9632,
+      "sha256": "9cfb1ab6273e369389ae4e72e00eea0d6bca8705adfea53fe44348ea52a8c8af"
+    },
+    {
+      "id": "tara-bmat-2006-section-1-question-paper-833ddafe",
+      "exam": "tara",
+      "title": "2006 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104335/BMAT-2006-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2006-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 378611,
+      "sha256": "3baf7cfa3aeddaec7ba4dd32724d91cfd9f59ec4a49451857703742ead377946"
+    },
+    {
+      "id": "tara-bmat-2007-section-1-answer-key-9b25c34d",
+      "exam": "tara",
+      "title": "2007 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104336/BMAT-2007-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2007-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 34900,
+      "sha256": "e01d8a94b44dcabd87ddf6787fb3e69574b9932294639ebc59271f4364b20e76"
+    },
+    {
+      "id": "tara-bmat-2007-section-1-question-paper-102d6b3c",
+      "exam": "tara",
+      "title": "2007 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104337/BMAT-2007-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2007-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 144060,
+      "sha256": "9944c5a637dfb7830de1e7276f65fdcb78c466051224a43ac5476a3ca5a5e2fd"
+    },
+    {
+      "id": "tara-bmat-2008-section-1-answer-key-cb6adb77",
+      "exam": "tara",
+      "title": "2008 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104338/BMAT-2008-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2008-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 6653,
+      "sha256": "cb58e056a2e3463b7fdb1dbca9841fba367c285d1db984481747009d2da60935"
+    },
+    {
+      "id": "tara-bmat-2008-section-1-question-paper-8a4d870c",
+      "exam": "tara",
+      "title": "2008 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104340/BMAT-2008-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2008-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 107962,
+      "sha256": "e658c0e051edd77335e1925191e793e7d2c59ea311796a5338da9f800bc0395f"
+    },
+    {
+      "id": "tara-bmat-2009-section-1-answer-key-ff156c77",
+      "exam": "tara",
+      "title": "2009 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104341/BMAT-2009-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2009-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 13215,
+      "sha256": "e23079e87afd4efc996079de0bba44a968d7bcc174ba5c0067548c05aa921b3a"
+    },
+    {
+      "id": "tara-bmat-2009-section-1-question-paper-cdf13768",
+      "exam": "tara",
+      "title": "2009 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104342/BMAT-2009-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2009-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 205864,
+      "sha256": "f2b39a709c6add90186dc5967c976ff094d36a896ff4ec3a6ff9c24b62107b42"
+    },
+    {
+      "id": "tara-bmat-2010-section-1-answer-key-1f8ea567",
+      "exam": "tara",
+      "title": "2010 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104343/BMAT-2010-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2010-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 13135,
+      "sha256": "dfd027bafa75f1011a2f4baacebdbd91e5ccaab236a0dd32e8900a8bb3fdd4d5"
+    },
+    {
+      "id": "tara-bmat-2010-section-1-question-paper-d1a818c8",
+      "exam": "tara",
+      "title": "2010 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104346/BMAT-2010-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2010-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 546726,
+      "sha256": "06c7ef7d42a2bf036487142b281a6755f271c7bbaa4d04192e71a2db1ebaf79a"
+    },
+    {
+      "id": "tara-bmat-2011-section-1-answer-key-cf5107de",
+      "exam": "tara",
+      "title": "2011 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104347/BMAT-2011-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2011-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 8680,
+      "sha256": "5576dcc87b776e751d145645d13df242fa6831c6f47d6a6b0f890b37fe85d684"
+    },
+    {
+      "id": "tara-bmat-2011-section-1-question-paper-98095082",
+      "exam": "tara",
+      "title": "2011 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104349/BMAT-2011-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2011-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 332892,
+      "sha256": "a8ffa678ede8f746feb3cf82d806d9eba622a19adf5957068d87a8b439244185"
+    },
+    {
+      "id": "tara-bmat-2012-section-1-answer-key-daf47294",
+      "exam": "tara",
+      "title": "2012 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104350/BMAT-2012-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2012-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 6631,
+      "sha256": "f59d60e0aa7899a4568aa88ff753401e77fc38711a7680fc734dd2a835e5400e"
+    },
+    {
+      "id": "tara-bmat-2012-section-1-question-paper-8fa43aa2",
+      "exam": "tara",
+      "title": "2012 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104352/BMAT-2012-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2012-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 162922,
+      "sha256": "7c0e6e039d205e37026be1be20c42549879c76827c54cb0ec43a1751a4bbe141"
+    },
+    {
+      "id": "tara-bmat-2013-section-1-answer-key-0bc6e7ad",
+      "exam": "tara",
+      "title": "2013 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104353/BMAT-2013-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2013-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 207901,
+      "sha256": "77ccd1a548606f1376867ffe870d7b97a82d01fb391fe11923966a56a7246e54"
+    },
+    {
+      "id": "tara-bmat-2013-section-1-question-paper-7d691f36",
+      "exam": "tara",
+      "title": "2013 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104355/BMAT-2013-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2013-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 570605,
+      "sha256": "6e2a62a372670b1035887dc7bbbfbda6f5b2222f3d72862ff497b840c8281a20"
+    },
+    {
+      "id": "tara-bmat-2014-section-1-answer-key-36dabe15",
+      "exam": "tara",
+      "title": "2014 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104356/BMAT-2014-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2014-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 14342,
+      "sha256": "6f93a0bc89cd788835eb260b2d34e25ef288d2a5e7bc42438d2ed36d7604966a"
+    },
+    {
+      "id": "tara-bmat-2014-section-1-question-paper-171d3f84",
+      "exam": "tara",
+      "title": "2014 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104358/BMAT-2014-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2014-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 243974,
+      "sha256": "9aca9594137dc35003d8eedb6d3f4505bfe6acfff3a2b468ced717e29a7cbca3"
+    },
+    {
+      "id": "tara-bmat-2015-section-1-answer-key-abfe8454",
+      "exam": "tara",
+      "title": "2015 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104359/BMAT-2015-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2015-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 73356,
+      "sha256": "bbeca5b5780147267f495445ccb776e6465d9edfacd50c7331a1d742f7fdb33b"
+    },
+    {
+      "id": "tara-bmat-2015-section-1-question-paper-e0c70a81",
+      "exam": "tara",
+      "title": "2015 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104400/BMAT-2015-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2015-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 275832,
+      "sha256": "7a8534780b4b3990e6ac8ee92365c0127dfe3f19dfe1011a1ae8205af416178d"
+    },
+    {
+      "id": "tara-bmat-2016-section-1-answer-key-e1193785",
+      "exam": "tara",
+      "title": "2016 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104402/BMAT-2016-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2016-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 68745,
+      "sha256": "0d039990124ef51759ca3a415df022395f81c18f3a6638f3cf68ae608e4efde5"
+    },
+    {
+      "id": "tara-bmat-2016-section-1-question-paper-5bf3b252",
+      "exam": "tara",
+      "title": "2016 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104405/BMAT-2016-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2016-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 747678,
+      "sha256": "084b815f8c363a972aea485107c1295bed9baaf454e31ae92b435998e1f9ae05"
+    },
+    {
+      "id": "tara-bmat-2017-section-1-answer-key-ab34467e",
+      "exam": "tara",
+      "title": "2017 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104406/BMAT-2017-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2017-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 15818,
+      "sha256": "61654554c83af27b682a38899016fea6c60c5b6511328d9064b92fdd78749347"
+    },
+    {
+      "id": "tara-bmat-2017-section-1-question-paper-83efdff9",
+      "exam": "tara",
+      "title": "2017 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104407/BMAT-2017-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2017-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 144070,
+      "sha256": "79c38eebc4816d758ed3a95b444e3e29e291727dbb1f2b59f340ec14a3d587b6"
+    },
+    {
+      "id": "tara-bmat-2018-section-1-answer-key-8fb6fc25",
+      "exam": "tara",
+      "title": "2018 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104259/BMAT-2018-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2018-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 46572,
+      "sha256": "18fbccc1e5861d2518f2c60c3e4694ed2de4ab056124f1118364752453cc716b"
+    },
+    {
+      "id": "tara-bmat-2018-section-1-question-paper-53b68b4b",
+      "exam": "tara",
+      "title": "2018 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104301/BMAT-2018-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2018-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 533779,
+      "sha256": "3bca20d68c430c894d935cd0f559fc99e5bc9ceae92b128253f2b78e4713852f"
+    },
+    {
+      "id": "tara-bmat-2019-section-1-answer-key-f4f429f0",
+      "exam": "tara",
+      "title": "2019 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104303/BMAT-2019-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2019-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 17424,
+      "sha256": "effc37ef05f5b87e54aa0a198a3b75194b240ab2d8e286ba5a764398af3d0016"
+    },
+    {
+      "id": "tara-bmat-2019-section-1-question-paper-e865e949",
+      "exam": "tara",
+      "title": "2019 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104306/BMAT-2019-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2019-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 969650,
+      "sha256": "52993364d7e394a615e458d3214d7c737f1fd2b3095272d7cc93fca77f61f10b"
+    },
+    {
+      "id": "tara-bmat-2020-section-1-answer-key-dc38d501",
+      "exam": "tara",
+      "title": "2020 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104308/BMAT-2020-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2020-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 200301,
+      "sha256": "82239a17a7b3eb292ff8b5c8857c1042d65c8c439ee3f85cc52211f6f6922954"
+    },
+    {
+      "id": "tara-bmat-2020-section-1-question-paper-15bf57cc",
+      "exam": "tara",
+      "title": "2020 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104312/BMAT-2020-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2020-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1401717,
+      "sha256": "88d436a5b3b9aecef6019c5c7165f588432ab1ccbe09d86487965a75e4346351"
+    },
+    {
+      "id": "tara-bmat-2021-section-1-answer-key-39761642",
+      "exam": "tara",
+      "title": "2021 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104313/BMAT-2021-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2021-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 111594,
+      "sha256": "1537917d4bad63746bae7072b58fb0924900c6dfc036c0ad4c0c152dde640bdb"
+    },
+    {
+      "id": "tara-bmat-2021-section-1-question-paper-a58addc3",
+      "exam": "tara",
+      "title": "2021 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104316/BMAT-2021-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2021-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1306367,
+      "sha256": "79ddc2445760dcf85ae6ec7aadfe81a9e3b2f1972ea78eaddee8af100ed2d84e"
+    },
+    {
+      "id": "tara-bmat-2022-section-1-answer-key-13adaaaa",
+      "exam": "tara",
+      "title": "2022 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104317/BMAT-2022-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2022-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 45630,
+      "sha256": "60e1216f565f87154bad0e9b41fc9ff90f0643a60e076a24fee8706b7558ab70"
+    },
+    {
+      "id": "tara-bmat-2022-section-1-question-paper-abf1a9cb",
+      "exam": "tara",
+      "title": "2022 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104321/BMAT-2022-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2022-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1422151,
+      "sha256": "3c51ae8f53d6a48a16ea19393849d9b2facf59d9e6ce34c5198d852d915e124f"
+    },
+    {
+      "id": "tara-bmat-2023-section-1-answer-key-7d90924b",
+      "exam": "tara",
+      "title": "2023 BMAT Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104323/BMAT-2023-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2023-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 111282,
+      "sha256": "7b07565c1460dcc738921756c0156f6a8c68d295fa7fa2719b28340004a97970"
+    },
+    {
+      "id": "tara-bmat-2023-section-1-question-paper-bf5e014b",
+      "exam": "tara",
+      "title": "2023 BMAT Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/08/06104326/BMAT-2023-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/BMAT-2023-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1168619,
+      "sha256": "624745d308b1f332be9f233c1bdade3dff1b0bb176c91c389478790095b8d2bf"
+    },
+    {
+      "id": "tara-tsa-2008-section-1-answer-key-a01f90f3",
+      "exam": "tara",
+      "title": "2008 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172307/TSA-2008-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2008-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 56755,
+      "sha256": "0c90dc1aa1602bae93e94d78f519fff4c8ba0ccd209d322166406f8260b07dd4"
+    },
+    {
+      "id": "tara-tsa-2008-section-1-question-paper-e3500cdf",
+      "exam": "tara",
+      "title": "2008 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172310/TSA-2008-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2008-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1024682,
+      "sha256": "c8eb2ecc81ec4cb056d357e7ce0968ca10718e3b3c3fe3a71ba010b1d5bb59a2"
+    },
+    {
+      "id": "tara-tsa-2009-section-1-answer-key-a581d017",
+      "exam": "tara",
+      "title": "2009 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172311/TSA-2009-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2009-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 18897,
+      "sha256": "0a2c03f9a2b239a54c9f4afb6123296df5ad3447171af5c818300ed264d2b780"
+    },
+    {
+      "id": "tara-tsa-2009-section-1-question-paper-3672895d",
+      "exam": "tara",
+      "title": "2009 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172315/TSA-2009-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2009-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1188352,
+      "sha256": "4606aa41945d1324968a552d88f8156c594e1fae5ad454666e8a7fe676ffa8ef"
+    },
+    {
+      "id": "tara-tsa-2010-section-1-answer-key-4fdb936f",
+      "exam": "tara",
+      "title": "2010 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172317/TSA-2010-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2010-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 20637,
+      "sha256": "29d1168c742d096278c016e1bd2ca2995680856a123913ac4eb5fa0e2ee3a43e"
+    },
+    {
+      "id": "tara-tsa-2010-section-1-question-paper-9296eecd",
+      "exam": "tara",
+      "title": "2010 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172318/TSA-2010-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2010-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 350155,
+      "sha256": "677c2c8838da2f36a7a23c15d7acfefbdfe65576ee252067b79d0d73a27dfe22"
+    },
+    {
+      "id": "tara-tsa-2011-section-1-answer-key-5577b4e8",
+      "exam": "tara",
+      "title": "2011 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172320/TSA-2011-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2011-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 22487,
+      "sha256": "47f6c7f103a9a91f752ce15a9bbfb609d6f135d74e4212aebfec3e4de5ead2b7"
+    },
+    {
+      "id": "tara-tsa-2011-section-1-question-paper-21c90eb7",
+      "exam": "tara",
+      "title": "2011 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172322/TSA-2011-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2011-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 322117,
+      "sha256": "9ec516fea34aa2d7dc4072da92c403b9114f0f94ee959372dcaed8e391ad243a"
+    },
+    {
+      "id": "tara-tsa-2012-section-1-answer-key-5858d9d5",
+      "exam": "tara",
+      "title": "2012 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172323/TSA-2012-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2012-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 26942,
+      "sha256": "1f9cd0d1b89fee1917c4c582bfa03e7b614cbdeebd8a5763e5ce08de48b98454"
+    },
+    {
+      "id": "tara-tsa-2012-section-1-question-paper-7efd75f2",
+      "exam": "tara",
+      "title": "2012 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172326/TSA-2012-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2012-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 971573,
+      "sha256": "363965df88fbd3d60f2b616d5a8d2990682bdec1dfd72a06cf96369413be425a"
+    },
+    {
+      "id": "tara-tsa-2013-section-1-answer-key-f648a73a",
+      "exam": "tara",
+      "title": "2013 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172328/TSA-2013-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2013-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 109325,
+      "sha256": "110a1608119bb875560fd3966302d8dc56616af7aabb5c9bcf4d55261812df5d"
+    },
+    {
+      "id": "tara-tsa-2013-section-1-question-paper-3c237703",
+      "exam": "tara",
+      "title": "2013 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172331/TSA-2013-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2013-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1348192,
+      "sha256": "228802858c5aa66f27769e74437607dc8257eb7b727ec4114f387da43e0f5768"
+    },
+    {
+      "id": "tara-tsa-2014-section-1-answer-key-3e5056b1",
+      "exam": "tara",
+      "title": "2014 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172333/TSA-2014-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2014-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 49983,
+      "sha256": "46fb15f7203e8c64a18bd12fbfc17870900fbfbdeaaa6ae8b39c0ace620d58b6"
+    },
+    {
+      "id": "tara-tsa-2014-section-1-question-paper-9f88c618",
+      "exam": "tara",
+      "title": "2014 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01172341/TSA-2014-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2014-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 3168008,
+      "sha256": "bdc455006b640c4594927cda50b95af3d5af30f90b3e7a3d80160c1748fb6b9f"
+    },
+    {
+      "id": "tara-tsa-2015-section-1-answer-key-2cceedec",
+      "exam": "tara",
+      "title": "2015 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154305/TSA-2015-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2015-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 48399,
+      "sha256": "87d4b49dc9b9e623e00e2cbac2c92afe0fce3992e9c571bd073c4238a639b1d9"
+    },
+    {
+      "id": "tara-tsa-2015-section-1-question-paper-55029880",
+      "exam": "tara",
+      "title": "2015 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154311/TSA-2015-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2015-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1571723,
+      "sha256": "9762ad5ab93f36d0d5563e7c8bca13e83c6acb9b6fd56204dcc6e69a806c567e"
+    },
+    {
+      "id": "tara-tsa-2016-section-1-answer-key-26fb2296",
+      "exam": "tara",
+      "title": "2016 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154313/TSA-2016-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2016-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 17263,
+      "sha256": "5675bf6aa824d6d5bbba25b5d04f90d75c2b14306ef5e9783787b5f6fd083ffc"
+    },
+    {
+      "id": "tara-tsa-2016-section-1-question-paper-c965e080",
+      "exam": "tara",
+      "title": "2016 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154322/TSA-2016-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2016-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 2770251,
+      "sha256": "a179b4c387b50cc479d0a12914eccb576f800e6d67bde4b9955d27dbbe723fc2"
+    },
+    {
+      "id": "tara-tsa-2017-section-1-answer-key-1a0fb5c7",
+      "exam": "tara",
+      "title": "2017 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154324/TSA-2017-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2017-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 20778,
+      "sha256": "5ce4fa30d5fe999f73e2a7849d0c2207e9aae24365495625a4941cde0ac6555d"
+    },
+    {
+      "id": "tara-tsa-2017-section-1-question-paper-66fe886d",
+      "exam": "tara",
+      "title": "2017 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154327/TSA-2017-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2017-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 445684,
+      "sha256": "39ac6671413a00c1b8105238080efb22a18b72a51f484959d5e7d9a022811b94"
+    },
+    {
+      "id": "tara-tsa-2018-section-1-answer-key-ba6866e5",
+      "exam": "tara",
+      "title": "2018 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154329/TSA-2018-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2018-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 16988,
+      "sha256": "9b0ab8eacccec43cc5fd637d06d05ba0db7eea81bbee0021e0a69f555a630f27"
+    },
+    {
+      "id": "tara-tsa-2018-section-1-question-paper-b8d87515",
+      "exam": "tara",
+      "title": "2018 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154334/TSA-2018-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2018-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1842352,
+      "sha256": "efef38a3ea2b96b2cb4bdccef48d9ca779caf514e22accfce34300021bda8a70"
+    },
+    {
+      "id": "tara-tsa-2019-section-1-answer-key-a3ed0ef5",
+      "exam": "tara",
+      "title": "2019 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154336/TSA-2019-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2019-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 89962,
+      "sha256": "3da59de7277c1c3db4f54bacedb5f297ee35aa57ecbdec7932c0b3df78089290"
+    },
+    {
+      "id": "tara-tsa-2019-section-1-question-paper-3820248f",
+      "exam": "tara",
+      "title": "2019 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154343/TSA-2019-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2019-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1816973,
+      "sha256": "65ce40f75786da18c6bc567606122130d7f8bd831050a5b05559e3ce0f718fe9"
+    },
+    {
+      "id": "tara-tsa-2020-section-1-answer-key-ef06d0af",
+      "exam": "tara",
+      "title": "2020 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154203/TSA-2020-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2020-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 158436,
+      "sha256": "b34171405280457e4c86bd5712c4d3c6e0412f4f459a8fa7b5cb556f2547439d"
+    },
+    {
+      "id": "tara-tsa-2020-section-1-explained-answers-fc1270ea",
+      "exam": "tara",
+      "title": "2020 TSA Section 1 Explained Answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154212/TSA-2020-Section-1-Explained-Answers.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2020-Section-1-Explained-Answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 2709424,
+      "sha256": "8df5ddb5b868358374ce6f8e79231bcac64b278f52ced7582e0e2175f2a2d02b"
+    },
+    {
+      "id": "tara-tsa-2020-section-1-question-paper-b3bdac41",
+      "exam": "tara",
+      "title": "2020 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154218/TSA-2020-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2020-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1259255,
+      "sha256": "7fa951b346b88ae47713888ebed11a1049263eb4edf14b1c86d8d585dbceb295"
+    },
+    {
+      "id": "tara-tsa-2021-section-1-answer-key-7b6e2279",
+      "exam": "tara",
+      "title": "2021 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154220/TSA-2021-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2021-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 47839,
+      "sha256": "4f1bcdd4e32fb73d09898ba8ea6f61144115140a0ae59013bbb1bc9540fb3dae"
+    },
+    {
+      "id": "tara-tsa-2021-section-1-question-paper-e6535f7b",
+      "exam": "tara",
+      "title": "2021 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154225/TSA-2021-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2021-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1140882,
+      "sha256": "d9a5f33b7a670fd8de3934edd668e0b2b0b24662ca4c5642a2ef48c774f44811"
+    },
+    {
+      "id": "tara-tsa-2022-section-1-answer-key-bd453794",
+      "exam": "tara",
+      "title": "2022 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154228/TSA-2022-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2022-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 359274,
+      "sha256": "ddb061060f1e3c3a85a06147c30aa66f2d08d98f6340dd88f9c714f95e31c83c"
+    },
+    {
+      "id": "tara-tsa-2022-section-1-question-paper-2672ec2f",
+      "exam": "tara",
+      "title": "2022 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154234/TSA-2022-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2022-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1153599,
+      "sha256": "5ee1d72e39a2e53e88700f2943dd5634d196d3f45eb4f2a294b768bb456e8803"
+    },
+    {
+      "id": "tara-tsa-2023-section-1-answer-key-8fa1e494",
+      "exam": "tara",
+      "title": "2023 TSA Section 1 Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154237/TSA-2023-Section-1-Answer-Key.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2023-Section-1-Answer-Key.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 236788,
+      "sha256": "a1b16d63f545ffe625f50dec7166d6087bf5ed871c15c468b35a35f6ea7c57c4"
+    },
+    {
+      "id": "tara-tsa-2023-section-1-question-paper-0ec53e30",
+      "exam": "tara",
+      "title": "2023 TSA Section 1 Question Paper",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/01154243/TSA-2023-Section-1-Question-Paper.pdf",
+      "discoveredOn": [
+        "tara-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tara/TSA-2023-Section-1-Question-Paper.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1494219,
+      "sha256": "182825947c7ca89242bbe661d31d704659d6d0a764de3b2a1c78a3d920a4177a"
+    },
+    {
+      "id": "tmua-course-list-2027-entry-final-17a67163",
+      "exam": "tmua",
+      "title": "See the full course list here",
+      "kind": "official_document",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/04/01172717/Course_List_2027_Entry_Final.pdf",
+      "discoveredOn": [
+        "esat-overview",
+        "tara-overview",
+        "tmua-overview"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/Course_List_2027_Entry_Final.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 271469,
+      "sha256": "90fbd6f17e07a8a59809613b18969d2aacbd9e52a9fdf8866d35530ddef11bc2"
+    },
+    {
+      "id": "tmua-tmua-2016-answer-keys-f6cc1a68",
+      "exam": "tmua",
+      "title": "2016 TMUA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125113/TMUA-2016-answer-keys.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2016-answer-keys.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 68396,
+      "sha256": "fdaddc0affa5f15255436d639828371f987b57603c14082b2c309220e4fad577"
+    },
+    {
+      "id": "tmua-tmua-2016-paper-1-f4dd3337",
+      "exam": "tmua",
+      "title": "2016 TMUA Paper 1",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125112/TMUA-2016-paper-1.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2016-paper-1.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 184644,
+      "sha256": "0acc97a921bcd6867777444d79547f518deab43ea9989b00e730fc003855202b"
+    },
+    {
+      "id": "tmua-tmua-2016-paper-1-worked-answers-268dc0c8",
+      "exam": "tmua",
+      "title": "2016 TMUA Paper 1 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125113/TMUA-2016-paper-1-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2016-paper-1-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 302391,
+      "sha256": "6333d0112f053b76013360fb2a8ed261fa5230170960309b1c94f961fe172445"
+    },
+    {
+      "id": "tmua-tmua-2016-paper-2-c2050fd1",
+      "exam": "tmua",
+      "title": "2016 TMUA Paper 2",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125102/TMUA-2016-paper-2.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2016-paper-2.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 194468,
+      "sha256": "5891b5e82882301d94966371bba65be06736fb806f17868c93daa55b9f3f09d6"
+    },
+    {
+      "id": "tmua-tmua-2016-paper-2-worked-answers-6a9ea917",
+      "exam": "tmua",
+      "title": "2016 TMUA Paper 2 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125106/TMUA-2016-paper-2-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2016-paper-2-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 309314,
+      "sha256": "de56400129b698445c4b38b63d47d6ce77caa1db7316afaddd02697516284ebb"
+    },
+    {
+      "id": "tmua-tmua-2017-answer-keys-3ef4cff9",
+      "exam": "tmua",
+      "title": "2017 TMUA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125232/TMUA-2017-answer-keys.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2017-answer-keys.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 287846,
+      "sha256": "fce4126373fcc261e6581e51e33d2065ce33ee46ed6b65e9edfce33baedf412b"
+    },
+    {
+      "id": "tmua-tmua-2017-paper-1-5de42a6f",
+      "exam": "tmua",
+      "title": "2017 TMUA Paper 1",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125230/TMUA-2017-paper-1.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2017-paper-1.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 801288,
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438"
+    },
+    {
+      "id": "tmua-tmua-2017-paper-1-worked-answers-1f61dc88",
+      "exam": "tmua",
+      "title": "2017 TMUA Paper 1 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125231/TMUA-2017-paper-1-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2017-paper-1-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1298143,
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454"
+    },
+    {
+      "id": "tmua-tmua-2017-paper-2-436aaca2",
+      "exam": "tmua",
+      "title": "2017 TMUA Paper 2",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125224/TMUA-2017-paper-2.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2017-paper-2.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 292955,
+      "sha256": "61d7ae10df662e1c472e3553a5ad8e9e30774b9ffd6d5bd301f9cce5da8d6cb3"
+    },
+    {
+      "id": "tmua-tmua-2017-paper-2-worked-answers-47449bb3",
+      "exam": "tmua",
+      "title": "2017 TMUA Paper 2 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125228/TMUA-2017-paper-2-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2017-paper-2-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1341112,
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b"
+    },
+    {
+      "id": "tmua-tmua-2018-answer-keys-4ca64046",
+      "exam": "tmua",
+      "title": "2018 TMUA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125413/TMUA-2018-answer-keys.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2018-answer-keys.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 85625,
+      "sha256": "8395cecf6be70574a9df8c188ad7180ccd039ae3b3b5230d8227f4315dc24b71"
+    },
+    {
+      "id": "tmua-tmua-2018-paper-1-c016b22e",
+      "exam": "tmua",
+      "title": "2018 TMUA Paper 1",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125407/TMUA-2018-paper-1.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2018-paper-1.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 267881,
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134"
+    },
+    {
+      "id": "tmua-tmua-2018-paper-1-worked-answers-f42d91f2",
+      "exam": "tmua",
+      "title": "2018 TMUA Paper 1 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125413/TMUA-2018-paper-1-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2018-paper-1-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1355458,
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3"
+    },
+    {
+      "id": "tmua-tmua-2018-paper-2-84762f3f",
+      "exam": "tmua",
+      "title": "2018 TMUA Paper 2",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125404/TMUA-2018-paper-2.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2018-paper-2.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 213999,
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159"
+    },
+    {
+      "id": "tmua-tmua-2018-paper-2-worked-answers-8e9e95aa",
+      "exam": "tmua",
+      "title": "2018 TMUA Paper 2 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07125406/TMUA-2018-paper-2-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2018-paper-2-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 288986,
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c"
+    },
+    {
+      "id": "tmua-tmua-2019-answer-keys-7a7acd0e",
+      "exam": "tmua",
+      "title": "2019 TMUA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140827/TMUA-2019-answer-keys.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2019-answer-keys.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 100488,
+      "sha256": "d4a2ef05c30e71a3ae1c7d0f69d8e41f7cff1430bd1876765ceaceda940171f6"
+    },
+    {
+      "id": "tmua-tmua-2019-paper-1-7c309545",
+      "exam": "tmua",
+      "title": "2019 TMUA Paper 1",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140825/TMUA-2019-paper-1.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2019-paper-1.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 244158,
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05"
+    },
+    {
+      "id": "tmua-tmua-2019-paper-1-worked-answers-b7e543e1",
+      "exam": "tmua",
+      "title": "2019 TMUA Paper 1 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140826/TMUA-2019-paper-1-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2019-paper-1-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 270272,
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba"
+    },
+    {
+      "id": "tmua-tmua-2019-paper-2-87bb791b",
+      "exam": "tmua",
+      "title": "2019 TMUA Paper 2",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140823/TMUA-2019-paper-2.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2019-paper-2.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 736397,
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1"
+    },
+    {
+      "id": "tmua-tmua-2019-paper-2-worked-answers-4adf9c5b",
+      "exam": "tmua",
+      "title": "2019 TMUA Paper 2 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140824/TMUA-2019-paper-2-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2019-paper-2-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 259487,
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe"
+    },
+    {
+      "id": "tmua-tmua-2020-answer-keys-f791f500",
+      "exam": "tmua",
+      "title": "2020 TMUA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140956/TMUA-2020-answer-keys.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2020-answer-keys.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 204057,
+      "sha256": "81c0effe3c5fda50805579ca98acc6f37660f255836252285781ef83bb2be73e"
+    },
+    {
+      "id": "tmua-tmua-2020-paper-1-36c962f2",
+      "exam": "tmua",
+      "title": "2020 TMUA Paper 1",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140953/TMUA-2020-paper-1.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2020-paper-1.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 255999,
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e"
+    },
+    {
+      "id": "tmua-tmua-2020-paper-1-worked-answers-3e3bbbf7",
+      "exam": "tmua",
+      "title": "2020 TMUA Paper 1 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140955/TMUA-2020-paper-1-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2020-paper-1-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1064542,
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12"
+    },
+    {
+      "id": "tmua-tmua-2020-paper-2-69437f5b",
+      "exam": "tmua",
+      "title": "2020 TMUA Paper 2",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140951/TMUA-2020-paper-2.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2020-paper-2.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 277195,
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac"
+    },
+    {
+      "id": "tmua-tmua-2020-paper-2-worked-answers-8ff07a88",
+      "exam": "tmua",
+      "title": "2020 TMUA Paper 2 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07140952/TMUA-2020-paper-2-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2020-paper-2-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1047394,
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596"
+    },
+    {
+      "id": "tmua-tmua-2021-answer-keys-a863d868",
+      "exam": "tmua",
+      "title": "2021 TMUA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141122/TMUA-2021-answer-keys.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2021-answer-keys.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 165654,
+      "sha256": "578ff4d1d087260141224cc92949d160ccd88f2d00f95f66f15e9ef2d31b92cc"
+    },
+    {
+      "id": "tmua-tmua-2021-paper-1-d7b2e40f",
+      "exam": "tmua",
+      "title": "2021 TMUA Paper 1",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141119/TMUA-2021-paper-1.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2021-paper-1.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 263335,
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f"
+    },
+    {
+      "id": "tmua-tmua-2021-paper-1-worked-answers-7037cb9e",
+      "exam": "tmua",
+      "title": "2021 TMUA Paper 1 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141121/TMUA-2021-paper-1-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2021-paper-1-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 946809,
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd"
+    },
+    {
+      "id": "tmua-tmua-2021-paper-2-cd2d59b8",
+      "exam": "tmua",
+      "title": "2021 TMUA Paper 2",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141117/TMUA-2021-paper-2.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2021-paper-2.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 221455,
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2"
+    },
+    {
+      "id": "tmua-tmua-2021-paper-2-worked-answers-99cf7af0",
+      "exam": "tmua",
+      "title": "2021 TMUA Paper 2 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141118/TMUA-2021-paper-2-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2021-paper-2-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 941644,
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff"
+    },
+    {
+      "id": "tmua-tmua-2022-answer-keys-6b7e6c39",
+      "exam": "tmua",
+      "title": "2022 TMUA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141242/TMUA-2022-answer-keys.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2022-answer-keys.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 30473,
+      "sha256": "7eb62a85f64bdbdd21d4efcd11d1db18b99eecfa5713c59139a9ddd11fd02bd5"
+    },
+    {
+      "id": "tmua-tmua-2022-paper-1-f947490c",
+      "exam": "tmua",
+      "title": "2022 TMUA Paper 1",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141241/TMUA-2022-paper-1.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2022-paper-1.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 247117,
+      "sha256": "1bb784bb85b38445fe64f12638d99de4f680f19e6793c488b1337522e4d30c1a"
+    },
+    {
+      "id": "tmua-tmua-2022-paper-1-worked-answers-d30cd76c",
+      "exam": "tmua",
+      "title": "2022 TMUA Paper 1 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/06/04105226/TMUA-2022-paper-1-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2022-paper-1-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 252506,
+      "sha256": "79a6336fb3283fda684c797c70fc6aa8e1141a9b694e578ff341ba57c6e8fb1d"
+    },
+    {
+      "id": "tmua-tmua-2022-paper-2-2f0d939d",
+      "exam": "tmua",
+      "title": "2022 TMUA Paper 2",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141239/TMUA-2022-paper-2.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2022-paper-2.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 252422,
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398"
+    },
+    {
+      "id": "tmua-tmua-2022-paper-2-worked-answers-561447eb",
+      "exam": "tmua",
+      "title": "2022 TMUA Paper 2 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/06/04105227/TMUA-2022-paper-2-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2022-paper-2-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 208059,
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0"
+    },
+    {
+      "id": "tmua-tmua-2023-answer-keys-1fe772ac",
+      "exam": "tmua",
+      "title": "2023 TMUA Answer Key",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144123/TMUA-2023-answer-keys.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2023-answer-keys.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 30226,
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf"
+    },
+    {
+      "id": "tmua-tmua-2023-paper-1-847f6a46",
+      "exam": "tmua",
+      "title": "2023 TMUA Paper 1",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144109/TMUA-2023-paper-1.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2023-paper-1.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 477957,
+      "sha256": "f58ef309507217a660d5e863e0c68dbbf5260cc1e580d8afc835280137565157"
+    },
+    {
+      "id": "tmua-tmua-2023-paper-1-worked-answers-f014ae04",
+      "exam": "tmua",
+      "title": "2023 TMUA Paper 1 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/06/04105227/TMUA-2023-paper-1-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2023-paper-1-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 229823,
+      "sha256": "51e9408682d110613e7f24a76a7d4de7755be6bd51d920fe73fb24e00bb7d2c9"
+    },
+    {
+      "id": "tmua-tmua-2023-paper-2-ed4d800a",
+      "exam": "tmua",
+      "title": "2023 TMUA Paper 2",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/04/30144111/TMUA-2023-paper-2.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2023-paper-2.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 315414,
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f"
+    },
+    {
+      "id": "tmua-tmua-2023-paper-2-worked-answers-0a642d21",
+      "exam": "tmua",
+      "title": "2023 TMUA Paper 2 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/06/04105226/TMUA-2023-paper-2-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-2023-paper-2-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 259772,
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5"
+    },
+    {
+      "id": "tmua-tmua-content-specification-april2025-94fe0a85",
+      "exam": "tmua",
+      "title": "Find the TMUA Specification here",
+      "kind": "specification",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/04/30103002/TMUA_Content_Specification_April2025.pdf",
+      "discoveredOn": [
+        "tmua-overview"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA_Content_Specification_April2025.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 535080,
+      "sha256": "2664e88733d54fba4956e681fce75b8b2c81724aac27d0e76610c5e233948f64"
+    },
+    {
+      "id": "tmua-tmua-early-specimen-paper-1-7e44f713",
+      "exam": "tmua",
+      "title": "TMUA early specimen paper 1",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141417/TMUA-early-specimen-paper-1.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-early-specimen-paper-1.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 121889,
+      "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241"
+    },
+    {
+      "id": "tmua-tmua-early-specimen-paper-1-worked-answers-90ae4f9d",
+      "exam": "tmua",
+      "title": "TMUA early specimen paper 1 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141418/TMUA-early-specimen-paper-1-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-early-specimen-paper-1-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 775626,
+      "sha256": "59b2a4bc708c3ef3ba7874ec7d21b176c364f2069c55271b5d3b9226ab527db1"
+    },
+    {
+      "id": "tmua-tmua-early-specimen-paper-2-e4ff0dc8",
+      "exam": "tmua",
+      "title": "TMUA early specimen paper 2",
+      "kind": "question_paper",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141413/TMUA-early-specimen-paper-2.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-early-specimen-paper-2.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 812125,
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f"
+    },
+    {
+      "id": "tmua-tmua-early-specimen-paper-2-worked-answers-6571c421",
+      "exam": "tmua",
+      "title": "TMUA early specimen paper 2 – worked answers",
+      "kind": "worked_explanation",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141415/TMUA-early-specimen-paper-2-worked-answers.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-early-specimen-paper-2-worked-answers.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1224648,
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508"
+    },
+    {
+      "id": "tmua-tmua-early-specimen-paper-answer-keys-6c15bb88",
+      "exam": "tmua",
+      "title": "TMUA early specimen paper – answer keys",
+      "kind": "answer_key",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07141414/TMUA-early-specimen-paper-answer-keys.pdf",
+      "discoveredOn": [
+        "tmua-preparation"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/TMUA-early-specimen-paper-answer-keys.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 285331,
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca"
+    },
+    {
+      "id": "tmua-uat-uk-test-admission-and-id-policy-2027-entry-d06bf55b",
+      "exam": "tmua",
+      "title": "ID Policy",
+      "kind": "official_document",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/04/01120017/UAT-UK-Test-Admission-and-ID-Policy-2027-Entry.pdf",
+      "discoveredOn": [
+        "esat-overview",
+        "tara-overview",
+        "tmua-overview"
+      ],
+      "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/tmua/UAT-UK-Test-Admission-and-ID-Policy-2027-Entry.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 162437,
+      "sha256": "b489cb41ea8d1fd7216a3debe93644f12c90fc85cfea1158f42554ee151df09f"
+    },
+    {
+      "id": "ucat-flyer-2026-ade80a6a",
+      "exam": "ucat",
+      "title": "A5 Flyer",
+      "kind": "official_document",
+      "url": "https://www.ucat.ac.uk/media/1691/flyer-2026.pdf",
+      "discoveredOn": [
+        "ucat-teacher-resources"
+      ],
+      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/ucat/flyer-2026.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 1257875,
+      "sha256": "d41aced66344051a8e81173ee2a093126dc3c20e213602cad55778b85e16b367"
+    },
+    {
+      "id": "ucat-prep-plan-5-483e096a",
+      "exam": "ucat",
+      "title": "prep-plan-5.pdf",
+      "kind": "preparation_checklist",
+      "url": "https://www.ucat.ac.uk/media/1711/prep-plan-5.pdf",
+      "discoveredOn": [
+        "ucat-preparation"
+      ],
+      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/ucat/prep-plan-5.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 140267,
+      "sha256": "136e3775e77f03fef4baab5bcb85a0affaba74d240981748c9cc1474cfdbf7b9"
+    },
+    {
+      "id": "ucat-ucat-2026-poster-7345750e",
+      "exam": "ucat",
+      "title": "A3 poster",
+      "kind": "official_document",
+      "url": "https://www.ucat.ac.uk/media/1690/ucat-2026-poster.pdf",
+      "discoveredOn": [
+        "ucat-teacher-resources"
+      ],
+      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/ucat/ucat-2026-poster.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 4086782,
+      "sha256": "8961443c785df28c54c94149cd81f3cd3da7f1909231f2edf897224b5b913904"
+    },
+    {
+      "id": "ucat-gdc-standards-for-dental-team-77c41da2",
+      "exam": "ucat",
+      "title": "Standards for the Dental Team",
+      "kind": "professional_standards",
+      "url": "https://www.gdc-uk.org/docs/default-source/information-standards-and-guidance/standards-for-the-dental-team/standards-printer-friendly-black-white3e2c002f471e475eac4a4fcc1e4945a2.pdf?sfvrsn=3963b738_5",
+      "discoveredOn": [
+        "ucat-situational-judgement-content-audit"
+      ],
+      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
+      "publishable": false,
+      "localPath": "content/official/raw/professional-standards/gdc-standards-for-dental-team.pdf",
+      "mediaType": "application/pdf",
+      "downloadStatus": "downloaded",
+      "bytes": 459856,
+      "sha256": "77c41da22b43e6aa02d16a7d51da4ab1a53e37cb37e7e25b30a386c0b62e267b"
+    }
+  ],
+  "interactiveResources": [
+    {
+      "id": "uat-pearson-sample-tests",
+      "exam": "shared",
+      "title": "UAT-UK Pearson specimen and practice tests",
+      "url": "https://www.pearsonvue.com/us/en/uatuk.html",
+      "localDownload": false,
+      "delivery": "external_interactive_only",
+      "publishable": false
+    },
+    {
+      "id": "lnat-online-practice",
+      "exam": "lnat",
+      "title": "LNAT online practice simulation",
+      "url": "https://lnat.ac.uk/lnat-sample-test",
+      "localDownload": false,
+      "delivery": "external_interactive_only",
+      "publishable": false
+    },
+    {
+      "id": "ucat-question-tutorials",
+      "exam": "ucat",
+      "title": "UCAT interactive question tutorials",
+      "url": "https://www.ucat.ac.uk/prepare/question-tutorials/",
+      "localDownload": false,
+      "delivery": "external_interactive_only",
+      "publishable": false
+    },
+    {
+      "id": "ucat-practice-tests",
+      "exam": "ucat",
+      "title": "UCAT interactive question banks and practice tests",
+      "url": "https://www.ucat.ac.uk/prepare/practice-tests/",
+      "localDownload": false,
+      "delivery": "external_interactive_only",
+      "publishable": false
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+name: Verify
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22.18.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm verify
+
+  database-and-capacity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22.18.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Prepare isolated local Supabase
+        run: |
+          pnpm exec supabase stop --all --no-backup || true
+          pnpm supabase:prepare-ci
+      - run: pnpm supabase:start
+      - run: pnpm verify:supabase
+      - run: pnpm verify:recovery-local
+      - run: pnpm verify:beta-load-local
+        env:
+          BETA_LOAD_USERS: "100"
+          BETA_LOAD_CONCURRENCY: "10"
+          BETA_LOAD_MAX_P95_MS: "5000"
+      - if: always()
+        run: pnpm exec supabase stop --no-backup
+
+  browser-journey:
+    needs: application
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22.18.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm verify:e2e
+      - if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
+
+  container:
+    needs: application
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22.18.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: docker build --tag admission-test-breaker:ci .
+      - name: Start immutable web container
+        run: |
+          docker run --detach --name admission-test-breaker-ci \
+            --read-only --tmpfs /tmp:rw,noexec,nosuid,size=16m \
+            --publish 18080:8080 \
+            --env SUPABASE_URL=https://ci.supabase.co \
+            --env SUPABASE_PUBLISHABLE_KEY=sb_publishable_ci_only \
+            --env APP_RELEASE=${{ github.sha }} \
+            --env APP_ENVIRONMENT=ci \
+            admission-test-breaker:ci
+      - name: Wait for container health
+        run: |
+          for attempt in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:18080/healthz >/dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          docker logs admission-test-breaker-ci
+          exit 1
+      - name: Verify running deployment
+        run: pnpm verify:deployment
+        env:
+          DEPLOYMENT_BASE_URL: http://127.0.0.1:18080
+          EXPECTED_RELEASE: ${{ github.sha }}
+          EXPECTED_ENVIRONMENT: ci
+      - if: always()
+        run: docker rm --force admission-test-breaker-ci || true

@@ -1,0 +1,308 @@
+create table public.content_resource_payloads (
+  resource_id text primary key references public.content_resources (id) on delete cascade,
+  schema_version integer not null,
+  source_sha256 text not null,
+  payload jsonb not null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint content_resource_payloads_schema_version check (schema_version > 0),
+  constraint content_resource_payloads_source_sha256 check (source_sha256 ~ '^[0-9a-f]{64}$'),
+  constraint content_resource_payloads_payload_object check (jsonb_typeof(payload) = 'object')
+);
+
+comment on table public.content_resource_payloads is
+  'Server-delivered structured learning products. Browser roles cannot read this table directly.';
+
+alter table public.content_resource_payloads enable row level security;
+revoke all on public.content_resource_payloads from public, anon, authenticated;
+
+create or replace function public.get_entitled_content_resource(p_resource_id text)
+returns table (
+  id text,
+  title text,
+  revision integer,
+  metadata jsonb,
+  source_sha256 text,
+  payload jsonb
+)
+language plpgsql
+stable
+security definer
+set search_path = ''
+as $$
+begin
+  if (select auth.uid()) is null then
+    raise exception 'authentication_required' using errcode = '42501';
+  end if;
+
+  if not private.can_access_content(p_resource_id) then
+    return;
+  end if;
+
+  return query
+    select
+      resource.id,
+      resource.title,
+      resource.revision,
+      resource.metadata,
+      resource_payload.source_sha256,
+      resource_payload.payload
+    from public.content_resources as resource
+    join public.content_resource_payloads as resource_payload
+      on resource_payload.resource_id = resource.id
+    where resource.id = p_resource_id
+      and resource.publication_status = 'published';
+end;
+$$;
+
+revoke all on function public.get_entitled_content_resource(text) from public, anon, authenticated;
+grant execute on function public.get_entitled_content_resource(text) to authenticated;
+
+-- Trusted operations need one narrow revocation path; student and anonymous
+-- roles retain no write privileges on entitlement rows.
+grant select on public.user_entitlements to service_role;
+grant update (revoked_at) on public.user_entitlements to service_role;
+
+insert into public.access_packages (id, name, description, status)
+values (
+  'tmua-full-access',
+  'TMUA 完整资料权限',
+  '访问所有已通过发布门并加入该资料包的 TMUA 原创复习资料。',
+  'active'
+)
+on conflict (id) do update
+set name = excluded.name,
+    description = excluded.description,
+    status = excluded.status;
+
+insert into public.content_resources (
+  id,
+  exam,
+  kind,
+  title,
+  access_tier,
+  publication_status,
+  revision,
+  metadata,
+  published_at
+) values (
+  'tmua-six-week-review-plan-v1',
+  'TMUA',
+  'review_notes',
+  'TMUA 六周精确训练计划',
+  'entitled',
+  'published',
+  1,
+  '{"delivery":"server-structured-native-page","contentSchema":"tmua-six-week-review-plan","edition":"2026.07-v1"}'::jsonb,
+  '2026-07-18T19:00:00Z'::timestamptz
+)
+on conflict (id) do update
+set title = excluded.title,
+    access_tier = excluded.access_tier,
+    publication_status = excluded.publication_status,
+    revision = excluded.revision,
+    metadata = excluded.metadata,
+    published_at = excluded.published_at;
+
+insert into public.access_package_resources (package_id, resource_id)
+values ('tmua-full-access', 'tmua-six-week-review-plan-v1')
+on conflict do nothing;
+
+insert into public.content_resource_payloads (
+  resource_id,
+  schema_version,
+  source_sha256,
+  payload
+) values (
+  'tmua-six-week-review-plan-v1',
+  1,
+  '9c1430c1fa10ebe313483b367a65f0516381924528a76638107c2f48298fc438',
+  $payload$
+{
+  "schemaVersion": 1,
+  "id": "tmua-six-week-review-plan-v1",
+  "edition": "2026.07-v1",
+  "publicationStatus": "published",
+  "titleZh": "TMUA 六周精确训练计划",
+  "titleEn": "TMUA Six-Week Precision Training Plan",
+  "subtitleZh": "从课程缺口、限时训练到整卷复盘，每次学习都留下可检查的结果",
+  "subtitleEn": "Turn curriculum gaps, timed practice and paper review into evidence",
+  "authorship": "满托教研原创",
+  "audienceZh": "适用于已经完成课程信息填写，并准备开始系统训练的 A-Level、IB 或 AP 学生。",
+  "rightsNotice": "本资料由满托教研原创编写。训练安排引用本站已核验的 TMUA 考试结构，但不复制官方题目或第三方解析。",
+  "principles": [
+    {
+      "titleZh": "先补最小缺口",
+      "titleEn": "Close the smallest gap first",
+      "bodyZh": "不会一个知识单元时，只补到能够开始做题；不要把整门课程重新学一遍。"
+    },
+    {
+      "titleZh": "先记录第一处错误",
+      "titleEn": "Record the first failure",
+      "bodyZh": "复盘时只记录导致答案偏离的第一处错误，避免把完整答案抄成一页没有行动意义的笔记。"
+    },
+    {
+      "titleZh": "真题用于校准，不用于消耗",
+      "titleEn": "Use papers to calibrate",
+      "bodyZh": "只有在完成主题训练和错题回做后才进入下一套整卷；未复盘的整卷不计入有效训练。"
+    },
+    {
+      "titleZh": "结论只来自你的证据",
+      "titleEn": "Conclusions follow your evidence",
+      "bodyZh": "计划不根据课程名称推断你已经会做题，也不把少量样本包装成录取概率或伪精确百分位。"
+    }
+  ],
+  "preflight": {
+    "titleZh": "开始前的 45 分钟",
+    "titleEn": "Your First 45 Minutes",
+    "steps": [
+      {
+        "minutes": 5,
+        "actionZh": "确认课程信息",
+        "detailZh": "在知识覆盖页核对考试局、科目和已经学完的模块。课程里出现过，不等于你已经掌握。",
+        "evidenceZh": "保存一份最新课程档案"
+      },
+      {
+        "minutes": 30,
+        "actionZh": "完成能力诊断",
+        "detailZh": "按正常节奏作答，不查资料；对犹豫题做标记，让系统保留每题活跃时间和改答记录。",
+        "evidenceZh": "一次完整诊断会话"
+      },
+      {
+        "minutes": 10,
+        "actionZh": "建立第一份训练清单",
+        "detailZh": "把错题分为知识、路径、执行、读题和节奏五类，只挑最高频的两个问题进入第一周。",
+        "evidenceZh": "两个优先问题与各自下一步"
+      }
+    ]
+  },
+  "weeklyPlan": [
+    {
+      "week": 1,
+      "titleZh": "精确运算与代数底座",
+      "titleEn": "Exact Arithmetic and Algebra",
+      "purposeZh": "先消除会反复污染后续主题的根式、分式、因式分解、方程与定义域错误。",
+      "targetHours": "4–5 小时",
+      "sessions": [
+        { "day": "01", "minutes": 45, "titleZh": "诊断错题再做", "actionsZh": ["不看答案重做本周优先错题", "标出第一次与第二次解法不同的位置", "为每题写一个错误代码"], "evidenceZh": "至少 5 道已分类题" },
+        { "day": "02", "minutes": 60, "titleZh": "根式、分式与精确值", "actionsZh": ["练习保留因式和共轭结构", "每次约分前写排除值", "只在比较大小时进行安全估算"], "evidenceZh": "一页定义域与精确值检查表" },
+        { "day": "03", "minutes": 60, "titleZh": "方程、不等式与参数", "actionsZh": ["区分等价变形与单向推导", "平方后代回原式", "把根的数量翻译成判别式条件"], "evidenceZh": "10 道主题题，记录首错" },
+        { "day": "04", "minutes": 45, "titleZh": "无计算器速度组", "actionsZh": ["连续完成两组短题", "每题先写可执行的第一步", "超过计划时间先标记再继续"], "evidenceZh": "两组正确率与超时题号" },
+        { "day": "05", "minutes": 60, "titleZh": "周检与回做", "actionsZh": ["间隔至少 24 小时回做所有错题", "仍错的题重新归类", "只保留下一周仍需追踪的问题"], "evidenceZh": "首做与回做对照记录" }
+      ],
+      "exitCriteriaZh": ["能在变形前主动写出定义域和分母限制", "同类题回做正确率达到 80% 以上", "执行错误不再是本周最高频错误"]
+    },
+    {
+      "week": 2,
+      "titleZh": "函数、图像与坐标几何",
+      "titleEn": "Functions, Graphs and Coordinate Geometry",
+      "purposeZh": "把代数式、函数变换、交点和几何条件连成同一种语言，减少只会计算却看不出结构的问题。",
+      "targetHours": "4–5 小时",
+      "sessions": [
+        { "day": "01", "minutes": 45, "titleZh": "函数语言检查", "actionsZh": ["复习 domain、range、inverse 与 composite", "为每个变换同时写代数和图像解释", "检查一对一条件"], "evidenceZh": "函数术语双语卡片" },
+        { "day": "02", "minutes": 60, "titleZh": "图像变换与交点", "actionsZh": ["先预测交点数量再列方程", "区分 f(x-a) 与 f(x)-a", "用端点、对称和单调性排除选项"], "evidenceZh": "8 道图像题与预测记录" },
+        { "day": "03", "minutes": 60, "titleZh": "直线、圆与距离", "actionsZh": ["把垂直、相切和等距条件写成方程", "复核圆定理 supporting knowledge", "避免过早展开坐标式"], "evidenceZh": "一张几何条件到代数式的映射表" },
+        { "day": "04", "minutes": 45, "titleZh": "混合限时组", "actionsZh": ["完成函数与坐标混合题", "标记读完后没有第一步的题", "对路径缺口补一条触发信号"], "evidenceZh": "路径缺口清单" },
+        { "day": "05", "minutes": 60, "titleZh": "周检与盲做", "actionsZh": ["随机抽取上两周旧题", "不按主题提示作答", "比较主题内正确率与混合正确率"], "evidenceZh": "混合迁移差距" }
+      ],
+      "exitCriteriaZh": ["看到交点问题会先写 f(x)=g(x)", "能准确解释四类基本图像变换", "混合题中不再依赖主题标题寻找方法"]
+    },
+    {
+      "week": 3,
+      "titleZh": "数列、三角、指数对数与微积分",
+      "titleEn": "Sequences, Trigonometry, Logs and Calculus",
+      "purposeZh": "把课程体系之间最容易出现进度差异的内容逐项核实，按缺口补学而不是按课程名称猜测。",
+      "targetHours": "5–6 小时",
+      "sessions": [
+        { "day": "01", "minutes": 60, "titleZh": "数列与递推", "actionsZh": ["区分 arithmetic、geometric 与递推定义", "检查有限和与无穷和的适用条件", "用前几项验证通项"], "evidenceZh": "数列条件检查表" },
+        { "day": "02", "minutes": 60, "titleZh": "三角与精确值", "actionsZh": ["脱离计算器恢复常用精确值", "用周期和象限检查解集", "先判断恒等式适用范围"], "evidenceZh": "精确值盲测结果" },
+        { "day": "03", "minutes": 60, "titleZh": "指数与对数", "actionsZh": ["先写底数与真数条件", "在代换前观察单调性", "用数量级检查选项"], "evidenceZh": "8 道条件完整的解题记录" },
+        { "day": "04", "minutes": 75, "titleZh": "微积分与图像建模", "actionsZh": ["把导数符号翻译成增减和极值", "区分瞬时变化率与平均变化率", "用面积符号检查积分结论"], "evidenceZh": "一张导数—图像—方程关系图" },
+        { "day": "05", "minutes": 75, "titleZh": "课程缺口复核", "actionsZh": ["回到知识覆盖页逐项确认", "未学内容安排最小补课", "已学但做错内容改为练习问题"], "evidenceZh": "更新后的补学与复习两张清单" }
+      ],
+      "exitCriteriaZh": ["所有本周主题都能明确归为已学、未学或需要确认", "定义域、周期和收敛条件会主动出现", "没有用课程名称代替实际掌握证据"]
+    },
+    {
+      "week": 4,
+      "titleZh": "逻辑、证明与 Paper 2",
+      "titleEn": "Logic, Proof and Paper 2",
+      "purposeZh": "稳定 necessary、sufficient、quantifier、counterexample 与 proof flaw 的方向感，避免把语言错误误判为数学不会。",
+      "targetHours": "4–5 小时",
+      "sessions": [
+        { "day": "01", "minutes": 60, "titleZh": "条件方向", "actionsZh": ["把 sufficient 和 necessary 全部画成箭头", "区分 converse 与 contrapositive", "为英文限定词写中文精确含义"], "evidenceZh": "20 条条件方向盲测" },
+        { "day": "02", "minutes": 60, "titleZh": "量词与否定", "actionsZh": ["练习否定 for all 与 there exists", "检查对象范围是否改变", "为全称命题寻找合法反例"], "evidenceZh": "10 条量词改写" },
+        { "day": "03", "minutes": 60, "titleZh": "证明方法", "actionsZh": ["为题目选择 direct、cases、contradiction 或 contrapositive", "每步说明依据", "标记非法除法和循环论证"], "evidenceZh": "四种方法各一题" },
+        { "day": "04", "minutes": 45, "titleZh": "辨错限时组", "actionsZh": ["先找第一处不成立的步骤", "区分结论错误与论证不足", "用反例验证怀疑"], "evidenceZh": "首错位置与原因" },
+        { "day": "05", "minutes": 60, "titleZh": "Paper 2 半卷", "actionsZh": ["在 37 分钟内完成 10 道混合题", "保留标记与改答记录", "按错误代码复盘"], "evidenceZh": "半卷节奏与错误分布" }
+      ],
+      "exitCriteriaZh": ["necessary / sufficient 方向盲测达到 90%", "能用一个合法反例推翻全称结论", "Paper 2 的读题错误不超过一次"]
+    },
+    {
+      "week": 5,
+      "titleZh": "整卷节奏与稳定性",
+      "titleEn": "Full-Paper Timing and Stability",
+      "purposeZh": "第一次把主题能力放进 75 分钟整卷，建立属于自己的标记、回看与完成全部题目的节奏。",
+      "targetHours": "5–6 小时",
+      "sessions": [
+        { "day": "01", "minutes": 90, "titleZh": "Paper 1 整卷", "actionsZh": ["严格计时 75 分钟", "第一轮只做路径清晰的题", "最后确认每题已有答案"], "evidenceZh": "Paper 1 会话与题目耗时" },
+        { "day": "02", "minutes": 75, "titleZh": "Paper 1 深度复盘", "actionsZh": ["不看解析重做所有错题和标记题", "记录第一处错误", "把知识缺口安排到下一次补学"], "evidenceZh": "首做—回做—看解三列记录" },
+        { "day": "03", "minutes": 90, "titleZh": "Paper 2 整卷", "actionsZh": ["严格计时 75 分钟", "圈出逻辑限定词", "记录因语言方向犹豫的题"], "evidenceZh": "Paper 2 会话与题目耗时" },
+        { "day": "04", "minutes": 75, "titleZh": "Paper 2 深度复盘", "actionsZh": ["区分数学知识与逻辑语言", "为路径缺口写触发信号", "隔离纯执行错误"], "evidenceZh": "Paper 2 错误结构" },
+        { "day": "05", "minutes": 45, "titleZh": "稳定性检查", "actionsZh": ["比较两卷前十题与后十题表现", "检查超时是否集中在少数题", "确定第六周只保留三个动作"], "evidenceZh": "三个最终改进动作" }
+      ],
+      "exitCriteriaZh": ["两张卷都能在时间内完成全部作答", "能指出时间损失最大的三道题及原因", "复盘输出具体动作而不是只记录分数"]
+    },
+    {
+      "week": 6,
+      "titleZh": "模拟、修正与考前收束",
+      "titleEn": "Simulation, Correction and Taper",
+      "purposeZh": "用两次完整模拟检验稳定性；最后只修正仍会影响结果的问题，不在考前引入新的大范围内容。",
+      "targetHours": "5–7 小时",
+      "sessions": [
+        { "day": "01", "minutes": 165, "titleZh": "完整双卷模拟", "actionsZh": ["按正式顺序完成两张 75 分钟试卷", "中间只进行计划内休息", "不查资料、不暂停计时"], "evidenceZh": "双卷完整会话" },
+        { "day": "02", "minutes": 90, "titleZh": "模拟复盘", "actionsZh": ["先独立回做，再查看基础结果", "统计五类错误", "只选择两个仍可修正的问题"], "evidenceZh": "错误分布与两项处方" },
+        { "day": "03", "minutes": 60, "titleZh": "定向修正", "actionsZh": ["每个问题完成一组针对题", "练习计划中的检查动作", "停止无目的刷题"], "evidenceZh": "两组定向训练" },
+        { "day": "04", "minutes": 165, "titleZh": "第二次完整模拟", "actionsZh": ["复刻正式环境", "执行同一套标记策略", "检查修正动作是否真的发生"], "evidenceZh": "两次模拟对照" },
+        { "day": "05", "minutes": 45, "titleZh": "考前收束", "actionsZh": ["阅读个人错误清单而非新资料", "确认考试流程与所需物品", "停止使用新整卷制造噪音"], "evidenceZh": "一页考前检查单" }
+      ],
+      "exitCriteriaZh": ["两次模拟的节奏策略一致", "高频错误数量下降或检查动作更稳定", "能够解释下一步，而不是依赖一次分数下结论"]
+    }
+  ],
+  "errorCodebook": [
+    { "code": "K", "nameZh": "知识缺口", "nameEn": "Knowledge gap", "signalZh": "概念、公式或适用条件本身不知道。", "nextActionZh": "补一个最小知识单元，随后立即做 3–5 道同类题。" },
+    { "code": "R", "nameZh": "路径缺口", "nameEn": "Route gap", "signalZh": "知识学过，但看到题目没有可执行的第一步。", "nextActionZh": "记录触发信号、第一步和一个相邻变式；不要抄整页答案。" },
+    { "code": "E", "nameZh": "执行错误", "nameEn": "Execution error", "signalZh": "思路正确，但代数、符号、范围或抄写出现错误。", "nextActionZh": "把检查动作放在容易出错的那一步之前，并在下一组题强制执行。" },
+    { "code": "D", "nameZh": "读题错误", "nameEn": "Decoding error", "signalZh": "误读 necessary、at least、integer、except 或题目所求。", "nextActionZh": "圈定限定词，用自己的话改写题目，再作答。" },
+    { "code": "T", "nameZh": "节奏错误", "nameEn": "Timing error", "signalZh": "在一题停留过久，导致后续能做的题没有时间。", "nextActionZh": "为没有第一步的题设置离开信号，标记后进入下一题。" }
+  ],
+  "curriculumAdjustments": [
+    { "curriculum": "A-Level / IAL Mathematics", "guidanceZh": "若 Pure Mathematics 主干已完成，把第 1–3 周的重复课程学习缩短为知识检查；把释放的时间放在 Paper 2 逻辑、无计算器精确运算和混合限时组。" },
+    { "curriculum": "IB Mathematics AA HL", "guidanceZh": "函数和微积分通常不需要重学；优先核对圆定理、英国 supporting knowledge、formal logic vocabulary，以及不用 GDC 的精确值和选项辨析。" },
+    { "curriculum": "IB Mathematics AA SL / AI HL", "guidanceZh": "不要跳过第 3 周。根据已完成单元逐项确认数列、三角、指数对数、精确代数与非计算器图像推理，未覆盖内容先补学再计时。" },
+    { "curriculum": "AP Precalculus + AP Calculus", "guidanceZh": "同时核对 Algebra II 与 Geometry 记录。Calculus 成绩不能证明根式、精确代数、圆定理、有限几何级数和 Paper 2 逻辑已经覆盖。" }
+  ],
+  "weeklyReview": {
+    "titleZh": "每周只回答这六个问题",
+    "titleEn": "Six Questions for Every Weekly Review",
+    "questionsZh": [
+      "本周实际训练了多少分钟，而不是计划了多少？",
+      "哪一种错误出现最多？请给出题号证据。",
+      "哪一道题在回做时仍然错误？第一处错误在哪里？",
+      "哪一个知识点属于未学，哪一个只是做题不熟？",
+      "下周只保留哪两个最重要的训练动作？",
+      "是否需要老师判断一个具体问题，而不是笼统地问“我该怎么提高”？"
+    ]
+  },
+  "benchmarkBoundary": {
+    "titleZh": "怎样理解你的阶段结果",
+    "titleEn": "How to Read Your Evidence",
+    "bodyZh": "单次诊断和单套试卷只描述当时的题目样本与作答状态。真正可以用来规划时间的，是连续两到三周的训练频率、主题正确率、回做保持率、每题活跃时间和错误类型变化。本站不会在样本不足时给出录取概率或伪精确百分位。"
+  }
+}
+$payload$::jsonb
+)
+on conflict (resource_id) do update
+set schema_version = excluded.schema_version,
+    source_sha256 = excluded.source_sha256,
+    payload = excluded.payload,
+    updated_at = now();

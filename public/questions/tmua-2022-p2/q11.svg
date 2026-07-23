@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 470" role="img" aria-labelledby="title desc">
+  <title id="title">Kite PQRS</title><desc id="desc">A kite with perpendicular diagonals crossing at O. The horizontal halves are x, the upper vertical part is z and the lower vertical part is y.</desc>
+  <g fill="none" stroke="#282332" stroke-width="3" stroke-linejoin="round"><path d="M320 35 105 180 320 430 535 180Z"/><path d="M105 180H535M320 35V430"/></g>
+  <g fill="#282332" font-family="Georgia,serif" font-size="25" font-style="italic"><text x="310" y="28">S</text><text x="72" y="188">P</text><text x="550" y="188">R</text><text x="308" y="462">Q</text><text x="330" y="202">O</text><text x="218" y="168">x</text><text x="410" y="168">x</text><text x="335" y="112">z</text><text x="335" y="325">y</text></g>
+</svg>

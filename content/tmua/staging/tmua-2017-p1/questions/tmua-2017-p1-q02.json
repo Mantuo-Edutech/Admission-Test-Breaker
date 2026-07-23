@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                                         \u0003\n                                                                         \u0003\n                                                                         \u0003\n\nʹ\u0003     \u0017\u0003 \u0003݂\u0003\u0003\u0003\u0003\n       \u0003\n                                                              ଶ         ଵ    ଶ\n       \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003݂ሺ‫ݔ‬ሻ \u0003 ൌ ቀ െ        ቁ \u0003\u0003\u0003\u0003ሺ‫Ͳ ് ݔ‬ሻ\u0003\n                                                              ௫        ଶ௫ మ\n       \u0003\n       \u001a\u0003\u0003\u0003\u0003\u0003\u0003݂ԢԢሺͳሻ\u0003ǫ\u0003\n\u0003      \u0003\n\u0003      A     െ͵\u0003\n\n\u0003      B     െͳ\u0003\n\n\u0003      C     ͷ\u0003\n\n\u0003      D     ͳ͹\u0003\n\n\u0003      E     ʹͻ\u0003\n\n\u0003      F     ͺͲ\u0003\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                                            \u0017"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": " ݂\n       \n                                                              ଶ         ଵ    ଶ\n       ݂ሺ‫ݔ‬ሻ  ൌ ቀ െ        ቁ ሺ‫0 ് ݔ‬ሻ\n                                                              ௫        ଶ௫ మ\n       \n       ݂ԢԢሺ1ሻǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "െ3"
+    },
+    {
+      "label": "B",
+      "rawText": "െ1"
+    },
+    {
+      "label": "C",
+      "rawText": "5"
+    },
+    {
+      "label": "D",
+      "rawText": "17"
+    },
+    {
+      "label": "E",
+      "rawText": "29"
+    },
+    {
+      "label": "F",
+      "rawText": "80\n\n\n\n\n\n\n\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We expand the brackets, writing everything as powers of x:\n                                           \u00102        1 \u00112\n                                  f(x) =        −\n                                            x       2x2\n\n                                           4     2 1    1\n                                       =      −2      +\n                                           x2    x 2x2 4x4\n\n                                                      1\n                                       = 4x−2 − 2x−3 + x−4\n                                                      4\n(Take care with the last simplification: writing 4x14 = 4x−4 is a common error!)\nThen differentiating gives\n                                 f 0 (x) = −8x−3 + 6x−4 − x−5\nand differentiating a second time then gives\n\n                                f 00 (x) = 24x−4 − 24x−5 + 5x−6\n\nWe can now subsitute x = 1 to give\n\n                                     f 00 (1) = 24 − 24 + 5 = 5\n\nso the correct answer is C.\n\n\n\n\nVersion 1.1, March 2019                                                                 Page 4\n\n                                                                                   © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

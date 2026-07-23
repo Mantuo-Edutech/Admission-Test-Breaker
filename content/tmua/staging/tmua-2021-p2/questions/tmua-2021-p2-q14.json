@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q14",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 14,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "14   Consider the following simultaneous equations, where p is a real number:\n\n                                       p2x + log2 y = 2\n\n                                        2x + log2 y = 1\n\n\n     What is the complete range of p for which these simultaneous equations have a real\n     solution (x, y)?\n\n     A p<1\n\n     B p \u0004= 1\n\n     C p>1\n\n     D p < 1 or p > 2\n\n     E p \u0004= 1 and p < 2\n\n     F p > 1 and p < 2\n\n     G p>2\n\n     H All real values of p\n\n\n\n\n                                            16"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following simultaneous equations, where p is a real number:\n\n                                       p2x + log2 y = 2\n\n                                        2x + log2 y = 1\n\n\n     What is the complete range of p for which these simultaneous equations have a real\n     solution (x, y)?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "p<1"
+    },
+    {
+      "label": "B",
+      "rawText": "p A= 1"
+    },
+    {
+      "label": "C",
+      "rawText": "p>1"
+    },
+    {
+      "label": "D",
+      "rawText": "p < 1 or p > 2"
+    },
+    {
+      "label": "E",
+      "rawText": "p A= 1 and p < 2"
+    },
+    {
+      "label": "F",
+      "rawText": "p > 1 and p < 2"
+    },
+    {
+      "label": "G",
+      "rawText": "p>2"
+    },
+    {
+      "label": "H",
+      "rawText": "All real values of p"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Writing X = 2x and Y = log2 y gives the simultaneous equations\n\n                                          pX + Y = 2\n                                           X +Y =1\n                                                                   1\nSubtracting gives (p − 1)X = 1, so as long as p ̸= 1, we have X = p−1 and so Y = p−2\n                                                                                 p−1 .\n                              p−2\nNow the equation log2 y = p−1      gives a real value for y for any value of p ̸= 1 (specifically\n     (p−2)/(p−1)                            1                                  1\ny=2              ), but the equation 2x = p−1   has a solution if and only if p−1 > 0, which is if\nand only if p > 1.\nTherefore the original simultaneous equations have a real solution (x, y) if and only if p > 1,\nwhich is option C.\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 17"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        17
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

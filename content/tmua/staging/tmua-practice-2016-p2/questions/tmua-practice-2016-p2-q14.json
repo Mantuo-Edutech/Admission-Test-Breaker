@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p2-q14",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p2",
+  "edition": "practice-2016",
+  "paper": 2,
+  "questionNumber": 14,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "14\n\nͳͶ\u0003   ݂ሺ‫ݔ‬ሻ ൌ ܽ‫ ݔ‬ସ ൅ ܾ‫ ݔ‬ଷ ൅ ܿ‫ ݔ‬ଶ ൅ ݀‫ ݔ‬൅ ݁ǡ\u0003\u0003ܽǡ\u0003ܾǡ\u0003ܿǡ\u0003݀ǡ\u0003\u0003݁\u0003\u0003\u0003Ǥ\u0003\u0003\n      \u0003\n      \u0016\u0003݂ሺ‫ݔ‬ሻ ൌ ͳ\u0003\u0003‫\u0003\u0003 \u0003݌‬ǡ\u0003݂ሺ‫ݔ‬ሻ ൌ ʹ\u0003\u0003‫\u0003\u0003 \u0003ݍ‬ǡ\u0003\n      ݂ሺ‫ݔ‬ሻ ൌ ͵\u0003\u0003‫\u0003\u0003 \u0003ݎ‬ǡ\u0003\u0003݂ሺ‫ݔ‬ሻ ൌ Ͷ\u0003\u0003‫\u0003\u0003 \u0003ݏ‬Ǥ\u0003\u0003\n      \u0003\n      \u001a \u0003\u0003\u0003\u0003\u0003\u0003\u0003ǫ\u0003\n      \u0003\n      \u0003\n      \u0004\u0003 ‫ ݌‬ൌ ͳǡ\u0003‫ ݍ‬ൌ ʹǡ\u0003‫ ݎ‬ൌ Ͷ\u0003\u0003‫ ݏ‬ൌ ͵\u0003\n      \u0003\n      \u0005\u0003 ‫ ݌‬ൌ ͳǡ\u0003‫ ݍ‬ൌ ͵ǡ\u0003‫ ݎ‬ൌ ʹ\u0003\u0003‫ ݏ‬ൌ Ͷ\u0003\n      \u0003\n      \u0006\u0003 ‫ ݌‬ൌ ͳǡ\u0003‫ ݍ‬ൌ Ͷǡ\u0003‫ ݎ‬ൌ ͵\u0003\u0003‫ ݏ‬ൌ ʹ\u0003\n      \u0003\n      \u0007\u0003 ‫ ݌‬ൌ ʹǡ\u0003‫ ݍ‬ൌ Ͷǡ\u0003‫ ݎ‬ൌ ͵\u0003\u0003‫ ݏ‬ൌ ͳ\u0003\n      \u0003\n      \b\u0003 ‫ ݌‬ൌ Ͷǡ\u0003‫ ݍ‬ൌ ͵ǡ\u0003‫ ݎ‬ൌ ʹ\u0003\u0003‫ ݏ‬ൌ ͳ\u0003"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "14   ݂ሺ‫ݔ‬ሻ ൌ ܽ‫ ݔ‬ସ ൅ ܾ‫ ݔ‬ଷ ൅ ܿ‫ ݔ‬ଶ ൅ ݀‫ ݔ‬൅ ݁ǡܽǡܾǡܿǡ݀ǡ݁Ǥ\n      \n      ݂ሺ‫ݔ‬ሻ ൌ 1‫ ݌‬ǡ݂ሺ‫ݔ‬ሻ ൌ 2‫ ݍ‬ǡ\n      ݂ሺ‫ݔ‬ሻ ൌ 3‫ ݎ‬ǡ݂ሺ‫ݔ‬ሻ ൌ 4‫ ݏ‬Ǥ\n      \n       ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "‫ ݌‬ൌ 1ǡ‫ ݍ‬ൌ 2ǡ‫ ݎ‬ൌ 4‫ ݏ‬ൌ 3"
+    },
+    {
+      "label": "B",
+      "rawText": "‫ ݌‬ൌ 1ǡ‫ ݍ‬ൌ 3ǡ‫ ݎ‬ൌ 2‫ ݏ‬ൌ 4"
+    },
+    {
+      "label": "C",
+      "rawText": "‫ ݌‬ൌ 1ǡ‫ ݍ‬ൌ 4ǡ‫ ݎ‬ൌ 3‫ ݏ‬ൌ 2"
+    },
+    {
+      "label": "D",
+      "rawText": "‫ ݌‬ൌ 2ǡ‫ ݍ‬ൌ 4ǡ‫ ݎ‬ൌ 3‫ ݏ‬ൌ 1"
+    },
+    {
+      "label": "E",
+      "rawText": "‫ ݌‬ൌ 4ǡ‫ ݍ‬ൌ 3ǡ‫ ݎ‬ൌ 2‫ ݏ‬ൌ 1"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The number of solutions to f(x) = 1 is the number of times the graph of y = f(x) intersects\nwith the line y = 1, and similarly for the other three cases. So we need to think about possible\nshapes of y = f(x). We assume that a 6= 0 for now, so that we are dealing with a quartic; this\nwill be enough to answer the question. (Each of the given options has one of p, q, r or s equal\nto 4, which is impossible if the curve is a cubic, quadratic or linear.)\nA quartic with a > 0 either has a W-shape, or it is a bit like a quadratic in that it has exactly\none local minimum. If a < 0, the possibilities are the reflections of these.\nWe can then try to construct curves with the given conditions.\n\nA p = 1 and q = 2 indicates that a > 0 and that y = 1 is tangent to the curve. So something\n  like this would work, where we have drawn dashed lines to show y = 1, y = 2, y = 3 and\n  y = 4. (We could have left out the y-axis for clarity.)\n\n                                 y\n\n\n\n\n                                                                   x\n\n\n   (An accurately-plotted quartic would not look quite like this, as you can see if you use graph-\n   drawing software. Nevertheless, the general shape could be correct, with the stationary points\n   in roughly the locations shown.)\n   We could also draw this schematically as:\n\n                                 y\n\n\n\n\n                                                                   x\n\n\n   We will use this schematic representation for the rest of the cases.\n\n\n\n\n                                               17\n                                                                                     © UCLES 2019\n\f\nB Again, we require a minimum at y = 1. But as there are 4 crossings at y = 4, the curve must\n  do something like this:\n\n                                 y\n\n\n\n\n                                                                 x\n\n\n   where the last part is not yet clear.\n   However, to get r = 2, the last minimum must lie above y = 3, but then we cannot have\n   q = 3. Hence this is not possible.\n   We look at the other three options for the sake of completeness.\n\nC Again, there is a minimum at y = 1, and r = 3 gives a stationary point at y = 3. This sketch\n  does the job:\n\n                                 y\n\n\n\n\n                                                                 x\n\n\nD Since s = 1, we must have a < 0 and y = 4 is a maximum. Likewise, y = 3 must also be a\n  stationary point. The following sketch achieves this:\n\n                                 y\n\n\n\n\n                                                                 x\n\n\n\n\n                                              18\n                                                                                  © UCLES 2019\n\f\nE This is similar to the previous option: a < 0 and there is a maximum at y = 4. As q = 3,\n  there is a stationary point at y = 2, which gives the following sketch:\n\n                              y\n\n\n\n\n                                                             x\n\n\n\nThe correct option is B.\n\n\n\n\n                                           19\n                                                                              © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-practice(2016).pdf",
+      "sha256": "b8cd5d8b5a7aa960f44734f9e05ceae592e9d329c2173a61ebc9fc3a460e9159",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-practice(2016).pdf",
+      "sha256": "5e3ec53b815b24bcb06e7f8c2233a4f29dbdcee5de73f8ad8e95bf1da5043bc2",
+      "pages": [
+        17,
+        18,
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

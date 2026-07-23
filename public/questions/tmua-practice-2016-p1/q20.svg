@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" role="img" aria-labelledby="title desc">
+  <title id="title">Square-based pyramid</title><desc id="desc">Square base PQRS and vertex O, with every edge 20 metres.</desc>
+  <g fill="none" stroke="#292437" stroke-width="3"><path d="M75 220L315 220L390 160L150 160Z"/><path d="M230 35L75 220M230 35L315 220M230 35L390 160M230 35L150 160"/><path d="M75 220L390 160" stroke-dasharray="7 7"/></g>
+  <g fill="#292437" font-family="serif" font-size="23"><text x="220" y="28">O</text><text x="50" y="242">P</text><text x="132" y="153">Q</text><text x="397" y="164">R</text><text x="319" y="244">S</text><text x="158" y="92" fill="#62528b">20 m</text></g>
+</svg>

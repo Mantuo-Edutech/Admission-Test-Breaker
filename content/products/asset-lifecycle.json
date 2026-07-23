@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "revision": "2026-07-23.1",
+  "policy": {
+    "everyContentFileMustHaveLifecycle": true,
+    "sourceAssetIsNotAutomaticallyAProduct": true,
+    "internalReviewIsNeverPublic": true,
+    "publishedProductRequiresInternalWebRoute": true
+  },
+  "groups": [
+    {
+      "id": "esat-admissions-rules",
+      "classification": "published-product-source",
+      "paths": ["content/admissions/esat-2027.json"],
+      "pathPrefixes": [],
+      "productIds": ["esat-course-module-planner"],
+      "publicDelivery": true
+    },
+    {
+      "id": "esat-knowledge-model",
+      "classification": "published-product-source",
+      "paths": ["content/esat/knowledge-units.json"],
+      "pathPrefixes": [],
+      "productIds": ["esat-course-coverage"],
+      "publicDelivery": true
+    },
+    {
+      "id": "esat-original-practice",
+      "classification": "published-product-source",
+      "paths": [],
+      "pathPrefixes": ["content/esat/original-practice/"],
+      "productIds": ["esat-module-starters-v1", "esat-mathematics-1-full-mock-v1", "esat-mathematics-2-full-mock-v1", "esat-physics-full-mock-v1", "esat-chemistry-full-mock-v1", "esat-biology-full-mock-v1"],
+      "publicDelivery": true
+    },
+    {
+      "id": "esat-research-index",
+      "classification": "research-source",
+      "paths": [
+        "content/esat/public-source-summary.json",
+        "content/esat/source-inventory.json"
+      ],
+      "pathPrefixes": [],
+      "productIds": [
+        "esat-course-module-planner",
+        "esat-course-coverage",
+        "esat-module-starters-v1",
+        "esat-mathematics-1-full-mock-v1",
+        "esat-mathematics-2-full-mock-v1",
+        "esat-physics-full-mock-v1",
+        "esat-chemistry-full-mock-v1",
+        "esat-biology-full-mock-v1"
+      ],
+      "publicDelivery": false
+    },
+    {
+      "id": "shared-assessment-model",
+      "classification": "platform-model",
+      "paths": [
+        "content/exams/assessment-structures.json",
+        "content/exams/knowledge-tag-taxonomy.json"
+      ],
+      "pathPrefixes": [],
+      "productIds": [
+        "tara-starting-point-v1",
+        "lnat-starting-point-v1",
+        "ucat-starting-point-v1",
+        "tara-reasoning-starter-v1",
+        "tara-critical-thinking-full-mock-v1",
+        "tara-problem-solving-full-mock-v1",
+        "tara-writing-task-v1",
+        "lnat-section-a-starter-v1",
+        "lnat-section-a-full-mock-v1",
+        "lnat-section-b-writing-v1",
+        "ucat-verbal-reasoning-starter-v1",
+        "ucat-verbal-reasoning-full-mock-v1",
+        "ucat-quantitative-reasoning-starter-v1",
+        "ucat-quantitative-reasoning-full-mock-v1",
+        "ucat-decision-making-starter-v1",
+        "ucat-decision-making-full-mock-v1",
+        "ucat-situational-judgement-starter-v1",
+        "ucat-situational-judgement-full-mock-v1"
+      ],
+      "publicDelivery": false
+    },
+    {
+      "id": "normalized-import-contract",
+      "classification": "schema",
+      "paths": [],
+      "pathPrefixes": ["content/imports/schemas/"],
+      "productIds": [],
+      "publicDelivery": false
+    },
+    {
+      "id": "lnat-original-practice",
+      "classification": "published-product-source",
+      "paths": [],
+      "pathPrefixes": ["content/lnat/original-practice/"],
+      "productIds": [
+        "lnat-section-a-starter-v1",
+        "lnat-section-a-full-mock-v1",
+        "lnat-section-b-writing-v1"
+      ],
+      "publicDelivery": true
+    },
+    {
+      "id": "esat-published-review-notes",
+      "classification": "published-product-source",
+      "paths": [],
+      "pathPrefixes": ["content/notes/esat/"],
+      "productIds": ["esat-mathematics-review-notes-v1", "esat-science-review-notes-v1"],
+      "publicDelivery": true
+    },
+    {
+      "id": "tara-published-review-notes",
+      "classification": "published-product-source",
+      "paths": [],
+      "pathPrefixes": ["content/notes/tara/"],
+      "productIds": ["tara-review-notes-v1"],
+      "publicDelivery": true
+    },
+    {
+      "id": "lnat-published-review-notes",
+      "classification": "published-product-source",
+      "paths": [],
+      "pathPrefixes": ["content/notes/lnat/"],
+      "productIds": ["lnat-review-notes-v1"],
+      "publicDelivery": true
+    },
+    {
+      "id": "ucat-published-review-notes",
+      "classification": "published-product-source",
+      "paths": [],
+      "pathPrefixes": ["content/notes/ucat/"],
+      "productIds": ["ucat-review-notes-v1"],
+      "publicDelivery": true
+    },
+    {
+      "id": "multi-exam-review-notes-blueprint",
+      "classification": "internal-product-source",
+      "paths": ["content/notes/china-student-review-notes-blueprint.json"],
+      "pathPrefixes": [],
+      "productIds": [
+        "esat-review-notes-v1"
+      ],
+      "publicDelivery": false
+    },
+    {
+      "id": "tmua-foundations-notes",
+      "classification": "published-product-source",
+      "paths": ["content/notes/tmua/foundations-v2.json"],
+      "pathPrefixes": [],
+      "productIds": ["tmua-foundations-notes-v2"],
+      "publicDelivery": true
+    },
+    {
+      "id": "tmua-six-week-plan",
+      "classification": "published-product-source",
+      "paths": ["content/notes/tmua/six-week-review-plan-v1.json"],
+      "pathPrefixes": [],
+      "productIds": ["tmua-six-week-review-plan-v1"],
+      "publicDelivery": true
+    },
+    {
+      "id": "tmua-specimen-deep-review",
+      "classification": "published-product-source",
+      "paths": ["content/notes/tmua/specimen-p1-worked-explanations-v1.json"],
+      "pathPrefixes": [],
+      "productIds": ["tmua-specimen-p1-worked-explanations-v1"],
+      "publicDelivery": true
+    },
+    {
+      "id": "official-research-documentation",
+      "classification": "documentation",
+      "paths": ["content/official/README.md"],
+      "pathPrefixes": [],
+      "productIds": [],
+      "publicDelivery": false
+    },
+    {
+      "id": "official-source-registries",
+      "classification": "research-source",
+      "paths": [
+        "content/official/curriculum-source-registry.json",
+        "content/official/exam-source-registry.json",
+        "content/official/research-asset-inventory.json"
+      ],
+      "pathPrefixes": [],
+      "productIds": [
+        "tmua-course-coverage",
+        "esat-course-module-planner",
+        "esat-course-coverage",
+        "tara-exam-guide",
+        "lnat-exam-guide",
+        "ucat-exam-guide",
+        "esat-review-notes-v1",
+        "tara-review-notes-v1",
+        "lnat-review-notes-v1",
+        "ucat-review-notes-v1"
+      ],
+      "publicDelivery": false
+    },
+    {
+      "id": "official-raw-research",
+      "classification": "research-source",
+      "paths": [],
+      "pathPrefixes": ["content/official/raw/"],
+      "productIds": [],
+      "publicDelivery": false
+    },
+    {
+      "id": "beta-release-control",
+      "classification": "release-control",
+      "paths": ["content/platform/beta-100-readiness.json"],
+      "pathPrefixes": [],
+      "productIds": [],
+      "publicDelivery": false
+    },
+    {
+      "id": "practice-revision-release-control",
+      "classification": "release-control",
+      "paths": [
+        "content/practice/published-paper-revisions.json",
+        "content/practice/server-delivery/public-paper-payloads.json"
+      ],
+      "pathPrefixes": [],
+      "productIds": [],
+      "publicDelivery": false
+    },
+    {
+      "id": "practice-private-answer-source",
+      "classification": "internal-product-source",
+      "paths": ["content/practice/server-delivery/private-answer-keys.json"],
+      "pathPrefixes": [],
+      "productIds": [],
+      "publicDelivery": false
+    },
+    {
+      "id": "product-release-control",
+      "classification": "release-control",
+      "paths": [
+        "content/products/catalog.json",
+        "content/products/asset-lifecycle.json",
+        "content/products/release-readiness.json",
+        "content/products/manual-review-worklist.json"
+      ],
+      "pathPrefixes": [],
+      "productIds": [],
+      "publicDelivery": false
+    },
+    {
+      "id": "review-notes-pdf-release-control",
+      "classification": "release-control",
+      "paths": ["content/products/review-notes-pdf-assets.json"],
+      "pathPrefixes": [],
+      "productIds": [
+        "esat-mathematics-review-notes-v1",
+        "esat-science-review-notes-v1",
+        "tara-review-notes-v1",
+        "lnat-review-notes-v1",
+        "ucat-review-notes-v1"
+      ],
+      "publicDelivery": false
+    },
+    {
+      "id": "tara-original-practice",
+      "classification": "published-product-source",
+      "paths": [],
+      "pathPrefixes": ["content/tara/original-practice/"],
+      "productIds": [
+        "tara-reasoning-starter-v1",
+        "tara-critical-thinking-full-mock-v1",
+        "tara-problem-solving-full-mock-v1",
+        "tara-writing-task-v1"
+      ],
+      "publicDelivery": true
+    },
+    {
+      "id": "tmua-corpus-documentation",
+      "classification": "documentation",
+      "paths": ["content/tmua/README.md"],
+      "pathPrefixes": [],
+      "productIds": [],
+      "publicDelivery": false
+    },
+    {
+      "id": "tmua-published-corpus",
+      "classification": "published-product-source",
+      "paths": [
+        "content/tmua/corpus-manifest.json",
+        "content/tmua/official-resource-registry.json",
+        "content/tmua/online-papers.json",
+        "content/tmua/past-papers/index.json",
+        "content/tmua/public-summary.json",
+        "content/tmua/questions/index.json",
+        "content/tmua/sources/duplicate-map.json"
+      ],
+      "pathPrefixes": [],
+      "productIds": ["tmua-online-past-papers"],
+      "publicDelivery": true
+    },
+    {
+      "id": "tmua-original-practice",
+      "classification": "published-product-source",
+      "paths": [],
+      "pathPrefixes": ["content/tmua/original-practice/"],
+      "productIds": ["tmua-diagnostic-v1"],
+      "publicDelivery": true
+    },
+    {
+      "id": "tmua-extraction-staging",
+      "classification": "normalized-staging",
+      "paths": ["content/tmua/extraction-audit.json"],
+      "pathPrefixes": ["content/tmua/staging/"],
+      "productIds": ["tmua-online-past-papers"],
+      "publicDelivery": false
+    },
+    {
+      "id": "tmua-content-schemas",
+      "classification": "schema",
+      "paths": [],
+      "pathPrefixes": ["content/tmua/schemas/"],
+      "productIds": ["tmua-online-past-papers"],
+      "publicDelivery": false
+    },
+    {
+      "id": "tmua-taxonomy",
+      "classification": "platform-model",
+      "paths": [],
+      "pathPrefixes": ["content/tmua/taxonomy/"],
+      "productIds": [
+        "tmua-online-past-papers",
+        "tmua-course-coverage"
+      ],
+      "publicDelivery": false
+    },
+    {
+      "id": "ucat-original-practice",
+      "classification": "published-product-source",
+      "paths": [],
+      "pathPrefixes": ["content/ucat/original-practice/"],
+      "productIds": [
+        "ucat-verbal-reasoning-starter-v1",
+        "ucat-verbal-reasoning-full-mock-v1",
+        "ucat-quantitative-reasoning-starter-v1",
+        "ucat-quantitative-reasoning-full-mock-v1",
+        "ucat-decision-making-starter-v1",
+        "ucat-decision-making-full-mock-v1",
+        "ucat-situational-judgement-starter-v1",
+        "ucat-situational-judgement-full-mock-v1"
+      ],
+      "publicDelivery": true
+    }
+  ]
+}

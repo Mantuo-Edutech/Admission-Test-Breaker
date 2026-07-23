@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "19   The equation\n\n                                                      \b 3\n                                     sin2 4cos θ × 60o =\n                                                         4\n\n     has exactly three solutions in the range 0o ≤ θ ≤ xo\n\n     What is the range of all possible values of x ?\n\n     A 90 ≤ x < 120\n\n     B 90 ≤ x < 270\n\n     C 120 ≤ x < 240\n\n     D 270 ≤ x < 300\n\n     E 300 ≤ x < 360\n\n     F 450 ≤ x < 630\n\n\n\n\n                                              \u0015\u0014"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The equation\n\n                                                      E 3\n                                     sin2 4cos θ × 60o =\n                                                         4\n\n     has exactly three solutions in the range 0o ≤ θ ≤ xo\n\n     What is the range of all possible values of x ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "90 ≤ x < 120"
+    },
+    {
+      "label": "B",
+      "rawText": "90 ≤ x < 270"
+    },
+    {
+      "label": "C",
+      "rawText": "120 ≤ x < 240"
+    },
+    {
+      "label": "D",
+      "rawText": "270 ≤ x < 300"
+    },
+    {
+      "label": "E",
+      "rawText": "300 ≤ x < 360"
+    },
+    {
+      "label": "F",
+      "rawText": "450 ≤ x < 630"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can start by solving the equation before considering the possible values of x.\nWe have                                                                   √\n                                                  cos θ      ◦\n                                                                 \u0001         3\n                                          sin 4           × 60       =±\n                                                                          2\nso that\n                                 4cos θ × 60◦ = 60◦ , 120◦ , 240◦ , 300◦ , . . .\n(noting that the left hand side is always positive, so we do not need to consider negative values\nfor the right hand side).\nDividing by 60◦ gives\n                                            4cos θ = 1, 2, 4, 5, . . .\nand so\n                                                cos θ = 0, 21 or 1;\nthere are no values of cos θ for which 4cos θ > 4.\nWe can now find the possible values of θ:\n\n•     cos θ = 0 gives θ = 90◦ , 270◦ , 450◦ , . . . .\n\n•     cos θ = 12 gives θ = 60◦ , 300◦ , 420◦ , . . . .\n\n•     cos θ = 1 gives θ = 0◦ , 360◦ , . . . .\n\nCollecting these solutions and arranging them in increasing order gives θ = 0◦ , 60◦ , 90◦ , 270◦ ,\n300◦ , . . . .\nWe are told that there are exactly three solutions in the range 0◦ ≤ θ ≤ x◦ . Therefore x ≥ 90 to\nget the third solution, and x < 270 to avoid getting the fourth solution. This gives the answer\n90 ≤ x < 270, which is option B.\n\n\n\n\nVersion 1.0, March 2022                                                                    Page 22"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        22
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

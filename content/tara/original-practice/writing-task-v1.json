@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "tara-writing-task-v1",
+  "exam": "TARA",
+  "edition": "Writing Task · Original v1",
+  "sectionId": "writing-task",
+  "sectionLabel": "Writing Task",
+  "sectionLabelZh": "限时论证写作 · 满托原创",
+  "durationMinutes": 40,
+  "deliveryMode": "structured",
+  "responseMode": "essay",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "三道题目均为满托独立命题；官方资料只用于核对三选一、40 分钟与 750 词上限。",
+  "sourceAnchors": [
+    {
+      "id": "tara-content-specification",
+      "localPath": "content/official/raw/shared/TARA_Content_Specification.pdf",
+      "sha256": "d326e78305aefd999c42953de3024d403f27357ecbc0f3dd562134e8105822cd",
+      "usedFor": "Writing Task scope boundary only"
+    },
+    {
+      "id": "tara-question-guide",
+      "localPath": "content/official/raw/shared/TARA_Question_Guide.pdf",
+      "sha256": "afcee1ff9dd35025000cd7c5a4cef804fa31fb3e8870d5748ec8d3ac2c45a6cb",
+      "usedFor": "three-prompt interaction and word-limit boundary only"
+    }
+  ],
+  "essayTask": {
+    "maxWords": 750,
+    "prompts": [
+      {
+        "id": "automated-decisions",
+        "title": "Automated public decisions",
+        "prompt": "Public bodies should never use automated systems to make decisions that materially affect individuals. Discuss."
+      },
+      {
+        "id": "community-service",
+        "title": "Community service",
+        "prompt": "Universities should require every undergraduate to complete a period of community service before graduating. To what extent do you agree?"
+      },
+      {
+        "id": "health-claims",
+        "title": "Misleading health claims",
+        "prompt": "When, if ever, should governments restrict health claims made by public figures on social media?"
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": "tara-writing-task-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Choose one of the three prompts and write a clear, reasoned response in English." }] }],
+      "options": [],
+      "correctAnswer": "",
+      "knowledgeTags": ["tara-writing-argument"],
+      "skillTags": ["thesis", "reasons", "counterargument", "conclusion"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/tara/original-practice/writing-task-v1.json",
+      "sourceAnswerPath": "content/tara/original-practice/writing-task-v1.json"
+    }
+  ]
+}

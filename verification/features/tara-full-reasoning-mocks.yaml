@@ -1,0 +1,76 @@
+schemaVersion: 1
+feature:
+  id: tara-full-reasoning-mocks
+  title: Mantou-original full-length TARA reasoning mocks
+  status: partial
+  userOutcome: >-
+    A student with a TARA profile can complete separate free native 22-question,
+    40-minute Critical Thinking and Problem Solving mocks, save and change answers,
+    submit them and review factual raw results without leaving the Mantou website.
+
+run:
+  packageScript: verify:tara-full-mock
+
+claims:
+  - id: official-structure-original-content
+    status: verified
+    statement: >-
+      Both mocks match the versioned 22-question, 40-minute, five-option,
+      no-calculator module structure. Critical Thinking covers all seven official
+      question families; Problem Solving covers all three official families and
+      stays within the Appendix 1 basic-mathematics boundary. All 44 questions are
+      Mantou-original and cite SHA-pinned official documents only for scope.
+    artifacts:
+      - content/tara/original-practice/critical-thinking-full-mock-v1.json
+      - content/tara/original-practice/problem-solving-full-mock-v1.json
+      - src/features/practice/content/tara-full-mocks.ts
+      - tests/features/practice/content/tara-full-mocks.test.ts
+    automatedChecks:
+      - verify:tara-full-mock
+      - verify:official-research
+      - typecheck
+
+  - id: free-native-two-module-journey
+    status: verified
+    statement: >-
+      The TARA practice library exposes the starter plus both full modules. Each
+      full mock is loaded through its own dynamic paper chunk and then uses the
+      shared profile-first session kernel for active timing, answer changes,
+      private persistence, submission, raw results, bilingual knowledge tags,
+      history reload and question feedback.
+    artifacts:
+      - src/features/catalog/pages/AssessmentPracticeLibraryPage.tsx
+      - src/features/practice/content/practice-paper-registry.ts
+      - src/features/practice/pages/PracticeRoutePage.tsx
+      - tests/app/multi-exam-practice-library.test.tsx
+      - tests/e2e/tara-full-reasoning-mocks.spec.ts
+    automatedChecks:
+      - verify:tara-full-mock
+      - verify:learning-record
+      - verify:e2e
+      - build
+
+boundaries:
+  - These are Mantou-original teaching-preview mocks, not official TARA papers or a claim of official-equivalent difficulty.
+  - Each result is the factual number correct out of 22; it does not produce a 1.0-9.0 scale score, percentile, readiness conclusion or admissions prediction.
+  - Independent TARA reasoning, bilingual terminology, difficulty calibration and real-device review remain required before final publication status.
+  - The existing Writing Task reports the submitted response and active time but is not automatically marked.
+
+manualChecks:
+  - id: independent-reasoning-and-language-review
+    status: pending
+    evidence: A separate TARA/TSA reasoning teacher and bilingual reviewer must verify all 44 prompts, distractors, answer keys, official family labels and difficulty progression.
+    viewports:
+      - content
+  - id: student-timing-calibration
+    status: pending
+    evidence: Run both complete modules with representative students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.
+    viewports:
+      - student-session
+  - id: real-device-review
+    status: pending
+    evidence: Verify long argument text, tables, five-option navigation and persistence on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.
+    viewports:
+      - desktop
+      - tablet
+      - phone

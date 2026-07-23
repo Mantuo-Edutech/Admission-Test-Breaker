@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "lastVerifiedAt": "2026-07-19",
+  "mappingVersion": "2026-07-19.2",
+  "policy": {
+    "rawFilesInPublicBundle": false,
+    "rawFilesTrackedByGit": false,
+    "downloadDoesNotGrantRepublicationRights": true,
+    "blockedDownloadsMayBeRepresentedAsLocalAssets": false
+  },
+  "sources": [
+    {
+      "id": "ibo-mathematics-aa-subject-brief-2021",
+      "curriculumSystem": "ib",
+      "sourceRegistryId": "ibo",
+      "qualificationIds": [
+        "ib-aa-sl-first-assessment-2021",
+        "ib-aa-hl-first-assessment-2021"
+      ],
+      "title": "IB Mathematics: Analysis and Approaches subject brief",
+      "specificationVersion": "First assessment 2021",
+      "officialUrl": "https://ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-analysis-and-approaches-en.pdf",
+      "format": "pdf",
+      "sourceVerified": true,
+      "lastVerifiedAt": "2026-07-19",
+      "retrievalStatus": "blocked_by_origin",
+      "retrievalNote": "The official two-page PDF is readable from the source, but the origin returns HTTP 403 to automated local download requests.",
+      "localPath": null,
+      "bytes": null,
+      "sha256": null,
+      "rightsStatus": "internal_research_only",
+      "publishable": false,
+      "supportsMappingVersion": "2026-07-19.2"
+    },
+    {
+      "id": "ibo-mathematics-ai-subject-brief-2021",
+      "curriculumSystem": "ib",
+      "sourceRegistryId": "ibo",
+      "qualificationIds": [
+        "ib-ai-sl-first-assessment-2021",
+        "ib-ai-hl-first-assessment-2021"
+      ],
+      "title": "IB Mathematics: Applications and Interpretation subject brief",
+      "specificationVersion": "First assessment 2021",
+      "officialUrl": "https://ibo.org/contentassets/40de1280e31f4cd582b96d9ffd7e31f2/subject-brief-dp-math-applications-and-interpretations-en.pdf",
+      "format": "pdf",
+      "sourceVerified": true,
+      "lastVerifiedAt": "2026-07-19",
+      "retrievalStatus": "blocked_by_origin",
+      "retrievalNote": "The official two-page PDF is readable from the source, but the origin returns HTTP 403 to automated local download requests.",
+      "localPath": null,
+      "bytes": null,
+      "sha256": null,
+      "rightsStatus": "internal_research_only",
+      "publishable": false,
+      "supportsMappingVersion": "2026-07-19.2"
+    },
+    {
+      "id": "college-board-ap-precalculus-ced-fall-2026",
+      "curriculumSystem": "ap",
+      "sourceRegistryId": "college-board",
+      "qualificationIds": [
+        "ap-precalculus-effective-fall-2026"
+      ],
+      "title": "AP Precalculus Course and Exam Description",
+      "specificationVersion": "Effective Fall 2026",
+      "officialUrl": "https://apcentral.collegeboard.org/media/pdf/ap-precalculus-course-and-exam-description.pdf",
+      "format": "pdf",
+      "sourceVerified": true,
+      "lastVerifiedAt": "2026-07-19",
+      "retrievalStatus": "downloaded",
+      "retrievalNote": "Downloaded from AP Central and verified as a PDF before hashing.",
+      "localPath": "content/official/raw/curricula/ap-precalculus-course-and-exam-description.pdf",
+      "bytes": 9485805,
+      "sha256": "5ef13ad6e4b39455330257e94d1b4750a833ef6e05ccf2f4a24141912345f04f",
+      "rightsStatus": "internal_research_only",
+      "publishable": false,
+      "supportsMappingVersion": "2026-07-19.2"
+    },
+    {
+      "id": "college-board-ap-calculus-ab-bc-ced",
+      "curriculumSystem": "ap",
+      "sourceRegistryId": "college-board",
+      "qualificationIds": [
+        "ap-calculus-ab-2020-current",
+        "ap-calculus-bc-2020-current"
+      ],
+      "title": "AP Calculus AB and BC Course and Exam Description",
+      "specificationVersion": "CED 2020 · current framework",
+      "officialUrl": "https://apcentral.collegeboard.org/media/pdf/ap-calculus-ab-and-bc-course-and-exam-description.pdf",
+      "format": "pdf",
+      "sourceVerified": true,
+      "lastVerifiedAt": "2026-07-19",
+      "retrievalStatus": "downloaded",
+      "retrievalNote": "Downloaded from AP Central and verified as a PDF before hashing.",
+      "localPath": "content/official/raw/curricula/ap-calculus-ab-and-bc-course-and-exam-description.pdf",
+      "bytes": 7997796,
+      "sha256": "fd571cdc252c24d33a75ed556ee20d9261ef1ad3dbb718d0caf78acecc8253ca",
+      "rightsStatus": "internal_research_only",
+      "publishable": false,
+      "supportsMappingVersion": "2026-07-19.2"
+    }
+  ]
+}

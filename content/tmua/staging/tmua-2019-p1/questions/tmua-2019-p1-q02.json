@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "2   Find the complete set of values of the real constant k for which the expression\n\n\n                                       x2 + kx + 2x + 1 − 2k\n\n    is positive for all real values of x.\n\n    A −12 < k < 0\n\n    B k < −12 or k > 0\n        √          √\n    C − 6−3<k < 6−3\n           √            √\n    D k < − 6 − 3 or k > 6 − 3\n\n    E −2 < k < 12\n\n    F k < −2 or k > 12\n\n    G 0<k<4\n\n    H k < 0 or k > 4\n\n\n\n\n                                               4"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the complete set of values of the real constant k for which the expression\n\n\n                                       x2 + kx + 2x + 1 − 2k\n\n    is positive for all real values of x."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−12 < k < 0"
+    },
+    {
+      "label": "B",
+      "rawText": "k < −12 or k > 0\n        √          √"
+    },
+    {
+      "label": "C",
+      "rawText": "− 6−3<k < 6−3\n           √            √"
+    },
+    {
+      "label": "D",
+      "rawText": "k < − 6 − 3 or k > 6 − 3"
+    },
+    {
+      "label": "E",
+      "rawText": "−2 < k < 12"
+    },
+    {
+      "label": "F",
+      "rawText": "k < −2 or k > 12"
+    },
+    {
+      "label": "G",
+      "rawText": "0<k<4"
+    },
+    {
+      "label": "H",
+      "rawText": "k < 0 or k > 4"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let us write the expression as x2 +(k +2)x+(1−2k) so that the coefficient of x and the constant\nare clear. The expression is positive for large values of x, and so is positive for all values of x if\nthe discriminant is negative. Hence we require\n\n                                     (k + 2)2 − 4(1 − 2k) < 0.\n\nExpanding and simplifying this gives\n\n                                           k 2 + 12k < 0,\n\nso k(k + 12) < 0. If we sketch a graph of the function k(k + 12), we obtain\n\n                                                   y\n\n\n\n\n                                                                     k\n                                   −12\n\n\n\n\nWe see that k(k + 12) < 0 for −12 < k < 0, so the correct option is A.\n\n\n\n\nc UCLES                                                                                        Page 4"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

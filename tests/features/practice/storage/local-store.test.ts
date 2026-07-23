@@ -70,6 +70,18 @@ function activeSession() {
   });
 }
 
+function esatSession() {
+  return createPracticeSession({
+    id: "ses_esat-storage-one",
+    learningSpaceId: "gsp_esat-browser-one",
+    actor: { kind: "guest", actorId: "guest_esat-browser-one" },
+    startedAt: "2026-07-13T00:00:00.000Z",
+    eventId: "evt_esat-storage-started",
+    paperId: "esat-mathematics-1-starter-v1",
+    durationMinutes: 40,
+  });
+}
+
 describe("local practice session store", () => {
   it("round-trips a valid local Guest session", async () => {
     const storage = new MemoryStorage();
@@ -81,6 +93,54 @@ describe("local practice session store", () => {
     await expect(store.loadCurrent()).resolves.toEqual({
       session: activeSession(),
       issue: null,
+    });
+  });
+
+  it("round-trips a non-TMUA session with its own paper ID and duration", async () => {
+    const storage = new MemoryStorage();
+    const store = new LocalPracticeSessionStore(storage);
+
+    await expect(store.save(esatSession())).resolves.toEqual({ persisted: true });
+    await expect(store.loadCurrent()).resolves.toEqual({
+      session: esatSession(),
+      issue: null,
+    });
+  });
+
+  it("loads the previous TMUA key and migrates it on the next save", async () => {
+    const storage = new MemoryStorage();
+    const legacyKey = "tmua:practice:current:v1";
+    storage.setItem(legacyKey, JSON.stringify(activeSession()));
+    const store = new LocalPracticeSessionStore(storage);
+
+    await expect(store.loadCurrent()).resolves.toEqual({
+      session: activeSession(),
+      issue: null,
+    });
+    await store.save(activeSession());
+
+    expect(storage.getItem(legacyKey)).toBeNull();
+    expect(storage.getItem(PRACTICE_SESSION_STORAGE_KEY)).not.toBeNull();
+  });
+
+  it("upgrades a schema-v2 session to the currently published immutable revision", async () => {
+    const storage = new MemoryStorage();
+    const current = activeSession();
+    const legacy = { ...current } as Record<string, unknown>;
+    legacy.schemaVersion = 2;
+    delete legacy.paperRevisionId;
+    delete legacy.contentDigest;
+    storage.setItem(PRACTICE_SESSION_STORAGE_KEY, JSON.stringify(legacy));
+    const store = new LocalPracticeSessionStore(storage);
+
+    const loaded = await store.loadCurrent();
+
+    expect(loaded.issue).toBeNull();
+    expect(loaded.session).toMatchObject({
+      schemaVersion: 3,
+      paperId: "tmua-2023-p1",
+      paperRevisionId: "tmua-2023-p1-r1",
+      contentDigest: expect.stringMatching(/^[a-f0-9]{64}$/u),
     });
   });
 
@@ -144,7 +204,7 @@ describe("local practice session store", () => {
     expect(
       [...Array.from({ length: storage.length }, (_, index) => storage.key(index))]
         .filter((key): key is string => key !== null)
-        .some((key) => key.startsWith("tmua:practice:corrupt:")),
+        .some((key) => key.startsWith("admission-test-breaker:practice:corrupt:")),
     ).toBe(true);
   });
 

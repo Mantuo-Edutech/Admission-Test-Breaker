@@ -1,0 +1,46 @@
+name: admission-test-breaker
+
+services:
+  web:
+    image: ${APP_IMAGE:?Set APP_IMAGE to the immutable GHCR image tag}
+    restart: unless-stopped
+    read_only: true
+    environment:
+      SUPABASE_URL: ${SUPABASE_URL:?Set the browser-safe Supabase project URL}
+      SUPABASE_PUBLISHABLE_KEY: ${SUPABASE_PUBLISHABLE_KEY:?Set the browser-safe publishable key}
+      TURNSTILE_SITE_KEY: ${TURNSTILE_SITE_KEY:?Set the browser-safe Turnstile site key}
+      APP_RELEASE: ${APP_RELEASE:?Set the immutable release identifier}
+      APP_ENVIRONMENT: ${APP_ENVIRONMENT:-production}
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "-", "http://127.0.0.1:8080/healthz"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    security_opt:
+      - no-new-privileges:true
+
+  caddy:
+    image: caddy:2.10.0-alpine
+    restart: unless-stopped
+    depends_on:
+      web:
+        condition: service_healthy
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:?Set the public domain}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  caddy_data:
+  caddy_config:

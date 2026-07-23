@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q05",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 5,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "5\n\nͷ\u0003    What is the total area enclosed between the curve\u0003‫ ݕ‬ൌ ‫ ݔ‬ଶ െ ͳ, the ‫ݔ‬-axis and\n      the lines ‫ ݔ‬ൌ െʹ and ‫ ݔ‬ൌ ʹ\u0003?\n      \u0003\n\n         Ͷ\n      \u0004\u0003  \u0003\n         ͵\n      \u0003  ͺ\n      \u0005\u0003 \u0003\n         ͵\n      \u0003\n      \u0006\u0003 Ͷ\u0003\n      \u0003  ͳ͸\n      \u0007\u0003    \u0003\n          ͵\n      \u0003\n      \b\u0003 ͳʹ\u0003\n      \u0003\n          \u0003   ͳ͸\u0003\n      \u0003"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "5    What is the total area enclosed between the curve‫ ݕ‬ൌ ‫ ݔ‬ଶ െ 1, the ‫ݔ‬-axis and\n      the lines ‫ ݔ‬ൌ െ2 and ‫ ݔ‬ൌ 2?\n      \n\n         4"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "3\n        8"
+    },
+    {
+      "label": "B",
+      "rawText": "3"
+    },
+    {
+      "label": "C",
+      "rawText": "4\n        16"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "12\n      \n             16"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "To answer this question, it is worth drawing a sketch.\nThe graph is of y = x2 − 1 = (x + 1)(x − 1), so the parabola intersects the x-axis at (1, 0) and\n(−1, 0):\n\n                                                     y\n\n\n\n\n                                                                    x\n                                     −2 −1               1      2\n\n\n\n\nTo find the area enclosed, we integrate over the three separate regions, from −2 to −1, from −1\nto 1, and from 1 to 2:\n                             Z −1\n                                                        \u0003−1\n                                  x2 − 1 dx = 13 x3 − x −2\n                                               \u0002\n                               −2\n                                              = (− 31 + 1) − (− 83 + 2)\n                                               = 43\n                              Z 1\n                                                          \u00031\n                                     x2 − 1 dx = 13 x3 − x −1\n                                                 \u0002\n                                −1\n                                              = ( 31 − 1) − (− 13 + 1)\n                                             = − 43\n                               Z 2\n                                                        \u00032\n                                   x2 − 1 dx = 13 x3 − x 1\n                                               \u0002\n                                1\n                                              = ( 38 − 2) − ( 13 − 1)\n                                              = 43\n\nThus the three areas are each 43 , and the total area is 4, so the answer is C.\n\n\n\n\n                                                  8\n                                                                                    © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

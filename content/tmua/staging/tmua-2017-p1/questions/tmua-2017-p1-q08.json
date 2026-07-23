@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                      \u0003\n                                                      \u0003\n                                                      \u0003\n\nͺ\u0003         \u0003\u0003 \u0003\u0003\u0003\u0003\u0003‫\u0003 ݔ‬ǡ\u0003\u0003Ͳ ൑ ‫ ݔ‬൑ ߨǡ\u0003\u0003 \u0003\n       \u0003\n                                             ሺͳ െ ʹ  ‫ݔ‬ሻ  ‫ ݔ‬൒ Ͳ\u0003\n\u0003      \u0003\n\u0003                    ߨ ߨ         ͷߨ\n       A      Ͳ ൑ ‫ ݔ‬൑ ǡ\u0003\u0003\u0003\u0003 ൑ ‫ ݔ‬൑ \u0003\n                     ͸ ʹ          ͸\n\u0003                    ߨ ͷߨ\n       B      Ͳ ൑ ‫ ݔ‬൑ ǡ\u0003\u0003\u0003\u0003   ൑ ‫ ݔ‬൑ ߨ\u0003\n                     ͸      ͸\n\u0003             ߨ      ߨ ͷߨ\n       C        ൑ ‫ ݔ‬൑ ǡ\u0003\u0003\u0003\u0003   ൑ ‫ ݔ‬൑ ߨ\u0003\n              ͸      ʹ      ͸\n\u0003             ߨ    ͷߨ\n       D        ൑‫ݔ‬൑ \u0003\n              ͸     ͸\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                         \u0014\u0013"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": " ‫ ݔ‬ǡ0 ൑ ‫ ݔ‬൑ ߨǡ \n       \n                                             ሺ1 െ 2  ‫ݔ‬ሻ  ‫ ݔ‬൒ 0\n      \n                    ߨ ߨ         5ߨ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0 ൑ ‫ ݔ‬൑ ǡ ൑ ‫ ݔ‬൑ \n                     6 2          6\n                    ߨ 5ߨ"
+    },
+    {
+      "label": "B",
+      "rawText": "0 ൑ ‫ ݔ‬൑ ǡ   ൑ ‫ ݔ‬൑ ߨ\n                     6      6\n             ߨ      ߨ 5ߨ"
+    },
+    {
+      "label": "C",
+      "rawText": "൑ ‫ ݔ‬൑ ǡ   ൑ ‫ ݔ‬൑ ߨ\n              6      2      6\n             ߨ    5ߨ"
+    },
+    {
+      "label": "D",
+      "rawText": "൑‫ݔ‬൑ \n              6     6\n\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Multiplying out the brackets does not look like a particularly useful approach (what would we\ndo with the terms cos x and sin x cos x in the same inequality?), so we will leave the expression\nin its factored form.\n\n\nIf we temporarily write a = 1 − 2 sin x and b = cos x we will be able to see the structure of the\nproblem a little more clearly. We want ab ⩾ 0, and this will happen when either a ⩾ 0 and\nb ⩾ 0, or when a ⩽ 0 and b ⩽ 0. So we need to solve each of these simpler inequalities.\n\n\nWe have 1 − 2 sin x = 0 when sin x = 21 , so when x = π6 or x = 5π  6 . We can either sketch the\ngraph of y = 1 − 2 sin x or try values to determine whether 1 − 2 sin x is positive or negative\nin each range. Sketching the graph seems possibly hard, as there are multiple transformations,\nand it would be easy to make a mistake. So on this occasion, we’ll plug in values: x = 0 and\nx = π both give 1 − 2 sin x = 1; while x = π2 gives 1 − 2 sin x = −1. Therefore\n\n\n                     1 − 2 sin x ⩾ 0 when 0 ⩽ x ⩽ π6 and when 5π\n                                                               6 ⩽x⩽π\n                     1 − 2 sin x ⩽ 0 when π6 ⩽ x ⩽ 5π\n                                                    6\n\n\nWe can do similarly for cos x; this time we can think about the graph in our head, and we have\n\n\n\n                                   cos x ⩾ 0 when 0 ⩽ x ⩽ π2\n                                   cos x ⩽ 0 when π2 ⩽ x ⩽ π\n\nWe can now put everything together. Both expressions are greater than or equal to 0 when\n0 ⩽ x ⩽ π6 , and they are both less than or equal to 0 when π2 ⩽ x ⩽ 5π\n                                                                      6 .\nHence the answer is A.\n\n\n\n\nVersion 1.1, March 2019                                                                  Page 11\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p1-q14",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p1",
+  "edition": "specimen",
+  "paper": 1,
+  "questionNumber": 14,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "14.        , , , and   are real and positive.\n\n           and are constants.\n\n           and   are related.\n\n       A graph of log against log is drawn.\n\n       For which one of the following relationships will this graph be a straight line?\n\n\n\n\n       A\n\n       B\n\n       C\n\n       D\n\n       E"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": ", , , and   are real and positive.\n\n           and are constants.\n\n           and   are related.\n\n       A graph of log against log is drawn.\n\n       For which one of the following relationships will this graph be a straight line?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "[visual option A; transcription required]"
+    },
+    {
+      "label": "B",
+      "rawText": "[visual option B; transcription required]"
+    },
+    {
+      "label": "C",
+      "rawText": "[visual option C; transcription required]"
+    },
+    {
+      "label": "D",
+      "rawText": "[visual option D; transcription required]"
+    },
+    {
+      "label": "E",
+      "rawText": "[visual option E; transcription required]"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "If the graph is a straight line, then we must have\n\n                                       (log y) = m(log x) + c\n\nfor some m and c; this is just the usual straight-line equation with x and y replaced by log x\nand log y.\nThis can be written as\n                                        log y = log(xm ) + c.\nIf we now write c = log C for some C, then this becomes\n\n                                log y = log xm + log C = log(Cxm ).\n\nExponentiating both sides gives\n                                              y = Cxm\nwhich is in the form of option D.\nAn alternative to writing c = log C is just to exponentiate the equation log y = log(xm ) + c. If\nwe suppose that the base of the logarithms is k, then this gives\n\n                                             y = xm k c\n\n(using k u+v = k u k v and k log u = u for any u and v). Since k c is a constant, this equation can be\nrewritten as y = axm where a = k c , and we again obtain option D.\n\n\n\n\nVersion 1.1, November 2020                                                                   Page 16"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+      "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+      "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+      "pages": [
+        17
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "visual-option-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11     The function f (x) is increasing and f (0) = 0.\n\n        The positive constants a and b are such that a < b.\n\n        The area of the region enclosed by the curve y = f (x), the x-axis and the lines x = a\n        and x = b is denoted by R.\n\n        The function g(x) is deﬁned by g(x) = f (x) + 2f (b).\n\n        Which of the following is an expression for the area enclosed by the curve y = g(x),\n        the x-axis and the lines x = a and x = b?\n\n        A R + (b − a)f (b)\n\n        B R + 2(b − a)f (b)\n\n        C R + 2f (b) − f (a)\n\n        D R + 2f (b)\n\n        E      R + (f (b))2\n\n        F      R + (f (b))2 − (f (a))2\n\n        G R + 2(f (b) − f (a))f (b)\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0014\u0016                                    >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The function f (x) is increasing and f (0) = 0.\n\n        The positive constants a and b are such that a < b.\n\n        The area of the region enclosed by the curve y = f (x), the x-axis and the lines x = a\n        and x = b is denoted by R.\n\n        The function g(x) is deﬁned by g(x) = f (x) + 2f (b).\n\n        Which of the following is an expression for the area enclosed by the curve y = g(x),\n        the x-axis and the lines x = a and x = b?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "R + (b − a)f (b)"
+    },
+    {
+      "label": "B",
+      "rawText": "R + 2(b − a)f (b)"
+    },
+    {
+      "label": "C",
+      "rawText": "R + 2f (b) − f (a)"
+    },
+    {
+      "label": "D",
+      "rawText": "R + 2f (b)"
+    },
+    {
+      "label": "E",
+      "rawText": "R + (f (b))2"
+    },
+    {
+      "label": "F",
+      "rawText": "R + (f (b))2 − (f (a))2"
+    },
+    {
+      "label": "G",
+      "rawText": "R + 2(f (b) − f (a))f (b)\n\n\n\n\n8&/(6                                                                        >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can approach this question algebraically or graphically.\nWe start with an algebraic approach. We first note that f(x) ⩾ 0 for all x > 0 as f(x) is\nincreasing. So the region described first, with area R, lies entirely above (or on) the x-axis, and\n                                                          Z b\n                                                R=              f(x) dx\n                                                           a\n\nWe note that g(x) = f(x) + 2f(b) ⩾ 0 for x > 0 as f(x) ⩾ 0 and f(b) ⩾ 0. Then the area required\nunder the graph g(x) is given by\n                                 Z b                Z b\n                                       g(x) dx =          f(x) + 2f(b) dx\n                                  a                  a\n                                                    Z b                     Z b\n                                                =         f(x) dx + 2f(b)          1 dx\n                                                     a                         a\n                                                = R + 2f(b)(b − a)\n\nOn the second line we have split the integral into a sum of two integrals, and taken out the\nconstant factor of 2f(b) from the second integral. Thus the answer is option B.\nWe could also work graphically. We can sketch the graphs of f(x) and g(x), making up a suitable\nincreasing shape for f(x):\n\n                             y\n                                                                    y = g(x) = f(x) + 2f(b)\n\n\n                     2f(b)\n\n                                                                    y = f(x)\n                      f(b)\n\n                                                    R\n                                                                      x\n                             0              a                   b\n\n\nIt is clear from this sketch that the area under the graph of y = g(x) is formed of a rectangle\nwhich is (b − a) by 2f(b) in size, and the area under the original graph, R, so that the required\narea is R + (b − a) × 2f(b).\n\n\n\n\nVersion 1.0, April 2019                                                                           Page 13\n\n                                                                                              © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

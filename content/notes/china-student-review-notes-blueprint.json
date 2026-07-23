@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-07-18",
+  "audience": {
+    "primaryLanguage": "Chinese",
+    "academicLanguage": "English",
+    "curricula": ["A-Level/IAL", "IB", "AP"],
+    "requiredProfileFields": ["exam", "selectedModules", "curriculum", "subjects", "completedUnits", "testDate", "practiceEvidence"]
+  },
+  "contentPolicy": {
+    "originalWritingRequired": true,
+    "officialFactsMayBeCited": true,
+    "officialQuestionsAndExplanationsMayBeRepublishedWithoutClearance": false,
+    "rawOfficialAssetsMayEnterPublicBundle": false,
+    "liveAiRequiredForBaseNotes": false,
+    "aiPosition": "after_structured_notes_for_authorised_personal_interpretation"
+  },
+  "access": {
+    "public": ["exam_map", "topic_coverage", "curriculum_gap_map", "study_checklist", "sample_chapter"],
+    "entitled": ["complete_notes", "original_worked_examples", "targeted_drill_sets", "downloadable_revision_pack", "personalised_interpretation"]
+  },
+  "qualityGates": [
+    "source_claim_mapping",
+    "rights_and_similarity_review",
+    "independent_subject_review",
+    "chinese_student_comprehension_review",
+    "bilingual_terminology_review",
+    "responsive_and_pdf_layout_review",
+    "versioned_publication_revision"
+  ],
+  "series": [
+    {
+      "exam": "TMUA",
+      "curriculumBridges": ["A-Level/IAL Mathematics", "A-Level/IAL Further Mathematics", "IB AA HL/SL", "IB AI HL", "AP Precalculus", "AP Calculus AB/BC", "AP Statistics"],
+      "sourceAssets": [
+        "content/official/raw/shared/TMUA_Content_Specification.pdf",
+        "content/official/raw/shared/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+        "content/official/raw/shared/Notes_on_Logic_and_Proof_June2025.pdf",
+        "content/official/raw/tmua/"
+      ],
+      "modules": [
+        { "id": "tmua-orientation", "titleZh": "考试结构与无计算器策略", "titleEn": "Exam structure and non-calculator strategy", "knowledgeUnits": ["Paper 1 vs Paper 2", "time allocation", "option elimination", "error log"] },
+        { "id": "tmua-algebra-functions", "titleZh": "代数、函数与图像", "titleEn": "Algebra, functions and graphs", "knowledgeUnits": ["algebraic manipulation", "equations and inequalities", "functions", "graph transformations"] },
+        { "id": "tmua-sequences-geometry", "titleZh": "数列、坐标与几何", "titleEn": "Sequences, coordinates and geometry", "knowledgeUnits": ["sequences and series", "coordinate geometry", "Euclidean geometry", "trigonometry"] },
+        { "id": "tmua-calculus", "titleZh": "微积分与建模", "titleEn": "Calculus and modelling", "knowledgeUnits": ["differentiation", "integration", "rates and optimisation", "interpretation of models"] },
+        { "id": "tmua-logic-proof", "titleZh": "逻辑、证明与反例", "titleEn": "Logic, proof and counterexamples", "knowledgeUnits": ["necessary and sufficient", "negation", "proof strategies", "counterexamples"] },
+        { "id": "tmua-reasoning", "titleZh": "数学推理与选项辨析", "titleEn": "Mathematical reasoning and option discrimination", "knowledgeUnits": ["structured cases", "invariants", "estimation", "reverse reasoning"] },
+        { "id": "tmua-past-paper-review", "titleZh": "历年真题复盘系统", "titleEn": "Past-paper review system", "knowledgeUnits": ["question taxonomy", "timing evidence", "error classification", "next-action rules"] }
+      ]
+    },
+    {
+      "exam": "ESAT",
+      "curriculumBridges": ["A-Level/IAL", "IB Diploma", "AP"],
+      "sourceAssets": [
+        "content/official/raw/shared/ESAT_Content_Specification.pdf",
+        "content/official/raw/esat/ESAT_Guide_Mathematics_1.pdf",
+        "content/official/raw/shared/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+        "content/official/raw/esat/ESAT_Guide_Physics.pdf",
+        "content/official/raw/esat/ESAT_GUIDE_Chemistry_June2025.pdf",
+        "content/official/raw/esat/ESAT_Guide_Biology_June_2025.pdf"
+      ],
+      "modules": [
+        { "id": "esat-mathematics-1", "titleZh": "数学 1", "titleEn": "Mathematics 1", "knowledgeUnits": ["number and algebra", "functions and graphs", "geometry", "probability and statistics"] },
+        { "id": "esat-mathematics-2", "titleZh": "数学 2", "titleEn": "Mathematics 2", "knowledgeUnits": ["advanced algebra", "trigonometry", "vectors and geometry", "calculus and modelling"] },
+        { "id": "esat-physics", "titleZh": "物理", "titleEn": "Physics", "knowledgeUnits": ["mechanics", "materials", "electricity", "waves", "thermal physics", "data and practical reasoning"] },
+        { "id": "esat-chemistry", "titleZh": "化学", "titleEn": "Chemistry", "knowledgeUnits": ["atomic structure", "bonding", "stoichiometry", "energetics", "equilibria", "organic chemistry", "practical reasoning"] },
+        { "id": "esat-biology", "titleZh": "生物", "titleEn": "Biology", "knowledgeUnits": ["cells", "biochemistry", "genetics", "physiology", "ecology and evolution", "data and experimental reasoning"] },
+        { "id": "esat-module-strategy", "titleZh": "模块组合与限时策略", "titleEn": "Module selection and timed strategy", "knowledgeUnits": ["programme-to-module rules", "40-minute pacing", "non-calculator methods", "cross-curriculum gaps"] }
+      ]
+    },
+    {
+      "exam": "TARA",
+      "curriculumBridges": ["all curricula", "English-as-an-additional-language"],
+      "sourceAssets": [
+        "content/official/raw/shared/TARA_Content_Specification.pdf",
+        "content/official/raw/shared/TARA_Question_Guide.pdf",
+        "content/official/raw/tara/"
+      ],
+      "modules": [
+        { "id": "tara-critical-thinking", "titleZh": "批判性思维", "titleEn": "Critical Thinking", "knowledgeUnits": ["arguments", "assumptions", "inference", "flaws", "evidence"] },
+        { "id": "tara-problem-solving", "titleZh": "问题解决", "titleEn": "Problem Solving", "knowledgeUnits": ["relevant information", "procedures", "spatial reasoning", "data interpretation"] },
+        { "id": "tara-writing", "titleZh": "限时论证写作", "titleEn": "Timed argumentative writing", "knowledgeUnits": ["position", "structure", "counterargument", "clarity", "750-word control"] },
+        { "id": "tara-language-bridge", "titleZh": "中英论证术语桥接", "titleEn": "Chinese-English argument-language bridge", "knowledgeUnits": ["logical connectives", "qualifiers", "common mistranslations", "concise academic English"] }
+      ]
+    },
+    {
+      "exam": "LNAT",
+      "curriculumBridges": ["all curricula", "English-as-an-additional-language"],
+      "sourceAssets": [
+        "content/official/raw/lnat/Your-Guide-To-Preparing-For-The-LNAT.pdf",
+        "content/official/raw/lnat/Practice-Test-2010-paper-1.pdf",
+        "content/official/raw/lnat/Practice-Test-2010-paper-2.pdf",
+        "content/official/raw/lnat/Practice-Tests-2010-Commentary.pdf"
+      ],
+      "modules": [
+        { "id": "lnat-section-a", "titleZh": "文章阅读与论证辨析", "titleEn": "Passage reading and argument discrimination", "knowledgeUnits": ["argument map", "tone and purpose", "inference", "scope", "distractor analysis"] },
+        { "id": "lnat-section-b", "titleZh": "论证写作", "titleEn": "Argumentative essay", "knowledgeUnits": ["thesis", "assumptions", "counterargument", "paragraph logic", "500-600 word target"] },
+        { "id": "lnat-eal-bridge", "titleZh": "英语长难句与精确阅读", "titleEn": "Complex English and precise reading", "knowledgeUnits": ["sentence structure", "qualifiers", "reference words", "not importing outside knowledge"] },
+        { "id": "lnat-timing", "titleZh": "95+40 分钟节奏系统", "titleEn": "95+40 minute pacing system", "knowledgeUnits": ["passage allocation", "flag and review", "essay planning", "word-count control"] }
+      ]
+    },
+    {
+      "exam": "UCAT",
+      "curriculumBridges": ["all curricula", "English-as-an-additional-language", "UK healthcare context"],
+      "sourceAssets": [
+        "content/official/raw/ucat/prep-plan-5.pdf",
+        "content/official/raw/pages/ucat-format.html",
+        "content/official/raw/pages/ucat-tutorials.html",
+        "content/official/raw/pages/ucat-practice.html"
+      ],
+      "modules": [
+        { "id": "ucat-verbal-reasoning", "titleZh": "文字推理", "titleEn": "Verbal Reasoning", "knowledgeUnits": ["rapid passage triage", "true-false-can't tell", "inference", "keyword verification"] },
+        { "id": "ucat-decision-making", "titleZh": "决策判断", "titleEn": "Decision Making", "knowledgeUnits": ["syllogisms", "logic puzzles", "Venn diagrams", "probability", "interpreting information"] },
+        { "id": "ucat-quantitative-reasoning", "titleZh": "数量推理", "titleEn": "Quantitative Reasoning", "knowledgeUnits": ["mental arithmetic", "units and ratios", "tables and charts", "onscreen calculator strategy"] },
+        { "id": "ucat-situational-judgement", "titleZh": "情境判断", "titleEn": "Situational Judgement", "knowledgeUnits": ["patient safety", "professionalism", "teamwork", "confidentiality", "UK clinical context"] },
+        { "id": "ucat-tools-timing", "titleZh": "工具、快捷键与极限节奏", "titleEn": "Tools, shortcuts and high-speed pacing", "knowledgeUnits": ["calculator", "navigator", "flag and review", "decision thresholds"] }
+      ]
+    }
+  ],
+  "deliveryOrder": [
+    { "sequence": 1, "milestone": "TMUA Notes v1", "reason": "360 native questions and official worked-answer coverage already exist" },
+    { "sequence": 2, "milestone": "ESAT Mathematics 1 and Mathematics 2 bridges", "reason": "highest reuse with existing TMUA mathematics corpus and clear A-Level/IB/AP gaps" },
+    { "sequence": 3, "milestone": "ESAT Physics, Chemistry and Biology", "reason": "official module guides and historic ENGAA/NSAA evidence are locally available" },
+    { "sequence": 4, "milestone": "LNAT and TARA reasoning/writing packs", "reason": "requires EAL-specific pedagogy and writing rubrics rather than subject-course mapping" },
+    { "sequence": 5, "milestone": "UCAT four-subtest pack", "reason": "official questions are interactive and require an original item/evidence workflow plus specialist scoring" }
+  ]
+}

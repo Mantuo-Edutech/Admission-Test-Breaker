@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q12",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 12,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "12   Place the following integrals in order of size, starting with the smallest.\n\n                                                 1\n\n                                                 ³\n                                                         x\n                                            Pൌ 2             dx\n                                                 0\n\n\n                                                 1\n\n                                                 ³\n                                                     x\n                                            Q ൌ 2 dx\n                                                 0\n\n\n                                                 1\n\n                                                 ³ ( 2 ) dx\n                                                              x\n                                            Rൌ\n                                                 0\n\n\n     A   P<Q<R\n\n     B   P<R<Q\n\n     C   Q<P<R\n\n     D   Q<R<P\n\n     E   R<P<Q\n\n     F   R<Q<P\n\n\n\n\n                                                     14"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Place the following integrals in order of size, starting with the smallest.\n\n                                                 1\n\n                                                 ³\n                                                         x\n                                            Pൌ 2             dx\n                                                 0\n\n\n                                                 1\n\n                                                 ³\n                                                     x\n                                            Q ൌ 2 dx\n                                                 0\n\n\n                                                 1\n\n                                                 ³ ( 2 ) dx\n                                                              x\n                                            Rൌ\n                                                 0"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "P<Q<R"
+    },
+    {
+      "label": "B",
+      "rawText": "P<R<Q"
+    },
+    {
+      "label": "C",
+      "rawText": "Q<P<R"
+    },
+    {
+      "label": "D",
+      "rawText": "Q<R<P"
+    },
+    {
+      "label": "E",
+      "rawText": "R<P<Q"
+    },
+    {
+      "label": "F",
+      "rawText": "R<Q<P"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We do not know how to integrate any of these, so we will instead compare the integrands as the\nintegrals are all from 0 to 1.\n           √ \u0001x\nWe have      2 = 2x/2 , which makes R look a little simpler. Since x/2 < x for 0 < x < 1,\n2x/2 < 2x in this interval, and so R < Q.\n                                       √                        √\nNow in this interval, we also have x < x (as x2 < x), so 2x < 2 x , hence Q < P .\nCombining these, we find that R < Q < P , so the correct option is F.\n\n\n\n\nVersion 1.0, July 2023                                                                Page 14"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

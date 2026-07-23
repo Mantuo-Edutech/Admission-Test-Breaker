@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q12",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 12,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "12     The diagram shows the graphs of y = sin 2x and y = cos 2x for − π2 < x < π2\n\n\n\n\n        Which one of the following is not true?\n\n        A cos 2x < sin 2x < tan x for some real number x with − π2 < x < π2\n\n        B cos 2x < tan x < sin 2x for some real number x with − π2 < x < π2\n\n        C sin 2x < cos 2x < tan x for some real number x with − π2 < x < π2\n\n        D sin 2x < tan x < cos 2x for some real number x with − π2 < x < π2\n\n        E      tan x < sin 2x < cos 2x for some real number x with − π2 < x < π2\n\n        F      tan x < cos 2x < sin 2x for some real number x with − π2 < x < π2\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u0014\u0017"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The diagram shows the graphs of y = sin 2x and y = cos 2x for − π2 < x < π2\n\n\n\n\n        Which one of the following is not true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "cos 2x < sin 2x < tan x for some real number x with − π2 < x < π2"
+    },
+    {
+      "label": "B",
+      "rawText": "cos 2x < tan x < sin 2x for some real number x with − π2 < x < π2"
+    },
+    {
+      "label": "C",
+      "rawText": "sin 2x < cos 2x < tan x for some real number x with − π2 < x < π2"
+    },
+    {
+      "label": "D",
+      "rawText": "sin 2x < tan x < cos 2x for some real number x with − π2 < x < π2"
+    },
+    {
+      "label": "E",
+      "rawText": "tan x < sin 2x < cos 2x for some real number x with − π2 < x < π2"
+    },
+    {
+      "label": "F",
+      "rawText": "tan x < cos 2x < sin 2x for some real number x with − π2 < x < π2\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We clearly need to sketch the graph of y = tan x onto the given sketch.\nThis graph has asymptotes at x = ± π2 , and passes through the points ( π4 , 1) and (− π4 , −1).\nSince the function is increasing as it passes through these points, it must lie below the graph of\ny = sin 2x between 0 and π4 , and above it between − π4 and 0.\nThis results in the following graph:\n\n                                                    y\n\n\n                                              1.5\n\n\n\n                                                1\n\n\n\n                                              0.5\n\n\n\n                                                                                           x\n               π                 π                  0            π                 π\n           −                 −\n               2                 4                               4                 2\n\n                                             −0.5\n\n\n\n                                              −1\n\n\n\n                                             −1.5\n\n\n\nWe now pick various values for x and see which order the functions lie in. For example, when\nx is close to − π2 , we have tan x < cos 2x < sin 2x. Here are some cases as we move from x = − π2\nto x = π2 , each together with the option it eliminates:\n\n                     x value                  Function order            Option\n                     x close to − π2          tan x < cos 2x < sin 2x     F\n                     x just less than − π4    tan x < sin 2x < cos 2x     E\n                     x just more than − π4    sin 2x < tan x < cos 2x     D\n                     x just more than 0       tan x < sin 2x < cos 2x     E\n                     x just more than π8      tan x < cos 2x < sin 2x     F\n                     x just less than π4      cos 2x < tan x < sin 2x     B\n                     x just more than π4      cos 2x < sin 2x < tan x     A\n\nThe only option which is not eliminated is C: sin 2x < cos 2x < tan x for some real number x\nwith − π2 < x < π2\nIt is also clear from the graph that this is impossible: the only time that tan x is greater than\nboth sin 2x and cos 2x is when π4 < x < π2 , and in the whole of that range, cos 2x < sin 2x\n\n\nVersion 1.0, April 2019                                                                    Page 14\n\n                                                                                       © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

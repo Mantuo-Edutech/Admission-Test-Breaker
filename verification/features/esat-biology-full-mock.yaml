@@ -1,0 +1,73 @@
+schemaVersion: 1
+feature:
+  id: esat-biology-full-mock
+  title: Mantou-original full-length ESAT Biology mock
+  status: partial
+  userOutcome: >-
+    A student whose ESAT plan includes Biology can complete a free native
+    27-question, 40-minute original mock, save and change answers, submit it and
+    review factual raw results without leaving the Mantou website.
+
+run:
+  packageScript: verify:esat-full-mock
+
+claims:
+  - id: official-structure-original-content
+    status: verified
+    statement: >-
+      The mock matches the versioned 27-question, 40-minute, no-calculator Biology
+      structure and covers all eleven B1-B11 top-level areas. All questions are Mantou-original,
+      use native text and KaTeX blocks and cite SHA-pinned official documents only for scope.
+    artifacts:
+      - content/exams/assessment-structures.json
+      - content/esat/original-practice/biology-full-mock-v1.json
+      - src/features/practice/content/esat-biology-full-mock.ts
+      - tests/features/practice/content/esat-biology-full-mock.test.ts
+    automatedChecks:
+      - verify:esat-full-mock
+      - verify:esat-assets
+      - typecheck
+
+  - id: free-native-full-mock-journey
+    status: verified
+    statement: >-
+      The full mock is registered in the shared practice kernel and appears only when the
+      student's ESAT programme/module plan includes Biology. It reuses active timing,
+      answer changes, private persistence, submission, raw results, knowledge tags and feedback.
+    artifacts:
+      - src/features/practice/content/practice-paper-registry.ts
+      - src/features/catalog/pages/EsatPastPapersPage.tsx
+      - tests/app/multi-exam-practice-library.test.tsx
+      - tests/app/practice-page.test.tsx
+      - tests/app/results-page.test.tsx
+      - tests/e2e/esat-biology-full-mock.spec.ts
+    automatedChecks:
+      - verify:esat-full-mock
+      - verify:learning-record
+      - verify:e2e
+      - build
+
+boundaries:
+  - This is a Mantou-original teaching-preview mock, not an official ESAT paper or a claim of official-equivalent difficulty.
+  - The result is the factual number correct out of 27; it does not produce a 1-9 scale score, percentile, readiness conclusion or admissions prediction.
+  - Independent Biology, bilingual terminology, difficulty calibration and real-device review remain required before final publication status.
+  - All five ESAT modules now have separate starters and full-length original mocks; none is final-publication ready until its own manual reviews are recorded.
+
+manualChecks:
+  - id: independent-biology-and-language-review
+    status: pending
+    evidence: A separate Biology teacher and bilingual reviewer must verify all 27 prompts, distractors, answer keys, terminology and difficulty progression.
+    viewports:
+      - content
+  - id: student-timing-calibration
+    status: pending
+    evidence: Run the complete mock with representative A-Level, IB and AP students; retain anonymised completion-time and comprehension evidence without presenting an official score conversion.
+    viewports:
+      - student-session
+  - id: real-device-review
+    status: pending
+    evidence: Verify question navigation and scientific notation rendering on desktop, tablet and phone, while explaining that the official Pearson experience is desktop-based.
+    viewports:
+      - desktop
+      - tablet
+      - phone

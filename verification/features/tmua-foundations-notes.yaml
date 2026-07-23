@@ -1,0 +1,84 @@
+schemaVersion: 1
+feature:
+  id: tmua-foundations-notes
+  title: Original bilingual TMUA Foundations Notes
+  status: partial
+  userOutcome: >-
+    A student who has completed the profile-first step can read a precise bilingual
+    TMUA foundations pack online, compare A-Level, IB and AP gaps, study original
+    worked examples, complete active recall and download the same revision as an A4 PDF.
+
+run:
+  packageScript: verify:tmua-notes
+
+claims:
+  - id: one-versioned-source-for-web-and-pdf
+    status: verified
+    statement: >-
+      The runtime-validated JSON revision contains official source anchors, exam facts,
+      Mantou strategy, five curriculum bridges, seven chapters, nine clearly labelled
+      original worked examples and twelve checkpoint questions; both the Web page and PDF
+      generator read that same asset.
+    artifacts:
+      - content/notes/tmua/foundations-v2.json
+      - src/features/notes/content/tmua-foundations.ts
+      - scripts/build-tmua-foundations-pdf.py
+      - tests/features/notes/tmua-foundations.test.ts
+    automatedChecks:
+      - verify:tmua-notes
+      - typecheck
+
+  - id: profile-first-bilingual-web-delivery
+    status: verified
+    statement: >-
+      The resources page links to a profile-protected, responsive bilingual Notes route
+      with exact curriculum gaps, KaTeX formula rendering, worked examples, hidden-reveal
+      active recall and a stable PDF download.
+    artifacts:
+      - src/features/library/pages/LearningLibraryPage.tsx
+      - src/features/notes/pages/TmuaFoundationsNotesPage.tsx
+      - src/app/routes.tsx
+      - src/styles/practice.css
+      - tests/app/tmua-foundations-notes-page.test.tsx
+    automatedChecks:
+      - verify:tmua-notes
+      - build
+
+  - id: generated-a4-download
+    status: verified
+    statement: >-
+      A 25-page A4 PDF is generated from the canonical JSON, copied to the public download
+      path, has valid PDF metadata and was rendered page-by-page to PNG without clipped
+      tables or unsupported formula glyph boxes.
+    artifacts:
+      - public/notes/tmua/tmua-foundations-v2.pdf
+      - scripts/build-tmua-foundations-pdf.sh
+    automatedChecks:
+      - verify:tmua-notes
+
+boundaries:
+  - This is a teaching preview, not a teacher-finalised complete TMUA Notes series.
+  - The seven core chapters are present, but this remains a teaching preview until independent academic, terminology, rights/similarity and device review passes.
+  - Official source anchors support exam facts and scope only; no official question or explanation is republished in this revision.
+
+manualChecks:
+  - id: a4-page-render
+    status: passed
+    reviewer: codex-agent
+    reviewerRole: document-qa
+    checkedAt: 2026-07-18
+    evidence: All 25 pages were rendered at 110 dpi and inspected as a contact sheet; representative chapter, checkpoint, sources and closing pages were then inspected at original or 150 dpi after the final footer correction.
+    viewports:
+      - printable-a4
+  - id: independent-subject-and-similarity-review
+    status: pending
+    evidence: A separate mathematics teacher and rights/similarity reviewer must approve the complete revision before final publication status.
+    viewports:
+      - content
+  - id: browser-device-review
+    status: pending
+    evidence: Automated DOM, accessibility-name, type and production-build checks pass; the in-app browser runtime could not be attached in this run, so desktop, tablet and phone visual review remains explicit.
+    viewports:
+      - desktop
+      - tablet
+      - phone

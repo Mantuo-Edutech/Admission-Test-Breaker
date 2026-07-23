@@ -1,0 +1,109 @@
+schemaVersion: 1
+feature:
+  id: private-learning-record
+  title: Private cross-exam learning record
+  status: partial
+  userOutcome: >-
+    Students can reopen their own saved practice history and inspect frequency,
+    active time, answer changes, raw results, module evidence and bilingual
+    knowledge evidence without receiving a fabricated benchmark or AI verdict.
+run:
+  packageScript: verify:learning-record
+claims:
+  - id: durable-history-and-result-reopening
+    status: verified
+    statement: >-
+      Every saved session is copied into a validated, versioned history archive.
+      Anonymous students retain at most 30 complete snapshots on the current
+      device; authenticated students read RLS-protected snapshots from their own
+      Learner Space and can reopen a historical result after the current session
+      pointer is cleared.
+    artifacts:
+      - src/features/practice/history/local-history-store.ts
+      - src/features/learner-data/auth-aware-practice-history.ts
+      - src/features/learner-data/supabase-repository.ts
+      - src/features/practice/pages/ResultsPage.tsx
+      - tests/features/practice/history/local-history-store.test.ts
+      - tests/features/learner-data/auth-aware-practice-history.test.ts
+      - tests/app/learning-record-page.test.tsx
+    automatedChecks:
+      - verify:learning-record
+      - verify:supabase
+      - typecheck
+  - id: evidence-only-projection
+    status: verified
+    statement: >-
+      The record derives only saved facts: session frequency, active question
+      time, answer changes, raw objective results, essay word count, module
+      summaries and observed topic outcomes. It deliberately omits official
+      score conversion, percentile, ability, admissions probability and total
+      training-time claims.
+    artifacts:
+      - src/features/practice/history/history-read-model.ts
+      - src/features/practice/pages/LearningRecordPage.tsx
+      - tests/features/practice/history/history-read-model.test.ts
+      - tests/app/learning-record-page.test.tsx
+    automatedChecks:
+      - verify:learning-record
+      - typecheck
+  - id: bilingual-published-tag-taxonomy
+    status: verified
+    statement: >-
+      All 138 knowledge tags currently published across TMUA, ESAT, TARA, LNAT
+      and UCAT have versioned Mantou-owned Chinese and English display labels.
+      The release test compares the taxonomy with every published content asset
+      so a new untranslated machine tag cannot silently reach the interface.
+    artifacts:
+      - content/exams/knowledge-tag-taxonomy.json
+      - src/features/practice/content/knowledge-tag-taxonomy.ts
+      - tests/features/practice/content/knowledge-tag-taxonomy.test.ts
+    automatedChecks:
+      - verify:learning-record
+      - typecheck
+  - id: responsive-record-journey
+    status: verified
+    statement: >-
+      Chromium completes UCAT practice and opens the saved learning record at
+      desktop, iPad and phone dimensions, confirming bilingual topic display,
+      historical-result access and the absence of document-level horizontal
+      overflow.
+    artifacts:
+      - tests/e2e/practice-critical-journey.spec.ts
+      - playwright.config.ts
+      - src/styles/practice.css
+    automatedChecks:
+      - verify:e2e
+      - verify:features
+  - id: honest-save-failure-and-retry
+    status: verified
+    statement: >-
+      A failed practice save never silently presents the session as durable.
+      The current answers remain visible, the page gives a direct retry action,
+      reconnecting triggers another save, and a student cannot enter the result
+      page until an explicit submission snapshot has been persisted. Concurrent
+      save responses are sequenced so an older response cannot overwrite the
+      status of the latest attempt.
+    artifacts:
+      - src/features/practice/pages/PracticePage.tsx
+      - src/features/practice/components/SubmissionDialog.tsx
+      - src/features/learner-data/auth-aware-practice-store.ts
+      - tests/app/practice-page.test.tsx
+      - tests/features/learner-data/auth-aware-stores.test.ts
+    automatedChecks:
+      - verify:essay-practice
+      - typecheck
+boundaries:
+  - The learning record is a private learner-data product, not a public Content Commons catalog item.
+  - Anonymous history is limited to the current browser and does not promise cross-device recovery.
+  - An in-memory retry protects the current open page only; it is not a durable fallback and the interface says that refreshing or closing may lose unsynced work.
+  - Account history has passed local RLS tests but is not production-ready until the migrations and identity flows are verified in Mantou staging and production.
+  - Raw correctness evidence is not an official score, percentile, ability diagnosis, admissions prediction or total preparation-time benchmark.
+  - A teacher or parent receives access only from an explicit, active, exam-scoped student Grant; Bingbing, Mantou operators, content entitlements and future Agents receive no implicit access.
+manualChecks:
+  - id: real-device-learning-record-uat
+    status: pending
+    evidence: Repeat practice, account sync, record review and historical-result reopening on real iPhone Safari, iPad Safari, Android and desktop browsers, including keyboard and screen-reader use.
+    viewports:
+      - desktop
+      - tablet
+      - phone

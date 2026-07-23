@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "9   Consider the following statement:\n\n                            (∗) For all real numbers x, if x < k then x 2 < k\n\n    What is the complete set of values of k for which (∗) is true?\n\n    A   no real numbers\n\n    B   k>0\n\n    C   k<1\n\n    D   k1\n\n    E   0<k<1\n\n    F   0<k1\n\n    G all real numbers\n\n\n\n\n                                                 11"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following statement:\n\n                            (∗) For all real numbers x, if x < k then x 2 < k\n\n    What is the complete set of values of k for which (∗) is true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "no real numbers"
+    },
+    {
+      "label": "B",
+      "rawText": "k>0"
+    },
+    {
+      "label": "C",
+      "rawText": "k<1"
+    },
+    {
+      "label": "D",
+      "rawText": "k1"
+    },
+    {
+      "label": "E",
+      "rawText": "0<k<1"
+    },
+    {
+      "label": "F",
+      "rawText": "0<k1"
+    },
+    {
+      "label": "G",
+      "rawText": "all real numbers"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The statement (∗) does not restrict us to positive real numbers x, so whatever the value of k,\nwe can always find a large negative number x with x < k and x2 ≥ k.\nWe can even be explicit about this (though that is not required to answer this question):\n                                                                                      √ if\nk ≤ 0, we can take x = k − 1 in which case x2 > 0 ≥ k, and if k > 0, we can take x = − k so\nx < 0 < k and x2 = k ≥ k.\nTherefore (∗) is true for no real values of k, and the correct option is A.\n\n\n\n\nVersion 1.0, July 2023                                                                Page 11"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

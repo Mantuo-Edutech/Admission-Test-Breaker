@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q14",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 14,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "ͳͶ\u0003     \u0017\u0003\u0003\u0003\u0003\u0003\u0003\u0016\u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003\u0003\n        \u0003\u0003 \u0003ǡ\u0003\u0017\u0003\u0003\u0018Ǥ\u0003\u0003\u0003\n        \u0003\n        \u0017\u0003\u0003\u0003\u0003\u0017\u0003\u0003\u0003\u0003\u0003\u0003\u0018\u0003\u0003 \u0003ͶǤ\u0003\u0003\n        \u0003\n                                                                                ହ\n          \u0003ǡ\u0003\u0003\u0003\u0003\u0003\u0003\u0003 \u0003\u0003\u0016\u0003\u0003ͺǡ\u0003͵ǡ\u0003\u0003 \u0003 \u0003 \u0003\u0003\u0003\n                                                                                ସ\n        \u0003\n        \u001a\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0016ǫ\u0003\n        \u0003\n\u0003       \u0003\n\u0003            ͵ʹ\n        \u0004\u0003      \u0003\n              ͷ\n\u0003       \u0003    ʹͲ\n        \u0005\u0003      \u0003\n              ͵\n      \u0003 \u0003    ͸Ͷ\n        \u0006\u0003      \u0003\n              ͷ\n\u0003       \u0003    ͶͲ\n        \u0007\u0003      \u0003\n              ͵\n\u0003       \u0003\n        \b\u0003 ͳ͸\u0003\n\u0003       \u0003\n          \u0003 ͵ʹ\u0003\n        \u0003\n\n\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": " \n         ǡǤ\n        \n         4Ǥ\n        \n                                                                                ହ\n          ǡ 8ǡ3ǡ   \n                                                                                ସ\n        \n        ǫ\n        \n       \n            32"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "5\n           20"
+    },
+    {
+      "label": "B",
+      "rawText": "3\n           64"
+    },
+    {
+      "label": "C",
+      "rawText": "5\n           40"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "16\n       \n           32\n        \n\n\n\n\n© UCLES 2016"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let us write out the first few terms of the three sequences explicitly. Let the common ratio of T\nbe R and the common ratio of U be r.\n\n         term    1       2          3             4             5      …          n         …\n           T     4      4R        4R2           4R3           4R4      …       4Rn−1        …\n           U     4      4r         4r2           4r3           4r4     …       4rn−1        …\n           S     8    4R + 4r   4R + 4r2\n                                  2           4R + 4r3\n                                                3           4R + 4r4\n                                                              4        …   4R n−1 + 4rn−1   …\n\nWe are given the first three terms of S, so\n\n                                                      8=8\n                                              4R + 4r = 3\n                                         4R2 + 4r2 = 45\n\nTherefore R + r = 34 and R2 + r2 = 16\n                                   5\n                                      . We can work out the values of R and r by guessing, or\nwe can work them out by solving these equations. We show the second approach here.\nThe first equation gives R = 34 − r, which we can substitute into the second equation to give\n\n                                       ( 34 − r)2 + r2 = 16\n                                                         5\n\n\nso 2r2 − 32 r + 14 = 0, hence 8r2 − 6r + 1 = 0, which factorises as (4r − 1)(2r − 1) = 0, giving\nr = 21 or r = 14 and R = 14 or R = 12 respectively.\nWe can therefore work out the sums to infinity of T and U, taking R = 14 and r = 12 :\n\n                                                         4\n                                sum to infinity of T =        = 16\n                                                                3\n                                                       1 − 41\n                                                         4\n                                sum to infinity of U =        =8\n                                                       1 − 21\n\ngiving the sum to infinity of S as 16\n                                   3 + 8 = 3 , since S is the sum of T and U. If we took the\n                                           40\n\nvalues of R and r to be the other way round, we would have the series T and U swapped, but\ntheir sum would be unchanged.\nSo the answer is D.\n\n\n\n\n                                                 17\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        17
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

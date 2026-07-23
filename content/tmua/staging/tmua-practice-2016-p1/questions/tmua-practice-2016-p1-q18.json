@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "ͳͺ\u0003     \u0017\u0003 \u0003\u0003 య \u0003\u0003\u0003\u0003\u0003\u0003‫Ͳ ് ݔ‬Ǥ\u0003\u0003\n                       ξ௫ మ\n        \u0003\n        \u0017\u0003 \u0003\u0003\u0003\u0003\u0003‫\u0003\u0003 \u0003\u0003 \u0003\u0003 \u0003\u0003ݔ‬\n        \u0003\n\n      \u0003 \u0004\u0003 ‫ ݔ‬൑ െʹǡ\u0003\u0003\u0003‫ ݔ‬൐ Ͳ\u0003\n\n\u0003       \u0003\n        \u0005\u0003 െʹ ൑ ‫ ݔ‬൏ Ͳ\u0003\n\u0003       \u0003\n        \u0006\u0003 ‫ ݔ‬൑ ͳǡ\u0003\u0003\u0003‫\u0003Ͳ ് ݔ‬\n\u0003       \u0003\n        \u0007\u0003 ‫ ݔ‬൒ ͳ\u0003\u0003\n\u0003       \u0003\n        \b\u0003 െʹ ൑ ‫ ݔ‬൑ ͳǡ\u0003\u0003\u0003‫\u0003Ͳ ് ݔ‬\n\u0003       \u0003\n          \u0003 ‫ ݔ‬൑ െʹǡ\u0003\u0003\u0003‫ ݔ‬൒ ͳ\u0003\n        \u0003\n\n\n\n\n© UCLES 2016"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "  య ‫0 ് ݔ‬Ǥ\n                       ξ௫ మ\n        \n         ‫   ݔ‬"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "‫ ݔ‬൑ െ2ǡ‫ ݔ‬൐ 0"
+    },
+    {
+      "label": "B",
+      "rawText": "െ2 ൑ ‫ ݔ‬൏ 0"
+    },
+    {
+      "label": "C",
+      "rawText": "‫ ݔ‬൑ 1ǡ‫0 ് ݔ‬"
+    },
+    {
+      "label": "D",
+      "rawText": "‫ ݔ‬൒ 1"
+    },
+    {
+      "label": "E",
+      "rawText": "െ2 ൑ ‫ ݔ‬൑ 1ǡ‫0 ് ݔ‬\n       \n           ‫ ݔ‬൑ െ2ǡ‫ ݔ‬൒ 1\n        \n\n\n\n\n© UCLES 2016"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "This requires us to first differentiate the function. We therefore write\n                                        1−x         2     1\n                                     y= √3\n                                               = x− 3 − x 3\n                                           x 2\n\nwhich we can differentiate to get\n                                      dy           5         2\n                                         = − 32 x− 3 − 13 x− 3\n                                      dx\nThis is zero when\n                                             5        2\n                                      − 32 x− 3 − 31 x− 3 = 0,\n\nso multiplying by 3x 3 to clear fractions in both the coefficients and in the powers gives\n                     5\n\n\n\n\n                                           −2 − x = 0\n\nso x = −2. (We could also have obtained this by writing − 23 x− 3 = 13 x− 3 and dividing one side\n                                                                   5         2\n\n\nby the other.)\nWe next need to determine the sign of dx    dy\n                                               in each region. We note that the function is not\ndefined at x = 0, so we have to deal with x < 0 and x > 0 separately. It is also not clear how\nto find the sign of dx\n                    dy\n                       directly from its given form, so we first factorise it, giving\n\n                                      dy           5\n                                         = − 31 x− 3 (2 + x).\n                                      dx\n(Incidentally, this gives yet another way to see that the derivative is zero at x = −2.) We can\nnow work out the signs of the two factors, and hence of the derivative, in the various ranges:\n\n                                 x < −2    x = −2     −2 < x < 0       x>0\n                          − 35\n                         x         −         −            −             +\n                         2+x       −          0           +             +\n                          dy\n                          dx       +          0           −             +\n\nIt is therefore increasing in the region x < −2 and x > 0. (It it not increasing at x = −2, but\nrather it is stationary at that point.) The correct answer is therefore A (though the question\nmistakenly says x ⩽ −2).\n\n\n\n\n                                                 21\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        21
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

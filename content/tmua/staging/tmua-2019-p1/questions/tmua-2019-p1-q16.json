@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p1-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p1",
+  "edition": "2019",
+  "paper": 1,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16   Given that             \u0003 1                    \u0003 2\n                        2         f(x) dx + 5            f(x) dx = 14\n                             0                      1\n     and                           \u0003 1\n                                         f(x + 1) dx = 6\n                                    0\n     ﬁnd the value of\n\n                                         \u0003 2\n                                               f(x) dx\n                                          0\n\n\n     A −8\n\n     B −4\n\n     C −2\n\n     D 2\n\n     E 4\n           29\n     F     5\n\n           32\n     G     5\n\n     H 14\n\n\n\n\n                                              18"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Given that              1                     2\n                        2         f(x) dx + 5            f(x) dx = 14\n                             0                      1\n     and                            1\n                                         f(x + 1) dx = 6\n                                    0\n     ﬁnd the value of\n\n                                          2\n                                               f(x) dx\n                                          0"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−8"
+    },
+    {
+      "label": "B",
+      "rawText": "−4"
+    },
+    {
+      "label": "C",
+      "rawText": "−2"
+    },
+    {
+      "label": "D",
+      "rawText": "2"
+    },
+    {
+      "label": "E",
+      "rawText": "4\n           29"
+    },
+    {
+      "label": "F",
+      "rawText": "5\n\n           32"
+    },
+    {
+      "label": "G",
+      "rawText": "5"
+    },
+    {
+      "label": "H",
+      "rawText": "14"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "R1\nLet A = 0 f(x) dx, which is the (signed) area under the graph of y = f(x) between x = 0 and\nx = 1 (taking signs into account, as Rusual: parts of the graph under the x-axis are counted as\n                                       2\nnegative areas). Likewise, let B = 1 f(x) dx, which is the (signed) area between x = 1 and\nx = 2.\n             R1\nThe integral 0 f(x + 1) dx gives the (signed) area under the graph of y = f(x + 1) between x = 0\nand x = 1. This graph is the graph of y = f(x) translated left by 1 unit, so this equals the area\nunder the original graph between x = 1 and x = 2, which is B. Hence B = 6.\nThe first equation gives 2A + 5B = 14, and as B = 6, we get A = −8.\n                   R2\nThe final integral 0 f(x) dx is the (signed) area between x = 0 and x = 2, which is A + B =\n−8 + 6 = −2.\nHence the answer is C.\n\n\n\n\nc UCLES                                                                                  Page 18"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2019.pdf",
+      "sha256": "7806846df89e8317fc4382df170a11e6f776664ba00632b01cacf61a172b7e05",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2019.pdf",
+      "sha256": "5562f7c76c15c9c57c9898fdbe4b6d54b038d640f8ed8e14af994b42eb16e6ba",
+      "pages": [
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

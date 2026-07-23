@@ -1,0 +1,111 @@
+schemaVersion: 1
+feature:
+  id: esat-course-module-planner
+  title: ESAT 2027 course-to-module planner and honest source inventory
+  status: partial
+  userOutcome: >-
+    A student can select up to five Cambridge, Imperial, Oxford or UCL courses,
+    see the ESAT modules that satisfy the combination, continue to a separate
+    A-Level/IAL, IB or AP course profile, review a deterministic module-level
+    knowledge-unit coverage result, and enter real preparation, paper and resource routes.
+
+run:
+  packageScript: verify
+
+claims:
+  - id: complete-2027-course-registry
+    status: verified
+    statement: >-
+      The local 2027 registry contains 56 UCAS course requirements across four
+      institutions and every rule includes compulsory Mathematics 1.
+    artifacts:
+      - content/admissions/esat-2027.json
+      - src/features/catalog/esat-admissions.ts
+      - tests/features/catalog/esat-admissions.test.ts
+    automatedChecks:
+      - test
+      - typecheck
+
+  - id: deterministic-multi-choice-resolution
+    status: verified
+    statement: >-
+      The resolver calculates fixed and optional module combinations without a
+      live AI call, combines compatible UCAS choices, and surfaces impossible
+      three-module combinations before registration.
+    artifacts:
+      - src/features/catalog/pages/EsatGuidePage.tsx
+      - tests/app/esat-guide-page.test.tsx
+      - tests/features/catalog/esat-admissions.test.ts
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+
+  - id: staged-course-coverage-journey
+    status: verified
+    statement: >-
+      Programme and module selection is saved on the current device before the
+      student enters a separate course page. A fixed mapping then distinguishes
+      covered, needs-verification and needs-learning evidence for each official
+      top-level knowledge unit in only the modules that student needs, without
+      a live AI call.
+    artifacts:
+      - content/esat/knowledge-units.json
+      - src/features/catalog/esat-plan.ts
+      - src/features/catalog/pages/EsatProfilePage.tsx
+      - src/features/catalog/pages/EsatCoveragePage.tsx
+      - src/features/catalog/pages/EsatDashboardPage.tsx
+      - tests/features/catalog/esat-plan.test.ts
+      - tests/app/esat-guide-page.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+
+  - id: real-esat-navigation-routes
+    status: verified
+    statement: >-
+      ESAT navigation uses four independent routes for course positioning,
+      personal preparation, past papers, and mocks or notes; it no longer uses
+      same-page anchors for content that does not exist as a page.
+    artifacts:
+      - src/app/routes.tsx
+      - src/features/navigation/components/SiteHeader.tsx
+      - src/features/catalog/pages/EsatPastPapersPage.tsx
+      - src/features/library/pages/LearningLibraryPage.tsx
+      - tests/app/site-navigation.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+
+  - id: discovered-is-not-ready
+    status: verified
+    statement: >-
+      The ESAT inventory maps all 39 official sources to integrity-verified local
+      research artifacts with byte counts and SHA-256 hashes, while keeping the
+      directly publishable count at zero until rights and content-review gates pass.
+    artifacts:
+      - content/esat/source-inventory.json
+      - content/esat/public-source-summary.json
+      - scripts/build-esat-source-inventory.ts
+      - tests/features/catalog/esat-source-inventory.test.ts
+      - docs/legal/ESAT_OFFICIAL_CONTENT_RIGHTS_RISK.md
+    automatedChecks:
+      - verify:esat-assets
+      - typecheck
+
+boundaries:
+  - ESAT coverage uses all 50 official top-level units but remains a conservative course-range first pass; exam-board subtopic equivalence and mastery diagnosis remain separate work.
+  - All 39 ESAT official files are downloaded into the Git-ignored internal research archive; none is represented as directly publishable.
+  - No ESAT native online past paper, Review Note or mock paper is currently available.
+  - ESAT questions, answer keys and factual results remain public once published; invitation entitlement applies only to reviewed explanations and personalised interpretation.
+
+manualChecks:
+  - id: esat-planner-responsive-review
+    status: pending
+    evidence: Review course selection, optional combinations and conflict states on desktop, tablet and phone.
+    viewports:
+      - 1440x900
+      - 768x1024
+      - 390x844

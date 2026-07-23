@@ -1,0 +1,85 @@
+schemaVersion: 1
+feature:
+  id: tara-review-notes
+  title: Profile-first TARA reasoning and writing review notes
+  status: partial
+  userOutcome: >-
+    A student who has completed a private TARA background profile can study a
+    bilingual in-site starting review of Critical Thinking, Problem Solving,
+    Writing Task and argument language, then continue to Mantou's native practice.
+
+run:
+  packageScript: verify:review-notes
+
+claims:
+  - id: exact-official-scope-without-republication
+    status: verified
+    statement: >-
+      The versioned document records the seven official Critical Thinking skills,
+      three Problem Solving skills and three-part Writing Task boundary, plus module
+      timing, question count, word limit and tool restrictions anchored to two local
+      official PDFs and exact SHA-256 hashes without republishing official questions.
+    artifacts:
+      - content/notes/tara/reasoning-writing-foundations-v1.json
+      - content/official/research-asset-inventory.json
+      - tests/features/notes/review-notes.test.ts
+    automatedChecks:
+      - verify:review-notes
+      - test
+
+  - id: original-eal-teaching-layer
+    status: verified
+    statement: >-
+      Four modules contain twenty-one stable knowledge units, twelve Mantou-authored
+      methods, four clearly labelled original worked examples and twelve active-recall
+      prompts, including explicit A-Level, IB, AP and other-curriculum bridges.
+    artifacts:
+      - content/notes/tara/reasoning-writing-foundations-v1.json
+      - src/features/notes/content/review-notes.ts
+      - tests/features/notes/review-notes.test.ts
+    automatedChecks:
+      - verify:review-notes
+      - typecheck
+
+  - id: private-profile-first-native-page
+    status: verified
+    statement: >-
+      The responsive route checks the exam-isolated TARA background profile before
+      showing Notes, links to the deterministic starting point and native reasoning
+      or writing practice, exposes a 17-page A4 edition after that profile gate, and is
+      registered as a real public teaching-preview product.
+    artifacts:
+      - src/features/notes/pages/AssessmentReviewNotesPage.tsx
+      - src/features/notes/pages/TaraReviewNotesPage.tsx
+      - src/features/notes/pages/ReviewNotesPage.tsx
+      - src/app/routes.tsx
+      - content/products/review-notes-pdf-assets.json
+      - public/notes/tara/tara-reasoning-writing-foundations-v1.pdf
+      - tests/app/tara-review-notes-page.test.tsx
+      - tests/e2e/tara-review-notes.spec.ts
+    automatedChecks:
+      - verify:review-notes
+      - verify:review-notes-pdfs
+      - verify:content-products
+      - verify:e2e
+      - build
+
+boundaries:
+  - This is a top-level teaching preview, not a complete TARA textbook, full-length mock or writing-feedback service.
+  - The official specification and guide support exam facts, scope and terminology only; no official question or explanation is republished.
+  - The 17-page downloadable edition is a top-level preview; fine-grained question-family drills, the full mathematics appendix, complete writing models and a human rubric remain pending.
+  - The page reports no official 1.0-9.0 scale conversion, admissions prediction or automated Writing Task score.
+
+manualChecks:
+  - id: independent-reasoning-writing-and-bilingual-review
+    status: pending
+    evidence: A separate reasoning teacher, writing teacher, bilingual reviewer and rights/similarity reviewer must approve the complete revision before final publication.
+    viewports:
+      - content
+  - id: student-comprehension-and-real-device-review
+    status: pending
+    evidence: Automated route, DOM, type, build and Chromium viewport checks pass; representative students and real-device reviewers still need to validate comprehension and layout.
+    viewports:
+      - desktop
+      - tablet
+      - phone

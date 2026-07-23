@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "18     Consider the following problem:\n\n                                            \b         n       \b               10\n                                                1                 1\n               Solve the inequality                       <                        , where n is a positive integer.\n                                                4                 32\n\n        A student produces the following argument:\n                             \b n \b          10\n                               1         1\n                                    <\n                               4        32\n                                                                                                         (I)\n                                    \b           n                 \b            10\n                                        1                              1\n                            log 1                   < log 1\n                                2       4                     2       32\n                                                                                                         (II)\n                                        \b                                 \b\n                                            1                                 1\n                            n log 1                 < 10 log 1\n                                    2       4                     2           32\n                                                                                                         (III)\n                                                                 1\n                                                      10 log 1 ( 32 )\n                                                                      2\n                                                n<\n                                                          log 1 ( 14 )\n                                                                  2\n\n                                                                                                         (IV)\n                                                      10 × 5\n                                                n<           = 25\n                                                         2\n                                                                                                         (V)\n                                                1 ⩽ n ⩽ 24\n\n\n        Which step (if any) in the argument is invalid?\n\n        A There are no invalid steps; the argument is correct\n\n        B Only step (I) is invalid; the rest are correct\n\n        C Only step (II) is invalid; the rest are correct\n\n        D Only step (III) is invalid; the rest are correct\n\n        E      Only step (IV) is invalid; the rest are correct\n\n        F      Only step (V) is invalid; the rest are correct\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                                              \u0015\u0013"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following problem:\n\n                                            E         n       E               10\n                                                1                 1\n               Solve the inequality                       <                        , where n is a positive integer.\n                                                4                 32\n\n        A student produces the following argument:\n                             E n E          10\n                               1         1\n                                    <\n                               4        32\n                                                                                                         (I)\n                                    E           n                 E            10\n                                        1                              1\n                            log 1                   < log 1\n                                2       4                     2       32\n                                                                                                         (II)\n                                        E                                 E\n                                            1                                 1\n                            n log 1                 < 10 log 1\n                                    2       4                     2           32\n                                                                                                         (III)\n                                                                 1\n                                                      10 log 1 ( 32 )\n                                                                      2\n                                                n<\n                                                          log 1 ( 14 )\n                                                                  2\n\n                                                                                                         (IV)\n                                                      10 × 5\n                                                n<           = 25\n                                                         2\n                                                                                                         (V)\n                                                1 ⩽ n ⩽ 24\n\n\n        Which step (if any) in the argument is invalid?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "There are no invalid steps; the argument is correct"
+    },
+    {
+      "label": "B",
+      "rawText": "Only step (I) is invalid; the rest are correct"
+    },
+    {
+      "label": "C",
+      "rawText": "Only step (II) is invalid; the rest are correct"
+    },
+    {
+      "label": "D",
+      "rawText": "Only step (III) is invalid; the rest are correct"
+    },
+    {
+      "label": "E",
+      "rawText": "Only step (IV) is invalid; the rest are correct"
+    },
+    {
+      "label": "F",
+      "rawText": "Only step (V) is invalid; the rest are correct\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We could first check to see whether\n                                  \u0001 the answer makes sense. If we substitute n = 1 into the\n                                1 10\noriginal equation, we get 41 < 32    , which is clearly nonsense, so there has to be a mistake\nsomewhere in the argument.\nThere are two straightforward approaches to finding the mistake: one is to check that the logic\nof each step works, the other is to try a value of n which either does or does not solve the original\ninequality, and check that each step works for this value of n. Since we know that the solution\nis wrong, it must fail somewhere, at least when n = 1.\n\nApproach 1: checking the logic\nClearly step (V) is correct, so the mistake must be earlier.\nStep (I) applies the same function to both sides of an inequality, so it looks fine.\nStep (II) is just a simplification of the logarithm expressions using the power rule. The powers\nare positive integers, and both 14 and 321\n                                            are positive, so this step is fine.\nStarting from the other end, step (IV) is just a calculation, and we can check quite easily that\nit is correct.\nStep (III) looks like it is probably wrong, as we are performing a division with an inequality.\nHowever, with more care, we can calculate log 1 41 = 2 (as we need to do to check step (IV)\n                                                     \u0001\n                                                 2\nanyway), so step (III) is just dividing by 2, and is actually fine.\nUnfortunately, though, every step looks fine.\nWorking through them once more, steps (IV) and (V) are certainly fine, as is step (III). We\nhave argued that step (II) is correct, so by elimination it must be step (I) which is wrong.\nIt is helpful to sketch a graph of y = log 1 x to understand why step (I) is wrong. We have\n                                                2\nlog 1 ( 12 ) = 1, log 1 1 = 0, log 1 2 = −1, so the graph looks like this:\n   2              2            2\n\n\n\n                                   y\n\n\n\n\n                                                                             x\n                                   0   1\n\n\n\n\nSo log 1 x is a decreasing function: if x < y, then log 1 x > log 1 y; in other words, log 1 reverses\n       2                                                2         2                        2\nthe direction of an inequality. Therefore step (I) is incorrect: the inequality should have been\nreversed in this step.\nThe correct answer is therefore B.\n\n\n\n\nVersion 1.0, April 2019                                                                     Page 20\n\n                                                                                        © UCLES 2019\n\f\nTest of Mathematics for University Admission, 2017 Paper 2 Solutions\n\n\nApproach 2: substituting a value of n\nWe have already shown that n = 1 does not satisfy the original inequality, yet it is given as\na solution at the end of step (V). So we use this value of n to find at least one error in the\nargument.\nNote that this approach is not guaranteed to work: there may be other errors in the argument\nthat will escape detection by this method, but given that the options tell us that only one step\nis invalid, it will be sufficient for our purposes.\nIt will help us with our calculations if we write everything in terms of powers of 21 .\nThe original inequality can be written as\n                                          \u0012 \u00132n \u0012 \u001350\n                                           1     1\n                                               <\n                                           2     2\n\nSubstituting n = 1 gives\n                                           \u0012 \u00132 \u0012 \u001350\n                                            1    1\n                                               <\n                                            2    2\nwhich is not true.\nAfter step (I), the inequality reads\n                                          \u0012 \u00132n         \u0012 \u001350\n                                           1             1\n                                    log 1       < log 1\n                                        2  2          2  2\n\nSubstituting n = 1 gives\n                                             \u0012 \u00132         \u0012 \u001350\n                                              1            1\n                                       log 1      < log 1\n                                           2  2         2  2\nwhich we can simplify to\n                                               2 < 50\nwhich is true.\nSo something has gone wrong in step (I), and this is where the error lies.\n\n      Commentary: There is a slightly subtle question about whether the student intended\n      each of the steps in this argument to be reversible. For example, if a student started with\n      the statement x + 5 = 8 and deduced x > 0, they have made a correct deduction (though\n      not ‘solved the equation’), but the argument is not reversible: x > 0 does not imply that\n      x + 5 = 8. So we will assume that in this case they intend to say that 1 ⩽ n ⩽ 24 are all\n      solutions to the original equation.\n      It follows that step (I) is where the mistake lies, as n = 1 satisfies the inequality after\n      step (I) but not the inequality before it.\n      If we did not make this assumption about the student’s intentions, we could repeat the\n      argument above with a value of n which does satisfy the original inequality, such as\n      n = 100; then the first inequality is true but the second inequality, obtained after step (I),\n      is false, so the proposed implication is false.\n\n\n\n\nVersion 1.0, April 2019                                                                       Page 21\n\n                                                                                          © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        21,
+        22
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

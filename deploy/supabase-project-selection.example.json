@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "organizationId": "replace-with-approved-supabase-org-id",
+  "environments": [
+    {
+      "name": "staging",
+      "strategy": "create",
+      "projectName": "mantuo-admission-staging",
+      "region": "ap-southeast-1",
+      "size": "nano"
+    },
+    {
+      "name": "production",
+      "strategy": "create",
+      "projectName": "mantuo-admission-production",
+      "region": "ap-southeast-1",
+      "size": "nano"
+    }
+  ]
+}

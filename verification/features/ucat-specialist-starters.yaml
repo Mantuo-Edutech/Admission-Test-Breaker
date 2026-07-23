@@ -1,0 +1,99 @@
+schemaVersion: 1
+feature:
+  id: ucat-specialist-starters
+  title: Original UCAT Decision Making and Situational Judgement starters
+  status: partial
+  userOutcome: >-
+    A student can complete a native mixed Decision Making starter and a native
+    ordinal Situational Judgement starter, then see factual raw and partial-credit
+    results without leaving the site.
+
+run:
+  packageScript: verify:ucat-starter
+
+claims:
+  - id: original-specialist-content
+    status: verified
+    statement: >-
+      Eight Mantou-original Decision Making questions mix ordinary choice and two
+      five-statement Yes/No sets; three Mantou-original SJT scenarios contain ten
+      ordinal judgements. Official snapshots anchor only identity, format and
+      scoring boundaries and no official question-bank wording is copied.
+    artifacts:
+      - content/ucat/original-practice/decision-making-starter-v1.json
+      - content/ucat/original-practice/situational-judgement-starter-v1.json
+      - src/features/practice/content/ucat-decision-making-starter.ts
+      - src/features/practice/content/ucat-situational-judgement-starter.ts
+      - tests/features/practice/content/ucat-specialist-starters.test.ts
+    automatedChecks:
+      - verify:ucat-starter
+      - verify:official-research
+      - typecheck
+
+  - id: decision-making-statement-response
+    status: verified
+    statement: >-
+      Each statement has its own Yes/No control and stable response key. A set only
+      counts as answered when every statement is complete; all correct earns two
+      raw points, exactly one error earns one and any larger error earns zero.
+    artifacts:
+      - src/features/practice/components/StatementSetQuestionCard.tsx
+      - src/features/practice/domain/statement-response.ts
+      - src/features/practice/domain/question-response.ts
+      - src/features/practice/domain/results.ts
+      - tests/app/practice-page.test.tsx
+      - tests/app/results-page.test.tsx
+    automatedChecks:
+      - verify:ucat-starter
+      - typecheck
+
+  - id: situational-judgement-adjacent-credit
+    status: verified
+    statement: >-
+      SJT choices carry an explicit ordered scale. An exact match earns one raw
+      point, an adjacent response earns half a point and any other response earns
+      zero; result percentages use maximum raw points rather than question count.
+    artifacts:
+      - src/features/practice/content/types.ts
+      - src/features/practice/content/validate.ts
+      - src/features/practice/domain/results.ts
+      - src/features/practice/components/QuestionResultRow.tsx
+      - tests/features/practice/content/ucat-specialist-starters.test.ts
+    automatedChecks:
+      - verify:ucat-starter
+      - typecheck
+
+  - id: native-private-session-and-results
+    status: verified
+    statement: >-
+      Both starters use the shared private session, timing, autosave, submission,
+      result and question-feedback path. Responsive and keyboard-visible statement
+      controls have executable component and CSS contracts.
+    artifacts:
+      - src/features/practice/pages/PracticePage.tsx
+      - src/features/practice/pages/ResultsPage.tsx
+      - src/styles/practice.css
+      - tests/app/ucat-specialist-layout-contract.test.ts
+    automatedChecks:
+      - verify:ucat-starter
+      - verify:features
+      - build
+
+boundaries:
+  - These are Mantou-original teaching previews, not official UCAT question-bank content or claims of official-equivalent calibration.
+  - The short starters are not complete-length subtests and do not generate a 300–900 score or an official SJT Band.
+  - Independent UCAT Decision Making, SJT professional-standards, language, pace, distractor, accessibility and device review remain before final publication status.
+
+manualChecks:
+  - id: independent-specialist-review
+    status: pending
+    evidence: Separate UCAT subject reviewers must verify every answer key, scoring case, professional judgement, distractor and time expectation.
+    viewports:
+      - content
+  - id: browser-device-review
+    status: pending
+    evidence: Automated interaction and CSS contracts pass; direct desktop, tablet, phone, keyboard and screen-reader review remains explicit.
+    viewports:
+      - desktop
+      - tablet
+      - phone

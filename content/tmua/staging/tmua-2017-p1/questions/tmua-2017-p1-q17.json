@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                  \u0003\n                                                  \u0003\n                                                  \u0003\n\nͳ͹\u0003    \u0017\u0003\u0003 \u0003‫ܨ‬ሺ݊ሻ\u0003\u0003‫ܩ‬ሺ݊ሻ\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003݊ǣ\u0003\n       \u0003\n                                                          ௡\n                                                        ͳ\n                                      \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003‫ܨ‬ሺ݊ሻ ൌ නሺ݊ െ ‫ݔ‬ሻ\u0003݀‫\u0003 ݔ‬\n                                                        ݊\n                                                       ଴\n\n                                                      ௡\n\n                                             ‫ܩ‬ሺ݊ሻ ൌ ෍ ‫ܨ‬ሺ‫ݎ‬ሻ\u0003\n                                                      ௥ୀଵ\n\n       \u001a\u0003\u0003\u0003\u0003\u0003\u0003݊\u0003 \u0003\u0003\u0003‫ܩ‬ሺ݊ሻ ൐ ͳͷͲ\u0003ǫ\u0003\n\u0003      \u0003\n\u0003      A   ʹʹ\u0003\n\n\u0003      B   ʹ͵\u0003\n\n\u0003      C   ʹͶ\u0003\n\n\u0003      D   ʹͷ\u0003\n\n\u0003      E   ʹ͸\u0003\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u0003\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                     \u0014\u001c                                       >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": " ‫ܨ‬ሺ݊ሻ‫ܩ‬ሺ݊ሻ݊ǣ\n       \n                                                          ௡\n                                                        1\n                                      ‫ܨ‬ሺ݊ሻ ൌ නሺ݊ െ ‫ݔ‬ሻ݀‫ ݔ‬\n                                                        ݊\n                                                       ଴\n\n                                                      ௡\n\n                                             ‫ܩ‬ሺ݊ሻ ൌ ෍ ‫ܨ‬ሺ‫ݎ‬ሻ\n                                                      ௥ୀଵ\n\n       ݊ ‫ܩ‬ሺ݊ሻ ൐ 150ǫ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "22"
+    },
+    {
+      "label": "B",
+      "rawText": "23"
+    },
+    {
+      "label": "C",
+      "rawText": "24"
+    },
+    {
+      "label": "D",
+      "rawText": "25"
+    },
+    {
+      "label": "E",
+      "rawText": "26\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8&/(6                                                                            >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "It seems that we need to calculate F(n) before we can find G(n). We could do this either using\nintegration or geometry. We start with an integration method:\n                                            1 n\n                                              Z\n                                    F(n) =       (n − x) dx\n                                           n 0\n                                                        \u0003n\n                                         = n1 nx − 12 x2 0\n                                             \u0002\n\n                                                = n1 (n2 − 21 n2 )\n                                                = 12 n\n\nWe could reach the same conclusion by sketching a graph of the function:\n\n                                            y\n\n                                        n\n\n\n\n\n                                                                      x\n                                            0              n\n\n\nThe area of this triangle is 12 n2 , so F(n) = n1 × 12 n2 = 12 n\nWe now have:\n                                                         n\n                                                         X\n                                            G(n) =             F(r)\n                                                         r=1\n                                                         Xn\n                                                               1\n                                                     =         2r\n                                                       r=1\n                                                          Xn\n                                                     = 12     r\n                                                          r=1\n\nwhere for the last line we have used ( 21 F(1) + 21 F(2) + · · · ) = 12 (F(1) + F(2) + · · · )\nNow nr=1 r = 1 + 2 + · · · + n = 21 n(n + 1), either using the formula for triangular numbers or\n     P\nof the sum of an arithmetic series.\nSo G(n) = 41 n(n + 1).\nTherefore\n\n                                                         G(n) > 150\n                                                   1\n                                        ⇐⇒         4 n(n + 1) > 150\n                                        ⇐⇒          n(n + 1) > 600\n\nSo we can try values: 25 is a nice number to calculate with, so we start with options C and D:\n\n                                             24 × 25 = 600\n                                             25 × 26 = 650\n\nso n = 25 is the smallest positive integer for which G(n) > 150, and the answer is D.\n\n\nVersion 1.1, March 2019                                                                 Page 21\n\n                                                                                    © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        22
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

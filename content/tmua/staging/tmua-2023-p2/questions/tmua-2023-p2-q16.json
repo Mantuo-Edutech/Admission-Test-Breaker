@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2023-p2-q16",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2023-p2",
+  "edition": "2023",
+  "paper": 2,
+  "questionNumber": 16,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "16   A sequence is defined by:\n\n                                                        u1 = a\n                                                        u2 = b\n                                                      un+2 = un + un+1 for n ≥ 1\n\n     where a and b are positive integers. The highest common factor of a and b is 7.\n\n     Which of the following statements must be true?\n\n          I        u2023 is a multiple of 7\n\n          II       If u1 is not a factor of u2, then u1 is not a factor of un for any n > 1\n\n          III      The highest common factor of u1 and u5 is 7\n\n\n     A   none of them\n\n     B   I only\n\n     C   II only\n\n     D   III only\n\n     E   I and II only\n\n     F   I and III only\n\n     G   II and III only\n\n     H   I, II and III\n\n\n\n\n                                                       18"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A sequence is defined by:\n\n                                                        u1 = a\n                                                        u2 = b\n                                                      un+2 = un + un+1 for n ≥ 1\n\n     where a and b are positive integers. The highest common factor of a and b is 7.\n\n     Which of the following statements must be true?\n\n          I        u2023 is a multiple of 7\n\n          II       If u1 is not a factor of u2, then u1 is not a factor of un for any n > 1\n\n          III      The highest common factor of u1 and u5 is 7"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "I    Since the highest common factor of a and b is 7, they are both multiples of 7. So u1 and u2\n     are multiples of 7, hence u3 = u1 + u2 is a multiple of 7. Then u4 = u2 + u3 is a multiple\n     of 7, and so on. So every un is a multiple of 7 and this statement is true.\n\nII   We have u3 = u1 + u2 = u1 (1 + u2 /u1 ). As u1 is not a factor of u2 , the expression in\n     brackets is not an integer, so u1 is not a factor of u3 .\n     Next, we have u4 = u2 + u3 = u1 + 2u2 = u1 (1 + 2u2 /u1 ). It is feasible that u1 is a factor\n     of u4 : it will be if 2u2 /u1 is an integer. We could take u1 = 14 and u2 = 7 to achieve this.\n     (Explicitly, in this case we have u3 = 21, u4 = 28, and 14 is a factor of 28.)\n     So this statement may be false.\n\nIII Following on from our calculations in II, we have u5 = u3 + u4 = (u1 + u2 ) + (u1 + 2u2 ) =\n    2u1 + 3u2 . The highest common factor of u1 and u5 is therefore the same as the highest\n    common factor of u1 and 3u2 , and it is possible that this is 21 if u1 is a multiple of 21 but\n    u2 is not. Let us check this explicitly: take u1 = 21 and u2 = 7, so the highest common\n    factor of u1 and u2 is 7, as required. Then u5 = 2 × 21 + 3 × 7 = 3 × 21, and so the highest\n    common factor of u1 = 21 and u5 = 3 × 21 is 21. Therefore this statement may be false.\n\nThe correct answer is therefore option B, I only.\n\n\n\n\nVersion 1.0, September 2023                                                                Page 19"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2023-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2023.pdf",
+      "sha256": "2b557df613611aa13618ab58d13e23ebb733586c04a05d7e32f2087daff5858f",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2023-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2023.pdf",
+      "sha256": "1e88d2c30cb3bbeb959ae4a51c1ba21c8f89392c7a450b64a8068698b0ef28cf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2023-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2023-paper-2-worked-answers.pdf",
+      "sha256": "2c3bfeb76b52647a1c5a3cdaa6dd4f70e500a051863f28ab584468087ae7ede5",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

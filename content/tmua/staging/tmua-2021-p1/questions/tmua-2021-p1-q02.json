@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "2   The curve y = x3 − 6x + 3 has turning points at x = α and x = β, where β > α.\n\n    Find                           \u0002 β\n                                         x3 − 6x + 3 dx\n                                     α\n\n        √\n    A −8 2\n\n    B −10\n             √\n    C −10 + 6 2\n\n    D      0\n                 √\n    E      12 − 8 2\n            √\n    F      6 2\n\n    G      12\n\n\n\n\n                                           \u0017"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The curve y = x3 − 6x + 3 has turning points at x = α and x = β, where β > α.\n\n    Find                            β\n                                         x3 − 6x + 3 dx\n                                     α\n\n        √"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−8 2"
+    },
+    {
+      "label": "B",
+      "rawText": "−10\n             √"
+    },
+    {
+      "label": "C",
+      "rawText": "−10 + 6 2"
+    },
+    {
+      "label": "D",
+      "rawText": "0\n                 √"
+    },
+    {
+      "label": "E",
+      "rawText": "12 − 8 2\n            √"
+    },
+    {
+      "label": "F",
+      "rawText": "6 2"
+    },
+    {
+      "label": "G",
+      "rawText": "12"
+    }
+  ],
+  "correctAnswer": "F",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We first find the turning points by differentiation. We have\n                              dy\n                                 = 3x2 − 6 = 0 if and only if x2 = 2\n                              dx\n        √         √\nso α = − 2 and β = 2.\nWe can now compute the integral:\n\n                                            \u0003√ 2\n     Z β\n           x3 − 6x + 3 dx =\n                           \u00021 4       2\n                               x − 3x   + 3x  √\n                            4                − 2\n      α\n                                √        √        √ \u0001          √            √         √ \u0001\n                          = 14 ( 2)4 − 3( 2)2 + 3( 2) −    1\n                                                           4 (−    2)4 − 3(− 2)2 + 3(− 2)\n                            √\n                          =6 2\n\nwhere to get the last line, we note that the first terms in each\n                                                              √ bracket√cancel with each other,\nand similarly for the second terms, so we are left with just 3 2 − (−3 2). This is option F.\n\n\n\n\nVersion 1.0, March 2022                                                                 Page 4"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        4
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

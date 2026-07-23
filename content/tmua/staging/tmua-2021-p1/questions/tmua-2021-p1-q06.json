@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q06",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 6,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "6   The function f is given by\n\n                                               cos x + 3\n                                 f(x) =\n                                          7 + 5 cos x − sin2 x\n\n    Find the positive diﬀerence between the maximum and the minimum values of f(x).\n\n    A 0\n        1\n    B\n        3\n        1\n    C\n        2\n        2\n    D\n        3\n    E 1\n\n    F 2\n\n\n\n\n                                             \u001b"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The function f is given by\n\n                                               cos x + 3\n                                 f(x) =\n                                          7 + 5 cos x − sin2 x\n\n    Find the positive diﬀerence between the maximum and the minimum values of f(x)."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0\n        1"
+    },
+    {
+      "label": "B",
+      "rawText": "3\n        1"
+    },
+    {
+      "label": "C",
+      "rawText": "2\n        2"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "1"
+    },
+    {
+      "label": "F",
+      "rawText": "2"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "This is almost a function in cos x except for the sin2 x term, so we rewrite this in terms of cos x:\n                                      cos x + 3                cos x + 3\n                     f(x) =                         2\n                                                        =\n                              7 + 5 cos x − (1 − cos x)   6 + 5 cos x + cos2 x\n\nWe can then factorise the denominator to give\n                                                   cos x + 3\n                                   f(x) =\n                                            (cos x + 2)(cos x + 3)\n\nand the cos x + 3 factor cancels. (We should also check that this can never be zero; if it were,\nthe function would be undefined at some points.) Therefore we can write\n                                                       1\n                                          f(x) =\n                                                   cos x + 2\n\nThe maximum value of this function occurs where cos x = −1, giving f(x) = 1, and the minimum\nvalue occurs where cos x = +1, giving f(x) = 13 . The difference between the minimum and\nmaximum values is therefore 1 − 13 = 23 , which is option D.\n\n\n\n\nVersion 1.0, March 2022                                                                      Page 8"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p1-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p1",
+  "edition": "specimen",
+  "paper": 1,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13.    How many real roots does the equation          4     4      10    0 have?\n\n\n\n\n       A       0\n\n       B       1\n\n       C       2\n\n       D       3\n\n       E       4\n\n\n\n\n© UCLES 2017                                                                       [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "How many real roots does the equation          4     4      10    0 have?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0"
+    },
+    {
+      "label": "B",
+      "rawText": "1"
+    },
+    {
+      "label": "C",
+      "rawText": "2"
+    },
+    {
+      "label": "D",
+      "rawText": "3"
+    },
+    {
+      "label": "E",
+      "rawText": "4\n\n\n\n\n© UCLES 2017                                                                       [Turn over"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can determine the answer to this question by locating the stationary points of the function\nf(x) = x4 − 4x3 + 4x2 − 10. We have\n\n                f 0 (x) = 4x3 − 12x2 + 8x = 4x(x2 − 3x + 2) = 4x(x − 1)(x − 2).\n\nThere are therefore stationary points at x = 0, x = 1 and x = 2. Substituting these values\ninto f(x) gives us the y-coordinates of these points on the graph of y = f(x): they are (0, −10),\n(1, −9) and (2, −10). Since f(x) tends to +∞ as x tends to +∞ or −∞, the graph looks roughly\nlike this:\n\n                                          y\n\n\n\n\n                                                                 x\n                                          0    1     2\n\n\n\n\nThere are thus only two real solutions to f(x) = 0, and the answer is option C.\n\n\n\n\nVersion 1.1, November 2020                                                               Page 15"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+      "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+      "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+      "pages": [
+        16
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

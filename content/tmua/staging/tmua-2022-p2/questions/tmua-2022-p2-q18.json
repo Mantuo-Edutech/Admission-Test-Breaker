@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "18   P, Q, R and S show the graphs of\n\n                           y ൌ (cos x) cos x, y ൌ (sin x) sin x, y ൌ (cos x) sin x and y ൌ (sin x) cos x\n\n     for 0 < x < ʌ in some order.\n                 2\n\n      P                                                             Q\n           1                                                               1\n\n\n          0.5                                                           0.5\n\n\n\n            0                 π             π             π                0                  π            π          π\n                              6             3             2                                   6            3          2\n\n\n      R                                                             S\n           1                                                               1\n\n\n          0.5                                                           0.5\n\n\n\n            0                 π             π             π                0                  π            π          π\n                              6             3             2                                   6            3          2\n\n\n     Which row in the following table correctly identifies the graphs?\n\n                y ൌ (cos x) cos x            y ൌ (sin x) sin x            y ൌ (cos x) sin x            y ൌ (sin x) cos x\n     A                 P                            Q                            R                             S\n\n     B                 P                            Q                            S                             R\n\n     C                 Q                            P                            R                             S\n\n     D                 Q                            P                            S                             R\n\n     E                 R                            S                            P                             Q\n\n     F                 R                            S                            Q                             P\n\n     G                 S                            R                            P                             Q\n\n     H                 S                            R                            Q                             P\n\n\n\n\n                                                              20"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "P, Q, R and S show the graphs of\n\n                           y ൌ (cos x) cos x, y ൌ (sin x) sin x, y ൌ (cos x) sin x and y ൌ (sin x) cos x\n\n     for 0 < x < ʌ in some order.\n                 2\n\n      P                                                             Q\n           1                                                               1\n\n\n          0.5                                                           0.5\n\n\n\n            0                 π             π             π                0                  π            π          π\n                              6             3             2                                   6            3          2\n\n\n      R                                                             S\n           1                                                               1\n\n\n          0.5                                                           0.5\n\n\n\n            0                 π             π             π                0                  π            π          π\n                              6             3             2                                   6            3          2\n\n\n     Which row in the following table correctly identifies the graphs?\n\n                y ൌ (cos x) cos x            y ൌ (sin x) sin x            y ൌ (cos x) sin x            y ൌ (sin x) cos x"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "P                            Q                            R                             S"
+    },
+    {
+      "label": "B",
+      "rawText": "P                            Q                            S                             R"
+    },
+    {
+      "label": "C",
+      "rawText": "Q                            P                            R                             S"
+    },
+    {
+      "label": "D",
+      "rawText": "Q                            P                            S                             R"
+    },
+    {
+      "label": "E",
+      "rawText": "R                            S                            P                             Q"
+    },
+    {
+      "label": "F",
+      "rawText": "R                            S                            Q                             P"
+    },
+    {
+      "label": "G",
+      "rawText": "S                            R                            P                             Q"
+    },
+    {
+      "label": "H",
+      "rawText": "S                            R                            Q                             P"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let us substitute values into the four equations to begin with.\nWhen x = 0, we have\n\n                                       (cos x)cos x = 11 = 1\n                                        (sin x)sin x = 00 = ?\n                                        (cos x)sin x = 10 = 1\n                                        (sin x)cos x = 01 = 0\n\nThis shows that graph Q is y = (sin x)cos x . (We do not know what (sin x)sin x is when x = 0,\nbut from the graphs given, since three of the functions have value 1 at x = 0 and only one is 0,\nit must be 1.)\nNext, let us consider the value at x = π2 :\n\n                                       (cos x)cos x = 00 = ?\n                                        (sin x)sin x = 11 = 1\n                                        (cos x)sin x = 01 = 0\n                                        (sin x)cos x = 10 = 1\n\nAgain, as only one graph has value 0 at x = π2 , graph P depicts (cos x)sin x . (We did not actually\nneed to calculate the final line of this list, as we have already identified this function as being\ngraph Q.)\nSo we are left with (cos x)cos x and (sin x)sin x as graphs R and S in some order. Let us put in\nthe value x = π6 , as that is clearly different between the two functions. We have\n                                                            √\n                                                       √ ! 23\n                                              cos x      3\n                                      (cos x)       =\n                                                        2\n                                                      \u0012 \u00131\n                                              sin x    1 2\n                                       (sin x)      =\n                                                       2\n\nThe first of these looks horrible, but we can approximate the value of the second of these; it is\njust √12 ≈ 0.7, so this must be graph S. Similarly, (cos x)cos x ≈ 0.7 at x = π3 , which is graph R.\nTherefore the graphs are:\n\n                                       (cos x)cos x : graph R\n                                       (sin x)sin x : graph S\n                                       (cos x)sin x : graph P\n                                       (sin x)cos x : graph Q\n\nwhich is option E.\n\n\n\n\nVersion 1.0, July 2023                                                                      Page 20"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        20
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

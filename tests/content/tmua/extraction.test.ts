@@ -4,6 +4,7 @@ import {
   parseAnswerKey,
   parseQuestionPage,
   parseWorkedSolutions,
+  resolveQuestionPages,
   verifyQuestionImportBundle,
 } from "../../../src/content/tmua/extraction.js";
 import type { ExtractedPdfPage } from "../../../src/content/tmua/pdf-tools.js";
@@ -65,6 +66,100 @@ describe("question page parsing", () => {
       warnings: ["math-transcription-required"],
     });
   });
+
+  it("uses an audited page map even when the question number is not the first page line", () => {
+    const pageMap = Array.from({ length: 20 }, (_, index) => index + 3);
+    const questionPages = pages([
+      "Cover",
+      "Instructions",
+      ...Array.from(
+        { length: 20 },
+        (_, index) => `TMUA header\n${index + 1}. Question ${index + 1}\n    A   first\n    B   second`,
+      ),
+    ]);
+
+    const located = resolveQuestionPages(questionPages, pageMap);
+
+    expect(located.get(1)).toMatchObject({ page: 3 });
+    expect(located.get(20)).toMatchObject({ page: 22 });
+  });
+
+  it("safely separates multiple questions that share one audited source page", () => {
+    const pageMap = [
+      3,
+      3,
+      ...Array.from({ length: 18 }, (_, index) => index + 4),
+    ];
+    const questionPages = pages([
+      "Cover",
+      "Instructions",
+      [
+        "Running header",
+        "1. First question?",
+        "    A   one",
+        "    B   two",
+        "2  Second question?",
+        "    A   three",
+        "    B   four",
+        "3",
+      ].join("\n"),
+      ...Array.from(
+        { length: 18 },
+        (_, index) => `${index + 3} Question ${index + 3}\n    A   first\n    B   second`,
+      ),
+    ]);
+
+    const located = resolveQuestionPages(questionPages, pageMap);
+
+    expect(parseQuestionPage(1, 3, located.get(1)!.layoutText).stem).toBe("First question?");
+    expect(parseQuestionPage(2, 3, located.get(2)!.layoutText).stem).toBe("Second question?");
+  });
+
+  it("fails closed when an audited shared-page boundary cannot be located", () => {
+    const pageMap = [3, 3, ...Array.from({ length: 18 }, (_, index) => index + 4)];
+    const questionPages = pages([
+      "Cover",
+      "Instructions",
+      "1 First question\n    A   one\n    B   two\nmissing second marker",
+      ...Array.from(
+        { length: 18 },
+        (_, index) => `${index + 3} Question ${index + 3}\n    A   first\n    B   second`,
+      ),
+    ]);
+
+    expect(() => resolveQuestionPages(questionPages, pageMap)).toThrow(
+      "Question 2 shares source page 3, but its boundary could not be safely located",
+    );
+  });
+
+  it("rejects incomplete and missing audited page maps", () => {
+    expect(() => resolveQuestionPages(pages(["one"]), [1])).toThrow(
+      "Audited question page map must contain 20 positive page numbers",
+    );
+    expect(() =>
+      resolveQuestionPages(
+        pages(["one"]),
+        Array.from({ length: 20 }, () => 2),
+      ),
+    ).toThrow("Audited question source page 2 was not found in the PDF");
+  });
+
+  it("keeps graphical options as explicitly non-final placeholders in extraction drafts", () => {
+    const parsed = parseQuestionPage(
+      17,
+      19,
+      "17 Which sketch is correct?\n    A       B       C\n    D       E\n19",
+      { allowOptionPlaceholders: true, expectedAnswer: "E" },
+    );
+
+    expect(parsed.options).toHaveLength(8);
+    expect(parsed.options[4]).toEqual({
+      label: "E",
+      rawText: "[visual option E; transcription required]",
+    });
+    expect(parsed.warnings).toContain("visual-option-transcription-required");
+    expect(parsed.warnings).toContain("option-count-review");
+  });
 });
 
 describe("answer and solution linking", () => {
@@ -77,6 +172,20 @@ describe("answer and solution linking", () => {
     expect([...parseAnswerKey(answerPages, 2)]).toEqual([
       [1, { label: "B", page: 1 }],
       [2, { label: "E", page: 1 }],
+    ]);
+  });
+
+  it("reads answer keys that place the two papers in separate sections", () => {
+    const answerPages = pages([
+      "PAPER 1\nQuestion Key\n 1 D\n 2 C\n\nPAPER 2\nQuestion Key\n 1 C\n 2 B",
+    ]);
+    expect([...parseAnswerKey(answerPages, 1)]).toEqual([
+      [1, { label: "D", page: 1 }],
+      [2, { label: "C", page: 1 }],
+    ]);
+    expect([...parseAnswerKey(answerPages, 2)]).toEqual([
+      [1, { label: "C", page: 1 }],
+      [2, { label: "B", page: 1 }],
     ]);
   });
 

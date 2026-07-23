@@ -1,0 +1,86 @@
+schemaVersion: 1
+feature:
+  id: lnat-review-notes
+  title: Profile-first LNAT argument reading and writing review notes
+  status: partial
+  userOutcome: >-
+    A student who has completed a private LNAT background profile can study a
+    bilingual in-site starting review of Section A, Section B, EAL evidence
+    boundaries and timed execution, then continue to Mantou's native practice.
+
+run:
+  packageScript: verify:review-notes
+
+claims:
+  - id: official-skill-scope-without-republication
+    status: verified
+    statement: >-
+      The versioned document records the stable official LNAT ability boundary,
+      Section A and B structure, textual-evidence rule and preparation principles,
+      anchored to two local official PDFs and exact SHA-256 hashes without
+      republishing official passages, questions, options or explanations.
+    artifacts:
+      - content/notes/lnat/reading-writing-foundations-v1.json
+      - content/official/research-asset-inventory.json
+      - tests/features/notes/review-notes.test.ts
+    automatedChecks:
+      - verify:review-notes
+      - test
+
+  - id: original-bilingual-teaching-layer
+    status: verified
+    statement: >-
+      Four modules contain twenty-one stable knowledge units, twelve Mantou-authored
+      methods, four clearly labelled original worked examples and twelve active-recall
+      prompts, including explicit A-Level, IB, AP and other-curriculum bridges.
+    artifacts:
+      - content/notes/lnat/reading-writing-foundations-v1.json
+      - src/features/notes/content/review-notes.ts
+      - tests/features/notes/review-notes.test.ts
+    automatedChecks:
+      - verify:review-notes
+      - typecheck
+
+  - id: private-profile-first-native-page
+    status: verified
+    statement: >-
+      The responsive route checks the exam-isolated LNAT background profile before
+      showing Notes, links to the deterministic starting point and native reading or
+      writing practice, exposes a 16-page A4 edition after that profile gate, and is
+      registered as a real public teaching-preview product.
+    artifacts:
+      - src/features/notes/pages/AssessmentReviewNotesPage.tsx
+      - src/features/notes/pages/LnatReviewNotesPage.tsx
+      - src/features/notes/pages/ReviewNotesPage.tsx
+      - src/app/routes.tsx
+      - content/products/review-notes-pdf-assets.json
+      - public/notes/lnat/lnat-reading-writing-foundations-v1.pdf
+      - tests/app/lnat-review-notes-page.test.tsx
+      - tests/e2e/lnat-review-notes.spec.ts
+    automatedChecks:
+      - verify:review-notes
+      - verify:review-notes-pdfs
+      - verify:content-products
+      - verify:e2e
+      - build
+
+boundaries:
+  - This is a top-level teaching preview, not a complete LNAT textbook, full-length mock or essay-feedback service.
+  - Historic official guidance supports stable skills and methods only; current admissions or scoring policies are not inferred from it.
+  - No official passage, question, option or explanation is republished, and official files remain internal research assets.
+  - The 16-page downloadable edition is a top-level preview; fine-grained drills, more long passages, complete essay models and a human rubric remain pending.
+  - The page reports no official score conversion, admissions prediction or automated essay score.
+
+manualChecks:
+  - id: independent-reading-writing-bilingual-and-rights-review
+    status: pending
+    evidence: A separate LNAT reading teacher, writing teacher, bilingual reviewer and rights/similarity reviewer must approve the complete revision before final publication.
+    viewports:
+      - content
+  - id: student-comprehension-and-real-device-review
+    status: pending
+    evidence: Automated route, DOM, type, build and Chromium viewport checks run independently; representative students and real-device reviewers must still validate comprehension and layout.
+    viewports:
+      - desktop
+      - tablet
+      - phone

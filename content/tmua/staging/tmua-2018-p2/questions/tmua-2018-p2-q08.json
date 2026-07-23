@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "8   The diagram shows an example of a mountain proﬁle.\n\n\n                                                                        upstroke:\n\n\n                                                                     downstroke:\n\n\n\n    This consists of upstrokes which go upwards from left to right, and downstrokes\n    which go downwards from left to right. The example shown has six upstrokes and six\n    downstrokes. The horizontal line at the bottom is known as sea level.\n\n    A mountain proﬁle of order n consists of n upstrokes and n downstrokes, with the\n    condition that the proﬁle begins and ends at sea level and never goes below sea\n    level (although it might reach sea level at any point). So the example shown is a\n    mountain proﬁle of order 6.\n\n    Mountain proﬁles can be coded by using U to indicate an upstroke and D to indicate\n    a downstroke. The example shown has the code UDUUUDUDDUDD. A sequence of\n    U’s and D’s obtained from a mountain proﬁle in this way is known as a valid code.\n\n    Which of the following statements is/are true?\n\n        I    If a valid code is written in reverse order, the result is always a valid\n             code.\n        II   If each U in a valid code is replaced by D and each D by U, the result\n             is always a valid code.\n        III If U is added at the beginning of a valid code and D is added at the\n            end of the code, the result is always a valid code.\n\n    A none of them\n\n    B I only\n\n    C II only\n\n    D III only\n\n    E I and II only\n\n    F I and III only\n\n    G II and III only\n\n    H I, II and III\n\n\n\n                                            10"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The diagram shows an example of a mountain proﬁle.\n\n\n                                                                        upstroke:\n\n\n                                                                     downstroke:\n\n\n\n    This consists of upstrokes which go upwards from left to right, and downstrokes\n    which go downwards from left to right. The example shown has six upstrokes and six\n    downstrokes. The horizontal line at the bottom is known as sea level.\n\n    A mountain proﬁle of order n consists of n upstrokes and n downstrokes, with the\n    condition that the proﬁle begins and ends at sea level and never goes below sea\n    level (although it might reach sea level at any point). So the example shown is a\n    mountain proﬁle of order 6.\n\n    Mountain proﬁles can be coded by using U to indicate an upstroke and D to indicate\n    a downstroke. The example shown has the code UDUUUDUDDUDD. A sequence of\n    U’s and D’s obtained from a mountain proﬁle in this way is known as a valid code.\n\n    Which of the following statements is/are true?\n\n        I    If a valid code is written in reverse order, the result is always a valid\n             code.\n        II   If each U in a valid code is replaced by D and each D by U, the result\n             is always a valid code.\n        III If U is added at the beginning of a valid code and D is added at the\n            end of the code, the result is always a valid code."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "I    Every valid code begins with a ‘U’ and ends with a ‘D’, so the reverse code begins with\n     a ‘D’, meaning it immediately dips below sea level. So it is never a valid code, and this\n     statement is false.\n\nII   As with I, the first letter of this substituted code will always be ‘D’, which will never give\n     a valid code, so this statement is false.\n\nIII The new ‘U’ at the beginning of the code and ‘D’ at the end mean that the whole middle\n    part of the profile is lifted one unit higher than the original profile. So this will never dip\n    below sea level, and will always be a valid code. So this statement is true.\n\nTherefore the correct answer is D.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 10"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        10
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

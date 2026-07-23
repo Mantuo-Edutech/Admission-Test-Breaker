@@ -1,0 +1,79 @@
+schemaVersion: 1
+feature:
+  id: multi-exam-official-guides
+  title: Multi-exam navigation and official preparation guides
+  status: partial
+  userOutcome: >-
+    A visitor can switch between TMUA, ESAT, TARA, LNAT and UCAT, see navigation that
+    matches the current exam, and use a precise official starting guide for
+    every exam instead of encountering a generic construction page.
+
+run:
+  packageScript: verify
+
+claims:
+  - id: exam-context-navigation
+    status: verified
+    statement: >-
+      The global header identifies the current exam, offers a lightweight exam
+      switcher, and changes its four primary tabs to match the selected exam.
+      Public visitors remain free to inspect all exam spaces.
+    artifacts:
+      - src/features/navigation/components/SiteHeader.tsx
+      - src/features/catalog/components/TmuaPageHeader.tsx
+      - tests/app/site-navigation.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+
+  - id: useful-non-tmua-guides
+    status: verified
+    statement: >-
+      ESAT provides an internal 2027 programme-to-module planner while TARA,
+      LNAT and UCAT explain the current official format, preparation order and source
+      provenance. Separate original teaching previews are shown only where their
+      own content, rights boundary and automated verification are present.
+    artifacts:
+      - content/admissions/esat-2027.json
+      - src/features/catalog/esat-admissions.ts
+      - src/features/catalog/pages/EsatGuidePage.tsx
+      - src/features/catalog/exam-guides.ts
+      - src/features/catalog/pages/ExamGuidePage.tsx
+      - src/features/catalog/exams.ts
+      - tests/app/exam-status-page.test.tsx
+      - tests/app/front-door-accessibility.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+
+  - id: official-source-provenance
+    status: verified
+    statement: >-
+      Current UAT-UK, Pearson VUE, LNAT and UCAT sources are recorded in a versioned
+      local registry. Official files remain internal research assets because they
+      have not been cleared for public commercial republication; public practice
+      uses separately versioned Mantou-original content.
+    artifacts:
+      - content/official/exam-source-registry.json
+      - tests/features/catalog/official-source-registry.test.ts
+    automatedChecks:
+      - test
+      - typecheck
+
+boundaries:
+  - Only TMUA currently has a complete native online past-paper bank; ESAT, TARA, LNAT and all four UCAT subtests expose explicitly bounded Mantou-original teaching previews. These short previews must not claim official-equivalent calibration, complete-length coverage, UCAT scaled scores or an official SJT Band.
+  - ESAT calculates a conservative module-level course-coverage first pass; exam-board-specific topic coverage and mastery still require later validation.
+  - Official source links do not grant Mantou republication rights and must not be copied into the public web bundle without written permission.
+  - Public exam switching does not change account entitlements; exam-scoped account permissions remain a production backend task.
+  - Current format facts are pinned to the locally recorded 2026 or 2027 cycle and require a scheduled source review before each admissions cycle.
+
+manualChecks:
+  - id: multi-exam-responsive-visual-review
+    status: pending
+    evidence: Review the exam switcher, four contextual tabs, year cards and three official guide pages at desktop, tablet and phone sizes.
+    viewports:
+      - 1440x900
+      - 768x1024
+      - 390x844

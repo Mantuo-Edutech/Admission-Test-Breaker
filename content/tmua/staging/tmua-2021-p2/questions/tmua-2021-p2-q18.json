@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q18",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 18,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "18   A student chooses two distinct real numbers x and y with 0 < x < y < 1.\n\n     The student then attempts to draw a triangle ABC with:\n\n                                            AB = 1\n                                          sin A = x\n                                          sin B = y\n\n\n     Which of the following statements is/are correct?\n\n         I    For some choice of x and y, there is exactly one triangle the student\n              could draw.\n         II   For some choice of x and y, there are exactly two diﬀerent triangles\n              the student could draw.\n         III For some choice of x and y, there are exactly three diﬀerent\n             triangles the student could draw.\n\n     (Note that congruent triangles are considered to be the same.)\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                            20"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A student chooses two distinct real numbers x and y with 0 < x < y < 1.\n\n     The student then attempts to draw a triangle ABC with:\n\n                                            AB = 1\n                                          sin A = x\n                                          sin B = y\n\n\n     Which of the following statements is/are correct?\n\n         I    For some choice of x and y, there is exactly one triangle the student\n              could draw.\n         II   For some choice of x and y, there are exactly two diﬀerent triangles\n              the student could draw.\n         III For some choice of x and y, there are exactly three diﬀerent\n             triangles the student could draw.\n\n     (Note that congruent triangles are considered to be the same.)"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Since we are only given a condition on sin A, the angle A could be acute or obtuse, and similarly\nfor angle B.\nLet us write θ = sin−1 x and ϕ = sin−1 y for the acute angles; the respective obtuse angles are\nthen 180◦ − θ and 180◦ − ϕ.\nAs we are given x < y, we have θ < ϕ.\nWe can now consider the four possible cases.\n\n•    Case 1: both A and B are acute. Then we have this situation:\n\n\n\n\n                                                            ϕ\n                                         θ\n                                A                 1                 B\n\n     We therefore know the three angles of the triangle ABC (as given two, we automati-\n     cally know the third) and one side, and this determines the triangle uniquely (regarding\n     congruent triangles as the same).\n     So we always obtain exactly one triangle from this case.\n•    Case 2: A is obtuse and B is acute. Then A = 180◦ − θ and we have this situation:\n\n\n\n\n                                                                         ϕ\n                                    θ\n                                             A               1                 B\n\n     Since θ < ϕ, the two lines (rays) from A and B shown in this diagram will never meet.\n     Alternatively, we could note that A + B = 180◦ − θ + ϕ, and since ϕ − θ > 0, this means\n     that the angles A and B sum to more than 180◦ .\n     Therefore this case can never produce a triangle.\n•    Case 3: A is acute and B is obtuse. Then B = 180◦ − ϕ and we have this situation:\n\n\n\n\n                                                                     ϕ\n                                 θ\n                          A               1                 B\n\n     Since θ < ϕ, the two lines (rays) from A and B shown will eventually meet, and so we get\n     a unique triangle. Alternatively, we have A + B = θ + 180◦ − ϕ = 180◦ − (ϕ − θ), and since\n     ϕ − θ > 0, this means that the angles A and B sum to less than 180◦ , so they can be two\n     angles of a triangle.\n     So we always obtain exactly one triangle from this case.\n\n\nVersion 1.0, March 2022                                                                  Page 22\n\f\nTest of Mathematics for University Admission, 2021 Paper 2 Solutions\n\n\n•    Case 4: A and B are both obtuse. This is impossible in a triangle.\n     Therefore this case can never produce a triangle.\n\nIn summary, cases 1 and 3 always produce a unique triangle, and cases 2 and 4 never produce a\ntriangle, so the student can always draw exactly two different triangles, regardless of the values\nof x and y.\nTherefore the correct answer is C.\n\n\n\n\nVersion 1.0, March 2022                                                                   Page 23"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        22,
+        23
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

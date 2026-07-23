@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p1-q11",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p1",
+  "edition": "specimen",
+  "paper": 1,
+  "questionNumber": 11,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "11.    The sum of the roots of the equation 2             8   2     15   0 is\n\n\n\n\n       A       3\n\n       B       8\n\n       C       2 log     2\n\n       D       log\n\n\n       E\n\n\n\n\n© UCLES 2017"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The sum of the roots of the equation 2             8   2     15   0 is"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "3"
+    },
+    {
+      "label": "B",
+      "rawText": "8"
+    },
+    {
+      "label": "C",
+      "rawText": "2 log     2"
+    },
+    {
+      "label": "D",
+      "rawText": "log"
+    },
+    {
+      "label": "E",
+      "rawText": "© UCLES 2017"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Writing y = 2x , the equation becomes y 2 −8y +15 = 0, which factorises to give (y −3)(y −5) = 0.\nThus y = 3 or y = 5, so 2x = 3 or 2x = 5.\nThe given options all use logarithms to base 10, so we will take logarithms of these two equations\n                                                          log10 3\nto base 10. The first gives x log10 2 = log10 3, so x =           . Likewise, the second equation\n                                                          log10 2\n          log10 5\ngives x =         . Finally, we can add these to obtain\n          log10 2\n\n                             log10 3 log10 15    log10 (3 × 5   log10 15\n                                     +         =              =\n                             log10 2   log10 2     log10 2       log10 2\n\nand the answer is option E.\nAn alternative is to take logarithms to base 2, giving the roots as log2 3 and log2 5. These sum\nto log2 15. Unfortunately, this is not one of the options offered, as they are all given using\nlogarithms to base 10. If you know the change of base rule for logarithms, though, which states\n              logc b\nthat loga b =        , you can put c = 10 to obtain the correct option.\n              logc a\n\n\n\n\nVersion 1.1, November 2020                                                                Page 13"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+      "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+      "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+      "pages": [
+        14
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

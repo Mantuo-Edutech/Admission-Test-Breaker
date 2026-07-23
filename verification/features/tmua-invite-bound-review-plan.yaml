@@ -1,0 +1,51 @@
+schemaVersion: 1
+feature:
+  id: tmua-invite-bound-review-plan
+  title: TMUA 邀请码私有训练计划
+  status: partial
+  userOutcome: 学生先填写课程信息；获得冰冰邀请码并注册后，可以在本站打开一份真实的六周训练计划，未授权或已撤销账号不能取得正文。
+run:
+  packageScript: verify:entitled-content
+claims:
+  - id: substantive-structured-product
+    status: verified
+    statement: 资料是版本化结构数据，包含六周、三十次训练、五类错误处方、课程体系调整与诚实 benchmark 边界，不是空白占位或外部链接。
+    artifacts:
+      - content/notes/tmua/six-week-review-plan-v1.json
+      - src/features/entitled-content/domain.ts
+      - tests/features/entitled-content/domain.test.ts
+    automatedChecks:
+      - verify:entitled-content
+  - id: server-side-entitlement-gate
+    status: verified
+    statement: 正文只保存在受保护的数据库 payload 中，浏览器角色不能直接查询；服务端函数根据当前用户的有效 entitlement 决定是否返回。
+    artifacts:
+      - supabase/migrations/20260718190000_entitled_content_delivery.sql
+      - src/features/entitled-content/supabase-entitled-content-service.ts
+      - supabase/tests/database/private_account_rls.test.sql
+    automatedChecks:
+      - verify:supabase
+      - verify:entitled-content
+  - id: full-invite-journey
+    status: verified
+    statement: 未登录、已登录但未授权、已授权和撤销后四种状态有独立结果；解锁完成页和账号页直接进入真实资料。
+    artifacts:
+      - src/features/entitled-content/pages/TmuaSixWeekPlanPage.tsx
+      - src/features/account/pages/AccessCompletePage.tsx
+      - src/features/account/pages/AccountPage.tsx
+      - tests/app/tmua-entitled-review-plan.test.tsx
+      - scripts/verify-supabase-local.ts
+    automatedChecks:
+      - verify:entitled-content
+      - verify:supabase
+boundaries:
+  - 邀请码只授予内容权限，不授予冰冰、老师、家长或 Agent 读取学生课程与作答数据的权限。
+  - 私有正文不进入 Vite 前端 bundle，也不放在 public 目录；页面不能把网络错误误报为未授权。
+  - 当前发布的是六周训练计划，不使用“完整 TMUA Notes”这一超出真实内容范围的名称。
+manualChecks:
+  - id: responsive-entitled-plan-review
+    status: pending
+    viewports:
+      - phone
+      - tablet
+      - desktop

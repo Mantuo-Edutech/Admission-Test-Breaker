@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q14",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 14,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "14   Consider the following statements about the polynomial p(x), where a < b:\n\n         I    p(a) ≤ p(b)\n         II   p\u0002 (a) ≤ p\u0002 (b)\n         III p\u0002\u0002 (a) ≤ p\u0002\u0002 (b)\n\n     Which of these statements is a necessary condition for p(x) to be increasing for\n     a ≤ x ≤ b?\n\n     A none of them\n\n     B I only\n\n     C II only\n\n     D III only\n\n     E I and II only\n\n     F I and III only\n\n     G II and III only\n\n     H I, II and III\n\n\n\n\n                                            16"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following statements about the polynomial p(x), where a < b:\n\n         I    p(a) ≤ p(b)\n         II   p (a) ≤ p (b)\n         III p (a) ≤ p (b)\n\n     Which of these statements is a necessary condition for p(x) to be increasing for\n     a ≤ x ≤ b?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "none of them"
+    },
+    {
+      "label": "B",
+      "rawText": "I only"
+    },
+    {
+      "label": "C",
+      "rawText": "II only"
+    },
+    {
+      "label": "D",
+      "rawText": "III only"
+    },
+    {
+      "label": "E",
+      "rawText": "I and II only"
+    },
+    {
+      "label": "F",
+      "rawText": "I and III only"
+    },
+    {
+      "label": "G",
+      "rawText": "II and III only"
+    },
+    {
+      "label": "H",
+      "rawText": "I, II and III"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "A necessary condition is one which must follow. To show that a condition is not necessary, we\nneed to exhibit a counterexample, while to show that a condition is necessary, we need to give\na justification.\n\nI    If p(x) is increasing for a ≤ x ≤ b, the value of the polynomial is not decreasing in this\n     interval, so we must have p(a) ≤ p(b), and this is therefore a necessary condition.\n\nII   A quadratic such as p(x) = 9−x2 provides a counterexample: it is increasing for −3 ≤ x ≤ 0,\n     but p(−3) > 0 while p(0) = 0. Hence this is not a necessary condition.\n\nIII It is not clear why this should be the case, and we need to look beyond quadratics (as p00 (x)\n    is constant for every quadratic). Let us see if we can construct a counterexample. Let us\n    take p00 (x) = −x, so that it is decreasing. Then p0 (x) = − 21 x2 + c, giving p(x) = − 16 x3 + cx.\n    (There is a further constant of integration here, but we can choose it to be zero, as it has\n    no impact on where p(x) is increasing.)\n     If we now choose some c > 1, then p0 (x) will be positive for 0 ≤ x ≤ 1, so p(x) will be\n     increasing there, yet p00 (0) < p00 (1).\n     Therefore this condition is not necessary.\n\nAnother way of thinking about this is: to say that p(x) is increasing for a ≤ x ≤ b only tells us\nabout the function values; it does not tell us anything about the derivatives, so neither II nor\nIII could possibly be necessary conditions.\nEither way, the correct answer is B.\n\n\n\n\nc UCLES                                                                                       Page 18"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        18
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

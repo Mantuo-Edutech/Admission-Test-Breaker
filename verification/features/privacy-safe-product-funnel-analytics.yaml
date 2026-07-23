@@ -1,0 +1,62 @@
+schemaVersion: 1
+feature:
+  id: privacy-safe-product-funnel-analytics
+  title: 满托隐私安全转化看板
+  status: partial
+  userOutcome: 获得独立授权的满托运营者可以按 7、30、90 天查看五项考试的六个固定转化动作聚合数，而不能识别学生或读取课程、答案和学习数据。
+run:
+  packageScript: verify:funnel-analytics
+claims:
+  - id: separate-aggregate-viewer-capability
+    status: verified
+    statement: 转化看板使用独立的可撤销 viewer capability；普通学生、匿名访客和仅有邀请码运营权限的账号不会自动获得访问。
+    artifacts:
+      - supabase/migrations/20260719193000_product_funnel_viewer_workflow.sql
+      - supabase/tests/database/product_funnel_viewer_workflow.test.sql
+      - src/features/product-funnel/supabase-analytics-service.ts
+      - tests/features/product-funnel/analytics.test.ts
+    automatedChecks:
+      - verify:supabase-contracts
+      - verify:supabase
+      - verify:funnel-analytics
+  - id: aggregate-only-funnel-read-model
+    status: verified
+    statement: 服务端只返回按考试和六类固定动作分组的事件数与去重 Journey 数；浏览器不能读取原始事件、任意 context、账号或 Learner Space 数据。
+    artifacts:
+      - supabase/migrations/20260719150000_privacy_safe_product_funnel.sql
+      - supabase/migrations/20260719193000_product_funnel_viewer_workflow.sql
+      - src/features/product-funnel/analytics-domain.ts
+      - src/features/product-funnel/supabase-analytics-service.ts
+      - tests/architecture/supabase-contracts.test.ts
+      - supabase/tests/database/product_funnel_viewer_workflow.test.sql
+    automatedChecks:
+      - verify:supabase-contracts
+      - verify:supabase
+      - verify:funnel-analytics
+  - id: founder-operable-conversion-dashboard
+    status: verified
+    statement: 私有看板按总体和 TMUA、ESAT、TARA、LNAT、UCAT 展示六个固定 Journey 动作，支持 7、30、90 天窗口，并在账号页通过独立权限检查后出现入口。
+    artifacts:
+      - src/features/product-funnel/pages/ProductFunnelAnalyticsPage.tsx
+      - src/features/account/pages/AccountPage.tsx
+      - src/app/routes.tsx
+      - src/styles/practice.css
+      - tests/app/product-funnel-analytics-page.test.tsx
+      - tests/app/product-funnel-analytics-layout-contract.test.ts
+      - tests/app/account-lifecycle.test.tsx
+    automatedChecks:
+      - verify:funnel-analytics
+      - test
+boundaries:
+  - Journey 数不是学生人数；各阶段独立去重，不宣称严格同 cohort 转化率。
+  - 看板没有账号、Learner Space、邮箱、课程、答案、IP、User-Agent、设备或自由文本字段。
+  - viewer capability 不授予邀请码签发、学生数据、entitlement、反馈或原始漏斗事件访问权。
+  - 生产上线前仍需为批准账号启用 MFA、由 service-role 授予 viewer、部署 migration 并复验撤销和 90 天清理。
+manualChecks:
+  - id: real-device-founder-dashboard-uat
+    status: pending
+    evidence: 由创始人或指定运营负责人在真实电脑、iPad 和手机上检查 7/30/90 天切换、五考试可读性、键盘顺序和窄屏无横向溢出。
+    viewports:
+      - 390x844
+      - 820x1180
+      - 1440x900

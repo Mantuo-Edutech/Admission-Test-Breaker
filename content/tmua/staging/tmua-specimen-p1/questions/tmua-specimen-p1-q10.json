@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p1-q10",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p1",
+  "edition": "specimen",
+  "paper": 1,
+  "questionNumber": 10,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "10.    The curve         cos is reflected in the line         1 and the resulting curve is then\n       translated by         units in the positive ‐direction. The equation of this new curve is\n\n\n\n\n       A             2   cos\n\n\n       B             2   cos\n\n\n       C             2   cos\n\n\n       D             2   cos\n\n."
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The curve         cos is reflected in the line         1 and the resulting curve is then\n       translated by         units in the positive ‐direction. The equation of this new curve is"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "2   cos"
+    },
+    {
+      "label": "B",
+      "rawText": "2   cos"
+    },
+    {
+      "label": "C",
+      "rawText": "2   cos"
+    },
+    {
+      "label": "D",
+      "rawText": "2   cos\n\n."
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "When the graph is reflected in the line y = 1, we obtain the following:\n\n                                                  y\n\n                                                  3\n\n                                                  2\n\n                                                  1\n                                                                                x\n                   −2π           −π               0           π            2π\n\n\n\n\nWe can find the equation of the reflected curve in a variety of ways. One is to observe that the\nreflection is centred about y = 2, as the values go from y = 1 to y = 3. The cosine curve is\n‘upside-down’, so the equation must be y = −(cos x) + 2 = 2 − cos x.\nAnother way to see this is as follows. The refletion of y = f(x) in the x-axis (y = 0) is y = −f(x).\nWhen the line of reflection is translated, the whole reflection is translated. Since y = 0 is\ntransformed to y = 2, the reflection of the function must be translated to give y = 2 − f(x).\nThe result is then translated by π4 in the positive x-direction, so that x is replaced by x − π4 .\n(We can see this because the new x = π4 corresponds to the old x = 0.)\nTherefore, the equation of the resulting graph is\n                                                  \u0010    π\u0011\n                                       y = 2 − cos x −    .\n                                                       4\nThus the correct answer is option D.\n\n\n\n\nVersion 1.1, November 2020                                                                  Page 12"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-specimen.pdf",
+      "sha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-specimen.pdf",
+      "sha256": "d628203f6777a26dc0459410a598a9d6824f86dd0e62ef9a3ddd8350d0415585",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

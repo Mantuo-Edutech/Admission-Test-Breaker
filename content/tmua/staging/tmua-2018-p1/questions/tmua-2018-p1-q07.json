@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p1-q07",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p1",
+  "edition": "2018",
+  "paper": 1,
+  "questionNumber": 7,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "7   The non-zero constant k is chosen so that the coeﬃcients of x6 in the expansions of\n    (1 + kx2 )7 and (k + x)10 are equal.\n\n    What is the value of k ?\n\n        1\n    A   6\n\n    B 6\n        √\n          6\n    C    6\n        √\n    D       6\n        √\n          30\n    E    30\n        √\n    F       30\n\n\n\n\n                                           9"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The non-zero constant k is chosen so that the coeﬃcients of x6 in the expansions of\n    (1 + kx2 )7 and (k + x)10 are equal.\n\n    What is the value of k ?\n\n        1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "6"
+    },
+    {
+      "label": "B",
+      "rawText": "6\n        √\n          6"
+    },
+    {
+      "label": "C",
+      "rawText": "6\n        √"
+    },
+    {
+      "label": "D",
+      "rawText": "6\n        √\n          30"
+    },
+    {
+      "label": "E",
+      "rawText": "30\n        √"
+    },
+    {
+      "label": "F",
+      "rawText": "30"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can expand these two expressions using the binomial theorem. We look just at the term\ninvolving x6 :\n                                               \u0012 \u0013\n                                                7 4\n                         (1 + kx2 )7 = · · · +       1 (kx2 )3 + · · ·\n                                                3\n                                               7×6×5 3 6\n                                     = ··· +              k x + ···\n                                               3×2×1\n                                     = · · · + 35k 3 x6 + · · ·\n\nand\n                                               \u0012 \u0013\n                                10               10 4 6\n                          (k + x)    = ··· +          k x + ···\n                                                 6\n                                               \u0012 \u0013\n                                                 10 4 6\n                                     = ··· +          k x + ···\n                                                 4\n                                               10 × 9 × 8 × 7 4 6\n                                     = ··· +                     k x + ···\n                                                4×3×2×1\n                                     = · · · + 210k 4 x6 + · · ·\n\nWe therefore need\n                                          35k 3 = 210k 4\n       35     5    1\nso k =     =     = .\n       210    30   6\nThus the correct answer is A.\n\n\n\n\nVersion 1.0, April 2019                                                           Page 9\n\n                                                                             © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2018.pdf",
+      "sha256": "b3d0e5b525e07cec4e6dbbac3cd5073cc15cd918c797b3802770810e57b11134",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2018.pdf",
+      "sha256": "d7985d777f99ef4c366ebc5e87e138d4a73139eb41d73a4ecf987baf25fbaaa3",
+      "pages": [
+        10
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

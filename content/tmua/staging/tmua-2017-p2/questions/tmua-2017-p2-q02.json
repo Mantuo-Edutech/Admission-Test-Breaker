@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q02",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 2,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "2      P QRS is a rectangle.\n\n        The coordinates of P and Q are (0, 6) and (1, 8) respectively.\n\n        The perpendicular to P Q at Q meets the x-axis at R.\n\n        What is the area of P QRS?\n\n               5\n        A      2\n           √\n        B 4 10\n\n        C 20\n           √\n        D 8 10\n\n        E      40\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                    \u0017"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "P QRS is a rectangle.\n\n        The coordinates of P and Q are (0, 6) and (1, 8) respectively.\n\n        The perpendicular to P Q at Q meets the x-axis at R.\n\n        What is the area of P QRS?\n\n               5"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "2\n           √"
+    },
+    {
+      "label": "B",
+      "rawText": "4 10"
+    },
+    {
+      "label": "C",
+      "rawText": "20\n           √"
+    },
+    {
+      "label": "D",
+      "rawText": "8 10"
+    },
+    {
+      "label": "E",
+      "rawText": "40\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "A quick sketch (not drawn to scale) may help us here.\n\n                                y\n                                    Q(1, 8)\n\n\n                     P (0, 6)\n\n\n\n\n                                                                                  x\n                                0                                       R(r, 0)\n\n                                                                    S\n\n                 √          √\nP Q has length    12 + 22 = 5 by Pythagoras’s theorem.\n                        8−6\nThe gradient of P Q is        = 2, so QR has gradient − 21\n                        1−0\nWe could now find the coordinates of R by finding the equation of the line QR and substituting\nin y = 0 to find the x-coordinate of R.\n\n\nAlternatively, if we set the coordinates of R to be (r, 0), we can just use the known gradient of\nQR to find r:\n                                            0−8       1\n                                                 =−\n                                            r−1       2\n    8\nso r−1 = 12 giving r − 1 = 16, hence r = 17\nTherefore the length QR is\n                     p                    p            p           √\n                        (r − 1)2 + (−8)2 = 162 + 82 = 8 22 + 12 = 8 5\n                                   √     √\nwhich gives the area of P QRS as 5 × 8 5 = 40, and the answer is E.\nInterestingly, it turns out that we only actually needed r − 1; we did not need to know the actual\ncoordinates of R.\n\n\n\n\nVersion 1.0, April 2019                                                                    Page 4\n\n                                                                                      © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

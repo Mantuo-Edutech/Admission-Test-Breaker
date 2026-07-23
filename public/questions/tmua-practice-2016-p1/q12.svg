@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 250" role="img" aria-labelledby="title desc">
+  <title id="title">Cylinder inscribed in a sphere</title><desc id="desc">A rectangular cross-section of a cylinder inside a circular cross-section of a sphere.</desc>
+  <g fill="none" stroke="#292437" stroke-width="3"><circle cx="210" cy="125" r="105"/><rect x="90" y="58" width="240" height="134"/><line x1="210" y1="125" x2="330" y2="58" stroke-dasharray="7 7"/></g>
+  <text x="265" y="90" fill="#62528b" font-family="serif" font-size="21">5 cm</text>
+</svg>

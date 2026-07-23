@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q09",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 9,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "9      Consider the following attempt to prove this true theorem:\n\n               Theorem: a3 + b3 = c3 has no solutions with a, b and c positive integers.\n\n               Attempted proof:\n               Suppose that there are positive integers a, b and c such that a3 + b3 = c3 .\n               I      We have a3 = c3 − b3 .\n\n               II     Hence a3 = (c − b)(c2 + cb + b2 ).\n\n               III    It follows that a = c − b and a2 = c2 + cb + b2 , since a ⩽ a2 and\n                      c − b ⩽ c2 + cb + b2 .\n\n               IV     Eliminating a, we have (c − b)2 = c2 + cb + b2 .\n\n               V      Multiplying out, we have c2 − 2cb + b2 = c2 + cb + b2 .\n\n               VI     Hence 3cb = 0 so one of b and c is zero.\n               But this is a contradiction to the original assumption that all of a, b and c\n               are positive. It follows that the equation has no solutions.\n\n        Comment on this proof by choosing one of the following options:\n\n        A The proof is correct\n\n        B The proof is incorrect and the ﬁrst mistake occurs on line I.\n\n        C The proof is incorrect and the ﬁrst mistake occurs on line II.\n\n        D The proof is incorrect and the ﬁrst mistake occurs on line III.\n\n        E      The proof is incorrect and the ﬁrst mistake occurs on line IV.\n\n        F      The proof is incorrect and the ﬁrst mistake occurs on line V.\n\n        G The proof is incorrect and the ﬁrst mistake occurs on line VI.\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u0014\u0014                                       >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Consider the following attempt to prove this true theorem:\n\n               Theorem: a3 + b3 = c3 has no solutions with a, b and c positive integers.\n\n               Attempted proof:\n               Suppose that there are positive integers a, b and c such that a3 + b3 = c3 .\n               I      We have a3 = c3 − b3 .\n\n               II     Hence a3 = (c − b)(c2 + cb + b2 ).\n\n               III    It follows that a = c − b and a2 = c2 + cb + b2 , since a ⩽ a2 and\n                      c − b ⩽ c2 + cb + b2 .\n\n               IV     Eliminating a, we have (c − b)2 = c2 + cb + b2 .\n\n               V      Multiplying out, we have c2 − 2cb + b2 = c2 + cb + b2 .\n\n               VI     Hence 3cb = 0 so one of b and c is zero.\n               But this is a contradiction to the original assumption that all of a, b and c\n               are positive. It follows that the equation has no solutions.\n\n        Comment on this proof by choosing one of the following options:"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "The proof is correct"
+    },
+    {
+      "label": "B",
+      "rawText": "The proof is incorrect and the ﬁrst mistake occurs on line I."
+    },
+    {
+      "label": "C",
+      "rawText": "The proof is incorrect and the ﬁrst mistake occurs on line II."
+    },
+    {
+      "label": "D",
+      "rawText": "The proof is incorrect and the ﬁrst mistake occurs on line III."
+    },
+    {
+      "label": "E",
+      "rawText": "The proof is incorrect and the ﬁrst mistake occurs on line IV."
+    },
+    {
+      "label": "F",
+      "rawText": "The proof is incorrect and the ﬁrst mistake occurs on line V."
+    },
+    {
+      "label": "G",
+      "rawText": "The proof is incorrect and the ﬁrst mistake occurs on line VI.\n\n\n\n\n8&/(6                                                                             >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Commentary: This is Fermat’s Last Theorem for the case n = 3; it was first proven by\n      Euler in the 18th century. The attempted proof here, though, is deeply flawed, as we will\n      see.\n\nLine I is fine: this is a simple rearrangement.\nLine II is fine: this is a standard algebraic identity which is easy to check.\nLine III is problematic. It is certainly true that a ⩽ a2 and c − b < c + b ⩽ c2 + b2 < c2 + cb + b2 .\nIt is therefore plausible that a = c − b and a2 = c2 + cb + b2 , but it is far from necessary. Of\ncourse we cannot give an explicit example to show this, as there are no sets of positive integers\na, b and c with a3 + b3 = c3 . But we can observe that if c − b = 1, we must have a3 = c2 + bc + b3 ,\nand this possibility has not been considered; alternatively, we could consider a case where a is\nnot prime such as a = 6; then we can write a3 = 63 = 3 × 72, and we could have c − b = 3 and\nc2 + cb + b2 = 72. Either way, it does not necessarily follow that a = c − b and a2 = c2 + cb + b2 ,\nso this step is wrong.\nThe correct answer is D.\n\n\n\n\nVersion 1.0, April 2019                                                                      Page 11\n\n                                                                                         © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

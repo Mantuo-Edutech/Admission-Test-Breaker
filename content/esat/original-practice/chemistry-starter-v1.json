@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "esat-chemistry-starter-v1",
+  "exam": "ESAT",
+  "edition": "Chemistry Starter · Original v1",
+  "sectionLabel": "Chemistry · Original Diagnostic",
+  "sectionLabelZh": "化学 · 满托原创短诊断",
+  "durationMinutes": 20,
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本练习依据 ESAT Chemistry 公开范围独立命题，不复制或改写官方 Guide、ENGAA 或 NSAA 题面。",
+  "sourceAnchors": [
+    {
+      "id": "esat-content-specification",
+      "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+      "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+      "usedFor": "Chemistry scope boundary"
+    },
+    {
+      "id": "esat-guide-chemistry",
+      "localPath": "content/official/raw/esat/ESAT_GUIDE_Chemistry_June2025.pdf",
+      "sha256": "f1cfbc2ec1c44068526deeaac0b8ef7c87e245259cc89f9ed6b7c9124e359353",
+      "usedFor": "terminology and topic coverage only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "esat-chemistry-starter-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which statement correctly describes two isotopes of the same element?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They have the same number of protons but different numbers of neutrons." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They have the same number of neutrons but different numbers of protons." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They have different numbers of protons and electrons but the same mass number." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "They have identical proton, neutron and electron numbers." }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["chem-atomic", "chem-periodic"],
+      "skillTags": ["isotopes", "particle-counts"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-starter-v1.json"
+    },
+    {
+      "id": "esat-chemistry-starter-v1-q02",
+      "number": 2,
+      "sourcePage": 2,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which set of coefficients balances the equation " }, { "kind": "math", "tex": "\\mathrm{Al+O_2\\rightarrow Al_2O_3}" }, { "kind": "text", "value": " in that order?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1,1,1" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2,1,1" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2,3,2" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4,3,2" }] }] }
+      ],
+      "correctAnswer": "D",
+      "knowledgeTags": ["chem-equations"],
+      "skillTags": ["balancing-equations", "atom-conservation"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-starter-v1.json"
+    },
+    {
+      "id": "esat-chemistry-starter-v1-q03",
+      "number": 3,
+      "sourcePage": 3,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Approximately how many molecules are present in 0.50 mol of carbon dioxide? Use " }, { "kind": "math", "tex": "N_A=6.0\\times10^{23}\\ \\text{mol}^{-1}" }, { "kind": "text", "value": "." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1.2\\times10^{23}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3.0\\times10^{23}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "6.0\\times10^{23}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1.2\\times10^{24}" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["chem-quantitative"],
+      "skillTags": ["moles", "avogadro-constant"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-starter-v1.json"
+    },
+    {
+      "id": "esat-chemistry-starter-v1-q04",
+      "number": 4,
+      "sourcePage": 4,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Molten lead(II) bromide is electrolysed using inert electrodes. Which substance forms at the cathode, and what process occurs there?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Lead; reduction" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Lead; oxidation" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Bromine; reduction" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Bromine; oxidation" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["chem-redox", "chem-electrolysis"],
+      "skillTags": ["electrolysis", "half-equations"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-starter-v1.json"
+    },
+    {
+      "id": "esat-chemistry-starter-v1-q05",
+      "number": 5,
+      "sourcePage": 5,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Why does graphite conduct electricity?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Its carbon atoms form positive and negative ions." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It contains mobile delocalised electrons." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Its layers contain freely moving carbon atoms." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "It melts at room temperature to form mobile ions." }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["chem-bonding", "chem-particles"],
+      "skillTags": ["structure-property", "delocalised-electrons"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-starter-v1.json"
+    },
+    {
+      "id": "esat-chemistry-starter-v1-q06",
+      "number": 6,
+      "sourcePage": 6,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Which statement about the Group 7 elements is correct?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Their reactivity increases down the group." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Their atoms lose one electron when they react." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Chlorine can displace bromide ions from solution." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Iodine is more reactive than chlorine." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["chem-groups", "chem-periodic"],
+      "skillTags": ["halogens", "displacement"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-starter-v1.json"
+    },
+    {
+      "id": "esat-chemistry-starter-v1-q07",
+      "number": 7,
+      "sourcePage": 7,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "In a chromatography experiment, a spot moves 3.0 cm while the solvent front moves 5.0 cm. What is the spot's " }, { "kind": "math", "tex": "R_f" }, { "kind": "text", "value": " value?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.40" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.60" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1.67" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.0" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["chem-separation"],
+      "skillTags": ["chromatography", "ratio"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-starter-v1.json"
+    },
+    {
+      "id": "esat-chemistry-starter-v1-q08",
+      "number": 8,
+      "sourcePage": 8,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "25.0 cm³ of 0.20 mol dm⁻³ hydrochloric acid is exactly neutralised by 25.0 cm³ of sodium hydroxide solution. What is the concentration of the sodium hydroxide?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.05\\ \\text{mol dm}^{-3}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.10\\ \\text{mol dm}^{-3}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.20\\ \\text{mol dm}^{-3}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.40\\ \\text{mol dm}^{-3}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["chem-acids", "chem-quantitative"],
+      "skillTags": ["neutralisation", "concentration"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-starter-v1.json"
+    },
+    {
+      "id": "esat-chemistry-starter-v1-q09",
+      "number": 9,
+      "sourcePage": 9,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Why does increasing temperature usually increase the rate of a reaction?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "Every collision has more energy than the activation energy." }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The activation energy becomes zero." }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A greater fraction of particles have energy at least equal to the activation energy." }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "The reacting particles become larger." }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["chem-rates", "chem-particles"],
+      "skillTags": ["collision-theory", "activation-energy"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-starter-v1.json"
+    },
+    {
+      "id": "esat-chemistry-starter-v1-q10",
+      "number": 10,
+      "sourcePage": 10,
+      "prompt": [
+        { "kind": "paragraph", "runs": [{ "kind": "text", "value": "For the reaction " }, { "kind": "math", "tex": "\\mathrm{H_2+Cl_2\\rightarrow2HCl}" }, { "kind": "text", "value": ", the bond energies are " }, { "kind": "math", "tex": "\\mathrm{H-H}=436" }, { "kind": "text", "value": ", " }, { "kind": "math", "tex": "\\mathrm{Cl-Cl}=243" }, { "kind": "text", "value": " and " }, { "kind": "math", "tex": "\\mathrm{H-Cl}=431\\ \\text{kJ mol}^{-1}" }, { "kind": "text", "value": ". What is the enthalpy change?" }] }
+      ],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-183\\ \\text{kJ mol}^{-1}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "+183\\ \\text{kJ mol}^{-1}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "-679\\ \\text{kJ mol}^{-1}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "+862\\ \\text{kJ mol}^{-1}" }] }] }
+      ],
+      "correctAnswer": "A",
+      "knowledgeTags": ["chem-energetics"],
+      "skillTags": ["bond-energies", "enthalpy-change"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/chemistry-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/chemistry-starter-v1.json"
+    }
+  ]
+}

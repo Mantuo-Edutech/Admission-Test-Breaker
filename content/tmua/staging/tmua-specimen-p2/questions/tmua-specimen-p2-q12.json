@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-specimen-p2-q12",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-specimen-p2",
+  "edition": "specimen",
+  "paper": 2,
+  "questionNumber": 12,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "12.    A polynomial ( ) has the property that    (1) = 2.\n\n       Which one of the following can be deduced from this?\n\n\n       A        ( ) = ( − 1) ( ) + 2 for some polynomial ( ).\n\n       B        ( ) = ( + 1) ( ) + 2 for some polynomial ( ).\n\n       C        ( ) = ( − 1) ( ) − 2 for some polynomial ( ).\n\n       D        ( ) = ( + 1) ( ) − 2 for some polynomial ( ).\n\n       E        ( ) = ( − 2) ( ) + 1 for some polynomial ( ).\n\n       F        ( ) = ( + 2) ( ) + 1 for some polynomial ( ).\n\n       G        ( ) = ( − 2) ( ) − 1 for some polynomial ( ).\n\n       H        ( ) = ( + 2) ( ) − 1 for some polynomial ( ).\n\n\n\n\n© UCLES 2017"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A polynomial ( ) has the property that    (1) = 2.\n\n       Which one of the following can be deduced from this?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "( ) = ( − 1) ( ) + 2 for some polynomial ( )."
+    },
+    {
+      "label": "B",
+      "rawText": "( ) = ( + 1) ( ) + 2 for some polynomial ( )."
+    },
+    {
+      "label": "C",
+      "rawText": "( ) = ( − 1) ( ) − 2 for some polynomial ( )."
+    },
+    {
+      "label": "D",
+      "rawText": "( ) = ( + 1) ( ) − 2 for some polynomial ( )."
+    },
+    {
+      "label": "E",
+      "rawText": "( ) = ( − 2) ( ) + 1 for some polynomial ( )."
+    },
+    {
+      "label": "F",
+      "rawText": "( ) = ( + 2) ( ) + 1 for some polynomial ( )."
+    },
+    {
+      "label": "G",
+      "rawText": "( ) = ( − 2) ( ) − 1 for some polynomial ( )."
+    },
+    {
+      "label": "H",
+      "rawText": "( ) = ( + 2) ( ) − 1 for some polynomial ( ).\n\n\n\n\n© UCLES 2017"
+    }
+  ],
+  "correctAnswer": "A",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "This is an application of the remainder theorem. If we divide p(x) by (x − 1), we get a quotient\nq(x) and a remainder r. We can write this as\n\n                                    p(x) = (x − 1)q(x) + r.\n\nIf we now substitute x = 1 into this identity, we obtain\n\n                                           p(1) = r,\n\nso we must have r = 2 (since we are told p(1) = 2). Therefore\n\n                       p(x) = (x − 1)q(x) + 2 for some polynomial q(x),\n\nwhich is option A.\nIt may be the case that some or all of B, D, E, F, G and H are also true, but we cannot deduce\nthis from the given information. C must be false, as if we substitute x = 1, we obtain 2 = −2.\n\n\n\n\n                                               15\n                                                                                    © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-specimen-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-specimen.pdf",
+      "sha256": "66324f2ddbaea5c3e60c287f87fc470e4ba71c86efd5eadef11d99ded763634f",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-specimen-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-specimen.pdf",
+      "sha256": "e8b15c8e90f9b9db850d28a1b58a13a0c82fdf03becc58aff15e64c206fc3cca",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-specimen-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-specimen.pdf",
+      "sha256": "2a23869beecb0a2b4360a7ab9a0a68f82f2a2bf96ab81378576aea76f6b2c508",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "19   Find the lowest positive integer for which x2 − 52x − 52 is positive.\n\n     A 26\n\n     B 27\n\n     C 51\n\n     D 52\n\n     E 53\n\n     F 54\n\n\n\n\n                                             21"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the lowest positive integer for which x2 − 52x − 52 is positive."
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "26"
+    },
+    {
+      "label": "B",
+      "rawText": "27"
+    },
+    {
+      "label": "C",
+      "rawText": "51"
+    },
+    {
+      "label": "D",
+      "rawText": "52"
+    },
+    {
+      "label": "E",
+      "rawText": "53"
+    },
+    {
+      "label": "F",
+      "rawText": "54"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let us write f(x) = x2 − 52x − 52. We first note that f(x) is a quadratic, and that f(0) = −52.\nWe might notice that f(52) = 522 − 522 − 52 = −52, or we could complete the square to find\nthat f(x) = (x − 26)2 − 262 − 52, so the line of symmetry is at x = 26, again giving f(52) = −52.\nIt follows that f(x) < 0 when 0 ≤ x ≤ 52 (and other values of x just outside this range).\nWe next check f(53). We have f(53) = 532 − 52 × 53 − 52 = 532 − 52 × 54. Now 52 × 54 =\n(53 − 1)(53 + 1) = 532 − 1, so f(53) = 532 − (532 − 1) = 1.\nTherefore 53 is the smallest integer for which f(x) > 0, and the correct answer is option E.\n\n\n\n\nVersion 1.0, April 2021                                                                  Page 21\n\n                                          © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        21
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-13T00:00:00.000Z",
+  "generatedAt": "2026-07-17T07:50:15.452Z",
   "baseline": {
     "pdfCount": 96,
     "uniqueContentCount": 46,
@@ -27,7 +27,7 @@
       "edition": "2017",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -54,7 +54,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -81,7 +81,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -108,7 +108,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -135,7 +135,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -161,7 +161,7 @@
       "edition": "2018",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -188,7 +188,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -215,7 +215,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -242,7 +242,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -268,7 +268,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -294,7 +294,7 @@
       "edition": "2019",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -321,7 +321,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -348,7 +348,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -375,7 +375,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -402,7 +402,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -429,7 +429,7 @@
       "edition": "2020",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -457,7 +457,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -485,7 +485,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -513,7 +513,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -541,7 +541,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -568,7 +568,7 @@
       "edition": "2021",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -596,7 +596,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -622,7 +622,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -650,7 +650,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -676,7 +676,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -705,7 +705,7 @@
       "edition": "2022",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -733,7 +733,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -761,7 +761,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -785,7 +785,7 @@
       "edition": "2023",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -813,7 +813,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -841,7 +841,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -867,7 +867,7 @@
       "documentType": "content_specification",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -893,7 +893,7 @@
       "edition": "practice-2016",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -920,7 +920,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -947,7 +947,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -974,7 +974,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -1001,7 +1001,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -1027,7 +1027,7 @@
       "edition": "specimen",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -1054,7 +1054,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -1082,7 +1082,7 @@
       "paper": 1,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -1109,7 +1109,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -1136,7 +1136,7 @@
       "paper": 2,
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -1160,7 +1160,7 @@
       "documentType": "answer_map",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -1184,7 +1184,7 @@
       "documentType": "teaching_textbook",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -1207,7 +1207,7 @@
       "documentType": "answer_map",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"
@@ -1231,7 +1231,7 @@
       "documentType": "topic_workbook",
       "reviewStatus": "needs_review",
       "audit": {
-        "generatedAt": "2026-07-13T00:00:00.000Z",
+        "generatedAt": "2026-07-17T07:50:15.452Z",
         "generatedBy": "tmua-corpus-cli",
         "schemaVersion": 1,
         "changeReason": "tmua:build"

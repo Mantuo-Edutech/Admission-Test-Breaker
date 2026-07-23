@@ -1,0 +1,81 @@
+schemaVersion: 1
+feature:
+  id: esat-mathematics-1-starter
+  title: Original ESAT Mathematics 1 starter diagnostic
+  status: partial
+  userOutcome: >-
+    A student who has selected an ESAT programme and modules can start a free,
+    native 10-question Mathematics 1 diagnostic, keep timing and answer events,
+    submit it, and receive a factual basic result without leaving the website.
+
+run:
+  packageScript: verify:esat-starter
+
+claims:
+  - id: original-scope-mapped-content
+    status: verified
+    statement: >-
+      Ten Mantou-original questions cover all seven top-level Mathematics 1 areas.
+      The content is labelled as a teaching preview, cites SHA-pinned official scope
+      anchors for boundary checking only, and contains no source-PDF blocks.
+    artifacts:
+      - content/esat/original-practice/mathematics-1-starter-v1.json
+      - src/features/practice/content/esat-mathematics-1-starter.ts
+      - tests/features/practice/content/esat-mathematics-1-starter.test.ts
+    automatedChecks:
+      - verify:esat-starter
+      - verify:esat-assets
+      - typecheck
+
+  - id: shared-native-practice-kernel
+    status: verified
+    statement: >-
+      The starter is registered in the shared practice kernel and therefore uses
+      the same question rendering, KaTeX, answer changes, marking, active timing,
+      durable learner storage, submission, factual result and question-feedback
+      pathways as the verified TMUA papers.
+    artifacts:
+      - src/features/practice/content/practice-paper-registry.ts
+      - src/features/practice/pages/PracticePage.tsx
+      - src/features/practice/pages/ResultsPage.tsx
+      - tests/app/practice-page.test.tsx
+      - tests/app/results-page.test.tsx
+    automatedChecks:
+      - verify:esat-starter
+      - verify:supabase-contracts
+      - build
+
+  - id: profile-first-visible-entry
+    status: verified
+    statement: >-
+      The ESAT library shows the starter only after a programme/module plan exists,
+      presents exact 10-question and 20-minute scope, and links directly into the
+      native exercise instead of a PDF or external site.
+    artifacts:
+      - src/features/catalog/pages/EsatPastPapersPage.tsx
+      - tests/app/multi-exam-practice-library.test.tsx
+      - content/products/catalog.json
+    automatedChecks:
+      - verify:esat-starter
+      - verify:content-products
+      - build
+
+boundaries:
+  - This is a Mantou-original starter diagnostic, not an official ESAT paper or a claim of official-equivalent difficulty.
+  - Basic answers and factual results are free; no personalised readiness, percentile or admissions prediction is inferred from ten questions.
+  - Independent mathematics-teacher, bilingual terminology and phone/tablet/desktop visual review remain before final publication status.
+  - Mathematics 2, Physics, Chemistry and Biology now have separate original teaching previews under the five-module feature; all five still require independent subject and device review.
+
+manualChecks:
+  - id: independent-mathematics-review
+    status: pending
+    evidence: A separate Mathematics 1 teacher must verify wording, distractors, difficulty spread and answer keys before this teaching preview becomes a final published diagnostic.
+    viewports:
+      - content
+  - id: browser-device-review
+    status: pending
+    evidence: Automated component, type, production-build and shared-kernel tests pass; desktop, tablet and phone visual review remains explicit.
+    viewports:
+      - desktop
+      - tablet
+      - phone

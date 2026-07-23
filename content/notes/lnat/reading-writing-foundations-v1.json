@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 1,
+  "id": "lnat-reading-writing-foundations-v1",
+  "version": "0.1.0",
+  "publicationStatus": "teaching-preview",
+  "examId": "lnat",
+  "examCycle": "Current LNAT preparation structure",
+  "titleZh": "LNAT 论证阅读与写作起点复习笔记",
+  "titleEn": "LNAT Argument Reading and Writing Starting Review Notes",
+  "subtitleZh": "从文章结构、证据边界、英文长句到 95+40 分钟的完整执行方法。",
+  "subtitleEn": "A practical starting path from argument structure and evidence boundaries to English sentence control and timed execution.",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本笔记以 LNAT 官方备考指南与官方 Practice Test Commentary 核对考试结构、能力边界和方法术语；双语解释、方法、例题和主动回忆均为满托独立创作，不复制或改写官方文章、题目、选项与讲解。官方原件只保存在内部研究区，不能从本站下载。",
+  "scope": {
+    "includedZh": "覆盖 Section A 论证阅读、Section B 限时写作、英语长难句与证据边界、95+40 分钟节奏四个模块；包含 21 个知识单元、12 套方法、4 道满托原创逐步例题和 12 组主动回忆。",
+    "includedEn": "A four-module starting map for Section A argument reading, Section B timed writing, EAL evidence control and the 95+40 minute execution plan.",
+    "remainingZh": "这不是完整教材或正式全真模考。逐题型题组、更多长文章、完整作文范文与人工批改 rubric、下载版，以及独立阅读教师、写作教师、双语、相似度、学生理解和真实设备终审仍待完成；本页不进行机器评分、分数换算或录取判断。"
+  },
+  "officialAnchors": [
+    {
+      "id": "lnat-preparation-guide",
+      "title": "Your Guide to Preparing for the LNAT",
+      "sourceUrl": "https://lnat.ac.uk/wp-content/uploads/2014/05/Your-Guide-To-Preparing-For-The-LNAT.pdf",
+      "localPath": "content/official/raw/lnat/Your-Guide-To-Preparing-For-The-LNAT.pdf",
+      "sha256": "b876afae5e82ef0f43cb714c37ed26a08369b3d6714b40e1fca89288829ced08",
+      "usedForZh": "核对 LNAT 不要求法律学科知识、Section A 与 Section B 的能力目标，以及阅读、选择题与写作的官方备考原则。"
+    },
+    {
+      "id": "lnat-practice-commentary-2010",
+      "title": "Practice Tests 2010 Commentary",
+      "sourceUrl": "https://lnat.ac.uk/wp-content/uploads/2014/05/Practice-Tests-2010-Commentary.pdf",
+      "localPath": "content/official/raw/lnat/Practice-Tests-2010-Commentary.pdf",
+      "sha256": "a9e4447e2e53f9fd06bacd317814e961dad9174e76b487720b954a62d0f238a2",
+      "usedForZh": "核对先通读文章、跟踪主次论证、区分事实与观点、根据上下文判断语句作用，以及答案验证与排除法的边界。"
+    }
+  ],
+  "examFacts": [
+    {
+      "labelZh": "考查目标",
+      "labelEn": "What LNAT tests",
+      "valueZh": "考查理解、解释、分析和论证能力，不要求预先学习法律知识。",
+      "valueEn": "LNAT assesses comprehension, interpretation, analysis and argument rather than prior legal knowledge."
+    },
+    {
+      "labelZh": "Section A",
+      "labelEn": "Section A",
+      "valueZh": "95 分钟完成 42 道选择题，围绕 12 篇论证性文章，每篇通常 3–4 题。",
+      "valueEn": "42 multiple-choice questions across 12 argumentative passages in 95 minutes, usually three or four questions per passage."
+    },
+    {
+      "labelZh": "Section B",
+      "labelEn": "Section B",
+      "valueZh": "40 分钟从三道题中选一题写作；重点是简洁、平衡、有证据的说服性论证。",
+      "valueEn": "Choose one of three prompts and write for 40 minutes, building a concise, balanced and evidence-backed argument."
+    },
+    {
+      "labelZh": "证据原则",
+      "labelEn": "Evidence rule",
+      "valueZh": "Section A 的判断依据在文章中；不要用个人立场或文章外知识替代文本证据。",
+      "valueEn": "Section A answers are supported by the passage; personal views and outside knowledge must not replace textual evidence."
+    },
+    {
+      "labelZh": "历史资料边界",
+      "labelEn": "Historic-source boundary",
+      "valueZh": "本页用历史官方指南说明稳定的能力和方法，并以当前站内考试结构登记核对时长与题量；不把旧资料当作当年录取或评分政策。",
+      "valueEn": "Historic official guidance is used for stable skills and methods, not as current admissions or scoring policy."
+    }
+  ],
+  "curriculumBridges": [
+    {
+      "curriculum": "A-Level / IAL",
+      "status": "partial",
+      "statusZh": "论证型学科可迁移，LNAT 证据边界需专练",
+      "likelyCoveredZh": [
+        "English Literature、History、Economics、Politics 等课程能迁移主旨、证据、观点与段落分析。",
+        "学校 essay 能迁移 thesis、topic sentence、counterargument 与 judgement。"
+      ],
+      "confirmZh": [
+        "能否把文学赏析切换为“文章明确支持什么”，不评价文风或作者人格。",
+        "能否识别限定词、否定题干、推断强度和看似正确但超出范围的选项。",
+        "能否在 40 分钟内完成选题、计划、成文与检查。"
+      ],
+      "firstActionZh": "先用本页 Section A 方法做一篇短文，再用 Section B 框架写一份 8 分钟计划。"
+    },
+    {
+      "curriculum": "IB Diploma",
+      "status": "strong-start",
+      "statusZh": "TOK 与 Extended Essay 提供较强起点",
+      "likelyCoveredZh": [
+        "TOK、Language A、History 与 Extended Essay 可迁移 claim、evidence、assumption 和 counterclaim。",
+        "IB 写作中的 qualification、evaluation 与 balanced judgement 可直接帮助 Section B。"
+      ],
+      "confirmZh": [
+        "开放式讨论习惯是否会导致 Section A 过度推断，而不是选择唯一被支持的答案。",
+        "能否在陌生主题下快速提取文章结构，而不是依赖学科背景。",
+        "能否压缩背景说明，把篇幅留给推理链和反方回应。"
+      ],
+      "firstActionZh": "把一段 TOK 论证画成主结论—理由—反方图，再训练每个箭头是否由原文支持。"
+    },
+    {
+      "curriculum": "AP / US High School",
+      "status": "strong-start",
+      "statusZh": "AP 阅读写作基础可直接迁移",
+      "likelyCoveredZh": [
+        "AP English Language 可迁移 rhetorical situation、claim、evidence、qualification 与作者态度。",
+        "AP History 与社会科学 DBQ/LEQ 可迁移证据组织、反方和结论判断。"
+      ],
+      "confirmZh": [
+        "是否能把修辞效果分析转成严格的文本支持关系。",
+        "是否熟悉英式题干中的 implied、inferred、concluded、except 与 least supported。",
+        "能否避免把课堂背景知识带进 Section A。"
+      ],
+      "firstActionZh": "先建立题干动词与证据强度对照表，再用排除法记录每个错误选项错在哪里。"
+    },
+    {
+      "curriculum": "其他课程体系 / Other curricula",
+      "status": "partial",
+      "statusZh": "不依赖特定学科，但需验证英文论证阅读",
+      "likelyCoveredZh": [
+        "中文议论文中的观点、理由、例证、让步和结论可以迁移为论证骨架。",
+        "日常英文阅读能提供词汇和句法起点，法律知识不是前置条件。"
+      ],
+      "confirmZh": [
+        "是否能拆解带插入语、指代、转折和多重限定的英文长句。",
+        "是否能区分作者说了什么、暗示了什么、以及你个人认为应该是什么。",
+        "是否有持续 95 分钟处理 12 篇陌生文章的节奏。"
+      ],
+      "firstActionZh": "先完成 EAL 模块的长句和限定词自查，再进入 Section A 原创起点练习。"
+    }
+  ],
+  "modules": [
+    {
+      "id": "lnat-section-a",
+      "number": "01",
+      "titleZh": "Section A 论证阅读",
+      "titleEn": "Section A Argument Reading",
+      "summaryZh": "先还原文章怎样得出结论，再让每一个选项回到原文接受验证。",
+      "learningOutcomes": [
+        "识别主旨、主结论、理由、例证和反方在文章中的位置。",
+        "区分明确陈述、合理推断与超出文章范围的判断。",
+        "用原文证据验证答案，并说清其余选项错在哪里。"
+      ],
+      "knowledgeUnits": [
+        { "id": "lnat-a-argument-map", "code": "A1", "labelZh": "主次论证结构", "labelEn": "Main and Subsidiary Argument Structure" },
+        { "id": "lnat-a-main-point", "code": "A2", "labelZh": "主旨与核心主张", "labelEn": "Main Point and Central Claim" },
+        { "id": "lnat-a-purpose-role", "code": "A3", "labelZh": "语句目的与作用", "labelEn": "Purpose and Role of a Statement" },
+        { "id": "lnat-a-inference", "code": "A4", "labelZh": "陈述、暗示与推断", "labelEn": "Statement, Implication and Inference" },
+        { "id": "lnat-a-fact-opinion", "code": "A5", "labelZh": "事实、观点与作者态度", "labelEn": "Fact, Opinion and Writer Attitude" },
+        { "id": "lnat-a-distractors", "code": "A6", "labelZh": "选项边界与干扰项", "labelEn": "Answer Boundaries and Distractors" }
+      ],
+      "methods": [
+        {
+          "nameZh": "先通读，再画四格论证图",
+          "nameEn": "Skim first, then map four argument roles",
+          "signalZh": "文章较长，细节很多，读完却说不出作者为何写这篇文章。",
+          "methodZh": "第一遍只标记主题、核心主张、主要理由和转折/反方；第二遍只回到题目指定位置精读，不逐句翻译全文。",
+          "checkZh": "能否用一句话说出作者希望读者接受什么，以及最关键的两条支持理由？"
+        },
+        {
+          "nameZh": "把题干动词转换成证据门槛",
+          "nameEn": "Translate task verbs into evidence thresholds",
+          "signalZh": "题干使用 stated、implied、inferred、concluded 或 purpose。",
+          "methodZh": "stated 要求可直接定位；implied/inferred 允许最小的一步推导；concluded 要求整段支持；purpose 要说明该句在论证中做了什么。",
+          "checkZh": "如果需要两步以上补充常识才能成立，通常已经越过文章证据边界。"
+        },
+        {
+          "nameZh": "答案回原文，错误项做错因标签",
+          "nameEn": "Return answers to the text and label distractor errors",
+          "signalZh": "两个选项都似乎合理，或你只是凭语感选择。",
+          "methodZh": "为候选答案指出具体句子与逻辑连接；其余选项标记为范围过大、绝对化、方向相反、只说到局部、偷换概念或依赖外部知识。",
+          "checkZh": "正确项不仅主题相关，而且准确回答题干；错误项必须能说明具体错法。"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "lnat-a-original-city-trees",
+          "titleZh": "满托原创例题：城市树木段落中的语句作用",
+          "titleEn": "Mantou Original: The Role of a Sentence in an Urban Trees Argument",
+          "problemZh": "段落：城市不应只按短期维护成本决定是否保留行道树。成熟树木能降低夏季路面温度，也能减少暴雨径流。确实，树根有时会损坏人行道；但这说明城市需要更好的树种和种植规划，而不是减少树木。问题：提到树根损坏人行道，在论证中主要起什么作用？",
+          "problemEn": "A short argument says cities should not decide whether to retain street trees only by short-term maintenance cost. It acknowledges pavement damage from roots before arguing for better species and planning. What role does that acknowledgement play?",
+          "steps": [
+            { "labelZh": "第 1 步：找主张", "bodyZh": "主张是不能只看短期维护成本，更不能因此减少树木。" },
+            { "labelZh": "第 2 步：识别转折", "bodyZh": "“确实”引入对方最有力的实际问题；“但”随后限制这个问题能推出的结论。" },
+            { "labelZh": "第 3 步：描述作用", "bodyZh": "该句承认一个反方理由，使后面的回应更有针对性；它不是作者最终支持减少树木的证据。" }
+          ],
+          "answerZh": "它承认一个可能支持减少树木的反方顾虑，并为作者提出“改善规划而非减少树木”的回应搭台。",
+          "trapZh": "只因为句子提到损坏，就把它误判为作者反对保留树木的主理由。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "stated 与 inferred 的证据门槛有何不同？", "promptEn": "How do the evidence thresholds for stated and inferred differ?", "answerZh": "stated 必须能直接定位；inferred 允许由明确文本完成最小、必要的一步推导，但不能依赖外部常识。", "answerEn": "Stated information is directly located; an inference allows a minimal necessary step from the text, not outside knowledge." },
+        { "promptZh": "为什么“主题相关”不等于答案正确？", "promptEn": "Why is topic relevance not enough for a correct answer?", "answerZh": "选项还必须准确回应题干，并符合原文的范围、强度和方向。", "answerEn": "The option must answer the task and match the passage's scope, strength and direction." },
+        { "promptZh": "第一遍通读应该标记哪四类信息？", "promptEn": "What four roles should the first skim identify?", "answerZh": "主题、核心主张、主要理由，以及转折或反方。", "answerEn": "Topic, central claim, main reasons, and a turn or counter-position." }
+      ]
+    },
+    {
+      "id": "lnat-section-b",
+      "number": "02",
+      "titleZh": "Section B 限时论证写作",
+      "titleEn": "Section B Timed Argument Writing",
+      "summaryZh": "选最能形成清楚论证的题，而不是情绪最强或背景知识最炫的题。",
+      "learningOutcomes": [
+        "在三题中快速判断可用论点、例证与反方空间。",
+        "用 thesis—reasons—counterargument—judgement 搭建完整论证。",
+        "在有限时间内完成简洁、有控制力并经过检查的英文文章。"
+      ],
+      "knowledgeUnits": [
+        { "id": "lnat-b-prompt-choice", "code": "B1", "labelZh": "选题与问题拆解", "labelEn": "Prompt Choice and Question Decomposition" },
+        { "id": "lnat-b-thesis", "code": "B2", "labelZh": "明确且可限定的主张", "labelEn": "A Clear and Qualified Thesis" },
+        { "id": "lnat-b-reasons-evidence", "code": "B3", "labelZh": "理由、例证与解释", "labelEn": "Reasons, Examples and Explanation" },
+        { "id": "lnat-b-counterargument", "code": "B4", "labelZh": "反方与回应", "labelEn": "Counterargument and Response" },
+        { "id": "lnat-b-paragraph-logic", "code": "B5", "labelZh": "段落逻辑与衔接", "labelEn": "Paragraph Logic and Cohesion" },
+        { "id": "lnat-b-judgement", "code": "B6", "labelZh": "权衡与最终判断", "labelEn": "Evaluation and Final Judgement" }
+      ],
+      "methods": [
+        {
+          "nameZh": "用三列表选题",
+          "nameEn": "Choose the prompt with a three-column test",
+          "signalZh": "三道题中有一题让你情绪最强，但想不到可靠例子或反方。",
+          "methodZh": "每题各写立场、两条可解释的理由、一个反方；优先选择能快速形成完整论证的题，而非看起来最熟或最有争议的题。",
+          "checkZh": "两分钟后仍写不出反方或具体例子，就重新比较其他题。"
+        },
+        {
+          "nameZh": "每段完成 Claim—Why—Example—Limit",
+          "nameEn": "Build each paragraph as Claim–Why–Example–Limit",
+          "signalZh": "作文像观点清单，例子很多但没有说明为何支持结论。",
+          "methodZh": "先给段落主张，再解释因果机制，用一个具体例子落地，最后说明适用边界或对反方的让步。",
+          "checkZh": "删掉例子后仍能看到推理；保留例子时能看出它具体证明了什么。"
+        },
+        {
+          "nameZh": "先承认最强反方，再缩小其结论",
+          "nameEn": "Concede the strongest objection, then limit its conclusion",
+          "signalZh": "你只写“有人不同意，但他们错了”，或完全忽略明显反例。",
+          "methodZh": "准确陈述反方在什么条件下成立，再说明它为什么只要求例外、监管或边界，而不必推翻你的限定主张。",
+          "checkZh": "反方读者会认为你公平陈述了他的最好理由，而你的回应仍推动最终判断。"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "lnat-b-original-public-transport",
+          "titleZh": "满托原创例题：公共交通是否应在城市中心免费",
+          "titleEn": "Mantou Original: Should City-Centre Public Transport Be Free?",
+          "problemZh": "题目：城市中心的公共交通是否应对所有乘客免费？请设计一个可在 40 分钟内完成的论证骨架。",
+          "problemEn": "Prompt: Should public transport in city centres be free for all passengers? Build an argument outline suitable for a 40-minute essay.",
+          "steps": [
+            { "labelZh": "第 1 步：限定主张", "bodyZh": "不把问题写成“免费一定好”，而是主张：在拥堵严重、替代资金明确的城市中心，基础公共交通可以免费。" },
+            { "labelZh": "第 2 步：安排两条理由", "bodyZh": "理由一是价格下降能改变部分短途出行选择；理由二是低收入者能更公平地进入就业和公共服务。每条都要解释机制。" },
+            { "labelZh": "第 3 步：处理最强反方", "bodyZh": "反方指出免费会造成财政压力和过度使用。回应是设定区域边界、拥堵资金来源与运力门槛，而非宣称成本不存在。" },
+            { "labelZh": "第 4 步：形成判断", "bodyZh": "结论比较收益与条件：政策是否合理取决于能否持续融资、增加运力并确实替代私家车出行。" }
+          ],
+          "answerZh": "一个合格骨架应有可限定 thesis、两条被解释的理由、最强反方及回应，并在结尾给出带条件的权衡判断。",
+          "trapZh": "把作文写成交通优点清单，或堆砌城市案例却没有说明它们怎样支持主张。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "选题时最重要的三个可用资产是什么？", "promptEn": "What three usable assets matter when choosing a prompt?", "answerZh": "可辩护的立场、至少两条能解释的理由/例子，以及一个可以公平回应的反方。", "answerEn": "A defensible position, at least two explainable reasons or examples, and a counterargument you can answer fairly." },
+        { "promptZh": "例子后面为什么必须有解释？", "promptEn": "Why must an example be followed by explanation?", "answerZh": "例子本身只说明发生过什么；解释才建立它与段落主张之间的支持关系。", "answerEn": "An example says what happened; explanation shows how it supports the paragraph claim." },
+        { "promptZh": "限定主张比绝对主张更强的原因是什么？", "promptEn": "Why can a qualified thesis be stronger than an absolute one?", "answerZh": "它明确适用条件，能吸收真实反例，并让最终判断更精确、更可辩护。", "answerEn": "It states the conditions, accommodates real counterexamples and makes the judgement more defensible." }
+      ]
+    },
+    {
+      "id": "lnat-eal-bridge",
+      "number": "03",
+      "titleZh": "英语长句与证据边界",
+      "titleEn": "EAL Sentence and Evidence Bridge",
+      "summaryZh": "不追求逐词翻译，而是抓主干、限定、指代、转折和语气强度。",
+      "learningOutcomes": [
+        "拆出长句的主干命题与从属限定。",
+        "跟踪代词、指示词和逻辑连接词指向的内容。",
+        "区分 may、often、only、all 等词带来的证据强度。"
+      ],
+      "knowledgeUnits": [
+        { "id": "lnat-eal-sentence-core", "code": "E1", "labelZh": "长句主干与从属信息", "labelEn": "Sentence Core and Subordination" },
+        { "id": "lnat-eal-qualifiers", "code": "E2", "labelZh": "限定词与绝对词", "labelEn": "Qualifiers and Absolutes" },
+        { "id": "lnat-eal-reference", "code": "E3", "labelZh": "指代与概念跟踪", "labelEn": "Reference and Concept Tracking" },
+        { "id": "lnat-eal-tone", "code": "E4", "labelZh": "语气、态度与评价", "labelEn": "Tone, Attitude and Evaluation" },
+        { "id": "lnat-eal-outside-knowledge", "code": "E5", "labelZh": "文本证据与外部知识", "labelEn": "Textual Evidence and Outside Knowledge" }
+      ],
+      "methods": [
+        {
+          "nameZh": "先圈谓语，再恢复最短主干",
+          "nameEn": "Circle finite verbs and recover the shortest core",
+          "signalZh": "一句话跨三四行，插入语和从句让主语与结论失去联系。",
+          "methodZh": "先找主句谓语和主语，临时括起 which、although、because 等从属部分；读懂最短命题后，再逐层把限定加回去。",
+          "checkZh": "你能否先用十个左右英文词或一句中文复述主干，再说明每个从句限制了什么？"
+        },
+        {
+          "nameZh": "给强度词做可视化刻度",
+          "nameEn": "Place strength words on a visible scale",
+          "signalZh": "原文说 some/may/often，选项却写 all/must/always/only。",
+          "methodZh": "把可能性、频率、数量和排他性分别标出；选项只要在任一维度比原文更强，就需要额外证据。",
+          "checkZh": "逐词比较范围：有时不能推出总是，重要原因不能推出唯一原因。"
+        },
+        {
+          "nameZh": "把“我知道”与“作者说”分栏",
+          "nameEn": "Separate what I know from what the author says",
+          "signalZh": "某选项符合常识或你的课程知识，但文章没有明确支持。",
+          "methodZh": "草稿分成 Text 与 Outside 两栏；只有 Text 栏能完成题干要求时才保留该选项，Outside 栏只能帮助理解背景，不能补齐证据。",
+          "checkZh": "若遮住你的背景知识，仍能从文章句子和逻辑连接推出答案吗？"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "lnat-eal-original-qualifier",
+          "titleZh": "满托原创例题：限定词如何改变结论强度",
+          "titleEn": "Mantou Original: How a Qualifier Changes Claim Strength",
+          "problemZh": "原句：Although remote work may reduce commuting for some employees, it does not by itself eliminate the need for urban transport investment. 哪个结论被原句支持？",
+          "problemEn": "Which conclusion is supported by: Although remote work may reduce commuting for some employees, it does not by itself eliminate the need for urban transport investment?",
+          "steps": [
+            { "labelZh": "第 1 步：恢复主干", "bodyZh": "主句是 remote work does not eliminate the need for investment。although 从句承认一个有限影响。" },
+            { "labelZh": "第 2 步：标出强度", "bodyZh": "may、some 和 by itself 都限制结论；原句既没有说远程办公一定减少通勤，也没有说它毫无影响。" },
+            { "labelZh": "第 3 步：形成最小推断", "bodyZh": "即使远程办公减少部分人的通勤，仅凭这一变化也不足以断定城市不再需要交通投资。" }
+          ],
+          "answerZh": "被支持的结论是：远程办公可能降低部分通勤需求，但不能单独证明城市交通投资已无必要。",
+          "trapZh": "把 may 读成 will、some 读成 all，或忽略 by itself 而断言远程办公与交通投资完全无关。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "读长句时为什么先找主句谓语？", "promptEn": "Why identify the main finite verb first?", "answerZh": "它能恢复最短核心命题，避免把从句细节误当成作者的主要判断。", "answerEn": "It recovers the shortest core proposition and prevents a subordinate detail from becoming the main claim." },
+        { "promptZh": "may 与 must 的差别为什么会决定选项正误？", "promptEn": "Why can the difference between may and must decide an option?", "answerZh": "may 只表达可能性，must 表达必然；后者需要显著更强的证据。", "answerEn": "May expresses possibility while must expresses necessity and therefore needs much stronger evidence." },
+        { "promptZh": "背景知识在 Section A 中可以做什么、不能做什么？", "promptEn": "What may outside knowledge do in Section A, and what may it not do?", "answerZh": "它可以帮助理解语境，但不能替代文章证据或补出作者没有表达的前提。", "answerEn": "It may help with context but cannot replace textual evidence or add an unstated premise." }
+      ]
+    },
+    {
+      "id": "lnat-timing",
+      "number": "04",
+      "titleZh": "95+40 分钟执行节奏",
+      "titleEn": "The 95+40 Minute Execution Plan",
+      "summaryZh": "把时间分配到文章、验证、复查和成文，而不是靠最后几分钟补救。",
+      "learningOutcomes": [
+        "建立 Section A 每篇文章的基准时间和止损点。",
+        "使用标记与复查规则，不让单题吞掉整套节奏。",
+        "为 Section B 预留选题、计划、成文和检查的明确时间。"
+      ],
+      "knowledgeUnits": [
+        { "id": "lnat-time-section-a-budget", "code": "T1", "labelZh": "Section A 文章预算", "labelEn": "Section A Passage Budget" },
+        { "id": "lnat-time-triage", "code": "T2", "labelZh": "难题止损与标记", "labelEn": "Triage, Stop-Loss and Flagging" },
+        { "id": "lnat-time-review", "code": "T3", "labelZh": "证据型复查", "labelEn": "Evidence-led Review" },
+        { "id": "lnat-time-section-b-budget", "code": "T4", "labelZh": "Section B 写作预算", "labelEn": "Section B Writing Budget" }
+      ],
+      "methods": [
+        {
+          "nameZh": "用文章包而非单题分配时间",
+          "nameEn": "Budget by passage set, not isolated question",
+          "signalZh": "前几题做得很细，后半程文章来不及完整阅读。",
+          "methodZh": "先预留约 10–12 分钟总复查，再把其余时间分给 12 篇文章包；每包包含通读、3–4 题和证据确认，训练时记录实际中位数。",
+          "checkZh": "到每个检查点时，已完成文章数是否与剩余时间匹配？"
+        },
+        {
+          "nameZh": "设置 90 秒无新证据止损",
+          "nameEn": "Use a 90-second no-new-evidence stop-loss",
+          "signalZh": "你在两个选项之间反复切换，却没有回到原文找到新的支持或反证。",
+          "methodZh": "若 90 秒内没有新增文本证据，记录当前最佳答案、标记题目并继续；复查时只重看证据位置，不从头重读整篇。",
+          "checkZh": "继续耗时是否真的产生了新证据，还是只是重复犹豫？"
+        },
+        {
+          "nameZh": "把 40 分钟拆成 5—8—24—3",
+          "nameEn": "Split the 40 minutes into 5–8–24–3",
+          "signalZh": "选题太慢、边写边想，或写完没有时间检查主张与句子。",
+          "methodZh": "约 5 分钟比较题目，8 分钟搭建 thesis/理由/反方，24 分钟成文，3 分钟检查题目是否回答、段落是否完整和明显语言错误；训练后按个人数据微调。",
+          "checkZh": "正式成文前是否已经知道每段的作用和最终判断？"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "lnat-time-original-budget",
+          "titleZh": "满托原创例题：建立 Section A 时间检查点",
+          "titleEn": "Mantou Original: Building Section A Time Checkpoints",
+          "problemZh": "你计划给 Section A 留 11 分钟复查。请为 12 篇文章建立简单的进度检查点，并说明某篇超时 3 分钟时如何处理。",
+          "problemEn": "You reserve 11 minutes for Section A review. Build simple checkpoints for 12 passages and explain what to do when one passage runs three minutes over budget.",
+          "steps": [
+            { "labelZh": "第 1 步：算可用首轮时间", "bodyZh": "95−11=84 分钟，平均每篇文章包约 7 分钟。", "math": { "tex": "(95-11)\\div 12=7", "text": "(95 minus 11) divided by 12 equals 7 minutes" } },
+            { "labelZh": "第 2 步：设四个检查点", "bodyZh": "约第 21、42、63、84 分钟分别完成第 3、6、9、12 篇；这比逐题盯钟更容易执行。" },
+            { "labelZh": "第 3 步：超时后重平衡", "bodyZh": "把未解决题标记并离开，不从后续每篇平均硬扣时间；先用接下来两篇恢复至检查点附近，最后用预留复查处理。" }
+          ],
+          "answerZh": "首轮约 84 分钟、每三篇约 21 分钟，末尾 11 分钟按标记和证据位置复查。",
+          "trapZh": "把 95 分钟全部平均分完而不留复查，或因一篇超时就仓促跳过后续文章的通读。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "为什么按文章包计时比按单题计时更可靠？", "promptEn": "Why is timing by passage set more reliable than timing every question?", "answerZh": "文章阅读是共同成本，3–4 题难度也不均；按包能观察真实总成本并减少频繁看钟。", "answerEn": "Reading is a shared cost and question difficulty varies; passage-set timing captures the real total and reduces clock checking." },
+        { "promptZh": "90 秒止损触发的关键条件是什么？", "promptEn": "What is the key trigger for the 90-second stop-loss?", "answerZh": "不是单纯时间到了，而是继续犹豫却没有获得任何新的文本证据。", "answerEn": "Not time alone, but continued hesitation without any new textual evidence." },
+        { "promptZh": "Section B 的计划时间要产出什么？", "promptEn": "What should the Section B planning time produce?", "answerZh": "明确 thesis、每段作用、主要例证、最强反方与最终权衡判断。", "answerEn": "A thesis, paragraph roles, main examples, the strongest counterargument and the final judgement." }
+      ]
+    }
+  ],
+  "reviewWorkflow": [
+    { "stepZh": "先完成个人档案", "stepEn": "Complete your profile", "actionZh": "记录课程体系、学习阶段、英文阅读写作基础和每周可用时间。" },
+    { "stepZh": "按模块建立方法", "stepEn": "Build the method by module", "actionZh": "先掌握 Section A 与 EAL 证据边界，再建立 Section B 和时间执行框架。" },
+    { "stepZh": "进入原创起点练习", "stepEn": "Take the original starting practice", "actionZh": "用站内 Section A 和 Section B 原创练习记录答案、耗时、改答与写作草稿。" },
+    { "stepZh": "只根据证据复盘", "stepEn": "Review from evidence", "actionZh": "阅读题记录错误选项的具体错因；写作记录 thesis、理由、反方、判断和时间断点。" }
+  ]
+}

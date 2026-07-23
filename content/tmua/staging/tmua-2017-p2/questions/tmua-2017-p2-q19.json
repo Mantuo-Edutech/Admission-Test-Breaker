@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p2-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p2",
+  "edition": "2017",
+  "paper": 2,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "19     Which one of the following is a suﬃcient condition for the equation\n        x3 − 3x2 + a = 0, where a is a constant, to have exactly one real root?\n\n        A a>0\n\n        B a⩽0\n\n        C a⩾4\n\n        D a<4\n\n        E      |a| > 4\n\n        F      |a| ⩽ 4\n\n        G a = 94\n\n        H |a| = 32\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                   \u0015\u0014                                 >7XUQ\u0003RYHU"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Which one of the following is a suﬃcient condition for the equation\n        x3 − 3x2 + a = 0, where a is a constant, to have exactly one real root?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "a>0"
+    },
+    {
+      "label": "B",
+      "rawText": "a⩽0"
+    },
+    {
+      "label": "C",
+      "rawText": "a⩾4"
+    },
+    {
+      "label": "D",
+      "rawText": "a<4"
+    },
+    {
+      "label": "E",
+      "rawText": "|a| > 4"
+    },
+    {
+      "label": "F",
+      "rawText": "|a| ⩽ 4"
+    },
+    {
+      "label": "G",
+      "rawText": "a = 94"
+    },
+    {
+      "label": "H",
+      "rawText": "|a| = 32\n\n\n\n\n8&/(6                                                                    >7XUQRYHU"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We recall that a ‘sufficient condition’ means that if the condition holds, then the equation has\nexactly one real root.\nWe can start by sketching the graph of the cubic y = x3 − 3x2 + a, noting that the impact of\nchanging a is just to translate the graph vertically.\n                                                 dy                dy\nWe differentiate to find the stationary points: dx  = 3x2 − 6x, so dx = 0 when x = 0 and x = 2,\nso the stationary points are at (0, a) and (2, a − 4).\nSo the graph looks like this:\n\n                                         y\n\n\n\n\n                                     a\n\n\n\n                                              (2, a − 4)              x\n                                         0\n\n\n\n\nThere will be one real root for the equation x3 − 3x2 + a = 0 if either the local maximum lies\nbelow the x-axis or if the local minimum lies above the x-axis, as in the case sketched.\nThe first occurs when a < 0, the second when a − 4 > 0 or equivalently, when a > 4.\nSo a necessary and sufficient condition is a < 0 or a > 4. This does not, however, appear as\none of the options, so we need to go through them to see which one is sufficient. (Recall from\nearlier that sufficient means that if this condition holds, then the equation has exactly one real\nroot, but not necessarily the other way round.)\n\nA This includes a = 1, which gives more than one real root.\nB This includes a = 0, which gives more than one real root (as the minimum lies on the x-axis).\nC This includes a = 4, which gives more than one real root (as the maximum lies on the x-axis).\nD This includes a = 1 again.\nE This is a > 4 or a < −4, both of which are part of the valid range, so this is a sufficient\n  condition.\nF This includes a = 1 again.\nG This gives more than one real root.\nH a = 32 gives more than one real root.\n\nSo the correct answer is E.\n\n\nVersion 1.0, April 2019                                                                   Page 22\n\n                                                                                     © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2017.pdf",
+      "sha256": "c24b42792763f609f2eb98e9cc9ee2bcb8088b85a5dbf590832407f6f2e76bb7",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2017.pdf",
+      "sha256": "84b2bb0bb4cd261dd56ac3e68ca45a1b57b2860c01c7c9c4228ed4d87754d54b",
+      "pages": [
+        23
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

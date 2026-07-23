@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q17",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 17,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "17   A set of six distinct integers is split into two sets of three.\n\n     The ﬁrst set of three integers has a mean of 10 and a median of 8.\n\n     The second set of three integers has a mean of 12 and a median of 9.\n\n     What is the smallest possible range of the set of all six integers?\n\n     A 8\n\n     B 10\n\n     C 11\n\n     D 12\n\n     E 14\n\n     F 15\n\n\n\n\n                                               19"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A set of six distinct integers is split into two sets of three.\n\n     The ﬁrst set of three integers has a mean of 10 and a median of 8.\n\n     The second set of three integers has a mean of 12 and a median of 9.\n\n     What is the smallest possible range of the set of all six integers?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "8"
+    },
+    {
+      "label": "B",
+      "rawText": "10"
+    },
+    {
+      "label": "C",
+      "rawText": "11"
+    },
+    {
+      "label": "D",
+      "rawText": "12"
+    },
+    {
+      "label": "E",
+      "rawText": "14"
+    },
+    {
+      "label": "F",
+      "rawText": "15"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let us write the six integers as two sets of three, each set in increasing order:\n\n                                         a, 8, b    c, 9, d\n\nWe know the middle integers are 8 and 9 because these are the medians.\nThe first set of three has a mean of 10 and so they must sum to 3 × 10 = 30, therefore a + b = 22.\nLikewise, the second set sums to 36 and so c + d = 27.\nWe also know that a ≤ 8 ≤ b and c ≤ 9 ≤ d.\nHere are tables of some of the possibilities for a and b and for c and d; the two tables are\nindependent of each other:\n\n                                     a     b           c    d\n                                     8    14           9   18\n                                     7    15           8   19\n                                     6    16           7   20\n                                     5    17           6   21\n                                     4    18           5   22\n                                     3    19           4   23\n\nThe range of the set of all six integers is the larger of b and d minus the smaller of a and c.\nAs all six integers are distinct, we cannot have a = 8 or c = 9 or c = 8. We also want b and d\nto be as small as possible while a and c are as large as possible to get a small range.\nLet us try a = 7, b = 15. Then we cannot have c = 7, so we try c = 6, d = 21. This gives a\nrange of 21 − 6 = 15.\nIf we now try a = 6, b = 16, we can take c = 7, d = 20, and this gives a range of 20 − 6 = 14,\nwhich is smaller.\nIf we next try a = 5, b = 17, we can again take c = 7, d = 20, but now the range has grown\nto 20 − 5 = 15 again. And if we go smaller with the choice of a, say a = 4, b = 18, then the\nsmallest range we can obtain becomes even larger: 20 − 4 = 16. The range will keep growing as\nwe take smaller values for a.\nSo the smallest possible range is 14, which is option E.\n\n\n\n\nVersion 1.0, April 2021                                                                   Page 20\n\n                                            © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        20
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

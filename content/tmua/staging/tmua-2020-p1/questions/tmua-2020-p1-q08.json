@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q08",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 8,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "8   The function f is deﬁned for all real x as\n\n\n                                     f(x) = (p − x)(x + 2)\n\n    Find the complete set of values of p for which the maximum value of f(x) is\n    less than 4.\n\n            √              √\n    A −2 − 4 2 < p < −2 + 4 2\n            √              √\n    B −2 − 2 2 < p < −2 + 2 2\n        √         √\n    C −2 5 < p < 2 5\n\n    D −6 < p < 2\n\n    E −4 < p < 0\n\n    F −2 < p < 2\n\n\n\n\n                                            10"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The function f is deﬁned for all real x as\n\n\n                                     f(x) = (p − x)(x + 2)\n\n    Find the complete set of values of p for which the maximum value of f(x) is\n    less than 4.\n\n            √              √"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "−2 − 4 2 < p < −2 + 4 2\n            √              √"
+    },
+    {
+      "label": "B",
+      "rawText": "−2 − 2 2 < p < −2 + 2 2\n        √         √"
+    },
+    {
+      "label": "C",
+      "rawText": "−2 5 < p < 2 5"
+    },
+    {
+      "label": "D",
+      "rawText": "−6 < p < 2"
+    },
+    {
+      "label": "E",
+      "rawText": "−4 < p < 0"
+    },
+    {
+      "label": "F",
+      "rawText": "−2 < p < 2"
+    }
+  ],
+  "correctAnswer": "D",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can find the maximum value of f(x) by completing the square or by differentiating.\nIn both methods, we start by expanding the brackets to write f(x) = −x2 + (p − 2)x + 2p.\nWe can then complete the square:\n\n                           f(x) = −(x2 − (p − 2)x) + 2p\n                                = − (x − 12 (p − 2))2 − 41 (p − 2)2 +2p\n                                                                   \u0001\n\n                                = −(x − 21 (p − 2))2 + 14 (p − 2)2 + 2p\n\nso the maximum value occurs when x = 21 (p − 2) and the value at this point is 14 (p − 2)2 + 2p.\nAlternatively, we can differentiate to get\n\n                                      f 0 (x) = −2x + (p − 2)\n\nso the stationary point is at x = 21 (p − 2); substituting this value into the function f(x) gives\nthe same maximum value as before.\nA third approach is to note that the stationary point of a quadratic lies midway between its two\nroots, that is midway between p and −2, so at x = 12 (p − 2), and then substitute to find the\nminimum value.\n\nWe now require\n                                       1        2\n                                       4 (p − 2) + 2p < 4.\n\nMultiplying by 4 and rearranging gives (p − 2)2 + 8p − 16 < 0; we next expand the brackets and\nsimplify to give p2 + 4p − 12 < 0, so (p + 6)(p − 2) < 0. This quadratic inequality is satisfied\nexactly when −6 < p < 2, which is option D.\n\n\n\n\nVersion 1.0, April 2021                                                                   Page 10\n\n                                             © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        10
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

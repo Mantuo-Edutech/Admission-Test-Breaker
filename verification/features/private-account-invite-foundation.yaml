@@ -1,0 +1,142 @@
+schemaVersion: 1
+feature:
+  id: private-account-invite-foundation
+  title: Private account and invite-entitlement foundation
+  status: partial
+  userOutcome: >-
+    A student with a valid invite can create or sign in to an email-verified
+    account and bind the invite's content package to that account, while
+    learner data stays owner-only and separate from content access.
+
+run:
+  packageScript: verify:account-access
+
+claims:
+  - id: invite-first-account-flow
+    status: verified
+    statement: >-
+      The browser validates an invite before registration, retains it only for
+      the current browser session, and redeems it after immediate login or
+      email confirmation without exposing a service-role key to the client.
+      A student who is already signed in redeems directly without being sent
+      through duplicate registration; a cross-device confirmation with no
+      pending browser code truthfully asks for the same invite again.
+      When the journey starts from a published locked product, a separately
+      validated internal return path brings the student back to that product.
+    artifacts:
+      - src/features/account/domain.ts
+      - src/features/account/supabase-account-service.ts
+      - src/features/account/pages/InviteAccessPage.tsx
+      - src/features/account/pages/RegisterPage.tsx
+      - src/features/account/pages/LoginPage.tsx
+      - src/features/account/pages/EmailConfirmationPage.tsx
+      - src/features/account/storage/pending-invite.ts
+      - tests/app/account-access-flow.test.tsx
+      - tests/features/account/pending-invite.test.ts
+    automatedChecks:
+      - verify:account-access
+      - typecheck
+      - build
+      - verify:supabase-contracts
+
+  - id: tenant-owned-private-data
+    status: verified
+    statement: >-
+      Auth users receive one learner space; learner profiles, sessions and
+      events are protected by owner-only RLS, and learning events are append-only
+      with consecutive sequence and authenticated student actor checks.
+    artifacts:
+      - supabase/migrations/20260715090000_private_account_foundation.sql
+      - supabase/tests/database/private_account_rls.test.sql
+      - tests/architecture/supabase-contracts.test.ts
+      - scripts/verify-supabase-local.ts
+    automatedChecks:
+      - verify:supabase-contracts
+      - verify:supabase
+
+  - id: authenticated-learner-data-sync
+    status: verified
+    statement: >-
+      Anonymous profiles and practice remain in a random local Guest Space.
+      After the student signs in, auth-aware adapters atomically claim newer
+      Guest data into that student's Learner Space, append only the missing
+      event suffix, clear the unscoped local copy and reject a second account.
+    artifacts:
+      - src/features/learner-data/auth-aware-practice-store.ts
+      - src/features/learner-data/auth-aware-profile-store.ts
+      - src/features/learner-data/supabase-repository.ts
+      - supabase/migrations/20260718143000_durable_learner_data.sql
+      - tests/features/learner-data/auth-aware-stores.test.ts
+      - supabase/tests/database/private_account_rls.test.sql
+      - scripts/verify-supabase-local.ts
+    automatedChecks:
+      - test
+      - typecheck
+      - verify:supabase-contracts
+      - verify:supabase
+
+  - id: separate-content-entitlement
+    status: verified
+    statement: >-
+      Invite redemption creates a content package entitlement only; it does not
+      create a learner-data grant for the invite issuer, Mantou staff, teachers,
+      parents or agents.
+    artifacts:
+      - supabase/migrations/20260715090000_private_account_foundation.sql
+      - supabase/tests/database/private_account_rls.test.sql
+      - docs/architecture/SYSTEM_ARCHITECTURE.md
+    automatedChecks:
+      - verify:supabase-contracts
+      - verify:supabase
+
+  - id: published-package-issuance-gate
+    status: verified
+    statement: >-
+      Service-role invite issuance succeeds only when every requested active
+      package contains at least one published entitled resource with a real
+      publication timestamp. Draft-only ESAT, TARA, LNAT and UCAT packages are
+      rejected atomically instead of giving students an empty promise.
+    artifacts:
+      - supabase/migrations/20260719090000_invite_publication_gate.sql
+      - supabase/tests/database/private_account_rls.test.sql
+      - scripts/verify-supabase-local.ts
+      - docs/architecture/decisions/2026-07-19-invites-require-published-assets.md
+    automatedChecks:
+      - verify:supabase-contracts
+      - verify:supabase
+
+  - id: account-lifecycle-ui
+    status: verified
+    statement: >-
+      A signed-in student can inspect their current content entitlements, sign
+      out, request a privacy-preserving password reset and set a new password
+      only after the recovery code establishes a valid session.
+    artifacts:
+      - src/features/account/pages/AccountPage.tsx
+      - src/features/account/pages/ForgotPasswordPage.tsx
+      - src/features/account/pages/PasswordResetPage.tsx
+      - src/features/account/supabase-account-service.ts
+      - tests/app/account-lifecycle.test.tsx
+    automatedChecks:
+      - test
+      - typecheck
+      - build
+      - verify:supabase-contracts
+
+boundaries:
+  - The implementation is connected to local Supabase only; no Mantou cloud project or production domain has been configured.
+  - The authenticated data adapter and migration pass local database and HTTP checks, but they have not been applied to or exercised against a Mantou production project.
+  - Password reset, sign-out and password-confirmed account deletion are implemented locally but still require production SMTP/domain, backup-deletion and security verification.
+  - Student-controlled teacher/parent Grants, visible audit and revocation are implemented locally; production multi-account and real-device UAT remain pending, while agents still receive no implicit access.
+  - A local deterministic seed invite exists only for development and must never be deployed as a production invite.
+  - A package being active is not sufficient for sale or invitation; it must contain a currently published entitled resource.
+  - The least-privilege Bingbing operator identity, own-code issue/revoke RPC, private audit and own-record operations page are implemented and locally verified; real-device UAT, production account bootstrap and MFA/domain drill remain pending.
+
+manualChecks:
+  - id: account-responsive-and-email-review
+    status: pending
+    evidence: Review invite, registration, login and confirmation pages with the production email templates before release.
+    viewports:
+      - 1440x900
+      - 768x1024
+      - 390x844

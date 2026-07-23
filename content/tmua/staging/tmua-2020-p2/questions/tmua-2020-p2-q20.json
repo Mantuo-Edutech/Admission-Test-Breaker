@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "20   x is a real number and f is a function.\n\n     Given that exactly one of the following statements is true, which one is it?\n\n     A x ≥ 0 only if f(x) < 0\n\n     B x < 0 if f(x) ≥ 0\n\n     C x ≥ 0 only if f(x) ≥ 0\n\n     D f(x) < 0 if x < 0\n\n     E f(x) ≥ 0 only if x ≥ 0\n\n     F f(x) ≥ 0 if and only if x < 0\n\n\n\n\n                                               22"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "x is a real number and f is a function.\n\n     Given that exactly one of the following statements is true, which one is it?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "x ≥ 0 only if f(x) < 0"
+    },
+    {
+      "label": "B",
+      "rawText": "x < 0 if f(x) ≥ 0"
+    },
+    {
+      "label": "C",
+      "rawText": "x ≥ 0 only if f(x) ≥ 0"
+    },
+    {
+      "label": "D",
+      "rawText": "f(x) < 0 if x < 0"
+    },
+    {
+      "label": "E",
+      "rawText": "f(x) ≥ 0 only if x ≥ 0"
+    },
+    {
+      "label": "F",
+      "rawText": "f(x) ≥ 0 if and only if x < 0"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "It is helpful to write all six statements as ‘if . . . then’ statements:\n\nA if x ≥ 0 then f(x) < 0\n\nB if f(x) ≥ 0 then x < 0\n\nC if x ≥ 0 then f(x) ≥ 0\n\nD if x < 0 then f(x) < 0\n\nE if f(x) ≥ 0 then x ≥ 0\n\nF if x < 0 then f(x) ≥ 0 and if f(x) ≥ 0 then x < 0\n\nIf F is true, then B is also true, so F is false.\nLet us suppose that A is true. Then its contrapositive is also true. The contrapositive of A is:\nif f(x) ≥ 0 then x < 0, which is statement B. So A and B are either both true or both false.\nSince exactly one statement is true, A and B must both be false.\nSimilarly, D and E are contrapositives of each other, so they must both be false as well.\nThe only statement left is C, so that must be true.\nFurthermore, C contradicts A, so A (and B) must be false; C is independent of D (knowing that\nC is true does not give any information about whether D is true or false), and C contradicts F,\nso F must be false.\nTherefore having C true and the other five statements false is consistent; the function f(x) = |x|\nis an example of a function for which C is true and the other five statements are false.\n\n\n\n\nVersion 1.0, April 2021                                                                   Page 24\n\n                                             © UCLES 2021\n\f\nThis document was initially designed for print and as such does not reach accessibility standard\nWCAG 2.1 in a number of ways including missing text alternatives and missing document structure.\n\n\n\nIf you need this document in a different format please email\nadmissionstesting@cambridgeassessment.org.uk telling us your name, email address and\nrequirements and we will respond within 15 working days.\n\n\n\nThis document contains maths equations and symbols which at present we are not able to produce\nadequately for accessibility. We are working to improve this.\n\n\n\n\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur range of research-based admissions tests connects schools, universities, governments\nand employers to the most suitable applicants around the world.\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\nAdmissions tests support: www.admissionstesting.org/help\n\n\n\n\n                                           © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        24,
+        25
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

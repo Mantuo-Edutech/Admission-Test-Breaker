@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p1-q13",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p1",
+  "edition": "2021",
+  "paper": 1,
+  "questionNumber": 13,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13   The function f is such that, for every integer n\n\n                                     \u0002 n+1\n                                             f(x) dx = n + 1\n                                       n\n\n\n     Evaluate\n\n                                       8 \u0005\u0002 r\n                                       \u0004                     \u0006\n                                                   f(x) dx\n                                       r=1     0\n\n\n\n     A 36\n\n     B 84\n\n     C 120\n\n     D 165\n\n     E 204\n\n     F 288\n\n\n\n\n                                              \u0014\u0018"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The function f is such that, for every integer n\n\n                                      n+1\n                                             f(x) dx = n + 1\n                                       n\n\n\n     Evaluate\n\n                                       8 B r\n                                       A                     C\n                                                   f(x) dx\n                                       r=1     0"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "36"
+    },
+    {
+      "label": "B",
+      "rawText": "84"
+    },
+    {
+      "label": "C",
+      "rawText": "120"
+    },
+    {
+      "label": "D",
+      "rawText": "165"
+    },
+    {
+      "label": "E",
+      "rawText": "204"
+    },
+    {
+      "label": "F",
+      "rawText": "288"
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Let us first work out the value of the integral in the summation (the summand). We have\n                     Z r               Z 1               Z 2                       Z r\n                           f(x) dx =         f(x) dx +         f(x) dx + · · · +          f(x) dx\n                      0                 0                 1                         r−1\n                                  = (0 + 1) + (1 + 1) + · · · + ((r − 1) + 1)\n                                  = 1 + 2 + ··· + r\n                                  = 12 r(r + 1).\n\nWe are thus being asked to evaluate\n                                                  8\n                                                  X\n                                                        1\n                                                        2 r(r + 1).\n                                                  r=1\n\nThere are algebraic methods to do this (as mentioned below), but they are not on the specifica-\ntion. The most straightforward approach here is to just perform the calculation manually:\n                     8\n                     X\n                           1\n                           2 r(r + 1) = 1 + 3 + 6 + 10 + 15 + 21 + 28 + 36 = 120,\n                     r=1\n\nwhich is option C.\n\nIn general, it turns out that\n                                   n\n                                   X\n                                            1            1\n                                            2 r(r + 1) = 6 n(n + 1)(n + 2).\n                                   r=1\n\nThe expressions r(r + 1) and n(n + 1)(n + 2) are known as rising powers, and can be written as\nr2 and n3 respectively. On multiplying by 2, the formula then becomes\n                                                  n\n                                                  X\n                                                        r2 = 13 n3 ,\n                                                  r=1\n                                                Rx\nwhich looks very similar to the calculus formula 0 t2 dt = 31 x3 . There is a much longer discussion\nof sums such as this in Graham, Knuth and Patashnik, Concrete Mathematics.\n\n\n\n\nVersion 1.0, March 2022                                                                             Page 15"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2021.pdf",
+      "sha256": "77d3241be81c3bcb81ede9921887e60a8933c69f9e50874f2bfea6b8d1b1a59f",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2021.pdf",
+      "sha256": "f48f44abbaae0abec83a78f1964822047292f5ddd16f82fb777c5efa200a7dcd",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

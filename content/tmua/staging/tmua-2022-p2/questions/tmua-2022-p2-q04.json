@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2022-p2-q04",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2022-p2",
+  "edition": "2022",
+  "paper": 2,
+  "questionNumber": 4,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "4   The point P has coordinates ( p, q ), and the equation of a circle is\n\n                                        x2 + 2fx + y2 + 2gy + h ൌ 0\n\n    where f, g, h, p and q are all real constants.\n\n    Let L be the distance between the centre of the circle and the point P.\n\n    Which one of the following is sufficient on its own to be able to calculate L ?\n\n    A   the values of f, g and h\n\n    B   the values of f, g, p and q\n\n    C   the values of f, h, p and q\n\n    D   the values of g, h, p and q\n\n    E   none of the options A-D is sufficient on its own\n\n\n\n\n                                                     6"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The point P has coordinates ( p, q ), and the equation of a circle is\n\n                                        x2 + 2fx + y2 + 2gy + h ൌ 0\n\n    where f, g, h, p and q are all real constants.\n\n    Let L be the distance between the centre of the circle and the point P.\n\n    Which one of the following is sufficient on its own to be able to calculate L ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "the values of f, g and h"
+    },
+    {
+      "label": "B",
+      "rawText": "the values of f, g, p and q"
+    },
+    {
+      "label": "C",
+      "rawText": "the values of f, h, p and q"
+    },
+    {
+      "label": "D",
+      "rawText": "the values of g, h, p and q"
+    },
+    {
+      "label": "E",
+      "rawText": "none of the options A-D is sufficient on its own"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We can rewrite the equation of circle by completing the square to find its centre. We get:\n\n                             (x + f )2 − f 2 + (y + g)2 − g 2 + h = 0\n\nwhich we can rearrange as\n\n                               (x + f )2 + (y + g)2 = f 2 + g 2 − h.\n                                                        p\nTherefore the centre is at (−f, −g) (and the radius is f 2 + g 2 − h, but that is not relevant to\nus here).\nThen the distance between the centre of the circle and the point P is given by\n\n                                    L2 = (p + f )2 + (q + g)2\n\nso we need the values of f , g, p and q. Hence the correct answer is option B.\n\n\n\n\nVersion 1.0, July 2023                                                                    Page 6"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2022-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-2022-paper-2.pdf",
+      "sha256": "86216bed26a87975ee5cfbcf85b8faf58dc7e9f8bff70da6c481a37455fcd398",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2022-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2022.pdf",
+      "sha256": "520b05d1cf3a6a5245b2e6056694e47f2de697d593583457dfc8463378f0be0e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2022-paper-2-worked-solutions",
+      "portablePath": "Tmua/official-sources/TMUA-2022-paper-2-worked-answers.pdf",
+      "sha256": "04f574544176aae0782ed40035c13ee336ea0aa4fb0231c35be652955395e5e0",
+      "pages": [
+        6
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

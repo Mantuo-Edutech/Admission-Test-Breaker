@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "19   Nine people are sitting in the squares of a 3 by 3 grid, one in each square, as shown.\n     Two people are called neighbours if they are sitting in squares that share a side.\n     (People in diagonally adjacent squares, which only have a point in common, are not\n     called neighbours.)\n\n\n\n\n     Each of the nine people in the grid is either a truth-teller who always tells the truth,\n     or a liar who always lies.\n\n     Every person in the grid says: ‘My neighbours are all liars’.\n\n     Given only this information, what are the smallest number and the largest number\n     of people who could be telling the truth?\n\n\n\n                 smallest                   largest\n      A             1                          4\n      B             2                          4\n      C             2                          5\n      D             3                          4\n      E             3                          5\n      F             4                          4\n      G             4                          5\n      H             5                          5\n\n\n\n\n                                             21"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Nine people are sitting in the squares of a 3 by 3 grid, one in each square, as shown.\n     Two people are called neighbours if they are sitting in squares that share a side.\n     (People in diagonally adjacent squares, which only have a point in common, are not\n     called neighbours.)\n\n\n\n\n     Each of the nine people in the grid is either a truth-teller who always tells the truth,\n     or a liar who always lies.\n\n     Every person in the grid says: ‘My neighbours are all liars’.\n\n     Given only this information, what are the smallest number and the largest number\n     of people who could be telling the truth?\n\n\n\n                 smallest                   largest"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "1                          4"
+    },
+    {
+      "label": "B",
+      "rawText": "2                          4"
+    },
+    {
+      "label": "C",
+      "rawText": "2                          5"
+    },
+    {
+      "label": "D",
+      "rawText": "3                          4"
+    },
+    {
+      "label": "E",
+      "rawText": "3                          5"
+    },
+    {
+      "label": "F",
+      "rawText": "4                          4"
+    },
+    {
+      "label": "G",
+      "rawText": "4                          5"
+    },
+    {
+      "label": "H",
+      "rawText": "5                          5"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "The person in the centre gives us a lot of information. If they are a truth-teller, then all four\nneighbours are liars, but if they are a liar, then at least one neighbour is a truth-teller. Since\nwe are only interested in the number of truth-tellers and not their positions, we can assume the\nperson directly ‘above’ them is a truth-teller. So we have these two possibilities (where T means\ntruth-teller and L means liar):\n\n\n                            L                                       T\n\n\n                     L      T       L                               L\n\n\n                            L\n\n\n\nIn the first possibility, each corner position has two neighbours, both of whom are liars, so they\nmust be occupied by truth-tellers. In the second possibility, the top two corners must be liars,\ngiving these possibilities:\n\n\n                     T      L       T                           L   T       L\n\n\n                     L      T       L                               L\n\n\n                     T      L       T\n\n                     Case 1: 5 T, 4 L\n\nIn the right-hand possibility, the corner liars already have one neighbour who is a truth-teller,\nso the other neighbour could be either a truth-teller or a liar. This gives four possibilities for\nthe left side and right side people: both liars, both truth-tellers or one of each in either order.\nBy reflecting the grid, we only need to consider one case of one liar, one truth-teller, so we now\nhave these three possible ways of continuing the grid:\n\n\n       L       T      L                  L        T         L              L      T      L\n\n\n       L       L      L                  T        L         T              L      L      T\n\n\n\n\nEvery truth-teller is surrounded by liars, and every liar must have at least one truth-teller as a\nneighbour, so we can fill in some of the bottom row in each of these three possibilities:\n\n\n\n\nVersion 1.0, April 2021                                                                    Page 22\n\n                                             © UCLES 2021\n\f\nTest of Mathematics for University Admission, 2020 Paper 2 Solutions\n\n\n\n       L       T      L                 L        T         L            L      T       L\n\n\n       L       L      L                T         L         T            L       L      T\n\n\n       T              T                 L                  L            T              L\n\n\n\nWe can now fill in the final square in each of these, and check that the three people in the\nbottom row are consistent with the rules:\n\n\n       L       T      L                 L        T         L            L      T       L\n\n\n       L       L      L                T         L         T            L       L      T\n\n\n       T       L      T                 L        T         L            T       L      L\n\n       Case 2: 3 T, 6 L                Case 3: 4 T, 5 L                 Case 4: 3 T, 6 L\n\nWe therefore have four cases. The smallest number of truth-tellers is in cases 2 and 4, with\n3 truth-tellers, and the largest number is in case 1 with 5 truth-tellers. Therefore the correct\noption is E.\n\n\n\n\nVersion 1.0, April 2021                                                                 Page 23\n\n                                            © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        22,
+        23
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p2-q03",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p2",
+  "edition": "2020",
+  "paper": 2,
+  "questionNumber": 3,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "3   A student makes the following claim:\n                                                \u0002                   \u0003\n                                                    9n + 1 3n − 1\n         For all integers n, the expression 4             −             is divisible by 3.\n                                                      2      2\n\n    Here is the student’s argument:\n\n\n                   \u0002                   \u0003    \u0002 \u0002                 \u0003\u0003\n                       9n + 1 3n − 1              9n + 1 3n − 1\n               4             −           =2 2            −                       (I)\n                         2      2                    2        2\n                                         = 2(9n + 1 − 3n − 1)                    (II)\n                                         = 2(6n)                                 (III)\n                                         = 12n                                   (IV)\n                                         = 3(4n)                                 (V)\n                        which is always a multiple of 3.                         (VI)\n                                      \u0002                   \u0003\n                                          9n + 1 3n − 1\n               So the expression 4              −             is always divisible by 3.\n                                            2      2\n\n\n    Which one of the following is true?\n\n    A The argument is correct.\n\n    B The argument is incorrect, and the ﬁrst error occurs on line (I).\n\n    C The argument is incorrect, and the ﬁrst error occurs on line (II).\n\n    D The argument is incorrect, and the ﬁrst error occurs on line (III).\n\n    E The argument is incorrect, and the ﬁrst error occurs on line (IV).\n\n    F The argument is incorrect, and the ﬁrst error occurs on line (V).\n\n    G The argument is incorrect, and the ﬁrst error occurs on line (VI).\n\n\n\n\n                                                5"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A student makes the following claim:\n                                                                   \n                                                    9n + 1 3n − 1\n         For all integers n, the expression 4             −             is divisible by 3.\n                                                      2      2\n\n    Here is the student’s argument:\n\n\n                                                            \n                       9n + 1 3n − 1              9n + 1 3n − 1\n               4             −           =2 2            −                       (I)\n                         2      2                    2        2\n                                         = 2(9n + 1 − 3n − 1)                    (II)\n                                         = 2(6n)                                 (III)\n                                         = 12n                                   (IV)\n                                         = 3(4n)                                 (V)\n                        which is always a multiple of 3.                         (VI)\n                                                         \n                                          9n + 1 3n − 1\n               So the expression 4              −             is always divisible by 3.\n                                            2      2\n\n\n    Which one of the following is true?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "The argument is correct."
+    },
+    {
+      "label": "B",
+      "rawText": "The argument is incorrect, and the ﬁrst error occurs on line (I)."
+    },
+    {
+      "label": "C",
+      "rawText": "The argument is incorrect, and the ﬁrst error occurs on line (II)."
+    },
+    {
+      "label": "D",
+      "rawText": "The argument is incorrect, and the ﬁrst error occurs on line (III)."
+    },
+    {
+      "label": "E",
+      "rawText": "The argument is incorrect, and the ﬁrst error occurs on line (IV)."
+    },
+    {
+      "label": "F",
+      "rawText": "The argument is incorrect, and the ﬁrst error occurs on line (V)."
+    },
+    {
+      "label": "G",
+      "rawText": "The argument is incorrect, and the ﬁrst error occurs on line (VI)."
+    }
+  ],
+  "correctAnswer": "C",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "Lines (I) to (V) are algebraic manipulations; we need to check whether each manipulation is\ncorrect.\nLine (I) writes 4 = 2 × 2, which is correct.\nLine (II) multiplies out the inner brackets, but does not do it correctly: the inner brackets should\nexpand to (9n + 1) − (3n − 1), which simplifies to 9n + 1 − 3n + 1.\nThe remaining manipulations are correct.\nThus the first error occurs on line (II), and the correct option is C.\n\n\n\n\nVersion 1.0, April 2021                                                                      Page 5\n\n                                           © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2020.pdf",
+      "sha256": "63ffbf4f6e3144bebb599a1a663c999dc5bf69a12adda1c9e5f80fb21f438eac",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2020.pdf",
+      "sha256": "0650feece15a340e75886a0c1e726e377dacac5f72cf70d7ccbb2acd30531596",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2017-p1-q12",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2017-p1",
+  "edition": "2017",
+  "paper": 1,
+  "questionNumber": 12,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "\u0003\n                                                   \u0003\n                                                   \u0003\n                                                   \u0003\n\nͳʹ\u0003    \u0017\u0003\u0003 \u0003݂ሺ‫ݔ‬ሻ\u0003\u0003 \u0003\u0003݂ሺ‫ݔ‬ሻ ൐ Ͳ\u0003\u0003\u0003\u0003\u0003‫ݔ‬Ǥ\u0003\n                   ସ\n           \u0003‫׬‬ଶ ݂ሺ‫ݔ‬ሻ ݀‫ ݔ‬ൌ ‫ܣ‬ǡ\u0003 \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003  ǫ\u0003\n\u0003      \u0003\n\u0003              ଶ\n       A     න ሾ݂ሺ‫ ݔ‬൅ ʹሻ ൅ ͳሿ\u0003݀‫ ݔ‬ൌ ‫ ܣ‬൅ ͳ\u0003\n               ଴\n\n\u0003              ଶ\n       B     න ሾ݂ሺ‫ ݔ‬൅ ʹሻ ൅ ͳሿ ݀‫ ݔ‬ൌ ‫ ܣ‬൅ ʹ\u0003\n               ଴\n\n\u0003              ସ\n       C     න ሾ݂ሺ‫ ݔ‬൅ ʹሻ ൅ ͳሿ ݀‫ ݔ‬ൌ ‫ ܣ‬൅ ͳ\u0003\n               ଶ\n\n\u0003              ସ\n       D     න ሾ݂ሺ‫ ݔ‬൅ ʹሻ ൅ ͳሿ ݀‫ ݔ‬ൌ ‫ ܣ‬൅ ʹ\u0003\n               ଶ\n\n\u0003              ଺\n       E     න ሾ݂ሺ‫ ݔ‬൅ ʹሻ ൅ ͳሿ ݀‫ ݔ‬ൌ ‫ ܣ‬൅ ͳ\u0003\n               ସ\n\n\u0003              ଺\n       F     න ሾ݂ሺ‫ ݔ‬൅ ʹሻ ൅ ͳሿ ݀‫ ݔ‬ൌ ‫ ܣ‬൅ ʹ\u0003\n               ସ\n\u0003\n\n\u0003\n\n\u0003\n\n\n\n\n\u00038&/(6\u0003\u0015\u0013\u0014\u001a                                      \u0014\u0017"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": " ݂ሺ‫ݔ‬ሻ ݂ሺ‫ݔ‬ሻ ൐ 0‫ݔ‬Ǥ\n                   ସ\n           ‫׬‬ଶ ݂ሺ‫ݔ‬ሻ ݀‫ ݔ‬ൌ ‫ܣ‬ǡ   ǫ\n      \n              ଶ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "න ሾ݂ሺ‫ ݔ‬൅ 2ሻ ൅ 1ሿ݀‫ ݔ‬ൌ ‫ ܣ‬൅ 1\n               ଴\n\n              ଶ"
+    },
+    {
+      "label": "B",
+      "rawText": "න ሾ݂ሺ‫ ݔ‬൅ 2ሻ ൅ 1ሿ ݀‫ ݔ‬ൌ ‫ ܣ‬൅ 2\n               ଴\n\n              ସ"
+    },
+    {
+      "label": "C",
+      "rawText": "න ሾ݂ሺ‫ ݔ‬൅ 2ሻ ൅ 1ሿ ݀‫ ݔ‬ൌ ‫ ܣ‬൅ 1\n               ଶ\n\n              ସ"
+    },
+    {
+      "label": "D",
+      "rawText": "න ሾ݂ሺ‫ ݔ‬൅ 2ሻ ൅ 1ሿ ݀‫ ݔ‬ൌ ‫ ܣ‬൅ 2\n               ଶ\n\n              ଺"
+    },
+    {
+      "label": "E",
+      "rawText": "න ሾ݂ሺ‫ ݔ‬൅ 2ሻ ൅ 1ሿ ݀‫ ݔ‬ൌ ‫ ܣ‬൅ 1\n               ସ\n\n              ଺"
+    },
+    {
+      "label": "F",
+      "rawText": "න ሾ݂ሺ‫ ݔ‬൅ 2ሻ ൅ 1ሿ ݀‫ ݔ‬ൌ ‫ ܣ‬൅ 2\n               ସ\n\n\n\n\n\n\n\n\n\n8&/(6"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "R4                                            R\nWe have   2 f(x) dx = A, and the question asks about        f(x + 2) dx between various limits.\nThe graph of y = f(x + 2) is the graph of y = f(x) translated left by 2 units, so we can draw a\nsketch to see what effect this has on the area between x = 2 and x = 4:\n\n               y                                                   y\n\n\n\n\n                                           x                                                      x\n               0        2         4                                0         2       4\n\n\n\n                   R4            R2\nThis means that    2 f(x) dx =   0 f(x + 2) dx = A\n(If you have learnt about integration by substitution, youR can also show this as follows: writing\n                                            R4              2\nx = u + 2 gives dx = du, and u = x − 2, so 2 f(x) dx = 0 f(u + 2) du)\nTherefore the answer is either A or B. We have\n                        Z 2                     Z 2               Z 2\n                            [f(x + 2) + 1] dx =     f(x + 2) dx +     1 dx\n                            0                    0                     0\n                                                       R2\nThe first integral equals A, as we have shown, and      0 1 dx = 2, so the whole integral equals\nA + 2 and the correct answer is B.\n\n\n\n\nVersion 1.1, March 2019                                                                      Page 15\n\n                                                                                         © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2017-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2017.pdf",
+      "sha256": "a8c392aa8389fd5b9da096d8ff40df4f6b107206416bdad6251f57f3f8ecc438",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2017-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2017.pdf",
+      "sha256": "0094db54c8a7cd81e1161c9beabb59a9599f047fdce0923c620aa2271ee7b687",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2017-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2017.pdf",
+      "sha256": "baf36f9e08242d2d54ed6ca37c88d1932fbec2d28e199843250d6a4763c27454",
+      "pages": [
+        16
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

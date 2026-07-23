@@ -1,6 +1,6 @@
 # TMUA Corpus Audit Report
 
-**Audit timestamp:** 2026-07-13T00:00:00.000Z
+**Audit timestamp:** 2026-07-17T07:50:15.452Z
 
 All file references are repository-relative. No machine-specific raw path is persisted.
 
@@ -8,7 +8,7 @@ All file references are repository-relative. No machine-specific raw path is per
 
 - 96 observed imported paths / 46 canonical sources
 - 4 official supplements
-- 18 papers / 360 question shells / 20 currently published
+- 18 papers / 360 question shells / 360 currently published
 
 > PDF presence is not online-playable status. A paper becomes playable only after its question content is independently verified and explicitly published.
 
@@ -33,24 +33,24 @@ All file references are repository-relative. No machine-specific raw path is per
 
 | Paper | Question source | Answer source | Worked solution | Stage | Online questions |
 | --- | --- | --- | --- | --- | ---: |
-| tmua-specimen-p1 | tmua-official-specimen-paper-1 | tmua-official-specimen-answer-key | tmua-official-specimen-paper-1-worked-solutions | indexed | 0 |
-| tmua-specimen-p2 | tmua-official-specimen-paper-2 | tmua-official-specimen-answer-key | tmua-official-specimen-paper-2-worked-solutions | indexed | 0 |
-| tmua-practice-2016-p1 | tmua-official-practice-2016-paper-1 | tmua-official-practice-2016-answer-key | tmua-official-practice-2016-paper-1-worked-solutions | indexed | 0 |
-| tmua-practice-2016-p2 | tmua-official-practice-2016-paper-2 | tmua-official-practice-2016-answer-key | tmua-official-practice-2016-paper-2-worked-solutions | indexed | 0 |
-| tmua-2017-p1 | tmua-official-2017-paper-1 | tmua-official-2017-answer-key | tmua-official-2017-paper-1-worked-solutions | indexed | 0 |
-| tmua-2017-p2 | tmua-official-2017-paper-2 | tmua-official-2017-answer-key | tmua-official-2017-paper-2-worked-solutions | indexed | 0 |
-| tmua-2018-p1 | tmua-official-2018-paper-1 | tmua-official-2018-answer-key | tmua-official-2018-paper-1-worked-solutions | indexed | 0 |
-| tmua-2018-p2 | tmua-official-2018-paper-2 | tmua-official-2018-answer-key | tmua-official-2018-paper-2-worked-solutions | indexed | 0 |
-| tmua-2019-p1 | tmua-official-2019-paper-1 | tmua-official-2019-answer-key | tmua-official-2019-paper-1-worked-solutions | indexed | 0 |
-| tmua-2019-p2 | tmua-official-2019-paper-2 | tmua-official-2019-answer-key | tmua-official-2019-paper-2-worked-solutions | indexed | 0 |
-| tmua-2020-p1 | tmua-official-2020-paper-1 | tmua-official-2020-answer-key | tmua-official-2020-paper-1-worked-solutions | indexed | 0 |
-| tmua-2020-p2 | tmua-official-2020-paper-2 | tmua-official-2020-answer-key | tmua-official-2020-paper-2-worked-solutions | indexed | 0 |
-| tmua-2021-p1 | tmua-official-2021-paper-1 | tmua-official-2021-answer-key | tmua-official-2021-paper-1-worked-solutions | indexed | 0 |
-| tmua-2021-p2 | tmua-official-2021-paper-2 | tmua-official-2021-answer-key | tmua-official-2021-paper-2-worked-solutions | indexed | 0 |
-| tmua-2022-p1 | tmua-official-2022-paper-1 | tmua-official-2022-answer-key | tmua-official-2022-paper-1-worked-solutions | indexed | 0 |
-| tmua-2022-p2 | tmua-official-2022-paper-2 | tmua-official-2022-answer-key | tmua-official-2022-paper-2-worked-solutions | indexed | 0 |
+| tmua-specimen-p1 | tmua-official-specimen-paper-1 | tmua-official-specimen-answer-key | tmua-official-specimen-paper-1-worked-solutions | published | 20 |
+| tmua-specimen-p2 | tmua-official-specimen-paper-2 | tmua-official-specimen-answer-key | tmua-official-specimen-paper-2-worked-solutions | published | 20 |
+| tmua-practice-2016-p1 | tmua-official-practice-2016-paper-1 | tmua-official-practice-2016-answer-key | tmua-official-practice-2016-paper-1-worked-solutions | published | 20 |
+| tmua-practice-2016-p2 | tmua-official-practice-2016-paper-2 | tmua-official-practice-2016-answer-key | tmua-official-practice-2016-paper-2-worked-solutions | published | 20 |
+| tmua-2017-p1 | tmua-official-2017-paper-1 | tmua-official-2017-answer-key | tmua-official-2017-paper-1-worked-solutions | published | 20 |
+| tmua-2017-p2 | tmua-official-2017-paper-2 | tmua-official-2017-answer-key | tmua-official-2017-paper-2-worked-solutions | published | 20 |
+| tmua-2018-p1 | tmua-official-2018-paper-1 | tmua-official-2018-answer-key | tmua-official-2018-paper-1-worked-solutions | published | 20 |
+| tmua-2018-p2 | tmua-official-2018-paper-2 | tmua-official-2018-answer-key | tmua-official-2018-paper-2-worked-solutions | published | 20 |
+| tmua-2019-p1 | tmua-official-2019-paper-1 | tmua-official-2019-answer-key | tmua-official-2019-paper-1-worked-solutions | published | 20 |
+| tmua-2019-p2 | tmua-official-2019-paper-2 | tmua-official-2019-answer-key | tmua-official-2019-paper-2-worked-solutions | published | 20 |
+| tmua-2020-p1 | tmua-official-2020-paper-1 | tmua-official-2020-answer-key | tmua-official-2020-paper-1-worked-solutions | published | 20 |
+| tmua-2020-p2 | tmua-official-2020-paper-2 | tmua-official-2020-answer-key | tmua-official-2020-paper-2-worked-solutions | published | 20 |
+| tmua-2021-p1 | tmua-official-2021-paper-1 | tmua-official-2021-answer-key | tmua-official-2021-paper-1-worked-solutions | published | 20 |
+| tmua-2021-p2 | tmua-official-2021-paper-2 | tmua-official-2021-answer-key | tmua-official-2021-paper-2-worked-solutions | published | 20 |
+| tmua-2022-p1 | tmua-official-2022-paper-1 | tmua-official-2022-answer-key | tmua-official-2022-paper-1-worked-solutions | published | 20 |
+| tmua-2022-p2 | tmua-official-2022-paper-2 | tmua-official-2022-answer-key | tmua-official-2022-paper-2-worked-solutions | published | 20 |
 | tmua-2023-p1 | tmua-official-2023-paper-1 | tmua-official-2023-answer-key | tmua-official-2023-paper-1-worked-solutions | published | 20 |
-| tmua-2023-p2 | tmua-official-2023-paper-2 | tmua-official-2023-answer-key | tmua-official-2023-paper-2-worked-solutions | indexed | 0 |
+| tmua-2023-p2 | tmua-official-2023-paper-2 | tmua-official-2023-answer-key | tmua-official-2023-paper-2-worked-solutions | published | 20 |
 
 ## Canonical imported sources and duplicate paths
 

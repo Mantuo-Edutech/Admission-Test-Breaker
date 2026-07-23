@@ -9,10 +9,10 @@
     "answerSourceId": "tmua-official-specimen-answer-key",
     "workedSolutionSourceId": "tmua-official-specimen-paper-1-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -28,10 +28,10 @@
     "answerSourceId": "tmua-official-specimen-answer-key",
     "workedSolutionSourceId": "tmua-official-specimen-paper-2-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -47,10 +47,10 @@
     "answerSourceId": "tmua-official-practice-2016-answer-key",
     "workedSolutionSourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -66,10 +66,10 @@
     "answerSourceId": "tmua-official-practice-2016-answer-key",
     "workedSolutionSourceId": "tmua-official-practice-2016-paper-2-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -85,10 +85,10 @@
     "answerSourceId": "tmua-official-2017-answer-key",
     "workedSolutionSourceId": "tmua-official-2017-paper-1-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -104,10 +104,10 @@
     "answerSourceId": "tmua-official-2017-answer-key",
     "workedSolutionSourceId": "tmua-official-2017-paper-2-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -123,10 +123,10 @@
     "answerSourceId": "tmua-official-2018-answer-key",
     "workedSolutionSourceId": "tmua-official-2018-paper-1-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -142,10 +142,10 @@
     "answerSourceId": "tmua-official-2018-answer-key",
     "workedSolutionSourceId": "tmua-official-2018-paper-2-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -161,10 +161,10 @@
     "answerSourceId": "tmua-official-2019-answer-key",
     "workedSolutionSourceId": "tmua-official-2019-paper-1-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -180,10 +180,10 @@
     "answerSourceId": "tmua-official-2019-answer-key",
     "workedSolutionSourceId": "tmua-official-2019-paper-2-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -199,10 +199,10 @@
     "answerSourceId": "tmua-official-2020-answer-key",
     "workedSolutionSourceId": "tmua-official-2020-paper-1-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -218,10 +218,10 @@
     "answerSourceId": "tmua-official-2020-answer-key",
     "workedSolutionSourceId": "tmua-official-2020-paper-2-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -237,10 +237,10 @@
     "answerSourceId": "tmua-official-2021-answer-key",
     "workedSolutionSourceId": "tmua-official-2021-paper-1-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -256,10 +256,10 @@
     "answerSourceId": "tmua-official-2021-answer-key",
     "workedSolutionSourceId": "tmua-official-2021-paper-2-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -275,10 +275,10 @@
     "answerSourceId": "tmua-official-2022-answer-key",
     "workedSolutionSourceId": "tmua-official-2022-paper-1-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -294,10 +294,10 @@
     "answerSourceId": "tmua-official-2022-answer-key",
     "workedSolutionSourceId": "tmua-official-2022-paper-2-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -316,7 +316,7 @@
     "contentStage": "published",
     "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"
@@ -332,10 +332,10 @@
     "answerSourceId": "tmua-official-2023-answer-key",
     "workedSolutionSourceId": "tmua-official-2023-paper-2-worked-solutions",
     "completeness": "complete",
-    "contentStage": "indexed",
-    "onlineQuestionCount": 0,
+    "contentStage": "published",
+    "onlineQuestionCount": 20,
     "audit": {
-      "generatedAt": "2026-07-13T00:00:00.000Z",
+      "generatedAt": "2026-07-17T07:50:15.452Z",
       "generatedBy": "tmua-corpus-cli",
       "schemaVersion": 1,
       "changeReason": "tmua:build"

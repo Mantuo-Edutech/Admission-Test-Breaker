@@ -1,0 +1,130 @@
+schemaVersion: 1
+feature:
+  id: standardized-content-products
+  title: 版本化资料产品注册表与全站学习资料馆
+  status: partial
+  userOutcome: 学生只看到能够在本站真正打开的题库、知识覆盖、复习笔记和考试指南；内部审核内容不会伪装成已上线产品，所有本地内容文件都能追溯到产品、研究、暂存、模型、Schema 或发布控制生命周期。
+run:
+  packageScript: verify:content-products
+claims:
+  - id: typed-product-registry
+    status: verified
+    statement: 所有资料产品使用同一份版本化注册表描述产品版本、核验日期、考试、类型、访问方式、交付方式、权限包、权利基础、内部路由、指标和证据。
+    artifacts:
+      - content/products/catalog.json
+      - src/features/library/content-product-registry.ts
+    automatedChecks:
+      - verify:content-products
+  - id: complete-asset-product-lineage
+    status: verified
+    statement: 每个 content 目录文件必须且只能进入一个生命周期分类；全部公开与内部产品必须连接至少一组资产，原创练习与 TMUA Notes JSON 必须成为某项产品的直接证据，官方 raw 文件永远只属于 research-source。
+    artifacts:
+      - content/products/asset-lifecycle.json
+      - tests/features/library/asset-product-lifecycle.test.ts
+      - content/products/catalog.json
+    automatedChecks:
+      - verify:product-lineage
+  - id: product-release-readiness
+    status: verified
+    statement: 每个公开产品必须且只能连接一个主 feature manifest；确定性报告分别计算自动主张、人工检查、封闭 Beta 和最终发布状态，陈旧报告或缺失/重复证据会失败，自动 E2E 不会冒充人工签字。
+    artifacts:
+      - content/products/release-readiness.json
+      - content/products/manual-review-worklist.json
+      - src/features/library/content-release-readiness.ts
+      - src/features/library/manual-review-worklist.ts
+      - scripts/check-content-release-readiness.ts
+      - scripts/check-manual-review-worklist.ts
+      - tests/features/library/content-release-readiness.test.ts
+      - verification/features/content-release-readiness.yaml
+    automatedChecks:
+      - verify:content-release-readiness
+      - verify:manual-review-worklist
+  - id: public-products-are-usable
+    status: verified
+    statement: 公开产品必须有本站内部路由和现存证据文件，31 个不同产品路由还会逐一完成运行时加载审计；internal-review 产品不能进入公开资料馆。
+    artifacts:
+      - src/features/library/pages/LearningLibraryPage.tsx
+      - tests/features/library/content-product-registry.test.ts
+      - tests/app/content-product-route-audit.test.tsx
+    automatedChecks:
+      - verify:content-products
+  - id: profile-before-free-practice
+    status: verified
+    statement: 题目与基础结果继续免费，但 19 项原生在线练习产品统一要求先完成不含联系方式的本人档案；目录文案与实际练习路由的档案门保持一致。
+    artifacts:
+      - content/products/catalog.json
+      - src/features/preparation-profile/components/ExamPracticeProfileGate.tsx
+      - tests/features/library/content-product-registry.test.ts
+      - tests/app/assessment-profile-first-journey.test.tsx
+    automatedChecks:
+      - verify:content-products
+      - test
+  - id: unified-library-routes
+    status: verified
+    statement: 全站资料馆和五项考试的资料路由复用同一套产品页面与响应式组件，并按“了解考试 → 完成本人定位 → 在线练习 → 复习与深度解析”自动排序。
+    artifacts:
+      - src/app/routes.tsx
+      - tests/app/learning-library-page.test.tsx
+    automatedChecks:
+      - verify:content-products
+  - id: real-entitled-resource
+    status: verified
+    statement: TMUA 六周精确训练计划和 Early Specimen Paper 1 全 20 题逐题解析都作为真实权限产品进入统一目录，并验证未登录、未授权、已授权和撤销后四种状态；ESAT 数学/理化生、TARA 推理/写作、LNAT 论证阅读/写作和 UCAT 四模块/工具节奏均有按本人专业计划或考试档案开放的网页与 A4 PDF 教学预览，细颗粒章节和组合 ESAT 蓝图仍保持内部状态。
+    artifacts:
+      - content/products/catalog.json
+      - content/notes/tmua/six-week-review-plan-v1.json
+      - content/notes/tmua/specimen-p1-worked-explanations-v1.json
+      - supabase/migrations/20260718190000_entitled_content_delivery.sql
+      - verification/features/tmua-invite-bound-review-plan.yaml
+      - verification/features/tmua-specimen-p1-deep-review.yaml
+      - content/notes/esat/mathematics-foundations-v1.json
+      - verification/features/esat-mathematics-review-notes.yaml
+      - content/notes/esat/sciences-foundations-v1.json
+      - verification/features/esat-science-review-notes.yaml
+      - content/notes/tara/reasoning-writing-foundations-v1.json
+      - verification/features/tara-review-notes.yaml
+      - content/notes/lnat/reading-writing-foundations-v1.json
+      - verification/features/lnat-review-notes.yaml
+      - content/notes/ucat/four-subtest-foundations-v1.json
+      - verification/features/ucat-review-notes.yaml
+      - content/products/review-notes-pdf-assets.json
+    automatedChecks:
+      - verify:entitled-content
+      - verify:review-notes-pdfs
+      - verify:supabase
+  - id: catalog-driven-entitlement-delivery
+    status: verified
+    statement: 邀请码成功页和学生账号页不再硬编码某一个权限包；它们从统一产品目录解析当前 package 对应的全部已发布资料与站内入口，并验证每项 invite 产品在发布 SQL 中真实存在且逐包绑定。
+    artifacts:
+      - src/features/library/content-product-registry.ts
+      - src/features/account/pages/AccessCompletePage.tsx
+      - src/features/account/pages/AccountPage.tsx
+      - tests/features/library/content-product-registry.test.ts
+      - tests/app/account-access-flow.test.tsx
+    automatedChecks:
+      - verify:content-products
+      - test
+  - id: no-unpublished-sales-promise
+    status: verified
+    statement: 资料馆、准备首页、注册与登录入口只承诺目录中已经发布并可由当前权限包交付的资料；未进入发布目录的完整模考不会作为当前邀请码利益点展示。
+    artifacts:
+      - src/features/library/pages/LearningLibraryPage.tsx
+      - src/features/service-bridge/components/WechatAccessDialog.tsx
+      - src/features/account/pages/InviteAccessPage.tsx
+      - src/features/catalog/pages/TmuaDashboardPage.tsx
+      - tests/app/tmua-hub-page.test.tsx
+    automatedChecks:
+      - verify:content-products
+      - test
+boundaries:
+  - 资料已发现、已下载、可发布和已上线是不同状态，不能互相代替。
+  - 官网事实可以形成本站解读，但原文件转载仍受独立权利门约束。
+  - internal-review 产品默认不可见，不能用建设中文案替代真实可用内容。
+  - 目录状态、自动证据通过、封闭 Beta 就绪和最终发布是四个不同结论；人工学术、语言、权利和真机检查必须单独留痕。
+manualChecks:
+  - id: responsive-library-review
+    status: pending
+    viewports:
+      - phone
+      - tablet
+      - desktop

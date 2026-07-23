@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-practice-2016-p1-q19",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-practice-2016-p1",
+  "edition": "practice-2016",
+  "paper": 1,
+  "questionNumber": 19,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "13\n\nͳͻ\u0003     \u0017\u0003  \u0003\u0003‫ ݔ‬ଷ \u0003\u0003\u0003\u0003\u0003ሺͳ ൅ ʹ‫ ݔ‬൅ ͵‫ ݔ‬ଶ ሻ଺ \u0003\u0003\u0003\u0003 \u0003\u0003  \u0003\n        \u0003‫ ݔ‬ସ \u0003\u0003\u0003\u0003\u0003ሺͳ െ ܽ‫ ݔ‬ଶ ሻହ Ǥ\u0003\u0003\u0003\n        \u0003\n          \u0003\u0003\u0003\u0003\u0003\u0003 \u0003ܽǤ\u0003\u0003\u0003\n        \u0003\n\n\u0003        \u0004\u0003 േ\u0003ʹξʹ\u0003\n      \u0003 \u0003\u0005\u0003 േ\u0003ξͳ͹\u0003\n\n\u0003        \u0003\n         \u0006\u0003 േ\u0003ξ͵Ͷ\u0003\n\u0003        \u0003\n         \u0007\u0003 േ\u0003ʹξͳ͹\u0003\n\u0003        \u0003\n         \b\u0003 \u0017\u0003\u0003\u0003\u0003\u0003\u0003ܽǤ\u0003\n         \u0003\n\n\n\n\n© UCLES 2016                                                                                    [Turn over"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "13\n\n19       ‫ ݔ‬ଷ ሺ1 ൅ 2‫ ݔ‬൅ 3‫ ݔ‬ଶ ሻ଺    \n        ‫ ݔ‬ସ ሺ1 െ ܽ‫ ݔ‬ଶ ሻହ Ǥ\n        \n           ܽǤ"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "േ2ξ2"
+    },
+    {
+      "label": "B",
+      "rawText": "േξ17"
+    },
+    {
+      "label": "C",
+      "rawText": "േξ34"
+    },
+    {
+      "label": "D",
+      "rawText": "േ2ξ17"
+    },
+    {
+      "label": "E",
+      "rawText": "ܽǤ\n         \n\n\n\n\n© UCLES 2016                                                                                    [Turn over"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We expand the first expression up to powers of x3 to find its coefficient. We can think of the\nfirst expression as (1 + (2x + 3x2 ))6 and use the binomial theorem to expand it. We note that\nthe first few binomial coefficients are\n           \u0012 \u0013           \u0012 \u0013            \u0012 \u0013                    \u0012 \u0013\n             6             6              6     6×5              6     6×5×4\n                = 1;           = 6;          =        = 15;         =           = 20.\n             0             1              2      2!              3        3!\n\nWe thus have\n\n  (1 + (2x + 3x2 ))6 = 1 + 61 (2x + 3x2 ) + 62 (2x + 3x2 )2 + 63 (2x + 3x2 )3 + · · ·\n                             \u0001                \u0001                 \u0001\n\n                      = 1 + 6(2x + 3x2 ) + 15((2x)2 + 2(2x)(3x2 ) + · · · ) + 20((2x)3 + · · · ) + · · ·\n\nwhere we have stopped when the powers reach 3. We can read off the coefficient of x3 from this;\nit is\n                              15 × 2 × 2 × 3 + 20 × 8 = 340.\n\nWe can expand (1 − ax2 )5 similarly, and obtain\n\n               1 + 51 (−ax2 ) + 52 (−ax2 )2 + · · · = 1 − 5ax2 + 10a2 x4 + · · ·\n                     \u0001              \u0001\n\n\nso the coefficient of x4 is 10a2 .\nWe are told how these two coefficients relate to each other: we have\n\n                                            340 = 2 × 10a2\n                    √\nso a2 = 17 and a = ± 17, giving the answer as option B.\n\n\n\n\n                                                   22\n                                                                                             © UCLES 2019"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-practice-2016-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-practice(2016).pdf",
+      "sha256": "b4c06da03634f7f5e68eff1de542aa19a126f83afbab81457a87c8c9e1a02322",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-practice-2016-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-practice(2016).pdf",
+      "sha256": "f34ba2c5bd47c54670d4cf3943071d5dccff214eb041d5f6c9406dfea2af1238",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-practice-2016-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-practice(2016).pdf",
+      "sha256": "23c3343c8240fb0e479aca0427a86b9d26832edcee7744122b598269c3da32f8",
+      "pages": [
+        22
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required",
+      "pdf-font-mapping-anomaly"
+    ]
+  }
+}

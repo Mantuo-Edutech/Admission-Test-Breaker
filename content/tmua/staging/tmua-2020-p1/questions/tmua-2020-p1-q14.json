@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2020-p1-q14",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2020-p1",
+  "edition": "2020",
+  "paper": 1,
+  "questionNumber": 14,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "14   The area enclosed between the line y = mx and the curve y = x3 is 6.\n\n     What is the value of m ?\n\n     A 2\n\n     B 4\n       √\n     C   3\n       √\n     D   6\n         √\n     E 2 3\n         √\n     F 2 6\n\n\n\n\n                                           16"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The area enclosed between the line y = mx and the curve y = x3 is 6.\n\n     What is the value of m ?"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "2"
+    },
+    {
+      "label": "B",
+      "rawText": "4\n       √"
+    },
+    {
+      "label": "C",
+      "rawText": "3\n       √"
+    },
+    {
+      "label": "D",
+      "rawText": "6\n         √"
+    },
+    {
+      "label": "E",
+      "rawText": "2 3\n         √"
+    },
+    {
+      "label": "F",
+      "rawText": "2 6"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We make a quick sketch of y = mx and y = x3 so that we can identify the area enclosed. Note\nthat if m ≤ 0, then there is no area enclosed, so we must have m > 0.\n\n                                               y\n\n\n\n\n                                                                       x\n                                               0\n\n\n\n\nThe first thing we note is that there are two regions we need to consider: one with x > 0 and\none with x < 0. By symmetry, their areas are equal, so it suffices to find m such that the area\nof the region with x > 0 is 3.\nTo find the area enclosed for x > 0, we need to find where the line and cubic intersect; this is\n                                      √\nwhen x3 = mx, so at x = 0 and x = ± m. As we are interested in the point where x > 0, this\n         √\nis at s = m.\nThe enclosed area can be calculated as the area below the line minus the area below the cubic.\nSo as a single integral, this gives\n                             Z √m\n                                                                 \u0003√m\n                                    mx − x3 dx =         2   1 4\n                                                   \u00021\n                                                    2 mx   − 4 x  0\n                              0\n                                               = 12 m2 − 14 m2\n                                               = 41 m2\n\n(We could also have calculated the area under the line as the area of a triangle.)\n                                                            √        √\nSince this area is 3, we have 14 m2 = 3, so m2 = 12 and m = 12 = 2 3. This is option E.\n\n\n\n\nVersion 1.0, April 2021                                                                 Page 16\n\n                                          © UCLES 2021"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2020-paper-1",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-1-2020.pdf",
+      "sha256": "0c80eadb9b4cba634a43190bfeae4fa8a014bc23df1603edea1b6f8b6ccf830e",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2020-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2020.pdf",
+      "sha256": "2e442e3271ccf64cf09f4897b1ada9e00ee77e885440c8acec43ea9536046e80",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2020-paper-1-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-1-2020.pdf",
+      "sha256": "ef3287c056714fdd39fd05c45f3a6084f3d09589cbe99d3a49d8b002fe963f12",
+      "pages": [
+        16
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

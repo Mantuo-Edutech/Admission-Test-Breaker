@@ -156,7 +156,7 @@ describe("TMUA generated artifact writer", () => {
     const report = await readFile(reportPath, "utf8");
     expect(report).toContain("96 observed imported paths / 46 canonical sources");
     expect(report).toContain("4 official supplements");
-    expect(report).toContain("18 papers / 360 question shells / 20 currently published");
+    expect(report).toContain("18 papers / 360 question shells / 360 currently published");
     expect(report).toContain("PDF presence is not online-playable status");
 
     const files = await readdir(root, { recursive: true });

@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "id": "esat-physics-starter-v1",
+  "exam": "ESAT",
+  "edition": "Physics Starter · Original v1",
+  "sectionLabel": "Physics · Original Diagnostic",
+  "sectionLabelZh": "物理 · 满托原创短诊断",
+  "durationMinutes": 20,
+  "deliveryMode": "structured",
+  "publicationStatus": "teaching-preview",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本练习依据 ESAT Physics 公开范围独立命题，不复制或改写官方 Guide、ENGAA 或 NSAA 题面。",
+  "sourceAnchors": [
+    {
+      "id": "esat-content-specification",
+      "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+      "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+      "usedFor": "Physics scope boundary"
+    },
+    {
+      "id": "esat-guide-physics",
+      "localPath": "content/official/raw/esat/ESAT_Guide_Physics.pdf",
+      "sha256": "234651aa05f87112e3455bae420de782683938d8d28950293649a8352dc4729e",
+      "usedFor": "terminology and topic coverage only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "esat-physics-starter-v1-q01",
+      "number": 1,
+      "sourcePage": 1,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A 6 Ω resistor and a 3 Ω resistor are connected in parallel. What is their combined resistance?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1\\ \\Omega" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2\\ \\Omega" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4.5\\ \\Omega" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "9\\ \\Omega" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["physics-electricity"],
+      "skillTags": ["parallel-circuits", "resistance"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-starter-v1.json"
+    },
+    {
+      "id": "esat-physics-starter-v1-q02",
+      "number": 2,
+      "sourcePage": 2,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A device transfers 1800 J of electrical energy in 50 s. What is its power?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "18\\ \\text{W}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "36\\ \\text{W}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "50\\ \\text{W}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "90\\ \\text{W}" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["physics-electricity"],
+      "skillTags": ["power", "energy-transfer"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-starter-v1.json"
+    },
+    {
+      "id": "esat-physics-starter-v1-q03",
+      "number": 3,
+      "sourcePage": 3,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "An ideal transformer changes 240 V to 12 V. The primary coil has 500 turns. How many turns are on the secondary coil?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "20" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "25" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "40" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "100" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["physics-magnetism"],
+      "skillTags": ["transformers", "ratio"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-starter-v1.json"
+    },
+    {
+      "id": "esat-physics-starter-v1-q04",
+      "number": 4,
+      "sourcePage": 4,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A car's velocity increases uniformly from 4 m/s to 16 m/s in 6 s. What is its acceleration?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1\\ \\text{m s}^{-2}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2\\ \\text{m s}^{-2}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3\\ \\text{m s}^{-2}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4\\ \\text{m s}^{-2}" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["physics-mechanics"],
+      "skillTags": ["kinematics", "acceleration"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-starter-v1.json"
+    },
+    {
+      "id": "esat-physics-starter-v1-q05",
+      "number": 5,
+      "sourcePage": 5,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A 2 kg trolley moving at 5 m/s collides with a stationary 3 kg trolley. They stick together. What is their common speed immediately after the collision?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1\\ \\text{m s}^{-1}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2\\ \\text{m s}^{-1}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "3\\ \\text{m s}^{-1}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "5\\ \\text{m s}^{-1}" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["physics-mechanics"],
+      "skillTags": ["momentum", "inelastic-collision"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-starter-v1.json"
+    },
+    {
+      "id": "esat-physics-starter-v1-q06",
+      "number": 6,
+      "sourcePage": 6,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "How much energy is required to raise the temperature of 0.50 kg of water by 20 °C? The specific heat capacity of water is 4200 J kg⁻¹ °C⁻¹." }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4.2\\times10^3\\ \\text{J}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.1\\times10^4\\ \\text{J}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4.2\\times10^4\\ \\text{J}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "8.4\\times10^4\\ \\text{J}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["physics-thermal"],
+      "skillTags": ["specific-heat-capacity", "energy"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-starter-v1.json"
+    },
+    {
+      "id": "esat-physics-starter-v1-q07",
+      "number": 7,
+      "sourcePage": 7,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A force of 600 N acts normally on an area of 0.030 m². What pressure is produced?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.0\\times10^2\\ \\text{Pa}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.0\\times10^3\\ \\text{Pa}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.0\\times10^4\\ \\text{Pa}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.0\\times10^5\\ \\text{Pa}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["physics-matter"],
+      "skillTags": ["pressure", "units"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-starter-v1.json"
+    },
+    {
+      "id": "esat-physics-starter-v1-q08",
+      "number": 8,
+      "sourcePage": 8,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A wave has frequency 250 Hz and speed 500 m/s. What is its wavelength?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "0.50\\ \\text{m}" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "1.0\\ \\text{m}" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "2.0\\ \\text{m}" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "math", "tex": "4.0\\ \\text{m}" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["physics-waves"],
+      "skillTags": ["wave-equation", "rearrangement"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-starter-v1.json"
+    },
+    {
+      "id": "esat-physics-starter-v1-q09",
+      "number": 9,
+      "sourcePage": 9,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A radioactive sample has a half-life of 3 days. Its initial count rate is 160 counts per minute. What is its count rate after 9 days, assuming background radiation is negligible?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "10 counts per minute" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "20 counts per minute" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "40 counts per minute" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "80 counts per minute" }] }] }
+      ],
+      "correctAnswer": "B",
+      "knowledgeTags": ["physics-radioactivity"],
+      "skillTags": ["half-life", "repeated-change"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-starter-v1.json"
+    },
+    {
+      "id": "esat-physics-starter-v1-q10",
+      "number": 10,
+      "sourcePage": 10,
+      "prompt": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "A motor receives 5000 J of energy and lifts a 40 kg load through 10 m. Take " }, { "kind": "math", "tex": "g=10\\ \\text{N kg}^{-1}" }, { "kind": "text", "value": ". What is the motor's efficiency?" }] }],
+      "options": [
+        { "label": "A", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "40%" }] }] },
+        { "label": "B", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "60%" }] }] },
+        { "label": "C", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "80%" }] }] },
+        { "label": "D", "content": [{ "kind": "paragraph", "runs": [{ "kind": "text", "value": "100%" }] }] }
+      ],
+      "correctAnswer": "C",
+      "knowledgeTags": ["physics-mechanics"],
+      "skillTags": ["efficiency", "gravitational-energy"],
+      "reviewStatus": "verified",
+      "sourceQuestionPath": "content/esat/original-practice/physics-starter-v1.json",
+      "sourceAnswerPath": "content/esat/original-practice/physics-starter-v1.json"
+    }
+  ]
+}

@@ -1,0 +1,470 @@
+{
+  "schemaVersion": 1,
+  "id": "ucat-four-subtest-foundations-v1",
+  "version": "0.1.0",
+  "publicationStatus": "teaching-preview",
+  "examId": "ucat",
+  "examCycle": "UCAT 2026 for 2027 entry",
+  "titleZh": "UCAT 四模块与极限节奏起点复习笔记",
+  "titleEn": "UCAT Four-Subtest and High-Speed Pacing Starting Review Notes",
+  "subtitleZh": "把 VR、DM、QR、SJT 的判断方法与计算器、标记、复查动作放进同一套执行系统。",
+  "subtitleEn": "A practical starting system for VR, DM, QR, SJT, calculator use, flagging and review.",
+  "authorship": "满托教研原创",
+  "rightsNotice": "本笔记依据 UCAT Consortium 当前 Test Format and Scoring、Test Tools 页面与 2026 Preparation Checklist 核对题量、时长、计分边界、工具和官方准备顺序；双语解释、方法、例题和主动回忆均为满托独立创作，不复制或改写官方题库、文章、情境、选项或讲解。官方原件与网页快照只保存在内部研究区，不能从本站下载。",
+  "scope": {
+    "includedZh": "覆盖 Verbal Reasoning、Decision Making、Quantitative Reasoning、Situational Judgement 和工具/节奏五个模块；包含 25 个知识单元、15 套方法、5 道满托原创逐步例题和 15 组主动回忆。",
+    "includedEn": "A five-module starting map for all four current UCAT subtests plus tools, navigation and high-speed pacing.",
+    "remainingZh": "这不是完整教材、官方题库替代品或正式全真模考。更多题型组合、长组题、完整四模块模拟、SJT 临床专业终审、下载版，以及独立 UCAT 教师、医疗专业、双语、相似度、学生理解和真实设备终审仍待完成；本页不进行官方分数换算、百分位或录取预测。"
+  },
+  "officialAnchors": [
+    {
+      "id": "ucat-format-scoring-2026",
+      "title": "UCAT Test Format and Scoring",
+      "sourceUrl": "https://www.ucat.ac.uk/about-ucat/test-format-and-scoring/",
+      "localPath": "content/official/raw/pages/ucat-format.html",
+      "sha256": "9aa4a93bddcc62bf53c6196f2b38ac40240a1f781154590c772c68f179d52dbf",
+      "usedForZh": "核对四个当前模块、题量、时长、能力目标、计分范围、无倒扣、Decision Making 与 SJT 的部分得分规则。"
+    },
+    {
+      "id": "ucat-test-tools-2026",
+      "title": "UCAT Test Tools",
+      "sourceUrl": "https://www.ucat.ac.uk/prepare/test-tools/",
+      "localPath": "content/official/raw/pages/ucat-tools.html",
+      "sha256": "a659bedc40b1a603cb755e75121a19a633889d2aab62b66d62378e804f7b8c7c",
+      "usedForZh": "核对 QWERTY 键盘、鼠标、可擦写草稿、快捷键、基础屏幕计算器与 Flag for Review 的操作边界。"
+    },
+    {
+      "id": "ucat-preparation-checklist-2026",
+      "title": "UCAT Preparation Checklist",
+      "sourceUrl": "https://www.ucat.ac.uk/media/1711/prep-plan-5.pdf",
+      "localPath": "content/official/raw/ucat/prep-plan-5.pdf",
+      "sha256": "136e3775e77f03fef4baab5bcb85a0affaba74d240981748c9cc1474cfdbf7b9",
+      "usedForZh": "核对 Tour、Question Tutorials、Question Banks、Practice Tests 的渐进准备顺序，以及官方给出的约 30 小时、考前 6–8 周参考而非个人保证。"
+    }
+  ],
+  "examFacts": [
+    {
+      "labelZh": "四个独立计时模块",
+      "labelEn": "Four separately timed subtests",
+      "valueZh": "当前考试由 VR、DM、QR 与 SJT 组成，每个模块前有单独计时的说明页。",
+      "valueEn": "The current test contains VR, DM, QR and SJT, each preceded by a separately timed instruction section."
+    },
+    {
+      "labelZh": "VR 与 DM",
+      "labelEn": "VR and DM",
+      "valueZh": "VR：44 题 / 22 分钟；DM：35 题 / 37 分钟，DM 可使用基础屏幕计算器。",
+      "valueEn": "VR has 44 questions in 22 minutes; DM has 35 questions in 37 minutes and provides a basic onscreen calculator."
+    },
+    {
+      "labelZh": "QR 与 SJT",
+      "labelEn": "QR and SJT",
+      "valueZh": "QR：36 题 / 26 分钟，可用基础计算器；SJT：69 题 / 26 分钟，不要求医疗流程知识。",
+      "valueEn": "QR has 36 questions in 26 minutes with a basic calculator; SJT has 69 questions in 26 minutes and does not require medical procedural knowledge."
+    },
+    {
+      "labelZh": "计分边界",
+      "labelEn": "Scoring boundary",
+      "valueZh": "三项认知模块各为 300–900，总分 900–2700；SJT 为 Band 1–4。答错不倒扣，部分 DM 与 SJT 回答可获部分分。",
+      "valueEn": "Each cognitive subtest is scaled 300–900 for a 900–2700 total; SJT reports Bands 1–4. There is no negative marking and some DM/SJT responses receive partial credit."
+    },
+    {
+      "labelZh": "工具",
+      "labelEn": "Tools",
+      "valueZh": "考场提供 QWERTY 键盘、鼠标、可擦写草稿；DM/QR 的计算器不含科学函数，并可使用导航、快捷键、标记和复查。",
+      "valueEn": "The test provides keyboard, mouse and erasable notes; the DM/QR calculator is basic, with navigation, shortcuts, flagging and review."
+    },
+    {
+      "labelZh": "官方准备顺序",
+      "labelEn": "Official preparation sequence",
+      "valueZh": "先熟悉考试和 Tour，再看各模块 Tutorial，随后 Question Banks，最后在接近考试时做 Practice Tests。",
+      "valueEn": "Learn the format and Tour first, then subtest tutorials, question banks and finally practice tests nearer the test date."
+    }
+  ],
+  "curriculumBridges": [
+    {
+      "curriculum": "A-Level / IAL",
+      "status": "partial",
+      "statusZh": "基础知识多半已覆盖，速度与题型需专练",
+      "likelyCoveredZh": [
+        "数学课程可迁移百分数、比例、平均数、图表、概率与单位换算到 QR/DM。",
+        "English、History、Economics 等课程可迁移证据阅读和论证判断到 VR/DM。"
+      ],
+      "confirmZh": [
+        "能否在 VR 约 30 秒/题的压力下只用文章证据判断。",
+        "能否在 QR 中判断何时心算、估算或调用基础计算器。",
+        "是否理解 SJT 的患者安全、诚信、保密、团队与及时升级原则，而不臆造医疗流程。"
+      ],
+      "firstActionZh": "先用四套站内原创短诊断测每题用时和错因，再按最弱模块回到本页方法。"
+    },
+    {
+      "curriculum": "IB Diploma",
+      "status": "partial",
+      "statusZh": "跨学科能力可迁移，极限节奏需重建",
+      "likelyCoveredZh": [
+        "TOK、Language A 与 Group 3 科目可迁移 claim、evidence、assumption 和信息可靠性。",
+        "IB Mathematics 与 Sciences 可迁移数据、概率、单位、估算与图表。"
+      ],
+      "confirmZh": [
+        "能否从开放式解释切换到唯一被材料支持的答案。",
+        "能否在连续高速模块中执行止损，而不是追求每题完全确定。",
+        "能否把 SJT 的每个行动拆成安全、权限、诚信、沟通和升级五个维度。"
+      ],
+      "firstActionZh": "先建立单题决策门槛，再用记录表观察错误来自理解、方法、操作还是时间。"
+    },
+    {
+      "curriculum": "AP / US High School",
+      "status": "partial",
+      "statusZh": "阅读与数据基础可迁移，英式测试界面需适应",
+      "likelyCoveredZh": [
+        "AP English Language、History 可迁移快速阅读、主张、证据与限定判断。",
+        "AP Statistics、Precalculus 与 Sciences 可迁移表格、比例、概率和数据解释。"
+      ],
+      "confirmZh": [
+        "是否熟悉 True/False/Can’t Tell、Yes/No statement set 和 SJT 排序式响应。",
+        "是否能使用屏幕基础计算器与键盘快捷键，不依赖图形或科学函数。",
+        "是否能避免把熟悉的美国医疗/校园规则直接套入英国情境。"
+      ],
+      "firstActionZh": "先完成工具与响应格式熟悉，再按 VR—DM—QR—SJT 顺序各做一个原创数据点。"
+    },
+    {
+      "curriculum": "其他课程体系 / Other curricula",
+      "status": "partial",
+      "statusZh": "不要求特定学科组合，但基础与语言要逐项验证",
+      "likelyCoveredZh": [
+        "日常英文阅读与学校数学可提供 VR、QR 的起点。",
+        "学校合作、诚信和安全经验可帮助理解 SJT，但不是医疗专业知识考试。"
+      ],
+      "confirmZh": [
+        "分数、百分数、比例、平均数、速率和单位换算是否能够快速完成。",
+        "能否区分文本明确支持、明确反对和信息不足。",
+        "能否连续使用键盘、鼠标、计算器、标记和复查而不丢失节奏。"
+      ],
+      "firstActionZh": "先做不计分的工具演练，再用四模块短诊断定位知识、英语和操作中的真实缺口。"
+    }
+  ],
+  "modules": [
+    {
+      "id": "ucat-verbal-reasoning",
+      "number": "01",
+      "titleZh": "文字推理",
+      "titleEn": "Verbal Reasoning",
+      "summaryZh": "答案只来自文章；速度来自先识别任务，再定位证据，而不是更快地逐字翻译。",
+      "learningOutcomes": [
+        "按题干任务定位关键词、同义改写和对应证据。",
+        "稳定区分 True、False 与 Can’t Tell 的证据门槛。",
+        "识别超出范围、偷换数量和把可能写成必然的选项。"
+      ],
+      "knowledgeUnits": [
+        { "id": "ucat-vr-passage-triage", "code": "VR1", "labelZh": "文章与题目快速分流", "labelEn": "Passage and Task Triage" },
+        { "id": "ucat-vr-tfct", "code": "VR2", "labelZh": "True / False / Can’t Tell", "labelEn": "True / False / Can't Tell" },
+        { "id": "ucat-vr-inference", "code": "VR3", "labelZh": "结论与最小推断", "labelEn": "Conclusions and Minimal Inference" },
+        { "id": "ucat-vr-keyword-verification", "code": "VR4", "labelZh": "关键词与同义验证", "labelEn": "Keyword and Paraphrase Verification" },
+        { "id": "ucat-vr-scope", "code": "VR5", "labelZh": "数量、时间与范围陷阱", "labelEn": "Quantity, Time and Scope Traps" }
+      ],
+      "methods": [
+        {
+          "nameZh": "题干先分类，再决定阅读深度",
+          "nameEn": "Classify the task before choosing reading depth",
+          "signalZh": "每题都从文章第一行重新读，导致后半模块严重超时。",
+          "methodZh": "先判断题目是定位事实、判断 TFCT、找主旨还是做推断；定位题先搜关键词和同义词，主旨题再看段落功能和整体方向。",
+          "checkZh": "你能说清这题需要一句证据、两处比较还是整篇结构吗？"
+        },
+        {
+          "nameZh": "用三种证据状态判断 TFCT",
+          "nameEn": "Use three evidence states for TFCT",
+          "signalZh": "你把“文章没说”当成 False，或用常识把 Can’t Tell 变成 True。",
+          "methodZh": "文章直接支持为 True；文章直接冲突为 False；既不能支持也不能冲突为 Can’t Tell。只有文本证据参与判断。",
+          "checkZh": "能否指出支持或冲突的原句？指出不了时，不要用常识补齐。"
+        },
+        {
+          "nameZh": "逐项核对数量—对象—时间—强度",
+          "nameEn": "Check quantity, subject, time and strength",
+          "signalZh": "选项与原文几乎一样，但换了 all/some、过去/未来或相关/导致。",
+          "methodZh": "把命题拆成谁、多少、何时、做什么、强度多大；任何一格改变都要重新验证。",
+          "checkZh": "相关不能自动变成因果，部分不能自动变成全部，观察不能自动变成未来预测。"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "ucat-vr-original-library-study",
+          "titleZh": "满托原创例题：研究结果能否推出未来效果",
+          "titleEn": "Mantou Original: Can a Study Result Support a Future Claim?",
+          "problemZh": "短文：一所学校试行延长图书馆开放时间四周。参与问卷的 120 名学生中，68% 表示更容易找到安静学习空间；研究没有测量考试成绩。判断：延长开放时间会提高所有学生下一次考试的成绩。",
+          "problemEn": "A four-week school library trial found that 68% of 120 survey respondents found quiet study space more easily; exam results were not measured. Judge: Longer opening will improve every student's next exam score.",
+          "steps": [
+            { "labelZh": "第 1 步：找直接证据", "bodyZh": "文章只测量问卷中的学习空间体验，没有测考试成绩。" },
+            { "labelZh": "第 2 步：拆范围", "bodyZh": "120 名问卷参与者不等于所有学生；68% 也不等于全部。" },
+            { "labelZh": "第 3 步：拆时间与因果", "bodyZh": "四周体验不能直接推出下一次考试成绩，更不能证明因果。" }
+          ],
+          "answerZh": "Can’t Tell。文章没有提供考试成绩证据，也没有覆盖所有学生或未来结果。",
+          "trapZh": "因为延长开放听起来有帮助，就凭常识选 True；或因为研究不完善就错误地选 False。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "False 与 Can’t Tell 的关键区别是什么？", "promptEn": "What is the key difference between False and Can't Tell?", "answerZh": "False 需要文本明确冲突；Can’t Tell 是文本既不能支持也不能反驳。", "answerEn": "False needs textual contradiction; Can't Tell means the passage neither supports nor contradicts the claim." },
+        { "promptZh": "定位题为什么要找同义词而不只找原词？", "promptEn": "Why search for paraphrases rather than only exact words?", "answerZh": "题干和文章常用不同表达描述同一概念，只搜原词会漏掉真正证据。", "answerEn": "The task and passage often express the same concept differently, so exact-word search can miss the evidence." },
+        { "promptZh": "每个命题要核对哪四个范围格？", "promptEn": "Which four scope boxes should every claim pass?", "answerZh": "数量、对象、时间和强度/关系。", "answerEn": "Quantity, subject, time and strength or relationship." }
+      ]
+    },
+    {
+      "id": "ucat-decision-making",
+      "number": "02",
+      "titleZh": "决策判断",
+      "titleEn": "Decision Making",
+      "summaryZh": "把语言规则转成可检查的图、表或集合，再在信息不完整时保持结论边界。",
+      "learningOutcomes": [
+        "把排序、分组和演绎规则转成约束表。",
+        "使用集合、Venn 图、概率树或频数表避免凭直觉。",
+        "在 strongest argument 与多陈述题中逐项判断相关性和支持强度。"
+      ],
+      "knowledgeUnits": [
+        { "id": "ucat-dm-deduction", "code": "DM1", "labelZh": "演绎与条件约束", "labelEn": "Deduction and Conditional Constraints" },
+        { "id": "ucat-dm-syllogisms", "code": "DM2", "labelZh": "三段论与集合关系", "labelEn": "Syllogisms and Set Relations" },
+        { "id": "ucat-dm-ordering", "code": "DM3", "labelZh": "排序、分组与逻辑谜题", "labelEn": "Ordering, Grouping and Logic Puzzles" },
+        { "id": "ucat-dm-probability", "code": "DM4", "labelZh": "概率与频数", "labelEn": "Probability and Frequencies" },
+        { "id": "ucat-dm-data", "code": "DM5", "labelZh": "统计信息与数据推断", "labelEn": "Statistical Information and Data Inference" },
+        { "id": "ucat-dm-arguments", "code": "DM6", "labelZh": "最强论证与多陈述判断", "labelEn": "Strongest Arguments and Statement Sets" }
+      ],
+      "methods": [
+        {
+          "nameZh": "一句规则只写一个约束",
+          "nameEn": "Translate each rule into one constraint",
+          "signalZh": "你在脑中同时记五六条排序或分组规则，反复忘记例外。",
+          "methodZh": "用箭头表示先后、括号表示同组、叉号表示互斥；每条规则只产生一个可检查符号，推导结果另行记录。",
+          "checkZh": "最终方案是否逐条通过原始约束，而不是只符合你记住的几条？"
+        },
+        {
+          "nameZh": "先把概率变成频数",
+          "nameEn": "Convert probabilities into frequencies first",
+          "signalZh": "条件概率文字复杂，分母对象不断变化。",
+          "methodZh": "选一个方便总数（如 100 或题目实际人数）画 2×2 表，先填交集和边际，再明确问题的条件群体是谁。",
+          "checkZh": "分母是否是题目说的‘在……之中’，而不是全体？"
+        },
+        {
+          "nameZh": "强论证要同时过相关、重要、直接三关",
+          "nameEn": "A strong argument must be relevant, important and direct",
+          "signalZh": "某理由听起来正确或有感情，但没有直接回答政策问题。",
+          "methodZh": "先看是否回答题目，再看影响是否足够重要，最后看理由到结论是否直接；背景事实、极端个例和情绪口号不能单独构成强论证。",
+          "checkZh": "如果删掉主题关键词，这个理由是否仍可套在任何问题上？若是，它可能太泛。"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "ucat-dm-original-clinic-order",
+          "titleZh": "满托原创例题：五项培训的排序约束",
+          "titleEn": "Mantou Original: Ordering Five Training Sessions",
+          "problemZh": "五项培训 A、B、C、D、E 排在周一到周五。A 在 C 前；B 紧接 D；E 不在周一；C 在周五。哪个安排可行？",
+          "problemEn": "Five sessions A–E are scheduled Monday to Friday. A is before C; B immediately follows D; E is not Monday; C is Friday. Find a feasible order.",
+          "steps": [
+            { "labelZh": "第 1 步：固定 C", "bodyZh": "C 在周五，因此 A 只需位于周一至周四。" },
+            { "labelZh": "第 2 步：放置 DB 连块", "bodyZh": "B 紧接 D，所以把 DB 当作一个长度为 2 的块；不能占周五。" },
+            { "labelZh": "第 3 步：检查 E 与剩余位置", "bodyZh": "若 DB 放周一周二，E 不能周一，只能周三或周四；令 A 周三、E 周四即可。" },
+            { "labelZh": "第 4 步：逐条验算", "bodyZh": "顺序 D、B、A、E、C 同时满足四条规则。" }
+          ],
+          "answerZh": "一个可行安排是 D—B—A—E—C。",
+          "trapZh": "把“B 紧接 D”读成 D 紧接 B，或只检查 A 在 C 前而忘记 E 不在周一。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "排序题中为什么要把“紧接”视为连块？", "promptEn": "Why treat an immediate-follow rule as a block?", "answerZh": "它把两个元素的相对顺序和距离同时固定，显著减少可放位置。", "answerEn": "It fixes both relative order and distance, sharply reducing possible placements." },
+        { "promptZh": "条件概率题的分母由什么决定？", "promptEn": "What determines the denominator in a conditional probability?", "answerZh": "由条件所限定的群体决定，而不是默认使用全体。", "answerEn": "The conditioning group determines the denominator, not the whole population by default." },
+        { "promptZh": "强论证的三道检查是什么？", "promptEn": "What are the three checks for a strong argument?", "answerZh": "相关、重要、直接支持结论。", "answerEn": "Relevant, important and directly supportive of the conclusion." }
+      ]
+    },
+    {
+      "id": "ucat-quantitative-reasoning",
+      "number": "03",
+      "titleZh": "数量推理",
+      "titleEn": "Quantitative Reasoning",
+      "summaryZh": "先决定模型和单位，再决定心算、估算或计算器；计算只是最后一步。",
+      "learningOutcomes": [
+        "从表格和图表中提取正确行列、时间区间和单位。",
+        "快速建立百分数、比例、速率、多步成本和加权平均模型。",
+        "用估算、数量级和反算检查计算器结果。"
+      ],
+      "knowledgeUnits": [
+        { "id": "ucat-qr-percentages", "code": "QR1", "labelZh": "百分数与百分比变化", "labelEn": "Percentages and Percentage Change" },
+        { "id": "ucat-qr-ratios-rates", "code": "QR2", "labelZh": "比例、速率与单位", "labelEn": "Ratios, Rates and Units" },
+        { "id": "ucat-qr-tables-charts", "code": "QR3", "labelZh": "表格、图表与数据选择", "labelEn": "Tables, Charts and Data Selection" },
+        { "id": "ucat-qr-multistep", "code": "QR4", "labelZh": "多步成本与加权量", "labelEn": "Multi-step Cost and Weighted Quantities" },
+        { "id": "ucat-qr-calculator", "code": "QR5", "labelZh": "心算、估算与计算器选择", "labelEn": "Mental Maths, Estimation and Calculator Choice" }
+      ],
+      "methods": [
+        {
+          "nameZh": "先写单位链，再按计算器",
+          "nameEn": "Write the unit chain before using the calculator",
+          "signalZh": "数字都输入正确，答案却差 60、100 或 1000 倍。",
+          "methodZh": "把目标单位写在等号右边，用乘除逐步消去分钟/小时、克/千克、每人/总量；最后才输入数值。",
+          "checkZh": "每一步单位能否像代数因子一样约掉，并留下题目要求的单位？"
+        },
+        {
+          "nameZh": "区分百分数变化与百分点",
+          "nameEn": "Separate percentage change from percentage points",
+          "signalZh": "比例从 40% 变到 50%，你直接回答增加 10%。",
+          "methodZh": "百分点是直接相减；百分数变化用差值除以原值。写下题干问 change by what percentage 还是 how many percentage points。",
+          "checkZh": "百分数变化的分母是否始终是原值？"
+        },
+        {
+          "nameZh": "用估算先锁定数量级",
+          "nameEn": "Estimate the magnitude before exact calculation",
+          "signalZh": "计算器给出一个精确数字，但你无法判断小数点或选项是否合理。",
+          "methodZh": "把关键数值取一位有效数字，先估结果范围；精算后若越界，优先检查单位、括号和分母。",
+          "checkZh": "正确选项是否落在估算区间，并与题目情境的大小关系一致？"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "ucat-qr-original-clinic-stock",
+          "titleZh": "满托原创例题：诊所库存的百分数变化",
+          "titleEn": "Mantou Original: Percentage Change in Clinic Stock",
+          "problemZh": "某物资周一有 480 件，周内使用 135 件，又补充 75 件。周末库存相对周一减少了百分之多少？",
+          "problemEn": "A clinic has 480 units on Monday, uses 135 and receives 75. By what percentage has weekend stock decreased from Monday?",
+          "steps": [
+            { "labelZh": "第 1 步：算周末库存", "bodyZh": "480−135+75=420 件。", "math": { "tex": "480-135+75=420", "text": "480 minus 135 plus 75 equals 420" } },
+            { "labelZh": "第 2 步：算减少量", "bodyZh": "减少 480−420=60 件。", "math": { "tex": "480-420=60", "text": "480 minus 420 equals 60" } },
+            { "labelZh": "第 3 步：除以原值", "bodyZh": "60÷480=0.125，因此减少 12.5%。", "math": { "tex": "60\\div480=0.125=12.5\\%", "text": "60 divided by 480 equals 0.125, or 12.5 percent" } }
+          ],
+          "answerZh": "周末库存比周一减少 12.5%。",
+          "trapZh": "只用 135÷480 忽略补充量，或用 60÷420 把新值当作百分数变化的分母。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "百分数变化为什么除以原值？", "promptEn": "Why does percentage change divide by the original value?", "answerZh": "它表示变化量相对于出发基准占多少，因此基准必须是原值。", "answerEn": "It measures the change relative to the starting baseline, so the denominator is the original value." },
+        { "promptZh": "什么时候应该先估算？", "promptEn": "When should you estimate first?", "answerZh": "几乎每个多步或单位复杂题都应先锁定数量级，用来检查精算结果。", "answerEn": "Before most multi-step or unit-heavy calculations, to create a magnitude check for the exact result." },
+        { "promptZh": "QR 中最常见的三类计算器错误是什么？", "promptEn": "What are three common calculator errors in QR?", "answerZh": "括号/运算顺序、单位未换算、分母选错。", "answerEn": "Brackets or order of operations, unconverted units and the wrong denominator." }
+      ]
+    },
+    {
+      "id": "ucat-situational-judgement",
+      "number": "04",
+      "titleZh": "情境判断",
+      "titleEn": "Situational Judgement",
+      "summaryZh": "不是背医疗流程，而是判断行动如何影响安全、诚信、保密、团队和及时升级。",
+      "learningOutcomes": [
+        "把情境中的即时风险、角色权限和信息边界分开。",
+        "优先选择保护安全、保持诚信并由合适人员处理问题的行动。",
+        "区分行动本身是否合适与它对解决问题的重要性。"
+      ],
+      "knowledgeUnits": [
+        { "id": "ucat-sjt-safety", "code": "SJT1", "labelZh": "患者安全与即时风险", "labelEn": "Patient Safety and Immediate Risk" },
+        { "id": "ucat-sjt-integrity", "code": "SJT2", "labelZh": "诚信、记录与问责", "labelEn": "Integrity, Records and Accountability" },
+        { "id": "ucat-sjt-confidentiality", "code": "SJT3", "labelZh": "保密、隐私与信息权限", "labelEn": "Confidentiality, Privacy and Information Access" },
+        { "id": "ucat-sjt-teamwork", "code": "SJT4", "labelZh": "尊重、团队与建设性沟通", "labelEn": "Respect, Teamwork and Constructive Communication" },
+        { "id": "ucat-sjt-escalation", "code": "SJT5", "labelZh": "角色边界与及时升级", "labelEn": "Role Boundaries and Timely Escalation" }
+      ],
+      "methods": [
+        {
+          "nameZh": "先做五维风险扫描",
+          "nameEn": "Run a five-dimension risk scan",
+          "signalZh": "你凭“这个人是否好心”判断行动，而忽略实际后果。",
+          "methodZh": "依次检查安全、诚信、保密、尊重/团队和角色权限；任何重大即时安全风险先处理并升级。",
+          "checkZh": "行动是否降低真实风险，而不仅让当事人感觉舒服或避免冲突？"
+        },
+        {
+          "nameZh": "最小必要披露",
+          "nameEn": "Use minimum necessary disclosure",
+          "signalZh": "为了求助或提醒团队，你准备向无关人员分享可识别信息。",
+          "methodZh": "先问谁有正当职责、解决问题需要哪些最少信息、是否有更私密的沟通渠道；安全例外也应向合适人员披露。",
+          "checkZh": "接收者是否有权限和行动能力？信息是否超过解决问题所需？"
+        },
+        {
+          "nameZh": "先直接沟通，再按风险升级",
+          "nameEn": "Communicate directly, then escalate by risk",
+          "signalZh": "你在“什么都不说”和“立即最高级投诉”之间二选一。",
+          "methodZh": "若无即时危险且适合直接沟通，先私下、具体、尊重地处理；若风险重大、行为持续、涉及诚信/安全或超出权限，及时找合适上级。",
+          "checkZh": "升级层级与风险是否相称，并且没有因怕尴尬而延误安全处理？"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "ucat-sjt-original-shared-login",
+          "titleZh": "满托原创例题：共享登录信息的合适行动",
+          "titleEn": "Mantou Original: Responding to Shared Login Details",
+          "problemZh": "你在志愿者值班时发现同伴把系统登录信息写在公共白板上，称这样换班更方便。最合适的第一步是什么？",
+          "problemEn": "During a volunteer shift, a colleague writes shared system login details on a public whiteboard for convenience. What is the most appropriate first response?",
+          "steps": [
+            { "labelZh": "第 1 步：识别风险", "bodyZh": "公开凭证带来未授权访问、记录归属不清和隐私风险，不是单纯的整洁问题。" },
+            { "labelZh": "第 2 步：采取即时最小行动", "bodyZh": "先移除或遮住暴露的凭证，避免风险继续扩大；不要使用该共享账号。" },
+            { "labelZh": "第 3 步：沟通并升级", "bodyZh": "私下向同伴说明原因，并按组织渠道告知负责人员，以便更换凭证和提供个人访问方式。" }
+          ],
+          "answerZh": "立即停止凭证继续暴露，避免使用共享登录，并向同伴说明后按合适渠道报告以更换凭证。",
+          "trapZh": "为了保持关系而忽略，或把凭证拍照发到大群提醒所有人，从而再次扩大泄露。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "SJT 的五维风险扫描包含什么？", "promptEn": "What are the five dimensions in the SJT risk scan?", "answerZh": "安全、诚信、保密、尊重/团队、角色权限与升级。", "answerEn": "Safety, integrity, confidentiality, respect or teamwork, and role boundaries or escalation." },
+        { "promptZh": "什么叫最小必要披露？", "promptEn": "What is minimum necessary disclosure?", "answerZh": "只向有正当职责和行动能力的人，分享解决问题所必需的信息。", "answerEn": "Share only the information needed to solve the problem with people who have a legitimate role and ability to act." },
+        { "promptZh": "何时不应只靠直接沟通？", "promptEn": "When is direct communication alone insufficient?", "answerZh": "存在即时或重大安全风险、诚信问题持续、超出本人权限，或当事人无法安全处理时。", "answerEn": "When risk is immediate or serious, integrity concerns persist, the matter exceeds your role, or direct handling is unsafe." }
+      ]
+    },
+    {
+      "id": "ucat-tools-timing",
+      "number": "05",
+      "titleZh": "工具、标记与极限节奏",
+      "titleEn": "Tools, Flagging and High-Speed Pacing",
+      "summaryZh": "先把界面动作练成肌肉记忆，再用数据设定每个模块不同的止损点。",
+      "learningOutcomes": [
+        "熟悉导航、快捷键、鼠标、计算器和可擦写草稿的功能边界。",
+        "按模块建立文章包、题组或单题进度检查点。",
+        "只标记真正可通过复查改变的题，并保留末段复查时间。"
+      ],
+      "knowledgeUnits": [
+        { "id": "ucat-tools-interface", "code": "T1", "labelZh": "导航、键盘与鼠标", "labelEn": "Navigation, Keyboard and Mouse" },
+        { "id": "ucat-tools-calculator", "code": "T2", "labelZh": "基础计算器与草稿", "labelEn": "Basic Calculator and Scratch Work" },
+        { "id": "ucat-tools-flag-review", "code": "T3", "labelZh": "标记、复查与止损", "labelEn": "Flagging, Review and Stop-Loss" },
+        { "id": "ucat-tools-checkpoints", "code": "T4", "labelZh": "四模块进度检查点", "labelEn": "Four-Subtest Pacing Checkpoints" }
+      ],
+      "methods": [
+        {
+          "nameZh": "工具训练与题目训练分开",
+          "nameEn": "Separate tool drills from question drills",
+          "signalZh": "你理解题目，却因打开计算器、切换鼠标键盘或导航浪费大量时间。",
+          "methodZh": "先用无难度数字和空白题单独练快捷键、数字输入、清除、标记、下一题与复查；动作稳定后再加入真实推理负荷。",
+          "checkZh": "你能否不思考界面位置就完成常用动作，并知道哪些动作必须使用鼠标？"
+        },
+        {
+          "nameZh": "标记必须带复查理由",
+          "nameEn": "Every flag needs a review reason",
+          "signalZh": "你把所有不确定题都标记，最后看到一长串但不知道先处理什么。",
+          "methodZh": "标记时在草稿写一字母：E=缺证据、C=待计算、R=规则未验；复查只处理最可能因新证据或重算而改变的题。",
+          "checkZh": "如果没有明确的下一步动作，这个标记只是焦虑记录，不是复查计划。"
+        },
+        {
+          "nameZh": "用模块数据设止损，不套统一秒数",
+          "nameEn": "Set stop-loss thresholds from subtest data",
+          "signalZh": "你给 VR、DM、QR、SJT 每题相同时间，忽略题组共享材料与响应复杂度。",
+          "methodZh": "分别记录每个模块的中位用时、90 分位用时和正确率；VR 按文章包、QR 按数据组、DM 按题型、SJT 按情境组设检查点。",
+          "checkZh": "止损点是否来自至少两次练习数据，并为每个模块保留可执行的复查窗口？"
+        }
+      ],
+      "originalWorkedExamples": [
+        {
+          "id": "ucat-tools-original-pacing",
+          "titleZh": "满托原创例题：为 VR 建立文章包检查点",
+          "titleEn": "Mantou Original: Building VR Passage Checkpoints",
+          "problemZh": "VR 有 11 篇文章、22 分钟。你希望末尾保留 2 分钟处理标记题，如何建立简单检查点？",
+          "problemEn": "VR has 11 passages in 22 minutes. You want to reserve two minutes for flagged questions. Build simple checkpoints.",
+          "steps": [
+            { "labelZh": "第 1 步：算首轮预算", "bodyZh": "22−2=20 分钟完成 11 篇，平均每篇文章包约 109 秒。", "math": { "tex": "(22-2)\\times60\\div11\\approx109", "text": "22 minus 2 minutes, multiplied by 60 and divided by 11, is about 109 seconds" } },
+            { "labelZh": "第 2 步：设批次检查点", "bodyZh": "约第 5 分 30 秒完成 3 篇、第 11 分钟完成 6 篇、第 16 分 30 秒完成 9 篇、第 20 分钟完成 11 篇。" },
+            { "labelZh": "第 3 步：定义超时动作", "bodyZh": "若一篇明显超时且没有新证据，保留当前答案、标 E 并进入下一篇；末尾按证据位置复查。" }
+          ],
+          "answerZh": "首轮 20 分钟，按约 3/6/9/11 篇设置检查点，末尾 2 分钟只处理有明确复查理由的标记题。",
+          "trapZh": "机械要求每题 30 秒而忽略同一文章的共享阅读成本，或完全不留复查时间。"
+        }
+      ],
+      "activeRecall": [
+        { "promptZh": "为什么工具动作要先单独练？", "promptEn": "Why practise tool actions separately first?", "answerZh": "这样能把界面操作变成低认知负荷动作，避免与推理同时争夺工作记忆。", "answerEn": "It turns interface use into a low-load habit so it does not compete with reasoning in working memory." },
+        { "promptZh": "一个有效标记必须包含什么？", "promptEn": "What must an effective flag include?", "answerZh": "明确的未决原因和复查时可执行的下一步动作。", "answerEn": "A clear unresolved reason and an actionable next step for review." },
+        { "promptZh": "为什么四个模块不能共用一个单题止损秒数？", "promptEn": "Why not use one per-question stop-loss across all subtests?", "answerZh": "题组共享材料、响应方式和计算负荷不同，应按模块和题型的数据设置。", "answerEn": "Shared stimuli, response formats and calculation load differ, so thresholds must use subtest- and type-specific data." }
+      ]
+    }
+  ],
+  "reviewWorkflow": [
+    { "stepZh": "先完成个人档案", "stepEn": "Complete your profile", "actionZh": "记录课程体系、英语与数学基础、四模块经验和每周可用时间。" },
+    { "stepZh": "先熟悉工具与响应格式", "stepEn": "Learn tools and response formats", "actionZh": "在不追求分数的情况下练导航、计算器、键鼠、标记和各题型提交方式。" },
+    { "stepZh": "完成四套原创短诊断", "stepEn": "Take four original starters", "actionZh": "分别记录 VR、DM、QR、SJT 的答案、用时、改答、部分得分和错因。" },
+    { "stepZh": "按最弱环节回到方法", "stepEn": "Return to the weakest method", "actionZh": "区分知识、英语、推理、操作和节奏缺口，再逐题型建立可复用动作。" },
+    { "stepZh": "最后进入完整限时练习", "stepEn": "Move to full timed practice last", "actionZh": "只有当四模块方法与工具动作稳定后，才使用完整模拟检验连续执行。" }
+  ]
+}

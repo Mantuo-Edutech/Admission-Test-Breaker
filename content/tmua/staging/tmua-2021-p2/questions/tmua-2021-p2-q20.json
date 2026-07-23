@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2021-p2-q20",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2021-p2",
+  "edition": "2021",
+  "paper": 2,
+  "questionNumber": 20,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "20   A sequence of functions f1 , f2 , f3 , . . . is deﬁned by\n\n                                      f1 (x) = |x|\n\n                                   fn+1 (x) = |fn (x) + x| for n ≥ 1\n\n\n     Find the value of\n\n                                              \u0002 1\n                                                     f99 (x) dx\n                                                −1\n\n\n     A 0\n\n     B 0.5\n\n     C 1\n\n     D 49.5\n\n     E 50\n\n     F 99\n\n     G 99.5\n\n     H 100\n\n\n\n\n                                                     22"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "A sequence of functions f1 , f2 , f3 , . . . is deﬁned by\n\n                                      f1 (x) = |x|\n\n                                   fn+1 (x) = |fn (x) + x| for n ≥ 1\n\n\n     Find the value of\n\n                                               1\n                                                     f99 (x) dx\n                                                −1"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "0"
+    },
+    {
+      "label": "B",
+      "rawText": "0.5"
+    },
+    {
+      "label": "C",
+      "rawText": "1"
+    },
+    {
+      "label": "D",
+      "rawText": "49.5"
+    },
+    {
+      "label": "E",
+      "rawText": "50"
+    },
+    {
+      "label": "F",
+      "rawText": "99"
+    },
+    {
+      "label": "G",
+      "rawText": "99.5"
+    },
+    {
+      "label": "H",
+      "rawText": "100"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "It is helpful to get a feeling for what this sequence of functions looks like, so we will sketch the\nfirst few. We are only interested in the range from −1 to 1 (because that is what the integral\nasks for). The first function, f1 (x) = |x| is standard:\n\n                                                 y\n\n\n                                             1\n\n                                                             y = f1 (x)\n\n\n\n\n                                                                     x\n                               −1            0                 1\n\n\n\nNote that when x < 0, this is the graph of y = −x, and when x ≥ 0, this is the graph of y = x.\nWe next have f2 (x) = |f1 (x) + x|. We can calculate this on the two regions x < 0 and x ≥ 0\nseparately: when x < 0, we get f2 (x) = |−x+x| = 0, and when x > 0, we get f2 (x) = |x+x| = 2x,\ngiving this graph:\n\n                                                 y\n\n\n                                             1\n\n                                                        y = f2 (x)\n\n\n\n\n                                                                     x\n                               −1            0                 1\n\n\n\nWe can determine f3 (x) and f4 (x) in a similar way:\n\n\n\n\nVersion 1.0, March 2022                                                                     Page 25\n\f\nTest of Mathematics for University Admission, 2021 Paper 2 Solutions\n\n\n                          y                                               y\n\n\n                     1                                                1\n\n                                y = f3 (x)                                       y = f4 (x)\n\n\n\n\n                                             x                                                 x\n       −1            0                1                 −1            0                1\n\n\n\nHere, the graphs for x ≥ 0 are y = 3x and y = 4x respectively.\nWe can see a pattern forming: when n is odd, the graph of y = fn (x) looks like y = f3 (x), with\ny = −x for x < 0 and y = nx for x ≥ 0, and when n is even, it looks like y = f4 (x), with y = 0\nfor x < 0 and y = nx for x ≥ 0.\n\n                                      R 1 like y = f3 (x): it is y = −x for x < 0 and y = 99x for\nWe are interested in f99 (x), which looks\nx ≥ 0. We can calculate the integral −1 f99 (x) dx by finding the area under the graph, which is\njust the sum of two triangles.\nThe area between x = −1 and x = 0 is 21 × 1 × 1 and the area between x = 0 and x = 1 is\n1                                  1       1        1\n2 × 1 × 99, so the integral equals 2 × 1 + 2 × 99 = 2 × 100 = 50; the correct option is therefore E.\n\n\n\n\nVersion 1.0, March 2022                                                                       Page 26\n\f\nThis document was initially designed for print and as such does not reach accessibility standard\nWCAG 2.1 in a number of ways including missing text alternatives and missing document structure.\n\n\n\nIf you need this document in a different format please email\nadmissionstesting@cambridgeassessment.org.uk telling us your name, email address and\nrequirements and we will respond within 15 working days.\n\n\n\nThis document contains maths equations and symbols which at present we are not able to produce\nadequately for accessibility. We are working to improve this.\n\n\n\n\nWe are Cambridge Assessment Admissions Testing, part of the University of Cambridge.\nOur research-based tests provide a fair measure of skills and aptitude to help you make\ninformed decisions. As a trusted partner, we work closely with universities, governments\nand employers to enhance their selection processes.\n\n\n\nCambridge Assessment\nAdmissions Testing\nThe Triangle Building\nShaftesbury Road\nCambridge\nCB2 8EA\nUnited Kingdom\n\n\n\nAdmissions tests support: admissionstesting.org/help"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2021-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2021.pdf",
+      "sha256": "144e0a2d421b61b80b26ca41e8c01c1b913fdd8191f76ba2d824c7d0dfd0efe2",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2021-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2021.pdf",
+      "sha256": "e571b21dd1173d770416b920cd09055a78d2a17a556af585f5a617f7d2d264b0",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2021-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2021.pdf",
+      "sha256": "eea39531d89136682dc7f242b6bc80e41238b79ffeb67589e94ea88127b635ff",
+      "pages": [
+        25,
+        26,
+        27
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

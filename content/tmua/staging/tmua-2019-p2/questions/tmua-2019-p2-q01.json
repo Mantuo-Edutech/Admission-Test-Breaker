@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2019-p2-q01",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2019-p2",
+  "edition": "2019",
+  "paper": 2,
+  "questionNumber": 1,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "1   Find the coeﬃcient of the x4 term in the expansion of\n                                          \u0002       \u00036\n                                        2       1\n                                       x 2x +\n                                                x\n\n    A 15\n\n    B 30\n\n    C 60\n\n    D 120\n\n    E 240\n\n\n\n\n                                           3"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "Find the coeﬃcient of the x4 term in the expansion of\n                                                 6\n                                        2       1\n                                       x 2x +\n                                                x"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "15"
+    },
+    {
+      "label": "B",
+      "rawText": "30"
+    },
+    {
+      "label": "C",
+      "rawText": "60"
+    },
+    {
+      "label": "D",
+      "rawText": "120"
+    },
+    {
+      "label": "E",
+      "rawText": "240"
+    }
+  ],
+  "correctAnswer": "E",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "We need the coefficient of x2 in the bracketed term to get the term in x4 in the whole expansion.\nWe expand this using the binomial theorem to get\n                                                                                   !\n                     1 6\n             \u0012         \u0013                  \u0012 \u0013       \u0012 \u0013 \u0012 \u0013             \u0012 \u00132\n           2                   2       6    6      5 1        6        4 1\n          x 2x +           = x (2x) +          (2x)       +       (2x)        + ··· .\n                     x                      1         x       2          x\n\nWe stop here as the power of x in this last term is x4−2 = x2 , as we require. This term is then\n                                \u0012 \u0013     \u0012 \u00132\n                                 6     4 1\n                              x2\n                                   (2x)      = 15x2 .16x4 .x−2\n                                 2       x\n                                                 = 240x4\n\nso the answer is E.\n\n\n\n\nc UCLES                                                                                   Page 3"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2019-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2019.pdf",
+      "sha256": "452355628f3b5f09150963a15c6e8c332064021004cd28bf9102cd16556ab1e1",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2019-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2019.pdf",
+      "sha256": "34727644af0222bbdbc1867a2e2bf9641b336d75f8cdf96ef56deaa007c25640",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2019-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2019.pdf",
+      "sha256": "37aec24105303e9b79f6009d9b998490c090d6c4d508bf0504135d360ec736fe",
+      "pages": [
+        3
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

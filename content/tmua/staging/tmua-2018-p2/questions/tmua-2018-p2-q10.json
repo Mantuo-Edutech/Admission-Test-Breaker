@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "tmua-2018-p2-q10",
+  "revision": 1,
+  "exam": "TMUA",
+  "paperId": "tmua-2018-p2",
+  "edition": "2018",
+  "paper": 2,
+  "questionNumber": 10,
+  "sourceType": "past_paper",
+  "contentStage": "extracted",
+  "reviewStatus": "needs_review",
+  "sourcePage": {
+    "format": "pdf-layout-text",
+    "rawText": "10   The function f(x) is deﬁned for all real numbers.\n\n     Consider the following three conditions, where a is a real constant:\n\n          I    f(a − x) = f(a + x) for all real x.\n          II   f(2a − x) = f(x) for all real x.\n          III f(a − x) = f(x) for all real x.\n\n     Which of these conditions is/are necessary and suﬃcient for the graph of y = f(x)\n     to have reﬂection symmetry in the line x = a ?\n\n\n\n               Condition I is            Condition II is        Condition III is\n               necessary and             necessary and           necessary and\n                 suﬃcient                  suﬃcient                suﬃcient\n      A             yes                       yes                     yes\n      B             yes                       yes                      no\n      C             yes                        no                     yes\n      D             yes                        no                      no\n      E              no                       yes                     yes\n      F              no                       yes                      no\n      G              no                        no                     yes\n      H              no                        no                      no\n\n\n\n\n                                                  12"
+  },
+  "stem": {
+    "format": "pdf-layout-text",
+    "rawText": "The function f(x) is deﬁned for all real numbers.\n\n     Consider the following three conditions, where a is a real constant:\n\n          I    f(a − x) = f(a + x) for all real x.\n          II   f(2a − x) = f(x) for all real x.\n          III f(a − x) = f(x) for all real x.\n\n     Which of these conditions is/are necessary and suﬃcient for the graph of y = f(x)\n     to have reﬂection symmetry in the line x = a ?\n\n\n\n               Condition I is            Condition II is        Condition III is\n               necessary and             necessary and           necessary and\n                 suﬃcient                  suﬃcient                suﬃcient"
+  },
+  "options": [
+    {
+      "label": "A",
+      "rawText": "yes                       yes                     yes"
+    },
+    {
+      "label": "B",
+      "rawText": "yes                       yes                      no"
+    },
+    {
+      "label": "C",
+      "rawText": "yes                        no                     yes"
+    },
+    {
+      "label": "D",
+      "rawText": "yes                        no                      no"
+    },
+    {
+      "label": "E",
+      "rawText": "no                       yes                     yes"
+    },
+    {
+      "label": "F",
+      "rawText": "no                       yes                      no"
+    },
+    {
+      "label": "G",
+      "rawText": "no                        no                     yes"
+    },
+    {
+      "label": "H",
+      "rawText": "no                        no                      no"
+    }
+  ],
+  "correctAnswer": "B",
+  "solution": {
+    "format": "pdf-layout-text",
+    "rawText": "It would help to sketch a graph which has reflection symmetry in x = a. We should pick a value\nof a which is not zero. Let us pick a positive value of a. We can draw a quadratic with vertex\nat x = a, for example.\n\n                                          y\n\n\n\n\n                                                                       x\n                                               a\n\n\nWe now consider the three conditions and see which are certainly not necessary for the reflection\nsymmetry by looking at this example. We mark on x, a ± x and 2a − x for a value of x which\nis not equal to a, where we have chosen x ≈ 1.5a:\n\n                                          y\n\n\n\n\n                                                                       x\n                               a − x2a − x     a       x   a+x\n\n\nIt seems from this sketch that f(x) and f(2a − x) are likely to be equal, as are f(a + x) and\nf(a − x). So we reject condition III, leaving us with conditions I and II to consider.\nFor a graph y = f(x) to be symmetrical about x = a, we need the value of the function to be\nequal whenever we go the same distance to the right or left of x = a. Looking at this sketch,\nlet’s take the distance to be x. Then we need f(a + x) = f(a − x) for every choice of x if the\ngraph is symmetrical about x = a, so condition I is necessary. But it is also sufficient, for\nhow could a graph not be symmetrical? Only if for some x, the function values are different at\na + x and a − x.\nFor condition II, we can do the same. This time, the values we want to consider are 2a − x\nand x. Now 2a − x is x − a to the left of a (assuming that x > a) and x is x − a to the right\nof a, so these are the same distance from a, and again this condition is necessary. Since every\ndistance can be written as x − a for some choice of x, the condition is also sufficient.\nSo both conditions I and II are necessary and sufficient, and the correct option is B.\n\n\n\n\nVersion 1.0, April 2019                                                                  Page 12"
+  },
+  "sourceRefs": [
+    {
+      "role": "question",
+      "sourceId": "tmua-official-2018-paper-2",
+      "portablePath": "Tmua/2016-2023paper/tmua-paper-2-2018.pdf",
+      "sha256": "09d26f8f6b943b9ce8cd807166195610a15b0da092f7a3b79e24f342fc0e6159",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "role": "answer_key",
+      "sourceId": "tmua-official-2018-answer-key",
+      "portablePath": "Tmua/2016-2023 answer key/tmua-2018.pdf",
+      "sha256": "0811f6a6d8836e90d4cdccffc3fe3934489a782e2e9c072c66fad6ca8d87d02e",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "role": "worked_solution",
+      "sourceId": "tmua-official-2018-paper-2-worked-solutions",
+      "portablePath": "Tmua/2016-2023 answer/tmua-paper-2-2018.pdf",
+      "sha256": "17cab4be1953a5618a56e663092ad69553ee03165ba501dfad3e79dc4c33452c",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "knowledgeTags": [],
+  "skillTags": [],
+  "errorTypes": [],
+  "extraction": {
+    "generatedAt": "2026-07-17T07:00:00.000Z",
+    "generatedBy": "tmua-extraction-cli",
+    "method": "poppler-layout-text",
+    "mathFidelity": "needs_review",
+    "warnings": [
+      "math-transcription-required"
+    ]
+  }
+}

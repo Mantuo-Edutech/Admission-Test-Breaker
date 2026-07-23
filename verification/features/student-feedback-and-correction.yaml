@@ -1,0 +1,81 @@
+schemaVersion: 1
+feature:
+  id: student-feedback-and-correction
+  title: Privacy-safe student feedback and content-correction workflow
+  status: partial
+  userOutcome: >-
+    A signed-in student can report a specific question, technical failure,
+    access problem or privacy concern inside the site, receive a private
+    receipt and track status without exposing the report to another student.
+
+run:
+  packageScript: verify:feedback
+
+claims:
+  - id: question-context-and-private-receipt
+    status: verified
+    statement: >-
+      Practice and result pages open a bilingual feedback form with the exam,
+      paper, route and question already attached; login returns to the form,
+      and a successful submission produces a non-sequential student receipt.
+    artifacts:
+      - src/features/feedback/pages/FeedbackPage.tsx
+      - src/features/feedback/domain.ts
+      - src/features/practice/components/QuestionCard.tsx
+      - src/features/practice/components/QuestionResultRow.tsx
+      - tests/app/student-feedback.test.tsx
+    automatedChecks:
+      - verify:feedback
+      - typecheck
+      - build
+
+  - id: tenant-isolation-validation-and-audit
+    status: verified
+    statement: >-
+      Feedback is written only through an authenticated validating RPC,
+      identical reports within 24 hours are idempotent, contact details are
+      rejected, students can read only their own records, workflow changes
+      require service role, and every transition creates a private audit event.
+    artifacts:
+      - supabase/migrations/20260718224500_student_feedback_foundation.sql
+      - supabase/tests/database/student_feedback_rls.test.sql
+      - scripts/verify-supabase-local.ts
+      - tests/features/feedback/feedback.test.ts
+      - tests/architecture/supabase-contracts.test.ts
+    automatedChecks:
+      - verify:feedback
+      - verify:supabase-contracts
+      - verify:supabase
+
+  - id: support-ownership-and-production-alerting
+    status: partial
+    statement: >-
+      The database has deterministic P1-P4 routing and an auditable queue, but
+      Mantou still needs to name the production owner and backup, connect
+      alerts, define operating targets and rehearse a content correction from
+      report through publication and student-visible resolution.
+    artifacts:
+      - docs/operations/FEEDBACK_AND_CONTENT_CORRECTION_RUNBOOK.md
+      - docs/BETA_100_LAUNCH_READINESS.md
+      - content/platform/beta-100-readiness.json
+    automatedChecks:
+      - beta:audit
+
+boundaries:
+  - The implemented workflow is locally verified and has not been deployed to Mantou staging or production.
+  - The form deliberately rejects email and phone numbers; this is not an emergency reporting channel.
+  - A visible resolved status proves workflow state, not that a corrected content release has passed human academic review.
+
+manualChecks:
+  - id: production-support-rehearsal
+    status: pending
+    evidence: Assign a primary and backup owner, route P1 and P2 alerts, then rehearse one privacy report, one login failure and one source-backed question correction through resolution in staging.
+    viewports:
+      - operations
+  - id: responsive-feedback-uat
+    status: pending
+    evidence: Complete login, submit, receipt and history with keyboard and screen reader on phone, iPad and desktop; verify the Bingbing fallback without disclosing learning data.
+    viewports:
+      - 1440x900
+      - 768x1024
+      - 390x844

@@ -1,0 +1,92 @@
+schemaVersion: 1
+feature:
+  id: student-controlled-collaboration
+  title: 学生逐项授权的老师与家长协作
+  status: partial
+  userOutcome: >-
+    已登录学生可以逐项选择老师或家长能否查看进度、查看具体作答、
+    添加批注、制定计划或布置练习，限定考试与有效期，随时撤销并查看敏感动作审计。
+run:
+  packageScript: verify:collaboration
+claims:
+  - id: student-issued-bounded-grants
+    status: verified
+    statement: >-
+      协作权限只能由学生本人通过一次性协作码创建；对象、五项权限、考试范围和 1–180 天有效期独立保存。
+      系统不采集对方邮箱，数据库只保存协作码摘要，资料 entitlement、邀请码运营权和转化看板权都不隐含学习数据权限。
+    artifacts:
+      - src/features/collaboration/domain.ts
+      - src/features/collaboration/pages/SharingPage.tsx
+      - supabase/migrations/20260719210000_student_controlled_collaboration.sql
+      - supabase/tests/database/student_collaboration_grants.test.sql
+      - tests/features/collaboration/domain.test.ts
+    automatedChecks:
+      - verify:collaboration
+      - verify:supabase-contracts
+      - verify:supabase
+  - id: fail-closed-collaborator-read-and-write
+    status: verified
+    statement: >-
+      汇总进度和具体作答由两个独立 RPC 交付；批注、计划与作业分别要求各自的写入权限。
+      未授权考试、其他账号、已过期或已撤销的 Grant 都会在服务端拒绝，前端不会通过隐藏按钮代替权限判断。
+    artifacts:
+      - src/features/collaboration/supabase-collaboration-service.ts
+      - src/features/collaboration/pages/CollaborationHomePage.tsx
+      - src/features/collaboration/pages/CollaborationWorkspacePage.tsx
+      - supabase/tests/database/student_collaboration_grants.test.sql
+      - tests/features/collaboration/supabase-collaboration-service.test.ts
+      - tests/app/student-collaboration-pages.test.tsx
+    automatedChecks:
+      - verify:collaboration
+      - verify:supabase-contracts
+      - verify:supabase
+  - id: immediate-revocation-audit-and-export
+    status: verified
+    statement: >-
+      学生撤销后对方下一次读写立即失败；成功的敏感查看和协作写入进入学生可见审计。
+      学生数据导出 schema v4 包含邀请、Grant、协作内容与审计，不包含协作码摘要。
+    artifacts:
+      - supabase/migrations/20260719211000_collaboration_data_export.sql
+      - src/features/data-rights/domain.ts
+      - src/features/data-rights/supabase-data-rights-service.ts
+      - tests/features/data-rights/supabase-data-rights-service.test.ts
+      - supabase/tests/database/student_collaboration_grants.test.sql
+    automatedChecks:
+      - verify:collaboration
+      - verify:supabase-contracts
+      - verify:supabase
+  - id: responsive-student-and-collaborator-journey
+    status: verified
+    statement: >-
+      学生管理页、协作码兑换页和老师／家长工作区为独立路由，并为电脑、iPad 和手机分别定义五权限与进度卡布局。
+    artifacts:
+      - src/app/routes.tsx
+      - src/features/account/pages/AccountPage.tsx
+      - src/styles/practice.css
+      - tests/app/student-collaboration-pages.test.tsx
+      - tests/app/student-collaboration-layout-contract.test.ts
+      - tests/app/account-lifecycle.test.tsx
+    automatedChecks:
+      - verify:collaboration
+      - typecheck
+      - build
+boundaries:
+  - 当前只允许已登录账号兑换；一次性协作码不是资料邀请码，不解锁付费资料。
+  - 协作者只看到不含邮箱的不透明学习空间参考号；学生端也只显示对方不透明账号参考号。
+  - 本地 Supabase 与组件验证已通过，但尚未在满托生产项目完成双账号、MFA、真实设备与撤销演练。
+  - 未实施 Agent 的自动身份和工具调用；未来 Agent 也必须映射到学生创建的同一 Grant 边界。
+manualChecks:
+  - id: production-two-account-collaboration-uat
+    status: pending
+    evidence: 在满托 staging 或 production 使用学生与老师／家长两个 MFA 账号完成创建、传递、兑换、限权读写、审计、导出和立即撤销演练。
+    viewports:
+      - 390x844
+      - 820x1180
+      - 1440x900
+  - id: accessibility-and-copy-review
+    status: pending
+    evidence: 由学生、老师和家长以键盘、VoiceOver 或屏幕阅读器验证权限文案、勾选状态、一次性协作码和撤销确认。
+    viewports:
+      - phone
+      - tablet
+      - desktop

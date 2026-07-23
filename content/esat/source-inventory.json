@@ -1,0 +1,529 @@
+{
+  "schemaVersion": 1,
+  "exam": "ESAT",
+  "verifiedAt": "2026-07-18",
+  "archiveStatus": {
+    "discoveredFiles": 39,
+    "downloadedFiles": 39,
+    "downloadedForInternalResearch": 39,
+    "publishableFiles": 0,
+    "rightsStatus": "permission_pending",
+    "note": "All 39 official files are present locally with verified byte counts and SHA-256 hashes for internal research. Downloaded does not mean publication-ready; direct republication remains blocked until written permission or legal clearance is recorded."
+  },
+  "coreDocuments": [
+    {
+      "id": "esat-2027-course-list",
+      "title": "Course List 2027 Entry",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/04/01172717/Course_List_2027_Entry_Final.pdf",
+      "artifact": {
+        "researchAssetId": "tmua-course-list-2027-entry-final-17a67163",
+        "localPath": "content/official/raw/tmua/Course_List_2027_Entry_Final.pdf",
+        "kind": "official_document",
+        "bytes": 271469,
+        "sha256": "90fbd6f17e07a8a59809613b18969d2aacbd9e52a9fdf8866d35530ddef11bc2",
+        "downloadStatus": "downloaded-internal-research-only",
+        "publishable": false,
+        "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+      }
+    },
+    {
+      "id": "esat-content-specification",
+      "title": "ESAT Content Specification",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165424/ESAT_Content_Specification.pdf",
+      "artifact": {
+        "researchAssetId": "shared-esat-content-specification-367a3cf8",
+        "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
+        "kind": "specification",
+        "bytes": 2163955,
+        "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+        "downloadStatus": "downloaded-internal-research-only",
+        "publishable": false,
+        "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+      }
+    }
+  ],
+  "moduleGuides": [
+    {
+      "module": "Mathematics 1",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103534/ESAT_Guide_Mathematics_1.pdf",
+      "artifact": {
+        "researchAssetId": "esat-esat-guide-mathematics-1-589a2da4",
+        "localPath": "content/official/raw/esat/ESAT_Guide_Mathematics_1.pdf",
+        "kind": "official_guide",
+        "bytes": 13548145,
+        "sha256": "b376810fbd9ffea4c0c70fafb082d4c0287eb35ea16cfc354d06240a9798a3f5",
+        "downloadStatus": "downloaded-internal-research-only",
+        "publishable": false,
+        "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+      }
+    },
+    {
+      "module": "Biology",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/07/06120052/ESAT_Guide_Biology_June_2025.pdf",
+      "artifact": {
+        "researchAssetId": "esat-esat-guide-biology-june-2025-294569f8",
+        "localPath": "content/official/raw/esat/ESAT_Guide_Biology_June_2025.pdf",
+        "kind": "official_guide",
+        "bytes": 7320366,
+        "sha256": "cd5fd84f56ef0e55722841fcbdacb86eec15b0eddd16a05ea56c5d902d9e125b",
+        "downloadStatus": "downloaded-internal-research-only",
+        "publishable": false,
+        "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+      }
+    },
+    {
+      "module": "Chemistry",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/06/25103142/ESAT_GUIDE_Chemistry_June2025.pdf",
+      "artifact": {
+        "researchAssetId": "esat-esat-guide-chemistry-june2025-fdef8058",
+        "localPath": "content/official/raw/esat/ESAT_GUIDE_Chemistry_June2025.pdf",
+        "kind": "official_guide",
+        "bytes": 13876717,
+        "sha256": "f1cfbc2ec1c44068526deeaac0b8ef7c87e245259cc89f9ed6b7c9124e359353",
+        "downloadStatus": "downloaded-internal-research-only",
+        "publishable": false,
+        "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+      }
+    },
+    {
+      "module": "Physics",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103558/ESAT_Guide_Physics.pdf",
+      "artifact": {
+        "researchAssetId": "esat-esat-guide-physics-6fef239b",
+        "localPath": "content/official/raw/esat/ESAT_Guide_Physics.pdf",
+        "kind": "official_guide",
+        "bytes": 8194759,
+        "sha256": "234651aa05f87112e3455bae420de782683938d8d28950293649a8352dc4729e",
+        "downloadStatus": "downloaded-internal-research-only",
+        "publishable": false,
+        "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+      }
+    },
+    {
+      "module": "Mathematics 2",
+      "url": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103537/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+      "artifact": {
+        "researchAssetId": "shared-notes-on-mathematics-for-tmua-and-esat-m2-45ec0414",
+        "localPath": "content/official/raw/shared/Notes_on_Mathematics_-for_TMUA_and_ESAT_M2.pdf",
+        "kind": "official_guide",
+        "bytes": 2640396,
+        "sha256": "12ed684ee2dfb9b53355d54018ba216b5cd32161e5f6c5c9ee5e96b93cbf8844",
+        "downloadStatus": "downloaded-internal-research-only",
+        "publishable": false,
+        "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+      }
+    }
+  ],
+  "historicArchives": [
+    {
+      "archive": "ENGAA",
+      "papers": [
+        {
+          "year": 2016,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07112055/ENGAA_2016_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07112109/ENGAA_2016_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-engaa-2016-s1-questionpaper-d8e59780",
+            "localPath": "content/official/raw/esat/ENGAA_2016_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 333284,
+            "sha256": "1af7452d8ce390184905e891b2d64c96fef239a750dd680bd368dbb8002ddbc3",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-engaa-2016-s1-answerkey-43c62203",
+            "localPath": "content/official/raw/esat/ENGAA_2016_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 6598,
+            "sha256": "b86766da1e0c44adb8232e16c8aa66ba56dd983824d0ebe4420b3335983caecf",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2017,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07112231/ENGAA_2017_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07112228/ENGAA_2017_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-engaa-2017-s1-questionpaper-b69c10e3",
+            "localPath": "content/official/raw/esat/ENGAA_2017_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 350953,
+            "sha256": "a4fb8e7c9322fd8efc6374006108eac91774de3b20d86f822237a825c9208ca5",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-engaa-2017-s1-answerkey-754af422",
+            "localPath": "content/official/raw/esat/ENGAA_2017_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 38303,
+            "sha256": "e5899182138bf2a701f15151d045ff9b784a229adfb676e98e4db716b62c97ba",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2018,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07113017/ENGAA_2018_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07113023/ENGAA_2018_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-engaa-2018-s1-questionpaper-e5d3b22d",
+            "localPath": "content/official/raw/esat/ENGAA_2018_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 319594,
+            "sha256": "11d0ec9946da2841ed50f209fd3cf1f63d4b0075e57e9871622ddb88ece030f2",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-engaa-2018-s1-answerkey-b9954416",
+            "localPath": "content/official/raw/esat/ENGAA_2018_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 21544,
+            "sha256": "a10522cc172ead80dba7b36b4b5b2556593ed37bef82b54bbb57ffa943d75ea9",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2019,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115511/ENGAA_2019_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115515/ENGAA_2019_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-engaa-2019-s1-questionpaper-f1bd77f4",
+            "localPath": "content/official/raw/esat/ENGAA_2019_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 328910,
+            "sha256": "2446ed91abc070a3f7dab661771b50e6fa3b5de18542e2f77b90f9d47cec163f",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-engaa-2019-s1-answerkey-b2ccf41d",
+            "localPath": "content/official/raw/esat/ENGAA_2019_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 6321,
+            "sha256": "18ae1767b1a0ffdf4bcd8ac749a4a5d9315f835c506eba3b23fdf572fa6a8f28",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2020,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115613/ENGAA_2020_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115614/ENGAA_2020_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-engaa-2020-s1-questionpaper-ecedeb10",
+            "localPath": "content/official/raw/esat/ENGAA_2020_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 303625,
+            "sha256": "c3c9baf1459798a5b2deae611961943e3b52f206a46fc90d379fb37ed53b8f5d",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-engaa-2020-s1-answerkey-734d7012",
+            "localPath": "content/official/raw/esat/ENGAA_2020_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 35763,
+            "sha256": "57f0893b0198d5903cefd5ae3d0cddbdabe3fece91633c316d16380d16d0c432",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2021,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115611/ENGAA_2021_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115613/ENGAA_2021_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-engaa-2021-s1-questionpaper-e658b1c7",
+            "localPath": "content/official/raw/esat/ENGAA_2021_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 312175,
+            "sha256": "98a6a26f9556b34dcef3f907be497fce4892a089d6c42c26177fe906824b7eac",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-engaa-2021-s1-answerkey-9e98895f",
+            "localPath": "content/official/raw/esat/ENGAA_2021_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 35471,
+            "sha256": "fabe98d38c65a54dec215825277474cdfd9303cf172eac37cbeb891d39150f56",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2022,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115611/ENGAA_2022_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115612/ENGAA_2022_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-engaa-2022-s1-questionpaper-17de4153",
+            "localPath": "content/official/raw/esat/ENGAA_2022_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 333234,
+            "sha256": "77811e0ca9de806352b45f9426394fec73c670580390173dfe046541ad96251d",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-engaa-2022-s1-answerkey-5ed77823",
+            "localPath": "content/official/raw/esat/ENGAA_2022_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 38268,
+            "sha256": "9c418485775342ab8afb88ccec2c3fb359af3193b2f2ff77073b505fde76bdd4",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2023,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115605/ENGAA_2023_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07115610/ENGAA_2023_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-engaa-2023-s1-questionpaper-2aa55146",
+            "localPath": "content/official/raw/esat/ENGAA_2023_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 264676,
+            "sha256": "72440b55385be7cbafe998dd482a1ae047fe92440370210a01879b02cf7ee310",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-engaa-2023-s1-answerkey-b688ac0a",
+            "localPath": "content/official/raw/esat/ENGAA_2023_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 37198,
+            "sha256": "d16eada95c2471284b81c968fb6ba8067be9d56d539750523bba29f8166fadd4",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        }
+      ]
+    },
+    {
+      "archive": "NSAA",
+      "papers": [
+        {
+          "year": 2016,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120539/NSAA_2016_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120540/NSAA_2016_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-nsaa-2016-s1-questionpaper-f70525e7",
+            "localPath": "content/official/raw/esat/NSAA_2016_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 2462501,
+            "sha256": "edb357e04cee67dfd839a6118d47c36ea1d97a84f747210c1101ca8d9ee19cc5",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-nsaa-2016-s1-answerkey-d1d5e0b3",
+            "localPath": "content/official/raw/esat/NSAA_2016_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 7013,
+            "sha256": "25f74dcd8efc66d264dd22e15e11ae4caaf5904ce750350792b70330e07b53a7",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2017,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120538/NSAA_2017_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120538/NSAA_2017_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-nsaa-2017-s1-questionpaper-bd969561",
+            "localPath": "content/official/raw/esat/NSAA_2017_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 501485,
+            "sha256": "ac4657dffc3c1b83346500534235e327b6d07243a57d05a16672e004ac9787b8",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-nsaa-2017-s1-answerkey-87a11309",
+            "localPath": "content/official/raw/esat/NSAA_2017_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 40529,
+            "sha256": "a0f4b543bd0c3532169cc46897101fa7a9c2c5523fbd0347b12e3ee5595f8659",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2018,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120537/NSAA_2018_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120537/NSAA_2018_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-nsaa-2018-s1-questionpaper-b318de6e",
+            "localPath": "content/official/raw/esat/NSAA_2018_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 6230738,
+            "sha256": "fdcffb3fb71f05a65497d066f393cb0df0cffa913ec1e75b228ecb989cf77d07",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-nsaa-2018-s1-answerkey-15c134cc",
+            "localPath": "content/official/raw/esat/NSAA_2018_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 23991,
+            "sha256": "a5bc00f44894e7f4f4eea2c78f9a06302f470a0ade4588d6c846b4c0b03d45ba",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2019,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120534/NSAA_2019_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120535/NSAA_2019_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-nsaa-2019-s1-questionpaper-b6d04536",
+            "localPath": "content/official/raw/esat/NSAA_2019_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 2347456,
+            "sha256": "a2adee70d5655a3a24cd549330463ab47695dedcf08faca1bcdae02d5ad3aa5b",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-nsaa-2019-s1-answerkey-f7dc6a34",
+            "localPath": "content/official/raw/esat/NSAA_2019_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 7241,
+            "sha256": "e9a1cfd104e6b143fac26db2344897e6210f587cda9ee2861e62197f65a0d12a",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2020,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120533/NSAA_2020_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120535/NSAA_2020_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-nsaa-2020-s1-questionpaper-e03fecde",
+            "localPath": "content/official/raw/esat/NSAA_2020_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 439274,
+            "sha256": "9317791955d614a76136810e1b249a33a31419573fa64ea7b133a585a7010fd9",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-nsaa-2020-s1-answerkey-14f2683e",
+            "localPath": "content/official/raw/esat/NSAA_2020_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 7238,
+            "sha256": "52095c632a1d3fbe2734054aee4f3707a747f9f89f67aa2a0791a4aa479aebd9",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2021,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120532/NSAA_2021_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120532/NSAA_2021_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-nsaa-2021-s1-questionpaper-ab7000bc",
+            "localPath": "content/official/raw/esat/NSAA_2021_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 437307,
+            "sha256": "6ed0f51bfb311666949b4ee037ff1ace9f070f98cb35a2f1a98736c0191099ab",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-nsaa-2021-s1-answerkey-6d8dbf91",
+            "localPath": "content/official/raw/esat/NSAA_2021_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 160338,
+            "sha256": "e54cd91dbff672a3383937f6d524349974b4be419ea9ccb4f6fe65dfa66eccff",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2022,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120525/NSAA_2022_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120531/NSAA_2022_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-nsaa-2022-s1-questionpaper-57f5b897",
+            "localPath": "content/official/raw/esat/NSAA_2022_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 533136,
+            "sha256": "be9ebd5624787340333c5802893592dbf17e00088d25107f9fff957f54cdeadf",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-nsaa-2022-s1-answerkey-bbff76e2",
+            "localPath": "content/official/raw/esat/NSAA_2022_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 45781,
+            "sha256": "82578e18af80317ac9f4925c21b2cbc5eb365fb02ac8df37e2e318d153807e77",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        },
+        {
+          "year": 2023,
+          "questionPaper": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120523/NSAA_2023_S1_QuestionPaper.pdf",
+          "answerKey": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/07120531/NSAA_2023_S1_AnswerKey.pdf",
+          "questionPaperArtifact": {
+            "researchAssetId": "esat-nsaa-2023-s1-questionpaper-3f15eed5",
+            "localPath": "content/official/raw/esat/NSAA_2023_S1_QuestionPaper.pdf",
+            "kind": "question_paper",
+            "bytes": 2362132,
+            "sha256": "5c79484adcb68679fc4ca22a111f365aaddbbc0fd473ead9f2e4646906f8f349",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          },
+          "answerKeyArtifact": {
+            "researchAssetId": "esat-nsaa-2023-s1-answerkey-00b9e17b",
+            "localPath": "content/official/raw/esat/NSAA_2023_S1_AnswerKey.pdf",
+            "kind": "answer_key",
+            "bytes": 39210,
+            "sha256": "cd4c1edce2e032576480b42e2726fd31e3389cfdcc7e2fca763ab4e15a53c328",
+            "downloadStatus": "downloaded-internal-research-only",
+            "publishable": false,
+            "rightsStatus": "personal_use_only_permission_required_for_commercial_use"
+          }
+        }
+      ]
+    }
+  ]
+}
