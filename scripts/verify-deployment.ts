@@ -13,6 +13,12 @@ export interface DeployedBrowserRuntime {
   environment: string;
 }
 
+export interface SupabasePublicAuthSettings {
+  readonly disable_signup?: unknown;
+  readonly autoconfirm?: unknown;
+  readonly mailer_autoconfirm?: unknown;
+}
+
 function requiredEnvironment(name: string): string {
   const value = process.env[name]?.trim();
   if (!value) throw new Error(`${name} is required`);
@@ -116,6 +122,24 @@ export function assertDeployedBrowserRuntime(
   }
 }
 
+export function assertSupabasePublicAuthSettings(
+  settings: SupabasePublicAuthSettings,
+): void {
+  if (settings.disable_signup !== false) {
+    throw new Error("Supabase Auth public email registration is not enabled");
+  }
+
+  // Hosted projects currently expose `mailer_autoconfirm`, while older GoTrue
+  // releases documented `autoconfirm`. Prefer the current field and retain the
+  // legacy fallback so this deployment gate remains compatible and fail-closed.
+  const autoconfirm = typeof settings.mailer_autoconfirm === "boolean"
+    ? settings.mailer_autoconfirm
+    : settings.autoconfirm;
+  if (autoconfirm !== false) {
+    throw new Error("Supabase Auth email confirmation is not enforced");
+  }
+}
+
 async function verifySupabaseAuth(runtime: DeployedBrowserRuntime): Promise<void> {
   if (runtime.environment !== "staging" && runtime.environment !== "production") return;
   const headers = { apikey: runtime.supabasePublishableKey };
@@ -134,16 +158,8 @@ async function verifySupabaseAuth(runtime: DeployedBrowserRuntime): Promise<void
     "Supabase Auth public settings",
     { headers },
   );
-  const settingsBody = await settings.json() as {
-    disable_signup?: unknown;
-    autoconfirm?: unknown;
-  };
-  if (settingsBody.disable_signup !== false) {
-    throw new Error("Supabase Auth public email registration is not enabled");
-  }
-  if (settingsBody.autoconfirm !== false) {
-    throw new Error("Supabase Auth email confirmation is not enforced");
-  }
+  const settingsBody = await settings.json() as SupabasePublicAuthSettings;
+  assertSupabasePublicAuthSettings(settingsBody);
 }
 
 export async function run(): Promise<void> {
