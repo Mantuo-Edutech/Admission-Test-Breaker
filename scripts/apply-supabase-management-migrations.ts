@@ -4,6 +4,7 @@ import { tmpdir } from "node:os";
 import { basename, join, resolve } from "node:path";
 import { promisify } from "node:util";
 import {
+  managementQueryRows,
   planManagementMigrations,
   repositoryMigrationFromFile,
   transactionalManagementMigration,
@@ -47,12 +48,6 @@ async function localMigrations(): Promise<readonly RepositoryMigration[]> {
   return migrations.filter((migration): migration is RepositoryMigration => migration !== null);
 }
 
-function queryRows<T>(value: string): readonly T[] {
-  const parsed = JSON.parse(value) as { rows?: unknown };
-  if (!Array.isArray(parsed.rows)) throw new Error("Supabase Management API returned an invalid query response");
-  return parsed.rows as readonly T[];
-}
-
 async function appliedVersions(): Promise<readonly string[]> {
   const value = await supabase([
     "db",
@@ -62,7 +57,7 @@ async function appliedVersions(): Promise<readonly string[]> {
     "--output",
     "json",
   ]);
-  return queryRows<{ version?: unknown }>(value).map((row) => {
+  return managementQueryRows<{ version?: unknown }>(value).map((row) => {
     if (typeof row.version !== "string") throw new Error("Remote migration version is invalid");
     return row.version;
   });
