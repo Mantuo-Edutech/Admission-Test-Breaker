@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   assertDeployedBrowserRuntime,
+  assertSupabasePublicAuthSettings,
   parseDeployedBrowserRuntime,
 } from "../../scripts/verify-deployment.js";
 
@@ -17,6 +18,35 @@ function runtimeSource(overrides: Partial<Record<string, string>> = {}): string 
 }
 
 describe("deployed browser runtime validation", () => {
+  it("accepts the current hosted Auth confirmation field", () => {
+    expect(() => assertSupabasePublicAuthSettings({
+      disable_signup: false,
+      mailer_autoconfirm: false,
+    })).not.toThrow();
+  });
+
+  it("retains the documented legacy Auth confirmation fallback", () => {
+    expect(() => assertSupabasePublicAuthSettings({
+      disable_signup: false,
+      autoconfirm: false,
+    })).not.toThrow();
+  });
+
+  it("fails closed when email registration or confirmation is unsafe", () => {
+    expect(() => assertSupabasePublicAuthSettings({
+      disable_signup: true,
+      mailer_autoconfirm: false,
+    })).toThrow("public email registration is not enabled");
+    expect(() => assertSupabasePublicAuthSettings({
+      disable_signup: false,
+      mailer_autoconfirm: true,
+      autoconfirm: false,
+    })).toThrow("email confirmation is not enforced");
+    expect(() => assertSupabasePublicAuthSettings({
+      disable_signup: false,
+    })).toThrow("email confirmation is not enforced");
+  });
+
   it("parses and accepts a complete immutable production identity", () => {
     const runtime = parseDeployedBrowserRuntime(runtimeSource());
     expect(runtime).toMatchObject({
