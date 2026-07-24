@@ -13,7 +13,7 @@ import {
 } from "../src/platform/turnstile-bootstrap.js";
 
 const execFile = promisify(execFileCallback);
-const CLOUDFLARE_API_ORIGIN = "https://api.cloudflare.com/client/v4";
+const CLOUDFLARE_API_ORIGIN = new URL("https://api.cloudflare.com/client/v4/");
 
 type ExecutionMode = "dry-run" | "check" | "apply";
 
@@ -63,7 +63,7 @@ function apiToken(value: string): string {
 }
 
 function widgetEndpoint(account: string, suffix = ""): URL {
-  return new URL(`/accounts/${account}/challenges/widgets${suffix}`, CLOUDFLARE_API_ORIGIN);
+  return new URL(`accounts/${account}/challenges/widgets${suffix}`, CLOUDFLARE_API_ORIGIN);
 }
 
 async function cloudflareRequest(

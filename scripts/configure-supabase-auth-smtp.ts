@@ -117,7 +117,9 @@ export function authSmtpPatch(
     mailer_autoconfirm: false,
     smtp_admin_email: configuration.adminEmail,
     smtp_host: configuration.host,
-    smtp_port: configuration.port,
+    // The Management API schema requires the port as a string even though the
+    // returned Auth configuration may expose it as either a string or number.
+    smtp_port: String(configuration.port),
     smtp_user: configuration.user,
     smtp_pass: password,
     smtp_sender_name: configuration.senderName,

@@ -21,7 +21,7 @@ describe("Supabase Auth SMTP configuration", () => {
       mailer_autoconfirm: false,
       smtp_admin_email: "no-reply@auth.uktest.cc",
       smtp_host: "smtp.resend.com",
-      smtp_port: 587,
+      smtp_port: "587",
       smtp_user: "resend",
       smtp_pass: "smtp-password-value",
       smtp_sender_name: "满托 UK Test",
