@@ -296,6 +296,7 @@ else
   mv "$runtime_staging" "$runtime_directory"
   runtime_staging=""
 fi
+chmod 0555 "$runtime_directory"
 
 image_repository="${APP_IMAGE%:*}"
 "$(dirname "$0")/prepare-static-asset-archive.sh" \
