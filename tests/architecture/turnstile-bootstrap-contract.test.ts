@@ -21,6 +21,10 @@ describe("Turnstile bootstrap contract", () => {
   it("uses the official widget API and delivers secrets only through child stdin", async () => {
     const script = await readFile("scripts/configure-cloudflare-turnstile.ts", "utf8");
     expect(script).toContain("https://api.cloudflare.com/client/v4");
+    expect(script).toContain(
+      'new URL(`accounts/${account}/challenges/widgets${suffix}`, CLOUDFLARE_API_ORIGIN)',
+    );
+    expect(script).not.toContain('new URL(`/accounts/${account}/challenges/widgets${suffix}`');
     expect(script).toContain("/challenges/widgets");
     expect(script).toContain('method: "POST"');
     expect(script).toContain('method: "PUT"');
