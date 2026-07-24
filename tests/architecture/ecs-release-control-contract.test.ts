@@ -25,6 +25,7 @@ describe("shared ECS host-Nginx release control", () => {
   it("verifies a loopback candidate before touching the live container", async () => {
     const deployment = await source("deploy/deploy-ecs-host-nginx.sh");
     const candidateStart = deployment.indexOf("starting an isolated candidate");
+    const runtimePermissions = deployment.indexOf('chmod 0555 "$runtime_directory"');
     const candidateVerification = deployment.indexOf("candidate verification passed");
     const currentStop = deployment.indexOf('docker stop --time 20 "$current_container"');
     const publicVerification = deployment.indexOf(
@@ -35,6 +36,8 @@ describe("shared ECS host-Nginx release control", () => {
     );
 
     expect(candidateStart).toBeGreaterThan(-1);
+    expect(runtimePermissions).toBeGreaterThan(-1);
+    expect(runtimePermissions).toBeLessThan(candidateStart);
     expect(candidateVerification).toBeGreaterThan(candidateStart);
     expect(currentStop).toBeGreaterThan(candidateVerification);
     expect(publicVerification).toBeGreaterThan(currentStop);
