@@ -10,6 +10,19 @@ export interface ManagementMigrationPlan {
   readonly pending: readonly RepositoryMigration[];
 }
 
+export function managementQueryRows<T>(value: string): readonly T[] {
+  const parsed = JSON.parse(value) as unknown;
+  if (Array.isArray(parsed)) return parsed as readonly T[];
+  if (
+    typeof parsed === "object"
+    && parsed !== null
+    && Array.isArray((parsed as { rows?: unknown }).rows)
+  ) {
+    return (parsed as { rows: readonly T[] }).rows;
+  }
+  throw new Error("Supabase Management API returned an invalid query response");
+}
+
 const migrationFilename = /^(\d{14})_([a-z0-9]+(?:_[a-z0-9]+)*)\.sql$/u;
 const transactionControl = /^\s*(?:begin|commit|rollback)(?:\s+transaction)?\s*;/imu;
 

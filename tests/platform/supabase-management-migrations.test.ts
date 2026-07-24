@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  managementQueryRows,
   planManagementMigrations,
   repositoryMigrationFromFile,
   transactionalManagementMigration,
@@ -14,6 +15,25 @@ describe("Supabase Management API migration publishing", () => {
     "supabase/migrations/20260723000001_second_change.sql",
     "create table public.second_change (id bigint primary key);",
   )!;
+
+  it("reads the direct JSON rows emitted by non-agent CI", () => {
+    expect(managementQueryRows<{ version: string }>(JSON.stringify([
+      { version: "20260723000000" },
+    ]))).toEqual([{ version: "20260723000000" }]);
+  });
+
+  it("reads the security envelope emitted in agent mode", () => {
+    expect(managementQueryRows<{ version: string }>(JSON.stringify({
+      boundary: "test-boundary",
+      rows: [{ version: "20260723000000" }],
+      warning: "untrusted database output",
+    }))).toEqual([{ version: "20260723000000" }]);
+  });
+
+  it("rejects query output without a row collection", () => {
+    expect(() => managementQueryRows(JSON.stringify({ warning: "missing rows" })))
+      .toThrow("invalid query response");
+  });
 
   it("plans only repository migrations absent from remote history", () => {
     expect(planManagementMigrations([second, first], [first.version]).pending).toEqual([second]);
