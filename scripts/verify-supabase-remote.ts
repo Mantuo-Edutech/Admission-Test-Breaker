@@ -6,7 +6,8 @@ import {
 import { verifyRemotePracticeCatalog } from "../src/platform/remote-practice-catalog-contract.js";
 
 interface AdminUser { readonly id: string }
-interface PasswordSession { readonly access_token: string }
+interface AdminLink { readonly hashed_token?: unknown }
+interface UserSession { readonly access_token: string }
 interface PracticeSessionRow {
   readonly id: string;
   readonly paper_revision_id: string;
@@ -59,12 +60,20 @@ async function createUser(email: string, password: string): Promise<AdminUser> {
   }, "Remote confirmed user creation");
 }
 
-async function login(email: string, password: string): Promise<PasswordSession> {
-  return request<PasswordSession>("/auth/v1/token?grant_type=password", {
+async function createControlledSession(email: string): Promise<UserSession> {
+  const link = await request<AdminLink>("/auth/v1/admin/generate_link", {
+    method: "POST",
+    headers: serviceHeaders,
+    body: JSON.stringify({ type: "magiclink", email }),
+  }, "Remote server-controlled session link generation");
+  if (typeof link.hashed_token !== "string" || link.hashed_token.length < 20) {
+    throw new Error("Remote server-controlled session link omitted its token hash");
+  }
+  return request<UserSession>("/auth/v1/verify", {
     method: "POST",
     headers: publicHeaders,
-    body: JSON.stringify({ email, password }),
-  }, "Remote password login");
+    body: JSON.stringify({ type: "magiclink", token_hash: link.hashed_token }),
+  }, "Remote server-controlled session verification");
 }
 
 const unique = `${Date.now()}-${crypto.randomUUID().slice(0, 8)}`;
@@ -77,8 +86,8 @@ try {
   const firstUser = await createUser(firstEmail, password);
   const secondUser = await createUser(secondEmail, password);
   users.push(firstUser, secondUser);
-  const firstAuth = { ...publicHeaders, Authorization: `Bearer ${(await login(firstEmail, password)).access_token}` };
-  const secondAuth = { ...publicHeaders, Authorization: `Bearer ${(await login(secondEmail, password)).access_token}` };
+  const firstAuth = { ...publicHeaders, Authorization: `Bearer ${(await createControlledSession(firstEmail)).access_token}` };
+  const secondAuth = { ...publicHeaders, Authorization: `Bearer ${(await createControlledSession(secondEmail)).access_token}` };
 
   const deliveredCatalog = await verifyRemotePracticeCatalog(
     PUBLISHED_PRACTICE_REVISIONS.papers,

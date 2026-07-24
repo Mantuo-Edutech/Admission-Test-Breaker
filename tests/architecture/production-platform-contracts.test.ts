@@ -60,6 +60,9 @@ describe("production platform contracts", () => {
     expect(verifier).toContain("Supabase Auth email confirmation is not enforced");
     expect(verifier).toContain("Deployed Turnstile site key is empty");
     expect(remoteSupabaseVerifier).toContain("paper_revision_id");
+    expect(remoteSupabaseVerifier).toContain("/auth/v1/admin/generate_link");
+    expect(remoteSupabaseVerifier).toContain("token_hash");
+    expect(remoteSupabaseVerifier).not.toContain("grant_type=password");
     expect(remoteSupabaseVerifier).toContain("guest_space_already_claimed");
     expect(remoteSupabaseVerifier).toContain("get_entitled_content_resource");
     expect(remoteSupabaseVerifier).toContain("auth/v1/admin/users/${user.id}");
