@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "controlId": "managed-backup",
+  "method": "automated",
+  "result": "passed",
+  "target": {
+    "environment": "production",
+    "origin": "https://uktest.cc",
+    "supabaseProjectRef": "wmhqqxmzxiojrxybqjij"
+  },
+  "release": null,
+  "observedAt": "2026-07-25T06:27:57.429Z",
+  "sourceFingerprint": "e9d6b5897511ba562ee421f5f89f0af81e2a4e9a9241c2754b104960d9f30ce0",
+  "summary": "Supabase 可恢复备份点 completed successfully.",
+  "command": {
+    "program": "pnpm",
+    "args": [
+      "supabase:managed-backups:check"
+    ],
+    "outputSha256": "e15d883177905c56a28d5628b059911b61ee074aea81aaa1fa1b924304d11b69",
+    "outputBytes": 467
+  },
+  "artifacts": []
+}

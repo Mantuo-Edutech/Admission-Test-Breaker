@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "controlId": "remote-learner-data-contract",
+  "method": "automated",
+  "result": "passed",
+  "target": {
+    "environment": "production",
+    "origin": "https://uktest.cc",
+    "supabaseProjectRef": "wmhqqxmzxiojrxybqjij"
+  },
+  "release": "d7746e1b4f094e06311ac809d17d5239bb136d48",
+  "observedAt": "2026-07-25T06:28:18.311Z",
+  "sourceFingerprint": "77090a68ec3e604502c9c208bea32713aa35a287f9a5af05f2dd3aee1850cfdf",
+  "summary": "生产身份、不可变练习、RLS、邀请码与 Notes 契约 completed successfully.",
+  "command": {
+    "program": "pnpm",
+    "args": [
+      "verify:supabase:remote"
+    ],
+    "outputSha256": "68ab58d18fe60fc3b2e5cc4ab14f168f8dd4f658fbee2372739211443119e8b0",
+    "outputBytes": 283
+  },
+  "artifacts": []
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "controlId": "deployment-runtime",
+  "method": "automated",
+  "result": "passed",
+  "target": {
+    "environment": "production",
+    "origin": "https://uktest.cc",
+    "supabaseProjectRef": "wmhqqxmzxiojrxybqjij"
+  },
+  "release": "d7746e1b4f094e06311ac809d17d5239bb136d48",
+  "observedAt": "2026-07-25T06:27:28.216Z",
+  "sourceFingerprint": "de96f4ed30bbb0cbd010528699848c6ab6f8504da455c0f314616886112a7ef0",
+  "summary": "线上运行时、Auth 与安全响应头 completed successfully.",
+  "command": {
+    "program": "pnpm",
+    "args": [
+      "verify:deployment"
+    ],
+    "outputSha256": "d6db7eee23e17bc81f39c9ff4cc451e119283845edf733e61d15c98c64b6452c",
+    "outputBytes": 258
+  },
+  "artifacts": []
+}
