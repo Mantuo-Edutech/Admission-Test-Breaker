@@ -9,7 +9,7 @@ describe("expert guidance module", () => {
 
     expect(await screen.findByRole("heading", {
       level: 1,
-      name: "高效一对一，10 小时内解决最后的冲刺问题",
+      name: "高效一对一，10 小时以内解决最后的冲刺问题",
     })).toBeInTheDocument();
     expect(screen.getByRole("img", { name: "冰冰老师微信二维码" })).toBeInTheDocument();
     expect(screen.getByText("添加冰冰，预约 TMUA 10 小时冲刺")).toBeInTheDocument();

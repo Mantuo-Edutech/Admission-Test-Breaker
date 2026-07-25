@@ -18,7 +18,7 @@ export function ExpertGuidancePage({ examId }: { readonly examId: ExamId }) {
       <section className="expert-guidance-hero page-shell">
         <div>
           <p className="eyebrow">名师指点 · EXPERT GUIDANCE</p>
-          <h1>高效一对一，10 小时内解决最后的冲刺问题</h1>
+          <h1>高效一对一，10 小时以内解决最后的冲刺问题</h1>
           <p>
             带上你的课程体系、目标专业和最近一次练习。老师先判断是知识、方法还是时间分配问题，
             再把有限时间集中用在最需要突破的部分。
