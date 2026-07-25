@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "controlId": "auth-protection",
+  "method": "automated",
+  "result": "passed",
+  "target": {
+    "environment": "production",
+    "origin": "https://uktest.cc",
+    "supabaseProjectRef": "wmhqqxmzxiojrxybqjij"
+  },
+  "release": null,
+  "observedAt": "2026-07-25T06:27:53.204Z",
+  "sourceFingerprint": "71c5360a8bb5a0716cf04411a6804e90efdce7be8a705dbbbc59ff1ed7286e8c",
+  "summary": "生产 Auth、Turnstile 与密码策略 completed successfully.",
+  "command": {
+    "program": "pnpm",
+    "args": [
+      "supabase:auth-protection:check"
+    ],
+    "outputSha256": "0e091ed56565f67e19fb0ce90997c93d232826e83055eb7acae0fb0d4fc4bcc0",
+    "outputBytes": 332
+  },
+  "artifacts": []
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "controlId": "auth-smtp",
+  "method": "automated",
+  "result": "passed",
+  "target": {
+    "environment": "production",
+    "origin": "https://uktest.cc",
+    "supabaseProjectRef": "wmhqqxmzxiojrxybqjij"
+  },
+  "release": null,
+  "observedAt": "2026-07-25T06:27:55.437Z",
+  "sourceFingerprint": "ed8b663f1afad86ffbb9937552010af2e74194858bfa8cd20692b303fb24f627",
+  "summary": "生产自定义 SMTP 配置 completed successfully.",
+  "command": {
+    "program": "pnpm",
+    "args": [
+      "supabase:auth-smtp:check"
+    ],
+    "outputSha256": "aa0037fa7a6eb192d2f79aa9d6af472fe398649c5f160215bf4deccd7337c4ca",
+    "outputBytes": 332
+  },
+  "artifacts": []
+}
