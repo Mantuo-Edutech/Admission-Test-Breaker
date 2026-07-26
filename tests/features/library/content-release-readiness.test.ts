@@ -27,10 +27,10 @@ describe("standardized content release readiness", () => {
   it("does not mistake automated coverage for closed-Beta or final review", async () => {
     const value = await report();
     expect(value.summary).toMatchObject({
-      totalProducts: 41,
-      publicProducts: 40,
+      totalProducts: 43,
+      publicProducts: 42,
       internalProducts: 1,
-      automatedReadyProducts: 40,
+      automatedReadyProducts: 42,
     });
     expect(value.summary.manualReadyProducts).toBeLessThan(value.summary.publicProducts);
     expect(value.summary.closedBetaReadyProducts).toBeLessThan(value.summary.publicProducts);

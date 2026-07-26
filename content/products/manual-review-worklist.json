@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "policyVersion": "1.0.0",
-  "catalogRevision": "2026-07-19.33",
+  "catalogRevision": "2026-07-26.1",
   "sourceReleasePolicyVersion": "1.0.0",
-  "generatedAt": "2026-07-19",
+  "generatedAt": "2026-07-26",
   "instructions": [
     "This file is generated; do not mark an item passed here.",
     "Complete the stated review, then update the owning feature manifest with status, reviewer, reviewerRole, checkedAt and evidence.",
@@ -48,7 +48,7 @@
               "route": "/practice/esat-biology-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:c703063f44c6786957cdde54fc54cbffce24ccc3796a40bdb50fe0595014c758",
+          "sourceFingerprint": "sha256:8b818f8d6e5f1047b6eef2c5c7c23fd9c5e741e162c3a024bff403fdc021f4b0",
           "sourceArtifactCount": 10
         },
         {
@@ -72,7 +72,7 @@
               "route": "/practice/esat-chemistry-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:8e87f94af6bdb82b7653176c55c7ce0110d35df2de87b42a9d2ac12c9c10b310",
+          "sourceFingerprint": "sha256:697e4c744188b99fc445979ae59c23c00b7387d41f2482d35503561f4545b735",
           "sourceArtifactCount": 10
         },
         {
@@ -96,7 +96,7 @@
               "route": "/practice/esat-mathematics-1-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:901d42acd20805779a098923ab96a97383bcc4a39e50af1a1be2549f7fd7ab9e",
+          "sourceFingerprint": "sha256:acaed531e4be8d79a0bdd35f23668cd2763ec055fb1759e5ede8c5305d167559",
           "sourceArtifactCount": 10
         },
         {
@@ -120,7 +120,7 @@
               "route": "/practice/esat-mathematics-2-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:9cfc220d52d74feb317de070a92d1493d606948015db0fc3e28c2311cfdd573f",
+          "sourceFingerprint": "sha256:2c1a839fc969e50a2d182cefe1e31e63553cd65e6866f70edf8173ba7abb4856",
           "sourceArtifactCount": 10
         },
         {
@@ -144,7 +144,7 @@
               "route": "/exams/esat/notes/mathematics"
             }
           ],
-          "sourceFingerprint": "sha256:8af61e4b58bd199ae48c7eccea371f1eac9577dac18874a0d4cef120a1ae4a3b",
+          "sourceFingerprint": "sha256:7b243f5f384976672cfea03d6d3b2e75c8db618776f82a7215de88daa4c47b9e",
           "sourceArtifactCount": 14
         },
         {
@@ -168,7 +168,7 @@
               "route": "/exams/esat/past-papers"
             }
           ],
-          "sourceFingerprint": "sha256:12532ba4ef8b613c19fb047780d123b5d3b373ad4a2d2c1aa39138e7e23003ab",
+          "sourceFingerprint": "sha256:ed35cda63a46636d2c676abd8879352013bf545cbb8ec8f2079150e1ea7e3826",
           "sourceArtifactCount": 16
         },
         {
@@ -192,7 +192,7 @@
               "route": "/practice/esat-physics-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:6367e1b805ec191e04c42a12c117f634f84f53acfbe6a9f44e59144b594dec09",
+          "sourceFingerprint": "sha256:d845da35234e7188ad95b5e6a3a623aea97d2d3d1c56017d995a5c9306527564",
           "sourceArtifactCount": 10
         },
         {
@@ -216,7 +216,7 @@
               "route": "/exams/esat/notes/sciences"
             }
           ],
-          "sourceFingerprint": "sha256:5588d071d362a1436505abb78d50390e9ecaf48077487d5988eb351deb045ea8",
+          "sourceFingerprint": "sha256:5f2538c33184926e0abe511d403b826c6f603c90af409dbbbc51ecfde9c84487",
           "sourceArtifactCount": 11
         },
         {
@@ -240,7 +240,7 @@
               "route": "/exams/lnat/notes/foundations"
             }
           ],
-          "sourceFingerprint": "sha256:d6881de79b1f091b7e99f5bb20b7c2f4b6b567f624ccb4f2c31bc8242406d346",
+          "sourceFingerprint": "sha256:d13623f2c59e6d89bd3c093a5954e55edf90d9ffb40bf2bf1ce7f0b3936956c0",
           "sourceArtifactCount": 12
         },
         {
@@ -288,7 +288,7 @@
               "route": "/exams/lnat/past-papers"
             }
           ],
-          "sourceFingerprint": "sha256:24445dea59c015df42cf198e784e16546c65dffbd0c83a6363d30ec32fd663d8",
+          "sourceFingerprint": "sha256:5629401860b6ea5b5eaf28f519e56d001e82f2ab95cd892c11fcba254aa901e6",
           "sourceArtifactCount": 10
         },
         {
@@ -348,7 +348,7 @@
               "route": "/exams/tara/past-papers"
             }
           ],
-          "sourceFingerprint": "sha256:b7b88736c9578cbf8fcb9541633c4544887822a3741c506434ac7270cde6bf40",
+          "sourceFingerprint": "sha256:ea2353989e07e1e8dc6fc6c1a49d5010c84e432e90633fb74dfb99570afb84f7",
           "sourceArtifactCount": 14
         },
         {
@@ -372,7 +372,7 @@
               "route": "/exams/tara/past-papers"
             }
           ],
-          "sourceFingerprint": "sha256:58f09a7071579bc19eab6e2cc36f05c57395caa359bf12976077a949dc0ad6d0",
+          "sourceFingerprint": "sha256:c2f4ba261ac090e12d58719a160c7a8f7398fd130223e019435733ae4139002a",
           "sourceArtifactCount": 12
         },
         {
@@ -396,7 +396,7 @@
               "route": "/exams/tara/notes/foundations"
             }
           ],
-          "sourceFingerprint": "sha256:e6caf5ddfc403192e345eabd7f3398514f2455080c1c9dcbd321d276c92c9466",
+          "sourceFingerprint": "sha256:bbd6647f398be261960c9ee75fc4f8b6df4bcdc50d2d9cfa5c8c41bcce89db21",
           "sourceArtifactCount": 12
         },
         {
@@ -420,7 +420,7 @@
               "route": "/exams/tmua/notes/foundations"
             }
           ],
-          "sourceFingerprint": "sha256:0c74ad52c0f502f6cab418565d6cc436a9181c0c3d62fd2168bcdd96eca697a7",
+          "sourceFingerprint": "sha256:050f5985161793787ce63247aba989b3906e3c403dc6852fd737b02c2b677525",
           "sourceArtifactCount": 11
         },
         {
@@ -444,7 +444,7 @@
               "route": "/exams/tmua/diagnostic"
             }
           ],
-          "sourceFingerprint": "sha256:a3338df9c115423f9bde743dcd1cab06dc0a5136695f3fc9c489ce73d5a7f796",
+          "sourceFingerprint": "sha256:1054645065a125219d098a17db2712fb65079dde37db31a1054f715ad3c9b997",
           "sourceArtifactCount": 10
         },
         {
@@ -516,7 +516,7 @@
               "route": "/exams/ucat/past-papers"
             }
           ],
-          "sourceFingerprint": "sha256:437834bba0725fa57dff05fc25dfc4ddf34f016edba18e9561d3409459ab8941",
+          "sourceFingerprint": "sha256:383495d64f53f3e1fea91bd083642eed6f0a6bd35bb1966bd76d93720b77ed81",
           "sourceArtifactCount": 11
         },
         {
@@ -540,7 +540,7 @@
               "route": "/exams/ucat/notes/foundations"
             }
           ],
-          "sourceFingerprint": "sha256:5ae5405c2b19a0b7aff616053926c4f89ea39fd2fe14fbb5bca5602bac4399c6",
+          "sourceFingerprint": "sha256:ac2f6a321f353485f639dcf13472f31e0c93662f29e7dd685a456837eebdaecd",
           "sourceArtifactCount": 12
         },
         {
@@ -594,7 +594,7 @@
               "route": "/exams/ucat/past-papers"
             }
           ],
-          "sourceFingerprint": "sha256:6a876ac35c604f9cd909a58c2e759efd8fcf8d32a169cd74568a862c6b568032",
+          "sourceFingerprint": "sha256:f044eb4c3a380f8c5fcc4d6f75fd0942681161c6be4b2219def9fd72f2bc6730",
           "sourceArtifactCount": 18
         },
         {
@@ -678,7 +678,7 @@
               "route": "/practice/esat-biology-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:00d247924998defbf858b3dddf719499938d39347beb872e347a5c07b831433f",
+          "sourceFingerprint": "sha256:e6c44bb58006133442a038518e42e446e59a902225c7ffc230d15f99ca582a02",
           "sourceArtifactCount": 10
         },
         {
@@ -702,7 +702,7 @@
               "route": "/practice/esat-chemistry-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:d12c76f750873ed6c3d60d22d20b46f24fb0c91f641cdc88e77769066b3115ec",
+          "sourceFingerprint": "sha256:432dcacb1b247ce20549345668c69585e9c302a1a8a283436de297f344ce2a80",
           "sourceArtifactCount": 10
         },
         {
@@ -726,7 +726,7 @@
               "route": "/practice/esat-mathematics-1-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:c2df6f6c381138c3f727f635d5eacc0855347142fddc69c7da62b17febac3919",
+          "sourceFingerprint": "sha256:47ff7fcb2b14c0b15a108e0ba309949bc4d7b88008cf42db40cb2350302dc608",
           "sourceArtifactCount": 10
         },
         {
@@ -750,7 +750,7 @@
               "route": "/practice/esat-mathematics-2-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:73aa85cccfb32fb0f5ff404c329cd06d498cddded7f1eb2f4fafe0ca6d6aa765",
+          "sourceFingerprint": "sha256:6243f0efe09f1d5c546a3346b48b18e83ff1310093fa7dec624d104f24c35db6",
           "sourceArtifactCount": 10
         },
         {
@@ -776,7 +776,7 @@
               "route": "/exams/esat/notes/mathematics"
             }
           ],
-          "sourceFingerprint": "sha256:cd7e9b46779290a1deb0ecde00569b2bde17509ef14562eaa58b92af0081b2e8",
+          "sourceFingerprint": "sha256:5845fb6f6e32b1cf64a1ca4f275cf44086d931cd70c24abe89ebbd81e0fe8b75",
           "sourceArtifactCount": 14
         },
         {
@@ -800,7 +800,7 @@
               "route": "/practice/esat-physics-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:6f7e98e46cf682e4b19a32a681fd6e29a633c3396bdb6fd7e3204b4f1ae6d72e",
+          "sourceFingerprint": "sha256:c82010d5e35dbffc0990261297ced52f76a0baee5d26a42d6a9d1d181bbadc07",
           "sourceArtifactCount": 10
         },
         {
@@ -826,7 +826,7 @@
               "route": "/exams/esat/notes/sciences"
             }
           ],
-          "sourceFingerprint": "sha256:55b66931d66db8ddb6293ec4dc43cae16cef836dfc106256a842b6083e1ef24b",
+          "sourceFingerprint": "sha256:8900cd49557a9d22baafd49bb41cf4ce6d7b4e3ef7472b634a7c88fadc707f3f",
           "sourceArtifactCount": 11
         },
         {
@@ -852,7 +852,7 @@
               "route": "/exams/lnat/notes/foundations"
             }
           ],
-          "sourceFingerprint": "sha256:0c4388ecfa5f73f90d7e15b551c5621981cae89e207e96afa772df49ac861531",
+          "sourceFingerprint": "sha256:cb3ec9c21e620b0858a8a08707403eeb68799cd5fca188ac811fa405f2f04138",
           "sourceArtifactCount": 12
         },
         {
@@ -908,7 +908,7 @@
               "route": "/exams/tara/notes/foundations"
             }
           ],
-          "sourceFingerprint": "sha256:cc46e9e71a26221d1f4b214ae159fa7c55a858f25f13b0f381a28501517248a1",
+          "sourceFingerprint": "sha256:57744f2a5a70601453b03876e89ea6e2a6dd100110128a9fee0bfdf9fe7ed25a",
           "sourceArtifactCount": 12
         },
         {
@@ -934,7 +934,7 @@
               "route": "/exams/tmua/diagnostic"
             }
           ],
-          "sourceFingerprint": "sha256:1d6547659d98fa38feda246541bc7f80a5d29cbc7902ba43e04a1bb1a6bd8186",
+          "sourceFingerprint": "sha256:9ca352167ac9cf71d8410a3b16a0edcc3350e9d3bebb8573243ebc691623132f",
           "sourceArtifactCount": 10
         },
         {
@@ -960,7 +960,7 @@
               "route": "/exams/ucat/notes/foundations"
             }
           ],
-          "sourceFingerprint": "sha256:f85c791b804c26d4f34ff2f311f5542a601303b37c895b944468cc3f458d4e76",
+          "sourceFingerprint": "sha256:c5d51f16145504a3e64c8b6e68bfd03c633545f246fd2c68c47d05d074e65f3e",
           "sourceArtifactCount": 12
         }
       ]
@@ -998,7 +998,7 @@
               "route": "/practice/esat-biology-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:9b18d97bb08ef36457bfda3a8025102550f5f1c85c15f9205546dac06273ee31",
+          "sourceFingerprint": "sha256:c296b613682b7f412a2fbb8057ecd41a67dd3b9b43aa8a2d241fda9d28477739",
           "sourceArtifactCount": 10
         },
         {
@@ -1024,7 +1024,7 @@
               "route": "/practice/esat-chemistry-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:cb035564da5e9857dddc991e8051d094cd2da1c11fcd82e15f05e4cb2ff46581",
+          "sourceFingerprint": "sha256:420312c061fa10900da5afe36fab594d6a09e1c88853067323e36c07af7a457b",
           "sourceArtifactCount": 10
         },
         {
@@ -1052,11 +1052,11 @@
             {
               "productId": "esat-course-module-planner",
               "examId": "esat",
-              "version": "1.0.0",
+              "version": "2.0.0",
               "route": "/exams/esat"
             }
           ],
-          "sourceFingerprint": "sha256:f98faeb481553d7d80cdf7c3be1662ee1db0ed01ba4b160a8d4b53bb463d355f",
+          "sourceFingerprint": "sha256:5924e371bd096efe1ef1fb6ccd84a4dc2153e7947502c76c085d461f388dc08d",
           "sourceArtifactCount": 21
         },
         {
@@ -1082,7 +1082,7 @@
               "route": "/practice/esat-mathematics-1-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:c117a7e6069f71e71a020290a53b0b5fd1022a045612978b38bcfe4bc0df5951",
+          "sourceFingerprint": "sha256:02c61a50fba2e6a9205733e4cc0d11eb35d0d5173e89aed5f2e9228435fb778b",
           "sourceArtifactCount": 10
         },
         {
@@ -1108,7 +1108,7 @@
               "route": "/practice/esat-mathematics-2-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:18600e89b128a902431724bdd053bb237e73dccc9a16bd8e14dee03e4a2b27f1",
+          "sourceFingerprint": "sha256:90096627c8006e12a0735eca858d766108ee93d1055740df9568338d2b0c0d60",
           "sourceArtifactCount": 10
         },
         {
@@ -1134,7 +1134,7 @@
               "route": "/exams/esat/past-papers"
             }
           ],
-          "sourceFingerprint": "sha256:fe74da9ebf83c7804d709f1ce75a3f9311f2ef76191fcee454481842ef7535de",
+          "sourceFingerprint": "sha256:748c82ba41e5bc6f4d73987436fcdb658682a333c6876aaeb82a10e959ced0dd",
           "sourceArtifactCount": 16
         },
         {
@@ -1160,7 +1160,7 @@
               "route": "/practice/esat-physics-full-mock-v1"
             }
           ],
-          "sourceFingerprint": "sha256:a2242a1ca3eae5095204c21e92c775197d7058c8b54454a7a981327ade04c664",
+          "sourceFingerprint": "sha256:a176ae9b4333a04231371cad50870cae4b5933206753a84dfb00d14d6ea11b4d",
           "sourceArtifactCount": 10
         },
         {
@@ -1198,7 +1198,7 @@
               "route": "/exams/ucat/preparation"
             }
           ],
-          "sourceFingerprint": "sha256:83e954e714fb8604dcf41df38e5e3b80a1a3621ce596005758ffea90dd97a9b4",
+          "sourceFingerprint": "sha256:a6b67dfc05cd3c479b0ee7fc60dcb9449933ad05aee1d4607bbd9f44a9681bfe",
           "sourceArtifactCount": 20
         },
         {
@@ -1274,7 +1274,7 @@
               "route": "/exams/lnat/past-papers"
             }
           ],
-          "sourceFingerprint": "sha256:656f5ef8b6aa3a7265bccbd2fbfbcfbe9b899c679f7bd77f613d70d272d6bd4c",
+          "sourceFingerprint": "sha256:0c917ac1f6166ca031b6b692b4de5d56bdc479a2c801bee6979edc7e9c5b12eb",
           "sourceArtifactCount": 10
         },
         {
@@ -1312,7 +1312,7 @@
               "route": "/exams/ucat"
             }
           ],
-          "sourceFingerprint": "sha256:0ba7b48c71c9dd078004f296de538c967fa27990c5f9053acbfdfb26cac89bcf",
+          "sourceFingerprint": "sha256:82790b23d3be1c2793c546e68779a77884701bba4ff7b9da13c9013360bb20e5",
           "sourceArtifactCount": 13
         },
         {
@@ -1376,7 +1376,7 @@
               "route": "/exams/tara/past-papers"
             }
           ],
-          "sourceFingerprint": "sha256:0f2f1d843fda04ce39a1d7904ac76a5cae27c669740a3bb0256fa0ce17875137",
+          "sourceFingerprint": "sha256:277a89e4edcd6b304565b32ae86a054da3183de211cbd71b7b24dc7d97dafefe",
           "sourceArtifactCount": 14
         },
         {
@@ -1402,7 +1402,7 @@
               "route": "/exams/tara/past-papers"
             }
           ],
-          "sourceFingerprint": "sha256:2c3553e160ffd48f703c96530389fd10dbbbcd0f5acf24f6f4ff4a16c91e72be",
+          "sourceFingerprint": "sha256:250392f881018ff415e3241b5ea3b84501419b50cb088f6181b1c07c74290fc2",
           "sourceArtifactCount": 12
         },
         {
@@ -1428,7 +1428,7 @@
               "route": "/exams/tmua/past-papers"
             }
           ],
-          "sourceFingerprint": "sha256:b2867a19008103074c6fee9b101e07da64973ca8d203204aa3ffcc0797509c51",
+          "sourceFingerprint": "sha256:be90df9e3fffa4261d812771e9d27014c36b537817d953a84065082dd74d6794",
           "sourceArtifactCount": 23
         },
         {
@@ -1454,7 +1454,7 @@
               "route": "/exams/tmua/notes/foundations"
             }
           ],
-          "sourceFingerprint": "sha256:2fa6c3238d177da3f0db941acdfd450d95c77f7340e7457012b5b21f7e22b5af",
+          "sourceFingerprint": "sha256:333fae7ba57e9daf95655b71e5981df36c0671b2cd60d7d4b5e898af1027254f",
           "sourceArtifactCount": 11
         },
         {
@@ -1476,12 +1476,12 @@
             {
               "productId": "tmua-six-week-review-plan-v1",
               "examId": "tmua",
-              "version": "1.0.0",
+              "version": "2.0.0",
               "route": "/exams/tmua/notes/six-week-plan"
             }
           ],
-          "sourceFingerprint": "sha256:00b195539a085ff2fd0867580f28475e23d3676b2c5029e6e647c38db7be228c",
-          "sourceArtifactCount": 11
+          "sourceFingerprint": "sha256:64fc4b297820d6e90849017df0c40a7b8f98e8dd3cb1ae0c8a6fa5d79e24ecbe",
+          "sourceArtifactCount": 12
         },
         {
           "reviewKey": "tmua-profile-first-staged-journey/staged-responsive-route-review",
@@ -1506,7 +1506,7 @@
               "route": "/exams/tmua/profile"
             }
           ],
-          "sourceFingerprint": "sha256:2d2e805e5dfc3495d645dbf7c772a323fc7ccbefdfc35f771777ec9c01c390c1",
+          "sourceFingerprint": "sha256:7fe3ff93953ccd63943a2c49e0be90a43575403bcf1e46a66103cbd6946f9aa7",
           "sourceArtifactCount": 26
         },
         {
@@ -1532,8 +1532,8 @@
               "route": "/practice/tmua-specimen-p1"
             }
           ],
-          "sourceFingerprint": "sha256:ff2e35df0b2c5c59c3adb2ae5a91b207cb9d6d62a4c084d90edaa67650d4f839",
-          "sourceArtifactCount": 24
+          "sourceFingerprint": "sha256:12a441399338eb1f83a218beffb75676673e466ab47d05e5cc412ebbe3a63495",
+          "sourceArtifactCount": 25
         },
         {
           "reviewKey": "ucat-decision-making-full-mock/full-decision-browser-device-review",
@@ -1658,7 +1658,7 @@
               "route": "/exams/ucat/past-papers"
             }
           ],
-          "sourceFingerprint": "sha256:c4bfd7fb2a2c48d236772a27ed0e7a0d5e18bc66ea522d0f41302c8a93e027cc",
+          "sourceFingerprint": "sha256:77dafc135d91502836ab918356951d2a4c83a2c2de0d91e8ebe56680632ecd2c",
           "sourceArtifactCount": 11
         },
         {
@@ -1740,7 +1740,7 @@
               "route": "/exams/ucat/past-papers"
             }
           ],
-          "sourceFingerprint": "sha256:42a9f4827d4ef3163ec46759737cdb98cfe24de41121260fb1e8adf7de9e1ef5",
+          "sourceFingerprint": "sha256:30adffacc7047c94ba0c0e71b77f38b34ae617bbc5670eeb6ed3d527a2003e1c",
           "sourceArtifactCount": 18
         },
         {

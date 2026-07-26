@@ -1,0 +1,54 @@
+schemaVersion: 1
+feature:
+  id: esat-advanced-review-notes
+  title: ESAT 邀请码深度复习笔记
+  status: verified
+  verifiedAt: 2026-07-26
+  userOutcome: 学生完成专业模块与课程档案后，获得邀请码权限即可在本站按本人模块阅读英文主导、中文辅助的深度策略笔记；未授权账号不能取得正文。
+run:
+  packageScript: verify:entitled-content
+claims:
+  - id: substantive-five-module-product
+    status: verified
+    statement: 私有资料覆盖 Mathematics 1、Mathematics 2、Physics、Chemistry 和 Biology；每个模块都有两套决策方法、完整三步例题、常见陷阱和三项训练处方。
+    artifacts:
+      - content/notes/esat/advanced-review-notes-v1.json
+      - src/features/entitled-content/advanced-review-notes.ts
+      - tests/features/entitled-content/advanced-review-notes.test.ts
+    automatedChecks:
+      - verify:entitled-content
+  - id: profile-filtered-native-page
+    status: verified
+    statement: 页面只显示学生专业规划所要求的 ESAT 模块，英文承担知识讲解，中文只提供理解支持，并在手机、平板和桌面采用同一响应式组件。
+    artifacts:
+      - src/features/entitled-content/pages/AdvancedReviewNotesPage.tsx
+      - src/styles/practice.css
+      - tests/app/advanced-review-notes-page.test.tsx
+    automatedChecks:
+      - verify:entitled-content
+      - typecheck
+  - id: server-side-invite-gate
+    status: verified
+    statement: 正文由受保护的 Supabase payload 交付，并通过独立 ESAT 权限包控制；目录可见，但未登录、未授权和撤销后的账号都不能读取正文。
+    artifacts:
+      - supabase/migrations/20260726150000_esat_tara_advanced_notes.sql
+      - src/features/entitled-content/supabase-entitled-content-service.ts
+      - scripts/build-advanced-review-notes-migration.ts
+    automatedChecks:
+      - verify:entitled-content
+      - verify:supabase
+boundaries:
+  - 邀请码只授予 ESAT 深度笔记权限，不授予冰冰、老师、家长或 Agent 读取学生课程信息与练习记录的权限。
+  - 页面不会向未授权浏览器发送正文；官方原始 PDF 不进入 public 目录或前端 bundle。
+  - 笔记依据已核验范围独立撰写，不复制官方题目、示例或解析。
+manualChecks:
+  - id: responsive-esat-advanced-notes-review
+    status: passed
+    reviewer: codex-agent
+    reviewerRole: product-qa
+    checkedAt: 2026-07-26
+    evidence: Chromium inspection at 390x844, 768x1024 and 1440x900 verified the signed-out invitation gate and an entitled student view. English headings and explanations precede Chinese support, the page filters to the student's Mathematics 1, Mathematics 2 and Physics modules, and no viewport has horizontal overflow.
+    viewports:
+      - 390x844
+      - 768x1024
+      - 1440x900

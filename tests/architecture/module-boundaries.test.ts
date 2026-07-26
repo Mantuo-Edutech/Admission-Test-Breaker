@@ -309,7 +309,7 @@ describe("module architecture boundaries", () => {
       "vitest run tests/app/account-access-flow.test.tsx tests/features/account/pending-invite.test.ts",
     );
     expect(packageJson.scripts?.["verify:entitled-content"]).toBe(
-      "vitest run tests/features/entitled-content tests/app/tmua-entitled-review-plan.test.tsx tests/app/results-page.test.tsx",
+      "vitest run tests/features/entitled-content tests/app/tmua-entitled-review-plan.test.tsx tests/app/advanced-review-notes-page.test.tsx tests/app/results-page.test.tsx",
     );
     expect(packageJson.scripts?.["verify:private-content-bundle"]).toBe(
       "tsx scripts/check-private-content-bundle.ts",

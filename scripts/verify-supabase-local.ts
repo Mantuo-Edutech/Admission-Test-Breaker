@@ -83,6 +83,7 @@ interface EntitledContentResourceRow {
   payload: {
     weeklyPlan?: Array<{ sessions?: unknown[] }>;
     explanations?: Array<{ questionId?: string; correctAnswer?: string }>;
+    modules?: Array<{ id?: string }>;
   };
 }
 
@@ -289,19 +290,23 @@ async function main() {
       throw new Error("Product funnel did not return exactly one anonymous aggregate journey.");
     }
 
-    await expectRequestFailure(
+    const advancedNoteInvites = await jsonRequest<Array<{ invite_id: string; code: string }>>(
       `${status.API_URL}/rest/v1/rpc/issue_invite`,
       {
         method: "POST",
         headers: serviceHeaders,
         body: JSON.stringify({
-          p_label: "Draft-only HTTP contract check",
-          p_package_ids: ["esat-deep-review"],
+          p_label: "ESAT and TARA advanced notes HTTP contract",
+          p_package_ids: ["esat-deep-review", "tara-deep-review"],
           p_max_redemptions: 1,
         }),
       },
-      "invite_package_unpublished",
+      "Published advanced-note invite issue",
     );
+    const advancedNotesCode = advancedNoteInvites[0]?.code;
+    if (advancedNoteInvites.length !== 1 || advancedNotesCode === undefined) {
+      throw new Error("Published ESAT and TARA packages could not be issued together.");
+    }
 
     const preview = await jsonRequest<{ valid: boolean; packages?: string[] }>(
       `${status.API_URL}/functions/v1/invite-preview`,
@@ -521,7 +526,10 @@ async function main() {
     if (
       !operatorPackages.some((row) =>
         row.package_id === "tmua-full-access" && Number(row.published_resource_count) >= 1)
-      || operatorPackages.some((row) => row.package_id === "esat-deep-review")
+      || !operatorPackages.some((row) =>
+        row.package_id === "esat-deep-review" && Number(row.published_resource_count) === 1)
+      || !operatorPackages.some((row) =>
+        row.package_id === "tara-deep-review" && Number(row.published_resource_count) === 1)
     ) {
       throw new Error("The operator package list crossed the publication gate.");
     }
@@ -681,7 +689,7 @@ async function main() {
     if (
       delivered.length !== 1 ||
       deliveredPlan?.id !== "tmua-six-week-review-plan-v1" ||
-      deliveredPlan.source_sha256 !== "9c1430c1fa10ebe313483b367a65f0516381924528a76638107c2f48298fc438" ||
+      deliveredPlan.source_sha256 !== "4f727b10e93a96e5fef3821476a9c1bd2c115738a6d055f6bcdf1c068c415088" ||
       deliveredPlan.payload.weeklyPlan?.length !== 6 ||
       deliveredSessions !== 30
     ) {
@@ -701,12 +709,58 @@ async function main() {
     if (
       deliveredReview.length !== 1 ||
       workedReview?.id !== "tmua-specimen-p1-worked-explanations-v1" ||
-      workedReview.source_sha256 !== "25b776e6951dcf79cc7657fc1865df4547fbef5a737fb81eb28ee7e0e4b4233e" ||
+      workedReview.source_sha256 !== "83830bf443ee941dae0a2df99be5cbee5ae9280b81568623408d997e71146b76" ||
       workedReview.payload.explanations?.length !== 20 ||
       workedReview.payload.explanations.map((item) => item.correctAnswer).join("") !==
         "DDBEDDCFADEDCDAEDBDG"
     ) {
       throw new Error("Entitled content delivery did not return the verified 20-question worked review.");
+    }
+
+    const advancedRedemption = await jsonRequest<EntitlementRow[]>(
+      `${status.API_URL}/rest/v1/rpc/redeem_invite`,
+      {
+        method: "POST",
+        headers: authenticatedHeaders,
+        body: JSON.stringify({ p_code: advancedNotesCode }),
+      },
+      "ESAT and TARA advanced-note invite redemption",
+    );
+    if (
+      !advancedRedemption.some((row) => row.package_id === "esat-deep-review")
+      || !advancedRedemption.some((row) => row.package_id === "tara-deep-review")
+    ) {
+      throw new Error("Advanced-note redemption did not grant both exam-specific packages.");
+    }
+    const esatAdvanced = await jsonRequest<EntitledContentResourceRow[]>(
+      `${status.API_URL}/rest/v1/rpc/get_entitled_content_resource`,
+      {
+        method: "POST",
+        headers: authenticatedHeaders,
+        body: JSON.stringify({ p_resource_id: "esat-advanced-notes-v1" }),
+      },
+      "Entitled ESAT advanced-note delivery",
+    );
+    if (
+      esatAdvanced[0]?.source_sha256 !== "712c01035493a53129688445be09b66d9e96925e22f3c030e0ad8ac52f3eb448"
+      || esatAdvanced[0]?.payload.modules?.length !== 5
+    ) {
+      throw new Error("ESAT advanced notes were not delivered from the verified private payload.");
+    }
+    const taraAdvanced = await jsonRequest<EntitledContentResourceRow[]>(
+      `${status.API_URL}/rest/v1/rpc/get_entitled_content_resource`,
+      {
+        method: "POST",
+        headers: authenticatedHeaders,
+        body: JSON.stringify({ p_resource_id: "tara-advanced-notes-v1" }),
+      },
+      "Entitled TARA advanced-note delivery",
+    );
+    if (
+      taraAdvanced[0]?.source_sha256 !== "e5e822e578a65c96977ccbacf9c21f41ff96810484d37b5b89d0f0a912e54a9e"
+      || taraAdvanced[0]?.payload.modules?.length !== 4
+    ) {
+      throw new Error("TARA advanced notes were not delivered from the verified private payload.");
     }
 
     const guestSpaceId = `gsp_http_${unique}`;
@@ -1153,6 +1207,23 @@ async function main() {
     if (secondWorkedReview.length !== 0) {
       throw new Error("Second learner crossed the worked-review entitlement boundary.");
     }
+    for (const resourceId of ["esat-advanced-notes-v1", "tara-advanced-notes-v1"]) {
+      const secondAdvanced = await jsonRequest<EntitledContentResourceRow[]>(
+        `${status.API_URL}/rest/v1/rpc/get_entitled_content_resource`,
+        {
+          method: "POST",
+          headers: {
+            ...publicHeaders,
+            Authorization: `Bearer ${secondSession.access_token}`,
+          },
+          body: JSON.stringify({ p_resource_id: resourceId }),
+        },
+        `Second learner ${resourceId} lookup`,
+      );
+      if (secondAdvanced.length !== 0) {
+        throw new Error(`Second learner crossed the ${resourceId} entitlement boundary.`);
+      }
+    }
 
     await jsonRequest<unknown>(
       `${status.API_URL}/rest/v1/user_entitlements?user_id=eq.${user.id}&package_id=eq.tmua-full-access`,
@@ -1172,6 +1243,17 @@ async function main() {
       },
       "Deep-review entitlement revocation",
     );
+    for (const packageId of ["esat-deep-review", "tara-deep-review"]) {
+      await jsonRequest<unknown>(
+        `${status.API_URL}/rest/v1/user_entitlements?user_id=eq.${user.id}&package_id=eq.${packageId}`,
+        {
+          method: "PATCH",
+          headers: serviceHeaders,
+          body: JSON.stringify({ revoked_at: new Date().toISOString() }),
+        },
+        `${packageId} entitlement revocation`,
+      );
+    }
     const afterRevocation = await jsonRequest<EntitledContentResourceRow[]>(
       `${status.API_URL}/rest/v1/rpc/get_entitled_content_resource`,
       {
@@ -1195,6 +1277,20 @@ async function main() {
     );
     if (workedReviewAfterRevocation.length !== 0) {
       throw new Error("Revoked deep-review package still exposed worked explanations.");
+    }
+    for (const resourceId of ["esat-advanced-notes-v1", "tara-advanced-notes-v1"]) {
+      const afterAdvancedRevocation = await jsonRequest<EntitledContentResourceRow[]>(
+        `${status.API_URL}/rest/v1/rpc/get_entitled_content_resource`,
+        {
+          method: "POST",
+          headers: authenticatedHeaders,
+          body: JSON.stringify({ p_resource_id: resourceId }),
+        },
+        `Revoked ${resourceId} lookup`,
+      );
+      if (afterAdvancedRevocation.length !== 0) {
+        throw new Error(`Revoked package still exposed ${resourceId}.`);
+      }
     }
 
     await jsonRequest<null>(

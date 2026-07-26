@@ -44,7 +44,7 @@ describe("UCAT review notes page", () => {
   it("requires the student's UCAT profile before showing notes", async () => {
     render(<RouterProvider router={createAppRouter(["/exams/ucat/notes/foundations"], services())} />);
 
-    expect(await screen.findByRole("heading", { level: 1, name: "请先填写 UCAT 背景信息" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { level: 1, name: /Complete your UCAT profile first.*请先填写 UCAT 背景信息/u })).toBeInTheDocument();
   });
 
   it("renders all five modules, 25 units and original teaching after the profile", async () => {
@@ -55,21 +55,23 @@ describe("UCAT review notes page", () => {
     );
 
     expect(await screen.findByText("UCAT Four-Subtest and High-Speed Pacing Starting Review Notes", {
-      selector: "h1 span",
+      selector: "h1 .english-first-text__primary",
     })).toBeInTheDocument();
     expect(container.querySelectorAll(".review-notes-module")).toHaveLength(5);
     expect(container.querySelectorAll(".review-notes-units li")).toHaveLength(25);
     expect(container.querySelectorAll(".review-notes-example")).toHaveLength(5);
     expect(container.querySelectorAll(".review-notes-recall details")).toHaveLength(15);
-    expect(screen.getByRole("link", { name: "查看我的起点定位" })).toHaveAttribute(
+    expect(screen.getByText(/Answers come only from the passage/u)).toHaveAttribute("lang", "en");
+    expect(screen.getByText(/Every question restarts at the first line/u)).toHaveAttribute("lang", "en");
+    expect(screen.getByRole("link", { name: /View my starting point/u })).toHaveAttribute(
       "href",
       "/exams/ucat/preparation",
     );
-    expect(screen.getByRole("link", { name: "进入 UCAT 在线练习" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Practise UCAT online/u })).toHaveAttribute(
       "href",
       "/exams/ucat/past-papers",
     );
-    expect(screen.getByRole("link", { name: "下载 A4 PDF" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Download A4 PDF/u })).toHaveAttribute(
       "href",
       "/notes/ucat/ucat-four-subtest-foundations-v1.pdf",
     );

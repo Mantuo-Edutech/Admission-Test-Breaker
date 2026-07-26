@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
@@ -30,6 +31,22 @@ describe("TMUA foundations notes", () => {
     expect(TMUA_FOUNDATIONS_NOTES.chapters).toHaveLength(7);
     expect(examples).toHaveLength(9);
     expect(examples.every((example) => example.titleZh.includes("原创例题"))).toBe(true);
+    expect(TMUA_FOUNDATIONS_NOTES.schemaVersion).toBe(2);
+    expect(
+      TMUA_FOUNDATIONS_NOTES.chapters.every((chapter) =>
+        chapter.summaryEn.length > 0 &&
+        chapter.learningOutcomesEn.length === chapter.learningOutcomes.length &&
+        chapter.sections.every((section) =>
+          section.paragraphsEn.length === section.paragraphsZh.length &&
+          section.rules.every((rule) => rule.statementEn.length > 0)
+        )
+      ),
+    ).toBe(true);
+    expect(examples.every((example) =>
+      example.answerEn.length > 0 &&
+      example.trapEn.length > 0 &&
+      example.steps.every((step) => step.labelEn.length > 0 && step.bodyEn.length > 0)
+    )).toBe(true);
     expect(TMUA_FOUNDATIONS_NOTES.checkpoint.questions).toHaveLength(12);
     expect(TMUA_FOUNDATIONS_NOTES.checkpoint.questions[0]).toMatchObject({
       correctOption: 1,
@@ -45,9 +62,23 @@ describe("TMUA foundations notes", () => {
     expect(() => validateTmuaFoundationsNotes(invalid)).toThrow("Official source ids must be unique");
   });
 
+  it("rejects an incomplete English-first teaching layer", () => {
+    const invalid = structuredClone(TMUA_FOUNDATIONS_NOTES) as unknown as {
+      chapters: { sections: { rules: { statementEn: string }[] }[] }[];
+    };
+    invalid.chapters[0]!.sections[0]!.rules[0]!.statementEn = "";
+    expect(() => validateTmuaFoundationsNotes(invalid)).toThrow(
+      "TMUA foundations English-first teaching layer is incomplete",
+    );
+  });
+
   it("ships the generated A4 PDF used by the website", () => {
     const pdf = readFileSync("public/notes/tmua/tmua-foundations-v2.pdf");
     expect(pdf.subarray(0, 5).toString()).toBe("%PDF-");
-    expect(pdf.byteLength).toBeGreaterThan(40_000);
+    expect(pdf.byteLength).toBeGreaterThan(200_000);
+    expect(pdf.toString("latin1").match(/\/Type \/Page\b/g)).toHaveLength(32);
+    expect(createHash("sha256").update(pdf).digest("hex")).toBe(
+      "0eeba1c7a356d331d2802671e7a7a513063194d9959c94bfabea1fd87924d22b",
+    );
   });
 });

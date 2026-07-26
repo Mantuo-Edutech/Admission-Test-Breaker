@@ -167,7 +167,7 @@ describe("TMUA staged preparation journey", () => {
     render(<RouterProvider router={router} />);
 
     expect(
-      await screen.findByRole("heading", { name: "请先填写课程信息" }),
+      await screen.findByRole("heading", { name: /Complete your course profile first.*请先填写课程信息/u }),
     ).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: "30 分钟能力诊断" })).not.toBeInTheDocument();
   });
@@ -180,7 +180,7 @@ describe("TMUA staged preparation journey", () => {
     render(<RouterProvider router={router} />);
 
     expect(
-      await screen.findByRole("heading", { name: "请先填写课程信息" }),
+      await screen.findByRole("heading", { name: /Complete your course profile first.*请先填写课程信息/u }),
     ).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: "第 1 题" })).not.toBeInTheDocument();
   });

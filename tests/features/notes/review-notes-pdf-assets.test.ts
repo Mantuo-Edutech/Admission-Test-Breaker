@@ -40,7 +40,7 @@ describe("generated Review Notes PDF assets", () => {
 
     expect(manifest).toMatchObject({
       schemaVersion: 1,
-      generatorVersion: "1.0.2",
+      generatorVersion: "2.0.0",
       publicationStatus: "teaching-preview",
     });
     expect(manifest.assets.map((asset) => asset.productId)).toEqual([
@@ -50,7 +50,7 @@ describe("generated Review Notes PDF assets", () => {
       "lnat-review-notes-v1",
       "ucat-review-notes-v1",
     ]);
-    expect(manifest.assets.reduce((sum, asset) => sum + asset.pageCount, 0)).toBe(79);
+    expect(manifest.assets.reduce((sum, asset) => sum + asset.pageCount, 0)).toBe(100);
   });
 
   it("matches every source, tracked public file, page count and catalog download", async () => {
@@ -95,7 +95,8 @@ describe("generated Review Notes PDF assets", () => {
       });
       expect(product?.metrics).toContainEqual({
         label: "PDF",
-        value: `${asset.pageCount} 页`,
+        labelEn: "PDF",
+        value: `${asset.pageCount} pages`,
       });
     }
   });

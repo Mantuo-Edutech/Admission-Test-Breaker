@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "tara-reasoning-writing-foundations-v1",
   "version": "0.1.0",
   "publicationStatus": "teaching-preview",
@@ -10,11 +10,13 @@
   "subtitleZh": "把批判思维、问题解决、限时写作和中英论证术语放进同一条可练习的路径。",
   "subtitleEn": "A structured starting path through critical thinking, problem solving, timed writing and argument language.",
   "authorship": "满托教研原创",
+  "rightsNoticeEn": "The TARA Content Specification and Question Guide are used only to verify structure, question-family names and scope. All methods, bilingual explanations, examples and review prompts are independently written by Mantou; no official question wording or explanations are copied or adapted. Official files remain in the internal research archive and cannot be downloaded here.",
   "rightsNotice": "本笔记依据 TARA Content Specification 与 Question Guide 核对考试结构、题型名称和知识边界；方法、双语解释、例题和复盘问题均为满托独立创作，不复制或改写官方题面与讲解。官方原件仅保存在内部研究区，不能从本站下载。",
   "scope": {
     "includedZh": "覆盖三项考试模块、Critical Thinking 七类能力、Problem Solving 三类能力、Writing Task 三问结构，以及中国学生最常见的中英论证表达迁移；包含 12 套方法、4 道满托原创逐步例题和 12 组主动回忆。",
     "includedEn": "A top-level map of all three modules, the seven Critical Thinking skills, three Problem Solving skills, the three-part Writing Task and an EAL argument-language bridge.",
-    "remainingZh": "这不是完整教材或正式模考。七类批判思维的逐类题组、数学 Appendix 细颗粒复习、完整写作范文与人工 rubric、下载版，以及独立推理/写作教师、双语、相似度、学生理解和真实设备终审仍待完成。"
+    "remainingZh": "完成基础版后，进入 TARA 深度策略笔记学习各模块的识别信号、标准动作、完整案例和训练处方，并通过限时推理与写作练习留下可复盘证据。",
+    "remainingEn": "After the Foundation Edition, continue with the TARA Advanced Strategy Notes for module triggers, standard actions, worked cases and training prescriptions, then preserve reviewable evidence through timed reasoning and writing practice."
   },
   "officialAnchors": [
     {
@@ -23,6 +25,7 @@
       "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/08142350/TARA_Content_Specification.pdf",
       "localPath": "content/official/raw/shared/TARA_Content_Specification.pdf",
       "sha256": "d326e78305aefd999c42953de3024d403f27357ecbc0f3dd562134e8105822cd",
+      "usedForEn": "Used to verify the three-module structure, 40 minutes per module, 22 + 22 multiple-choice questions, the 750-word limit, tool restrictions and fact-based scoring boundaries.",
       "usedForZh": "核对三模块结构、每模块 40 分钟、22+22 道选择题、750 词限制、工具限制与事实型计分边界。"
     },
     {
@@ -31,6 +34,7 @@
       "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/08142344/TARA_Question_Guide.pdf",
       "localPath": "content/official/raw/shared/TARA_Question_Guide.pdf",
       "sha256": "afcee1ff9dd35025000cd7c5a4cef804fa31fb3e8870d5748ec8d3ac2c45a6cb",
+      "usedForEn": "Used to verify the seven Critical Thinking skills, three Problem Solving skills, three-part Writing Task and Appendix mathematics scope.",
       "usedForZh": "核对 Critical Thinking 七类能力、Problem Solving 三类能力、Writing Task 三问结构与 Appendix 数学范围。"
     }
   ],
@@ -71,61 +75,101 @@
       "curriculum": "A-Level / IAL",
       "status": "partial",
       "statusZh": "学科能力可迁移，题型仍需专练",
+      "likelyCoveredEn": [
+        "Mathematics and Further Mathematics transfer to ratios, percentages, graphs, elementary algebra and multi-step calculations.",
+        "Argument-based subjects such as History, Economics, Politics and English transfer to evidence organisation and paragraph reasoning."
+      ],
       "likelyCoveredZh": [
         "数学与进阶数学可迁移比例、百分数、图表、简单代数和分步计算。",
         "历史、经济、政治、英语等论证型学科可迁移证据组织与段落论证。"
+      ],
+      "confirmEn": [
+        "Whether main conclusions, implicit assumptions and reasoning flaws can be identified consistently within 40 minutes.",
+        "Whether Relevant Selection, Finding Procedures and Identifying Similarity can be completed without a calculator.",
+        "Whether English writing can paraphrase a claim, construct an opposing case and state a personal position within one response."
       ],
       "confirmZh": [
         "能否在 40 分钟内稳定识别主结论、隐含假设和推理错误。",
         "能否不用计算器完成 Relevant Selection、Finding Procedures 与 Identifying Similarity。",
         "能否在英文写作中同时完成释义、反方论证和本人立场。"
       ],
-      "firstActionZh": "先用本页方法看懂三类模块，再完成 20 分钟推理短诊断和一轮 40 分钟写作。"
+      "firstActionZh": "先用本页方法看懂三类模块，再完成 20 分钟推理短诊断和一轮 40 分钟写作。",
+      "firstActionEn": "Learn the method for each module, then complete a 20-minute reasoning diagnostic and one 40-minute writing response."
     },
     {
       "curriculum": "IB Diploma",
       "status": "partial",
       "statusZh": "研究与论证经验可迁移",
+      "likelyCoveredEn": [
+        "TOK, the Extended Essay and Group 3 or Language A subjects help distinguish claims, reasons, evidence and counterarguments.",
+        "IB Mathematics transfers to ratios, data, graphs and elementary modelling."
+      ],
       "likelyCoveredZh": [
         "TOK、Extended Essay 与 Group 3/Language A 科目有助于区分 claim、reason、evidence 和 counterargument。",
         "IB Mathematics 可迁移比例、数据、图表与基础建模。"
+      ],
+      "confirmEn": [
+        "Open TOK discussion does not replace the single best-supported conclusion required by five-option questions.",
+        "Whether background can be compressed so that all three writing demands fit within 750 words.",
+        "Whether arithmetic and unit checks are fluent without a calculator."
       ],
       "confirmZh": [
         "TOK 的开放讨论不能替代五选一题所要求的唯一可支持结论。",
         "是否能压缩背景说明，在 750 词内把三个写作要求全部回答。",
         "是否熟悉无计算器的快速算术和单位检查。"
       ],
-      "firstActionZh": "把熟悉的论证框架改写成结论-理由-假设图，再用选项边界训练不过度推断。"
+      "firstActionZh": "把熟悉的论证框架改写成结论-理由-假设图，再用选项边界训练不过度推断。",
+      "firstActionEn": "Convert familiar argument structures into conclusion–reason–assumption maps, then practise option boundaries to prevent over-inference."
     },
     {
       "curriculum": "AP / US High School",
       "status": "partial",
       "statusZh": "阅读写作基础可迁移",
+      "likelyCoveredEn": [
+        "AP English Language, History and social-science courses transfer rhetorical claims, evidence and qualification.",
+        "Precalculus and Statistics transfer ratios, averages, tables and elementary probability."
+      ],
       "likelyCoveredZh": [
         "AP English Language、History 与社会科学课程可迁移 rhetorical claim、evidence 和 qualification。",
         "Precalculus、Statistics 等课程可迁移比例、平均数、表格和基础概率。"
+      ],
+      "confirmEn": [
+        "Whether rhetorical analysis can be converted into a strict support relation rather than a judgement of persuasiveness.",
+        "Whether British question terms such as assumption, flaw, principle and cannot be concluded are familiar.",
+        "Whether speed can be maintained without a calculator or spelling checker."
       ],
       "confirmZh": [
         "英文修辞分析是否能转换为严格的逻辑支持关系，而不是评价文章是否有说服力。",
         "是否熟悉英式题目中的 assumption、flaw、principle 和 cannot be concluded。",
         "是否能在没有计算器和拼写检查的条件下保持速度。"
       ],
-      "firstActionZh": "先建立中英题干动词表，再用短段落练习“文本明确支持到哪一步”。"
+      "firstActionZh": "先建立中英题干动词表，再用短段落练习“文本明确支持到哪一步”。",
+      "firstActionEn": "Build a bilingual command-word list, then use short passages to practise identifying exactly how far the text supports a claim."
     },
     {
       "curriculum": "其他课程体系 / Other curricula",
       "status": "partial",
       "statusZh": "不依赖特定学科，但要验证基础",
+      "likelyCoveredEn": [
+        "Everyday reading, elementary arithmetic and school writing provide a starting point; TARA requires no specialist subject knowledge.",
+        "Claims, reasons, examples and concessions from Chinese argumentative writing can transfer into an English argument structure."
+      ],
       "likelyCoveredZh": [
         "日常阅读、基础算术和学校写作都可作为起点；TARA 不要求专业学科知识。",
         "中文议论文中的观点、理由、例证和让步可以迁移为英文论证骨架。"
+      ],
+      "confirmEn": [
+        "Whether fractions, percentages, averages, time, units, area and graphs from the Appendix are secure.",
+        "Whether reasons, conclusions, assumptions, counterexamples and irrelevant information can be distinguished.",
+        "Whether conditions can be expressed in concise English rather than translated sentence by sentence from Chinese."
       ],
       "confirmZh": [
         "是否掌握分数、百分数、平均数、时间、单位、面积和图表等 Appendix 基础。",
         "是否能区分理由、结论、假设、反例和无关信息。",
         "是否能用简洁英文表达限定条件，而不是逐句翻译中文。"
       ],
-      "firstActionZh": "先完成 Problem Solving Appendix 自查，再用本页四个模块建立最小可执行方法。"
+      "firstActionZh": "先完成 Problem Solving Appendix 自查，再用本页四个模块建立最小可执行方法。",
+      "firstActionEn": "Complete the Problem Solving Appendix audit first, then use the four modules on this page to build a minimum executable method."
     }
   ],
   "modules": [
@@ -134,7 +178,13 @@
       "number": "01",
       "titleZh": "批判思维",
       "titleEn": "Critical Thinking",
+      "summaryEn": "The task is not to decide whether an argument agrees with common sense. It is to identify reasons, conclusions, implicit assumptions and support relations with precision.",
       "summaryZh": "不是判断观点是否符合常识，而是精确判断理由、结论、隐含假设和支持关系。",
+      "learningOutcomesEn": [
+        "Map the direction of support from reasons through intermediate conclusions to the main conclusion.",
+        "Identify the task in each of the seven question families before testing the evidence boundary.",
+        "Keep personal views and external knowledge out of option evaluation."
+      ],
       "learningOutcomes": [
         "画出理由、次结论与主结论的支持方向。",
         "对七类题先识别任务，再逐项检查证据边界。",
@@ -153,22 +203,31 @@
         {
           "nameZh": "先找作者要你接受的句子",
           "nameEn": "Find the claim the author wants accepted",
+          "signalEn": "The question asks for the main conclusion and the passage contains facts, evaluations and recommendations.",
           "signalZh": "题目要求 main conclusion，文章中同时出现事实、评价和建议。",
+          "methodEn": "Ask of each sentence: do the other sentences support it, or does it support something else? The main conclusion is where the support arrows ultimately point; it need not be the final sentence.",
           "methodZh": "逐句问“其他句子是在支持它，还是它在支持其他句子？”主结论是支持箭头最终指向的命题，不一定在末句。",
+          "checkEn": "Place therefore before the candidate conclusion. Can the main remaining statements function as reasons for accepting it?",
           "checkZh": "把候选结论前加 therefore；其余主要信息能否成为接受它的理由？"
         },
         {
           "nameZh": "用否定测试找必要假设",
           "nameEn": "Use the negation test for assumptions",
+          "signalEn": "A step appears to be missing between the reasons and conclusion, and the question asks for an underlying assumption.",
           "signalZh": "理由与结论之间像是少了一步，题目问 underlying assumption。",
+          "methodEn": "Negate each option precisely. If the reasons could still support the conclusion, the option is not a necessary bridge. If the argument collapses, it is a stronger candidate.",
           "methodZh": "把每个候选项准确否定；若否定后理由仍可能支持结论，它不是必要桥梁。若论证明显断裂，它更可能是所需假设。",
+          "checkEn": "Do not choose broad background that the author might accept; choose only what the conclusion must depend on.",
           "checkZh": "不要选“作者可能同意”的大背景，只选结论必须依赖的那一步。"
         },
         {
           "nameZh": "把支持强度和观点好坏分开",
           "nameEn": "Separate evidential impact from personal agreement",
+          "signalEn": "The question adds evidence or asks for a flaw, matching argument or principle.",
           "signalZh": "题目加入新证据，或要求找 flaw、matching argument、principle。",
+          "methodEn": "Write the abstract structure first: if R, then C. Decide whether the new information changes the credibility of R, the link from R to C, or only the topic's emotional background.",
           "methodZh": "先写抽象骨架：如果 R，则 C；再判断新信息改变 R 的可信度、R 到 C 的连接，还是只改变情绪与背景。",
+          "checkEn": "The answer must alter the argument relation, not merely relate to the topic or agree with common sense.",
           "checkZh": "答案必须改变论证关系，而不是仅与主题相关或符合你的常识。"
         }
       ],
@@ -181,19 +240,27 @@
           "problemEn": "A university library trialled Sunday opening during exams. It attracted 180 students on average and required no extra security shift. Identify the main conclusion and one necessary assumption behind keeping Sunday opening all term.",
           "steps": [
             {
+              "labelEn": "Separate evidence from the proposed action",
               "labelZh": "第 1 步：区分证据与行动主张",
+              "bodyEn": "The 180 students and unchanged security rota are reasons. The action the author ultimately wants is Sunday opening throughout the term.",
               "bodyZh": "“180 名学生”和“无需增加安保班次”是理由；作者最终希望校方采取的行动是整个学期保持周日开放。"
             },
             {
+              "labelEn": "Inspect the jump from exam month to the whole term",
               "labelZh": "第 2 步：检查从考试月到整个学期的跳跃",
+              "bodyEn": "The evidence covers only the examination month. If ordinary Sunday demand is much lower, the trial cannot support a term-long arrangement.",
               "bodyZh": "理由只观察了考试月。若平时周日需求显著更低，试行结果就不足以支持全年级别的安排。"
             },
             {
+              "labelEn": "Apply the negation test",
               "labelZh": "第 3 步：用否定测试",
+              "bodyEn": "If exam-month Sunday demand is not representative of other weeks, the figure of 180 students no longer supports opening all term. Representativeness is therefore a necessary bridge.",
               "bodyZh": "否定“考试月的周日需求能够代表学期其他周日”后，180 人的数据不能再直接支持整学期开放，因此这是关键假设之一。"
             }
           ],
+          "answerEn": "Main conclusion: the university should keep the library open on Sundays throughout the term. Necessary assumption: exam-month Sunday demand is sufficiently representative of demand during the rest of the term.",
           "answerZh": "主结论：校方应在整个学期保持图书馆周日开放。合理假设：考试月观察到的周日使用需求对学期其他时段具有足够代表性。",
+          "trapEn": "Treating the average of 180 students as the conclusion, or adding unnecessary background such as students liking the library.",
           "trapZh": "把“周日平均有 180 人”当作主结论，或补入“学生喜欢图书馆”等不必要背景。"
         }
       ],
@@ -223,7 +290,13 @@
       "number": "02",
       "titleZh": "问题解决",
       "titleEn": "Problem Solving",
+      "summaryEn": "Only specified elementary mathematics is required. The real challenge is selecting information, constructing a procedure and recognising the same structure inside an unfamiliar context.",
       "summaryZh": "题目只依赖规定的基础数学；难点是从陌生情境中选信息、造步骤和识别结构。",
+      "learningOutcomesEn": [
+        "Separate necessary, derivable and distracting information.",
+        "Write the shortest auditable procedure under non-calculator conditions.",
+        "Recognise one quantitative relation across different tables, diagrams or contexts."
+      ],
       "learningOutcomes": [
         "把题目数据分成必要、可推导和干扰信息。",
         "在无计算器条件下写出可复核的最短流程。",
@@ -238,22 +311,31 @@
         {
           "nameZh": "先写目标量，再允许数据进入",
           "nameEn": "Define the target before admitting data",
+          "signalEn": "A table, timetable or several sets of numbers contain information that may not all be needed.",
           "signalZh": "题面给出表格、时间表或多组数字，其中部分信息没有必要。",
+          "methodEn": "Rewrite the question as: what must I calculate, and in what unit? Circle only data that directly form the target or a necessary intermediate quantity.",
           "methodZh": "先把问题改写为“我要算什么、单位是什么”；只圈出能直接形成目标量或必要中间量的数据。",
+          "checkEn": "If removing a piece of information leaves the answer unchanged, it should not appear in the calculation chain.",
           "checkZh": "若删掉某条信息答案仍不变，它不应出现在计算链中。"
         },
         {
           "nameZh": "把陌生问题拆成可逆步骤",
           "nameEn": "Turn an unfamiliar problem into reversible steps",
+          "signalEn": "All data are understandable, but no familiar formula is available and the task requires finding a procedure.",
           "signalZh": "数据都看懂，但没有现成公式，题目要求 Finding Procedures。",
+          "methodEn": "Write known quantity → intermediate quantity → target quantity. Prefer integers, ratios and complements; perform one operation per line and retain units.",
           "methodZh": "写“已知 → 中间量 → 目标量”，优先使用整数、比例和补数；每一步只做一个运算，并保留单位。",
+          "checkEn": "Work backwards from the answer to recover the original conditions, then test order of magnitude, units and boundaries.",
           "checkZh": "从答案反推一遍是否能恢复原始条件；数量级、单位和边界是否合理。"
         },
         {
           "nameZh": "忽略表面故事，比较约束关系",
           "nameEn": "Ignore the story and compare constraints",
+          "signalEn": "Two diagrams, schedules or devices look different and the question asks which has the same structure.",
           "signalZh": "两个图表、安排或装置看起来不同，题目要求识别相似性。",
+          "methodEn": "Replace the objects with variables. Record totals, groupings, order and simultaneous constraints, then compare which representation preserves the same relation.",
           "methodZh": "把对象替换成变量，记录总量、分组、先后和必须同时满足的条件，再比较哪种表示保留同一关系。",
+          "checkEn": "Similarity is not visual resemblance; the two representations must generate the same feasible outcomes under every stated constraint.",
           "checkZh": "相似不是长得像；必须在所有给定约束下产生同样的可行结果。"
         }
       ],
@@ -266,22 +348,30 @@
           "problemEn": "A 48-seat workshop planned two thirds of its seats for students and the rest for teachers. Five students cancel and three teachers join. What fraction of actual attendees are teachers?",
           "steps": [
             {
+              "labelEn": "Recover the planned group sizes",
               "labelZh": "第 1 步：恢复原计划人数",
+              "bodyEn": "Students were two thirds of 48, which is 32, leaving 16 teachers.",
               "bodyZh": "学生为 48 的三分之二，即 32 人；教师是剩余 16 人。",
               "math": { "tex": "48\\times\\frac{2}{3}=32,\\qquad 48-32=16", "text": "48 × 2/3 = 32；48 - 32 = 16" }
             },
             {
+              "labelEn": "Update the two groups separately",
               "labelZh": "第 2 步：分别更新两组",
+              "bodyEn": "There were actually 27 students and 19 teachers, giving 46 attendees in total.",
               "bodyZh": "实际学生 27 人，实际教师 19 人，因此实际总人数为 46 人。",
               "math": { "tex": "32-5=27,\\qquad 16+3=19,\\qquad 27+19=46", "text": "32 - 5 = 27；16 + 3 = 19；27 + 19 = 46" }
             },
             {
+              "labelEn": "Use the actual denominator",
               "labelZh": "第 3 步：使用实际分母",
+              "bodyEn": "The question asks for the proportion among actual attendees, so the denominator is 46 people rather than 48 seats.",
               "bodyZh": "问题问实际到场者中的比例，分母不是 48 个座位，而是 46 名实际到场者。",
               "math": { "tex": "\\frac{19}{46}", "text": "19/46" }
             }
           ],
+          "answerEn": "Teachers make up 19/46 of the actual attendees.",
           "answerZh": "教师占实际到场者的 19/46。",
+          "trapEn": "Keeping 48 as the denominator, or updating the student count while forgetting the additional teachers.",
           "trapZh": "继续用 48 作分母，或只更新学生人数而忘记新增教师。"
         }
       ],
@@ -311,7 +401,13 @@
       "number": "03",
       "titleZh": "限时论证写作",
       "titleEn": "Writing Task",
+      "summaryEn": "The aim is not to display background knowledge. Within 750 words, define the proposition accurately, build a strong opposing case and state a qualified personal judgement.",
       "summaryZh": "不是展示背景知识，而是在 750 词内准确释义、提出有力反方论证并给出有条件的本人判断。",
+      "learningOutcomesEn": [
+        "Separate the prompt into meaning, argument against and personal position.",
+        "Use 5–10 minutes of planning to control paragraph function and examples.",
+        "End with a clear position supported by the preceding reasons rather than a repeated summary."
+      ],
       "learningOutcomes": [
         "把题目拆成释义、反方和本人立场三个明确任务。",
         "用 5–10 分钟计划控制段落功能和例证。",
@@ -329,22 +425,31 @@
         {
           "nameZh": "三问三格计划",
           "nameEn": "Three-question planning grid",
+          "signalEn": "The prompt asks you to explain, argue against and state the extent of your agreement.",
           "signalZh": "题目要求 explain、argue against、to what extent 三件事。",
+          "methodEn": "Divide the plan into three boxes: an operational definition of key terms, at least two distinct opposing reasons, and a qualified personal judgement. Write one topic sentence in each box first.",
           "methodZh": "计划纸分三格：关键词的操作性定义；至少两条不同角度的反方理由；带条件的本人判断。每格先写一句中心句。",
+          "checkEn": "Before writing, confirm that each task has distinct content; a generic advantages-and-disadvantages essay is not enough.",
           "checkZh": "成文前确认三个任务都有独立内容，不能只写一篇泛泛的正反议论文。"
         },
         {
           "nameZh": "例子必须服务于理由",
           "nameEn": "Make examples serve reasons",
+          "signalEn": "Many news stories or personal experiences come to mind, but the paragraph has no clear centre.",
           "signalZh": "想到许多新闻或个人经历，但段落中心不清楚。",
+          "methodEn": "State a generalisable reason first, use one concrete example to show the mechanism, then explain explicitly why the example supports the reason.",
           "methodZh": "先写可推广的理由，再用一个具体例子说明机制；随后补一句解释这个例子为什么支持理由。",
+          "checkEn": "If deleting the example removes the whole argument, the story has replaced the reasoning.",
           "checkZh": "删掉例子后，段落是否仍有完整论点？若没有，说明你在用故事替代论证。"
         },
         {
           "nameZh": "用条件化立场代替模糊折中",
           "nameEn": "Use a conditional position instead of vague balance",
+          "signalEn": "The conclusion says only that both sides are important or that it depends.",
           "signalZh": "结论只写 both sides are important 或 it depends。",
+          "methodEn": "State the overall direction, then specify what changes the judgement: I agree where X, but not where Y because Z. Link those conditions to reasons developed in the body.",
           "methodZh": "明确总体倾向，再列出改变判断的条件：I agree where X, but not where Y because Z。让条件与正文中的理由对应。",
+          "checkEn": "A reader should be able to state in one sentence what you support, what you reject and why.",
           "checkZh": "读者能否用一句话说出你最终赞成什么、反对什么、依据是什么。"
         }
       ],
@@ -357,23 +462,33 @@
           "problemEn": "Plan a response to: Universities should make recordings of every lecture available to the public. Address meaning, an argument against, and the extent of your agreement.",
           "steps": [
             {
+              "labelEn": "Define the proposition's scope",
               "labelZh": "第 1 步：限定命题",
+              "bodyEn": "Every lecture implies default comprehensive release rather than access only for enrolled students. Available to the public also raises permanence, privacy and third-party rights. Define how these words set the argument's scope.",
               "bodyZh": "every lecture 表示默认全面公开，不只面向注册学生；available to the public 还涉及永久访问、隐私和第三方材料权利。先说明这些词怎样影响论证范围。"
             },
             {
+              "labelEn": "Build two distinct opposing reasons",
               "labelZh": "第 2 步：建立两条不同反方理由",
+              "bodyEn": "One reason can address participant privacy and safety; another can address licensed material or preliminary research being circulated without context. They must not restate one risk in different words.",
               "bodyZh": "一条讨论课堂参与者隐私与安全，另一条讨论含许可材料或未成熟研究被脱离语境传播；两条不能只是同一风险换词重复。"
             },
             {
+              "labelEn": "State a qualified position",
               "labelZh": "第 3 步：给出条件化立场",
+              "bodyEn": "Support wider public access without accepting an unconditional every-lecture rule. Conditions may include lecturer consent, student anonymisation and removal of restricted material.",
               "bodyZh": "可以支持大学扩大公共访问，但不支持 every lecture 的无条件规则；本人立场可要求讲者同意、学生匿名化和受限材料移除。"
             },
             {
+              "labelEn": "Allocate the 40 minutes",
               "labelZh": "第 4 步：安排时间",
+              "bodyEn": "Plan for 7 minutes, write for 30, and use 3 minutes to check all three demands, repeated paragraphs and obvious language errors. Do not aim to fill the 750-word maximum.",
               "bodyZh": "用 7 分钟计划、30 分钟成文、3 分钟检查三问、段落重复和明显语言错误；不追求接近 750 词上限。"
             }
           ],
+          "answerEn": "An executable structure is: scope and meaning → privacy objection → rights and context objection → public benefit with conditions → a clear conclusion expressing limited agreement.",
           "answerZh": "可执行结构：释义段 → 隐私反方段 → 权利/语境反方段 → 公共利益与条件段 → 明确的有限同意结论。",
+          "trapEn": "Turning the response into background on whether online learning is good, or listing pros and cons without answering the extent of agreement.",
           "trapZh": "把文章写成“网络课程好不好”的背景介绍，或只列优缺点却没有回答 extent of agreement。"
         }
       ],
@@ -403,7 +518,13 @@
       "number": "04",
       "titleZh": "中英论证术语桥接",
       "titleEn": "Chinese-English Argument Language Bridge",
+      "summaryEn": "Convert instincts from Chinese argumentative writing into the precise logical relations and concise academic English required by TARA.",
       "summaryZh": "把中文议论文直觉转换成 TARA 所要求的精确逻辑关系和简洁学术英语。",
+      "learningOutcomesEn": [
+        "Distinguish reason, conclusion, assumption, evidence and principle accurately.",
+        "Recognise how words such as all, some, only and unless change an option's scope.",
+        "Use short sentences and explicit conditions to reduce overstatement and repetition."
+      ],
       "learningOutcomes": [
         "准确区分 reason、conclusion、assumption、evidence 和 principle。",
         "识别 all、some、only、unless 等限定词如何改变选项范围。",
@@ -420,22 +541,31 @@
         {
           "nameZh": "先标逻辑角色，再翻译句子",
           "nameEn": "Label the logical role before translating",
+          "signalEn": "Chinese connectors such as 所以, 可见, 毕竟 and 只要 can serve different logical functions in an English argument.",
           "signalZh": "中文里“所以、可见、毕竟、只要”在英文题目中可能承担不同功能。",
+          "methodEn": "Label R for reason, C for conclusion, A for assumption and E for example or evidence before selecting expressions such as because, therefore, provided that or for example.",
           "methodZh": "先标 R（理由）、C（结论）、A（假设）、E（例证/证据），再选择 because、therefore、provided that、for example 等表达。",
+          "checkEn": "The connective must represent the direction of support accurately, not merely make the sentence sound formal.",
           "checkZh": "连接词是否准确反映支持方向，而不是只让句子听起来更正式。"
         },
         {
           "nameZh": "圈出所有改变范围的词",
           "nameEn": "Circle every scope-changing word",
+          "signalEn": "Options differ only in all versus some, must versus may, only versus unless, or usually versus always.",
           "signalZh": "选项只差 all/some、must/may、only/unless 或 usually/always。",
+          "methodEn": "Read quantifiers and modal verbs separately and write the minimum commitment each makes. Reject options that are more absolute, universal or causal than the text.",
           "methodZh": "把量词和情态词单独读一遍，写出它承诺的最小范围；优先排除比文本更绝对、更普遍或更因果化的选项。",
+          "checkEn": "Does the option add a population, time span, cause or necessity that the text never supports?",
           "checkZh": "正确选项是否增加了文本没有支持的人群、时间、原因或必然性。"
         },
         {
           "nameZh": "用主张-理由-限制三句骨架",
           "nameEn": "Use a claim-reason-limit three-sentence frame",
+          "signalEn": "Sentences are long, one point is repeated, or a claim has no stated boundary.",
           "signalZh": "写作句子很长、同一观点重复，或只有观点没有边界。",
+          "methodEn": "Use sentence one for the claim, sentence two for the reason or mechanism, and sentence three for a condition or exception. Secure the logic before varying the language.",
           "methodZh": "第一句给主张，第二句解释理由/机制，第三句说明适用条件或例外。先求逻辑清楚，再增加语言变化。",
+          "checkEn": "Each sentence should have one main function; removing filler should make the argument clearer.",
           "checkZh": "每句是否只有一个主要功能；删掉套话后论证是否更清楚。"
         }
       ],
@@ -448,19 +578,27 @@
           "problemEn": "Rewrite the claim 'Publishing data will always make government decisions fairer' into a precise, defensible English proposition.",
           "steps": [
             {
+              "labelEn": "Identify the over-strong terms",
               "labelZh": "第 1 步：找出过强词",
+              "bodyEn": "The original wording treats publication as a sufficient condition and promises that every government decision becomes fairer. Limited evidence is unlikely to support that scope.",
               "bodyZh": "“只要”和“一定”把公开数据写成充分条件，并承诺所有政府决策都会更公平；这个范围通常无法被有限证据支持。"
             },
             {
+              "labelEn": "Add the mechanism and conditions",
               "labelZh": "第 2 步：加入机制与条件",
+              "bodyEn": "Change inevitability into possibility and specify the conditions: citizens must be able to understand the data, and institutions must respond to the problems it reveals.",
               "bodyZh": "把结果从必然变为可能，并说明在什么条件下发生：公众能够理解数据，机构也需要回应由数据揭示的问题。"
             },
             {
+              "labelEn": "Write the defensible proposition",
               "labelZh": "第 3 步：形成可辩护主张",
+              "bodyEn": "Publishing accessible data can make some public decisions fairer when citizens can scrutinise the evidence and institutions are required to respond.",
               "bodyZh": "Publishing accessible data can make some public decisions fairer when citizens can scrutinise the evidence and institutions are required to respond."
             }
           ],
+          "answerEn": "The revision keeps the core claim that transparency can improve fairness while limiting it with some, can and a when condition.",
           "answerZh": "改写后的句子保留“透明度可能改善公平”的核心观点，同时限定了 some、can 和 when 条件。",
+          "trapEn": "Replacing always with often without explaining which data, which decisions or the mechanism through which an effect occurs.",
           "trapZh": "只把 always 换成 often，却仍不解释何种数据、何种决策或通过什么机制产生影响。"
         }
       ],
@@ -490,21 +628,25 @@
     {
       "stepZh": "先按题型复盘",
       "stepEn": "Review by question family",
+      "actionEn": "Label every reasoning error CT1–CT7 or PS1–PS3, then record whether it came from task recognition, evidence boundaries, the calculation procedure or an English qualifier.",
       "actionZh": "每道推理错题先标 CT1–CT7 或 PS1–PS3，再记录是任务识别、证据边界、计算流程还是英语限定词出错。"
     },
     {
       "stepZh": "再按证据复做",
       "stepEn": "Repeat with evidence",
+      "actionEn": "Hide the answer and reconstruct the support map or calculation chain without a calculator. Review is complete only when every rejected option can be explained.",
       "actionZh": "遮住答案，在无计算器条件下重新写出支持图或计算链；只有能够解释为何排除其他选项才算完成复盘。"
     },
     {
       "stepZh": "写作只改一个变量",
       "stepEn": "Change one writing variable",
+      "actionEn": "Set one verifiable goal per writing cycle, such as answering all three tasks, avoiding repeated paragraphs, explaining the mechanism behind examples or making conclusion conditions explicit. Keep versions for comparison.",
       "actionZh": "每轮写作只设一个可验证目标，例如三问完整、段落不重复、例子有机制或结论条件清楚；保留版本比较。"
     },
     {
       "stepZh": "回到完整计时",
       "stepEn": "Return to timed practice",
+      "actionEn": "Complete a 20-minute original reasoning diagnostic, then a 40-minute Writing Task. Foundation results report observed performance only; they do not invent a 1.0–9.0 conversion or university judgement.",
       "actionZh": "先完成 20 分钟原创推理短诊断，再进行 40 分钟 Writing Task；基础结果只报告作答事实，不伪造 1.0–9.0 换算分或院校评价。"
     }
   ]

@@ -44,7 +44,7 @@ describe("LNAT review notes page", () => {
   it("requires the student's LNAT profile before showing notes", async () => {
     render(<RouterProvider router={createAppRouter(["/exams/lnat/notes/foundations"], services())} />);
 
-    expect(await screen.findByRole("heading", { level: 1, name: "请先填写 LNAT 背景信息" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { level: 1, name: /Complete your LNAT profile first.*请先填写 LNAT 背景信息/u })).toBeInTheDocument();
   });
 
   it("renders all four modules, 21 units and original teaching after the profile", async () => {
@@ -55,21 +55,23 @@ describe("LNAT review notes page", () => {
     );
 
     expect(await screen.findByText("LNAT Argument Reading and Writing Starting Review Notes", {
-      selector: "h1 span",
+      selector: "h1 .english-first-text__primary",
     })).toBeInTheDocument();
     expect(container.querySelectorAll(".review-notes-module")).toHaveLength(4);
     expect(container.querySelectorAll(".review-notes-units li")).toHaveLength(21);
     expect(container.querySelectorAll(".review-notes-example")).toHaveLength(4);
     expect(container.querySelectorAll(".review-notes-recall details")).toHaveLength(12);
-    expect(screen.getByRole("link", { name: "查看我的起点定位" })).toHaveAttribute(
+    expect(screen.getByText(/Reconstruct how the passage reaches its conclusion first/u)).toHaveAttribute("lang", "en");
+    expect(screen.getByText(/The passage is long and detailed/u)).toHaveAttribute("lang", "en");
+    expect(screen.getByRole("link", { name: /View my starting point/u })).toHaveAttribute(
       "href",
       "/exams/lnat/preparation",
     );
-    expect(screen.getByRole("link", { name: "进入 LNAT 在线练习" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Practise LNAT online/u })).toHaveAttribute(
       "href",
       "/exams/lnat/past-papers",
     );
-    expect(screen.getByRole("link", { name: "下载 A4 PDF" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Download A4 PDF/u })).toHaveAttribute(
       "href",
       "/notes/lnat/lnat-reading-writing-foundations-v1.pdf",
     );

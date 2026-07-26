@@ -69,15 +69,19 @@ describe("responsive editorial front-door CSS", () => {
 
   it("keeps the staged TMUA journey responsive without separate device logic", async () => {
     const css = await readFile("src/styles/practice.css", "utf8");
-    const stagedJourney = css.slice(css.indexOf("/* TMUA staged preparation journey */"));
+    const stagedJourney = blockBetween(
+      css,
+      "/* TMUA staged preparation journey */",
+      "/* Public exam guides */",
+    );
 
     expect(stagedJourney).toMatch(
       /\.tmua-starting-path ol\s*\{[^}]*grid-template-columns:\s*repeat\(4,/su,
     );
-    expect(stagedJourney).toMatch(
+    expect(css).toMatch(
       /@media \(max-width: 62rem\)[\s\S]*?\.tmua-starting-path ol\s*\{[^}]*repeat\(2,/u,
     );
-    expect(stagedJourney).toMatch(
+    expect(css).toMatch(
       /@media \(max-width: 35rem\)[\s\S]*?\.tmua-starting-path ol\s*\{[^}]*grid-template-columns:\s*1fr/u,
     );
     expect(stagedJourney).toMatch(

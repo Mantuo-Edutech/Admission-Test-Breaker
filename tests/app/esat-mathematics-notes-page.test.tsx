@@ -24,14 +24,14 @@ describe("ESAT mathematics review notes page", () => {
   it("requires the programme and module plan first", async () => {
     render(<RouterProvider router={createAppRouter(["/exams/esat/notes/mathematics"])} />);
 
-    expect(await screen.findByRole("heading", { level: 1, name: "请先选择申请专业" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { level: 1, name: /Choose your programme first.*请先选择申请专业/u })).toBeInTheDocument();
   });
 
   it("requires a course profile before making curriculum claims", async () => {
     savePlan(false);
     render(<RouterProvider router={createAppRouter(["/exams/esat/notes/mathematics"])} />);
 
-    expect(await screen.findByRole("heading", { level: 1, name: "请先完成 ESAT 课程档案" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { level: 1, name: /Complete your ESAT course profile first.*请先完成 ESAT 课程档案/u })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /填写课程信息/u })).toHaveAttribute("href", "/exams/esat/profile");
   });
 
@@ -42,20 +42,23 @@ describe("ESAT mathematics review notes page", () => {
     );
 
     expect(await screen.findByText("ESAT Mathematics Starting Review Notes", {
-      selector: "h1 span",
+      selector: "h1 .english-first-text__primary",
     })).toBeInTheDocument();
-    expect(screen.getByText(/^Mathematics 1/u, { selector: ".review-notes-module h2 small" })).toBeInTheDocument();
-    expect(screen.getByText(/^Mathematics 2/u, { selector: ".review-notes-module h2 small" })).toBeInTheDocument();
+    expect(screen.getByText(/^Mathematics 1 —/u, { selector: ".review-notes-module h2 .english-first-text__primary" })).toHaveAttribute("lang", "en");
+    expect(screen.getByText(/^Mathematics 2 —/u, { selector: ".review-notes-module h2 .english-first-text__primary" })).toHaveAttribute("lang", "en");
+    expect(screen.getByText(/Every ESAT module assumes immediate access to Mathematics 1/u)).toHaveAttribute("lang", "en");
+    expect(screen.getByText(/The question mixes minutes and seconds/u)).toHaveAttribute("lang", "en");
+    expect(screen.getByText("Set the target unit")).toHaveAttribute("lang", "en");
     expect(container.querySelectorAll(".review-notes-units li")).toHaveLength(15);
     expect(screen.getAllByText("ORIGINAL WORKED EXAMPLE")).toHaveLength(2);
     expect(container.querySelectorAll(".review-notes-recall details")).toHaveLength(6);
     expect(container.querySelector(".review-notes-next a")?.getAttribute("href"))
       .toBe("/exams/esat/past-papers");
-    expect(screen.getByRole("link", { name: "下载 A4 PDF" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Download A4 PDF/u })).toHaveAttribute(
       "href",
       "/notes/esat/esat-mathematics-foundations-v1.pdf",
     );
-    expect(screen.getByRole("link", { name: "下载 A4 PDF" })).toHaveAttribute("download");
+    expect(screen.getByRole("link", { name: /Download A4 PDF/u })).toHaveAttribute("download");
     expect(screen.queryByText(/官方分数线|录取概率|百分位/u)).not.toBeInTheDocument();
   });
 });

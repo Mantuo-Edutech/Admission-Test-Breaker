@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "id": "tara-advanced-notes-v1",
+  "examId": "tara",
+  "edition": "2026.07-v1",
+  "publicationStatus": "published",
+  "titleEn": "TARA Advanced Reasoning & Writing Notes",
+  "titleZh": "TARA 深度推理与写作笔记",
+  "subtitleEn": "A practical system for reconstructing arguments, controlling constraints and writing a defensible response under time pressure.",
+  "subtitleZh": "在限时环境下重建论证、控制约束并写出可辩护回应的完整方法。",
+  "authorshipEn": "Original teaching material by Mantou",
+  "authorshipZh": "满托教研原创",
+  "audienceEn": "For students who have completed the foundation notes and begun timed Critical Thinking, Problem Solving and Writing practice.",
+  "audienceZh": "适合已完成基础笔记，并已开始 Critical Thinking、Problem Solving 与 Writing 限时练习的学生。",
+  "rightsNoticeEn": "Independently authored from verified scope and terminology. No official question, example or explanation is reproduced.",
+  "rightsNoticeZh": "依据已核验范围与术语独立撰写，不复制官方题目、例题或讲解。",
+  "modules": [
+    {
+      "id": "tara-critical-thinking",
+      "number": "01",
+      "titleEn": "Critical Thinking — Reconstruct the Argument",
+      "titleZh": "Critical Thinking：重建论证",
+      "purposeEn": "Separate conclusion, evidence, assumption and qualifier before judging whether an argument succeeds.",
+      "purposeZh": "在判断论证是否成立前，先分离结论、证据、假设与限定词。",
+      "knowledgeFocusEn": ["Conclusions, reasons and intermediate conclusions", "Assumptions, flaws and alternative explanations", "Strengthening, weakening and drawing conclusions"],
+      "knowledgeFocusZh": ["结论、理由与中间结论", "假设、漏洞与替代解释", "加强、削弱与推出结论"],
+      "playbooks": [
+        {
+          "titleEn": "Build a one-line argument map",
+          "titleZh": "建立一行论证图",
+          "triggerEn": "The passage contains several facts but the author's main claim is not explicit.",
+          "triggerZh": "材料包含多个事实，但作者主张并不直接。",
+          "actionEn": "Write evidence→therefore→conclusion in one line. Treat every unused sentence as context until it earns a role.",
+          "actionZh": "用一行写成“证据→因此→结论”；尚未发挥作用的句子先视为背景。",
+          "checkEn": "The conclusion must be what the author wants accepted, not merely the final sentence.",
+          "checkZh": "结论必须是作者希望读者接受的主张，而不一定是最后一句。"
+        },
+        {
+          "titleEn": "Audit the missing bridge",
+          "titleZh": "审查缺失桥梁",
+          "triggerEn": "The evidence and conclusion discuss different groups, time periods, measures or causal directions.",
+          "triggerZh": "证据与结论涉及不同群体、时间、指标或因果方向。",
+          "actionEn": "State the smallest claim that must be true for the evidence to support the conclusion, then test options against that exact bridge.",
+          "actionZh": "写出证据支持结论所必需的最小命题，再用它精确检验选项。",
+          "checkEn": "A necessary assumption need not prove the conclusion; it only prevents the stated route from collapsing.",
+          "checkZh": "必要假设不必证明结论，只需防止当前推理路径失效。"
+        }
+      ],
+      "workedCase": {
+        "titleEn": "Worked case — correlation is not the missing bridge",
+        "titleZh": "深度案例：相关性不是缺失桥梁",
+        "promptEn": "A school introduced optional morning study. Participants later received higher grades than non-participants. The head claims the programme caused the improvement. What assumption is required?",
+        "promptZh": "某校推出自愿晨间学习，参加者之后成绩高于未参加者。校长认为项目导致了提升。该论证需要什么假设？",
+        "steps": [
+          { "labelEn": "Map the claim", "labelZh": "画出主张", "bodyEn": "Evidence: participants had higher later grades. Conclusion: the programme caused the difference.", "bodyZh": "证据：参加者后续成绩更高；结论：项目导致了差异。" },
+          { "labelEn": "Find the gap", "labelZh": "寻找缺口", "bodyEn": "Self-selection may explain the result: more motivated or initially stronger pupils may have chosen to participate.", "bodyZh": "自我选择可能解释结果：更有动力或起点更高的学生可能更愿参加。" },
+          { "labelEn": "State the necessary bridge", "labelZh": "写出必要桥梁", "bodyEn": "The groups must not differ in a way that independently explains the grade difference, or that difference must be controlled.", "bodyZh": "两组不能存在足以独立解释成绩差异的系统差别，或这些差别已被控制。" }
+        ],
+        "answerEn": "The argument assumes that pre-existing differences between participants and non-participants do not account for the later grade gap.",
+        "answerZh": "论证假设参加者与未参加者的既有差异不足以解释后续成绩差距。",
+        "trapEn": "Choosing the stronger claim that every participant benefited; the conclusion needs causal comparability, not universal benefit.",
+        "trapZh": "误选“每位参加者都受益”这种更强主张；结论需要的是因果可比性，而非普遍受益。"
+      },
+      "trainingPrescriptionEn": ["Map 15 passages as evidence→bridge→conclusion before answering options.", "Classify every error as conclusion, assumption, qualifier or option strength.", "Repeat five errors after 48 hours with the option order hidden."],
+      "trainingPrescriptionZh": ["完成 15 篇材料的“证据→桥梁→结论”映射后再看选项。", "把每个错误归为结论、假设、限定词或选项强度。", "48 小时后隐藏选项顺序回做 5 道错题。"]
+    },
+    {
+      "id": "tara-problem-solving",
+      "number": "02",
+      "titleEn": "Problem Solving — Control the Constraints",
+      "titleZh": "Problem Solving：控制约束",
+      "purposeEn": "Replace verbal complexity with a compact representation that preserves every relevant constraint.",
+      "purposeZh": "把复杂文字转为紧凑表示，同时保留所有相关约束。",
+      "knowledgeFocusEn": ["Relevant selection and representation", "Finding procedures, schedules and feasible orders", "Identifying similarity, invariants and decisive counterexamples"],
+      "knowledgeFocusZh": ["相关信息选择与表示", "程序、排程与可行顺序", "相似性、不变量与决定性反例"],
+      "playbooks": [
+        {
+          "titleEn": "Externalise the constraints",
+          "titleZh": "把约束写到纸上",
+          "triggerEn": "The question contains ordering, allocation, adjacency, capacity or if-then rules.",
+          "triggerZh": "题目包含顺序、分配、相邻、容量或如果—那么规则。",
+          "actionEn": "Create slots, a table or a graph; encode fixed placements first, then prohibitions, then conditional rules.",
+          "actionZh": "建立槽位、表格或图；先写固定位置，再写禁止条件，最后写条件规则。",
+          "checkEn": "Test a proposed arrangement against every original rule, not only the rule used to construct it.",
+          "checkZh": "候选安排必须回到全部原始规则逐项核验，不能只检验用于构造的规则。"
+        },
+        {
+          "titleEn": "Search for the bottleneck",
+          "titleZh": "寻找瓶颈约束",
+          "triggerEn": "Brute-force enumeration is possible but too slow for the remaining time.",
+          "triggerZh": "穷举虽然可行，但在剩余时间内太慢。",
+          "actionEn": "Start with the item that has the fewest legal positions or the constraint that removes the most possibilities.",
+          "actionZh": "先处理合法位置最少的项目，或一次排除最多可能性的约束。",
+          "checkEn": "If two branches remain, seek one decisive counterexample rather than completing both tables.",
+          "checkZh": "若只剩两条分支，优先寻找决定性反例，而非填完两张表。"
+        }
+      ],
+      "workedCase": {
+        "titleEn": "Worked case — schedule from a bottleneck",
+        "titleZh": "深度案例：从瓶颈约束开始排程",
+        "promptEn": "Four talks A, B, C and D occupy slots 1–4. A is before C; B is not adjacent to C; D is in slot 2. Which talk must be in slot 4?",
+        "promptZh": "讲座 A、B、C、D 安排在 1–4 时段。A 在 C 前；B 不与 C 相邻；D 在时段 2。哪个讲座必须在时段 4？",
+        "steps": [
+          { "labelEn": "Place the fixed item", "labelZh": "放置固定项目", "bodyEn": "D occupies slot 2, leaving slots 1, 3 and 4 for A, B and C.", "bodyZh": "D 在时段 2，A、B、C 只能位于 1、3、4。" },
+          { "labelEn": "Use the adjacency bottleneck", "labelZh": "使用相邻瓶颈", "bodyEn": "If C were in slot 3, B could be neither 2 nor 4 and would need slot 1; then A could not be before C because slot 1 is taken. So C is not 3.", "bodyZh": "若 C 在 3，B 不能在 2 或 4，只能在 1；此时 A 无法位于 C 前。因此 C 不在 3。" },
+          { "labelEn": "Apply the order", "labelZh": "应用顺序", "bodyEn": "C cannot be slot 1 because A must be earlier, and cannot be slot 2 because D is fixed. Therefore C must be slot 4.", "bodyZh": "C 不能在 1（A 必须更早），也不能在 2（D 已固定），所以 C 必须在 4。" }
+        ],
+        "answerEn": "C must be in slot 4.",
+        "answerZh": "C 必须位于时段 4。",
+        "trapEn": "Trying arbitrary complete schedules before exploiting the fixed slot and the restricted adjacency.",
+        "trapZh": "未利用固定时段和相邻限制，就开始随意穷举完整排程。"
+      },
+      "trainingPrescriptionEn": ["Represent ten constraint questions without solving them; score only representation accuracy.", "For the next ten, identify the bottleneck before branching.", "Track whether time was lost in reading, representation or verification."],
+      "trainingPrescriptionZh": ["完成 10 道约束题，只建立表示而不求解，并只评分表示准确性。", "再做 10 道题，每题分支前先指出瓶颈。", "记录时间损失发生在阅读、表示还是核验。"]
+    },
+    {
+      "id": "tara-writing-task",
+      "number": "03",
+      "titleEn": "Writing Task — Build a Defensible Position",
+      "titleZh": "Writing Task：建立可辩护立场",
+      "purposeEn": "Produce a clear, qualified argument that answers the prompt, uses reasons economically and survives a serious objection.",
+      "purposeZh": "写出直接回应题目、理由经济、能承受严肃反驳的清晰限定论证。",
+      "knowledgeFocusEn": ["Interpreting the exact task and defining terms", "Thesis, reasons, examples and paragraph function", "Counterargument, qualification and concise revision"],
+      "knowledgeFocusZh": ["精确解释任务与定义术语", "论点、理由、例证与段落功能", "反方、限定与简洁修改"],
+      "playbooks": [
+        {
+          "titleEn": "Write the thesis as a decision rule",
+          "titleZh": "把论点写成决策规则",
+          "triggerEn": "The prompt asks whether, when or to what extent a policy or principle is justified.",
+          "triggerZh": "题目询问某政策或原则是否、何时或在多大程度上合理。",
+          "actionEn": "State your position, the condition under which it holds and the criterion used to judge exceptions.",
+          "actionZh": "写出立场、立场成立的条件以及判断例外的标准。",
+          "checkEn": "A reader should be able to predict how your thesis handles a new case.",
+          "checkZh": "读者应能用你的论点判断一个新案例。"
+        },
+        {
+          "titleEn": "Use the strongest objection",
+          "titleZh": "处理最强反驳",
+          "triggerEn": "The draft contains two supporting paragraphs but no pressure test of the central principle.",
+          "triggerZh": "草稿已有两个支持段落，却没有检验中心原则的压力。",
+          "actionEn": "Present the most reasonable opposing concern, concede what is true, then refine the thesis rather than dismissing the objection.",
+          "actionZh": "呈现最合理的反方顾虑，承认其中成立部分，再通过限定论点回应，而非直接否定。",
+          "checkEn": "The response must change or sharpen the original thesis; otherwise the counterargument is decorative.",
+          "checkZh": "回应必须改变或收紧原论点，否则反方段落只是装饰。"
+        }
+      ],
+      "workedCase": {
+        "titleEn": "Worked case — qualifying a public-interest claim",
+        "titleZh": "深度案例：限定公共利益主张",
+        "promptEn": "Should universities be permitted to restrict controversial speakers? Draft a defensible thesis and paragraph plan.",
+        "promptZh": "大学是否应被允许限制有争议的演讲者？写出可辩护论点与段落计划。",
+        "steps": [
+          { "labelEn": "Define the decision", "labelZh": "定义决策", "bodyEn": "Separate disagreement with a view from a credible, specific threat to safety or lawful participation.", "bodyZh": "区分对观点的反感与对安全或合法参与的具体可信威胁。" },
+          { "labelEn": "State a qualified thesis", "labelZh": "写限定论点", "bodyEn": "Universities should protect expression by default, restricting a speaker only when proportionate measures cannot manage a specific risk to safety or equal participation.", "bodyZh": "大学原则上应保护表达；只有在比例适当的替代措施无法控制对安全或平等参与的具体风险时，才应限制演讲者。" },
+          { "labelEn": "Assign paragraph jobs", "labelZh": "分配段落任务", "bodyEn": "Explain the value of open inquiry; define the narrow exception; test it against the objection that institutions also owe a duty of care; conclude with procedural safeguards.", "bodyZh": "说明开放探究价值；界定狭窄例外；回应大学负有照顾义务的反驳；以程序保障收束。" }
+        ],
+        "answerEn": "The plan answers the exact decision, supplies a usable threshold and gives the counterargument a real role in refining the position.",
+        "answerZh": "该计划直接回答决策、给出可执行门槛，并让反方真正收紧原立场。",
+        "trapEn": "Writing ‘free speech is important but safety matters’ without defining how a university decides between them.",
+        "trapZh": "只写“言论自由重要，但安全也重要”，却没有定义大学如何在两者之间作出判断。"
+      },
+      "trainingPrescriptionEn": ["Draft five thesis-as-decision-rule statements in ten minutes each.", "Write paragraph jobs before prose for three full responses.", "Revise one response by removing 15% of words without losing a reasoning step."],
+      "trainingPrescriptionZh": ["完成 5 个“决策规则式论点”，每个限时 10 分钟。", "三篇完整回应都先写段落任务，再写正文。", "修改一篇文章，在不丢失推理步骤的前提下删去 15% 字数。"]
+    },
+    {
+      "id": "tara-language-bridge",
+      "number": "04",
+      "titleEn": "Language Bridge — Precise English for Reasoning",
+      "titleZh": "语言桥接：推理所需的精确英文",
+      "purposeEn": "Use English qualifiers and logical verbs precisely so that language does not change the strength or direction of reasoning.",
+      "purposeZh": "准确使用英文限定词与逻辑动词，避免语言改变推理强度或方向。",
+      "knowledgeFocusEn": ["Necessary, sufficient, only, unless and except", "Some, most, all, may, likely and must", "Concise analytical verbs and paragraph transitions"],
+      "knowledgeFocusZh": ["necessary、sufficient、only、unless 与 except", "some、most、all、may、likely 与 must", "简洁分析动词与段落衔接"],
+      "playbooks": [
+        {
+          "titleEn": "Preserve logical strength",
+          "titleZh": "保留逻辑强度",
+          "triggerEn": "An option changes may to must, some to all, or an observed association to a cause.",
+          "triggerZh": "选项把 may 改成 must、some 改成 all，或把观察相关改成因果。",
+          "actionEn": "Underline the quantifier or modal verb in the stem and require the option to stay at or below the supported strength.",
+          "actionZh": "划出题干中的量词或情态动词，要求选项强度不得超过证据支持范围。",
+          "checkEn": "Ask whether one counterexample would defeat the wording; if so, the claim may be too strong.",
+          "checkZh": "问一个反例能否推翻该表述；若能，主张可能过强。"
+        },
+        {
+          "titleEn": "Choose analytical verbs",
+          "titleZh": "选择分析动词",
+          "triggerEn": "A sentence relies on vague phrases such as ‘talks about’, ‘is good’ or ‘has an effect’.",
+          "triggerZh": "句子依赖 talks about、is good、has an effect 等模糊表达。",
+          "actionEn": "Replace them with identifies, assumes, distinguishes, predicts, limits, supports or contradicts, according to the actual reasoning job.",
+          "actionZh": "按实际推理功能替换为 identifies、assumes、distinguishes、predicts、limits、supports 或 contradicts。",
+          "checkEn": "The verb should reveal the relationship between sentences, not merely restate their topic.",
+          "checkZh": "动词应揭示句子间关系，而非只重复主题。"
+        }
+      ],
+      "workedCase": {
+        "titleEn": "Worked case — reduce an absolute claim",
+        "titleZh": "深度案例：降低绝对主张强度",
+        "promptEn": "Rewrite ‘Online learning always makes students less engaged’ as a claim that evidence could realistically support.",
+        "promptZh": "把“线上学习总会让学生参与度更低”改写为证据现实可支持的主张。",
+        "steps": [
+          { "labelEn": "Locate the overclaim", "labelZh": "定位过强之处", "bodyEn": "Always asserts a universal effect across students, subjects, designs and contexts.", "bodyZh": "Always 对所有学生、学科、设计与情境都作出普遍断言。" },
+          { "labelEn": "Specify the measure", "labelZh": "明确测量指标", "bodyEn": "Replace the vague word engaged with a measurable outcome such as attendance, contribution frequency or task completion.", "bodyZh": "把模糊的 engaged 改为出勤、发言频率或任务完成率等可测量结果。" },
+          { "labelEn": "Write the qualified claim", "labelZh": "写限定主张", "bodyEn": "In courses with little live interaction, online delivery may reduce the frequency of voluntary student contributions compared with otherwise similar in-person classes.", "bodyZh": "在实时互动较少的课程中，与其他条件相似的线下课堂相比，线上授课可能降低学生自愿发言频率。" }
+        ],
+        "answerEn": "The revised claim identifies a context, a comparison, a measurable outcome and an appropriately cautious strength.",
+        "answerZh": "修改后的主张包含情境、比较对象、可测指标与恰当谨慎的强度。",
+        "trapEn": "Replacing always with often but leaving engagement undefined and the comparison uncontrolled.",
+        "trapZh": "只把 always 换成 often，却仍未定义参与度，也未控制比较条件。"
+      },
+      "trainingPrescriptionEn": ["Build a qualifier ladder from possible to certain and from some to all.", "Rewrite ten overstrong claims with a context, measure and comparison.", "Edit one essay solely for analytical verbs and logical transitions."],
+      "trainingPrescriptionZh": ["建立从 possible 到 certain、从 some 到 all 的强度阶梯。", "把 10 个过强主张改写为包含情境、指标和比较的句子。", "只针对分析动词与逻辑衔接修改一篇文章。"]
+    }
+  ],
+  "reviewProtocol": [
+    { "stepEn": "Attempt", "stepZh": "独立作答", "actionEn": "Complete a timed set or draft before reading the relevant module.", "actionZh": "阅读对应模块前，先完成限时题组或写作草稿。" },
+    { "stepEn": "Reconstruct", "stepZh": "重建过程", "actionEn": "Write the argument map, constraint representation or paragraph jobs from memory.", "actionZh": "凭记忆写出论证图、约束表示或段落任务。" },
+    { "stepEn": "Diagnose", "stepZh": "诊断首错", "actionEn": "Identify the first failure in interpretation, representation, logic, language or timing.", "actionZh": "定位解释、表示、逻辑、语言或节奏中的第一次失败。" },
+    { "stepEn": "Transfer", "stepZh": "迁移验证", "actionEn": "Apply one playbook to a different passage, problem or prompt after 24–48 hours.", "actionZh": "24–48 小时后，把一个策略应用到不同材料、问题或题目。" }
+  ],
+  "sourceAnchors": [
+    { "title": "TARA Content Specification", "localPath": "content/official/raw/shared/TARA_Content_Specification.pdf", "sha256": "d326e78305aefd999c42953de3024d403f27357ecbc0f3dd562134e8105822cd", "usedForEn": "Used to verify module structure, timing, writing limit, tool restrictions and scoring boundaries.", "usedForZh": "用于核验模块结构、时间、写作字数、工具限制与计分边界。" },
+    { "title": "TARA Question Guide", "localPath": "content/official/raw/shared/TARA_Question_Guide.pdf", "sha256": "afcee1ff9dd35025000cd7c5a4cef804fa31fb3e8870d5748ec8d3ac2c45a6cb", "usedForEn": "Used to verify the named reasoning skills, writing-task structure and mathematics appendix scope.", "usedForZh": "用于核验推理能力名称、写作任务结构与数学附录范围。" }
+  ]
+}

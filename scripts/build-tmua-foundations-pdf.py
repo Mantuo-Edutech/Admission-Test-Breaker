@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import html
+import hashlib
 import json
 import shutil
 from functools import partial
@@ -15,7 +16,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.cidfonts import UnicodeCIDFont
+from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
     BaseDocTemplate,
     CondPageBreak,
@@ -35,6 +36,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "content/notes/tmua/foundations-v2.json"
 OUTPUT = ROOT / "output/pdf/tmua-foundations-v2.pdf"
 PUBLIC_OUTPUT = ROOT / "public/notes/tmua/tmua-foundations-v2.pdf"
+FONT_PATH = ROOT / "scripts/assets/fonts/NotoSansCJKsc-VF.ttf"
+FONT_SHA256 = "990c807e79c25662a5a9ecf7f971baeb2bf2eab9a559e5ecf15cdfdb8561d21f"
 
 PAGE_WIDTH, PAGE_HEIGHT = A4
 MARGIN_X = 17 * mm
@@ -53,7 +56,9 @@ GREEN = colors.HexColor("#3F725A")
 AMBER = colors.HexColor("#A66A36")
 LINE = colors.HexColor("#D4CEC5")
 
-pdfmetrics.registerFont(UnicodeCIDFont("STSong-Light"))
+if not FONT_PATH.is_file() or hashlib.sha256(FONT_PATH.read_bytes()).hexdigest() != FONT_SHA256:
+    raise ValueError("Embedded CJK font is missing or has changed")
+pdfmetrics.registerFont(TTFont("MantouCJK", str(FONT_PATH)))
 
 
 PDF_GLYPH_REPLACEMENTS = str.maketrans({
@@ -83,156 +88,27 @@ def safe(value: object) -> str:
 
 BASE = getSampleStyleSheet()
 STYLES = {
-    "body": ParagraphStyle(
-        "BodyCN",
-        parent=BASE["BodyText"],
-        fontName="STSong-Light",
-        fontSize=9.2,
-        leading=16,
-        textColor=INK,
-        spaceAfter=6,
-    ),
-    "body_small": ParagraphStyle(
-        "BodySmallCN",
-        parent=BASE["BodyText"],
-        fontName="STSong-Light",
-        fontSize=7.6,
-        leading=12.5,
-        textColor=SLATE,
-    ),
-    "kicker": ParagraphStyle(
-        "Kicker",
-        parent=BASE["BodyText"],
-        fontName="Helvetica-Bold",
-        fontSize=7.2,
-        leading=10,
-        textColor=PURPLE,
-        tracking=1.3,
-        spaceAfter=8,
-    ),
-    "cover_kicker": ParagraphStyle(
-        "CoverKicker",
-        parent=BASE["BodyText"],
-        fontName="Helvetica-Bold",
-        fontSize=7.5,
-        leading=10,
-        textColor=colors.white,
-        tracking=1.4,
-        spaceAfter=16,
-    ),
-    "cover_title": ParagraphStyle(
-        "CoverTitle",
-        parent=BASE["Title"],
-        fontName="STSong-Light",
-        fontSize=36,
-        leading=44,
-        textColor=colors.white,
-        alignment=TA_LEFT,
-        spaceAfter=10,
-    ),
-    "cover_en": ParagraphStyle(
-        "CoverEN",
-        parent=BASE["BodyText"],
-        fontName="Helvetica",
-        fontSize=13,
-        leading=17,
-        textColor=colors.HexColor("#EAE4F2"),
-        spaceAfter=25,
-    ),
-    "cover_subtitle": ParagraphStyle(
-        "CoverSubtitle",
-        parent=BASE["BodyText"],
-        fontName="STSong-Light",
-        fontSize=12,
-        leading=21,
-        textColor=colors.white,
-    ),
-    "h1": ParagraphStyle(
-        "H1CN",
-        parent=BASE["Heading1"],
-        fontName="STSong-Light",
-        fontSize=25,
-        leading=33,
-        textColor=INK,
-        spaceBefore=6,
-        spaceAfter=5,
-    ),
-    "h1_en": ParagraphStyle(
-        "H1EN",
-        parent=BASE["Heading2"],
-        fontName="Helvetica-Bold",
-        fontSize=8.5,
-        leading=12,
-        textColor=PURPLE,
-        tracking=0.7,
-        spaceAfter=15,
-    ),
-    "h2": ParagraphStyle(
-        "H2CN",
-        parent=BASE["Heading2"],
-        fontName="STSong-Light",
-        fontSize=16,
-        leading=22,
-        textColor=INK,
-        spaceBefore=12,
-        spaceAfter=3,
-    ),
-    "h2_en": ParagraphStyle(
-        "H2EN",
-        parent=BASE["BodyText"],
-        fontName="Helvetica-Bold",
-        fontSize=7.2,
-        leading=10,
-        textColor=PURPLE,
-        tracking=0.5,
-        spaceAfter=9,
-    ),
-    "h3": ParagraphStyle(
-        "H3CN",
-        parent=BASE["Heading3"],
-        fontName="STSong-Light",
-        fontSize=11,
-        leading=16,
-        textColor=INK,
-        spaceAfter=4,
-    ),
-    "label": ParagraphStyle(
-        "LabelCN",
-        parent=BASE["BodyText"],
-        fontName="STSong-Light",
-        fontSize=7.4,
-        leading=11,
-        textColor=PURPLE,
-        spaceAfter=3,
-    ),
-    "formula": ParagraphStyle(
-        "Formula",
-        parent=BASE["BodyText"],
-        fontName="STSong-Light",
-        fontSize=11,
-        leading=17,
-        textColor=PURPLE_DEEP,
-        alignment=TA_CENTER,
-        spaceBefore=4,
-        spaceAfter=3,
-    ),
-    "white_small": ParagraphStyle(
-        "WhiteSmall",
-        parent=BASE["BodyText"],
-        fontName="STSong-Light",
-        fontSize=8,
-        leading=13,
-        textColor=colors.white,
-    ),
-    "white_h3": ParagraphStyle(
-        "WhiteH3",
-        parent=BASE["Heading3"],
-        fontName="STSong-Light",
-        fontSize=11.5,
-        leading=16,
-        textColor=colors.white,
-        spaceAfter=4,
-    ),
+    "body": ParagraphStyle("BodyEN", parent=BASE["BodyText"], fontName="Helvetica", fontSize=9.3, leading=14.3, textColor=INK, spaceAfter=4),
+    "support": ParagraphStyle("SupportZH", parent=BASE["BodyText"], fontName="MantouCJK", fontSize=7.3, leading=11.3, textColor=SLATE, spaceAfter=6),
+    "body_small": ParagraphStyle("BodySmallEN", parent=BASE["BodyText"], fontName="Helvetica", fontSize=7.6, leading=11.5, textColor=SLATE),
+    "support_small": ParagraphStyle("SupportSmallZH", parent=BASE["BodyText"], fontName="MantouCJK", fontSize=6.8, leading=10.3, textColor=SLATE),
+    "kicker": ParagraphStyle("Kicker", parent=BASE["BodyText"], fontName="Helvetica-Bold", fontSize=7.2, leading=10, textColor=PURPLE, tracking=1.3, spaceAfter=8),
+    "cover_kicker": ParagraphStyle("CoverKicker", parent=BASE["BodyText"], fontName="Helvetica-Bold", fontSize=7.5, leading=10, textColor=colors.white, tracking=1.4, spaceAfter=16),
+    "cover_title": ParagraphStyle("CoverTitleEN", parent=BASE["Title"], fontName="Helvetica-Bold", fontSize=31, leading=37, textColor=colors.white, alignment=TA_LEFT, spaceAfter=7),
+    "cover_zh": ParagraphStyle("CoverTitleZH", parent=BASE["BodyText"], fontName="MantouCJK", fontSize=10, leading=15, textColor=colors.HexColor("#EAE4F2"), spaceAfter=20),
+    "cover_subtitle": ParagraphStyle("CoverSubtitleEN", parent=BASE["BodyText"], fontName="Helvetica", fontSize=11, leading=16, textColor=colors.white, spaceAfter=5),
+    "cover_support": ParagraphStyle("CoverSubtitleZH", parent=BASE["BodyText"], fontName="MantouCJK", fontSize=6.8, leading=10.5, textColor=colors.HexColor("#EAE4F2")),
+    "h1": ParagraphStyle("H1EN", parent=BASE["Heading1"], fontName="Helvetica-Bold", fontSize=22, leading=27, textColor=INK, spaceBefore=6, spaceAfter=3),
+    "h1_zh": ParagraphStyle("H1ZH", parent=BASE["BodyText"], fontName="MantouCJK", fontSize=8.3, leading=12.5, textColor=SLATE, spaceAfter=13),
+    "h2": ParagraphStyle("H2EN", parent=BASE["Heading2"], fontName="Helvetica-Bold", fontSize=15, leading=19, textColor=INK, spaceBefore=10, spaceAfter=3),
+    "h2_zh": ParagraphStyle("H2ZH", parent=BASE["BodyText"], fontName="MantouCJK", fontSize=7.4, leading=11.2, textColor=SLATE, spaceAfter=8),
+    "h3": ParagraphStyle("H3EN", parent=BASE["Heading3"], fontName="Helvetica-Bold", fontSize=10.2, leading=13.5, textColor=INK, spaceAfter=3),
+    "h3_zh": ParagraphStyle("H3ZH", parent=BASE["BodyText"], fontName="MantouCJK", fontSize=7.1, leading=10.7, textColor=SLATE, spaceAfter=3),
+    "label": ParagraphStyle("LabelBilingual", parent=BASE["BodyText"], fontName="MantouCJK", fontSize=7.2, leading=10.5, textColor=PURPLE, spaceAfter=2),
+    "formula": ParagraphStyle("Formula", parent=BASE["BodyText"], fontName="MantouCJK", fontSize=10.3, leading=16, textColor=PURPLE_DEEP, alignment=TA_CENTER, spaceBefore=3, spaceAfter=3),
+    "white_small": ParagraphStyle("WhiteSmallEN", parent=BASE["BodyText"], fontName="Helvetica", fontSize=7.8, leading=11.8, textColor=colors.white),
+    "white_support": ParagraphStyle("WhiteSupportZH", parent=BASE["BodyText"], fontName="MantouCJK", fontSize=6.8, leading=10.5, textColor=colors.HexColor("#EAE4F2")),
+    "white_h3": ParagraphStyle("WhiteH3EN", parent=BASE["Heading3"], fontName="Helvetica-Bold", fontSize=11.5, leading=16, textColor=colors.white, spaceAfter=4),
 }
 
 
@@ -281,7 +157,7 @@ def cover_background(canvas, _doc) -> None:
     canvas.setFillColor(INK)
     canvas.setFont("Helvetica-Bold", 7.5)
     canvas.drawString(MARGIN_X + 44 * mm, 47 * mm, "MANTUO ADMISSION TEST LIBRARY")
-    canvas.setFont("STSong-Light", 8.5)
+    canvas.setFont("MantouCJK", 8.5)
     canvas.drawString(MARGIN_X + 44 * mm, 39 * mm, "不再为升学考试而焦虑")
     canvas.setFont("Helvetica", 7)
     canvas.setFillColor(SLATE)
@@ -302,6 +178,21 @@ def bullet_rows(items: list[str], color: colors.Color = SLATE) -> list[Paragraph
     return [Paragraph(f"- {safe(item)}", style) for item in items]
 
 
+def bilingual(value_en: object, value_zh: object, primary: str = "body") -> list[Paragraph]:
+    support = "support" if primary == "body" else "support_small"
+    return [paragraph(value_en, primary), paragraph(value_zh, support)]
+
+
+def bilingual_bullets(items_en: list[str], items_zh: list[str]) -> list[Paragraph]:
+    if len(items_en) != len(items_zh):
+        raise ValueError("English and Chinese lists must align")
+    rows: list[Paragraph] = []
+    for item_en, item_zh in zip(items_en, items_zh, strict=True):
+        rows.extend(bullet_rows([item_en], INK))
+        rows.append(paragraph(item_zh, "support_small"))
+    return rows
+
+
 def source_link(title: str, url: str) -> Paragraph:
     escaped_url = html.escape(url, quote=True)
     return Paragraph(
@@ -313,14 +204,14 @@ def source_link(title: str, url: str) -> Paragraph:
 def add_bilingual_heading(story: list[Flowable], zh: str, en: str, kicker: str | None = None) -> None:
     if kicker:
         story.append(paragraph(kicker.upper(), "kicker"))
-    story.append(paragraph(zh, "h1"))
-    story.append(paragraph(en.upper(), "h1_en"))
+    story.append(paragraph(en, "h1"))
+    story.append(paragraph(zh, "h1_zh"))
 
 
 def add_rules(story: list[Flowable], rules: list[dict]) -> None:
     rows = []
     for rule in rules:
-        right = [paragraph(rule["statementZh"], "body_small")]
+        right = bilingual(rule["statementEn"], rule["statementZh"], "body_small")
         if rule.get("formula"):
             right.append(paragraph(rule["formula"]["text"], "formula"))
         rows.append([paragraph(rule["term"], "label"), right])
@@ -339,7 +230,7 @@ def add_rules(story: list[Flowable], rules: list[dict]) -> None:
 
 def add_worked_example(story: list[Flowable], example: dict) -> None:
     title = Table(
-        [[paragraph("ORIGINAL WORKED EXAMPLE", "white_small"), paragraph(example["titleZh"], "white_h3")]],
+        [[paragraph("ORIGINAL WORKED EXAMPLE", "white_small"), [paragraph(example["titleEn"], "white_h3"), paragraph(example["titleZh"], "white_support")]]],
         colWidths=[0.31 * CONTENT_WIDTH, 0.69 * CONTENT_WIDTH],
     )
     title.setStyle(TableStyle([
@@ -352,7 +243,7 @@ def add_worked_example(story: list[Flowable], example: dict) -> None:
     ]))
     story.extend([Spacer(1, 8), title])
 
-    problem = Table([[paragraph("题目 / Problem", "label"), [paragraph(example["problemZh"]), paragraph(example["problemEn"], "body_small")]]], colWidths=[0.2 * CONTENT_WIDTH, 0.8 * CONTENT_WIDTH])
+    problem = Table([[paragraph("PROBLEM", "label"), bilingual(example["problemEn"], example["problemZh"])]], colWidths=[0.2 * CONTENT_WIDTH, 0.8 * CONTENT_WIDTH])
     problem.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (-1, -1), LAVENDER),
         ("VALIGN", (0, 0), (-1, -1), "TOP"),
@@ -365,10 +256,10 @@ def add_worked_example(story: list[Flowable], example: dict) -> None:
 
     step_rows = []
     for step in example["steps"]:
-        body = [paragraph(step["bodyZh"], "body_small")]
+        body = bilingual(step["bodyEn"], step["bodyZh"], "body_small")
         if step.get("math"):
             body.append(paragraph(step["math"]["text"], "formula"))
-        step_rows.append([paragraph(step["labelZh"], "label"), body])
+        step_rows.append([[paragraph(step["labelEn"], "label"), paragraph(step["labelZh"], "support_small")], body])
     steps = Table(step_rows, colWidths=[0.2 * CONTENT_WIDTH, 0.8 * CONTENT_WIDTH])
     steps.setStyle(TableStyle([
         ("VALIGN", (0, 0), (-1, -1), "TOP"),
@@ -382,8 +273,8 @@ def add_worked_example(story: list[Flowable], example: dict) -> None:
     story.append(steps)
 
     result = Table([
-        [paragraph("结论", "label"), paragraph(example["answerZh"], "body_small")],
-        [paragraph("常见误区", "label"), paragraph(example["trapZh"], "body_small")],
+        [paragraph("CONCLUSION", "label"), bilingual(example["answerEn"], example["answerZh"], "body_small")],
+        [paragraph("COMMON TRAP", "label"), bilingual(example["trapEn"], example["trapZh"], "body_small")],
     ], colWidths=[0.2 * CONTENT_WIDTH, 0.8 * CONTENT_WIDTH])
     result.setStyle(TableStyle([
         ("VALIGN", (0, 0), (-1, -1), "TOP"),
@@ -400,9 +291,9 @@ def add_worked_example(story: list[Flowable], example: dict) -> None:
 
 def add_recall(story: list[Flowable], recall: dict) -> None:
     recall_box = Table([
-        [paragraph("合上笔记回答 / ACTIVE RECALL", "label")],
-        [[paragraph(recall["promptZh"]), paragraph(recall["promptEn"], "body_small")]],
-        [[paragraph("答案：" + recall["answerZh"], "body_small"), paragraph(recall["answerEn"], "body_small")]],
+        [paragraph("ACTIVE RECALL · 合上笔记回答", "label")],
+        [[paragraph(recall["promptEn"]), paragraph(recall["promptZh"], "support")]],
+        [[paragraph("ANSWER · " + recall["answerEn"], "body_small"), paragraph("答案 · " + recall["answerZh"], "support_small")]],
     ], colWidths=[CONTENT_WIDTH])
     recall_box.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (-1, 1), LAVENDER),
@@ -414,7 +305,9 @@ def add_recall(story: list[Flowable], recall: dict) -> None:
         ("TOPPADDING", (0, 0), (-1, -1), 8),
         ("BOTTOMPADDING", (0, 0), (-1, -1), 8),
     ]))
-    story.extend([Spacer(1, 5), recall_box, Spacer(1, 7)])
+    # Keep the label, prompt and answer together. Without this wrapper ReportLab
+    # can leave an orphaned ACTIVE RECALL heading at the foot of a page.
+    story.append(KeepTogether([Spacer(1, 5), recall_box, Spacer(1, 7)]))
 
 
 def build_story(notes: dict) -> list[Flowable]:
@@ -423,23 +316,22 @@ def build_story(notes: dict) -> list[Flowable]:
     story.extend([
         Spacer(1, 30 * mm),
         paragraph("MANTUO ORIGINAL TEACHING NOTES · " + notes["edition"], "cover_kicker"),
-        paragraph(notes["titleZh"], "cover_title"),
-        paragraph(notes["titleEn"], "cover_en"),
-        paragraph(notes["subtitleZh"], "cover_subtitle"),
-        Spacer(1, 8 * mm),
-        paragraph(notes["subtitleEn"], "white_small"),
+        paragraph(notes["titleEn"], "cover_title"),
+        paragraph(notes["titleZh"], "cover_zh"),
+        paragraph(notes["subtitleEn"], "cover_subtitle"),
+        paragraph(notes["subtitleZh"], "cover_support"),
+        Spacer(1, 6 * mm),
         PageBreak(),
     ])
 
     add_bilingual_heading(story, "如何使用这份笔记", "How to Use This Pack", "Reader guide")
+    story.extend(bilingual(notes["scope"]["includedEn"], notes["scope"]["includedZh"]))
     story.extend([
-        paragraph(notes["scope"]["includedZh"]),
-        paragraph(notes["scope"]["includedEn"], "body_small"),
         Spacer(1, 6),
         Table([
-            [paragraph("本版状态", "label"), paragraph("教研预览：可用于学习体验；尚未标记为独立学科教师终审版。", "body_small")],
-            [paragraph("原创边界", "label"), paragraph(notes["rightsNotice"], "body_small")],
-            [paragraph("后续章节", "label"), paragraph(notes["scope"]["remainingZh"], "body_small")],
+            [paragraph("EDITION", "label"), bilingual("Foundation Edition: structured for first-pass review, curriculum mapping and active recall.", "基础版：用于第一轮复习、课程映射与主动回忆。", "body_small")],
+            [paragraph("AUTHORSHIP BOUNDARY", "label"), bilingual(notes["rightsNoticeEn"], notes["rightsNotice"], "body_small")],
+            [paragraph("GO DEEPER", "label"), bilingual(notes["scope"]["remainingEn"], notes["scope"]["remainingZh"], "body_small")],
         ], colWidths=[0.2 * CONTENT_WIDTH, 0.8 * CONTENT_WIDTH], style=TableStyle([
             ("GRID", (0, 0), (-1, -1), 0.45, LINE),
             ("BACKGROUND", (0, 0), (-1, -1), PAPER_RAISED),
@@ -460,9 +352,9 @@ def build_story(notes: dict) -> list[Flowable]:
         for fact in facts[i:i + 2]:
             cells.append([
                 paragraph(fact["labelEn"].upper(), "label"),
-                paragraph(fact["labelZh"], "h3"),
-                paragraph(fact["valueZh"], "body_small"),
+                paragraph(fact["labelZh"], "support_small"),
                 paragraph(fact["valueEn"], "body_small"),
+                paragraph(fact["valueZh"], "support_small"),
             ])
         while len(cells) < 2:
             cells.append("")
@@ -477,13 +369,14 @@ def build_story(notes: dict) -> list[Flowable]:
         ("TOPPADDING", (0, 0), (-1, -1), 10),
         ("BOTTOMPADDING", (0, 0), (-1, -1), 10),
     ]))
-    story.extend([fact_table, Spacer(1, 12), paragraph("满托三轮训练建议 / MANTUO METHOD", "kicker")])
+    story.extend([fact_table, Spacer(1, 12), paragraph("MANTUO THREE-PASS METHOD", "kicker"), paragraph("满托三轮训练建议", "support_small")])
     strategy_cells = []
     for item in notes["examMap"]["mantouStrategy"]:
         strategy_cells.append([
-            paragraph(item["nameZh"], "white_h3"),
-            paragraph(item["nameEn"], "white_small"),
-            paragraph(item["guidanceZh"], "white_small"),
+            paragraph(item["nameEn"], "white_h3"),
+            paragraph(item["nameZh"], "white_support"),
+            paragraph(item["guidanceEn"], "white_small"),
+            paragraph(item["guidanceZh"], "white_support"),
         ])
     strategy = Table([strategy_cells], colWidths=[CONTENT_WIDTH / 3] * 3)
     strategy.setStyle(TableStyle([
@@ -499,14 +392,14 @@ def build_story(notes: dict) -> list[Flowable]:
     story.extend([strategy, Spacer(1, 16)])
 
     add_bilingual_heading(story, "课程衔接：具体缺什么", "Curriculum Bridge", "A-Level · IB · AP")
-    story.append(paragraph("课程映射只判断 syllabus exposure，不代替个人能力诊断。完成单元、考试局和真实做题证据会改变结论。", "body_small"))
+    story.extend(bilingual("Curriculum mapping estimates syllabus exposure; it does not replace an individual diagnosis. Completed units, examination board and timed evidence can change the conclusion.", "课程映射只判断 syllabus exposure，不代替个人能力诊断。完成单元、考试局和真实做题证据会改变结论。", "body_small"))
     for bridge in notes["curriculumBridges"]:
         color = GREEN if bridge["status"] == "strong-start" else AMBER
         card = Table([
-            [paragraph(bridge["curriculum"], "h3"), paragraph(bridge["statusZh"], "label")],
-            [paragraph("通常已覆盖 / LIKELY COVERED", "label"), bullet_rows(bridge["likelyCoveredZh"])],
-            [paragraph("逐项确认 / CHECK GAPS", "label"), bullet_rows(bridge["confirmZh"])],
-            [paragraph("第一步 / FIRST ACTION", "label"), paragraph(bridge["firstActionZh"], "body_small")],
+            [paragraph(bridge["curriculum"], "h3"), [paragraph(bridge["status"].replace("-", " ").upper(), "label"), paragraph(bridge["statusZh"], "support_small")]],
+            [paragraph("LIKELY COVERED", "label"), bilingual_bullets(bridge["likelyCoveredEn"], bridge["likelyCoveredZh"])],
+            [paragraph("CHECK GAPS", "label"), bilingual_bullets(bridge["confirmEn"], bridge["confirmZh"])],
+            [paragraph("FIRST ACTION", "label"), bilingual(bridge["firstActionEn"], bridge["firstActionZh"], "body_small")],
         ], colWidths=[0.29 * CONTENT_WIDTH, 0.71 * CONTENT_WIDTH])
         card.setStyle(TableStyle([
             ("SPAN", (0, 0), (0, 0)),
@@ -525,8 +418,8 @@ def build_story(notes: dict) -> list[Flowable]:
     for chapter in notes["chapters"]:
         story.append(CondPageBreak(125 * mm))
         add_bilingual_heading(story, chapter["titleZh"], chapter["titleEn"], f"Chapter {chapter['number']} · TMUA Foundations")
-        story.append(paragraph(chapter["summaryZh"]))
-        outcomes = Table([[paragraph("学完你应当能够", "label"), bullet_rows(chapter["learningOutcomes"])]] , colWidths=[0.24 * CONTENT_WIDTH, 0.76 * CONTENT_WIDTH])
+        story.extend(bilingual(chapter["summaryEn"], chapter["summaryZh"]))
+        outcomes = Table([[paragraph("LEARNING OUTCOMES", "label"), bilingual_bullets(chapter["learningOutcomesEn"], chapter["learningOutcomes"])]] , colWidths=[0.24 * CONTENT_WIDTH, 0.76 * CONTENT_WIDTH])
         outcomes.setStyle(TableStyle([
             ("BACKGROUND", (0, 0), (-1, -1), LAVENDER),
             ("BOX", (0, 0), (-1, -1), 0.5, PURPLE),
@@ -542,11 +435,11 @@ def build_story(notes: dict) -> list[Flowable]:
             story.extend([
                 SectionRule(),
                 paragraph(f"{chapter['number']}.{section_index}", "kicker"),
-                paragraph(section["titleZh"], "h2"),
-                paragraph(section["titleEn"].upper(), "h2_en"),
+                paragraph(section["titleEn"], "h2"),
+                paragraph(section["titleZh"], "h2_zh"),
             ])
-            for body in section["paragraphsZh"]:
-                story.append(paragraph(body))
+            for body_en, body_zh in zip(section["paragraphsEn"], section["paragraphsZh"], strict=True):
+                story.extend(bilingual(body_en, body_zh))
             add_rules(story, section["rules"])
             for example in section.get("workedExamples", []):
                 add_worked_example(story, example)
@@ -556,14 +449,14 @@ def build_story(notes: dict) -> list[Flowable]:
     story.append(CondPageBreak(125 * mm))
     checkpoint = notes["checkpoint"]
     add_bilingual_heading(story, checkpoint["titleZh"], checkpoint["titleEn"], "Active recall")
-    story.append(paragraph(checkpoint["instructionsZh"], "body_small"))
+    story.extend(bilingual(checkpoint["instructionsEn"], checkpoint["instructionsZh"], "body_small"))
     for index, question in enumerate(checkpoint["questions"], start=1):
         options = [f"{chr(65 + i)}. {option}" for i, option in enumerate(question["options"])]
         answer_letter = chr(65 + question["correctOption"])
         question_box = Table([
-            [paragraph(f"{index:02d}", "label"), [paragraph(question["promptZh"], "h3"), paragraph(question["promptEn"], "body_small")]],
+            [paragraph(f"{index:02d}", "label"), [paragraph(question["promptEn"], "h3"), paragraph(question["promptZh"], "h3_zh")]],
             ["", bullet_rows(options, INK)],
-            [paragraph("答案", "label"), [paragraph(f"{answer_letter}. {question['explanationZh']}", "body_small"), paragraph(question["explanationEn"], "body_small")]],
+            [paragraph("ANSWER", "label"), [paragraph(f"{answer_letter}. {question['explanationEn']}", "body_small"), paragraph(question["explanationZh"], "support_small")]],
         ], colWidths=[0.11 * CONTENT_WIDTH, 0.89 * CONTENT_WIDTH])
         question_box.setStyle(TableStyle([
             ("VALIGN", (0, 0), (-1, -1), "TOP"),
@@ -583,8 +476,8 @@ def build_story(notes: dict) -> list[Flowable]:
     for index, item in enumerate(notes["reviewWorkflow"], start=1):
         workflow_rows.append([
             paragraph(f"{index:02d}", "label"),
-            [paragraph(item["stepZh"], "h3"), paragraph(item["stepEn"], "body_small")],
-            paragraph(item["actionZh"], "body_small"),
+            [paragraph(item["stepEn"], "h3"), paragraph(item["stepZh"], "h3_zh")],
+            bilingual(item["actionEn"], item["actionZh"], "body_small"),
         ])
     workflow = Table(workflow_rows, colWidths=[0.08 * CONTENT_WIDTH, 0.25 * CONTENT_WIDTH, 0.67 * CONTENT_WIDTH])
     workflow.setStyle(TableStyle([
@@ -599,13 +492,16 @@ def build_story(notes: dict) -> list[Flowable]:
     story.extend([workflow, Spacer(1, 20)])
 
     add_bilingual_heading(story, "版本边界与官方依据", "Version Boundary and Official Anchors", "Sources")
-    story.extend([paragraph(notes["rightsNotice"]), paragraph(notes["scope"]["remainingZh"], "body_small")])
+    story.extend(bilingual(notes["rightsNoticeEn"], notes["rightsNotice"]))
+    story.extend(bilingual(notes["scope"]["remainingEn"], notes["scope"]["remainingZh"], "body_small"))
     source_cells = []
     for source in notes["officialAnchors"]:
         source_cells.append([
             source_link(source["title"], source["sourceUrl"]),
-            paragraph(source["usedForZh"], "body_small"),
-            paragraph("点击标题打开官方原文", "body_small"),
+            paragraph(source["usedForEn"], "body_small"),
+            paragraph(source["usedForZh"], "support_small"),
+            paragraph("Click the title to open the official source.", "body_small"),
+            paragraph("点击标题打开官方原文", "support_small"),
         ])
     source_rows = [source_cells[index:index + 2] for index in range(0, len(source_cells), 2)]
     sources = Table(source_rows, colWidths=[0.5 * CONTENT_WIDTH, 0.5 * CONTENT_WIDTH])
@@ -620,8 +516,8 @@ def build_story(notes: dict) -> list[Flowable]:
     ]))
     closing = Table([
         [
-            [paragraph("NEXT TRAINING STEP", "cover_kicker"), paragraph("下一步训练", "white_h3")],
-            [paragraph("完成主动回忆检查 · 进入在线分主题练习 · 使用未见卷建立基线", "white_h3"), paragraph("学习的目标不是看完，而是能在新的题目中重新做出来。", "white_small")],
+            [paragraph("NEXT TRAINING STEP", "cover_kicker"), paragraph("下一步训练", "white_support")],
+            [paragraph("Complete active recall · practise by topic online · establish a baseline on an unseen paper", "white_h3"), paragraph("完成主动回忆检查 · 进入在线分主题练习 · 使用未见卷建立基线", "white_support")],
         ]
     ], colWidths=[0.31 * CONTENT_WIDTH, 0.69 * CONTENT_WIDTH])
     closing.setStyle(TableStyle([
@@ -649,6 +545,7 @@ def build_pdf(output: Path, notes: dict) -> None:
         author="Mantou Education",
         subject="Original bilingual TMUA review notes",
         creator="Admission Test Breaker",
+        invariant=1,
     )
     cover_frame = Frame(MARGIN_X, 78 * mm, CONTENT_WIDTH, PAGE_HEIGHT - 105 * mm, id="cover-frame", showBoundary=0)
     body_frame = Frame(MARGIN_X, MARGIN_BOTTOM, CONTENT_WIDTH, PAGE_HEIGHT - MARGIN_TOP - MARGIN_BOTTOM, id="body-frame", showBoundary=0)

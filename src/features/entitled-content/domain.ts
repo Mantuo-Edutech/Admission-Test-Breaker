@@ -1,3 +1,10 @@
+import {
+  ESAT_ADVANCED_NOTES_RESOURCE_ID,
+  parseAdvancedReviewNotes,
+  TARA_ADVANCED_NOTES_RESOURCE_ID,
+  type AdvancedReviewNotes,
+} from "./advanced-review-notes.js";
+
 export const TMUA_SIX_WEEK_PLAN_RESOURCE_ID = "tmua-six-week-review-plan-v1";
 export const TMUA_SPECIMEN_P1_EXPLANATIONS_RESOURCE_ID =
   "tmua-specimen-p1-worked-explanations-v1";
@@ -5,21 +12,28 @@ export const TMUA_SPECIMEN_P1_EXPLANATIONS_RESOURCE_ID =
 export interface BilingualPrinciple {
   readonly titleZh: string;
   readonly titleEn: string;
+  readonly bodyEn: string;
   readonly bodyZh: string;
 }
 
 export interface PlanStep {
   readonly minutes: number;
+  readonly actionEn: string;
   readonly actionZh: string;
+  readonly detailEn: string;
   readonly detailZh: string;
+  readonly evidenceEn: string;
   readonly evidenceZh: string;
 }
 
 export interface PlanSession {
   readonly day: string;
   readonly minutes: number;
+  readonly titleEn: string;
   readonly titleZh: string;
+  readonly actionsEn: readonly string[];
   readonly actionsZh: readonly string[];
+  readonly evidenceEn: string;
   readonly evidenceZh: string;
 }
 
@@ -27,9 +41,12 @@ export interface WeeklyPlan {
   readonly week: number;
   readonly titleZh: string;
   readonly titleEn: string;
+  readonly purposeEn: string;
   readonly purposeZh: string;
+  readonly targetHoursEn: string;
   readonly targetHours: string;
   readonly sessions: readonly PlanSession[];
+  readonly exitCriteriaEn: readonly string[];
   readonly exitCriteriaZh: readonly string[];
 }
 
@@ -37,17 +54,20 @@ export interface ErrorCode {
   readonly code: string;
   readonly nameZh: string;
   readonly nameEn: string;
+  readonly signalEn: string;
   readonly signalZh: string;
+  readonly nextActionEn: string;
   readonly nextActionZh: string;
 }
 
 export interface CurriculumAdjustment {
   readonly curriculum: string;
+  readonly guidanceEn: string;
   readonly guidanceZh: string;
 }
 
 export interface TmuaSixWeekPlan {
-  readonly schemaVersion: 1;
+  readonly schemaVersion: 2;
   readonly id: typeof TMUA_SIX_WEEK_PLAN_RESOURCE_ID;
   readonly edition: string;
   readonly publicationStatus: "published";
@@ -56,7 +76,9 @@ export interface TmuaSixWeekPlan {
   readonly subtitleZh: string;
   readonly subtitleEn: string;
   readonly authorship: string;
+  readonly audienceEn: string;
   readonly audienceZh: string;
+  readonly rightsNoticeEn: string;
   readonly rightsNotice: string;
   readonly principles: readonly BilingualPrinciple[];
   readonly preflight: {
@@ -70,17 +92,21 @@ export interface TmuaSixWeekPlan {
   readonly weeklyReview: {
     readonly titleZh: string;
     readonly titleEn: string;
+    readonly questionsEn: readonly string[];
     readonly questionsZh: readonly string[];
   };
   readonly benchmarkBoundary: {
     readonly titleZh: string;
     readonly titleEn: string;
+    readonly bodyEn: string;
     readonly bodyZh: string;
   };
 }
 
 export interface WorkedExplanationStep {
+  readonly titleEn: string;
   readonly titleZh: string;
+  readonly bodyEn: string;
   readonly bodyZh: string;
   readonly math?: string;
 }
@@ -93,15 +119,19 @@ export interface WorkedExplanation {
   readonly topicEn: string;
   readonly methodZh: string;
   readonly methodEn: string;
+  readonly keyIdeaEn: string;
   readonly keyIdeaZh: string;
   readonly steps: readonly WorkedExplanationStep[];
+  readonly conclusionEn: string;
   readonly conclusionZh: string;
+  readonly trapEn: string;
   readonly trapZh: string;
+  readonly nextDrillEn: string;
   readonly nextDrillZh: string;
 }
 
 export interface TmuaSpecimenP1WorkedExplanations {
-  readonly schemaVersion: 1;
+  readonly schemaVersion: 2;
   readonly id: typeof TMUA_SPECIMEN_P1_EXPLANATIONS_RESOURCE_ID;
   readonly paperId: "tmua-specimen-p1";
   readonly edition: string;
@@ -110,7 +140,9 @@ export interface TmuaSpecimenP1WorkedExplanations {
   readonly titleEn: string;
   readonly subtitleZh: string;
   readonly subtitleEn: string;
+  readonly authorshipEn: string;
   readonly authorship: string;
+  readonly rightsNoticeEn: string;
   readonly rightsNotice: string;
   readonly sourceEvidence: {
     readonly questionSha256: string;
@@ -125,7 +157,8 @@ export interface TmuaSpecimenP1WorkedExplanations {
 
 export type EntitledContentPayload =
   | TmuaSixWeekPlan
-  | TmuaSpecimenP1WorkedExplanations;
+  | TmuaSpecimenP1WorkedExplanations
+  | AdvancedReviewNotes;
 
 export interface EntitledContentResource {
   readonly id: string;
@@ -189,7 +222,7 @@ function objectList<T>(
 export function parseTmuaSixWeekPlan(value: unknown): TmuaSixWeekPlan {
   const root = record(value, "TMUA six-week plan");
   if (
-    root.schemaVersion !== 1 ||
+    root.schemaVersion !== 2 ||
     root.id !== TMUA_SIX_WEEK_PLAN_RESOURCE_ID ||
     root.publicationStatus !== "published"
   ) {
@@ -203,15 +236,21 @@ export function parseTmuaSixWeekPlan(value: unknown): TmuaSixWeekPlan {
     week: positiveInteger(week.week, "weeklyPlan.week"),
     titleZh: text(week.titleZh, "weeklyPlan.titleZh"),
     titleEn: text(week.titleEn, "weeklyPlan.titleEn"),
+    purposeEn: text(week.purposeEn, "weeklyPlan.purposeEn"),
     purposeZh: text(week.purposeZh, "weeklyPlan.purposeZh"),
+    targetHoursEn: text(week.targetHoursEn, "weeklyPlan.targetHoursEn"),
     targetHours: text(week.targetHours, "weeklyPlan.targetHours"),
     sessions: objectList(week.sessions, "weeklyPlan.sessions", (session) => ({
       day: text(session.day, "weeklyPlan.sessions.day"),
       minutes: positiveInteger(session.minutes, "weeklyPlan.sessions.minutes"),
+      titleEn: text(session.titleEn, "weeklyPlan.sessions.titleEn"),
       titleZh: text(session.titleZh, "weeklyPlan.sessions.titleZh"),
+      actionsEn: stringList(session.actionsEn, "weeklyPlan.sessions.actionsEn", 2),
       actionsZh: stringList(session.actionsZh, "weeklyPlan.sessions.actionsZh", 2),
+      evidenceEn: text(session.evidenceEn, "weeklyPlan.sessions.evidenceEn"),
       evidenceZh: text(session.evidenceZh, "weeklyPlan.sessions.evidenceZh"),
     }), 5),
+    exitCriteriaEn: stringList(week.exitCriteriaEn, "weeklyPlan.exitCriteriaEn", 2),
     exitCriteriaZh: stringList(week.exitCriteriaZh, "weeklyPlan.exitCriteriaZh", 2),
   }), 6);
 
@@ -221,7 +260,7 @@ export function parseTmuaSixWeekPlan(value: unknown): TmuaSixWeekPlan {
   }
 
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     id: TMUA_SIX_WEEK_PLAN_RESOURCE_ID,
     edition: text(root.edition, "edition"),
     publicationStatus: "published",
@@ -230,11 +269,14 @@ export function parseTmuaSixWeekPlan(value: unknown): TmuaSixWeekPlan {
     subtitleZh: text(root.subtitleZh, "subtitleZh"),
     subtitleEn: text(root.subtitleEn, "subtitleEn"),
     authorship: text(root.authorship, "authorship"),
+    audienceEn: text(root.audienceEn, "audienceEn"),
     audienceZh: text(root.audienceZh, "audienceZh"),
+    rightsNoticeEn: text(root.rightsNoticeEn, "rightsNoticeEn"),
     rightsNotice: text(root.rightsNotice, "rightsNotice"),
     principles: objectList(root.principles, "principles", (principle) => ({
       titleZh: text(principle.titleZh, "principles.titleZh"),
       titleEn: text(principle.titleEn, "principles.titleEn"),
+      bodyEn: text(principle.bodyEn, "principles.bodyEn"),
       bodyZh: text(principle.bodyZh, "principles.bodyZh"),
     }), 4),
     preflight: {
@@ -242,8 +284,11 @@ export function parseTmuaSixWeekPlan(value: unknown): TmuaSixWeekPlan {
       titleEn: text(preflight.titleEn, "preflight.titleEn"),
       steps: objectList(preflight.steps, "preflight.steps", (step) => ({
         minutes: positiveInteger(step.minutes, "preflight.steps.minutes"),
+        actionEn: text(step.actionEn, "preflight.steps.actionEn"),
         actionZh: text(step.actionZh, "preflight.steps.actionZh"),
+        detailEn: text(step.detailEn, "preflight.steps.detailEn"),
         detailZh: text(step.detailZh, "preflight.steps.detailZh"),
+        evidenceEn: text(step.evidenceEn, "preflight.steps.evidenceEn"),
         evidenceZh: text(step.evidenceZh, "preflight.steps.evidenceZh"),
       }), 3),
     },
@@ -252,21 +297,26 @@ export function parseTmuaSixWeekPlan(value: unknown): TmuaSixWeekPlan {
       code: text(errorCode.code, "errorCodebook.code"),
       nameZh: text(errorCode.nameZh, "errorCodebook.nameZh"),
       nameEn: text(errorCode.nameEn, "errorCodebook.nameEn"),
+      signalEn: text(errorCode.signalEn, "errorCodebook.signalEn"),
       signalZh: text(errorCode.signalZh, "errorCodebook.signalZh"),
+      nextActionEn: text(errorCode.nextActionEn, "errorCodebook.nextActionEn"),
       nextActionZh: text(errorCode.nextActionZh, "errorCodebook.nextActionZh"),
     }), 5),
     curriculumAdjustments: objectList(root.curriculumAdjustments, "curriculumAdjustments", (adjustment) => ({
       curriculum: text(adjustment.curriculum, "curriculumAdjustments.curriculum"),
+      guidanceEn: text(adjustment.guidanceEn, "curriculumAdjustments.guidanceEn"),
       guidanceZh: text(adjustment.guidanceZh, "curriculumAdjustments.guidanceZh"),
     }), 4),
     weeklyReview: {
       titleZh: text(weeklyReview.titleZh, "weeklyReview.titleZh"),
       titleEn: text(weeklyReview.titleEn, "weeklyReview.titleEn"),
+      questionsEn: stringList(weeklyReview.questionsEn, "weeklyReview.questionsEn", 6),
       questionsZh: stringList(weeklyReview.questionsZh, "weeklyReview.questionsZh", 6),
     },
     benchmarkBoundary: {
       titleZh: text(benchmarkBoundary.titleZh, "benchmarkBoundary.titleZh"),
       titleEn: text(benchmarkBoundary.titleEn, "benchmarkBoundary.titleEn"),
+      bodyEn: text(benchmarkBoundary.bodyEn, "benchmarkBoundary.bodyEn"),
       bodyZh: text(benchmarkBoundary.bodyZh, "benchmarkBoundary.bodyZh"),
     },
   };
@@ -285,7 +335,7 @@ export function parseTmuaSpecimenP1WorkedExplanations(
 ): TmuaSpecimenP1WorkedExplanations {
   const root = record(value, "TMUA specimen Paper 1 worked explanations");
   if (
-    root.schemaVersion !== 1 ||
+    root.schemaVersion !== 2 ||
     root.id !== TMUA_SPECIMEN_P1_EXPLANATIONS_RESOURCE_ID ||
     root.paperId !== "tmua-specimen-p1" ||
     root.publicationStatus !== "published"
@@ -321,16 +371,22 @@ export function parseTmuaSpecimenP1WorkedExplanations(
       topicEn: text(item.topicEn, `explanations.${index}.topicEn`),
       methodZh: text(item.methodZh, `explanations.${index}.methodZh`),
       methodEn: text(item.methodEn, `explanations.${index}.methodEn`),
+      keyIdeaEn: text(item.keyIdeaEn, `explanations.${index}.keyIdeaEn`),
       keyIdeaZh: text(item.keyIdeaZh, `explanations.${index}.keyIdeaZh`),
       steps: objectList(item.steps, `explanations.${index}.steps`, (step, stepIndex) => ({
+        titleEn: text(step.titleEn, `explanations.${index}.steps.${stepIndex}.titleEn`),
         titleZh: text(step.titleZh, `explanations.${index}.steps.${stepIndex}.titleZh`),
+        bodyEn: text(step.bodyEn, `explanations.${index}.steps.${stepIndex}.bodyEn`),
         bodyZh: text(step.bodyZh, `explanations.${index}.steps.${stepIndex}.bodyZh`),
         ...(step.math === undefined
           ? {}
           : { math: text(step.math, `explanations.${index}.steps.${stepIndex}.math`) }),
       }), 2),
+      conclusionEn: text(item.conclusionEn, `explanations.${index}.conclusionEn`),
       conclusionZh: text(item.conclusionZh, `explanations.${index}.conclusionZh`),
+      trapEn: text(item.trapEn, `explanations.${index}.trapEn`),
       trapZh: text(item.trapZh, `explanations.${index}.trapZh`),
+      nextDrillEn: text(item.nextDrillEn, `explanations.${index}.nextDrillEn`),
       nextDrillZh: text(item.nextDrillZh, `explanations.${index}.nextDrillZh`),
     };
   }, 20);
@@ -348,7 +404,7 @@ export function parseTmuaSpecimenP1WorkedExplanations(
   }
 
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     id: TMUA_SPECIMEN_P1_EXPLANATIONS_RESOURCE_ID,
     paperId: "tmua-specimen-p1",
     edition: text(root.edition, "edition"),
@@ -357,7 +413,9 @@ export function parseTmuaSpecimenP1WorkedExplanations(
     titleEn: text(root.titleEn, "titleEn"),
     subtitleZh: text(root.subtitleZh, "subtitleZh"),
     subtitleEn: text(root.subtitleEn, "subtitleEn"),
+    authorshipEn: text(root.authorshipEn, "authorshipEn"),
     authorship: text(root.authorship, "authorship"),
+    rightsNoticeEn: text(root.rightsNoticeEn, "rightsNoticeEn"),
     rightsNotice: text(root.rightsNotice, "rightsNotice"),
     sourceEvidence: {
       questionSha256: sha256(sourceEvidence.questionSha256, "sourceEvidence.questionSha256"),
@@ -380,6 +438,9 @@ export function parseEntitledContentPayload(
   }
   if (resourceId === TMUA_SPECIMEN_P1_EXPLANATIONS_RESOURCE_ID) {
     return parseTmuaSpecimenP1WorkedExplanations(value);
+  }
+  if (resourceId === ESAT_ADVANCED_NOTES_RESOURCE_ID || resourceId === TARA_ADVANCED_NOTES_RESOURCE_ID) {
+    return parseAdvancedReviewNotes(value);
   }
   throw new Error("当前版本尚不能显示这份资料");
 }

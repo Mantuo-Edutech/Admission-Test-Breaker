@@ -29,6 +29,7 @@ import { ESAT_KNOWLEDGE_UNITS } from "../../catalog/esat-plan.js";
 import { reviewContentProductsForPractice } from "../../library/content-product-registry.js";
 import { WechatAccessDialog } from "../../service-bridge/components/WechatAccessDialog.js";
 import type { ProductFunnelExamId } from "../../product-funnel/domain.js";
+import { EnglishFirstParagraph, EnglishFirstText } from "../../notes/components/EnglishFirstText.js";
 
 interface ResultsPageProps {
   services: AppServices;
@@ -487,26 +488,26 @@ export function ResultsPage({ services }: ResultsPageProps) {
               {deepReview.kind === "available" ? <UnlockKeyhole aria-hidden="true" /> : <LockKeyhole aria-hidden="true" />}
               <div>
                 <p>{deepReview.kind === "available"
-                  ? `${explanationMetric}逐题深度解析已打开`
+                  ? <EnglishFirstText english={`${deepReview.payload.explanations.length} worked explanations unlocked`} chinese={`${explanationMetric}逐题深度解析已打开`} />
                   : deepReview.kind === "loading"
-                    ? "正在核对逐题解析权限"
+                    ? <EnglishFirstText english="Checking worked-explanation access" chinese="正在核对逐题解析权限" />
                     : deepReview.kind === "error" && deepReview.reason !== "service"
-                      ? "逐题解析暂时无法读取"
+                      ? <EnglishFirstText english="Worked explanations are temporarily unavailable" chinese="逐题解析暂时无法读取" />
                       : deepReviewProduct === undefined
-                        ? "逐题解析暂时不可用"
-                        : `${deepReviewProduct.title.zh}已经可用`}</p>
-                <span>{deepReview.kind === "available"
-                  ? `${deepReview.payload.subtitleZh}。基础答案仍然免费。`
+                        ? <EnglishFirstText english="Worked explanations are temporarily unavailable" chinese="逐题解析暂时不可用" />
+                        : <EnglishFirstText english={`${deepReviewProduct.title.en} is available`} chinese={`${deepReviewProduct.title.zh}已经可用`} />}</p>
+                <div className="deep-review-access__description">{deepReview.kind === "available"
+                  ? <EnglishFirstParagraph english={`${deepReview.payload.subtitleEn}. Core answers remain free.`} chinese={`${deepReview.payload.subtitleZh}。基础答案仍然免费。`} />
                   : deepReview.kind === "error"
                     ? deepReview.message
-                    : `${deepReviewProduct?.summary ?? ""} 题目、正确答案、得分和用时始终免费。`}</span>
+                    : <EnglishFirstParagraph english="Questions, correct answers, scores and timings remain free." chinese={`${deepReviewProduct?.summary ?? ""} 题目、正确答案、得分和用时始终免费。`} />}</div>
               </div>
               {(deepReview.kind === "locked" ||
                 deepReview.kind === "unauthenticated" ||
                 (deepReview.kind === "error" && deepReview.reason === "service")) && (
                 <div className="deep-review-access__actions">
-                  <button className="button button--primary" type="button" onClick={() => setWechatOpen(true)}>联系冰冰获取邀请码</button>
-                  <Link className="button button--secondary" to={accessHref}>已有邀请码</Link>
+                  <button className="button button--primary" type="button" onClick={() => setWechatOpen(true)}><EnglishFirstText english="Get an invitation code" chinese="联系冰冰获取邀请码" /></button>
+                  <Link className="button button--secondary" to={accessHref}><EnglishFirstText english="I have a code" chinese="已有邀请码" /></Link>
                 </div>
               )}
             </aside>

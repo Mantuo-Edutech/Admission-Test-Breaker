@@ -40,6 +40,17 @@ describe("multi-exam Review Notes model", () => {
     expect(examples).toHaveLength(2);
     expect(examples.every((example) => example.titleZh.includes("原创例题"))).toBe(true);
     expect(recall).toHaveLength(6);
+    expect(ESAT_MATHEMATICS_REVIEW_NOTES.schemaVersion).toBe(2);
+    expect(methods.every((method) => method.signalEn && method.methodEn && method.checkEn)).toBe(true);
+    expect(examples.every((example) => example.steps.every((step) => step.labelEn && step.bodyEn))).toBe(true);
+  });
+
+  it("rejects a version-two document whose English teaching layer is incomplete", () => {
+    const invalid = structuredClone(ESAT_MATHEMATICS_REVIEW_NOTES) as unknown as {
+      modules: { methods: { signalEn: string }[] }[];
+    };
+    invalid.modules[0]!.methods[0]!.signalEn = "";
+    expect(() => validateReviewNotesDocument(invalid)).toThrow(/English-first review notes module is incomplete/u);
   });
 
   it("pins both official source files while keeping authored content independent", () => {
@@ -86,6 +97,17 @@ describe("multi-exam Review Notes model", () => {
     expect(ESAT_SCIENCE_REVIEW_NOTES.modules.flatMap((module) => module.methods)).toHaveLength(9);
     expect(ESAT_SCIENCE_REVIEW_NOTES.modules.flatMap((module) => module.originalWorkedExamples)).toHaveLength(3);
     expect(ESAT_SCIENCE_REVIEW_NOTES.modules.flatMap((module) => module.activeRecall)).toHaveLength(9);
+    expect(ESAT_SCIENCE_REVIEW_NOTES.schemaVersion).toBe(2);
+    expect(
+      ESAT_SCIENCE_REVIEW_NOTES.modules
+        .flatMap((module) => module.methods)
+        .every((method) => method.signalEn && method.methodEn && method.checkEn),
+    ).toBe(true);
+    expect(
+      ESAT_SCIENCE_REVIEW_NOTES.modules
+        .flatMap((module) => module.originalWorkedExamples)
+        .every((example) => example.steps.every((step) => step.labelEn && step.bodyEn)),
+    ).toBe(true);
   });
 
   it("pins all three science guides and keeps their teaching independently authored", () => {
@@ -119,6 +141,17 @@ describe("multi-exam Review Notes model", () => {
     expect(TARA_REVIEW_NOTES.modules.flatMap((module) => module.methods)).toHaveLength(12);
     expect(TARA_REVIEW_NOTES.modules.flatMap((module) => module.originalWorkedExamples)).toHaveLength(4);
     expect(TARA_REVIEW_NOTES.modules.flatMap((module) => module.activeRecall)).toHaveLength(12);
+    expect(TARA_REVIEW_NOTES.schemaVersion).toBe(2);
+    expect(
+      TARA_REVIEW_NOTES.modules
+        .flatMap((module) => module.methods)
+        .every((method) => method.signalEn && method.methodEn && method.checkEn),
+    ).toBe(true);
+    expect(
+      TARA_REVIEW_NOTES.modules
+        .flatMap((module) => module.originalWorkedExamples)
+        .every((example) => example.steps.every((step) => step.labelEn && step.bodyEn)),
+    ).toBe(true);
   });
 
   it("pins the TARA specification and guide while keeping teaching original", () => {
@@ -149,6 +182,17 @@ describe("multi-exam Review Notes model", () => {
     expect(LNAT_REVIEW_NOTES.modules.flatMap((module) => module.methods)).toHaveLength(12);
     expect(LNAT_REVIEW_NOTES.modules.flatMap((module) => module.originalWorkedExamples)).toHaveLength(4);
     expect(LNAT_REVIEW_NOTES.modules.flatMap((module) => module.activeRecall)).toHaveLength(12);
+    expect(LNAT_REVIEW_NOTES.schemaVersion).toBe(2);
+    expect(
+      LNAT_REVIEW_NOTES.modules
+        .flatMap((module) => module.methods)
+        .every((method) => method.signalEn && method.methodEn && method.checkEn),
+    ).toBe(true);
+    expect(
+      LNAT_REVIEW_NOTES.modules
+        .flatMap((module) => module.originalWorkedExamples)
+        .every((example) => example.steps.every((step) => step.labelEn && step.bodyEn)),
+    ).toBe(true);
   });
 
   it("pins both LNAT official guidance files while keeping teaching original", () => {
@@ -180,6 +224,17 @@ describe("multi-exam Review Notes model", () => {
     expect(UCAT_REVIEW_NOTES.modules.flatMap((module) => module.methods)).toHaveLength(15);
     expect(UCAT_REVIEW_NOTES.modules.flatMap((module) => module.originalWorkedExamples)).toHaveLength(5);
     expect(UCAT_REVIEW_NOTES.modules.flatMap((module) => module.activeRecall)).toHaveLength(15);
+    expect(UCAT_REVIEW_NOTES.schemaVersion).toBe(2);
+    expect(
+      UCAT_REVIEW_NOTES.modules
+        .flatMap((module) => module.methods)
+        .every((method) => method.signalEn && method.methodEn && method.checkEn),
+    ).toBe(true);
+    expect(
+      UCAT_REVIEW_NOTES.modules
+        .flatMap((module) => module.originalWorkedExamples)
+        .every((example) => example.steps.every((step) => step.labelEn && step.bodyEn)),
+    ).toBe(true);
   });
 
   it("pins current UCAT format, tools and preparation sources while keeping teaching original", () => {
