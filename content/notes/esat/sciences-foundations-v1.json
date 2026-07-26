@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "esat-sciences-foundations-v1",
   "version": "0.1.0",
   "publicationStatus": "teaching-preview",
@@ -10,11 +10,13 @@
   "subtitleZh": "按申请专业只显示你实际需要的 Physics、Chemistry 和 Biology 知识单元、课程差距与第一轮复习方法。",
   "subtitleEn": "A programme-aware starting review for the Physics, Chemistry and Biology modules you actually need.",
   "authorship": "满托教研 · MANTUO ORIGINAL",
+  "rightsNoticeEn": "This resource was independently written by Mantou. The official Content Specification and module guides are used only to verify exam facts, scope and terminology; no official questions, examples, exercises or explanations are reproduced.",
   "rightsNotice": "本资料由满托独立撰写。官方 Content Specification 与三份模块 Guide 只用于核对考试事实、知识范围和术语；不复制官方题目、例题、练习或讲解。",
   "scope": {
     "includedZh": "Physics、Chemistry、Biology 共 35 个一级知识单元；A-Level/IAL、IB、AP 课程桥接；每模块 3 套起题方法、1 道原创逐步例题和 3 组主动回忆。页面按本人已选择的专业模块过滤。",
     "includedEn": "Thirty-five top-level science units, curriculum bridges, nine question methods, three original worked examples and nine active-recall prompts, filtered by the student's programme modules.",
-    "remainingZh": "这不是完整教材或完整模考。每个一级单元仍需扩展成细分知识小节、模块训练集和下载版；独立物理、化学、生物教师，双语术语、权利/相似度、中国学生理解和实机终审仍未完成。"
+    "remainingZh": "完成知识地图后，进入 ESAT 深度策略笔记学习模块化解题流程、完整案例和训练处方，再用在线限时试卷验证 Physics、Chemistry 或 Biology 的真实表现。",
+    "remainingEn": "After the knowledge map, use the ESAT Advanced Strategy Notes for module-specific playbooks, worked cases and training prescriptions, then verify Physics, Chemistry or Biology performance in timed online papers."
   },
   "officialAnchors": [
     {
@@ -23,6 +25,7 @@
       "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/05/03165424/ESAT_Content_Specification.pdf",
       "localPath": "content/official/raw/shared/ESAT_Content_Specification.pdf",
       "sha256": "da9e853ec99cc0befcae5c8871e48eedc5776d7b2db07b8d5d9e2492a01452b3",
+      "usedForEn": "Used to verify the five-module structure, 27 questions in 40 minutes, separate timing, non-calculator rule, scoring and the top-level science scope.",
       "usedForZh": "核对五模块结构、27 题/40 分钟、独立计时、无计算器、计分规则和理科模块一级知识范围。"
     },
     {
@@ -31,6 +34,7 @@
       "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/06/30103558/ESAT_Guide_Physics.pdf",
       "localPath": "content/official/raw/esat/ESAT_Guide_Physics.pdf",
       "sha256": "234651aa05f87112e3455bae420de782683938d8d28950293649a8352dc4729e",
+      "usedForEn": "Used only to verify the P1–P7 Physics scope and official terminology; all methods, examples and curriculum bridges here are independently written.",
       "usedForZh": "只核对 Physics 的 P1–P7 范围与官方术语；本站方法、例题和课程桥接均为独立创作。"
     },
     {
@@ -39,6 +43,7 @@
       "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/06/25103142/ESAT_GUIDE_Chemistry_June2025.pdf",
       "localPath": "content/official/raw/esat/ESAT_GUIDE_Chemistry_June2025.pdf",
       "sha256": "f1cfbc2ec1c44068526deeaac0b8ef7c87e245259cc89f9ed6b7c9124e359353",
+      "usedForEn": "Used only to verify the C1–C17 Chemistry scope and official terminology; no official examples or explanations are used.",
       "usedForZh": "只核对 Chemistry 的 C1–C17 范围与官方术语；不使用官方例题或讲解。"
     },
     {
@@ -47,6 +52,7 @@
       "sourceUrl": "https://uat-wp.s3.eu-west-2.amazonaws.com/wp-content/uploads/2025/07/06120052/ESAT_Guide_Biology_June_2025.pdf",
       "localPath": "content/official/raw/esat/ESAT_Guide_Biology_June_2025.pdf",
       "sha256": "cd5fd84f56ef0e55722841fcbdacb86eec15b0eddd16a05ea56c5d902d9e125b",
+      "usedForEn": "Used only to verify the B1–B11 Biology scope and official terminology; no official question wording is reproduced.",
       "usedForZh": "只核对 Biology 的 B1–B11 范围与官方术语；不复制官方题面。"
     }
   ],
@@ -87,43 +93,70 @@
       "curriculum": "A-Level / International A-Level Sciences",
       "status": "strong-start",
       "statusZh": "对应科目通常覆盖较多",
+      "likelyCoveredEn": [
+        "Core concepts and calculations from the corresponding A-Level Physics, Chemistry or Biology course",
+        "Graphs, experimental variables, units, standard equations and scientific terminology"
+      ],
       "likelyCoveredZh": [
         "对应 A-Level Physics、Chemistry 或 Biology 的核心概念与计算",
         "图表、实验变量、单位、标准方程和科学术语"
+      ],
+      "confirmEn": [
+        "Whether the student's exact exam board covers every ESAT top-level unit, including cross-topic and GCSE/IGCSE material",
+        "Whether knowledge can be recalled without a calculator under a 40-minute mixed-topic multiple-choice format, not only in chapter-based homework"
       ],
       "confirmZh": [
         "本人实际考试局是否包含全部 ESAT 一级单元，尤其跨章节和 GCSE/IGCSE 回溯内容",
         "能否在无计算器、40 分钟和混合主题选项下快速调用，而不只是在分章节作业中会做"
       ],
-      "firstActionZh": "先按本人需要的模块逐项核对知识单元，再把不熟的单元与限时调用问题分开记录。"
+      "firstActionZh": "先按本人需要的模块逐项核对知识单元，再把不熟的单元与限时调用问题分开记录。",
+      "firstActionEn": "Audit the units in each required module, then record unfamiliar content separately from knowledge that is understood but slow to retrieve."
     },
     {
       "curriculum": "IB Diploma Sciences",
       "status": "partial",
       "statusZh": "HL/SL 与选科决定覆盖",
+      "likelyCoveredEn": [
+        "HL courses usually provide a strong starting point in core principles, data analysis and experimental evaluation",
+        "Cross-topic explanations, graph trends and evidence-based reasoning usually transfer well"
+      ],
       "likelyCoveredZh": [
         "HL 通常对核心原理、数据分析和实验评价有较强起点",
         "跨主题解释、图像趋势和证据判断通常可以直接迁移"
+      ],
+      "confirmEn": [
+        "Whether the student's SL/HL course and syllabus edition correspond to the exact ESAT units",
+        "Whether UK-curriculum reactions, qualitative tests, radioactivity, plant transport or inheritance diagrams have direct curriculum evidence"
       ],
       "confirmZh": [
         "SL 或旧/新 syllabus 与 ESAT 的具体单位是否完全对应",
         "英国课程常用反应、定性检验、放射性、植物运输或遗传图解是否有直接课程证据"
       ],
-      "firstActionZh": "不要按 HL/SL 标签直接判定；用 35 单元清单找到没有课程证据或只部分覆盖的条目。"
+      "firstActionZh": "不要按 HL/SL 标签直接判定；用 35 单元清单找到没有课程证据或只部分覆盖的条目。",
+      "firstActionEn": "Do not infer readiness from the HL or SL label alone; use the 35-unit checklist to find units with partial or no curriculum evidence."
     },
     {
       "curriculum": "AP Physics / Chemistry / Biology",
       "status": "partial",
       "statusZh": "需要按具体 AP 组合核对",
+      "likelyCoveredEn": [
+        "AP Chemistry and AP Biology can cover substantial core principles and data reasoning",
+        "A combination of AP Physics 1, 2 and C courses can cover different parts of mechanics, electromagnetism, waves and thermal physics"
+      ],
       "likelyCoveredZh": [
         "AP Chemistry 与 AP Biology 可覆盖大量核心原理和数据推理",
         "AP Physics 1/2/C 的组合可覆盖不同部分的力学、电磁、波与热学"
+      ],
+      "confirmEn": [
+        "A single AP Physics course rarely demonstrates coverage of all seven Physics units",
+        "Whether qualitative chemistry, periodic trends, metal extraction, plant physiology and human systems were taught in the student's courses"
       ],
       "confirmZh": [
         "单一 AP Physics 课程通常不能证明 Physics 七个单元全部覆盖",
         "化学定性检验、族趋势、金属提取，以及植物生理和人体系统是否在本人课程中学到"
       ],
-      "firstActionZh": "先按具体 AP 科目组合建立证据，不把一门 AP 课程等同于整个 ESAT 模块。"
+      "firstActionZh": "先按具体 AP 科目组合建立证据，不把一门 AP 课程等同于整个 ESAT 模块。",
+      "firstActionEn": "Build evidence from the student's exact AP combination; never treat one AP subject as proof of coverage for an entire ESAT module."
     }
   ],
   "modules": [
@@ -132,7 +165,13 @@
       "number": "01",
       "titleZh": "Physics：模型、单位与证据",
       "titleEn": "Physics — Models, Units and Evidence",
+      "summaryEn": "Physics is not about memorising more formulae. It is about turning words, diagrams, units and conservation laws into one usable model, then rejecting impossible options with limits and orders of magnitude.",
       "summaryZh": "Physics 的关键不是背更多公式，而是把文字、图、单位和守恒关系快速连成同一个模型，并用边界和数量级排除不可能的选项。",
+      "learningOutcomesEn": [
+        "Audit curriculum evidence and gaps across P1–P7",
+        "Select the minimum sufficient equation from a diagram or written situation",
+        "Check an answer through units, direction, limiting behaviour and order of magnitude"
+      ],
       "learningOutcomes": [
         "逐项识别 P1–P7 的课程证据与缺口",
         "从图示或文字选择最小充分方程",
@@ -151,22 +190,31 @@
         {
           "nameZh": "先画系统边界",
           "nameEn": "DEFINE THE SYSTEM",
+          "signalEn": "The question contains several objects, branches, energy transfers or initial and final states.",
           "signalZh": "题目同时出现多个物体、支路、能量转移或前后状态。",
+          "methodEn": "Mark the system under study, known directions and initial and final states before choosing a conservation or connection rule.",
           "methodZh": "先标清研究对象、已知方向和初末状态，再选择守恒或连接关系。",
+          "checkEn": "Every quantity in the equation must belong to the same system and the same time interval.",
           "checkZh": "方程中的每个量必须属于同一系统和同一时间区间。"
         },
         {
           "nameZh": "单位先于代数",
           "nameEn": "UNITS BEFORE ALGEBRA",
+          "signalEn": "Values contain prefixes or compound units, or the requested answer requires a conversion.",
           "signalZh": "数值带前缀、复合单位或题目要求换算输出。",
+          "methodEn": "Write the target unit and complete necessary conversions before substitution. In a non-calculator paper, simplify factors before multiplying.",
           "methodZh": "先写目标单位和必要换算，再代入最少方程；无计算器时优先约分。",
+          "checkEn": "Dimensions, order of magnitude, sign and direction must all be physically sensible.",
           "checkZh": "答案量纲、数量级、正负和方向必须同时合理。"
         },
         {
           "nameZh": "用极限排除",
           "nameEn": "TEST THE LIMIT",
+          "signalEn": "The question asks how a changing parameter affects a graph or quantity, and options differ mainly in trend.",
           "signalZh": "题目问参数增大、图像变化或四个选项只在趋势上不同。",
+          "methodEn": "Imagine the variable approaching zero or becoming very large, predict the physical outcome, then compare that prediction with the options.",
           "methodZh": "把变量想成接近零或很大，判断物理量应趋向什么，再比较选项。",
+          "checkEn": "The predicted trend must respect conservation, steady-state behaviour and known boundaries.",
           "checkZh": "趋势不能违反守恒、稳定状态或已知边界。"
         }
       ],
@@ -179,22 +227,30 @@
           "problemEn": "A 12 V supply is connected to 6-ohm and 4-ohm resistors in parallel. What total current does the supply provide?",
           "steps": [
             {
+              "labelEn": "Identify the connection",
               "labelZh": "确认连接关系",
+              "bodyEn": "Parallel branches have the same potential difference, so each resistor has 12 V across it.",
               "bodyZh": "并联支路两端电压相同，因此两个电阻各自承受 12 V。",
               "math": { "tex": "V_1=V_2=12\\text{ V}", "text": "The voltage across each branch is 12 volts" }
             },
             {
+              "labelEn": "Find each branch current",
               "labelZh": "分别求支路电流",
+              "bodyEn": "Apply I = V/R to each branch separately.",
               "bodyZh": "对每个支路使用 I=V/R。",
               "math": { "tex": "I_1=\\frac{12}{6}=2\\text{ A},\\qquad I_2=\\frac{12}{4}=3\\text{ A}", "text": "The branch currents are 2 amperes and 3 amperes" }
             },
             {
+              "labelEn": "Combine currents at the junction",
               "labelZh": "在节点合并",
+              "bodyEn": "The supply current is the sum of the currents entering the two branches.",
               "bodyZh": "电源总电流等于流入两个支路的电流之和。",
               "math": { "tex": "I_{\\mathrm{total}}=I_1+I_2=5\\text{ A}", "text": "The total current is 5 amperes" }
             }
           ],
+          "answerEn": "The total current is 5 A.",
           "answerZh": "总电流为 5 A。",
+          "trapEn": "Adding 6 ohms and 4 ohms assumes a series circuit. Identify the connection before deciding which quantity is common to both components.",
           "trapZh": "把 6 Ω 与 4 Ω 直接相加属于串联模型；先判断连接关系，再选择电压或电流的共同量。"
         }
       ],
@@ -209,7 +265,13 @@
       "number": "02",
       "titleZh": "Chemistry：粒子、比例与证据链",
       "titleEn": "Chemistry — Particles, Ratios and Evidence",
+      "summaryEn": "Chemistry questions move between macroscopic observations, particle models, equation ratios and experimental evidence. Establish the reaction and its evidence before calculating moles or charge.",
       "summaryZh": "Chemistry 需要在宏观现象、粒子模型、方程比例与实验观察之间切换。先确定反应身份和证据，再做摩尔或电荷计算。",
+      "learningOutcomesEn": [
+        "Audit curriculum evidence and gaps across C1–C17",
+        "Use particles, bonding and electron transfer to explain properties and reactions",
+        "Connect equation coefficients, units and observations into a complete evidence chain"
+      ],
       "learningOutcomes": [
         "逐项识别 C1–C17 的课程证据与缺口",
         "用粒子、键合和电子变化解释性质与反应",
@@ -238,22 +300,31 @@
         {
           "nameZh": "先写反应身份",
           "nameEn": "IDENTIFY THE REACTION",
+          "signalEn": "The question combines substance names, observations, conditions or an incomplete equation.",
           "signalZh": "题目同时给出物质名称、观察、条件或不完整方程。",
+          "methodEn": "Identify the reaction type and particle or electron change before completing formulae, states and coefficients.",
           "methodZh": "先判断反应类型、粒子或电子变化，再补化学式、状态和系数。",
+          "checkEn": "Atoms, total charge and every stated observation must be conserved or mutually consistent.",
           "checkZh": "元素、总电荷和题目观察必须全部守恒或相容。"
         },
         {
           "nameZh": "摩尔是中间层",
           "nameEn": "USE MOLES AS THE BRIDGE",
+          "signalEn": "Mass, gas volume, concentration or particle number must be compared through a chemical equation.",
           "signalZh": "质量、气体体积、浓度或粒子数需要通过方程比较。",
+          "methodEn": "Convert the input quantity to moles, apply the equation ratio, then convert the resulting moles to the requested quantity.",
           "methodZh": "输入量先变成摩尔，按方程系数转换，再变成目标量。",
+          "checkEn": "Stoichiometric coefficients compare moles, not grams, cubic decimetres or concentrations directly.",
           "checkZh": "系数比作用于摩尔，不直接作用于克、立方分米或浓度。"
         },
         {
           "nameZh": "结构解释性质",
           "nameEn": "LINK STRUCTURE TO PROPERTY",
+          "signalEn": "The question asks about melting point, conductivity, solubility, hardness or a reaction trend.",
           "signalZh": "题目问熔点、导电、溶解、硬度或反应趋势。",
+          "methodEn": "State the particles, arrangement or bonding, relevant forces or mobile particles, then derive the macroscopic property.",
           "methodZh": "依次写粒子种类、排列/键合、可移动粒子或作用力，再导出宏观性质。",
+          "checkEn": "The explanation must name the particle or force responsible for the property, rather than repeating the observation.",
           "checkZh": "解释必须指出改变性质的具体粒子或作用力，不能只重复现象。"
         }
       ],
@@ -266,22 +337,30 @@
           "problemEn": "Five grams of calcium carbonate reacts completely with excess hydrochloric acid. Using 100 grams per mole for calcium carbonate and 24 cubic decimetres per mole of gas, find the carbon dioxide volume.",
           "steps": [
             {
+              "labelEn": "Convert mass to moles",
               "labelZh": "质量变摩尔",
+              "bodyEn": "Divide the given mass by the molar mass.",
               "bodyZh": "把给定质量除以摩尔质量。",
               "math": { "tex": "n(\\mathrm{CaCO_3})=\\frac{5.00}{100}=0.0500\\text{ mol}", "text": "The amount of calcium carbonate is 0.0500 moles" }
             },
             {
+              "labelEn": "Apply the equation ratio",
               "labelZh": "使用方程比例",
+              "bodyEn": "One mole of calcium carbonate produces one mole of carbon dioxide, so the carbon dioxide amount is also 0.0500 mol.",
               "bodyZh": "每 1 mol CaCO₃ 生成 1 mol CO₂，因此二氧化碳也是 0.0500 mol。",
               "math": { "tex": "n(\\mathrm{CO_2})=0.0500\\text{ mol}", "text": "The amount of carbon dioxide is 0.0500 moles" }
             },
             {
+              "labelEn": "Convert moles to the target volume",
               "labelZh": "摩尔变目标体积",
+              "bodyEn": "Use the molar gas volume at room temperature supplied in the question.",
               "bodyZh": "使用题目给定的室温摩尔气体体积。",
               "math": { "tex": "V=0.0500\\times24=1.20\\text{ dm}^3", "text": "The gas volume is 1.20 cubic decimetres" }
             }
           ],
+          "answerEn": "The reaction produces 1.20 dm³ of carbon dioxide.",
           "answerZh": "生成 1.20 dm³ CO₂。",
+          "trapEn": "Equation coefficients compare moles. Multiplying 5.00 g directly by 24 skips both the unit conversion and the reaction ratio.",
           "trapZh": "方程系数比连接的是摩尔；把 5.00 g 直接乘 24 会跳过单位和反应比例。"
         }
       ],
@@ -296,7 +375,13 @@
       "number": "03",
       "titleZh": "Biology：层级、机制与数据",
       "titleEn": "Biology — Levels, Mechanisms and Data",
+      "summaryEn": "Biology questions often combine cellular mechanisms, organ systems, inheritance probabilities and experimental data. Identify the biological level first, then trace the shortest valid causal chain.",
       "summaryZh": "Biology 题常把细胞机制、器官系统、遗传概率和实验数据放在同一道题中。先确定讨论层级，再沿因果链解释变化。",
+      "learningOutcomesEn": [
+        "Audit curriculum evidence and gaps across B1–B11",
+        "Distinguish cellular, tissue, organ, organism and ecosystem levels",
+        "Use controls, variables, proportions and causal mechanisms to interpret data"
+      ],
       "learningOutcomes": [
         "逐项识别 B1–B11 的课程证据与缺口",
         "区分细胞、组织、器官、个体和生态层级",
@@ -319,22 +404,31 @@
         {
           "nameZh": "先确定生物层级",
           "nameEn": "IDENTIFY THE LEVEL",
+          "signalEn": "The question combines molecular, cellular, organ, organism or population descriptions.",
           "signalZh": "题目同时出现分子、细胞、器官、个体或种群表述。",
+          "methodEn": "Circle the level at which the direct change occurs, then state how it affects the level immediately above or below it.",
           "methodZh": "圈出直接变化发生的层级，再写它怎样影响上一级或下一级。",
+          "checkEn": "Do not use an organism's purpose to explain a molecular mechanism, and do not turn correlation into causation.",
           "checkZh": "不要用个体目的解释分子机制，也不要把相关性直接写成因果。"
         },
         {
           "nameZh": "沿机制写因果链",
           "nameEn": "BUILD THE CAUSAL CHAIN",
+          "signalEn": "The question asks why a change produces a phenotype, rate or system-level result.",
           "signalZh": "题目问某变化为什么导致某表型、速率或系统结果。",
+          "methodEn": "Write the shortest chain from stimulus or change, through the direct mechanism and intermediate result, to the observable outcome.",
           "methodZh": "按刺激/变化 → 直接机制 → 中间结果 → 可观察结果写最短链。",
+          "checkEn": "Every arrow in the chain must be supported by a taught process or structural relationship.",
           "checkZh": "每个箭头都必须能用课程中的过程或结构解释。"
         },
         {
           "nameZh": "实验先查对照",
           "nameEn": "CHECK THE CONTROL",
+          "signalEn": "The question presents a table, graph, repeat measurements or asks for an evaluation of a conclusion.",
           "signalZh": "题目给表格、图像、重复测量或要求评价结论。",
+          "methodEn": "Identify the independent variable, dependent variable, controlled variables, control and repeats before comparing proportions, trends and anomalies.",
           "methodZh": "先找自变量、因变量、控制变量、对照和重复，再比较比例、趋势与异常。",
+          "checkEn": "The conclusion must not extend beyond the treatment, sample and variables that were actually measured.",
           "checkZh": "结论范围不能超过实验处理、样本和实际测量变量。"
         }
       ],
@@ -347,22 +441,30 @@
           "problemEn": "An autosomal recessive trait is caused by allele a. One parent is Aa and the other is aa. What is the probability that one child shows the trait?",
           "steps": [
             {
+              "labelEn": "List the gametes",
               "labelZh": "先写配子",
+              "bodyEn": "The Aa parent produces A and a gametes with equal probability; the aa parent can produce only a gametes.",
               "bodyZh": "Aa 亲本产生 A 或 a 配子，概率各一半；aa 亲本只能产生 a 配子。",
               "math": { "tex": "Aa\\rightarrow \\tfrac12 A+\\tfrac12 a,\\qquad aa\\rightarrow a", "text": "The first parent produces A or a equally; the second produces only a" }
             },
             {
+              "labelEn": "Combine offspring genotypes",
               "labelZh": "组合后代基因型",
+              "bodyEn": "The possible offspring are Aa and aa, each with probability one half.",
               "bodyZh": "可能后代为 Aa 或 aa，概率各一半。",
               "math": { "tex": "P(Aa)=\\tfrac12,\\qquad P(aa)=\\tfrac12", "text": "The probabilities of Aa and aa are each one half" }
             },
             {
+              "labelEn": "Map genotype to phenotype",
               "labelZh": "从基因型到表型",
+              "bodyEn": "The recessive phenotype appears only in an aa individual.",
               "bodyZh": "隐性性状只在 aa 时表现。",
               "math": { "tex": "P(\\text{recessive phenotype})=P(aa)=\\tfrac12", "text": "The recessive phenotype probability is one half" }
             }
           ],
+          "answerEn": "The probability is 1/2, or 50%.",
           "answerZh": "概率为 1/2，即 50%。",
+          "trapEn": "An aa parent does not make every child recessive. The allele contributed by the other parent still determines half of the combinations.",
           "trapZh": "不能因为一个亲本是 aa 就判定所有后代都表现隐性；另一个亲本提供的等位基因仍决定一半组合。"
         }
       ],
@@ -377,21 +479,25 @@
     {
       "stepZh": "按专业锁定模块",
       "stepEn": "FILTER BY PROGRAMME",
+      "actionEn": "Study only the Physics, Chemistry or Biology modules required by the chosen programme, rather than copying another student's combination.",
       "actionZh": "只复习申请专业实际要求的 Physics、Chemistry 或 Biology，不按别人组合浪费时间。"
     },
     {
       "stepZh": "按课程核对证据",
       "stepEn": "MAP COURSE EVIDENCE",
+      "actionEn": "Mark each top-level unit as covered, partially covered or unsupported by the student's course. A course label is not evidence of mastery.",
       "actionZh": "把每个一级单元标为课程已覆盖、部分覆盖或没有证据；课程标签本身不等于掌握。"
     },
     {
       "stepZh": "主动回忆后练习",
       "stepEn": "RECALL THEN PRACTISE",
+      "actionEn": "Close the notes and answer the recall prompts before taking a short module diagnostic. Record whether each miss came from content, model selection or timed retrieval.",
       "actionZh": "合上笔记回答主动回忆，再进入对应模块短诊断；记录是知识缺口、模型选择还是限时调用问题。"
     },
     {
       "stepZh": "用作答证据更新",
       "stepEn": "UPDATE FROM EVIDENCE",
+      "actionEn": "Update the next review cycle from actual answers, time and answer changes; never infer a score or admission probability directly from curriculum background.",
       "actionZh": "根据真实作答、用时和改答更新下一轮计划，不从课程背景直接推断分数或录取概率。"
     }
   ]

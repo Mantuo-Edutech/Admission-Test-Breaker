@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "2026-07-23.1",
+  "revision": "2026-07-26.1",
   "policy": {
     "everyContentFileMustHaveLifecycle": true,
     "sourceAssetIsNotAutomaticallyAProduct": true,
@@ -107,7 +107,7 @@
       "classification": "published-product-source",
       "paths": [],
       "pathPrefixes": ["content/notes/esat/"],
-      "productIds": ["esat-mathematics-review-notes-v1", "esat-science-review-notes-v1"],
+      "productIds": ["esat-mathematics-review-notes-v1", "esat-science-review-notes-v1", "esat-advanced-notes-v1"],
       "publicDelivery": true
     },
     {
@@ -115,7 +115,7 @@
       "classification": "published-product-source",
       "paths": [],
       "pathPrefixes": ["content/notes/tara/"],
-      "productIds": ["tara-review-notes-v1"],
+      "productIds": ["tara-review-notes-v1", "tara-advanced-notes-v1"],
       "publicDelivery": true
     },
     {
@@ -193,7 +193,9 @@
         "lnat-exam-guide",
         "ucat-exam-guide",
         "esat-review-notes-v1",
+        "esat-advanced-notes-v1",
         "tara-review-notes-v1",
+        "tara-advanced-notes-v1",
         "lnat-review-notes-v1",
         "ucat-review-notes-v1"
       ],

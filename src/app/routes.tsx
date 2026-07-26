@@ -10,8 +10,12 @@ import {
 import type { AppServices } from "./dependencies.js";
 import { createDefaultAppServices } from "./dependencies.js";
 import { EXAM_CATALOG } from "../features/catalog/exams.js";
-import { PreparationProfileGate } from "../features/preparation-profile/components/PreparationProfileGate.js";
 import { applySiteMetadata } from "./site-metadata.js";
+
+const PreparationProfileGate = lazy(async () => ({
+  default: (await import("../features/preparation-profile/components/PreparationProfileGate.js"))
+    .PreparationProfileGate,
+}));
 
 const LandingPage = lazy(async () => ({
   default: (await import("../features/practice/pages/LandingPage.js")).LandingPage,
@@ -93,6 +97,14 @@ const UcatReviewNotesPage = lazy(async () => ({
 const TmuaSixWeekPlanPage = lazy(async () => ({
   default: (await import("../features/entitled-content/pages/TmuaSixWeekPlanPage.js"))
     .TmuaSixWeekPlanPage,
+}));
+const EsatAdvancedNotesPage = lazy(async () => ({
+  default: (await import("../features/entitled-content/pages/AdvancedReviewNotesPage.js"))
+    .EsatAdvancedNotesPage,
+}));
+const TaraAdvancedNotesPage = lazy(async () => ({
+  default: (await import("../features/entitled-content/pages/AdvancedReviewNotesPage.js"))
+    .TaraAdvancedNotesPage,
 }));
 const TmuaProfilePage = lazy(async () => ({
   default: (await import("../features/preparation-profile/pages/TmuaProfilePage.js"))
@@ -342,6 +354,10 @@ export function createAppRouter(
       element: <RouteFrame><Suspense fallback={<RouteLoading />}><EsatScienceNotesPage /></Suspense></RouteFrame>,
     },
     {
+      path: "/exams/esat/notes/advanced",
+      element: <RouteFrame><Suspense fallback={<RouteLoading />}><EsatAdvancedNotesPage services={services} /></Suspense></RouteFrame>,
+    },
+    {
       path: "/exams/tara/profile",
       element: <RouteFrame><Suspense fallback={<RouteLoading />}><AssessmentProfilePage examId="tara" services={services} /></Suspense></RouteFrame>,
     },
@@ -384,6 +400,10 @@ export function createAppRouter(
     {
       path: "/exams/tara/notes/foundations",
       element: <RouteFrame><Suspense fallback={<RouteLoading />}><TaraReviewNotesPage services={services} /></Suspense></RouteFrame>,
+    },
+    {
+      path: "/exams/tara/notes/advanced",
+      element: <RouteFrame><Suspense fallback={<RouteLoading />}><PreparationProfileGate services={services}><TaraAdvancedNotesPage services={services} /></PreparationProfileGate></Suspense></RouteFrame>,
     },
     {
       path: "/exams/lnat/resources",

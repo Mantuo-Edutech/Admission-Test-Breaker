@@ -11,11 +11,15 @@ export interface ReviewNotesWorkedExample {
   readonly problemEn: string;
   readonly steps: readonly {
     readonly labelZh: string;
+    readonly labelEn?: string;
     readonly bodyZh: string;
+    readonly bodyEn?: string;
     readonly math?: ReviewNotesFormula;
   }[];
   readonly answerZh: string;
+  readonly answerEn?: string;
   readonly trapZh: string;
+  readonly trapEn?: string;
 }
 
 export interface ReviewNotesModule {
@@ -24,7 +28,9 @@ export interface ReviewNotesModule {
   readonly titleZh: string;
   readonly titleEn: string;
   readonly summaryZh: string;
+  readonly summaryEn?: string;
   readonly learningOutcomes: readonly string[];
+  readonly learningOutcomesEn?: readonly string[];
   readonly knowledgeUnits: readonly {
     readonly id: string;
     readonly code: string;
@@ -35,8 +41,11 @@ export interface ReviewNotesModule {
     readonly nameZh: string;
     readonly nameEn: string;
     readonly signalZh: string;
+    readonly signalEn?: string;
     readonly methodZh: string;
+    readonly methodEn?: string;
     readonly checkZh: string;
+    readonly checkEn?: string;
   }[];
   readonly originalWorkedExamples: readonly ReviewNotesWorkedExample[];
   readonly activeRecall: readonly {
@@ -48,7 +57,7 @@ export interface ReviewNotesModule {
 }
 
 export interface ReviewNotesDocument {
-  readonly schemaVersion: 1;
+  readonly schemaVersion: 1 | 2;
   readonly id: string;
   readonly version: string;
   readonly publicationStatus: "teaching-preview";
@@ -60,10 +69,12 @@ export interface ReviewNotesDocument {
   readonly subtitleEn: string;
   readonly authorship: string;
   readonly rightsNotice: string;
+  readonly rightsNoticeEn?: string;
   readonly scope: {
     readonly includedZh: string;
     readonly includedEn: string;
     readonly remainingZh: string;
+    readonly remainingEn?: string;
   };
   readonly officialAnchors: readonly {
     readonly id: string;
@@ -72,6 +83,7 @@ export interface ReviewNotesDocument {
     readonly localPath: string;
     readonly sha256: string;
     readonly usedForZh: string;
+    readonly usedForEn?: string;
   }[];
   readonly examFacts: readonly {
     readonly labelZh: string;
@@ -84,14 +96,18 @@ export interface ReviewNotesDocument {
     readonly status: "strong-start" | "partial";
     readonly statusZh: string;
     readonly likelyCoveredZh: readonly string[];
+    readonly likelyCoveredEn?: readonly string[];
     readonly confirmZh: readonly string[];
+    readonly confirmEn?: readonly string[];
     readonly firstActionZh: string;
+    readonly firstActionEn?: string;
   }[];
   readonly modules: readonly ReviewNotesModule[];
   readonly reviewWorkflow: readonly {
     readonly stepZh: string;
     readonly stepEn: string;
     readonly actionZh: string;
+    readonly actionEn?: string;
   }[];
 }
 
@@ -107,11 +123,52 @@ function unique(values: readonly string[], label: string): void {
   if (new Set(values).size !== values.length) throw new Error(`${label} must be unique`);
 }
 
+function allNonEmpty(values: readonly string[] | undefined, expectedLength?: number): boolean {
+  return Array.isArray(values) &&
+    (expectedLength === undefined || values.length === expectedLength) &&
+    values.every(nonEmpty);
+}
+
+function validateEnglishFirstContent(candidate: Partial<ReviewNotesDocument>): void {
+  if (
+    !nonEmpty(candidate.rightsNoticeEn) ||
+    !nonEmpty(candidate.scope?.remainingEn) ||
+    candidate.officialAnchors?.some((anchor) => !nonEmpty(anchor.usedForEn)) ||
+    candidate.curriculumBridges?.some((bridge) =>
+      !allNonEmpty(bridge.likelyCoveredEn, bridge.likelyCoveredZh.length) ||
+      !allNonEmpty(bridge.confirmEn, bridge.confirmZh.length) ||
+      !nonEmpty(bridge.firstActionEn)) ||
+    candidate.reviewWorkflow?.some((item) => !nonEmpty(item.actionEn))
+  ) {
+    throw new Error("English-first review notes metadata is incomplete");
+  }
+
+  for (const module of candidate.modules ?? []) {
+    if (
+      !nonEmpty(module.summaryEn) ||
+      !allNonEmpty(module.learningOutcomesEn, module.learningOutcomes.length) ||
+      module.methods.some((method) =>
+        !nonEmpty(method.signalEn) || !nonEmpty(method.methodEn) || !nonEmpty(method.checkEn))
+    ) {
+      throw new Error(`English-first review notes module is incomplete: ${module.id}`);
+    }
+    for (const example of module.originalWorkedExamples) {
+      if (
+        !nonEmpty(example.answerEn) ||
+        !nonEmpty(example.trapEn) ||
+        example.steps.some((step) => !nonEmpty(step.labelEn) || !nonEmpty(step.bodyEn))
+      ) {
+        throw new Error(`English-first review notes example is incomplete: ${example.id}`);
+      }
+    }
+  }
+}
+
 export function validateReviewNotesDocument(value: unknown): ReviewNotesDocument {
   if (!isRecord(value)) throw new Error("Review notes must be an object");
   const candidate = value as unknown as Partial<ReviewNotesDocument>;
   if (
-    candidate.schemaVersion !== 1 ||
+    (candidate.schemaVersion !== 1 && candidate.schemaVersion !== 2) ||
     !nonEmpty(candidate.id) ||
     !/^\d+\.\d+\.\d+$/u.test(candidate.version ?? "") ||
     candidate.publicationStatus !== "teaching-preview" ||
@@ -175,6 +232,9 @@ export function validateReviewNotesDocument(value: unknown): ReviewNotesDocument
   if (!nonEmpty(candidate.scope?.remainingZh) || !nonEmpty(candidate.rightsNotice)) {
     throw new Error("Review notes need an explicit publication boundary");
   }
+
+
+  if (candidate.schemaVersion === 2) validateEnglishFirstContent(candidate);
 
   return candidate as ReviewNotesDocument;
 }

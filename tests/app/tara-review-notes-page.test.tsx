@@ -44,7 +44,7 @@ describe("TARA review notes page", () => {
   it("requires the student's TARA profile before showing notes", async () => {
     render(<RouterProvider router={createAppRouter(["/exams/tara/notes/foundations"], services())} />);
 
-    expect(await screen.findByRole("heading", { level: 1, name: "请先填写 TARA 背景信息" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { level: 1, name: /Complete your TARA profile first.*请先填写 TARA 背景信息/u })).toBeInTheDocument();
   });
 
   it("renders all four modules, 21 units and original teaching after the profile", async () => {
@@ -55,21 +55,23 @@ describe("TARA review notes page", () => {
     );
 
     expect(await screen.findByText("TARA Reasoning and Writing Starting Review Notes", {
-      selector: "h1 span",
+      selector: "h1 .english-first-text__primary",
     })).toBeInTheDocument();
     expect(container.querySelectorAll(".review-notes-module")).toHaveLength(4);
     expect(container.querySelectorAll(".review-notes-units li")).toHaveLength(21);
     expect(container.querySelectorAll(".review-notes-example")).toHaveLength(4);
     expect(container.querySelectorAll(".review-notes-recall details")).toHaveLength(12);
-    expect(screen.getByRole("link", { name: "查看我的起点定位" })).toHaveAttribute(
+    expect(screen.getByText(/The task is not to decide whether an argument agrees with common sense/u)).toHaveAttribute("lang", "en");
+    expect(screen.getByText(/The question asks for the main conclusion/u)).toHaveAttribute("lang", "en");
+    expect(screen.getByRole("link", { name: /View my starting point/u })).toHaveAttribute(
       "href",
       "/exams/tara/preparation",
     );
-    expect(screen.getByRole("link", { name: "进入 TARA 在线练习" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Practise TARA online/u })).toHaveAttribute(
       "href",
       "/exams/tara/past-papers",
     );
-    expect(screen.getByRole("link", { name: "下载 A4 PDF" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Download A4 PDF/u })).toHaveAttribute(
       "href",
       "/notes/tara/tara-reasoning-writing-foundations-v1.pdf",
     );

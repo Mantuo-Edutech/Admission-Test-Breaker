@@ -54,6 +54,40 @@ insert into auth.users (
     now()
   );
 
+-- Keep the publication-gate assertions independent from production catalogue
+-- growth. ESAT now has published advanced notes, so it is no longer a valid
+-- stand-in for a package whose resources are all still draft.
+insert into public.access_packages (id, name, description, status)
+values (
+  'test-draft-only-package',
+  'Test draft-only package',
+  'Database-test fixture for the invite publication gate.',
+  'active'
+);
+
+insert into public.content_resources (
+  id,
+  exam,
+  kind,
+  title,
+  access_tier,
+  publication_status,
+  revision,
+  metadata
+) values (
+  'test-draft-only-resource',
+  'TMUA',
+  'review_notes',
+  'Test draft-only resource',
+  'entitled',
+  'draft',
+  1,
+  '{"testFixture":true}'::jsonb
+);
+
+insert into public.access_package_resources (package_id, resource_id)
+values ('test-draft-only-package', 'test-draft-only-resource');
+
 select is(
   (
     select count(*) from public.app_users
@@ -214,7 +248,7 @@ select is(
   (
     select count(*)
     from public.list_invite_operator_packages()
-    where package_id = 'esat-deep-review'
+    where package_id = 'test-draft-only-package'
   ),
   0::bigint,
   'draft-only packages never appear in the operator package picker'
@@ -238,7 +272,7 @@ select is(
 select throws_ok(
   $$select * from public.issue_operator_invite(
     'draft-check',
-    array['esat-deep-review'],
+    array['test-draft-only-package'],
     1,
     now() + interval '1 day',
     interval '30 days'

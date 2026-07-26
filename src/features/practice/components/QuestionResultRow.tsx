@@ -6,6 +6,7 @@ import { MathContent } from "./MathContent.js";
 import { Link } from "react-router-dom";
 import { parseStatementAnswers } from "../domain/statement-response.js";
 import { parseMostLeastAnswer } from "../domain/most-least-response.js";
+import { EnglishFirstParagraph, EnglishFirstText } from "../../notes/components/EnglishFirstText.js";
 
 const statusCopy = {
   correct: "正确",
@@ -106,22 +107,22 @@ export function QuestionResultRow({ result, question, explanation, feedbackHref 
         </div>
       </details>
       {explanation !== undefined && (
-        <section className="worked-explanation" aria-label={`第 ${result.number} 题深度解析`}>
+        <section className="worked-explanation" aria-label={`Question ${result.number} worked explanation · 第 ${result.number} 题深度解析`}>
           <header>
             <div>
-              <small>{explanation.topicEn}</small>
-              <h4>{explanation.topicZh}</h4>
+              <small>TOPIC · 知识主题</small>
+              <h4><EnglishFirstText english={explanation.topicEn} chinese={explanation.topicZh} /></h4>
             </div>
-            <p><strong>{explanation.methodZh}</strong><span>{explanation.methodEn}</span></p>
+            <p><strong lang="en">{explanation.methodEn}</strong><span lang="zh-CN">{explanation.methodZh}</span></p>
           </header>
-          <p className="worked-explanation__idea">{explanation.keyIdeaZh}</p>
+          <div className="worked-explanation__idea"><strong>KEY IDEA <small lang="zh-CN">关键思路</small></strong><EnglishFirstParagraph english={explanation.keyIdeaEn} chinese={explanation.keyIdeaZh} /></div>
           <ol>
             {explanation.steps.map((step, index) => (
               <li key={`${explanation.questionId}-${index}`}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <div>
-                  <strong>{step.titleZh}</strong>
-                  <p>{step.bodyZh}</p>
+                  <strong><EnglishFirstText english={step.titleEn} chinese={step.titleZh} /></strong>
+                  <EnglishFirstParagraph english={step.bodyEn} chinese={step.bodyZh} />
                   {step.math !== undefined && (
                     <MathContent blocks={[{ kind: "display-math", tex: step.math }]} />
                   )}
@@ -129,10 +130,10 @@ export function QuestionResultRow({ result, question, explanation, feedbackHref 
               </li>
             ))}
           </ol>
-          <p className="worked-explanation__conclusion">{explanation.conclusionZh}</p>
+          <div className="worked-explanation__conclusion"><strong>CONCLUSION <small lang="zh-CN">结论</small></strong><EnglishFirstParagraph english={explanation.conclusionEn} chinese={explanation.conclusionZh} /></div>
           <div className="worked-explanation__actions">
-            <p><strong>容易错在哪里</strong>{explanation.trapZh}</p>
-            <p><strong>下一步训练</strong>{explanation.nextDrillZh}</p>
+            <div><strong>COMMON TRAP <small lang="zh-CN">容易错在哪里</small></strong><EnglishFirstParagraph english={explanation.trapEn} chinese={explanation.trapZh} /></div>
+            <div><strong>NEXT DRILL <small lang="zh-CN">下一步训练</small></strong><EnglishFirstParagraph english={explanation.nextDrillEn} chinese={explanation.nextDrillZh} /></div>
           </div>
         </section>
       )}

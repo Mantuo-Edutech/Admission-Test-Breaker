@@ -7,6 +7,7 @@ import type {
 } from "../../preparation-profile/assessment-profile-domain.js";
 import { AssessmentProfileRequiredState } from "../../preparation-profile/components/AssessmentProfileRequiredState.js";
 import type { ReviewNotesDocument } from "../content/review-notes.js";
+import { EnglishFirstText } from "../components/EnglishFirstText.js";
 import { ReviewNotesPage } from "./ReviewNotesPage.js";
 
 interface AssessmentReviewNotesPageProps {
@@ -16,9 +17,12 @@ interface AssessmentReviewNotesPageProps {
   readonly preparationHref: string;
   readonly practiceHref: string;
   readonly moduleCountLabel: string;
+  readonly moduleCountLabelEn: string;
   readonly moduleEyebrow: string;
   readonly moduleSectionLabel: string;
+  readonly moduleSectionLabelEn: string;
   readonly practiceActionLabel: string;
+  readonly practiceActionLabelEn: string;
   readonly downloadHref: string;
 }
 
@@ -35,9 +39,12 @@ export function AssessmentReviewNotesPage({
   preparationHref,
   practiceHref,
   moduleCountLabel,
+  moduleCountLabelEn,
   moduleEyebrow,
   moduleSectionLabel,
+  moduleSectionLabelEn,
   practiceActionLabel,
+  practiceActionLabelEn,
   downloadHref,
 }: AssessmentReviewNotesPageProps) {
   const [state, setState] = useState<ProfileState>({
@@ -61,8 +68,8 @@ export function AssessmentReviewNotesPage({
       <main className="tmua-stage-page">
         <SiteHeader examId={examId} />
         <section className="practice-state-page" aria-live="polite">
-          <p className="eyebrow">正在检查本人档案 · PROFILE FIRST</p>
-          <h1>正在准备复习笔记…</h1>
+          <p className="eyebrow">PROFILE FIRST · 正在检查本人档案</p>
+          <h1><EnglishFirstText english="Preparing your review notes…" chinese="正在准备复习笔记…" /></h1>
         </section>
       </main>
     );
@@ -79,10 +86,14 @@ export function AssessmentReviewNotesPage({
       coverageHref={preparationHref}
       practiceHref={practiceHref}
       moduleCountLabel={moduleCountLabel}
+      moduleCountLabelEn={moduleCountLabelEn}
       moduleEyebrow={moduleEyebrow}
       moduleSectionLabel={moduleSectionLabel}
+      moduleSectionLabelEn={moduleSectionLabelEn}
       practiceActionLabel={practiceActionLabel}
+      practiceActionLabelEn={practiceActionLabelEn}
       coverageActionLabel="查看我的起点定位"
+      coverageActionLabelEn="View my starting point"
       downloadHref={downloadHref}
     />
   );

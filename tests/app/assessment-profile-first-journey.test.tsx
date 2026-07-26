@@ -33,9 +33,9 @@ describe("exam-aware profile-first practice journey", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "请先填写 UCAT 背景信息" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Complete your UCAT profile first.*请先填写 UCAT 背景信息/u })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /填写 UCAT 背景信息/u })).toHaveAttribute("href", "/exams/ucat/profile");
-    expect(screen.queryByRole("heading", { name: "请先填写课程信息" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: /Complete your course profile first/u })).not.toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: "第 1 题" })).not.toBeInTheDocument();
   });
 
@@ -112,14 +112,14 @@ describe("exam-aware profile-first practice journey", () => {
     const router = createAppRouter(["/practice/lnat-section-a-starter-v1"], appServices);
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "请先填写 LNAT 背景信息" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Complete your LNAT profile first.*请先填写 LNAT 背景信息/u })).toBeInTheDocument();
   });
 
   it("requires an LNAT profile before opening the independent preparation page", async () => {
     const router = createAppRouter(["/exams/lnat/preparation"], services());
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "请先填写 LNAT 背景信息" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Complete your LNAT profile first.*请先填写 LNAT 背景信息/u })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /填写 LNAT 背景信息/u })).toHaveAttribute(
       "href",
       "/exams/lnat/profile",

@@ -29,7 +29,7 @@ async function expectLearningRecord(page: Page) {
 }
 
 async function completeUcatProfile(page: Page) {
-  await expect(page.getByRole("heading", { level: 1, name: "请先填写 UCAT 背景信息" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Complete your UCAT profile first.*请先填写 UCAT 背景信息/u })).toBeVisible();
   await page.getByRole("link", { name: "填写 UCAT 背景信息" }).click();
   await page.getByRole("radio", { name: /A-Level \/ IAL/u }).check();
   await page.getByRole("radio", { name: "Year 12" }).check();

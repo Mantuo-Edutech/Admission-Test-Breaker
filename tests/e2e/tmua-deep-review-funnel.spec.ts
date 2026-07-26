@@ -47,15 +47,15 @@ test("a locked deep review leads to Bingbing and preserves the result return pat
   await page.getByRole("button", { name: "确认提交" }).click();
   await expect(page).toHaveURL(/\/results\/ses_/u);
 
-  await expect(page.getByText("TMUA Early Specimen Paper 1 逐题深度解析已经可用")).toBeVisible();
+  await expect(page.getByText("TMUA Early Specimen Paper 1 Worked Review is available")).toBeVisible();
   const resultPath = new URL(page.url()).pathname;
-  const inviteLink = page.getByRole("link", { name: "已有邀请码" });
+  const inviteLink = page.getByRole("link", { name: /I have a code.*已有邀请码/u });
   await expect(inviteLink).toHaveAttribute(
     "href",
     `/access?returnTo=${encodeURIComponent(resultPath)}`,
   );
 
-  await page.getByRole("button", { name: "联系冰冰获取邀请码" }).click();
+  await page.getByRole("button", { name: /Get an invitation code.*联系冰冰获取邀请码/u }).click();
   await expect(page.getByRole("dialog", { name: /添加冰冰，获取逐题深度解析/u })).toBeVisible();
   await expect(page.getByAltText("冰冰老师微信二维码")).toBeVisible();
   await page.getByRole("button", { name: "关闭冰冰微信二维码" }).click();

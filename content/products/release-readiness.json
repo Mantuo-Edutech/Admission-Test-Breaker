@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "policyVersion": "1.0.0",
-  "catalogRevision": "2026-07-19.33",
-  "assessedAt": "2026-07-19",
+  "catalogRevision": "2026-07-26.1",
+  "assessedAt": "2026-07-26",
   "policy": {
     "closedBeta": [
       "Product is public and has an internal route.",
@@ -17,14 +17,14 @@
     ]
   },
   "summary": {
-    "totalProducts": 41,
-    "publicProducts": 40,
+    "totalProducts": 43,
+    "publicProducts": 42,
     "internalProducts": 1,
-    "automatedReadyProducts": 40,
-    "manualReadyProducts": 0,
-    "closedBetaReadyProducts": 0,
-    "finalPublicationReadyProducts": 0,
-    "closedBetaCoveragePercent": 0
+    "automatedReadyProducts": 42,
+    "manualReadyProducts": 2,
+    "closedBetaReadyProducts": 2,
+    "finalPublicationReadyProducts": 2,
+    "closedBetaCoveragePercent": 5
   },
   "products": [
     {
@@ -1713,6 +1713,32 @@
       ]
     },
     {
+      "productId": "esat-advanced-notes-v1",
+      "examId": "esat",
+      "kind": "review-notes",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/esat-advanced-review-notes.yaml",
+      "featureId": "esat-advanced-review-notes",
+      "featureStatus": "verified",
+      "automatedReady": true,
+      "manualReady": true,
+      "closedBetaReady": true,
+      "finalPublicationReady": true,
+      "manualApprovals": [
+        {
+          "id": "responsive-esat-advanced-notes-review",
+          "source": "feature-manifest",
+          "reviewerRole": "product-qa",
+          "reviewedAt": "2026-07-26",
+          "evidence": "Chromium inspection at 390x844, 768x1024 and 1440x900 verified the signed-out invitation gate and an entitled student view. English headings and explanations precede Chinese support, the page filters to the student's Mathematics 1, Mathematics 2 and Physics modules, and no viewport has horizontal overflow."
+        }
+      ],
+      "pendingManualChecks": [],
+      "closedBetaBlockers": [],
+      "finalPublicationBlockers": []
+    },
+    {
       "productId": "tara-review-notes-v1",
       "examId": "tara",
       "kind": "review-notes",
@@ -1801,6 +1827,32 @@
         "catalog-status:teaching-preview",
         "feature-status:partial"
       ]
+    },
+    {
+      "productId": "tara-advanced-notes-v1",
+      "examId": "tara",
+      "kind": "review-notes",
+      "catalogStatus": "published",
+      "visibility": "public",
+      "featureManifest": "verification/features/tara-advanced-review-notes.yaml",
+      "featureId": "tara-advanced-review-notes",
+      "featureStatus": "verified",
+      "automatedReady": true,
+      "manualReady": true,
+      "closedBetaReady": true,
+      "finalPublicationReady": true,
+      "manualApprovals": [
+        {
+          "id": "responsive-tara-advanced-notes-review",
+          "source": "feature-manifest",
+          "reviewerRole": "product-qa",
+          "reviewedAt": "2026-07-26",
+          "evidence": "Chromium inspection at 390x844, 768x1024 and 1440x900 verified the signed-out invitation gate and an entitled student view. All four TARA modules render with English-first strategy, worked-case and training-prescription content, Chinese support remains secondary, and no viewport has horizontal overflow."
+        }
+      ],
+      "pendingManualChecks": [],
+      "closedBetaBlockers": [],
+      "finalPublicationBlockers": []
     },
     {
       "productId": "ucat-review-notes-v1",

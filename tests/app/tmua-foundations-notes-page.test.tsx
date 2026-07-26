@@ -31,26 +31,28 @@ describe("TMUA foundations notes page", () => {
     const router = createAppRouter(["/exams/tmua/notes/foundations"], services());
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { level: 1, name: /TMUA 基础复习笔记.*TMUA Foundations Review Notes/u })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /下载双语 PDF/u })).toHaveAttribute(
+    expect(await screen.findByRole("heading", { level: 1, name: /TMUA Foundations Review Notes.*TMUA 基础复习笔记/u })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /Download bilingual PDF.*下载双语 PDF/u })).toHaveAttribute(
       "href",
       "/notes/tmua/tmua-foundations-v2.pdf",
     );
-    expect(screen.getByRole("heading", { name: /你学过的课程，具体还缺什么/u })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /What Is Covered — and What Still Needs Checking\?.*你学过的课程，具体还缺什么/u })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "AP Precalculus + AP Calculus AB/BC" })).toBeInTheDocument();
-    expect(screen.getByText(/仅有 AP Calculus 不能证明前置代数与几何已经覆盖/u)).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /逻辑、证明与反例.*Logic, Proof and Counterexamples/u })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /数列、坐标几何与三角.*Sequences, Coordinate Geometry and Trigonometry/u })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /真题训练与证据化复盘.*Past-paper Training and Evidence-based Review/u })).toBeInTheDocument();
+    expect(screen.getByText(/AP Calculus alone does not demonstrate/u)).toHaveAttribute("lang", "en");
+    expect(screen.getByText(/The same wrong answer can require completely different repairs/u)).toHaveAttribute("lang", "en");
+    expect(screen.getByText(/The concept, formula or condition of use is unknown/u)).toHaveAttribute("lang", "en");
+    expect(screen.getByRole("heading", { name: /Logic, Proof and Counterexamples.*逻辑、证明与反例/u })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Sequences, Coordinate Geometry and Trigonometry.*数列、坐标几何与三角/u })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Past-paper Training and Evidence-based Review.*真题训练与证据化复盘/u })).toBeInTheDocument();
     expect(screen.getAllByText("WORKED EXAMPLE")).toHaveLength(9);
-    expect(screen.getByRole("heading", { name: /15 分钟主动回忆检查/u })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /15-minute Active Recall Check.*15 分钟主动回忆检查/u })).toBeInTheDocument();
   });
 
   it("keeps the direct notes route behind the profile-first step", async () => {
     const router = createAppRouter(["/exams/tmua/notes/foundations"], services(false));
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "请先填写课程信息" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Complete your course profile first.*请先填写课程信息/u })).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: /TMUA 基础复习笔记/u })).not.toBeInTheDocument();
   });
 
@@ -58,8 +60,8 @@ describe("TMUA foundations notes page", () => {
     const router = createAppRouter(["/exams/tmua/resources"], services());
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: /TMUA 基础复习笔记/u })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "阅读基础笔记" })).toHaveAttribute(
+    expect(await screen.findByRole("heading", { name: /TMUA Foundations Review Notes.*TMUA 基础复习笔记/u })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /Read foundation notes.*阅读基础笔记/u })).toHaveAttribute(
       "href",
       "/exams/tmua/notes/foundations",
     );

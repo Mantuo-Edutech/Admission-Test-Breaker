@@ -10,8 +10,8 @@ const publicProductRoutes = [...new Set(
 
 describe("public content product route audit", () => {
   it("covers every distinct public product route", () => {
-    expect(publicContentProducts()).toHaveLength(40);
-    expect(publicProductRoutes).toHaveLength(35);
+    expect(publicContentProducts()).toHaveLength(42);
+    expect(publicProductRoutes).toHaveLength(37);
   });
 
   it.each(publicProductRoutes)("loads %s inside the application", async (route) => {

@@ -7,6 +7,7 @@ export interface NotesFormula {
 
 export interface NotesRule {
   readonly term: string;
+  readonly statementEn: string;
   readonly statementZh: string;
   readonly formula?: NotesFormula;
 }
@@ -26,16 +27,21 @@ export interface NotesWorkedExample {
   readonly problemEn: string;
   readonly steps: readonly {
     readonly labelZh: string;
+    readonly labelEn: string;
+    readonly bodyEn: string;
     readonly bodyZh: string;
     readonly math?: NotesFormula;
   }[];
+  readonly answerEn: string;
   readonly answerZh: string;
+  readonly trapEn: string;
   readonly trapZh: string;
 }
 
 export interface NotesSection {
   readonly titleZh: string;
   readonly titleEn: string;
+  readonly paragraphsEn: readonly string[];
   readonly paragraphsZh: readonly string[];
   readonly rules: readonly NotesRule[];
   readonly workedExamples?: readonly NotesWorkedExample[];
@@ -47,7 +53,9 @@ export interface NotesChapter {
   readonly number: string;
   readonly titleZh: string;
   readonly titleEn: string;
+  readonly summaryEn: string;
   readonly summaryZh: string;
+  readonly learningOutcomesEn: readonly string[];
   readonly learningOutcomes: readonly string[];
   readonly sections: readonly NotesSection[];
 }
@@ -56,8 +64,11 @@ export interface CurriculumBridge {
   readonly curriculum: string;
   readonly status: "strong-start" | "partial";
   readonly statusZh: string;
+  readonly likelyCoveredEn: readonly string[];
   readonly likelyCoveredZh: readonly string[];
+  readonly confirmEn: readonly string[];
   readonly confirmZh: readonly string[];
+  readonly firstActionEn: string;
   readonly firstActionZh: string;
 }
 
@@ -72,7 +83,7 @@ export interface NotesCheckpointQuestion {
 }
 
 export interface TmuaFoundationsNotes {
-  readonly schemaVersion: 1;
+  readonly schemaVersion: 2;
   readonly id: "tmua-foundations-v2";
   readonly edition: string;
   readonly publicationStatus: "teaching-preview";
@@ -82,17 +93,20 @@ export interface TmuaFoundationsNotes {
   readonly subtitleZh: string;
   readonly subtitleEn: string;
   readonly authorship: string;
+  readonly rightsNoticeEn: string;
   readonly rightsNotice: string;
   readonly scope: {
     readonly includedZh: string;
     readonly includedEn: string;
     readonly remainingZh: string;
+    readonly remainingEn: string;
   };
   readonly officialAnchors: readonly {
     readonly id: string;
     readonly title: string;
     readonly localPath: string;
     readonly sourceUrl: string;
+    readonly usedForEn: string;
     readonly usedForZh: string;
     readonly sha256: string;
   }[];
@@ -115,12 +129,14 @@ export interface TmuaFoundationsNotes {
   readonly checkpoint: {
     readonly titleZh: string;
     readonly titleEn: string;
+    readonly instructionsEn: string;
     readonly instructionsZh: string;
     readonly questions: readonly NotesCheckpointQuestion[];
   };
   readonly reviewWorkflow: readonly {
     readonly stepZh: string;
     readonly stepEn: string;
+    readonly actionEn: string;
     readonly actionZh: string;
   }[];
 }
@@ -137,12 +153,13 @@ export function validateTmuaFoundationsNotes(value: unknown): TmuaFoundationsNot
   }
   const candidate = value as Partial<TmuaFoundationsNotes>;
   if (
-    candidate.schemaVersion !== 1 ||
+    candidate.schemaVersion !== 2 ||
     candidate.id !== "tmua-foundations-v2" ||
     candidate.publicationStatus !== "teaching-preview" ||
     !Array.isArray(candidate.officialAnchors) ||
     !Array.isArray(candidate.curriculumBridges) ||
     !Array.isArray(candidate.chapters) ||
+    !Array.isArray(candidate.reviewWorkflow) ||
     candidate.checkpoint === undefined
   ) {
     throw new Error("TMUA foundations notes header is invalid");
@@ -173,11 +190,47 @@ export function validateTmuaFoundationsNotes(value: unknown): TmuaFoundationsNot
     throw new Error("TMUA foundations notes need at least seven chapters");
   }
   assertUnique(candidate.chapters.map((chapter) => chapter.id), "Chapter ids");
+  const hasText = (text: unknown): text is string => typeof text === "string" && text.trim().length > 0;
+  if (
+    !hasText(candidate.rightsNoticeEn) ||
+    !hasText(candidate.scope?.remainingEn) ||
+    candidate.officialAnchors.some((source) => !hasText(source.usedForEn)) ||
+    candidate.curriculumBridges.some((bridge) =>
+      !bridge.likelyCoveredEn?.length ||
+      bridge.likelyCoveredEn.length !== bridge.likelyCoveredZh.length ||
+      !bridge.confirmEn?.length ||
+      bridge.confirmEn.length !== bridge.confirmZh.length ||
+      !hasText(bridge.firstActionEn)
+    ) ||
+    candidate.chapters.some((chapter) =>
+      !hasText(chapter.summaryEn) ||
+      !chapter.learningOutcomesEn?.length ||
+      chapter.learningOutcomesEn.length !== chapter.learningOutcomes.length ||
+      chapter.sections.some((section: NotesSection) =>
+        !section.paragraphsEn?.length ||
+        section.paragraphsEn.length !== section.paragraphsZh.length ||
+        section.rules.some((rule: NotesRule) => !hasText(rule.statementEn))
+      )
+    ) ||
+    !hasText(candidate.checkpoint.instructionsEn) ||
+    candidate.reviewWorkflow.some((item) => !hasText(item.actionEn))
+  ) {
+    throw new Error("TMUA foundations English-first teaching layer is incomplete");
+  }
   const examples = candidate.chapters.flatMap((chapter) =>
     chapter.sections.flatMap((section: NotesSection) => section.workedExamples ?? []),
   );
   if (examples.length < 9 || examples.some((example) => !example.titleZh.includes("原创例题"))) {
     throw new Error("TMUA foundations notes need nine clearly labelled original worked examples");
+  }
+  if (examples.some((example) =>
+    !hasText(example.answerEn) ||
+    !hasText(example.trapEn) ||
+    example.steps.some((step: NotesWorkedExample["steps"][number]) =>
+      !hasText(step.labelEn) || !hasText(step.bodyEn)
+    )
+  )) {
+    throw new Error("TMUA foundations English-first worked examples are incomplete");
   }
   assertUnique(examples.map((example) => example.id), "Worked example ids");
 

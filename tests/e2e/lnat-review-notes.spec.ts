@@ -37,14 +37,14 @@ test("LNAT Review Notes remain profile-first and usable at the current viewport"
   expect(response?.ok()).toBe(true);
   await expect(page.getByRole("heading", {
     level: 1,
-    name: /LNAT 论证阅读与写作起点复习笔记.*LNAT Argument Reading and Writing Starting Review Notes/u,
+    name: /LNAT Argument Reading and Writing Starting Review Notes.*LNAT 论证阅读与写作起点复习笔记/u,
   })).toBeVisible();
   await expect(page.locator(".review-notes-module")).toHaveCount(4);
   await expect(page.locator(".review-notes-units li")).toHaveCount(21);
   await expect(page.locator(".review-notes-example")).toHaveCount(4);
-  await expect(page.getByRole("link", { name: "下载 A4 PDF" }))
+  await expect(page.getByRole("link", { name: /Download A4 PDF/u }))
     .toHaveAttribute("href", "/notes/lnat/lnat-reading-writing-foundations-v1.pdf");
-  await expect(page.getByRole("link", { name: "进入 LNAT 在线练习" }))
+  await expect(page.getByRole("link", { name: /Practise LNAT online/u }))
     .toHaveAttribute("href", "/exams/lnat/past-papers");
 
   const overflow = await page.evaluate(() => ({

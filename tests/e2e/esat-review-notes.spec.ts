@@ -32,14 +32,14 @@ test("ESAT Mathematics Review Notes remain usable at the current viewport", asyn
   expect(response?.ok()).toBe(true);
   await expect(page.getByRole("heading", {
     level: 1,
-    name: /ESAT 数学起点复习笔记.*ESAT Mathematics Starting Review Notes/u,
+    name: /ESAT Mathematics Starting Review Notes.*ESAT 数学起点复习笔记/u,
   })).toBeVisible();
   await expect(page.locator(".review-notes-module")).toHaveCount(2);
   await expect(page.locator(".review-notes-units li")).toHaveCount(15);
   await expect(page.locator(".review-notes-example")).toHaveCount(2);
-  await expect(page.getByRole("link", { name: "下载 A4 PDF" }))
+  await expect(page.getByRole("link", { name: /Download A4 PDF/u }))
     .toHaveAttribute("href", "/notes/esat/esat-mathematics-foundations-v1.pdf");
-  await expect(page.getByRole("link", { name: /进入 ESAT 数学在线练习/u }))
+  await expect(page.getByRole("link", { name: /Practise ESAT mathematics/u }))
     .toHaveAttribute("href", "/exams/esat/past-papers");
 
   const overflow = await page.evaluate(() => ({
@@ -61,14 +61,14 @@ test("ESAT Science Review Notes filter modules and remain usable at the current 
   expect(response?.ok()).toBe(true);
   await expect(page.getByRole("heading", {
     level: 1,
-    name: /ESAT 理科模块起点复习笔记.*ESAT Science Modules Starting Review Notes/u,
+    name: /ESAT Science Modules Starting Review Notes.*ESAT 理科模块起点复习笔记/u,
   })).toBeVisible();
   await expect(page.locator(".review-notes-module")).toHaveCount(2);
   await expect(page.locator(".review-notes-units li")).toHaveCount(28);
   await expect(page.locator(".review-notes-example")).toHaveCount(2);
-  await expect(page.getByRole("link", { name: "下载 A4 PDF" }))
+  await expect(page.getByRole("link", { name: /Download A4 PDF/u }))
     .toHaveAttribute("href", "/notes/esat/esat-sciences-foundations-v1.pdf");
-  await expect(page.getByRole("link", { name: /进入 ESAT 理科模块在线练习/u }))
+  await expect(page.getByRole("link", { name: /Practise your ESAT science modules/u }))
     .toHaveAttribute("href", "/exams/esat/past-papers");
 
   const overflow = await page.evaluate(() => ({

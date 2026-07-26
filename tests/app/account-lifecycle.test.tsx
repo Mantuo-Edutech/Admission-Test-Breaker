@@ -102,9 +102,11 @@ describe("student account lifecycle", () => {
     );
     render(<RouterProvider router={router} />);
 
-    const library = await screen.findByRole("region", { name: "可用题库与学习资料" });
+    const library = await screen.findByRole("region", { name: /Available practice and learning resources.*可用题库与学习资料/u });
     expect(within(library).getAllByText("已解锁")).toHaveLength(2);
-    expect(screen.getByRole("heading", { name: "完整资料已经解锁" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", {
+      name: /Your advanced resources are unlocked.*完整资料已经解锁/u,
+    })).toBeInTheDocument();
   });
 
   it("reveals the private operations entry only after the separate operator check passes", async () => {

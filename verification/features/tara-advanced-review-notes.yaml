@@ -1,0 +1,54 @@
+schemaVersion: 1
+feature:
+  id: tara-advanced-review-notes
+  title: TARA 邀请码深度复习笔记
+  status: verified
+  verifiedAt: 2026-07-26
+  userOutcome: 学生完成个人课程档案后，获得邀请码权限即可在本站阅读英文主导、中文辅助的四模块深度策略笔记；未授权账号不能取得正文。
+run:
+  packageScript: verify:entitled-content
+claims:
+  - id: substantive-four-pathway-product
+    status: verified
+    statement: 私有资料覆盖 Critical Thinking、Problem Solving、Writing Task 和 Language Bridge；每个模块都有两套决策方法、完整三步案例、常见陷阱和三项训练处方。
+    artifacts:
+      - content/notes/tara/advanced-review-notes-v1.json
+      - src/features/entitled-content/advanced-review-notes.ts
+      - tests/features/entitled-content/advanced-review-notes.test.ts
+    automatedChecks:
+      - verify:entitled-content
+  - id: english-first-native-page
+    status: verified
+    statement: 知识讲解、策略和例题以英文为主，中文仅作辅助解释；四个模块通过同一套响应式页面组件交付。
+    artifacts:
+      - src/features/entitled-content/pages/AdvancedReviewNotesPage.tsx
+      - src/styles/practice.css
+      - tests/app/advanced-review-notes-page.test.tsx
+    automatedChecks:
+      - verify:entitled-content
+      - typecheck
+  - id: server-side-invite-gate
+    status: verified
+    statement: 正文由受保护的 Supabase payload 交付，并通过独立 TARA 权限包控制；目录可见，但未登录、未授权和撤销后的账号都不能读取正文。
+    artifacts:
+      - supabase/migrations/20260726150000_esat_tara_advanced_notes.sql
+      - src/features/entitled-content/supabase-entitled-content-service.ts
+      - scripts/build-advanced-review-notes-migration.ts
+    automatedChecks:
+      - verify:entitled-content
+      - verify:supabase
+boundaries:
+  - 邀请码只授予 TARA 深度笔记权限，不授予冰冰、老师、家长或 Agent 读取学生课程信息与练习记录的权限。
+  - 页面不会向未授权浏览器发送正文；官方原始 PDF 不进入 public 目录或前端 bundle。
+  - 笔记依据已核验范围独立撰写，不复制官方题目、示例或解析。
+manualChecks:
+  - id: responsive-tara-advanced-notes-review
+    status: passed
+    reviewer: codex-agent
+    reviewerRole: product-qa
+    checkedAt: 2026-07-26
+    evidence: Chromium inspection at 390x844, 768x1024 and 1440x900 verified the signed-out invitation gate and an entitled student view. All four TARA modules render with English-first strategy, worked-case and training-prescription content, Chinese support remains secondary, and no viewport has horizontal overflow.
+    viewports:
+      - 390x844
+      - 768x1024
+      - 1440x900

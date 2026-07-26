@@ -376,11 +376,11 @@ describe("invite-first account access flow", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect((await screen.findAllByText("已解锁")).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getByRole("link", { name: "完成试卷并打开解析" })).toHaveAttribute(
+    expect((await screen.findAllByText(/UNLOCKED.*已解锁/u)).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByRole("link", { name: /Open advanced notes.*完成试卷并打开解析/u })).toHaveAttribute(
       "href",
       "/practice/tmua-specimen-p1",
     );
-    expect(screen.queryByRole("button", { name: "获取深度笔记" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /Get advanced notes.*获取深度笔记/u })).not.toBeInTheDocument();
   });
 });

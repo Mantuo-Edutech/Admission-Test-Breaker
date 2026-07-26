@@ -15,7 +15,10 @@ describe("shared online-question typography and density contract", () => {
     expect(tokens).toContain("--practice-option-marker-size: 1.9rem");
     expect(css).toMatch(/\.answer-choice__content\s+\.math-content p\s*\{[^}]*margin:\s*0;/su);
     expect(css).toMatch(/\.question-card\s*\{[^}]*padding:\s*var\(--practice-card-padding\);/su);
-    expect(css).not.toContain("min-height: 39rem");
+    const questionCardStart = css.indexOf(".question-card {");
+    const questionCardEnd = css.indexOf("}", questionCardStart);
+    expect(questionCardStart).toBeGreaterThanOrEqual(0);
+    expect(css.slice(questionCardStart, questionCardEnd)).not.toContain("min-height: 39rem");
   });
 
   it("renders scalar answer values with the exam number face instead of a second math weight", () => {

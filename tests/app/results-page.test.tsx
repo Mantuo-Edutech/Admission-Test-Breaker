@@ -251,17 +251,17 @@ describe("evidence-only results page", () => {
     render(<RouterProvider router={router} />);
 
     expect(
-      await screen.findByText("TMUA Early Specimen Paper 1 逐题深度解析已经可用", undefined, { timeout: 3_000 }),
+      await screen.findByText("TMUA Early Specimen Paper 1 Worked Review is available", undefined, { timeout: 3_000 }),
     ).toBeInTheDocument();
     expect(screen.getByLabelText("你的答案 D")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "已有邀请码" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /I have a code.*已有邀请码/u })).toHaveAttribute(
       "href",
       "/access?returnTo=%2Fresults%2Fses_result-page",
     );
-    await user.click(screen.getByRole("button", { name: "联系冰冰获取邀请码" }));
+    await user.click(screen.getByRole("button", { name: /Get an invitation code.*联系冰冰获取邀请码/u }));
     expect(screen.getByRole("dialog", { name: /添加冰冰，获取逐题深度解析/u })).toBeInTheDocument();
     expect(screen.getByAltText("冰冰老师微信二维码")).toBeInTheDocument();
-    expect(screen.queryByLabelText("第 1 题深度解析")).not.toBeInTheDocument();
+    expect(screen.queryByLabelText(/Question 1 worked explanation/u)).not.toBeInTheDocument();
   });
 
   it("keeps the real product acquisition path visible when entitlement status cannot load", async () => {
@@ -273,15 +273,15 @@ describe("evidence-only results page", () => {
     render(<RouterProvider router={router} />);
 
     expect(
-      await screen.findByText("TMUA Early Specimen Paper 1 逐题深度解析已经可用"),
+      await screen.findByText("TMUA Early Specimen Paper 1 Worked Review is available"),
     ).toBeInTheDocument();
     expect(screen.getByText(/解析权限服务尚未连接/u)).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "联系冰冰获取邀请码" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "已有邀请码" })).toHaveAttribute(
+    expect(screen.getByRole("button", { name: /Get an invitation code.*联系冰冰获取邀请码/u })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /I have a code.*已有邀请码/u })).toHaveAttribute(
       "href",
       "/access?returnTo=%2Fresults%2Fses_result-page",
     );
-    expect(screen.queryByLabelText("第 1 题深度解析")).not.toBeInTheDocument();
+    expect(screen.queryByLabelText(/Question 1 worked explanation/u)).not.toBeInTheDocument();
   });
 
   it("renders all 20 server-delivered explanations after entitlement", async () => {
@@ -293,19 +293,20 @@ describe("evidence-only results page", () => {
         resource: {
           id: workedExplanations.id,
           title: workedExplanations.titleZh,
-          revision: 1,
+          revision: 2,
           metadata: {},
-          sourceSha256: "25b776e6951dcf79cc7657fc1865df4547fbef5a737fb81eb28ee7e0e4b4233e",
+          sourceSha256: "83830bf443ee941dae0a2df99be5cbee5ae9280b81568623408d997e71146b76",
           payload: workedExplanations,
         },
       }),
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByText("20 道逐题深度解析已打开")).toBeInTheDocument();
-    expect(screen.getByLabelText("第 1 题深度解析")).toHaveTextContent("联立方程与根的和");
-    expect(screen.getByLabelText("第 20 题深度解析")).toHaveTextContent("指定项系数");
-    expect(screen.getAllByLabelText(/题深度解析/u)).toHaveLength(20);
+    expect(await screen.findByText("20 worked explanations unlocked")).toBeInTheDocument();
+    expect(screen.getByLabelText(/Question 1 worked explanation/u)).toHaveTextContent("Use the linear equation to express x in terms of y");
+    expect(screen.getByLabelText(/Question 20 worked explanation/u)).toHaveTextContent("Coefficient extraction");
+    expect(screen.getByLabelText(/Question 20 worked explanation/u)).toHaveTextContent("Only the coefficient of x² is required");
+    expect(screen.getAllByLabelText(/worked explanation/u)).toHaveLength(20);
     expect(screen.queryByRole("link", { name: "输入邀请码" })).not.toBeInTheDocument();
   });
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "2026-07-19.33",
+  "revision": "2026-07-26.1",
   "products": [
     {
       "id": "tmua-online-past-papers",
@@ -92,6 +92,7 @@
         "en": "TMUA Foundations Review Notes"
       },
       "summary": "从考试地图与课程缺口，到核心数学、限时推理和真题复盘；包含 9 道逐步原创例题与 12 道主动回忆题。",
+      "summaryEn": "From the exam map and curriculum gaps to core mathematics, timed reasoning and paper review, with nine original worked examples and twelve active-recall checks.",
       "status": "teaching-preview",
       "visibility": "public",
       "access": "profile",
@@ -100,8 +101,8 @@
       "route": "/exams/tmua/notes/foundations",
       "download": "/notes/tmua/tmua-foundations-v2.pdf",
       "metrics": [
-        { "label": "当前版本", "value": "7 章" },
-        { "label": "PDF", "value": "25 页" }
+        { "label": "当前版本", "labelEn": "Current edition", "value": "7 chapters" },
+        { "label": "PDF", "labelEn": "PDF", "value": "32 pages" }
       ],
       "evidence": [
         "content/notes/tmua/foundations-v2.json",
@@ -110,8 +111,8 @@
     },
     {
       "id": "esat-course-module-planner",
-      "version": "1.0.0",
-      "lastVerifiedAt": "2026-07-19",
+      "version": "2.0.0",
+      "lastVerifiedAt": "2026-07-26",
       "examId": "esat",
       "kind": "admissions-planner",
       "title": {
@@ -897,6 +898,7 @@
         "en": "TMUA Early Specimen Paper 1 Worked Review"
       },
       "summary": "完成 Early Specimen Paper 1 后，按 20 道题查看方法、推导、易错点和下一步训练；正文只向拥有对应权限的账号交付。",
+      "summaryEn": "After completing Early Specimen Paper 1, review the method, reasoning, common trap and next drill for all 20 questions; the full text is delivered only to entitled accounts.",
       "status": "published",
       "visibility": "public",
       "access": "invite",
@@ -907,19 +909,20 @@
       "rightsBasis": "mantou-original",
       "route": "/practice/tmua-specimen-p1",
       "metrics": [
-        { "label": "逐题解析", "value": "20 道" },
-        { "label": "交付方式", "value": "完成后站内查看" }
+        { "label": "逐题解析", "labelEn": "Worked explanations", "value": "20 questions" },
+        { "label": "交付方式", "labelEn": "Delivery", "value": "After submission, on this site" }
       ],
       "evidence": [
         "content/notes/tmua/specimen-p1-worked-explanations-v1.json",
         "supabase/migrations/20260718213000_tmua_specimen_p1_deep_review.sql",
+        "supabase/migrations/20260726143000_tmua_specimen_p1_deep_review_english_first.sql",
         "verification/features/tmua-specimen-p1-deep-review.yaml"
       ]
     },
     {
       "id": "tmua-six-week-review-plan-v1",
-      "version": "1.0.0",
-      "lastVerifiedAt": "2026-07-19",
+      "version": "2.0.0",
+      "lastVerifiedAt": "2026-07-26",
       "examId": "tmua",
       "kind": "review-notes",
       "title": {
@@ -927,6 +930,7 @@
         "en": "TMUA Six-Week Precision Training Plan"
       },
       "summary": "六周、30 次具体训练，逐次标明时间、动作、应留下的证据、周度出口和不同课程体系的调整方式。",
+      "summaryEn": "Six weeks and 30 specific sessions, each with time, action, evidence, weekly exit criteria and curriculum-specific adjustment.",
       "status": "published",
       "visibility": "public",
       "access": "invite",
@@ -935,12 +939,13 @@
       "rightsBasis": "mantou-original",
       "route": "/exams/tmua/notes/six-week-plan",
       "metrics": [
-        { "label": "训练周期", "value": "6 周" },
-        { "label": "具体训练", "value": "30 次" }
+        { "label": "训练周期", "labelEn": "Duration", "value": "6 weeks" },
+        { "label": "具体训练", "labelEn": "Sessions", "value": "30" }
       ],
       "evidence": [
         "content/notes/tmua/six-week-review-plan-v1.json",
         "supabase/migrations/20260718190000_entitled_content_delivery.sql",
+        "supabase/migrations/20260726140000_tmua_six_week_plan_english_first.sql",
         "verification/features/tmua-invite-bound-review-plan.yaml"
       ]
     },
@@ -955,6 +960,7 @@
         "en": "ESAT Mathematics Starting Review Notes"
       },
       "summary": "按专业和课程档案显示 Mathematics 1 / 2；包含 15 个知识单元、A-Level/IB/AP 桥接、6 个方法与 2 道原创逐步例题。",
+      "summaryEn": "Filtered by programme and curriculum profile: 15 knowledge units across Mathematics 1 and 2, three curriculum bridges, six methods and two original worked examples.",
       "status": "teaching-preview",
       "visibility": "public",
       "access": "profile",
@@ -964,9 +970,9 @@
       "download": "/notes/esat/esat-mathematics-foundations-v1.pdf",
       "actionLabel": "在线阅读并下载数学笔记",
       "metrics": [
-        { "label": "数学模块", "value": "2 个" },
-        { "label": "知识单元", "value": "15 个" },
-        { "label": "PDF", "value": "10 页" }
+        { "label": "数学模块", "labelEn": "Mathematics modules", "value": "2" },
+        { "label": "知识单元", "labelEn": "Knowledge units", "value": "15" },
+        { "label": "PDF", "labelEn": "PDF", "value": "13 pages" }
       ],
       "evidence": [
         "content/notes/esat/mathematics-foundations-v1.json",
@@ -986,6 +992,7 @@
         "en": "ESAT Science Modules Starting Review Notes"
       },
       "summary": "按专业和课程档案只显示需要的 Physics、Chemistry、Biology；包含 35 个知识单元、9 个方法、3 道原创例题与 9 组主动回忆。",
+      "summaryEn": "Shows only the required Physics, Chemistry and Biology modules, with 35 knowledge units, nine methods, three original examples and nine active-recall sets.",
       "status": "teaching-preview",
       "visibility": "public",
       "access": "profile",
@@ -995,9 +1002,9 @@
       "download": "/notes/esat/esat-sciences-foundations-v1.pdf",
       "actionLabel": "在线阅读并下载理科笔记",
       "metrics": [
-        { "label": "理科模块", "value": "3 个" },
-        { "label": "知识单元", "value": "35 个" },
-        { "label": "PDF", "value": "16 页" }
+        { "label": "理科模块", "labelEn": "Science modules", "value": "3" },
+        { "label": "知识单元", "labelEn": "Knowledge units", "value": "35" },
+        { "label": "PDF", "labelEn": "PDF", "value": "17 pages" }
       ],
       "evidence": [
         "content/notes/esat/sciences-foundations-v1.json",
@@ -1017,18 +1024,50 @@
         "en": "ESAT Review Notes for Chinese Students"
       },
       "summary": "覆盖 Mathematics 1、Mathematics 2、Physics、Chemistry、Biology 与模块策略的编辑蓝图；正文尚未通过学科、双语和权利发布门。",
+      "summaryEn": "An internal editorial blueprint for Mathematics 1, Mathematics 2, Physics, Chemistry, Biology and module strategy; it is not a released learning product.",
       "status": "internal-review",
       "visibility": "internal",
       "access": "internal",
       "delivery": "native-page",
       "rightsBasis": "mantou-original",
       "metrics": [
-        { "label": "规划模块", "value": "6 个" },
-        { "label": "当前状态", "value": "编辑蓝图" }
+        { "label": "规划模块", "labelEn": "Planned modules", "value": "6" },
+        { "label": "当前状态", "labelEn": "Status", "value": "Editorial blueprint" }
       ],
       "evidence": [
         "content/notes/china-student-review-notes-blueprint.json",
         "content/official/research-asset-inventory.json"
+      ]
+    },
+    {
+      "id": "esat-advanced-notes-v1",
+      "version": "1.0.0",
+      "lastVerifiedAt": "2026-07-26",
+      "examId": "esat",
+      "kind": "review-notes",
+      "title": {
+        "zh": "ESAT 深度复习笔记",
+        "en": "ESAT Advanced Review Notes"
+      },
+      "summary": "按本人报考模块交付五个学科模块的决策方法、完整例题、训练处方与复盘协议；正文只向拥有 ESAT 深度复习权限的账号开放。",
+      "summaryEn": "Delivered by the student's required modules: decision playbooks, complete worked cases, training prescriptions and review protocols across all five ESAT modules; the full text is restricted to entitled accounts.",
+      "status": "published",
+      "visibility": "public",
+      "access": "invite",
+      "packageIds": ["esat-deep-review"],
+      "delivery": "native-page",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/esat/notes/advanced",
+      "actionLabel": "打开 ESAT 深度笔记",
+      "metrics": [
+        { "label": "深度模块", "labelEn": "Advanced modules", "value": "5" },
+        { "label": "决策方法", "labelEn": "Playbooks", "value": "10" },
+        { "label": "完整例题", "labelEn": "Worked cases", "value": "5" }
+      ],
+      "evidence": [
+        "content/notes/esat/advanced-review-notes-v1.json",
+        "supabase/migrations/20260726150000_esat_tara_advanced_notes.sql",
+        "verification/features/esat-advanced-review-notes.yaml"
       ]
     },
     {
@@ -1042,6 +1081,7 @@
         "en": "TARA Reasoning and Writing Starting Review Notes"
       },
       "summary": "完成本人档案后，在线复习 Critical Thinking 七类能力、Problem Solving 三类能力、Writing Task 三问结构和中英论证术语；含原创方法、例题与主动回忆。",
+      "summaryEn": "After completing the student profile, review seven Critical Thinking skills, three Problem Solving skills, the three-part Writing Task and bilingual argument language, with original methods, examples and active recall.",
       "status": "teaching-preview",
       "visibility": "public",
       "access": "profile",
@@ -1051,10 +1091,10 @@
       "route": "/exams/tara/notes/foundations",
       "download": "/notes/tara/tara-reasoning-writing-foundations-v1.pdf",
       "metrics": [
-        { "label": "复习模块", "value": "4 个" },
-        { "label": "知识单元", "value": "21 个" },
-        { "label": "原创例题", "value": "4 道" },
-        { "label": "PDF", "value": "17 页" }
+        { "label": "复习模块", "labelEn": "Review modules", "value": "4" },
+        { "label": "知识单元", "labelEn": "Knowledge units", "value": "21" },
+        { "label": "原创例题", "labelEn": "Original examples", "value": "4" },
+        { "label": "PDF", "labelEn": "PDF", "value": "22 pages" }
       ],
       "evidence": [
         "content/notes/tara/reasoning-writing-foundations-v1.json",
@@ -1074,6 +1114,7 @@
         "en": "LNAT Argument Reading and Writing Starting Review Notes"
       },
       "summary": "完成本人档案后，在线复习 Section A 论证阅读、Section B 限时写作、英语长句证据边界和 95+40 分钟执行节奏；含原创方法、例题与主动回忆。",
+      "summaryEn": "After completing the student profile, review Section A argument reading, Section B timed writing, English evidence boundaries and the 95+40-minute execution rhythm, with original methods, examples and active recall.",
       "status": "teaching-preview",
       "visibility": "public",
       "access": "profile",
@@ -1083,16 +1124,47 @@
       "route": "/exams/lnat/notes/foundations",
       "download": "/notes/lnat/lnat-reading-writing-foundations-v1.pdf",
       "metrics": [
-        { "label": "复习模块", "value": "4 个" },
-        { "label": "知识单元", "value": "21 个" },
-        { "label": "原创例题", "value": "4 道" },
-        { "label": "PDF", "value": "16 页" }
+        { "label": "复习模块", "labelEn": "Review modules", "value": "4" },
+        { "label": "知识单元", "labelEn": "Knowledge units", "value": "21" },
+        { "label": "原创例题", "labelEn": "Original examples", "value": "4" },
+        { "label": "PDF", "labelEn": "PDF", "value": "22 pages" }
       ],
       "evidence": [
         "content/notes/lnat/reading-writing-foundations-v1.json",
         "content/products/review-notes-pdf-assets.json",
         "public/notes/lnat/lnat-reading-writing-foundations-v1.pdf",
         "verification/features/lnat-review-notes.yaml"
+      ]
+    },
+    {
+      "id": "tara-advanced-notes-v1",
+      "version": "1.0.0",
+      "lastVerifiedAt": "2026-07-26",
+      "examId": "tara",
+      "kind": "review-notes",
+      "title": {
+        "zh": "TARA 深度复习笔记",
+        "en": "TARA Advanced Review Notes"
+      },
+      "summary": "覆盖 Critical Thinking、Problem Solving、Writing Task 与语言桥接的决策方法、完整例题、训练处方和复盘协议；正文只向拥有 TARA 深度复习权限的账号开放。",
+      "summaryEn": "Decision playbooks, complete worked cases, training prescriptions and review protocols for Critical Thinking, Problem Solving, the Writing Task and the language bridge; the full text is restricted to entitled accounts.",
+      "status": "published",
+      "visibility": "public",
+      "access": "invite",
+      "packageIds": ["tara-deep-review"],
+      "delivery": "native-page",
+      "rightsBasis": "mantou-original",
+      "route": "/exams/tara/notes/advanced",
+      "actionLabel": "打开 TARA 深度笔记",
+      "metrics": [
+        { "label": "深度模块", "labelEn": "Advanced modules", "value": "4" },
+        { "label": "决策方法", "labelEn": "Playbooks", "value": "8" },
+        { "label": "完整例题", "labelEn": "Worked cases", "value": "4" }
+      ],
+      "evidence": [
+        "content/notes/tara/advanced-review-notes-v1.json",
+        "supabase/migrations/20260726150000_esat_tara_advanced_notes.sql",
+        "verification/features/tara-advanced-review-notes.yaml"
       ]
     },
     {
@@ -1106,6 +1178,7 @@
         "en": "UCAT Four-Subtest and High-Speed Pacing Starting Review Notes"
       },
       "summary": "完成本人档案后，在线复习 VR、DM、QR、SJT 和计算器、标记、复查节奏；含原创方法、例题与主动回忆。",
+      "summaryEn": "After completing the student profile, review VR, DM, QR, SJT and the calculator, flagging and review rhythm, with original methods, examples and active recall.",
       "status": "teaching-preview",
       "visibility": "public",
       "access": "profile",
@@ -1115,10 +1188,10 @@
       "route": "/exams/ucat/notes/foundations",
       "download": "/notes/ucat/ucat-four-subtest-foundations-v1.pdf",
       "metrics": [
-        { "label": "复习模块", "value": "5 个" },
-        { "label": "知识单元", "value": "25 个" },
-        { "label": "原创例题", "value": "5 道" },
-        { "label": "PDF", "value": "20 页" }
+        { "label": "复习模块", "labelEn": "Review modules", "value": "5" },
+        { "label": "知识单元", "labelEn": "Knowledge units", "value": "25" },
+        { "label": "原创例题", "labelEn": "Original examples", "value": "5" },
+        { "label": "PDF", "labelEn": "PDF", "value": "26 pages" }
       ],
       "evidence": [
         "content/notes/ucat/four-subtest-foundations-v1.json",

@@ -37,14 +37,14 @@ test("UCAT Review Notes remain profile-first and usable at the current viewport"
   expect(response?.ok()).toBe(true);
   await expect(page.getByRole("heading", {
     level: 1,
-    name: /UCAT 四模块与极限节奏起点复习笔记.*UCAT Four-Subtest and High-Speed Pacing Starting Review Notes/u,
+    name: /UCAT Four-Subtest and High-Speed Pacing Starting Review Notes.*UCAT 四模块与极限节奏起点复习笔记/u,
   })).toBeVisible();
   await expect(page.locator(".review-notes-module")).toHaveCount(5);
   await expect(page.locator(".review-notes-units li")).toHaveCount(25);
   await expect(page.locator(".review-notes-example")).toHaveCount(5);
-  await expect(page.getByRole("link", { name: "下载 A4 PDF" }))
+  await expect(page.getByRole("link", { name: /Download A4 PDF/u }))
     .toHaveAttribute("href", "/notes/ucat/ucat-four-subtest-foundations-v1.pdf");
-  await expect(page.getByRole("link", { name: "进入 UCAT 在线练习" }))
+  await expect(page.getByRole("link", { name: /Practise UCAT online/u }))
     .toHaveAttribute("href", "/exams/ucat/past-papers");
 
   const overflow = await page.evaluate(() => ({

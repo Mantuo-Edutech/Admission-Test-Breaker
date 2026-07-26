@@ -3,7 +3,7 @@ begin;
 create extension if not exists pgtap with schema extensions;
 set local search_path = public, extensions;
 
-select plan(51);
+select plan(53);
 
 insert into auth.users (
   id,
@@ -225,16 +225,35 @@ select ok(
   'students cannot bypass delivery by selecting private payload rows'
 );
 
+insert into public.access_packages (id, name, description, status)
+values ('draft-only-test', 'Draft only test', 'Publication-gate fixture', 'active');
+insert into public.content_resources (
+  id, exam, kind, title, access_tier, publication_status, revision, metadata, published_at
+) values (
+  'draft-only-review-test', 'ESAT', 'review_notes', 'Draft only review test',
+  'entitled', 'draft', 1, '{}'::jsonb, null
+);
+insert into public.access_package_resources (package_id, resource_id)
+values ('draft-only-test', 'draft-only-review-test');
+
 set local role service_role;
 select lives_ok(
   $$select * from public.issue_invite('Published package test', array['tmua-full-access'], 1)$$,
   'service role can issue an invite for a package with published entitled content'
 );
 select throws_ok(
-  $$select * from public.issue_invite('Draft-only package test', array['esat-deep-review'], 1)$$,
+  $$select * from public.issue_invite('Draft-only package test', array['draft-only-test'], 1)$$,
   '22023',
   'invite_package_unpublished',
   'service role cannot issue an invite for a draft-only package'
+);
+select lives_ok(
+  $$select * from public.issue_invite('ESAT advanced notes test', array['esat-deep-review'], 1)$$,
+  'service role can issue an invite for the published ESAT advanced notes'
+);
+select lives_ok(
+  $$select * from public.issue_invite('TARA advanced notes test', array['tara-deep-review'], 1)$$,
+  'service role can issue an invite for the published TARA advanced notes'
 );
 reset role;
 

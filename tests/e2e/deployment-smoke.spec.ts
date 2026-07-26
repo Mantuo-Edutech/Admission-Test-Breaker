@@ -26,7 +26,7 @@ test("deployed public journey exposes five real exam spaces and account entry", 
 
   const library = await page.goto("/library");
   expect(library?.ok()).toBe(true);
-  const productRegion = page.getByRole("region", { name: "可用题库与学习资料" });
+  const productRegion = page.getByRole("region", { name: /Available practice and learning resources.*可用题库与学习资料/u });
   await expect(productRegion.getByRole("article")).toHaveCount(publicContentProducts().length);
   await expect(productRegion.getByRole("heading", {
     name: /TMUA 30 分钟起点能力诊断/u,
@@ -71,7 +71,7 @@ test("deployed TMUA AP profile produces coverage and opens a native paper", asyn
     .toBeVisible();
 
   await page.getByRole("link", { name: "Early specimen Paper 1，20 题，开始练习" }).click();
-  await expect(page.getByRole("heading", { level: 1, name: "请先填写课程信息" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Complete your course profile first.*请先填写课程信息/u })).toBeVisible();
   await page.getByRole("link", { name: /填写课程信息/u }).click();
 
   const apSystem = page.getByRole("radio", { name: /AP \/ US Curriculum/u });

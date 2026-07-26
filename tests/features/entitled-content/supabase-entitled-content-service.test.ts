@@ -46,7 +46,7 @@ describe("Supabase entitled content delivery", () => {
         title: "TMUA 六周精确训练计划",
         revision: 1,
         metadata: { delivery: "server-structured-native-page" },
-        source_sha256: "9c1430c1fa10ebe313483b367a65f0516381924528a76638107c2f48298fc438",
+        source_sha256: "4f727b10e93a96e5fef3821476a9c1bd2c115738a6d055f6bcdf1c068c415088",
         payload,
       }],
     });
@@ -76,7 +76,7 @@ describe("Supabase entitled content delivery", () => {
         title: "TMUA Early Specimen Paper 1 逐题深度解析",
         revision: 1,
         metadata: { delivery: "server-structured-native-page" },
-        source_sha256: "25b776e6951dcf79cc7657fc1865df4547fbef5a737fb81eb28ee7e0e4b4233e",
+        source_sha256: "83830bf443ee941dae0a2df99be5cbee5ae9280b81568623408d997e71146b76",
         payload,
       }],
     }));

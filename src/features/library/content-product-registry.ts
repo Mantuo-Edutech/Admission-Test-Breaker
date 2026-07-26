@@ -13,6 +13,7 @@ export type ContentProductAccess = "public" | "profile" | "invite" | "internal";
 
 export interface ContentProductMetric {
   readonly label: string;
+  readonly labelEn?: string;
   readonly value: string;
 }
 
@@ -24,6 +25,7 @@ export interface ContentProduct {
   readonly kind: ContentProductKind;
   readonly title: { readonly zh: string; readonly en: string };
   readonly summary: string;
+  readonly summaryEn?: string;
   readonly status: ContentProductStatus;
   readonly visibility: "public" | "internal";
   readonly access: ContentProductAccess;
@@ -110,8 +112,19 @@ function parseProduct(value: unknown, index: number): ContentProduct {
     if (!nonEmpty(metric.label) || !nonEmpty(metric.value)) {
       throw new Error(`${label}.metrics.${metricIndex} is invalid`);
     }
-    return { label: metric.label, value: metric.value };
+    return {
+      label: metric.label,
+      ...(nonEmpty(metric.labelEn) ? { labelEn: metric.labelEn } : {}),
+      value: metric.value,
+    };
   });
+
+  if (
+    value.kind === "review-notes" &&
+    (!nonEmpty(value.summaryEn) || metrics.some((metric) => !nonEmpty(metric.labelEn)))
+  ) {
+    throw new Error(`${label} review products require English summary and metric labels`);
+  }
 
   const route = value.route;
   const download = value.download;
@@ -167,6 +180,7 @@ function parseProduct(value: unknown, index: number): ContentProduct {
     kind: value.kind as ContentProductKind,
     title: { zh: value.title.zh, en: value.title.en },
     summary: value.summary,
+    ...(nonEmpty(value.summaryEn) ? { summaryEn: value.summaryEn } : {}),
     status: value.status as ContentProductStatus,
     visibility: value.visibility,
     access: value.access as ContentProductAccess,

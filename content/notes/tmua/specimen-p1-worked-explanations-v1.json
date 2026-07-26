@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "tmua-specimen-p1-worked-explanations-v1",
   "paperId": "tmua-specimen-p1",
   "edition": "2026.07-v1",
@@ -8,7 +8,9 @@
   "titleEn": "TMUA Early Specimen Paper 1 Worked Review",
   "subtitleZh": "20 道题的解题路径、关键步骤、易错点与下一步训练",
   "subtitleEn": "Method, reasoning, traps and next drill for all 20 questions",
-  "authorship": "满托原创中文教学解读",
+  "authorshipEn": "Original teaching review by Mantou",
+  "authorship": "满托原创教学解读",
+  "rightsNoticeEn": "Independently checked and rewritten from the archived official question paper, answer key and worked solutions. Bulk republication outside this site is not permitted.",
   "rightsNotice": "基于已归档官方题面、答案与 worked solutions 独立核验并重写；不得脱离本站批量转载。",
   "sourceEvidence": {
     "questionSha256": "d2e826c828b6102024bddd49b5edb85cedde4b50f116a4e2e3a0b41cf6f04241",
@@ -27,14 +29,18 @@
       "topicEn": "Simultaneous equations and sum of roots",
       "methodZh": "消元后直接求两组解",
       "methodEn": "Eliminate, solve, then add",
+      "keyIdeaEn": "Use the linear equation to express x in terms of y, then substitute into the second equation. The question asks for the sum of the two x-values, not the sum of the y-values.",
       "keyIdeaZh": "先用一次方程把 x 写成 y 的式子，再代入第二式；题目问的是两个 x 值之和，不要把 y 的和当答案。",
       "steps": [
-        { "titleZh": "消元", "bodyZh": "由 x-3y+1=0 得 x=3y-1，代入 3x²-7xy=5。", "math": "3(3y-1)^2-7(3y-1)y=5" },
-        { "titleZh": "解二次方程", "bodyZh": "整理为 6y²-11y-2=0=(y-2)(6y+1)，所以 y=2 或 y=-1/6。", "math": "y=2\\quad\\text{or}\\quad y=-\\frac16" },
-        { "titleZh": "回代并相加", "bodyZh": "对应 x=5 与 x=-3/2，二者之和为 7/2。", "math": "5-\\frac32=\\frac72=3.5" }
+        { "titleEn": "Eliminate", "titleZh": "消元", "bodyEn": "From x-3y+1=0, obtain x=3y-1 and substitute into 3x²-7xy=5.", "bodyZh": "由 x-3y+1=0 得 x=3y-1，代入 3x²-7xy=5。", "math": "3(3y-1)^2-7(3y-1)y=5" },
+        { "titleEn": "Solve the quadratic", "titleZh": "解二次方程", "bodyEn": "Simplify to 6y²-11y-2=0=(y-2)(6y+1), so y=2 or y=-1/6.", "bodyZh": "整理为 6y²-11y-2=0=(y-2)(6y+1)，所以 y=2 或 y=-1/6。", "math": "y=2\\quad\\text{or}\\quad y=-\\frac16" },
+        { "titleEn": "Substitute and add", "titleZh": "回代并相加", "bodyEn": "The corresponding x-values are 5 and -3/2, whose sum is 7/2.", "bodyZh": "对应 x=5 与 x=-3/2，二者之和为 7/2。", "math": "5-\\frac32=\\frac72=3.5" }
       ],
+      "conclusionEn": "Choose D (3.5).",
       "conclusionZh": "选择 D（3.5）。",
+      "trapEn": "Stopping after Vieta gives the sum of the y-roots, 11/6. The requested variable is x.",
       "trapZh": "只用韦达定理算出 y 的根和 11/6 就停下；题目所求变量是 x。",
+      "nextDrillEn": "Complete three simultaneous-equation questions that ask only for the sum or product of one variable. Circle the target variable first.",
       "nextDrillZh": "练 3 道“联立方程后只问某个变量根的和/积”的题，每次先圈出目标变量。"
     },
     {
@@ -45,14 +51,18 @@
       "topicEn": "Counting trigonometric solutions",
       "methodZh": "化成 cos θ 的二次方程",
       "methodEn": "Reduce to a quadratic in cosine",
+      "keyIdeaEn": "Use sin²θ=1-cos²θ to create an algebraic equation. Filter algebraic roots through the range of cosine, then count endpoints carefully on the closed interval.",
       "keyIdeaZh": "用 sin²θ=1-cos²θ，把问题变成代数方程；代数根还要通过 cos 的值域筛选，再按闭区间数端点。",
       "steps": [
-        { "titleZh": "代换", "bodyZh": "令 u=cosθ，原式变为 1-u²+3u=3。", "math": "u^2-3u+2=0" },
-        { "titleZh": "筛选代数根", "bodyZh": "得到 u=1 或 u=2；cosθ 不可能等于 2，所以只保留 cosθ=1。", "math": "(u-1)(u-2)=0" },
-        { "titleZh": "数闭区间内的解", "bodyZh": "在 0≤θ≤4π 中，θ=0、2π、4π，共 3 个。", "math": "\\theta\\in\\{0,2\\pi,4\\pi\\}" }
+        { "titleEn": "Substitute", "titleZh": "代换", "bodyEn": "Let u=cosθ. The equation becomes 1-u²+3u=3.", "bodyZh": "令 u=cosθ，原式变为 1-u²+3u=3。", "math": "u^2-3u+2=0" },
+        { "titleEn": "Filter the algebraic roots", "titleZh": "筛选代数根", "bodyEn": "The roots are u=1 and u=2. Since cosine cannot equal 2, retain only cosθ=1.", "bodyZh": "得到 u=1 或 u=2；cosθ 不可能等于 2，所以只保留 cosθ=1。", "math": "(u-1)(u-2)=0" },
+        { "titleEn": "Count on the closed interval", "titleZh": "数闭区间内的解", "bodyEn": "For 0≤θ≤4π, the solutions are θ=0, 2π and 4π: three in total.", "bodyZh": "在 0≤θ≤4π 中，θ=0、2π、4π，共 3 个。", "math": "\\theta\\in\\{0,2\\pi,4\\pi\\}" }
       ],
+      "conclusionEn": "Choose D (three solutions).",
       "conclusionZh": "选择 D（3 个解）。",
+      "trapEn": "Forgetting that both 0 and 4π belong to the closed interval, or treating cosθ=2 as a valid trigonometric solution.",
       "trapZh": "忘记 0 和 4π 都属于闭区间，或把 cosθ=2 当成真实解。",
+      "nextDrillEn": "Count solutions to sine and cosine equations on open, closed and half-open intervals. State the range first, then use the unit circle.",
       "nextDrillZh": "练习在不同开闭区间内统计 sin/cos 方程解的个数，强制先写值域再画单位圆。"
     },
     {
@@ -63,14 +73,18 @@
       "topicEn": "Perpendicular bisector",
       "methodZh": "中点 + 负倒数斜率",
       "methodEn": "Midpoint and negative reciprocal gradient",
+      "keyIdeaEn": "A perpendicular bisector must pass through the midpoint and have the negative reciprocal of the original gradient. Set y=0 directly to find its x-intercept.",
       "keyIdeaZh": "垂直平分线必须同时通过原线段中点，且斜率是原斜率的负倒数。求 x 轴截距时直接令 y=0。",
       "steps": [
-        { "titleZh": "求中点与斜率", "bodyZh": "中点为 (7/2,-1)，原线段斜率为 10/3。", "math": "M=\\left(\\frac72,-1\\right),\\quad m=\\frac{4-(-6)}{5-2}=\\frac{10}3" },
-        { "titleZh": "写垂直平分线", "bodyZh": "垂直斜率为 -3/10，用点斜式即可。", "math": "y+1=-\\frac3{10}\\left(x-\\frac72\\right)" },
-        { "titleZh": "求截距", "bodyZh": "令 y=0，解得 x=7/2-10/3=1/6。", "math": "x=\\frac16" }
+        { "titleEn": "Find the midpoint and gradient", "titleZh": "求中点与斜率", "bodyEn": "The midpoint is (7/2,-1), and the original segment has gradient 10/3.", "bodyZh": "中点为 (7/2,-1)，原线段斜率为 10/3。", "math": "M=\\left(\\frac72,-1\\right),\\quad m=\\frac{4-(-6)}{5-2}=\\frac{10}3" },
+        { "titleEn": "Write the perpendicular bisector", "titleZh": "写垂直平分线", "bodyEn": "Its gradient is -3/10, so use point-gradient form through the midpoint.", "bodyZh": "垂直斜率为 -3/10，用点斜式即可。", "math": "y+1=-\\frac3{10}\\left(x-\\frac72\\right)" },
+        { "titleEn": "Find the intercept", "titleZh": "求截距", "bodyEn": "Set y=0 and solve to obtain x=7/2-10/3=1/6.", "bodyZh": "令 y=0，解得 x=7/2-10/3=1/6。", "math": "x=\\frac16" }
       ],
+      "conclusionEn": "Choose B (1/6).",
       "conclusionZh": "选择 B（1/6）。",
+      "trapEn": "Using -10/3 instead of the negative reciprocal -3/10, or assuming a negative gradient forces a negative x-intercept.",
       "trapZh": "把负倒数写成 -10/3，或看见负斜率就误判 x 轴截距也必须为负。",
+      "nextDrillEn": "Find perpendicular bisectors for one horizontal and one vertical segment so that the undefined-gradient cases are explicit.",
       "nextDrillZh": "分别练一题水平线段和竖直线段的垂直平分线，补齐斜率不存在时的处理。"
     },
     {
@@ -81,13 +95,17 @@
       "topicEn": "Polynomial inequalities",
       "methodZh": "零点分区间判号",
       "methodEn": "Critical points and sign chart",
+      "keyIdeaEn": "Factor completely and use the roots -1, 1 and 2 to divide the number line. A strict inequality excludes every root.",
       "keyIdeaZh": "把表达式完全因式分解，用零点 -1、1、2 切分数轴；严格大于零时不能包含零点。",
       "steps": [
-        { "titleZh": "因式分解", "bodyZh": "原式为 (x+1)(x-1)(x-2)>0。", "math": "(x+1)(x-1)(x-2)>0" },
-        { "titleZh": "区间判号", "bodyZh": "从右向左穿过三个单根时符号依次翻转：正、负、正、负。", "math": "(-\\infty,-1):-;\\ (-1,1):+;\\ (1,2):-;\\ (2,\\infty):+" }
+        { "titleEn": "Factorise", "titleZh": "因式分解", "bodyEn": "Write the expression as (x+1)(x-1)(x-2)>0.", "bodyZh": "原式为 (x+1)(x-1)(x-2)>0。", "math": "(x+1)(x-1)(x-2)>0" },
+        { "titleEn": "Build the sign chart", "titleZh": "区间判号", "bodyEn": "Moving from right to left across three simple roots, the sign alternates positive, negative, positive, negative.", "bodyZh": "从右向左穿过三个单根时符号依次翻转：正、负、正、负。", "math": "(-\\infty,-1):-;\\ (-1,1):+;\\ (1,2):-;\\ (2,\\infty):+" }
       ],
+      "conclusionEn": "The solution is -1<x<1 or x>2. Choose E.",
       "conclusionZh": "解集为 -1<x<1 或 x>2，选择 E。",
+      "trapEn": "Tracking only x²-1 and ignoring x-2, or including roots in a strict inequality.",
       "trapZh": "只看二次因子 x²-1 的正负，忽略第三个因子 x-2；或把根包含进严格不等式。",
+      "nextDrillEn": "Use one sign chart for three inequalities with repeated roots and observe that the sign does not change at an even-multiplicity root.",
       "nextDrillZh": "用同一张符号表练 3 个带重根的不等式，观察偶重根处符号不翻转。"
     },
     {
@@ -98,13 +116,17 @@
       "topicEn": "Rearranging logarithmic functions",
       "methodZh": "先去负号，再指数化",
       "methodEn": "Negate, exponentiate, isolate",
+      "keyIdeaEn": "From log₁₀A=B, infer A=10ᴮ. Here the logarithm first equals -y, so the exponent must also be -y.",
       "keyIdeaZh": "由 log₁₀A=B 得 A=10ᴮ。这里右侧先变成 -y，指数必须是 -y。",
       "steps": [
-        { "titleZh": "指数化", "bodyZh": "由 y=-log₁₀(1-x) 得 log₁₀(1-x)=-y。", "math": "1-x=10^{-y}" },
-        { "titleZh": "整理目标变量", "bodyZh": "把 x 单独留在一侧。", "math": "x=1-10^{-y}" }
+        { "titleEn": "Exponentiate", "titleZh": "指数化", "bodyEn": "From y=-log₁₀(1-x), obtain log₁₀(1-x)=-y.", "bodyZh": "由 y=-log₁₀(1-x) 得 log₁₀(1-x)=-y。", "math": "1-x=10^{-y}" },
+        { "titleEn": "Isolate the target variable", "titleZh": "整理目标变量", "bodyEn": "Leave x alone on one side.", "bodyZh": "把 x 单独留在一侧。", "math": "x=1-10^{-y}" }
       ],
+      "conclusionEn": "Choose D.",
       "conclusionZh": "选择 D。",
+      "trapEn": "Rewriting -log(1-x) as log(x-1), or changing 10^{-y} to 10^y after exponentiating.",
       "trapZh": "把 -log(1-x) 错写成 log(x-1)，或者指数化后把 10^{-y} 写成 10^y。",
+      "nextDrillEn": "Rearrange four logarithmic functions containing a-bx, a leading negative sign and different bases, checking the domain at every stage.",
       "nextDrillZh": "练习 4 道含 a-bx、负号和不同底数的对数反函数题，并逐步检查定义域。"
     },
     {
@@ -115,14 +137,18 @@
       "topicEn": "Factor theorem with a parameter",
       "methodZh": "把因子转成已知根",
       "methodEn": "Convert the factor into a known root",
+      "keyIdeaEn": "The factor x+2 means that substituting x=-2 makes the polynomial zero. The resulting condition is a quadratic equation in c.",
       "keyIdeaZh": "x+2 是因子等价于把 x=-2 代入多项式后结果为 0；所得是关于 c 的二次方程。",
       "steps": [
-        { "titleZh": "代入根", "bodyZh": "将 x=-2 代入。", "math": "(-2)^3+4c(-2)^2-2(c+1)^2-6=0" },
-        { "titleZh": "整理参数方程", "bodyZh": "化简后除以 -2。", "math": "c^2-6c+8=0" },
-        { "titleZh": "求根的和", "bodyZh": "可因式分解为 (c-2)(c-4)=0；两个可能值之和为 6。", "math": "2+4=6" }
+        { "titleEn": "Substitute the root", "titleZh": "代入根", "bodyEn": "Substitute x=-2 into the polynomial.", "bodyZh": "将 x=-2 代入。", "math": "(-2)^3+4c(-2)^2-2(c+1)^2-6=0" },
+        { "titleEn": "Simplify the parameter equation", "titleZh": "整理参数方程", "bodyEn": "Simplify and divide by -2.", "bodyZh": "化简后除以 -2。", "math": "c^2-6c+8=0" },
+        { "titleEn": "Add the roots", "titleZh": "求根的和", "bodyEn": "Factor as (c-2)(c-4)=0. The two possible values add to 6.", "bodyZh": "可因式分解为 (c-2)(c-4)=0；两个可能值之和为 6。", "math": "2+4=6" }
       ],
+      "conclusionEn": "Choose D (6).",
       "conclusionZh": "选择 D（6）。",
+      "trapEn": "Using x=2 for the factor x+2, or finding both values of c but forgetting that the question asks for their sum.",
       "trapZh": "把 x+2 的根写成 x=2；或者题目只问和，却做完两个根后忘记相加。",
+      "nextDrillEn": "For factors of the form ax+b, first state the root x=-b/a and only then substitute.",
       "nextDrillZh": "练习因式为 ax+b 的参数题，先写根 x=-b/a，再代入。"
     },
     {
@@ -133,13 +159,17 @@
       "topicEn": "Probability without replacement",
       "methodZh": "利用第一球后的对称性",
       "methodEn": "Condition on the first draw",
+      "keyIdeaEn": "The colour of the first ball does not matter. Once it is removed, 2n of the remaining 3n-1 balls have a different colour.",
       "keyIdeaZh": "第一球是什么颜色不重要。取走它后，剩余 3n-1 个球中，与它不同色的一共有 2n 个。",
       "steps": [
-        { "titleZh": "固定第一球", "bodyZh": "无论第一球是哪种颜色，剩余同色 n-1 个、异色 2n 个。", "math": "(n-1)+2n=3n-1" },
-        { "titleZh": "写条件概率", "bodyZh": "第二球从剩余球中随机选，因此异色概率为 2n/(3n-1)。", "math": "P(\\text{different})=\\frac{2n}{3n-1}" }
+        { "titleEn": "Condition on the first ball", "titleZh": "固定第一球", "bodyEn": "Whatever its colour, n-1 balls of the same colour and 2n of different colours remain.", "bodyZh": "无论第一球是哪种颜色，剩余同色 n-1 个、异色 2n 个。", "math": "(n-1)+2n=3n-1" },
+        { "titleEn": "Write the conditional probability", "titleZh": "写条件概率", "bodyEn": "The second ball is drawn from the remaining balls, so the probability of a different colour is 2n/(3n-1).", "bodyZh": "第二球从剩余球中随机选，因此异色概率为 2n/(3n-1)。", "math": "P(\\text{different})=\\frac{2n}{3n-1}" }
       ],
+      "conclusionEn": "Choose C.",
       "conclusionZh": "选择 C。",
+      "trapEn": "Keeping 3n as the denominator even though the first draw has reduced the total by one.",
       "trapZh": "把分母继续写成 3n，忘记第一次抽取后总数已减少 1。",
+      "nextDrillEn": "Solve the same problem once directly and once as 1 minus the probability of matching colours; verify that both routes agree.",
       "nextDrillZh": "分别用“直接算”和“1-同色概率”完成同一道题，确认两条路径给出相同结果。"
     },
     {
@@ -150,14 +180,18 @@
       "topicEn": "Exponential equations and logarithm laws",
       "methodZh": "合并同一指数后取对数",
       "methodEn": "Collect the common exponent and take logs",
+      "keyIdeaEn": "aˣb²ˣc³ˣ=(ab²c³)ˣ. After taking logarithms, x multiplies log(ab²c³).",
       "keyIdeaZh": "aˣb²ˣc³ˣ=(ab²c³)ˣ。取对数后，x 是乘在 log(ab²c³) 前的系数。",
       "steps": [
-        { "titleZh": "合并底数", "bodyZh": "利用指数法则把左侧写成一个整体的 x 次方。", "math": "(ab^2c^3)^x=2" },
-        { "titleZh": "取对数并解 x", "bodyZh": "两边取常用对数。", "math": "x\\log_{10}(ab^2c^3)=\\log_{10}2" },
-        { "titleZh": "整理", "bodyZh": "所以 x=log₁₀2 / log₁₀(ab²c³)。", "math": "x=\\frac{\\log_{10}2}{\\log_{10}(ab^2c^3)}" }
+        { "titleEn": "Combine the bases", "titleZh": "合并底数", "bodyEn": "Use index laws to express the left-hand side as one base raised to x.", "bodyZh": "利用指数法则把左侧写成一个整体的 x 次方。", "math": "(ab^2c^3)^x=2" },
+        { "titleEn": "Take logarithms and solve", "titleZh": "取对数并解 x", "bodyEn": "Take base-10 logarithms on both sides.", "bodyZh": "两边取常用对数。", "math": "x\\log_{10}(ab^2c^3)=\\log_{10}2" },
+        { "titleEn": "Rearrange", "titleZh": "整理", "bodyEn": "Therefore x=log₁₀2 / log₁₀(ab²c³).", "bodyZh": "所以 x=log₁₀2 / log₁₀(ab²c³)。", "math": "x=\\frac{\\log_{10}2}{\\log_{10}(ab^2c^3)}" }
       ],
+      "conclusionEn": "Choose F.",
       "conclusionZh": "选择 F。",
+      "trapEn": "Expanding log(ab²c³) as log(a+2b+3c), or reversing the numerator and denominator.",
       "trapZh": "把 log(ab²c³) 错拆成 log(a+2b+3c)，或把分子分母倒置。",
+      "nextDrillEn": "Translate between products, powers and logarithms, paying particular attention to log(uᵏ)=k log u.",
       "nextDrillZh": "练习把乘积、幂与对数互相转换，特别检查 log(uᵏ)=k log u。"
     },
     {
@@ -168,14 +202,18 @@
       "topicEn": "Distance between quadratic roots",
       "methodZh": "用判别式表示两根之差",
       "methodEn": "Express the root gap using the discriminant",
+      "keyIdeaEn": "For ax²+bx+c=0, the absolute difference between the roots is √Δ/|a|. It can also be read directly from the quadratic formula.",
       "keyIdeaZh": "对 ax²+bx+c=0，两根之差的绝对值为 √Δ/|a|。这里也可直接从求根公式读出。",
       "steps": [
-        { "titleZh": "写两根", "bodyZh": "由求根公式，根为 (11±√(121-8c))/4。", "math": "x=\\frac{11\\pm\\sqrt{121-8c}}4" },
-        { "titleZh": "建立根差", "bodyZh": "两根相减等于 √(121-8c)/2，题设说它为 2。", "math": "\\frac{\\sqrt{121-8c}}2=2" },
-        { "titleZh": "解参数", "bodyZh": "平方得到 121-8c=16，因此 c=105/8。", "math": "c=\\frac{105}8" }
+        { "titleEn": "Write the roots", "titleZh": "写两根", "bodyEn": "The quadratic formula gives roots (11±√(121-8c))/4.", "bodyZh": "由求根公式，根为 (11±√(121-8c))/4。", "math": "x=\\frac{11\\pm\\sqrt{121-8c}}4" },
+        { "titleEn": "Form the root gap", "titleZh": "建立根差", "bodyEn": "Subtracting the roots gives √(121-8c)/2, which the question states is 2.", "bodyZh": "两根相减等于 √(121-8c)/2，题设说它为 2。", "math": "\\frac{\\sqrt{121-8c}}2=2" },
+        { "titleEn": "Solve for the parameter", "titleZh": "解参数", "bodyEn": "Squaring gives 121-8c=16, hence c=105/8.", "bodyZh": "平方得到 121-8c=16，因此 c=105/8。", "math": "c=\\frac{105}8" }
       ],
+      "conclusionEn": "Choose A.",
       "conclusionZh": "选择 A。",
+      "trapEn": "Dropping the factor of two produced when subtracting the ± roots, or retaining an artificial sign after squaring.",
       "trapZh": "相减时漏掉 ± 两项产生的系数 2，或平方后仍保留错误的正负号。",
+      "nextDrillEn": "Find root gaps and their ranges using the discriminant without fully solving each quadratic.",
       "nextDrillZh": "练习不完全解根、只用判别式求根距或根距范围的题。"
     },
     {
@@ -186,13 +224,17 @@
       "topicEn": "Graph transformations",
       "methodZh": "先做纵向反射，再做横向平移",
       "methodEn": "Reflect vertically, then translate horizontally",
+      "keyIdeaEn": "Reflection of y=f(x) in y=1 gives y=2-f(x). Translation π/4 to the right replaces x with x-π/4.",
       "keyIdeaZh": "关于 y=1 反射把 y=f(x) 变成 y=2-f(x)；向右平移 π/4 要把 x 替换为 x-π/4。",
       "steps": [
-        { "titleZh": "反射", "bodyZh": "y=cosx 关于 y=1 反射后为 y=2-cosx。", "math": "y=2-\\cos x" },
-        { "titleZh": "右移", "bodyZh": "向右 π/4，把式中的 x 换成 x-π/4。", "math": "y=2-\\cos\\left(x-\\frac\\pi4\\right)" }
+        { "titleEn": "Reflect", "titleZh": "反射", "bodyEn": "Reflecting y=cosx in y=1 gives y=2-cosx.", "bodyZh": "y=cosx 关于 y=1 反射后为 y=2-cosx。", "math": "y=2-\\cos x" },
+        { "titleEn": "Translate right", "titleZh": "右移", "bodyEn": "For a shift of π/4 to the right, replace x by x-π/4.", "bodyZh": "向右 π/4，把式中的 x 换成 x-π/4。", "math": "y=2-\\cos\\left(x-\\frac\\pi4\\right)" }
       ],
+      "conclusionEn": "Choose D.",
       "conclusionZh": "选择 D。",
+      "trapEn": "Using x+π/4 for a right translation. The sign inside a function is opposite to the direction of movement.",
       "trapZh": "把向右平移写成 x+π/4；函数内部的平移符号与移动方向相反。",
+      "nextDrillEn": "Check four horizontal translations by tracking where the original key point x=0 moves, rather than memorising a sign rule.",
       "nextDrillZh": "用关键点 x=0 的新位置检查 4 道左右平移题，不靠背口诀。"
     },
     {
@@ -203,14 +245,18 @@
       "topicEn": "Exponential substitution and change of base",
       "methodZh": "令 u=2ˣ 转成二次方程",
       "methodEn": "Substitute u=2^x",
+      "keyIdeaEn": "First solve for the possible values of 2ˣ, then add the corresponding x-values. Use logₐm+logₐn=logₐ(mn).",
       "keyIdeaZh": "先解 2ˣ 的值，再把两个 x 相加；logₐm+logₐn=logₐ(mn)。",
       "steps": [
-        { "titleZh": "代换", "bodyZh": "令 u=2ˣ，则 u²-8u+15=0。", "math": "(u-3)(u-5)=0" },
-        { "titleZh": "还原 x", "bodyZh": "所以 x=log₂3 或 log₂5。", "math": "x_1=\\frac{\\log_{10}3}{\\log_{10}2},\\quad x_2=\\frac{\\log_{10}5}{\\log_{10}2}" },
-        { "titleZh": "求和", "bodyZh": "同分母相加，分子合并为 log₁₀15。", "math": "x_1+x_2=\\frac{\\log_{10}15}{\\log_{10}2}" }
+        { "titleEn": "Substitute", "titleZh": "代换", "bodyEn": "Let u=2ˣ, giving u²-8u+15=0.", "bodyZh": "令 u=2ˣ，则 u²-8u+15=0。", "math": "(u-3)(u-5)=0" },
+        { "titleEn": "Recover x", "titleZh": "还原 x", "bodyEn": "Therefore x=log₂3 or log₂5.", "bodyZh": "所以 x=log₂3 或 log₂5。", "math": "x_1=\\frac{\\log_{10}3}{\\log_{10}2},\\quad x_2=\\frac{\\log_{10}5}{\\log_{10}2}" },
+        { "titleEn": "Add", "titleZh": "求和", "bodyEn": "Use the common denominator and combine the numerator as log₁₀15.", "bodyZh": "同分母相加，分子合并为 log₁₀15。", "math": "x_1+x_2=\\frac{\\log_{10}15}{\\log_{10}2}" }
       ],
+      "conclusionEn": "Choose E.",
       "conclusionZh": "选择 E。",
+      "trapEn": "Reading 2²ˣ as 2x, or replacing log3+log5 with log8 instead of log15.",
       "trapZh": "把 2²ˣ 看成 2x，或把 log3+log5 写成 log8。",
+      "nextDrillEn": "Solve exponential quadratics with u=aˣ, checking the condition u>0 at the end.",
       "nextDrillZh": "练习令 aˣ=u 的指数二次方程，并在最后检查 u>0 的限制。"
     },
     {
@@ -221,14 +267,18 @@
       "topicEn": "Prism volume and surface area",
       "methodZh": "分别建模后令数值相等",
       "methodEn": "Model volume and surface area separately",
+      "keyIdeaEn": "An equilateral triangle of side 2x has area √3x². Total surface area must include both triangular ends and all three rectangular faces.",
       "keyIdeaZh": "边长 2x 的等边三角形面积为 √3x²；总表面积还要包含两个三角形端面和三个矩形侧面。",
       "steps": [
-        { "titleZh": "体积", "bodyZh": "横截面积为 √3x²，所以体积为 √3x²d。", "math": "V=\\sqrt3x^2d" },
-        { "titleZh": "总表面积", "bodyZh": "两端面积为 2√3x²，三块侧面总面积为 3·2x·d=6xd。", "math": "S=2\\sqrt3x^2+6xd" },
-        { "titleZh": "解 d", "bodyZh": "令 V=S，移项并化简。", "math": "d=\\frac{2x}{x-2\\sqrt3}" }
+        { "titleEn": "Volume", "titleZh": "体积", "bodyEn": "The cross-sectional area is √3x², so the volume is √3x²d.", "bodyZh": "横截面积为 √3x²，所以体积为 √3x²d。", "math": "V=\\sqrt3x^2d" },
+        { "titleEn": "Total surface area", "titleZh": "总表面积", "bodyEn": "The ends contribute 2√3x², and the three rectangles contribute 3·2x·d=6xd.", "bodyZh": "两端面积为 2√3x²，三块侧面总面积为 3·2x·d=6xd。", "math": "S=2\\sqrt3x^2+6xd" },
+        { "titleEn": "Solve for d", "titleZh": "解 d", "bodyEn": "Set V=S, rearrange and simplify.", "bodyZh": "令 V=S，移项并化简。", "math": "d=\\frac{2x}{x-2\\sqrt3}" }
       ],
+      "conclusionEn": "Choose D.",
       "conclusionZh": "选择 D。",
+      "trapEn": "Calculating only the lateral area and omitting both triangular ends, or using √3x/2 as the height of a side-2x equilateral triangle.",
       "trapZh": "只算侧面积，漏掉两个三角形端面；或者把等边三角形高写成 √3x/2。",
+      "nextDrillEn": "For a triangular prism and a cylinder, write separate rows for volume, surface area and units.",
       "nextDrillZh": "为三棱柱、圆柱各写一次“体积/表面积/单位”三列表。"
     },
     {
@@ -239,13 +289,17 @@
       "topicEn": "Number of real roots of a quartic",
       "methodZh": "改写成非负结构判断交点",
       "methodEn": "Rewrite into a non-negative structure",
+      "keyIdeaEn": "Since x⁴-4x³+4x²=x²(x-2)², the equation becomes [x(x-2)]²=10. Analyse only the resulting two quadratics.",
       "keyIdeaZh": "x⁴-4x³+4x²=x²(x-2)²，所以方程等价于 [x(x-2)]²=10。只需分析两个二次方程。",
       "steps": [
-        { "titleZh": "识别完全平方", "bodyZh": "左侧前三项为 x²(x-2)²。", "math": "[x(x-2)]^2=10" },
-        { "titleZh": "分两种情况", "bodyZh": "x(x-2)=√10 的判别式为 4+4√10>0，有两根；x(x-2)=-√10 的判别式为 4-4√10<0，无实根。", "math": "x^2-2x=\\pm\\sqrt{10}" }
+        { "titleEn": "Recognise the square", "titleZh": "识别完全平方", "bodyEn": "The first three terms form x²(x-2)².", "bodyZh": "左侧前三项为 x²(x-2)²。", "math": "[x(x-2)]^2=10" },
+        { "titleEn": "Split into two cases", "titleZh": "分两种情况", "bodyEn": "For x(x-2)=√10, the discriminant 4+4√10 is positive, giving two roots. For x(x-2)=-√10, 4-4√10 is negative, giving none.", "bodyZh": "x(x-2)=√10 的判别式为 4+4√10>0，有两根；x(x-2)=-√10 的判别式为 4-4√10<0，无实根。", "math": "x^2-2x=\\pm\\sqrt{10}" }
       ],
+      "conclusionEn": "There are two real roots. Choose C.",
       "conclusionZh": "共有 2 个实根，选择 C。",
+      "trapEn": "Assuming a quartic has four real roots. Degree controls the number of complex roots counted with multiplicity, not the number of real roots.",
       "trapZh": "看到四次就猜 4 个根；多项式次数只是复根总数上限，不代表实根数量。",
+      "nextDrillEn": "Rewrite even-degree polynomials as squares or substitute u=x(x-a), then determine the number of real roots.",
       "nextDrillZh": "练习把偶次多项式改写成平方或令 u=x(x-a)，再判断实根数量。"
     },
     {
@@ -256,13 +310,17 @@
       "topicEn": "Log-log linearisation",
       "methodZh": "对候选关系取对数",
       "methodEn": "Take logs of the candidate model",
+      "keyIdeaEn": "A straight line of log y against log x must have the form log y=m log x+c. This is exactly the power law y=axᵇ.",
       "keyIdeaZh": "log y 对 log x 是直线，必须能写成 log y=m log x+c；这正对应幂律 y=axᵇ。",
       "steps": [
-        { "titleZh": "写直线形式", "bodyZh": "令横轴 X=logx、纵轴 Y=logy，直线满足 Y=mX+c。", "math": "\\log y=m\\log x+c" },
-        { "titleZh": "还原原变量", "bodyZh": "把 c 写成 loga，则 logy=log(xᵐ)+loga=log(axᵐ)。", "math": "y=ax^m" }
+        { "titleEn": "Write the linear form", "titleZh": "写直线形式", "bodyEn": "Let X=logx and Y=logy. A straight line satisfies Y=mX+c.", "bodyZh": "令横轴 X=logx、纵轴 Y=logy，直线满足 Y=mX+c。", "math": "\\log y=m\\log x+c" },
+        { "titleEn": "Recover the original variables", "titleZh": "还原原变量", "bodyEn": "Write c=loga, so logy=log(xᵐ)+loga=log(axᵐ).", "bodyZh": "把 c 写成 loga，则 logy=log(xᵐ)+loga=log(axᵐ)。", "math": "y=ax^m" }
       ],
+      "conclusionEn": "This matches y=axᵇ in option D. Choose D.",
       "conclusionZh": "与选项 D 的 y=axᵇ 同型，选择 D。",
+      "trapEn": "Confusing the semi-log model y=abˣ with a log-log model. For the former, logy is linear in x, not logx.",
       "trapZh": "把半对数模型 y=abˣ 与双对数模型混淆；前者是 logy 对 x 成直线。",
+      "nextDrillEn": "Compare the function models represented by linear, semi-log and log-log plots.",
       "nextDrillZh": "比较 linear、semi-log、log-log 三种图各自对应的函数模型。"
     },
     {
@@ -273,13 +331,17 @@
       "topicEn": "Minimising a parameterised integral",
       "methodZh": "先积分，再对参数配方",
       "methodEn": "Integrate, then complete the square",
+      "keyIdeaEn": "The integration variable is x, so a is constant during integration. After integration, minimise the resulting quadratic in a.",
       "keyIdeaZh": "积分变量是 x，a 在积分时视为常数。得到关于 a 的二次式后再求最小值。",
       "steps": [
-        { "titleZh": "展开并积分", "bodyZh": "积分 x²-2ax+a²。", "math": "\\int_0^1(x-a)^2dx=\\frac13-a+a^2" },
-        { "titleZh": "配方", "bodyZh": "把关于 a 的二次式写成平方加常数。", "math": "a^2-a+\\frac13=\\left(a-\\frac12\\right)^2+\\frac1{12}" }
+        { "titleEn": "Expand and integrate", "titleZh": "展开并积分", "bodyEn": "Integrate x²-2ax+a² with respect to x.", "bodyZh": "积分 x²-2ax+a²。", "math": "\\int_0^1(x-a)^2dx=\\frac13-a+a^2" },
+        { "titleEn": "Complete the square", "titleZh": "配方", "bodyEn": "Write the quadratic in a as a square plus a constant.", "bodyZh": "把关于 a 的二次式写成平方加常数。", "math": "a^2-a+\\frac13=\\left(a-\\frac12\\right)^2+\\frac1{12}" }
       ],
+      "conclusionEn": "The square has minimum 0, so the minimum value is 1/12. Choose A.",
       "conclusionZh": "平方项最小为 0，所以最小值是 1/12，选择 A。",
+      "trapEn": "Treating a as the integration variable, or stopping after evaluating the integral without minimising over a.",
       "trapZh": "把 a 当积分变量，或积分完只代上下限却没有继续对 a 最优化。",
+      "nextDrillEn": "Practise best-constant approximation integrals and observe how the optimal constant relates to the interval average.",
       "nextDrillZh": "练习“最佳常数逼近”类型积分题，观察最优 a 与区间平均值的关系。"
     },
     {
@@ -290,13 +352,17 @@
       "topicEn": "Prime exponents and integrality",
       "methodZh": "全部拆成 2 与 5 的幂",
       "methodEn": "Resolve into prime powers",
+      "keyIdeaEn": "A positive rational number is an integer only when every exponent in its reduced prime factorisation is non-negative. There is no need to expand large numbers.",
       "keyIdeaZh": "一个正有理数是整数时，最简质因数分解中的每个指数都必须非负。这里不需要展开大数。",
       "steps": [
-        { "titleZh": "质因数分解", "bodyZh": "使用 10=2·5、20=2²·5、8=2³、125=5³，合并指数。", "math": "\\frac{10^{c-2d}20^{2c+d}}{8^c125^{c+d}}=2^{2c}5^{-4d}" },
-        { "titleZh": "施加整数条件", "bodyZh": "需 2c≥0 且 -4d≥0。c、d 均为非零整数，所以 c>0 且 d<0。", "math": "c>0,\\quad d<0" }
+        { "titleEn": "Resolve into primes", "titleZh": "质因数分解", "bodyEn": "Use 10=2·5, 20=2²·5, 8=2³ and 125=5³, then combine exponents.", "bodyZh": "使用 10=2·5、20=2²·5、8=2³、125=5³，合并指数。", "math": "\\frac{10^{c-2d}20^{2c+d}}{8^c125^{c+d}}=2^{2c}5^{-4d}" },
+        { "titleEn": "Apply the integer conditions", "titleZh": "施加整数条件", "bodyEn": "Require 2c≥0 and -4d≥0. Since c and d are non-zero integers, c>0 and d<0.", "bodyZh": "需 2c≥0 且 -4d≥0。c、d 均为非零整数，所以 c>0 且 d<0。", "math": "c>0,\\quad d<0" }
       ],
+      "conclusionEn": "Choose E.",
       "conclusionZh": "选择 E。",
+      "trapEn": "Checking only the sum of all exponents, or assuming d<0 alone is sufficient. The exponents of 2 and 5 must be checked separately.",
       "trapZh": "只检查总指数的和，或认为“d<0”单独就足够；2 和 5 的指数必须分别检查。",
+      "nextDrillEn": "For integer conditions involving primes 2, 3 and 5, give each prime its own exponent row.",
       "nextDrillZh": "练习含 2、3、5 三种质因子的整数条件题，给每种质数单独列一行指数。"
     },
     {
@@ -307,14 +373,18 @@
       "topicEn": "Distinct real roots with a parameter",
       "methodZh": "判别式严格大于零",
       "methodEn": "Require a strictly positive discriminant",
+      "keyIdeaEn": "The question states a≠0, so the equation is genuinely quadratic. Two distinct real roots are therefore equivalent to Δ>0.",
       "keyIdeaZh": "题目已规定 a≠0，方程确为二次方程；有两个不同实根等价于判别式 Δ>0。",
       "steps": [
-        { "titleZh": "标准化", "bodyZh": "移项得 ax²+(a-2)x-2=0。", "math": "ax^2+(a-2)x-2=0" },
-        { "titleZh": "计算判别式", "bodyZh": "Δ=(a-2)²-4a(-2)=(a+2)²。", "math": "\\Delta=(a+2)^2" },
-        { "titleZh": "严格不等式", "bodyZh": "平方只在 a=-2 时为 0，其余非零 a 均使 Δ>0。", "math": "a\\ne-2" }
+        { "titleEn": "Write standard form", "titleZh": "标准化", "bodyEn": "Rearrange to ax²+(a-2)x-2=0.", "bodyZh": "移项得 ax²+(a-2)x-2=0。", "math": "ax^2+(a-2)x-2=0" },
+        { "titleEn": "Calculate the discriminant", "titleZh": "计算判别式", "bodyEn": "Δ=(a-2)²-4a(-2)=(a+2)².", "bodyZh": "Δ=(a-2)²-4a(-2)=(a+2)²。", "math": "\\Delta=(a+2)^2" },
+        { "titleEn": "Enforce strict inequality", "titleZh": "严格不等式", "bodyEn": "The square is zero only when a=-2; every other permitted non-zero a gives Δ>0.", "bodyZh": "平方只在 a=-2 时为 0，其余非零 a 均使 Δ>0。", "math": "a\\ne-2" }
       ],
+      "conclusionEn": "Choose D.",
       "conclusionZh": "选择 D。",
+      "trapEn": "Using Δ≥0 for real roots and overlooking the word distinct, which requires strict positivity.",
       "trapZh": "把“有实根”用 Δ≥0，而忽略 distinct 要求严格大于 0。",
+      "nextDrillEn": "Practise parameter questions that require both a non-zero quadratic coefficient and a discriminant condition.",
       "nextDrillZh": "练习同时检查二次项系数不为 0 与 Δ 条件的参数题。"
     },
     {
@@ -325,14 +395,18 @@
       "topicEn": "Intersection of trigonometric intervals",
       "methodZh": "分别解区间，再取交集",
       "methodEn": "Solve separately, then intersect",
+      "keyIdeaEn": "Do not combine the inequalities algebraically. Mark the tangent and sin2x solution sets separately on 0≤x≤π, then retain only their overlap.",
       "keyIdeaZh": "不要把两个不等式混在一起代数操作。先在 0≤x≤π 上分别标出 tan 条件和 sin2x 条件，再只保留重叠区间。",
       "steps": [
-        { "titleZh": "解 tan 条件", "bodyZh": "在给定区间内，-1<tanx≤1 给出 [0,π/4] 与 (3π/4,π]，端点开闭不影响最终长度。", "math": "x\\in[0,\\frac\\pi4]\\cup(\\frac{3\\pi}4,\\pi]" },
-        { "titleZh": "解 sin 条件", "bodyZh": "sin2x≥1/2 且 0≤2x≤2π，得到 π/12≤x≤5π/12。", "math": "x\\in[\\frac\\pi{12},\\frac{5\\pi}{12}]" },
-        { "titleZh": "取交集并求长度", "bodyZh": "交集为 [π/12,π/4]，长度 π/4-π/12=π/6。", "math": "\\frac\\pi4-\\frac\\pi{12}=\\frac\\pi6" }
+        { "titleEn": "Solve the tangent condition", "titleZh": "解 tan 条件", "bodyEn": "On the given interval, -1<tanx≤1 gives [0,π/4] and (3π/4,π]. Endpoint inclusion does not change the final length.", "bodyZh": "在给定区间内，-1<tanx≤1 给出 [0,π/4] 与 (3π/4,π]，端点开闭不影响最终长度。", "math": "x\\in[0,\\frac\\pi4]\\cup(\\frac{3\\pi}4,\\pi]" },
+        { "titleEn": "Solve the sine condition", "titleZh": "解 sin 条件", "bodyEn": "From sin2x≥1/2 with 0≤2x≤2π, obtain π/12≤x≤5π/12.", "bodyZh": "sin2x≥1/2 且 0≤2x≤2π，得到 π/12≤x≤5π/12。", "math": "x\\in[\\frac\\pi{12},\\frac{5\\pi}{12}]" },
+        { "titleEn": "Intersect and find the length", "titleZh": "取交集并求长度", "bodyEn": "The intersection is [π/12,π/4], whose length is π/4-π/12=π/6.", "bodyZh": "交集为 [π/12,π/4]，长度 π/4-π/12=π/6。", "math": "\\frac\\pi4-\\frac\\pi{12}=\\frac\\pi6" }
       ],
+      "conclusionEn": "Choose B.",
       "conclusionZh": "选择 B。",
+      "trapEn": "Forgetting that the argument is 2x, so the interval endpoints must be divided by two after solving for 2x.",
       "trapZh": "解 sin2x 时忘记自变量是 2x，导致区间端点没有除以 2。",
+      "nextDrillEn": "Intersect inequalities for two periodic functions on one number line, writing the transformed-variable interval explicitly.",
       "nextDrillZh": "在同一条数轴上练习两个周期函数不等式的交集，并明确写出变量变换后的区间。"
     },
     {
@@ -343,14 +417,18 @@
       "topicEn": "Geometric series with an arithmetic condition",
       "methodZh": "用等差中项条件建立 r 方程",
       "methodEn": "Use the arithmetic-middle-term condition",
+      "keyIdeaEn": "Terms 1, 2 and 4 of the geometric sequence are 4, 4r and 4r³. Three consecutive terms in an arithmetic sequence satisfy twice the middle term equals the sum of the outer terms.",
       "keyIdeaZh": "等比数列第 1、2、4 项是 4、4r、4r³；连续等差三项满足中间项的两倍等于首尾和。",
       "steps": [
-        { "titleZh": "建立条件", "bodyZh": "由 2·4r=4+4r³，除以 4。", "math": "2r=1+r^3" },
-        { "titleZh": "筛选公比", "bodyZh": "整理为 (r-1)(r²+r-1)=0。0<r<1 排除 r=1，保留 r=(√5-1)/2。", "math": "r=\\frac{\\sqrt5-1}{2}" },
-        { "titleZh": "求无穷和", "bodyZh": "S∞=4/(1-r)，有理化后为 2(3+√5)。", "math": "S_\\infty=2(3+\\sqrt5)" }
+        { "titleEn": "Form the condition", "titleZh": "建立条件", "bodyEn": "From 2·4r=4+4r³, divide by 4.", "bodyZh": "由 2·4r=4+4r³，除以 4。", "math": "2r=1+r^3" },
+        { "titleEn": "Filter the common ratio", "titleZh": "筛选公比", "bodyEn": "Factor as (r-1)(r²+r-1)=0. Since 0<r<1, reject r=1 and retain r=(√5-1)/2.", "bodyZh": "整理为 (r-1)(r²+r-1)=0。0<r<1 排除 r=1，保留 r=(√5-1)/2。", "math": "r=\\frac{\\sqrt5-1}{2}" },
+        { "titleEn": "Find the infinite sum", "titleZh": "求无穷和", "bodyEn": "Use S∞=4/(1-r) and rationalise to obtain 2(3+√5).", "bodyZh": "S∞=4/(1-r)，有理化后为 2(3+√5)。", "math": "S_\\infty=2(3+\\sqrt5)" }
       ],
+      "conclusionEn": "Choose D.",
       "conclusionZh": "选择 D。",
+      "trapEn": "Writing the fourth term as 4r⁴. The nth term is ar^{n-1}.",
       "trapZh": "把等比数列的第四项写成 4r⁴；第 n 项是 ar^{n-1}。",
+      "nextDrillEn": "Build arithmetic conditions from non-adjacent geometric terms, then use the permitted range to filter r.",
       "nextDrillZh": "练习从非相邻等比项构造等差条件，并在解出 r 后用范围筛根。"
     },
     {
@@ -361,14 +439,18 @@
       "topicEn": "Coefficient extraction",
       "methodZh": "只保留到 x² 的截断展开",
       "methodEn": "Truncate the expansion at the required degree",
+      "keyIdeaEn": "Only the coefficient of x² is required, so a full expansion is unnecessary. The factor (1+4x³)⁵ contributes only its constant term at degree two and below.",
       "keyIdeaZh": "题目只问 x² 系数，不必完整展开。第二个括号 (1+4x³)⁵ 在 x² 及以下只有常数 1。",
       "steps": [
-        { "titleZh": "展开第一项到 x²", "bodyZh": "令 u=2x+3x²，(1+u)⁶=1+6u+15u²+…，得到 1+12x+78x²+…。", "math": "(1+2x+3x^2)^6=1+12x+78x^2+O(x^3)" },
-        { "titleZh": "处理相减", "bodyZh": "(1+4x³)⁵=1+O(x³)，所以方括号为 12x+78x²+O(x³)。", "math": "[\\cdots]=12x+78x^2+O(x^3)" },
-        { "titleZh": "乘外层", "bodyZh": "乘 (4-x²) 时，-x² 与方括号最低次 12x 相乘至少是 x³，不贡献 x²；所求为 4·78。", "math": "[x^2]=4\\times78=312" }
+        { "titleEn": "Expand the first term to x²", "titleZh": "展开第一项到 x²", "bodyEn": "Let u=2x+3x². From (1+u)⁶=1+6u+15u²+…, obtain 1+12x+78x²+….", "bodyZh": "令 u=2x+3x²，(1+u)⁶=1+6u+15u²+…，得到 1+12x+78x²+…。", "math": "(1+2x+3x^2)^6=1+12x+78x^2+O(x^3)" },
+        { "titleEn": "Handle the subtraction", "titleZh": "处理相减", "bodyEn": "Since (1+4x³)⁵=1+O(x³), the bracket is 12x+78x²+O(x³).", "bodyZh": "(1+4x³)⁵=1+O(x³)，所以方括号为 12x+78x²+O(x³)。", "math": "[\\cdots]=12x+78x^2+O(x^3)" },
+        { "titleEn": "Multiply by the outer factor", "titleZh": "乘外层", "bodyEn": "When multiplying by (4-x²), the product of -x² with the lowest bracket term 12x is already degree three. Only 4·78 contributes to x².", "bodyZh": "乘 (4-x²) 时，-x² 与方括号最低次 12x 相乘至少是 x³，不贡献 x²；所求为 4·78。", "math": "[x^2]=4\\times78=312" }
       ],
+      "conclusionEn": "Choose G (312).",
       "conclusionZh": "选择 G（312）。",
+      "trapEn": "Expanding the entire expression and creating unnecessary arithmetic, or forgetting that the two constant terms cancel in the subtraction.",
       "trapZh": "为整式做完全展开，增加计算量；或忘记相减后两个常数 1 抵消。",
+      "nextDrillEn": "Use O(x³), or retain only required degrees, in three coefficient-extraction questions to eliminate wasted expansion.",
       "nextDrillZh": "练习用 O(x³) 或“只保留所需次数”处理 3 道系数题，减少无效展开。"
     }
   ]

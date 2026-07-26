@@ -28,7 +28,7 @@ describe("ESAT science review notes page", () => {
   it("requires the programme and module plan first", async () => {
     render(<RouterProvider router={createAppRouter(["/exams/esat/notes/sciences"])} />);
 
-    expect(await screen.findByRole("heading", { level: 1, name: "请先选择申请专业" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { level: 1, name: /Choose your programme first.*请先选择申请专业/u })).toBeInTheDocument();
   });
 
   it("does not prescribe unnecessary science study to a mathematics-only programme", async () => {
@@ -39,7 +39,7 @@ describe("ESAT science review notes page", () => {
     });
     render(<RouterProvider router={createAppRouter(["/exams/esat/notes/sciences"])} />);
 
-    expect(await screen.findByRole("heading", { level: 1, name: "你的专业不需要理科模块" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { level: 1, name: /Your programme does not require a science module.*你的专业不需要理科模块/u })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /打开数学复习笔记/u })).toHaveAttribute(
       "href",
       "/exams/esat/notes/mathematics",
@@ -57,13 +57,15 @@ describe("ESAT science review notes page", () => {
     );
 
     expect(await screen.findByText("ESAT Science Modules Starting Review Notes", {
-      selector: "h1 span",
+      selector: "h1 .english-first-text__primary",
     })).toBeInTheDocument();
     expect(container.querySelectorAll(".review-notes-module")).toHaveLength(1);
     expect(container.querySelectorAll(".review-notes-units li")).toHaveLength(7);
-    expect(screen.getByText(/^Physics —/u, { selector: ".review-notes-module h2 small" })).toBeInTheDocument();
-    expect(screen.queryByText(/^Chemistry —/u, { selector: ".review-notes-module h2 small" })).not.toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "下载 A4 PDF" })).toHaveAttribute(
+    expect(screen.getByText(/^Physics —/u, { selector: ".review-notes-module h2 .english-first-text__primary" })).toHaveAttribute("lang", "en");
+    expect(screen.getByText(/Physics is not about memorising more formulae/u)).toHaveAttribute("lang", "en");
+    expect(screen.getByText("The question contains several objects, branches, energy transfers or initial and final states.")).toHaveAttribute("lang", "en");
+    expect(screen.queryByText(/^Chemistry —/u, { selector: ".review-notes-module h2 .english-first-text__primary" })).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /Download A4 PDF/u })).toHaveAttribute(
       "href",
       "/notes/esat/esat-sciences-foundations-v1.pdf",
     );
@@ -80,12 +82,12 @@ describe("ESAT science review notes page", () => {
     );
 
     expect(await screen.findByText("ESAT Science Modules Starting Review Notes", {
-      selector: "h1 span",
+      selector: "h1 .english-first-text__primary",
     })).toBeInTheDocument();
     expect(container.querySelectorAll(".review-notes-module")).toHaveLength(2);
     expect(container.querySelectorAll(".review-notes-units li")).toHaveLength(28);
-    expect(screen.getByText(/^Chemistry —/u, { selector: ".review-notes-module h2 small" })).toBeInTheDocument();
-    expect(screen.getByText(/^Biology —/u, { selector: ".review-notes-module h2 small" })).toBeInTheDocument();
+    expect(screen.getByText(/^Chemistry —/u, { selector: ".review-notes-module h2 .english-first-text__primary" })).toHaveAttribute("lang", "en");
+    expect(screen.getByText(/^Biology —/u, { selector: ".review-notes-module h2 .english-first-text__primary" })).toHaveAttribute("lang", "en");
     expect(container.querySelectorAll(".review-notes-example")).toHaveLength(2);
   });
 });

@@ -37,14 +37,14 @@ test("TARA Review Notes remain profile-first and usable at the current viewport"
   expect(response?.ok()).toBe(true);
   await expect(page.getByRole("heading", {
     level: 1,
-    name: /TARA 推理与写作起点复习笔记.*TARA Reasoning and Writing Starting Review Notes/u,
+    name: /TARA Reasoning and Writing Starting Review Notes.*TARA 推理与写作起点复习笔记/u,
   })).toBeVisible();
   await expect(page.locator(".review-notes-module")).toHaveCount(4);
   await expect(page.locator(".review-notes-units li")).toHaveCount(21);
   await expect(page.locator(".review-notes-example")).toHaveCount(4);
-  await expect(page.getByRole("link", { name: "下载 A4 PDF" }))
+  await expect(page.getByRole("link", { name: /Download A4 PDF/u }))
     .toHaveAttribute("href", "/notes/tara/tara-reasoning-writing-foundations-v1.pdf");
-  await expect(page.getByRole("link", { name: "进入 TARA 在线练习" }))
+  await expect(page.getByRole("link", { name: /Practise TARA online/u }))
     .toHaveAttribute("href", "/exams/tara/past-papers");
 
   const overflow = await page.evaluate(() => ({

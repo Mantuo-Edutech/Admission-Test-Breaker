@@ -90,7 +90,7 @@ describe("lightweight exam-context navigation", () => {
     render(<RouterProvider router={router} />);
 
     await screen.findByRole("heading", {
-      name: "请先填写课程信息",
+      name: /Complete your course profile first.*请先填写课程信息/u,
     });
     expect(screen.getByText("TMUA 导航", { selector: "summary span" })).toBeInTheDocument();
     const navigation = screen.getByRole("navigation", { name: "移动端主要导航" });
