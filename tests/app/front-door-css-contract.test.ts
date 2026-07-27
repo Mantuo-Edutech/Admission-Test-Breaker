@@ -11,7 +11,7 @@ function blockBetween(css: string, start: string, end: string): string {
 }
 
 describe("responsive editorial front-door CSS", () => {
-  it("keeps the four-to-two-to-one exam layout contract", async () => {
+  it("keeps five exams in one compact row with touch scrolling on narrow screens", async () => {
     const css = await readFile("src/styles/practice.css", "utf8");
     const frontDoor = blockBetween(
       css,
@@ -20,13 +20,13 @@ describe("responsive editorial front-door CSS", () => {
     );
 
     expect(frontDoor).toMatch(
-      /\.exam-entry-grid\s*\{[^}]*grid-template-columns:\s*repeat\(4,/su,
+      /\.exam-entry-grid\s*\{[^}]*grid-template-columns:\s*repeat\(5,/su,
     );
     expect(frontDoor).toMatch(
-      /@media \(max-width: 55rem\)[\s\S]*?\.exam-entry-grid\s*\{[^}]*repeat\(2,/u,
+      /@media \(max-width: 55rem\)[\s\S]*?\.exam-entry-grid\s*\{[^}]*repeat\(5,[^}]*overflow-x:\s*auto/u,
     );
     expect(frontDoor).toMatch(
-      /@media \(max-width: 35rem\)[\s\S]*?\.exam-entry-grid\s*\{[^}]*grid-template-columns:\s*1fr/u,
+      /@media \(max-width: 35rem\)[\s\S]*?\.exam-entry-grid\s*\{[^}]*repeat\(5,/u,
     );
   });
 
@@ -38,7 +38,10 @@ describe("responsive editorial front-door CSS", () => {
       "/* TMUA exam space */",
     );
 
-    expect(frontDoor).toMatch(/\.exam-entry\s*\{[^}]*min-height:\s*20rem/su);
+    expect(frontDoor).toMatch(/\.exam-entry\s*\{[^}]*min-height:\s*13\.5rem/su);
+    expect(frontDoor).toMatch(
+      /\.front-door-hero__inner\s*\{[^}]*min-height:\s*clamp\(15rem,\s*23vw,\s*18\.5rem\)/su,
+    );
     expect(frontDoor).toContain(".exam-entry:focus-visible");
     expect(frontDoor).not.toContain("linear-gradient");
     expect(frontDoor).toMatch(

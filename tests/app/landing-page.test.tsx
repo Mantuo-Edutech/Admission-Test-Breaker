@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { RouterProvider } from "react-router-dom";
 import { describe, expect, it, vi } from "vitest";
@@ -95,20 +95,18 @@ describe("Mantou multi-exam homepage", () => {
     expect(screen.queryByText(/在线真题|专业要求|官方资料已整理/u)).not.toBeInTheDocument();
   });
 
-  it("presents the common preparation path in order", async () => {
+  it("keeps the homepage navigation focused on account access", async () => {
     const router = createAppRouter(["/"], services(new TrackingStore()));
     render(<RouterProvider router={router} />);
 
-    const path = await screen.findByRole("list", { name: "完整备考路径" });
-    expect(
-      within(path).getAllByRole("listitem").map((item) => item.textContent),
-    ).toEqual([
-      "选择考试",
-      "填写课程信息",
-      "查看知识差距",
-      "完成诊断与真题",
-      "跟踪准备进度",
-    ]);
+    await screen.findByRole("heading", { name: "你正在准备哪一项考试？" });
+    const navigation = screen.getByRole("navigation", { name: "首页导航" });
+    expect(navigation).toHaveTextContent("账号");
+    expect(screen.getByRole("link", { name: "账号" })).toHaveAttribute("href", "/account");
+    expect(screen.queryByRole("link", { name: "题库与资料" })).not.toBeInTheDocument();
+    expect(screen.queryByText("第一步")).not.toBeInTheDocument();
+    expect(screen.queryByText("接下来")).not.toBeInTheDocument();
+    expect(screen.queryByRole("list", { name: "完整备考路径" })).not.toBeInTheDocument();
   });
 
   it("removes the old abstract and single-paper homepage copy", async () => {

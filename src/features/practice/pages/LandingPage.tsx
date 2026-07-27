@@ -1,16 +1,8 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, CircleUserRound } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { AppServices } from "../../../app/dependencies.js";
 import { EXAM_CATALOG } from "../../catalog/exams.js";
 import { BrandMark } from "../../navigation/components/BrandMark.js";
-
-const PREPARATION_PATH = [
-  "选择考试",
-  "填写课程信息",
-  "查看知识差距",
-  "完成诊断与真题",
-  "跟踪准备进度",
-] as const;
 
 export function LandingPage({ services }: { services?: Pick<AppServices, "funnel"> }) {
   return (
@@ -18,8 +10,10 @@ export function LandingPage({ services }: { services?: Pick<AppServices, "funnel
       <header className="site-header page-shell">
         <BrandMark />
         <nav className="front-door-navigation" aria-label="首页导航">
-          <Link to="/library">题库与资料</Link>
-          <Link to="/account">账号</Link>
+          <Link className="front-door-navigation__account" to="/account">
+            <CircleUserRound aria-hidden="true" />
+            <span>账号</span>
+          </Link>
         </nav>
       </header>
 
@@ -36,10 +30,8 @@ export function LandingPage({ services }: { services?: Pick<AppServices, "funnel
       </section>
 
       <section className="exam-selector page-shell" aria-labelledby="exam-selector-title">
-        <header className="section-heading">
-          <p>第一步</p>
+        <header className="exam-selector__heading">
           <h2 id="exam-selector-title">你正在准备哪一项考试？</h2>
-          <span>选择考试后，我们会先了解你的课程背景，再安排下一步。</span>
         </header>
 
         <div className="exam-entry-grid">
@@ -63,20 +55,6 @@ export function LandingPage({ services }: { services?: Pick<AppServices, "funnel
             </Link>
           ))}
         </div>
-      </section>
-
-      <section className="preparation-path page-shell" aria-labelledby="path-title">
-        <header className="section-heading section-heading--compact">
-          <p>接下来</p>
-          <h2 id="path-title">从定位到练习，一步一步完成</h2>
-        </header>
-        <ol aria-label="完整备考路径">
-          {PREPARATION_PATH.map((step, index) => (
-            <li key={step} data-step={String(index + 1).padStart(2, "0")}>
-              {step}
-            </li>
-          ))}
-        </ol>
       </section>
 
       <footer className="landing-footer page-shell">
