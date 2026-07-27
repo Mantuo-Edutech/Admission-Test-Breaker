@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { SiteHeader } from "../../navigation/components/SiteHeader.js";
 import { getAssessmentDefinition } from "../../practice/catalog/assessment-registry.js";
+import { historicPracticeForExam } from "../../practice/content/historic-practice-catalog.js";
 import {
   PracticeEntrySection,
   PracticeLibraryHero,
@@ -85,6 +86,35 @@ export function EsatPastPapersPage() {
     kind: "diagnostic",
     ariaLabel: `${section.label} ${section.labelZh}，10 题短诊断，开始练习`,
   }));
+  const selectedModuleIds = new Set(sections.map((section) => section.id));
+  const historicCatalog = historicPracticeForExam("esat");
+  const modulePastPaperEntries: readonly PracticeEntry[] = historicCatalog
+    .filter((entry) => entry.moduleId !== "engineering-mixed" && entry.moduleId !== undefined && selectedModuleIds.has(entry.moduleId))
+    .map((entry) => ({
+      id: entry.paperId,
+      to: entry.route,
+      kicker: `PAST PAPER PRACTICE · ${entry.family} ${entry.year}`,
+      title: entry.title.replace(/^NSAA \d{4} · /u, ""),
+      subtitle: `${entry.family} ${entry.year}`,
+      meta: `${entry.questionCount} 题 · ${entry.durationMinutes} 分钟`,
+      ariaLabel: `${entry.titleZh}，${entry.questionCount} 题，${entry.durationMinutes} 分钟，开始练习`,
+    }));
+  const showEngineeringPractice = ["mathematics-1", "mathematics-2", "physics"]
+    .some((moduleId) => selectedModuleIds.has(moduleId));
+  const engineeringPastPaperEntries: readonly PracticeEntry[] = showEngineeringPractice
+    ? historicCatalog
+      .filter((entry) => entry.moduleId === "engineering-mixed")
+      .map((entry) => ({
+        id: entry.paperId,
+        to: entry.route,
+        kicker: `ENGINEERING PRACTICE · ${entry.year}`,
+        title: `ENGAA ${entry.year}`,
+        subtitle: "Engineering Mathematics & Physics",
+        meta: `${entry.questionCount} 题 · ${entry.durationMinutes} 分钟`,
+        ariaLabel: `${entry.titleZh}，${entry.questionCount} 题，${entry.durationMinutes} 分钟，开始练习`,
+      }))
+    : [];
+  const totalMainPractice = fullMockEntries.length + modulePastPaperEntries.length + engineeringPastPaperEntries.length;
 
   return (
     <main className="tmua-stage-page esat-stage-page assessment-library-page">
@@ -98,7 +128,7 @@ export function EsatPastPapersPage() {
           : `你的模块：${plan.moduleIds.map((id) => ESAT_MODULE_LABELS[id]).join(" · ")}`}
         facts={plan === null
           ? ["按专业筛选", "无需 AI Token"]
-          : [`${sections.length} 个必考模块`, `${fullMockEntries.length} 套完整模考`, `${diagnosticEntries.length} 套短诊断`]}
+          : [`${sections.length} 个必考模块`, `${totalMainPractice} 套主练习`, `${diagnosticEntries.length} 套短诊断`]}
         action={<Link className="practice-library-hero__action" to="/exams/esat">{plan === null ? "选择学校和专业" : "修改专业与模块"}</Link>}
       />
 
@@ -111,6 +141,24 @@ export function EsatPastPapersPage() {
               titleEn="Full-length practice"
               summary={`${fullMockEntries.length} 套 · 每套 27 题 / 40 分钟`}
               entries={fullMockEntries}
+            />
+          )}
+          {modulePastPaperEntries.length === 0 ? null : (
+            <PracticeEntrySection
+              eyebrow="PAST-PAPER MODULE PRACTICE"
+              title="历年模块练习"
+              titleEn="Past-paper module practice"
+              summary={`${modulePastPaperEntries.length} 套 · 按你的模块筛选`}
+              entries={modulePastPaperEntries}
+            />
+          )}
+          {engineeringPastPaperEntries.length === 0 ? null : (
+            <PracticeEntrySection
+              eyebrow="ENGINEERING MATHEMATICS & PHYSICS"
+              title="工程综合练习"
+              titleEn="Engineering practice"
+              summary={`${engineeringPastPaperEntries.length} 套 · 数学与物理综合`}
+              entries={engineeringPastPaperEntries}
             />
           )}
           <PracticeEntrySection

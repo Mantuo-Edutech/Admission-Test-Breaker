@@ -7,7 +7,7 @@ interface PracticePaperValidationExpectation {
 }
 
 const safeRelativePath = /^(?!\/)(?![A-Za-z]:)(?!.*(?:^|\/)\.\.(?:\/|$))(?!.*\\).+$/;
-const safeFigurePath = /^\/questions\/[a-z0-9-]+\/[a-z0-9-]+\.svg$/u;
+const safeFigurePath = /^\/questions\/[a-z0-9-]+\/[a-z0-9-]+\.(?:svg|webp)$/u;
 
 export function validatePracticePaper(
   paper: PracticePaper,
@@ -119,6 +119,14 @@ export function validatePracticePaper(
     const isStatementSet = question.responseMode === "statement-set";
     const isMostLeast = question.responseMode === "most-least-choice";
     const statements = question.statements ?? [];
+
+    if (question.optionDisplay !== undefined && question.optionDisplay !== "content" && question.optionDisplay !== "labels-only") {
+      issues.push({
+        code: "invalid-option-display",
+        questionId: question.id,
+        message: "Option display must be content or labels-only",
+      });
+    }
 
     if (question.id !== `${paper.id}-q${String(question.number).padStart(2, "0")}`) {
       issues.push({
@@ -239,7 +247,10 @@ export function validatePracticePaper(
       });
     }
 
-    if (!question.prompt.length || question.options.some((option) => !option.content.length)) {
+    if (
+      !question.prompt.length ||
+      (question.optionDisplay !== "labels-only" && question.options.some((option) => !option.content.length))
+    ) {
       issues.push({
         code: "empty-content",
         questionId: question.id,

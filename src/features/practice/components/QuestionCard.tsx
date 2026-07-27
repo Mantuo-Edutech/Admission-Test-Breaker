@@ -25,6 +25,7 @@ export function QuestionCard({
 }: QuestionCardProps) {
   const isDataSet = passage?.content.some((block) => block.kind === "table") === true;
   const isOrdinal = question.responseMode === "ordinal-choice";
+  const labelsOnly = question.optionDisplay === "labels-only";
   return (
     <article className={`question-card${passage === undefined ? "" : " question-card--with-passage"}`} aria-labelledby={`question-${question.number}`}>
       <div className="question-card__heading">
@@ -48,7 +49,7 @@ export function QuestionCard({
             <MathContent blocks={question.prompt} />
           </div>
 
-          <fieldset className="answer-list">
+          <fieldset className={`answer-list${labelsOnly ? " answer-list--labels-only" : ""}`}>
             <legend className="sr-only">请选择第 {question.number} 题的答案</legend>
             {question.options.map((option) => (
               <AnswerChoice
@@ -56,6 +57,7 @@ export function QuestionCard({
                 option={option}
                 questionId={question.id}
                 selected={selectedAnswer === option.label}
+                labelsOnly={labelsOnly}
                 onSelect={onAnswer}
               />
             ))}

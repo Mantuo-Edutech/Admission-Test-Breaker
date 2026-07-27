@@ -9,6 +9,7 @@ import { UCAT_DECISION_MAKING_STARTER } from "./ucat-decision-making-starter.js"
 import { UCAT_SITUATIONAL_JUDGEMENT_STARTER } from "./ucat-situational-judgement-starter.js";
 import { UCAT_VERBAL_REASONING_STARTER } from "./ucat-verbal-reasoning-starter.js";
 import { getTmuaPracticePaper } from "./tmua-online-registry.js";
+import { HISTORIC_PRACTICE_PAPER_IDS } from "./historic-practice-catalog.js";
 import type { PracticePaper } from "./types.js";
 import {
   publishPracticePaper,
@@ -28,6 +29,7 @@ const ROUTE_ONLY_PAPER_IDS = new Set([
   "ucat-decision-making-full-mock-v1",
   "ucat-quantitative-reasoning-full-mock-v1",
   "ucat-situational-judgement-full-mock-v1",
+  ...HISTORIC_PRACTICE_PAPER_IDS,
 ]);
 const dynamicallyLoadedPapers = new Map<string, PublishedPracticePaper>();
 
@@ -55,6 +57,14 @@ export async function loadPracticePaper(paperId: string): Promise<PublishedPract
   const existing = getPracticePaper(paperId);
   if (existing !== null) return existing;
   if (!ROUTE_ONLY_PAPER_IDS.has(paperId)) return null;
+
+  if (HISTORIC_PRACTICE_PAPER_IDS.has(paperId)) {
+    const paper = (await import("./historic-online-papers.js")).getHistoricOnlinePaper(paperId);
+    if (paper === null) return null;
+    const published = publishPracticePaper(paper);
+    dynamicallyLoadedPapers.set(paperId, published);
+    return published;
+  }
 
   const paper = paperId === "lnat-section-a-full-mock-v1"
     ? (await import("./lnat-section-a-full-mock.js")).LNAT_SECTION_A_FULL_MOCK

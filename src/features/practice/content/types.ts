@@ -54,6 +54,7 @@ export interface PracticeQuestion {
   sourcePage: number;
   passageId?: string;
   responseMode?: "single-choice" | "statement-set" | "ordinal-choice" | "most-least-choice";
+  optionDisplay?: "content" | "labels-only";
   prompt: QuestionBlock[];
   options: PracticeOption[];
   statements?: PracticeStatement[];

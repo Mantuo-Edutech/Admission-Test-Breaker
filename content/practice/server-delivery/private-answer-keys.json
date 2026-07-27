@@ -424,6 +424,645 @@
       }
     },
     {
+      "paperRevisionId": "esat-engaa-2021-engineering-mixed-r1",
+      "answerKeyDigest": "279dbfab59baec2e8c3573fa811e22eb2fb68c05567de093f61d543c18c2d6f3",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-engaa-2021-engineering-mixed",
+        "paperRevisionId": "esat-engaa-2021-engineering-mixed-r1",
+        "contentDigest": "8f92af6279b8ab5fb5d725d2568211e86b4503c20ee69dfcd09401de87774bd5",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q01",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q02",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q03",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q04",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q05",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q06",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q07",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q08",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q09",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q10",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q11",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q12",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q13",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q14",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q15",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q16",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q17",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q18",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q19",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q20",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q21",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q22",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q23",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q24",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q25",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q26",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q27",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q28",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q29",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q30",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q31",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q32",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q33",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q34",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q35",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q36",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q37",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q38",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q39",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2021-engineering-mixed-q40",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-engaa-2022-engineering-mixed-r1",
+      "answerKeyDigest": "83c0f83b44b6869dfcb8faaf51f9362e6dd0a470cfa2385ab3956082e4683569",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-engaa-2022-engineering-mixed",
+        "paperRevisionId": "esat-engaa-2022-engineering-mixed-r1",
+        "contentDigest": "5c80b9f260ed4690df3b4eb093a2ebaf4d08eb1969e12c1e7bfdd37afa484b27",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q01",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q02",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q03",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q04",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q05",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q06",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q07",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q08",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q09",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q10",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q11",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q12",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q13",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q14",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q15",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q16",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q17",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q18",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q19",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q20",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q21",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q22",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q23",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q24",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q25",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q26",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q27",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q28",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q29",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q30",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q31",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q32",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q33",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q34",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q35",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q36",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q37",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q38",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q39",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2022-engineering-mixed-q40",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-engaa-2023-engineering-mixed-r1",
+      "answerKeyDigest": "eab3abe35381f17233c771f9101082ae103497a7dbbc05042e93d1c3a5d6bc5b",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-engaa-2023-engineering-mixed",
+        "paperRevisionId": "esat-engaa-2023-engineering-mixed-r1",
+        "contentDigest": "62172020f78f720aad6493ea032729f4e226dfcb04732b3f238f782571370a85",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q01",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q02",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q03",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q04",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q05",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q06",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q07",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q08",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q09",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q10",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q11",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q12",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q13",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q14",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q15",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q16",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q17",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q18",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q19",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q20",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q21",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q22",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q23",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q24",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q25",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q26",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q27",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q28",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q29",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q30",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q31",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q32",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q33",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q34",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q35",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q36",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q37",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q38",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q39",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-engaa-2023-engineering-mixed-q40",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
       "paperRevisionId": "esat-mathematics-1-full-mock-v1-r1",
       "answerKeyDigest": "5ad86c95b6eb605a2764d8ae71ac037f9898b73fc12ce0de904ce16ed70b3934",
       "answerKey": {
@@ -840,6 +1479,1362 @@
           {
             "questionId": "esat-mathematics-2-starter-v1-q10",
             "correctAnswer": "C",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-nsaa-2021-biology-r1",
+      "answerKeyDigest": "552f8a9d304ebb7e00c3656c5f784297bd43c2d062dded2ce3f409c29dc0aef7",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2021-biology",
+        "paperRevisionId": "esat-nsaa-2021-biology-r1",
+        "contentDigest": "ec94731eb9bb48d9fa07ee3a411134992b36cc875b0cecec26a7528f252276b0",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2021-biology-q01",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q02",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q03",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q04",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q05",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q06",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q07",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q08",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q09",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q10",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q11",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q12",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q13",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q14",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q15",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q16",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q17",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q18",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q19",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-biology-q20",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-nsaa-2021-chemistry-r1",
+      "answerKeyDigest": "08838a9ac22e5a0b04cb64d4757495f182c5c4ccf992a9d135e399b1ae756f66",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2021-chemistry",
+        "paperRevisionId": "esat-nsaa-2021-chemistry-r1",
+        "contentDigest": "d798e36c5f2f4ee0bdb9c2da3ac389746c03226a89d6ab409e5639692cc79e5e",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q01",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q02",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q03",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q04",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q05",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q06",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q07",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q08",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q09",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q10",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q11",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q12",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q13",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q14",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q15",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q16",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q17",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q18",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q19",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-chemistry-q20",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-nsaa-2021-mathematics-1-r1",
+      "answerKeyDigest": "66c2b10b03504db86fe25ad9425fec46165c5109ee1ba1cd627a391513e05019",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2021-mathematics-1",
+        "paperRevisionId": "esat-nsaa-2021-mathematics-1-r1",
+        "contentDigest": "bef213f89f3bfbed7b3ac29030bb218ddd42a0b31c554b1f4c8826c9b46f4151",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q01",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q02",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q03",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q04",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q05",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q06",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q07",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q08",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q09",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q10",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q11",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q12",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q13",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q14",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q15",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q16",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q17",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q18",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q19",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q20",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-nsaa-2021-physics-r1",
+      "answerKeyDigest": "42ce4364ebb96856fdf2b9470d23243559fbd5343a636dea3618cecff87f1729",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2021-physics",
+        "paperRevisionId": "esat-nsaa-2021-physics-r1",
+        "contentDigest": "8c0f45eef95b13e789057eddef15dfddc4008d8ad50deb4e6eec30c5a83c4d90",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2021-physics-q01",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q02",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q03",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q04",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q05",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q06",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q07",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q08",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q09",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q10",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q11",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q12",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q13",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q14",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q15",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q16",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q17",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q18",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q19",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-physics-q20",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-nsaa-2022-biology-r1",
+      "answerKeyDigest": "5c8e2dd1c9a1ecb27eb3808b6c94ef0fc0989c76d9b942a568375b3000b6ac2f",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2022-biology",
+        "paperRevisionId": "esat-nsaa-2022-biology-r1",
+        "contentDigest": "3147e7fae81fa8ebe246aba7001f598f6832cb3c4eecce89330076c1fdff948b",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2022-biology-q01",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q02",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q03",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q04",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q05",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q06",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q07",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q08",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q09",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q10",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q11",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q12",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q13",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q14",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q15",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q16",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q17",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q18",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q19",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-biology-q20",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-nsaa-2022-chemistry-r1",
+      "answerKeyDigest": "20c46e470dfe4fd997c6130e3cdb4edfb4eb160ce841605ad9bb157610236975",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2022-chemistry",
+        "paperRevisionId": "esat-nsaa-2022-chemistry-r1",
+        "contentDigest": "188a777308403390ae4ebd751a63e03feb34be1311f9396ad67de316749f2f34",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q01",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q02",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q03",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q04",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q05",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q06",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q07",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q08",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q09",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q10",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q11",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q12",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q13",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q14",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q15",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q16",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q17",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q18",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q19",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-chemistry-q20",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-nsaa-2022-mathematics-1-r1",
+      "answerKeyDigest": "a04302e7a2cbb09da3b77baa21f430796aac9ad5a9adddcbbe2200d63f7a3675",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2022-mathematics-1",
+        "paperRevisionId": "esat-nsaa-2022-mathematics-1-r1",
+        "contentDigest": "af26a6be57a97f1d2a6d4dbbc0ee7ad9fd7fd82b884370a634a69985e5197363",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q01",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q02",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q03",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q04",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q05",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q06",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q07",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q08",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q09",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q10",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q11",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q12",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q13",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q14",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q15",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q16",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q17",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q18",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q19",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q20",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-nsaa-2022-physics-r1",
+      "answerKeyDigest": "49677ff6efc47b96bda650031a60785ac39d8e180014b6b2aa9dd9d82ce3b09a",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2022-physics",
+        "paperRevisionId": "esat-nsaa-2022-physics-r1",
+        "contentDigest": "ab0052eea2f83ebcb8785f7b8637af6d91705fee42c52afa54236047d949e06a",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2022-physics-q01",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q02",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q03",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q04",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q05",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q06",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q07",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q08",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q09",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q10",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q11",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q12",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q13",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q14",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q15",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q16",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q17",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q18",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q19",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-physics-q20",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-nsaa-2023-biology-r1",
+      "answerKeyDigest": "557ba72e0b068bcba3d6259fe013580165f6e0bb8dc17b391ff488fccd72824e",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2023-biology",
+        "paperRevisionId": "esat-nsaa-2023-biology-r1",
+        "contentDigest": "fa3800eddc9669e0e4b5afeda6cfdabc3c4120fc248184d79436f2f2849fb13f",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2023-biology-q01",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q02",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q03",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q04",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q05",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q06",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q07",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q08",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q09",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q10",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q11",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q12",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q13",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q14",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q15",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q16",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q17",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q18",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q19",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-biology-q20",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-nsaa-2023-chemistry-r1",
+      "answerKeyDigest": "d0e80fecde906e02fc8a68bfa65de904ca1cdb57f9d02c75bffd31a94fe608af",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2023-chemistry",
+        "paperRevisionId": "esat-nsaa-2023-chemistry-r1",
+        "contentDigest": "b70a171add2f241f90ddb102796f59bc7fcab1a9d21aed810fb57f80efa0bce7",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q01",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q02",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q03",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q04",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q05",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q06",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q07",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q08",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q09",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q10",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q11",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q12",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q13",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q14",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q15",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q16",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q17",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q18",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q19",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-chemistry-q20",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-nsaa-2023-mathematics-1-r1",
+      "answerKeyDigest": "a4dde6728458e279d2ee3e798630f61faa1254985f02f659b8e2a4e7054be98f",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2023-mathematics-1",
+        "paperRevisionId": "esat-nsaa-2023-mathematics-1-r1",
+        "contentDigest": "85ca716838942e003f90cfce7f2bb135a07e8fb865004409bdc43cb405908e0e",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q01",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q02",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q03",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q04",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q05",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q06",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q07",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q08",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q09",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q10",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q11",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q12",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q13",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q14",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q15",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q16",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q17",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q18",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q19",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q20",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-nsaa-2023-physics-r1",
+      "answerKeyDigest": "05772b4261186c0dc4b173d0f0a3d162cc29a317c55087bc48124e4ca3149108",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2023-physics",
+        "paperRevisionId": "esat-nsaa-2023-physics-r1",
+        "contentDigest": "9f7eda377515053d150a93230349183fa97628054d914f668b64044291c264a4",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2023-physics-q01",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q02",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q03",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q04",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q05",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q06",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q07",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q08",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q09",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q10",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q11",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q12",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q13",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q14",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q15",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q16",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q17",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q18",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q19",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-physics-q20",
+            "correctAnswer": "A",
             "responseMode": "single-choice"
           }
         ]
@@ -1674,6 +3669,1058 @@
           {
             "questionId": "tara-reasoning-starter-v1-q10",
             "correctAnswer": "B",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "tara-tsa-2020-mixed-reasoning-r1",
+      "answerKeyDigest": "4d395ad821552fdcb3edde26043f61f07a57b1e84f2e11ea98419f7640ece828",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "tara-tsa-2020-mixed-reasoning",
+        "paperRevisionId": "tara-tsa-2020-mixed-reasoning-r1",
+        "contentDigest": "10e57329c57c3934d2a8f5cd444a46b0460322a0e0d71537ca27ade519717fd0",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q01",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q02",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q03",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q04",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q05",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q06",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q07",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q08",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q09",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q10",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q11",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q12",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q13",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q14",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q15",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q16",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q17",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q18",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q19",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q20",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q21",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q22",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q23",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q24",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q25",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q26",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q27",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q28",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q29",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q30",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q31",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q32",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q33",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q34",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q35",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q36",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q37",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q38",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q39",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q40",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q41",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q42",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q43",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q44",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q45",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q46",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q47",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q48",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q49",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2020-mixed-reasoning-q50",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "tara-tsa-2021-mixed-reasoning-r1",
+      "answerKeyDigest": "0b3a55e4771e4ab38351dc0de0971e435435c2c411ad63ef14b190b559d75e53",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "tara-tsa-2021-mixed-reasoning",
+        "paperRevisionId": "tara-tsa-2021-mixed-reasoning-r1",
+        "contentDigest": "3ffbf761dbc3d0c785dfd6697edf82cdd56fd4508aa3549adcb4d5239e7f5a9d",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q01",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q02",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q03",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q04",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q05",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q06",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q07",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q08",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q09",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q10",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q11",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q12",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q13",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q14",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q15",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q16",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q17",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q18",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q19",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q20",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q21",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q22",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q23",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q24",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q25",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q26",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q27",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q28",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q29",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q30",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q31",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q32",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q33",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q34",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q35",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q36",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q37",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q38",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q39",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q40",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q41",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q42",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q43",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q44",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q45",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q46",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q47",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q48",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q49",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2021-mixed-reasoning-q50",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "tara-tsa-2022-mixed-reasoning-r1",
+      "answerKeyDigest": "89f110e860de6a774926e2a3e8ceaf8dd04ff78301ff65e6a095c222ff8684ad",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "tara-tsa-2022-mixed-reasoning",
+        "paperRevisionId": "tara-tsa-2022-mixed-reasoning-r1",
+        "contentDigest": "c6f68cfe80473f189fc59dc46e7a3547bdbd60d87a045ed8944e8a93a77529f8",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q01",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q02",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q03",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q04",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q05",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q06",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q07",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q08",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q09",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q10",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q11",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q12",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q13",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q14",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q15",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q16",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q17",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q18",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q19",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q20",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q21",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q22",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q23",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q24",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q25",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q26",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q27",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q28",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q29",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q30",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q31",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q32",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q33",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q34",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q35",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q36",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q37",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q38",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q39",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q40",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q41",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q42",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q43",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q44",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q45",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q46",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q47",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q48",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q49",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2022-mixed-reasoning-q50",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "tara-tsa-2023-mixed-reasoning-r1",
+      "answerKeyDigest": "d2db639f3ed9b6344b07c0318d0060dde4d915f67eacd2ed0415e87346229451",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "tara-tsa-2023-mixed-reasoning",
+        "paperRevisionId": "tara-tsa-2023-mixed-reasoning-r1",
+        "contentDigest": "f075b16b301e32c5ea890e88d63a55c3e970c9b4beebf48f5bfa1bbfb862d82b",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q01",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q02",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q03",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q04",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q05",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q06",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q07",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q08",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q09",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q10",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q11",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q12",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q13",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q14",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q15",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q16",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q17",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q18",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q19",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q20",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q21",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q22",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q23",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q24",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q25",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q26",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q27",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q28",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q29",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q30",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q31",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q32",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q33",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q34",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q35",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q36",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q37",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q38",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q39",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q40",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q41",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q42",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q43",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q44",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q45",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q46",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q47",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q48",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q49",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "tara-tsa-2023-mixed-reasoning-q50",
+            "correctAnswer": "A",
             "responseMode": "single-choice"
           }
         ]

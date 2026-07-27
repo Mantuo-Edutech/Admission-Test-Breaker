@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { resolve } from "node:path";
 import { allPublishedPracticePapers } from "../../../../scripts/lib/all-published-practice-papers.js";
 import {
@@ -14,7 +14,7 @@ import {
 describe("published practice revisions", () => {
   it("pins every published paper across all five exams to its exact digest", () => {
     const papers = allPublishedPracticePapers();
-    expect(papers).toHaveLength(44);
+    expect(papers).toHaveLength(63);
     expect(new Set(PUBLISHED_PRACTICE_REVISIONS.papers.map((paper) => paper.paperId)).size).toBe(papers.length);
 
     for (const paper of papers) {
@@ -61,10 +61,12 @@ describe("published practice revisions", () => {
   });
 
   it("keeps every browser publication reference seeded in the server registry", async () => {
-    const sql = await readFile(
-      resolve("supabase/migrations/20260723220100_published_practice_revision_seed.sql"),
-      "utf8",
-    );
+    const migrationDirectory = resolve("supabase/migrations");
+    const migrationNames = (await readdir(migrationDirectory))
+      .filter((name) => /_published_practice_revision_(?:seed|release_[a-f0-9]{8})\.sql$/u.test(name));
+    const sql = (await Promise.all(
+      migrationNames.map((name) => readFile(resolve(migrationDirectory, name), "utf8")),
+    )).join("\n");
     for (const record of PUBLISHED_PRACTICE_REVISIONS.papers) {
       expect(sql, record.paperId).toContain(
         `('${record.paperRevisionId}', '${record.paperId}', ${record.revision}, '${record.exam}', ${record.schemaVersion}, '${record.contentDigest}', ${record.questionCount}, ${record.durationMinutes},`,

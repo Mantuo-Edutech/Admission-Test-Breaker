@@ -82,6 +82,7 @@ function publicQuestion(question: PracticeQuestion): PublicPracticeQuestion {
     sourcePage: question.sourcePage,
     ...(question.passageId === undefined ? {} : { passageId: question.passageId }),
     ...(question.responseMode === undefined ? {} : { responseMode: question.responseMode }),
+    ...(question.optionDisplay === undefined ? {} : { optionDisplay: question.optionDisplay }),
     prompt: question.prompt,
     options: question.options,
     ...(question.statements === undefined

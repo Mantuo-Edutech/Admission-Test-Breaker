@@ -94,6 +94,19 @@ describe("TMUA 2023 Paper 1 reviewed content", () => {
     );
   });
 
+  it("allows repository-owned WebP question crops with label-only answers", () => {
+    const paper = esatMathematicsPaper();
+    paper.questions[0]!.prompt = [{
+      kind: "figure",
+      src: "/questions/esat-nsaa-2023/q01.webp",
+      alt: "Question 1 from the 2023 NSAA mathematics archive",
+    }];
+    paper.questions[0]!.optionDisplay = "labels-only";
+    paper.questions[0]!.options = paper.questions[0]!.options.map((option) => ({ ...option, content: [] }));
+
+    expect(validatePracticePaper(paper)).toEqual([]);
+  });
+
   it("provides safe, responsive SVG assets for every reviewed source diagram", () => {
     for (const filename of ["q05.svg", "q17.svg", "q20.svg"]) {
       const svg = readFileSync(

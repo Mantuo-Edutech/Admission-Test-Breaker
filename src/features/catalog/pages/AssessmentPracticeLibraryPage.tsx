@@ -1,5 +1,6 @@
 import { SiteHeader } from "../../navigation/components/SiteHeader.js";
 import type { PracticeExamId } from "../../practice/catalog/assessment-registry.js";
+import { historicPracticeForExam } from "../../practice/content/historic-practice-catalog.js";
 import type { ExamId } from "../exams.js";
 import {
   PracticeEntrySection,
@@ -15,9 +16,19 @@ interface PracticeLibraryConfig {
   readonly startingPractice: readonly PracticeEntry[];
 }
 
+const taraPastPaperEntries: readonly PracticeEntry[] = historicPracticeForExam("tara").map((entry) => ({
+  id: entry.paperId,
+  to: entry.route,
+  kicker: `PAST PAPER PRACTICE · ${entry.year}`,
+  title: `TSA ${entry.year}`,
+  subtitle: "Critical Thinking + Problem Solving",
+  meta: `${entry.questionCount} 题 · ${entry.durationMinutes} 分钟`,
+  ariaLabel: `TSA ${entry.year} 批判思维与问题解决，${entry.questionCount} 题，${entry.durationMinutes} 分钟，开始练习`,
+}));
+
 const PRACTICE_LIBRARY_CONFIG: Readonly<Record<AssessmentPracticeExamId, PracticeLibraryConfig>> = {
   tara: {
-    facts: ["2 套推理模考", "1 套限时写作", "1 套起点练习"],
+    facts: ["7 套主练习", "244 道推理题", "1 套起点练习"],
     fullPractice: [
       {
         id: "tara-critical-thinking-full-mock-v1",
@@ -44,6 +55,7 @@ const PRACTICE_LIBRARY_CONFIG: Readonly<Record<AssessmentPracticeExamId, Practic
         meta: "三选一 · 40 分钟",
         kind: "writing",
       },
+      ...taraPastPaperEntries,
     ],
     startingPractice: [{
       id: "tara-reasoning-starter-v1",
