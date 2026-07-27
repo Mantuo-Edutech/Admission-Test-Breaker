@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { SiteHeader } from "../../navigation/components/SiteHeader.js";
 import { getAssessmentDefinition } from "../../practice/catalog/assessment-registry.js";
-import { historicPracticeForExam } from "../../practice/content/historic-practice-catalog.js";
+import { publicHistoricPracticeForExam } from "../../practice/content/historic-practice-catalog.js";
 import {
   PracticeEntrySection,
   PracticeLibraryHero,
@@ -11,20 +11,12 @@ import {
 import { ESAT_MODULE_LABELS, type EsatModuleId } from "../esat-admissions.js";
 import { loadEsatPreparationPlan } from "../esat-plan.js";
 
-const starterByModule: Readonly<Record<EsatModuleId, { readonly paperId: string; readonly focusCount: number }>> = {
-  "mathematics-1": { paperId: "esat-mathematics-1-starter-v1", focusCount: 7 },
-  "mathematics-2": { paperId: "esat-mathematics-2-starter-v1", focusCount: 8 },
-  physics: { paperId: "esat-physics-starter-v1", focusCount: 7 },
-  chemistry: { paperId: "esat-chemistry-starter-v1", focusCount: 13 },
-  biology: { paperId: "esat-biology-starter-v1", focusCount: 11 },
-};
-
-const fullMockByModule: Readonly<Partial<Record<EsatModuleId, {
+const fullMockByModule: Readonly<Record<EsatModuleId, {
   readonly paperId: string;
   readonly label: string;
   readonly labelZh: string;
   readonly range: string;
-}>>> = {
+}>> = {
   "mathematics-1": {
     paperId: "esat-mathematics-1-full-mock-v1",
     label: "Mathematics 1",
@@ -63,114 +55,89 @@ export function EsatPastPapersPage() {
   const sections = plan === null
     ? assessment.sections
     : plan.moduleIds.map((moduleId) => assessment.sections.find((section) => section.id === moduleId)!).filter(Boolean);
-  const fullMocks = sections.flatMap((section) => {
-    const mock = fullMockByModule[section.id as EsatModuleId];
-    return mock === undefined ? [] : [mock];
+  const selectedModules = sections.map((section) => section.id as EsatModuleId);
+  const fullMockEntries: readonly PracticeEntry[] = selectedModules.map((moduleId) => {
+    const mock = fullMockByModule[moduleId];
+    return {
+      id: mock.paperId,
+      to: `/practice/${mock.paperId}`,
+      kicker: `FULL MOCK · ${mock.range}`,
+      title: mock.label,
+      subtitle: mock.labelZh,
+      meta: "27 questions · 40 minutes",
+      ariaLabel: `${mock.label} full mock, 27 questions, 40 minutes. Start.`,
+    };
   });
-  const fullMockEntries: readonly PracticeEntry[] = fullMocks.map((mock) => ({
-    id: mock.paperId,
-    to: `/practice/${mock.paperId}`,
-    kicker: `FULL MOCK · ${mock.range}`,
-    title: mock.label,
-    subtitle: mock.labelZh,
-    meta: "27 题 · 40 分钟",
-    ariaLabel: `${mock.label} ${mock.labelZh}，27 题，40 分钟，开始完整模考`,
-  }));
-  const diagnosticEntries: readonly PracticeEntry[] = sections.map((section) => ({
-    id: starterByModule[section.id as EsatModuleId].paperId,
-    to: `/practice/${starterByModule[section.id as EsatModuleId].paperId}`,
-    kicker: "SHORT DIAGNOSTIC",
-    title: section.label,
-    subtitle: section.labelZh,
-    meta: "10 题 · 建议 20 分钟",
-    kind: "diagnostic",
-    ariaLabel: `${section.label} ${section.labelZh}，10 题短诊断，开始练习`,
-  }));
-  const selectedModuleIds = new Set(sections.map((section) => section.id));
-  const historicCatalog = historicPracticeForExam("esat");
-  const modulePastPaperEntries: readonly PracticeEntry[] = historicCatalog
-    .filter((entry) => entry.moduleId !== "engineering-mixed" && entry.moduleId !== undefined && selectedModuleIds.has(entry.moduleId))
-    .map((entry) => ({
-      id: entry.paperId,
-      to: entry.route,
-      kicker: `PAST PAPER PRACTICE · ${entry.family} ${entry.year}`,
-      title: entry.title.replace(/^NSAA \d{4} · /u, ""),
-      subtitle: `${entry.family} ${entry.year}`,
-      meta: `${entry.questionCount} 题 · ${entry.durationMinutes} 分钟`,
-      ariaLabel: `${entry.titleZh}，${entry.questionCount} 题，${entry.durationMinutes} 分钟，开始练习`,
-    }));
-  const showEngineeringPractice = ["mathematics-1", "mathematics-2", "physics"]
-    .some((moduleId) => selectedModuleIds.has(moduleId));
-  const engineeringPastPaperEntries: readonly PracticeEntry[] = showEngineeringPractice
-    ? historicCatalog
-      .filter((entry) => entry.moduleId === "engineering-mixed")
+  const historicCatalog = publicHistoricPracticeForExam("esat");
+  const historicalByModule = selectedModules.map((moduleId) => {
+    const section = assessment.sections.find((candidate) => candidate.id === moduleId)!;
+    const entries: readonly PracticeEntry[] = historicCatalog
+      .filter((entry) => entry.moduleId === moduleId)
       .map((entry) => ({
         id: entry.paperId,
         to: entry.route,
-        kicker: `ENGINEERING PRACTICE · ${entry.year}`,
-        title: `ENGAA ${entry.year}`,
-        subtitle: "Engineering Mathematics & Physics",
-        meta: `${entry.questionCount} 题 · ${entry.durationMinutes} 分钟`,
-        ariaLabel: `${entry.titleZh}，${entry.questionCount} 题，${entry.durationMinutes} 分钟，开始练习`,
-      }))
-    : [];
-  const totalMainPractice = fullMockEntries.length + modulePastPaperEntries.length + engineeringPastPaperEntries.length;
+        kicker: `HISTORICAL PAPER · ${section.label.toUpperCase()}`,
+        title: `${entry.family} ${entry.year}`,
+        subtitle: entry.titleZh.replace(/^NSAA \d{4} · /u, ""),
+        meta: `${entry.questionCount} questions · ${entry.durationMinutes} minutes`,
+        ariaLabel: `${entry.family} ${entry.year}, ${section.label}, ${entry.questionCount} questions. Start.`,
+      }));
+    return { section, entries };
+  });
+  const historicalCount = historicalByModule.reduce((total, group) => total + group.entries.length, 0);
 
   return (
     <main className="tmua-stage-page esat-stage-page assessment-library-page">
       <SiteHeader examId="esat" />
       <PracticeLibraryHero
         exam="ESAT"
-        title={plan === null ? "先确定你的考试模块" : "选择一个模块开始"}
-        titleEn={plan === null ? "Find your required modules" : "Choose a module"}
+        title={plan === null ? "Choose your programme first" : "Choose a full practice paper"}
+        titleZh={plan === null ? "先选择申请专业" : "选择完整练习试卷"}
         summary={plan === null
-          ? "选择学校和专业，系统会给出对应模块。"
-          : `你的模块：${plan.moduleIds.map((id) => ESAT_MODULE_LABELS[id]).join(" · ")}`}
+          ? "Your university course determines which ESAT modules you need."
+          : `Your modules: ${plan.moduleIds.map((id) => ESAT_MODULE_LABELS[id]).join(" · ")}`}
+        summaryZh={plan === null ? "系统会根据学校与专业确定考试模块。" : "以下内容已按你的考试模块筛选。"}
         facts={plan === null
-          ? ["按专业筛选", "无需 AI Token"]
-          : [`${sections.length} 个必考模块`, `${totalMainPractice} 套主练习`, `${diagnosticEntries.length} 套短诊断`]}
-        action={<Link className="practice-library-hero__action" to="/exams/esat">{plan === null ? "选择学校和专业" : "修改专业与模块"}</Link>}
+          ? ["Programme-based module selection", "No AI token required"]
+          : [`${sections.length} required modules`, `${fullMockEntries.length} full mocks`, `${historicalCount} historical module papers`]}
+        action={(
+          <Link className="practice-library-hero__action" to="/exams/esat">
+            <span>{plan === null ? "Choose programme" : "Change programme or modules"}</span>
+            <small>{plan === null ? "选择专业" : "修改专业或模块"}</small>
+          </Link>
+        )}
       />
 
       {plan !== null && (
         <>
-          {fullMockEntries.length === 0 ? null : (
-            <PracticeEntrySection
-              eyebrow="FULL MOCKS"
-              title="完整模考"
-              titleEn="Full-length practice"
-              summary={`${fullMockEntries.length} 套 · 每套 27 题 / 40 分钟`}
-              entries={fullMockEntries}
-            />
-          )}
-          {modulePastPaperEntries.length === 0 ? null : (
-            <PracticeEntrySection
-              eyebrow="PAST-PAPER MODULE PRACTICE"
-              title="历年模块练习"
-              titleEn="Past-paper module practice"
-              summary={`${modulePastPaperEntries.length} 套 · 按你的模块筛选`}
-              entries={modulePastPaperEntries}
-            />
-          )}
-          {engineeringPastPaperEntries.length === 0 ? null : (
-            <PracticeEntrySection
-              eyebrow="ENGINEERING MATHEMATICS & PHYSICS"
-              title="工程综合练习"
-              titleEn="Engineering practice"
-              summary={`${engineeringPastPaperEntries.length} 套 · 数学与物理综合`}
-              entries={engineeringPastPaperEntries}
-            />
-          )}
           <PracticeEntrySection
-            eyebrow="SHORT DIAGNOSTICS"
-            title="短诊断"
-            titleEn="Check your starting point"
-            summary={`${diagnosticEntries.length} 套 · 每套 10 题`}
-            entries={diagnosticEntries}
+            eyebrow="FULL MOCKS"
+            title="Full Mocks"
+            titleZh="完整模考"
+            summary={`${fullMockEntries.length} complete module papers`}
+            entries={fullMockEntries}
           />
+          {historicalByModule.map(({ section, entries }) => entries.length === 0 ? (
+            <section className="practice-module-availability page-shell" key={section.id}>
+              <div>
+                <p>HISTORICAL PAPERS</p>
+                <h2 lang="en">{section.label}<small lang="zh-CN">{section.labelZh}</small></h2>
+              </div>
+              <p lang="en">No legacy paper maps directly to this current module. Use the full mock above.</p>
+              <small lang="zh-CN">暂无可直接对应现行模块的历年卷，请使用上方完整模考。</small>
+            </section>
+          ) : (
+            <PracticeEntrySection
+              key={section.id}
+              eyebrow="HISTORICAL PAPERS"
+              title={section.label}
+              titleZh={section.labelZh}
+              summary={`${entries.length} complete module papers · NSAA 2021–2023`}
+              entries={entries}
+            />
+          ))}
         </>
       )}
-
     </main>
   );
 }

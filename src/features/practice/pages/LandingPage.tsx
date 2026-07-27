@@ -9,10 +9,10 @@ export function LandingPage({ services }: { services?: Pick<AppServices, "funnel
     <main className="landing-page">
       <header className="site-header page-shell">
         <BrandMark />
-        <nav className="front-door-navigation" aria-label="首页导航">
+        <nav className="front-door-navigation" aria-label="Home navigation">
           <Link className="front-door-navigation__account" to="/account">
             <CircleUserRound aria-hidden="true" />
-            <span>账号</span>
+            <span>Account</span><small>账号</small>
           </Link>
         </nav>
       </header>
@@ -22,16 +22,18 @@ export function LandingPage({ services }: { services?: Pick<AppServices, "funnel
           <p className="front-door-hero__edition">
             UK UNIVERSITY ADMISSION TESTS · 2027 ENTRY
           </p>
-          <h1>不再为升学考试而焦虑</h1>
-          <p className="front-door-hero__lead">
-            选择考试，填写课程信息，查看需要补充的知识，然后完成诊断与真题练习。
+          <h1 lang="en">No more anxiety over admission tests.</h1>
+          <p className="front-door-hero__slogan-zh" lang="zh-CN">不再为升学考试而焦虑</p>
+          <p className="front-door-hero__lead" lang="en">
+            Choose your test, map your course coverage and practise full papers online.
           </p>
         </div>
       </section>
 
       <section className="exam-selector page-shell" aria-labelledby="exam-selector-title">
         <header className="exam-selector__heading">
-          <h2 id="exam-selector-title">你正在准备哪一项考试？</h2>
+          <h2 id="exam-selector-title" lang="en">Which admission test are you preparing for?</h2>
+          <p lang="zh-CN">你正在准备哪一项考试？</p>
         </header>
 
         <div className="exam-entry-grid">
@@ -50,7 +52,8 @@ export function LandingPage({ services }: { services?: Pick<AppServices, "funnel
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3>{exam.name}</h3>
-              <p>{exam.purpose}</p>
+              <p lang="en">{exam.purpose}</p>
+              <small lang="zh-CN">{exam.purposeZh}</small>
               <ArrowUpRight aria-hidden="true" />
             </Link>
           ))}
@@ -58,8 +61,8 @@ export function LandingPage({ services }: { services?: Pick<AppServices, "funnel
       </section>
 
       <footer className="landing-footer page-shell">
-        <p><strong>由满托发起</strong> · Admission Test Breaker</p>
-        <p>面向 TMUA、ESAT、TARA、LNAT 与 UCAT 的完整备考空间</p>
+        <p><strong>Mantuo Education</strong> · Admission Test Breaker <small>由满托发起</small></p>
+        <p>Complete preparation for TMUA, ESAT, TARA, LNAT and UCAT <small>完整备考空间</small></p>
       </footer>
     </main>
   );

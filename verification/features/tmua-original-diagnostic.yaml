@@ -3,7 +3,7 @@ feature:
   id: tmua-original-diagnostic
   title: TMUA 30 分钟原创起点能力诊断
   status: partial
-  userOutcome: 学生填写课程信息后，可以先完成一套不消耗历年真题的 8 道、30 分钟在线诊断，再决定如何进入主题训练或完整试卷。
+  userOutcome: 旧版 8 题诊断数据仅用于恢复历史记录；公开准备路径不再展示短诊断，并将旧入口安全重定向到完整历年试卷。
 run:
   packageScript: verify:tmua-diagnostic
 claims:
@@ -19,10 +19,10 @@ claims:
       - verify:learning-record
   - id: profile-first-native-journey
     status: verified
-    statement: TMUA 准备首页在课程档案之后优先推荐 30 分钟诊断；诊断说明、统一资料馆与共享练习内核均有真实入口，支持计时、保存、标记、提交、基础答案和学习记录，不再显示“即将开放”或审核占位页。
+    statement: TMUA 公开准备路径只推荐完整历年试卷；旧诊断地址保留为兼容重定向，既不制造死链，也不再把短诊断呈现给新用户。
     artifacts:
-      - src/features/catalog/pages/TmuaDashboardPage.tsx
-      - src/features/catalog/pages/TmuaDiagnosticPage.tsx
+      - src/features/catalog/pages/TmuaHubPage.tsx
+      - src/app/routes.tsx
       - src/features/practice/content/practice-paper-registry.ts
       - content/products/catalog.json
       - tests/app/tmua-hub-page.test.tsx
@@ -32,9 +32,9 @@ claims:
       - build
   - id: honest-diagnostic-boundary
     status: verified
-    statement: 页面只展示原始正确率、答案、用时与实际作答记录，明确不换算官方分数、百分位、录取概率或成熟 Benchmark。
+    statement: 历史诊断记录仍只能展示原始正确率、答案、用时与实际作答记录，不换算官方分数、百分位、录取概率或成熟 Benchmark。
     artifacts:
-      - src/features/catalog/pages/TmuaDiagnosticPage.tsx
+      - src/app/routes.tsx
       - src/features/practice/pages/ResultsPage.tsx
       - tests/app/results-page.test.tsx
     automatedChecks:

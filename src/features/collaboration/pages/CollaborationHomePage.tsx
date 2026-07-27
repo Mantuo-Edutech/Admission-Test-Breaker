@@ -6,7 +6,7 @@ import { AccountPageHeader } from "../../account/components/AccountPageHeader.js
 import type { SharedLearnerAccess } from "../domain.js";
 
 function shortReference(value: string): string {
-  return `学生学习空间 · ${value.slice(-6).toUpperCase()}`;
+  return `Learner Space · ${value.slice(-6).toUpperCase()}`;
 }
 
 function formatDate(value: string): string {
@@ -23,7 +23,7 @@ export function CollaborationHomePage({ services }: { readonly services: AppServ
     let active = true;
     async function load() {
       if (services.accountAccess?.configured !== true || services.collaboration?.configured !== true) {
-        if (active) { setError("协作授权服务尚未连接"); setLoading(false); }
+        if (active) { setError("The collaboration-permission service is not connected."); setLoading(false); }
         return;
       }
       try {
@@ -32,7 +32,7 @@ export function CollaborationHomePage({ services }: { readonly services: AppServ
         setSignedIn(access.session !== null);
         if (access.session !== null) setShared(await services.collaboration.listSharedLearners());
       } catch (reason) {
-        if (active) setError(reason instanceof Error ? reason.message : "暂时无法读取协作空间");
+        if (active) setError(reason instanceof Error ? reason.message : "The collaboration space could not be loaded.");
       } finally {
         if (active) setLoading(false);
       }
@@ -45,31 +45,31 @@ export function CollaborationHomePage({ services }: { readonly services: AppServ
     <main className="collaboration-page collaboration-home-page">
       <AccountPageHeader />
       {loading ? (
-        <section className="practice-state-page"><LoaderCircle className="account-spinner" aria-hidden="true" /><h1>正在读取协作空间…</h1></section>
+        <section className="practice-state-page"><LoaderCircle className="account-spinner" aria-hidden="true" /><h1>Loading collaboration space…<small lang="zh-CN">正在读取协作空间</small></h1></section>
       ) : !signedIn ? (
         <section className="collaboration-auth-state page-shell">
-          <ShieldCheck aria-hidden="true" /><p className="eyebrow">PRIVATE COLLABORATION</p><h1>登录后查看学生授权给你的空间</h1>
-          <p>老师或家长身份本身不提供任何权限。你只能看到学生逐项授权、尚未过期且没有撤销的数据。</p>
-          <Link className="button button--primary" to="/login">登录</Link>
+          <ShieldCheck aria-hidden="true" /><p className="eyebrow">PRIVATE COLLABORATION</p><h1>Sign in to view learner-authorised spaces<small lang="zh-CN">登录后查看学生授权给你的空间</small></h1>
+          <p>Being a teacher or parent grants no access by itself. You see only permissions the student selected that remain active and unexpired.</p>
+          <Link className="button button--primary" to="/login">Sign in</Link>
         </section>
       ) : (
         <>
           <section className="collaboration-hero page-shell">
-            <div><p className="eyebrow">COLLABORATION SPACE · 协作空间</p><h1>只处理学生授权给你的学习任务</h1><p>查看、批注、制定计划和布置练习是五项独立权限。每次敏感读取和写入都会进入学生可见的审计。</p></div>
-            <aside><ShieldCheck aria-hidden="true" /><strong>最小权限</strong><span>没有授权的考试、答案和动作不会出现在页面中。</span></aside>
+            <div><p className="eyebrow">COLLABORATION SPACE</p><h1>Only the learning tasks a student authorised<small lang="zh-CN">只处理学生授权给你的学习任务</small></h1><p>Progress, responses, annotations, plans and assignments are separate permissions. Sensitive reads and writes enter the student's audit.</p></div>
+            <aside><ShieldCheck aria-hidden="true" /><strong>Least privilege</strong><span>Unauthorised exams, answers and actions never appear.</span></aside>
           </section>
           <section className="shared-learner-list page-shell">
-            <header><div><p className="eyebrow">AUTHORIZED LEARNERS</p><h2>已授权学习空间</h2></div><Link to="/collaboration/redeem"><KeyRound aria-hidden="true" />兑换新的协作码</Link></header>
+            <header><div><p className="eyebrow">AUTHORIZED LEARNERS</p><h2>Authorised learner spaces<small lang="zh-CN">已授权学习空间</small></h2></div><Link to="/collaboration/redeem"><KeyRound aria-hidden="true" />Redeem a new code</Link></header>
             {shared.length === 0 ? (
-              <div className="collaboration-empty-state"><UsersRound aria-hidden="true" /><h3>还没有学生授权</h3><p>请让学生在自己的账号页创建协作码，再由你本人登录兑换。</p><Link className="button button--primary" to="/collaboration/redeem">输入协作码</Link></div>
+              <div className="collaboration-empty-state"><UsersRound aria-hidden="true" /><h3>No learner permissions yet<small lang="zh-CN">还没有学生授权</small></h3><p>Ask the student to create a collaboration code in their account, then redeem it while signed in to your own account.</p><Link className="button button--primary" to="/collaboration/redeem">Enter collaboration code</Link></div>
             ) : (
               <div>{shared.map((access) => (
                 <article key={access.grantId}>
                   <span>{access.subjectKind === "teacher" ? "TEACHER" : "PARENT"}</span>
                   <h3>{shortReference(access.learnerReference)}</h3>
                   <p>{access.examIds.map((exam) => exam.toUpperCase()).join(" · ")}</p>
-                  <dl><div><dt>权限</dt><dd>{access.scopes.length} 项</dd></div><div><dt>有效至</dt><dd>{formatDate(access.expiresAt)}</dd></div></dl>
-                  <Link to={`/collaboration/${access.grantId}?exam=${access.examIds[0]}`}>打开协作空间<ArrowRight aria-hidden="true" /></Link>
+                  <dl><div><dt>Permissions</dt><dd>{access.scopes.length}</dd></div><div><dt>Expires</dt><dd>{formatDate(access.expiresAt)}</dd></div></dl>
+                  <Link to={`/collaboration/${access.grantId}?exam=${access.examIds[0]}`}>Open collaboration space<ArrowRight aria-hidden="true" /></Link>
                 </article>
               ))}</div>
             )}

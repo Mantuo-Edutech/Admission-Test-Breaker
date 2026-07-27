@@ -31,14 +31,14 @@ function showManualRecovery(
   const copy = documentRef.createElement("div");
   const title = documentRef.createElement("h1");
   title.id = `${RECOVERY_NOTICE_ID}-title`;
-  title.textContent = "网站刚刚完成更新";
+  title.textContent = "A newer version is ready";
   const description = documentRef.createElement("p");
-  description.textContent = "当前标签页仍在使用旧版本。刷新后即可继续进入试卷，已保存的作答不会丢失。";
+  description.textContent = "Refresh to continue with the latest version. Your saved answers will remain available.";
   copy.append(title, description);
 
   const button = documentRef.createElement("button");
   button.type = "button";
-  button.textContent = "刷新并继续";
+  button.textContent = "Refresh and continue";
   button.addEventListener("click", () => {
     storage.removeItem(RECOVERY_SIGNATURE_KEY);
     reload();

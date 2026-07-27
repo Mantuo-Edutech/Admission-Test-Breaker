@@ -20,17 +20,17 @@ export function ExamGuidePage({ exam }: ExamGuidePageProps) {
         <div>
           <p className="eyebrow">{guide.eyebrow}</p>
           <h1>
-            {guide.title}
-            <span>{guide.titleEnglish}</span>
+            {guide.titleEnglish}
+            <span lang="zh-CN">{guide.title}</span>
           </h1>
           <p>{guide.introduction}</p>
           {(exam.id === "tara" || exam.id === "lnat" || exam.id === "ucat") && (
             <div className="tmua-overview-page__actions">
-              <Link className="button button--primary" to={`${exam.href}/past-papers`}>查看免费在线练习</Link>
+              <Link className="button button--primary" to={`${exam.href}/past-papers`}>Open free online practice</Link>
             </div>
           )}
         </div>
-        <dl aria-label={`${exam.name} 考试概况`}>
+        <dl aria-label={`${exam.name} test overview`}>
           {guide.metrics.map((metric) => (
             <div key={metric.label}>
               <dt>{metric.label}</dt>
@@ -42,9 +42,9 @@ export function ExamGuidePage({ exam }: ExamGuidePageProps) {
 
       <section className="exam-guide-section page-shell" id="format" aria-labelledby={`${exam.id}-format-title`}>
         <header className="section-heading">
-          <p>考试结构 · FORMAT</p>
-          <h2 id={`${exam.id}-format-title`}>你需要完成什么？</h2>
-          <span>先看清模块、题量和计时，再决定从哪里开始。</span>
+          <p>TEST FORMAT</p>
+          <h2 id={`${exam.id}-format-title`}>What will you complete?</h2>
+          <span>Modules, question counts and timing<small lang="zh-CN">模块、题量与计时</small></span>
         </header>
         <div className="exam-guide-modules">
           {guide.modules.map((module, index) => (
@@ -59,9 +59,9 @@ export function ExamGuidePage({ exam }: ExamGuidePageProps) {
 
       <section className="exam-guide-section exam-guide-path page-shell" id="path" aria-labelledby={`${exam.id}-path-title`}>
         <header className="section-heading">
-          <p>准备顺序 · PATH</p>
-          <h2 id={`${exam.id}-path-title`}>按这个顺序开始</h2>
-          <span>不先堆题量，先确定范围、题型和真实考试节奏。</span>
+          <p>PREPARATION PATH</p>
+          <h2 id={`${exam.id}-path-title`}>Start in this order</h2>
+          <span>Understand the scope and question types, then complete a full mock.<small lang="zh-CN">先理解范围和题型，再进入完整模考</small></span>
         </header>
         <ol>
           {guide.preparationSteps.map((step, index) => (
@@ -76,24 +76,24 @@ export function ExamGuidePage({ exam }: ExamGuidePageProps) {
 
       <section className="exam-guide-section exam-guide-resources page-shell" id="resources" aria-labelledby={`${exam.id}-resources-title`}>
         <header className="section-heading">
-          <p>完整准备 · ALL IN ONE PLACE</p>
-          <h2 id={`${exam.id}-resources-title`}>接下来需要的内容都在这里</h2>
-          <span>了解考试后，继续完成定位、在线练习和针对性复习。</span>
+          <p>ALL IN ONE PLACE</p>
+          <h2 id={`${exam.id}-resources-title`}>Everything you need next</h2>
+          <span>Coverage, practice and review<small lang="zh-CN">定位、练习与复习</small></span>
         </header>
         <div className="exam-guide-resources__grid">
           <article>
             <FileText aria-hidden="true" />
-            <div><h3>考试与课程定位</h3><p>根据申请方向和课程背景，确认考试模块与知识缺口。</p><Link to={exam.href}>进入 {exam.name} 概览</Link></div>
+            <div><h3>Course coverage</h3><p>Map your course background to the test modules and identify knowledge gaps.</p><Link to={`${exam.href}/preparation`}>View coverage</Link></div>
             <CheckCircle2 aria-hidden="true" />
           </article>
           <article>
             <FileText aria-hidden="true" />
-            <div><h3>在线题库与模拟练习</h3><p>直接在系统内完成计时、标记、提交和结果回顾。</p><Link to={`${exam.href}/past-papers`}>查看在线练习</Link></div>
+            <div><h3>Online papers and full mocks</h3><p>Time, flag, submit and review complete papers inside the platform.</p><Link to={`${exam.href}/past-papers`}>Open practice</Link></div>
             <CheckCircle2 aria-hidden="true" />
           </article>
           <article>
             <FileText aria-hidden="true" />
-            <div><h3>Review Notes</h3><p>按照考试模块复习核心知识、常见错误与解题方法。</p><Link to={`${exam.href}/resources`}>查看复习资料</Link></div>
+            <div><h3>Review Notes</h3><p>Review core knowledge, common errors and methods by test module.</p><Link to={`${exam.href}/resources`}>Open notes</Link></div>
             <CheckCircle2 aria-hidden="true" />
           </article>
         </div>

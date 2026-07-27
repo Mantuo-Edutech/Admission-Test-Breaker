@@ -26,10 +26,10 @@ const experienceOptions: readonly {
   label: string;
   detail: string;
 }[] = [
-  { value: "new", label: "还没有开始", detail: "只了解过考试名称或形式" },
-  { value: "sampled", label: "做过少量题", detail: "看过样题或零散练习题" },
-  { value: "mocked", label: "做过模拟卷", detail: "完成过至少一次限时模拟" },
-  { value: "past-papers", label: "做过真题", detail: "已经使用过一套或多套历年真题" },
+  { value: "new", label: "Not started", detail: "I only know the test name or format" },
+  { value: "sampled", label: "A few questions", detail: "I have tried samples or isolated questions" },
+  { value: "mocked", label: "A full mock", detail: "I have completed at least one timed mock" },
+  { value: "past-papers", label: "Historical papers", detail: "I have completed one or more historical papers" },
 ];
 
 function selectionMap(profile: PreparationProfile | null): Record<string, string[]> {
@@ -131,11 +131,11 @@ export function ProfilePanel({
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (system === null) {
-      setError("请选择你正在使用的课程体系。");
+      setError("Choose the curriculum you are studying.");
       return;
     }
     if (selectedQualificationIds.length === 0) {
-      setError("请至少选择一个具体资格或科目。");
+      setError("Choose at least one qualification or subject.");
       return;
     }
     if (
@@ -143,11 +143,11 @@ export function ProfilePanel({
         (qualificationId) => (unitsByQualification[qualificationId] ?? []).length === 0,
       )
     ) {
-      setError("请为每个已选资格至少选择一个具体模块。");
+      setError("Choose at least one module for each selected qualification.");
       return;
     }
     if (experience === null) {
-      setError("请选择最接近你目前情况的练习经历。");
+      setError("Choose the practice experience that best matches your current position.");
       return;
     }
 
@@ -183,12 +183,12 @@ export function ProfilePanel({
       <section className="profile-panel profile-panel--summary" aria-labelledby="profile-summary-title">
         <div className="profile-panel__index" aria-hidden="true">01</div>
         <div className="profile-panel__summary-main">
-          <p className="profile-panel__kicker">已保存</p>
-          <h2 id="profile-summary-title">你的课程信息</h2>
+          <p className="profile-panel__kicker">SAVED</p>
+          <h2 id="profile-summary-title">Your course profile<small lang="zh-CN">你的课程信息</small></h2>
           <dl className="profile-summary-facts">
-            <div><dt>申请年份</dt><dd>{currentProfile.entryCycle} Entry</dd></div>
-            <div><dt>课程体系</dt><dd>{systemLabel(currentProfile.curriculumSystem)}</dd></div>
-            <div><dt>练习经历</dt><dd>{experienceLabel(currentProfile.experience)}</dd></div>
+            <div><dt>ENTRY CYCLE</dt><dd>{currentProfile.entryCycle} Entry</dd></div>
+            <div><dt>CURRICULUM</dt><dd>{systemLabel(currentProfile.curriculumSystem)}</dd></div>
+            <div><dt>PRACTICE EXPERIENCE</dt><dd>{experienceLabel(currentProfile.experience)}</dd></div>
           </dl>
           <div className="profile-summary-qualifications">
             {currentProfile.selections.map((selection) => {
@@ -209,12 +209,12 @@ export function ProfilePanel({
             })}
           </div>
         </div>
-        <aside className="profile-panel__evidence" aria-label="准备证据状态">
+        <aside className="profile-panel__evidence" aria-label="Preparation evidence status">
           <BookMarked aria-hidden="true" />
-          <p><strong>知识覆盖</strong><span>可以查看</span></p>
-          <p><strong>练习表现</strong><span>完成练习后生成</span></p>
+          <p><strong>Course coverage</strong><span>Ready to view</span></p>
+          <p><strong>Practice evidence</strong><span>Generated after a full paper</span></p>
           <button className="profile-edit-button" type="button" onClick={beginEditing}>
-            <Pencil aria-hidden="true" />修改档案
+            <Pencil aria-hidden="true" />Edit profile
           </button>
         </aside>
       </section>
@@ -227,21 +227,21 @@ export function ProfilePanel({
     <section className="profile-panel" aria-labelledby="profile-panel-title">
       <div className="profile-panel__index" aria-hidden="true">01</div>
       <div className="profile-panel__intro">
-        <p className="profile-panel__kicker">课程背景</p>
-        <h2 id="profile-panel-title">告诉我们你正在学什么</h2>
-        <p>系统会根据这些信息对照 TMUA 知识要求，不会把课程覆盖当作能力分数。</p>
+        <p className="profile-panel__kicker">COURSE BACKGROUND</p>
+        <h2 id="profile-panel-title">Tell us what you study<small lang="zh-CN">告诉我们你正在学什么</small></h2>
+        <p>We use this information to map TMUA knowledge requirements. Course coverage is not treated as a score.</p>
         <p className="profile-panel__privacy">
           <ShieldCheck aria-hidden="true" />
-          档案当前只保存在这台设备；创建正式账户前不会上传。
+          Your profile stays in your learner space and is private by default.
         </p>
         {browseHref !== undefined && (
-          <a className="profile-panel__skip" href={browseHref}>先浏览 TMUA 内容</a>
+          <a className="profile-panel__skip" href={browseHref}>Browse TMUA first</a>
         )}
       </div>
 
       <form className="profile-form" onSubmit={(event) => void submit(event)}>
         <fieldset>
-          <legend><span>01</span>你的申请年份</legend>
+          <legend><span>01</span>Entry cycle <small>申请年份</small></legend>
           <div className="profile-choice-row">
             {["2027", "2028"].map((cycle) => (
               <label key={cycle} className="profile-choice">
@@ -252,14 +252,14 @@ export function ProfilePanel({
                   checked={entryCycle === cycle}
                   onChange={() => setEntryCycle(cycle)}
                 />
-                <span><strong>{cycle} Entry</strong><small>{cycle === "2027" ? "当前主要资料版本" : "提前填写课程信息"}</small></span>
+                <span><strong>{cycle} Entry</strong><small>{cycle === "2027" ? "Current content cycle" : "Plan your course profile early"}</small></span>
               </label>
             ))}
           </div>
         </fieldset>
 
         <fieldset>
-          <legend><span>02</span>你正在使用的课程体系</legend>
+          <legend><span>02</span>Curriculum <small>课程体系</small></legend>
           <div className="profile-choice-row">
             <label className="profile-choice">
               <input
@@ -302,7 +302,7 @@ export function ProfilePanel({
 
         {system !== null && (
           <fieldset>
-            <legend><span>03</span>具体资格与模块</legend>
+            <legend><span>03</span>Qualifications and modules <small>具体资格与模块</small></legend>
             <div className="profile-qualification-list">
               {qualifications.map((qualification) => {
                 const selected = selectedQualificationIds.includes(qualification.id);
@@ -316,11 +316,11 @@ export function ProfilePanel({
                       />
                       <span>
                         <strong>{qualification.label}</strong>
-                        <small>规格 {qualification.specificationVersion}</small>
+                        <small>Specification {qualification.specificationVersion}</small>
                       </span>
                     </label>
                     {selected && (
-                      <div className="profile-unit-grid" aria-label={`${qualification.label} 模块`}>
+                      <div className="profile-unit-grid" aria-label={`${qualification.label} modules`}>
                         {qualification.units.map((unit) => (
                           <label className="profile-unit" key={unit.id}>
                             <input
@@ -341,7 +341,7 @@ export function ProfilePanel({
         )}
 
         <fieldset>
-          <legend><span>04</span>你目前做过多少练习</legend>
+          <legend><span>04</span>Practice experience <small>目前的练习经历</small></legend>
           <div className="profile-experience-grid">
             {experienceOptions.map((option) => (
               <label className="profile-choice" key={option.value}>
@@ -362,7 +362,7 @@ export function ProfilePanel({
 
         {error !== null && <p className="profile-form__error" role="alert">{error}</p>}
         <button className="button button--primary profile-form__submit" type="submit" disabled={saving}>
-          {saving ? "正在保存…" : "保存并查看知识覆盖"}
+          {saving ? "Saving…" : "Save and view coverage"}
         </button>
       </form>
     </section>

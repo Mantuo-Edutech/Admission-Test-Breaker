@@ -29,9 +29,9 @@ describe("account access domain", () => {
         passwordConfirmation: "different",
       }),
     ).toEqual({
-      email: "请输入有效的邮箱地址",
-      password: "密码需要同时包含大写字母、小写字母和数字",
-      passwordConfirmation: "两次输入的密码不一致",
+      email: "Enter a valid email address.",
+      password: "Include an uppercase letter, a lowercase letter and a number.",
+      passwordConfirmation: "The passwords do not match.",
     });
   });
 });

@@ -68,7 +68,7 @@ export function AssessmentReviewNotesPage({
       <main className="tmua-stage-page">
         <SiteHeader examId={examId} />
         <section className="practice-state-page" aria-live="polite">
-          <p className="eyebrow">PROFILE FIRST · 正在检查本人档案</p>
+          <p className="eyebrow">PROFILE FIRST <small lang="zh-CN">正在检查本人档案</small></p>
           <h1><EnglishFirstText english="Preparing your review notes…" chinese="正在准备复习笔记…" /></h1>
         </section>
       </main>

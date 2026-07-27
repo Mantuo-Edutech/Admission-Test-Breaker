@@ -7,7 +7,7 @@ describe("application shell", () => {
   it("opens on the Mantou multi-exam front door", async () => {
     render(<RouterProvider router={createAppRouter(["/"])} />);
     expect(
-      await screen.findByRole("heading", { name: "不再为升学考试而焦虑" }),
+      await screen.findByRole("heading", { name: /No more anxiety over admission tests/u }),
     ).toBeInTheDocument();
   });
 });

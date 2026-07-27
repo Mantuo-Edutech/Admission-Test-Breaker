@@ -43,11 +43,11 @@ export function PracticeRoutePage({ services }: PracticeRoutePageProps) {
   }, [paperId, services.practiceDelivery]);
 
   if (paper === undefined) {
-    return <main className="practice-state-page" aria-live="polite"><p className="eyebrow">正在读取题目</p><h1>正在准备在线练习…</h1></main>;
+    return <main className="practice-state-page" aria-live="polite"><p className="eyebrow">LOADING PAPER</p><h1>Preparing your online practice…<small lang="zh-CN">正在准备在线练习</small></h1></main>;
   }
 
   if (loadFailed) {
-    return <main className="practice-state-page" role="alert"><p className="eyebrow">PAPER TEMPORARILY UNAVAILABLE</p><h1>试卷暂时无法读取</h1><p>你的练习记录没有丢失，请检查网络后刷新重试。</p></main>;
+    return <main className="practice-state-page" role="alert"><p className="eyebrow">PAPER TEMPORARILY UNAVAILABLE</p><h1>We could not load this paper.<small lang="zh-CN">试卷暂时无法读取</small></h1><p>Your practice record is safe. Check your connection and refresh the page.</p></main>;
   }
 
   return (

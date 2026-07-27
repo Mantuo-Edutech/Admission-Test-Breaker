@@ -34,36 +34,36 @@ export function SubmissionDialog({
           <div className="dialog-heading">
             <div>
               <p className="eyebrow">FINAL CHECK</p>
-              <Dialog.Title>{isEssay ? "准备提交这篇写作？" : "准备提交这份试卷？"}</Dialog.Title>
+              <Dialog.Title>{isEssay ? "Submit this response?" : "Submit this paper?"}</Dialog.Title>
             </div>
-            <Dialog.Close className="icon-button" aria-label="关闭提交确认">
+            <Dialog.Close className="icon-button" aria-label="Close submission check">
               <X aria-hidden="true" />
             </Dialog.Close>
           </div>
           <Dialog.Description className="submission-dialog__description">
             {isEssay
-              ? "提交后会显示所选题目、字数、用时和完整正文，内容将不能再修改。"
-              : "提交后会显示答案与本次练习结果，作答将不能再修改。"}
+              ? "After submission, you can review your chosen prompt, word count, active time and full response. You cannot edit it afterwards."
+              : "After submission, you can review your answers and results. You cannot edit them afterwards."}
           </Dialog.Description>
           {isEssay ? (
             <div className="submission-counts">
               <span className={answeredCount === 0 ? "has-warning" : ""}>
-                <strong>{answeredCount > 0 ? "已完成" : "未完成"}</strong> 正文状态
+                <strong>{answeredCount > 0 ? "Complete" : "Incomplete"}</strong> response
               </span>
             </div>
           ) : (
             <div className="submission-counts">
-              <span><strong>{answeredCount}</strong> 已作答</span>
+              <span><strong>{answeredCount}</strong> answered</span>
               <span className={unansweredCount > 0 ? "has-warning" : ""}>
-                <strong>{unansweredCount}</strong> 未作答
+                <strong>{unansweredCount}</strong> unanswered
               </span>
-              <span><strong>{markedCount}</strong> 已标记</span>
+              <span><strong>{markedCount}</strong> marked</span>
             </div>
           )}
           {unansweredCount > 0 && (
             <p className="submission-warning">
               <AlertCircle aria-hidden="true" />
-              {isEssay ? "正文还没有完成；你仍然可以提交本次记录。" : `未作答 ${unansweredCount} 题；你仍然可以提交。`}
+              {isEssay ? "Your response is incomplete, but you can still submit this attempt." : `${unansweredCount} questions are unanswered. You can still submit.`}
             </p>
           )}
           {submitError !== null && (
@@ -74,7 +74,7 @@ export function SubmissionDialog({
           )}
           <div className="dialog-actions">
             <Dialog.Close className="button button--secondary" type="button">
-              返回检查
+              Review answers
             </Dialog.Close>
             <button
               className="button button--primary"
@@ -82,7 +82,7 @@ export function SubmissionDialog({
               disabled={submitting}
               onClick={onConfirm}
             >
-              {submitting ? "正在提交…" : submitError === null ? "确认提交" : "重新保存并提交"}
+              {submitting ? "Submitting…" : submitError === null ? "Submit" : "Save and submit again"}
             </button>
           </div>
         </Dialog.Content>

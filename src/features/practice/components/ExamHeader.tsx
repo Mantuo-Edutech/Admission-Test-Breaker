@@ -33,15 +33,15 @@ export function ExamHeader({
           <strong>{examName} {edition}</strong>
           <span>{sectionLabel} · {isEssay ? "1 writing task" : `${totalQuestions} questions`}</span>
         </div>
-        <div className="exam-header__progress" aria-label={isEssay ? `正文${answeredCount > 0 ? "已完成" : "未完成"}` : `已作答 ${answeredCount} / ${totalQuestions}`}>
-          <span>{isEssay ? `正文${answeredCount > 0 ? "已完成" : "未完成"}` : `已作答 ${answeredCount} / ${totalQuestions}`}</span>
+        <div className="exam-header__progress" aria-label={isEssay ? `Response ${answeredCount > 0 ? "complete" : "incomplete"}` : `${answeredCount} of ${totalQuestions} answered`}>
+          <span>{isEssay ? `Response ${answeredCount > 0 ? "complete" : "incomplete"}` : `${answeredCount} / ${totalQuestions} answered`}</span>
           <i style={{ "--progress": answeredCount / totalQuestions } as React.CSSProperties} />
         </div>
         <div className="exam-header__actions">
           {mobileMap}
           <ExamTimer remainingMs={remainingMs} />
           <button className="exam-submit-button" type="button" onClick={onSubmit}>
-            {isEssay ? "提交写作" : "提交试卷"}
+            {isEssay ? "Submit writing" : "Submit paper"}
           </button>
         </div>
       </div>

@@ -16,8 +16,8 @@ export function PreparationProfileGate({
   if (loading) {
     return (
       <main className="practice-state-page" aria-live="polite">
-        <p className="eyebrow">正在检查课程信息</p>
-        <h1>正在准备练习…</h1>
+        <p className="eyebrow">CHECKING YOUR COURSE PROFILE</p>
+        <h1>Preparing your paper…<small lang="zh-CN">正在准备练习</small></h1>
       </main>
     );
   }

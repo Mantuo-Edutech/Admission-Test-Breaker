@@ -28,11 +28,11 @@ export function LoginPage({ services }: LoginPageProps) {
     setError(null);
     const account = services.accountAccess;
     if (account?.configured !== true) {
-      setError("账号服务尚未连接，请稍后再试");
+      setError("The account service is not connected. Please try again later.");
       return;
     }
     if (email.trim().length === 0 || password.length === 0) {
-      setError("请输入邮箱和密码");
+      setError("Enter your email and password.");
       return;
     }
     const botChallengeError = validateBotChallenge(account.botProtection, captchaToken);
@@ -64,7 +64,7 @@ export function LoginPage({ services }: LoginPageProps) {
         navigate(safeReturn);
       }
     } catch (reason) {
-      setError(reason instanceof Error ? reason.message : "登录失败，请稍后再试");
+      setError(reason instanceof Error ? reason.message : "Sign-in failed. Please try again.");
     } finally {
       setSubmitting(false);
       setCaptchaToken(null);
@@ -77,16 +77,16 @@ export function LoginPage({ services }: LoginPageProps) {
       <AccountPageHeader />
       <section className="account-layout account-layout--login page-shell">
         <div className="account-layout__intro">
-          <p className="eyebrow">学生账号</p>
-          <h1>继续你的训练</h1>
-          <p>登录后继续使用已解锁的复习资料与逐题解析。当前浏览器中如有待核销的邀请码，也会自动完成解锁。</p>
+          <p className="eyebrow">LEARNER ACCOUNT</p>
+          <h1>Continue your preparation<small lang="zh-CN">继续你的训练</small></h1>
+          <p>Sign in to continue your saved practice, review notes and unlocked explanations.</p>
         </div>
         <div className="account-card">
-          <h2>登录</h2>
+          <h2>Sign in <small>登录</small></h2>
           <form onSubmit={handleSubmit} noValidate>
-            <label htmlFor="login-email">邮箱</label>
+            <label htmlFor="login-email">Email</label>
             <input id="login-email" type="email" autoComplete="email" value={email} onChange={(event) => setEmail(event.target.value)} />
-            <label htmlFor="login-password">密码</label>
+            <label htmlFor="login-password">Password</label>
             <input id="login-password" type="password" autoComplete="current-password" value={password} onChange={(event) => setPassword(event.target.value)} />
             <AccountBotChallenge
               key={captchaAttempt}
@@ -99,10 +99,10 @@ export function LoginPage({ services }: LoginPageProps) {
               className="button button--primary"
               type="submit"
               disabled={submitting || (services.accountAccess?.botProtection.required === true && services.accountAccess.botProtection.siteKey === null)}
-            >{submitting ? "正在登录…" : "登录"}</button>
+            >{submitting ? "Signing in…" : "Sign in"}</button>
           </form>
-          <p className="account-card__recovery"><Link to="/forgot-password">忘记密码？</Link></p>
-          <p className="account-card__alternate">还没有账号？ <Link to="/access">先验证邀请码</Link></p>
+          <p className="account-card__recovery"><Link to="/forgot-password">Forgot your password?</Link></p>
+          <p className="account-card__alternate">No account yet? <Link to="/access">Verify an invitation code</Link></p>
         </div>
       </section>
     </main>

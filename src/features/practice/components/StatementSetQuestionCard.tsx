@@ -38,9 +38,9 @@ export function StatementSetQuestionCard({
       <div className="question-card__heading">
         <div>
           <p>{examName} · {sectionLabel.toUpperCase()}</p>
-          <h1 id={`question-${question.number}`}>第 {question.number} 题</h1>
+          <h1 id={`question-${question.number}`}>Question {question.number}<small lang="zh-CN">第 {question.number} 题</small></h1>
         </div>
-        <span>多陈述判断题</span>
+        <span>Multiple statements</span>
       </div>
 
       <div className="question-card__content">
@@ -76,7 +76,7 @@ export function StatementSetQuestionCard({
           </div>
           {feedbackHref !== undefined && (
             <footer className="question-card__feedback">
-              <Link to={feedbackHref}>报告这道题的问题 · Report this question</Link>
+              <Link to={feedbackHref}>Report this question <small>报告题目问题</small></Link>
             </footer>
           )}
         </div>

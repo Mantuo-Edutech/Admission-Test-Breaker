@@ -67,21 +67,21 @@ export function EsatGuidePage({ services }: { services: AppServices }) {
       <section className="exam-guide-hero page-shell">
         <div>
           <p className="eyebrow">ESAT · 2027 ENTRY</p>
-          <h1>先选专业，再确定考试模块<span>COURSE-TO-MODULE PLANNER</span></h1>
-          <p>选择准备申请的学校和专业。确定模块后，下一页会根据你的课程体系判断知识覆盖。</p>
+          <h1>Choose your programme. Find your modules.<span lang="zh-CN">先选专业，再确定考试模块</span></h1>
+          <p>Select the universities and courses you plan to apply for. We will identify the ESAT modules you need.</p>
         </div>
       </section>
 
       <section className="exam-guide-section esat-planner page-shell" aria-labelledby="esat-planner-title">
         <header className="section-heading">
-          <p>专业定位 · COURSE SELECTOR</p>
-          <h2 id="esat-planner-title">你准备申请哪些专业？</h2>
-          <span>最多加入五个选择；不会上传或保存你的申请意向。</span>
+          <p>COURSE SELECTOR</p>
+          <h2 id="esat-planner-title">Which courses are you applying for?</h2>
+          <span>Add up to five course choices.<small lang="zh-CN">最多可加入五个选择</small></span>
         </header>
 
         <div className="esat-planner__workspace">
           <div className="esat-planner__form">
-            <label htmlFor="esat-institution">学校</label>
+            <label htmlFor="esat-institution">University <small>学校</small></label>
             <select
               id="esat-institution"
               value={institutionId}
@@ -90,20 +90,20 @@ export function EsatGuidePage({ services }: { services: AppServices }) {
                 setProgrammeId("");
               }}
             >
-              <option value="">选择学校</option>
+              <option value="">Choose a university</option>
               {ESAT_ADMISSIONS_REGISTRY.institutions.map((institution) => (
                 <option key={institution.id} value={institution.id}>{institution.name}</option>
               ))}
             </select>
 
-            <label htmlFor="esat-programme">专业</label>
+            <label htmlFor="esat-programme">Course <small>专业</small></label>
             <select
               id="esat-programme"
               value={programmeId}
               disabled={institutionId === ""}
               onChange={(event) => setProgrammeId(event.target.value)}
             >
-              <option value="">选择专业</option>
+              <option value="">Choose a course</option>
               {programmes.map((programme) => (
                 <option key={programme.id} value={programme.id}>
                   {programme.name} · {programme.ucasCode}
@@ -112,22 +112,22 @@ export function EsatGuidePage({ services }: { services: AppServices }) {
             </select>
 
             <button type="button" onClick={addProgramme} disabled={programmeId === "" || selectedIds.length >= 5}>
-              <Plus aria-hidden="true" />加入申请选择
+              <Plus aria-hidden="true" />Add course
             </button>
           </div>
 
           <div className="esat-planner__selections">
-            <p>已选择 {selectedIds.length} / 5</p>
+            <p>SELECTED {selectedIds.length} / 5</p>
             {resolution.programmes.length === 0 ? (
-              <span>选择第一个专业后，这里会立即显示模块结果。</span>
+              <span>Your required modules will appear here.</span>
             ) : (
-              <ul aria-label="已选择的 ESAT 专业">
+              <ul aria-label="Selected ESAT courses">
                 {resolution.programmes.map((programme) => (
                   <li key={programme.id}>
                     <div><strong>{programme.name}</strong><span>{programme.ucasCode}</span></div>
                     <button
                       type="button"
-                      aria-label={`移除 ${programme.name}`}
+                      aria-label={`Remove ${programme.name}`}
                       onClick={() => {
                         setSelectedIds((current) => current.filter((id) => id !== programme.id));
                         setSelectedOptionKey("");
@@ -148,22 +148,22 @@ export function EsatGuidePage({ services }: { services: AppServices }) {
               <>
                 <AlertTriangle aria-hidden="true" />
                 <div>
-                  <p>模块要求冲突</p>
-                  <h3>三个模块无法同时满足这些专业</h3>
-                  <span>请调整申请组合；如果必须同时申请，应在预约考试前向 UAT-UK 确认处理方式。</span>
+                  <p>MODULE CONFLICT</p>
+                  <h3>One three-module combination cannot cover these courses.</h3>
+                  <span>Change your selection, or confirm the correct booking route with UAT-UK.</span>
                 </div>
               </>
             ) : (
               <>
                 <CheckCircle2 aria-hidden="true" />
                 <div>
-                  <p>{resolution.status === "resolved" ? "模块已经确定" : "还需要选择一种组合"}</p>
+                  <p>{resolution.status === "resolved" ? "MODULES CONFIRMED" : "CHOOSE A MODULE COMBINATION"}</p>
                   <h3>
                     {(resolution.status === "resolved" ? resolution.options[0] : resolution.fixedModules)
                       ?.map((moduleId) => ESAT_MODULE_LABELS[moduleId]).join(" · ")}
                   </h3>
                   {resolution.options.length > 1 && (
-                    <ol aria-label="可满足专业要求的 ESAT 模块组合">
+                    <ol aria-label="ESAT module combinations that meet the selected course requirements">
                       {resolution.options.map((option) => (
                         <li key={option.join("-")}>
                           <label>
@@ -181,7 +181,7 @@ export function EsatGuidePage({ services }: { services: AppServices }) {
                     </ol>
                   )}
                   {resolution.status === "choice_required" && selectedModules === null && (
-                    <span>选择一种模块组合后继续。</span>
+                    <span>Choose one module combination to continue.</span>
                   )}
                 </div>
               </>
@@ -191,11 +191,11 @@ export function EsatGuidePage({ services }: { services: AppServices }) {
         {selectedModules !== null && (
           <div className="esat-planner__continue">
             <div>
-              <strong>模块已确认</strong>
+              <strong>MODULES CONFIRMED</strong>
               <span>{selectedModules.map((moduleId) => ESAT_MODULE_LABELS[moduleId]).join(" · ")}</span>
             </div>
             <button className="button button--primary" type="button" onClick={continueToCourses}>
-              确定模块，填写课程信息
+              Continue to course profile
             </button>
           </div>
         )}

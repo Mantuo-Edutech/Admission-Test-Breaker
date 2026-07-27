@@ -18,10 +18,9 @@ describe("task-oriented exam navigation registry", () => {
     }
   });
 
-  it("keeps profile setup inside coverage and diagnostics inside practice", () => {
+  it("keeps profile setup inside coverage and complete papers inside practice", () => {
     expect(activePrimaryModule("tmua", "/exams/tmua/profile")).toBe("coverage");
     expect(activePrimaryModule("tmua", "/exams/tmua/coverage")).toBe("coverage");
-    expect(activePrimaryModule("tmua", "/exams/tmua/diagnostic")).toBe("practice");
     expect(activePrimaryModule("tmua", "/exams/tmua/past-papers")).toBe("practice");
     expect(activePrimaryModule("tmua", "/exams/tmua/notes/foundations")).toBe("notes");
     expect(activePrimaryModule("tmua", "/exams/tmua/coaching")).toBe("coaching");

@@ -7,8 +7,8 @@
       "family": "NSAA",
       "year": 2021,
       "moduleId": "mathematics-1",
-      "title": "NSAA 2021 · Mathematics",
-      "titleZh": "NSAA 2021 · 数学模块练习",
+      "title": "NSAA 2021 · Mathematics 1",
+      "titleZh": "NSAA 2021 · 数学 1 模块练习",
       "questionCount": 20,
       "durationMinutes": 30,
       "route": "/practice/esat-nsaa-2021-mathematics-1"
@@ -67,8 +67,8 @@
       "family": "NSAA",
       "year": 2022,
       "moduleId": "mathematics-1",
-      "title": "NSAA 2022 · Mathematics",
-      "titleZh": "NSAA 2022 · 数学模块练习",
+      "title": "NSAA 2022 · Mathematics 1",
+      "titleZh": "NSAA 2022 · 数学 1 模块练习",
       "questionCount": 20,
       "durationMinutes": 30,
       "route": "/practice/esat-nsaa-2022-mathematics-1"
@@ -127,8 +127,8 @@
       "family": "NSAA",
       "year": 2023,
       "moduleId": "mathematics-1",
-      "title": "NSAA 2023 · Mathematics",
-      "titleZh": "NSAA 2023 · 数学模块练习",
+      "title": "NSAA 2023 · Mathematics 1",
+      "titleZh": "NSAA 2023 · 数学 1 模块练习",
       "questionCount": 20,
       "durationMinutes": 30,
       "route": "/practice/esat-nsaa-2023-mathematics-1"

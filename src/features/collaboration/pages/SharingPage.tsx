@@ -32,11 +32,11 @@ import {
 } from "../domain.js";
 
 const scopeCopy: Readonly<Record<CollaborationScope, { title: string; detail: string }>> = {
-  "progress:read": { title: "查看进度", detail: "练习频率、活跃用时、完成状态和汇总事实" },
-  "responses:read": { title: "查看具体作答", detail: "每题选择、写作正文和逐题用时，敏感程度更高" },
-  "annotations:write": { title: "添加批注", detail: "在你的协作空间留下学习反馈" },
-  "plans:write": { title: "制定计划", detail: "创建结构化训练计划与截止时间" },
-  "assignments:write": { title: "布置练习", detail: "给出明确练习任务与截止时间" },
+  "progress:read": { title: "View progress", detail: "Practice frequency, active time, completion and summary facts" },
+  "responses:read": { title: "View responses", detail: "Question choices, writing and time per question; more sensitive" },
+  "annotations:write": { title: "Add annotations", detail: "Leave learning feedback in the collaboration space" },
+  "plans:write": { title: "Create plans", detail: "Build a structured training plan with deadlines" },
+  "assignments:write": { title: "Assign practice", detail: "Set a clear practice task and deadline" },
 };
 
 const examNames: Readonly<Record<PracticeExamId, string>> = {
@@ -44,15 +44,15 @@ const examNames: Readonly<Record<PracticeExamId, string>> = {
 };
 
 const auditCopy: Readonly<Record<CollaborationAuditEvent["eventType"], string>> = {
-  invite_created: "创建协作邀请",
-  invite_revoked: "撤销未使用邀请",
-  grant_redeemed: "对方兑换并获得授权",
-  grant_revoked: "学生撤销授权",
-  progress_viewed: "协作者查看汇总进度",
-  responses_viewed: "协作者查看具体作答",
-  annotation_created: "协作者添加批注",
-  plan_created: "协作者制定计划",
-  assignment_created: "协作者布置练习",
+  invite_created: "Collaboration invite created",
+  invite_revoked: "Unused invite revoked",
+  grant_redeemed: "Permission redeemed",
+  grant_revoked: "Permission revoked by student",
+  progress_viewed: "Summary progress viewed",
+  responses_viewed: "Question responses viewed",
+  annotation_created: "Annotation added",
+  plan_created: "Training plan created",
+  assignment_created: "Practice assigned",
 };
 
 interface SharingState {
@@ -66,13 +66,13 @@ interface SharingState {
 }
 
 function formatDate(value: string): string {
-  return new Intl.DateTimeFormat("zh-CN", {
+  return new Intl.DateTimeFormat("en-GB", {
     year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit",
   }).format(new Date(value));
 }
 
 function shortReference(value: string): string {
-  return `账号 · ${value.slice(-6).toUpperCase()}`;
+  return `Account · ${value.slice(-6).toUpperCase()}`;
 }
 
 export function SharingPage({ services }: { readonly services: AppServices }) {
@@ -98,7 +98,7 @@ export function SharingPage({ services }: { readonly services: AppServices }) {
 
   const load = useCallback(async () => {
     if (account?.configured !== true || collaboration?.configured !== true) {
-      setState((current) => ({ ...current, loading: false, error: "协作授权服务尚未连接" }));
+      setState((current) => ({ ...current, loading: false, error: "The collaboration-permission service is not connected." }));
       return;
     }
     try {
@@ -128,7 +128,7 @@ export function SharingPage({ services }: { readonly services: AppServices }) {
       setState((current) => ({
         ...current,
         loading: false,
-        error: reason instanceof Error ? reason.message : "暂时无法读取授权状态",
+        error: reason instanceof Error ? reason.message : "Your sharing permissions could not be loaded.",
       }));
     }
   }, [account, collaboration]);
@@ -152,7 +152,7 @@ export function SharingPage({ services }: { readonly services: AppServices }) {
     const input = { subjectKind, scopes, examIds, grantDays } as const;
     const validation = validateCollaborationInvite(input);
     if (hasCollaborationInviteErrors(validation)) {
-      setFormError(Object.values(validation)[0] ?? "请检查授权设置");
+      setFormError(Object.values(validation)[0] ?? "Check the permission settings.");
       return;
     }
     setWorking(true);
@@ -162,7 +162,7 @@ export function SharingPage({ services }: { readonly services: AppServices }) {
       setIssued(await collaboration.issueInvite(input));
       await load();
     } catch (reason) {
-      setFormError(reason instanceof Error ? reason.message : "协作邀请创建失败");
+      setFormError(reason instanceof Error ? reason.message : "The collaboration invite could not be created.");
     } finally {
       setWorking(false);
     }
@@ -176,7 +176,7 @@ export function SharingPage({ services }: { readonly services: AppServices }) {
       await collaboration.cancelMyInvite(inviteId);
       await load();
     } catch (reason) {
-      setFormError(reason instanceof Error ? reason.message : "撤销邀请失败");
+      setFormError(reason instanceof Error ? reason.message : "The invitation could not be revoked.");
     } finally {
       setWorking(false);
     }
@@ -190,7 +190,7 @@ export function SharingPage({ services }: { readonly services: AppServices }) {
       await collaboration.revokeMyGrant(grantId);
       await load();
     } catch (reason) {
-      setFormError(reason instanceof Error ? reason.message : "撤销授权失败");
+      setFormError(reason instanceof Error ? reason.message : "The permission could not be revoked.");
     } finally {
       setWorking(false);
     }
@@ -209,47 +209,47 @@ export function SharingPage({ services }: { readonly services: AppServices }) {
         <section className="practice-state-page" aria-live="polite">
           <LoaderCircle className="account-spinner" aria-hidden="true" />
           <p className="eyebrow">CONSENT & GRANTS</p>
-          <h1>正在读取你的授权…</h1>
+          <h1>Loading your permissions…<small lang="zh-CN">正在读取你的授权</small></h1>
         </section>
       )}
       {!state.loading && !state.signedIn && (
         <section className="collaboration-auth-state page-shell">
           <ShieldCheck aria-hidden="true" />
-          <p className="eyebrow">由学生决定 · STUDENT CONTROLLED</p>
-          <h1>登录后管理学习数据授权</h1>
-          <p>老师、家长、冰冰或 Agent 都不会自动看到你的记录。每项权限都必须由你本人选择、限时授权，并且可以立即撤销。</p>
-          <div><Link className="button button--primary" to="/login">登录</Link><Link className="button button--secondary" to="/register">注册账号</Link></div>
+          <p className="eyebrow">STUDENT CONTROLLED</p>
+          <h1>Sign in to manage data sharing<small lang="zh-CN">登录后管理学习数据授权</small></h1>
+          <p>Teachers, parents, staff and agents receive no automatic access. You choose each permission, its expiry, and can revoke it immediately.</p>
+          <div><Link className="button button--primary" to="/login">Sign in</Link><Link className="button button--secondary" to="/register">Create account</Link></div>
         </section>
       )}
       {!state.loading && state.signedIn && (
         <>
           <section className="collaboration-hero page-shell">
             <div>
-              <p className="eyebrow">DATA SHARING · 学习数据授权</p>
-              <h1>由你决定谁能看到什么</h1>
-              <p>选择对象、考试、具体权限和有效期。系统生成一次性协作码，不要求填写对方邮箱，也不会把内容权限误当成数据权限。</p>
+              <p className="eyebrow">DATA SHARING</p>
+              <h1>You decide who can see what<small lang="zh-CN">由你决定谁能看到什么</small></h1>
+              <p>Choose the person, exams, exact permissions and expiry. A one-time collaboration code requires no recipient email and never confuses content access with data access.</p>
             </div>
-            <aside><ShieldCheck aria-hidden="true" /><strong>随时撤销</strong><span>撤销后，对方下一次读取立即失败。</span></aside>
+            <aside><ShieldCheck aria-hidden="true" /><strong>Revoke at any time</strong><span>The recipient's next request fails immediately.</span></aside>
           </section>
 
           <section className="collaboration-builder page-shell" aria-labelledby="sharing-builder-title">
             <header>
               <p className="eyebrow">01 · CREATE A GRANT</p>
-              <h2 id="sharing-builder-title">创建一次性协作邀请</h2>
+              <h2 id="sharing-builder-title">Create a one-time collaboration invite<small lang="zh-CN">创建一次性协作邀请</small></h2>
             </header>
 
             <fieldset className="collaboration-choice-row">
-              <legend>授权给谁</legend>
+              <legend>Who is this for?</legend>
               {(["teacher", "parent"] as const).map((kind) => (
                 <button key={kind} type="button" data-selected={subjectKind === kind} onClick={() => setSubjectKind(kind)}>
-                  <UsersRound aria-hidden="true" /><strong>{kind === "teacher" ? "老师 · Teacher" : "家长 · Parent"}</strong>
-                  <span>{kind === "teacher" ? "适合查看、批注、计划和布置练习" : "适合查看进度或经你允许查看具体作答"}</span>
+                  <UsersRound aria-hidden="true" /><strong>{kind === "teacher" ? "Teacher" : "Parent"}</strong>
+                  <span>{kind === "teacher" ? "Progress, responses, annotations, plans and assignments" : "Progress or responses, only when you permit them"}</span>
                 </button>
               ))}
             </fieldset>
 
             <fieldset className="collaboration-scope-grid">
-              <legend>逐项选择权限</legend>
+              <legend>Choose each permission</legend>
               {collaborationScopes.map((scope) => (
                 <label key={scope} data-selected={scopes.includes(scope)}>
                   <input type="checkbox" checked={scopes.includes(scope)} onChange={() => toggleScope(scope)} />
@@ -265,47 +265,47 @@ export function SharingPage({ services }: { readonly services: AppServices }) {
             </fieldset>
 
             <fieldset className="collaboration-exam-grid">
-              <legend>授权哪些考试</legend>
+              <legend>Choose exams</legend>
               {collaborationExamIds.map((examId) => (
                 <label key={examId} data-selected={examIds.includes(examId)}>
                   <input type="checkbox" checked={examIds.includes(examId)} onChange={() => toggleExam(examId)} />
-                  <strong>{examNames[examId]}</strong><span>{examIds.includes(examId) ? "已包括" : "不包括"}</span>
+                  <strong>{examNames[examId]}</strong><span>{examIds.includes(examId) ? "Included" : "Not included"}</span>
                 </label>
               ))}
             </fieldset>
 
             <div className="collaboration-duration">
-              <label htmlFor="collaboration-grant-days">授权有效期</label>
+              <label htmlFor="collaboration-grant-days">Access duration</label>
               <select id="collaboration-grant-days" value={grantDays} onChange={(event) => setGrantDays(Number(event.target.value))}>
-                <option value={7}>7 天</option><option value={30}>30 天</option><option value={90}>90 天</option><option value={180}>180 天</option>
+                <option value={7}>7 days</option><option value={30}>30 days</option><option value={90}>90 days</option><option value={180}>180 days</option>
               </select>
-              <span>协作码本身 7 天内有效；对方兑换后开始计算授权时间。</span>
+              <span>The code expires after 7 days. Access duration starts when it is redeemed.</span>
             </div>
             <button className="button button--primary" type="button" disabled={working} onClick={() => void issueInvite()}>
-              <UserRoundCheck aria-hidden="true" />{working ? "正在创建…" : "生成一次性协作码"}
+              <UserRoundCheck aria-hidden="true" />{working ? "Creating…" : "Generate one-time code"}
             </button>
             {formError !== null && <p className="form-error" role="alert">{formError}</p>}
 
             {issued !== null && (
               <div className="collaboration-code" aria-live="polite">
-                <div><p>只显示这一次</p><strong>{issued.code}</strong><span>请通过你信任的方式发给对方；不要公开发布。</span></div>
-                <button type="button" onClick={() => void copyCode()}><Copy aria-hidden="true" />{copied ? "已复制" : "复制协作码"}</button>
+                <div><p>Shown once</p><strong>{issued.code}</strong><span>Send it through a trusted channel. Never post it publicly.</span></div>
+                <button type="button" onClick={() => void copyCode()}><Copy aria-hidden="true" />{copied ? "Copied" : "Copy code"}</button>
               </div>
             )}
           </section>
 
           <section className="collaboration-ledger page-shell" aria-labelledby="active-grants-title">
-            <header><div><p className="eyebrow">02 · ACTIVE AUTHORITY</p><h2 id="active-grants-title">当前授权与邀请</h2></div><span>{state.grants.filter((grant) => grant.status === "active").length} 项有效授权</span></header>
+            <header><div><p className="eyebrow">02 · ACTIVE AUTHORITY</p><h2 id="active-grants-title">Active permissions and invites<small lang="zh-CN">当前授权与邀请</small></h2></div><span>{state.grants.filter((grant) => grant.status === "active").length} active</span></header>
             <div className="collaboration-ledger__columns">
               <div>
-                <h3>已生效授权</h3>
-                {state.grants.length === 0 ? <p className="collaboration-empty">还没有人兑换你的协作码。</p> : (
+                <h3>Active permissions<small lang="zh-CN">已生效授权</small></h3>
+                {state.grants.length === 0 ? <p className="collaboration-empty">No one has redeemed a collaboration code yet.</p> : (
                   <ul>{state.grants.map((grant) => (
                     <li key={grant.id} data-status={grant.status}>
-                      <div><strong>{grant.subjectKind === "teacher" ? "老师" : "家长"} · {shortReference(grant.subjectReference)}</strong><span>{grant.examIds.map((examId) => examNames[examId]).join(" · ")}</span></div>
-                      <p>{grant.scopes.map((scope) => scopeCopy[scope].title).join("、")}</p>
-                      <small>{grant.status === "active" ? `有效至 ${formatDate(grant.expiresAt)}` : grant.status === "revoked" ? "已撤销" : "已过期"}</small>
-                      {grant.status === "active" && <button type="button" disabled={working} onClick={() => void revokeGrant(grant.id)}><X aria-hidden="true" />立即撤销</button>}
+                      <div><strong>{grant.subjectKind === "teacher" ? "Teacher" : "Parent"} · {shortReference(grant.subjectReference)}</strong><span>{grant.examIds.map((examId) => examNames[examId]).join(" · ")}</span></div>
+                      <p>{grant.scopes.map((scope) => scopeCopy[scope].title).join(", ")}</p>
+                      <small>{grant.status === "active" ? `Valid until ${formatDate(grant.expiresAt)}` : grant.status === "revoked" ? "Revoked" : "Expired"}</small>
+                      {grant.status === "active" && <button type="button" disabled={working} onClick={() => void revokeGrant(grant.id)}><X aria-hidden="true" />Revoke now</button>}
                       {(state.artifacts[grant.id]?.length ?? 0) > 0 && (
                         <div className="collaboration-owner-artifacts">
                           {state.artifacts[grant.id]!.map((artifact) => <p key={artifact.id}><strong>{artifact.title}</strong><span>{artifact.body}</span></p>)}
@@ -316,14 +316,14 @@ export function SharingPage({ services }: { readonly services: AppServices }) {
                 )}
               </div>
               <div>
-                <h3>协作邀请</h3>
-                {state.invites.length === 0 ? <p className="collaboration-empty">暂时没有邀请记录。</p> : (
+                <h3>Collaboration invites<small lang="zh-CN">协作邀请</small></h3>
+                {state.invites.length === 0 ? <p className="collaboration-empty">No collaboration invites yet.</p> : (
                   <ul>{state.invites.map((invite) => (
                     <li key={invite.id} data-status={invite.status}>
-                      <div><strong>{invite.subjectKind === "teacher" ? "老师" : "家长"}邀请</strong><span>{invite.examIds.map((examId) => examNames[examId]).join(" · ")}</span></div>
-                      <p>{invite.scopes.map((scope) => scopeCopy[scope].title).join("、")}</p>
-                      <small>{invite.status === "pending" ? `协作码有效至 ${formatDate(invite.inviteExpiresAt)}` : invite.status === "redeemed" ? "已兑换" : invite.status === "expired" ? "已过期" : "已撤销"}</small>
-                      {invite.status === "pending" && <button type="button" disabled={working} onClick={() => void cancelInvite(invite.id)}><X aria-hidden="true" />撤销邀请</button>}
+                      <div><strong>{invite.subjectKind === "teacher" ? "Teacher" : "Parent"} invite</strong><span>{invite.examIds.map((examId) => examNames[examId]).join(" · ")}</span></div>
+                      <p>{invite.scopes.map((scope) => scopeCopy[scope].title).join(", ")}</p>
+                      <small>{invite.status === "pending" ? `Code valid until ${formatDate(invite.inviteExpiresAt)}` : invite.status === "redeemed" ? "Redeemed" : invite.status === "expired" ? "Expired" : "Revoked"}</small>
+                      {invite.status === "pending" && <button type="button" disabled={working} onClick={() => void cancelInvite(invite.id)}><X aria-hidden="true" />Revoke invite</button>}
                     </li>
                   ))}</ul>
                 )}
@@ -332,11 +332,11 @@ export function SharingPage({ services }: { readonly services: AppServices }) {
           </section>
 
           <section className="collaboration-audit page-shell" aria-labelledby="collaboration-audit-title">
-            <header><p className="eyebrow">03 · ACCESS AUDIT</p><h2 id="collaboration-audit-title">谁在什么时候做了什么</h2><span>成功的敏感读取和协作动作才会进入审计；失败请求不会伪装成成功。</span></header>
-            {state.audit.length === 0 ? <p className="collaboration-empty">暂无授权活动。</p> : (
+            <header><p className="eyebrow">03 · ACCESS AUDIT</p><h2 id="collaboration-audit-title">Who did what, and when<small lang="zh-CN">谁在什么时候做了什么</small></h2><span>Only successful sensitive reads and collaboration actions enter the audit.</span></header>
+            {state.audit.length === 0 ? <p className="collaboration-empty">No permission activity yet.</p> : (
               <ol>{state.audit.map((event, index) => (
                 <li key={`${event.occurredAt}-${event.eventType}-${index}`}>
-                  <Clock3 aria-hidden="true" /><div><strong>{auditCopy[event.eventType]}</strong><span>{event.examId === null ? "全部授权流程" : examNames[event.examId]} · {shortReference(event.actorReference)}</span></div><time>{formatDate(event.occurredAt)}</time>
+                  <Clock3 aria-hidden="true" /><div><strong>{auditCopy[event.eventType]}</strong><span>{event.examId === null ? "All permission activity" : examNames[event.examId]} · {shortReference(event.actorReference)}</span></div><time>{formatDate(event.occurredAt)}</time>
                 </li>
               ))}</ol>
             )}

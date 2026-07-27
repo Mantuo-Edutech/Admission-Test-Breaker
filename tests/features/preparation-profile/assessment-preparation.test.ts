@@ -33,10 +33,10 @@ describe("deterministic assessment starting point", () => {
     expect(plan.firstCycleHours).toEqual([12, 19]);
     expect(plan.firstCycleWeeks).toEqual([3, 10]);
     expect(plan.modules.find((module) => module.id === "decision-making")?.gaps).toContain(
-      "集合、条件与演绎逻辑 · Sets, conditions and deduction",
+      "Sets, conditions and deduction",
     );
     expect(plan.modules.find((module) => module.id === "situational-judgement")?.courseConclusion)
-      .toMatch(/学校课程通常不直接覆盖 UCAT/u);
+      .toMatch(/School courses rarely cover UCAT/u);
     expect(plan.nextActionHref).toBe("/exams/ucat/past-papers");
   });
 
@@ -53,8 +53,8 @@ describe("deterministic assessment starting point", () => {
     expect(plan.firstCycleHours).toEqual([4, 6]);
     expect(plan.firstCycleWeeks).toEqual([1, 2]);
     expect(plan.modules.flatMap((module) => module.gaps)).toEqual(expect.arrayContaining([
-      "推论、原则与类比 · Inference, principle and analogy",
-      "三选一与命题边界 · Prompt choice and scope",
+      "Inference, principle and analogy",
+      "Prompt choice and scope · 三选一与命题边界",
     ]));
   });
 
@@ -72,9 +72,9 @@ describe("deterministic assessment starting point", () => {
     expect(plan.firstCycleHours).toEqual([14, 21]);
     expect(plan.firstCycleWeeks).toEqual([7, 21]);
     expect(plan.modules.map((module) => module.courseEvidence)).toEqual([
-      "当前档案没有显示直接相关学科",
-      "当前档案没有显示直接相关学科",
-      "当前档案没有显示直接相关学科",
+      "No directly relevant course is shown in the current profile",
+      "No directly relevant course is shown in the current profile",
+      "No directly relevant course is shown in the current profile",
     ]);
   });
 });

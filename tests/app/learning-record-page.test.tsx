@@ -67,23 +67,21 @@ describe("private learning record product", () => {
     const router = createAppRouter(["/exams/ucat/record"], app.value);
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: /UCAT 学习记录/u })).toBeInTheDocument();
-    const metrics = screen.getByRole("region", { name: "UCAT 学习记录概览" });
-    expect(within(metrics).getByText("完成 1 次")).toBeInTheDocument();
-    expect(within(metrics).getByText("1 天")).toBeInTheDocument();
-    expect(within(metrics).getByText("3 分钟")).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /UCAT Learning Record/u })).toBeInTheDocument();
+    const metrics = screen.getByRole("region", { name: "UCAT learning record summary" });
+    expect(within(metrics).getByText("1 completed")).toBeInTheDocument();
+    expect(within(metrics).getByText("1 days")).toBeInTheDocument();
+    expect(within(metrics).getByText("3 min")).toBeInTheDocument();
     expect(screen.getByRole("heading", {
       name: "Quantitative Reasoning Starter · 数量推理 · 满托原创短诊断",
     })).toBeInTheDocument();
-    expect(screen.getByRole("heading", {
-      name: "数量推理：百分比下降 · Quantitative Reasoning: Percentage Decrease",
-    })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Quantitative Reasoning: Percentage Decrease/u })).toBeInTheDocument();
     expect(screen.getAllByText("1 / 10").length).toBeGreaterThanOrEqual(1);
-    expect(screen.getByText("最近 30 次完整练习快照", { exact: false })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Recent sessions/u })).toBeInTheDocument();
 
-    await user.click(screen.getByRole("link", { name: /查看本次结果/u }));
+    await user.click(screen.getByRole("link", { name: /View result/u }));
     expect(router.state.location.pathname).toBe("/results/ses_learning-record-page");
-    expect(await screen.findByRole("heading", { name: "本次练习完成" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Practice complete/u })).toBeInTheDocument();
   });
 
   it("keeps another exam empty instead of mixing UCAT evidence into LNAT", async () => {
@@ -91,7 +89,7 @@ describe("private learning record product", () => {
     await app.history.record(completedSession());
     render(<RouterProvider router={createAppRouter(["/exams/lnat/record"], app.value)} />);
 
-    expect(await screen.findByRole("heading", { name: /完成第一项 LNAT 在线练习后/u })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Your record appears after your first LNAT paper/u })).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: /Quantitative Reasoning/u })).not.toBeInTheDocument();
   });
 });

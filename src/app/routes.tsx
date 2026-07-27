@@ -62,10 +62,6 @@ const TmuaHubPage = lazy(async () => ({
   default: (await import("../features/catalog/pages/TmuaHubPage.js"))
     .TmuaHubPage,
 }));
-const TmuaDiagnosticPage = lazy(async () => ({
-  default: (await import("../features/catalog/pages/TmuaDiagnosticPage.js"))
-    .TmuaDiagnosticPage,
-}));
 const TmuaPastPapersPage = lazy(async () => ({
   default: (await import("../features/catalog/pages/TmuaPastPapersPage.js"))
     .TmuaPastPapersPage,
@@ -183,8 +179,8 @@ const CollaborationWorkspacePage = lazy(async () => ({
 function RouteLoading() {
   return (
     <main className="practice-state-page">
-      <p className="eyebrow">正在打开页面</p>
-      <h1>正在准备内容…</h1>
+      <p className="eyebrow">OPENING PAGE</p>
+      <h1>Preparing your content…<small lang="zh-CN">正在准备内容</small></h1>
     </main>
   );
 }
@@ -257,13 +253,7 @@ export function createAppRouter(
     },
     {
       path: "/exams/tmua/diagnostic",
-      element: (
-        <RouteFrame>
-          <Suspense fallback={<RouteLoading />}>
-            <TmuaDiagnosticPage services={services} />
-          </Suspense>
-        </RouteFrame>
-      ),
+      element: <Navigate to="/exams/tmua/past-papers" replace />,
     },
     {
       path: "/exams/tmua/past-papers",

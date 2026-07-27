@@ -60,11 +60,11 @@ export type CreateAssessmentBackgroundProfileInput = Omit<AssessmentBackgroundPr
 };
 
 export const ASSESSMENT_LEARNING_STAGES: readonly { id: AssessmentLearningStage; label: string }[] = [
-  { id: "year-11-or-below", label: "Year 11 或以下" },
+  { id: "year-11-or-below", label: "Year 11 or below" },
   { id: "year-12", label: "Year 12" },
   { id: "year-13", label: "Year 13" },
-  { id: "gap-year", label: "Gap year / 已毕业" },
-  { id: "university", label: "大学在读" },
+  { id: "gap-year", label: "Gap year / graduated" },
+  { id: "university", label: "At university" },
 ];
 
 export const ASSESSMENT_SUBJECT_AREAS: readonly { id: AssessmentSubjectArea; label: string; labelEn: string }[] = [
@@ -81,17 +81,17 @@ export const ASSESSMENT_SUBJECT_AREAS: readonly { id: AssessmentSubjectArea; lab
 ];
 
 export const ASSESSMENT_EXPERIENCE_OPTIONS: readonly { id: AssessmentPreparationExperience; label: string }[] = [
-  { id: "new", label: "还没有做过题" },
-  { id: "sampled", label: "看过或做过少量样题" },
-  { id: "mocked", label: "完成过至少一次限时练习" },
-  { id: "past-papers", label: "已经系统训练或完成多套练习" },
+  { id: "new", label: "No practice yet" },
+  { id: "sampled", label: "A few sample questions" },
+  { id: "mocked", label: "At least one timed practice" },
+  { id: "past-papers", label: "Several complete papers" },
 ];
 
 export const ASSESSMENT_WEEKLY_TIME_OPTIONS: readonly { id: AssessmentWeeklyTime; label: string }[] = [
-  { id: "under-2", label: "每周少于 2 小时" },
-  { id: "2-4", label: "每周 2–4 小时" },
-  { id: "5-7", label: "每周 5–7 小时" },
-  { id: "8-plus", label: "每周 8 小时以上" },
+  { id: "under-2", label: "Under 2 hours per week" },
+  { id: "2-4", label: "2–4 hours per week" },
+  { id: "5-7", label: "5–7 hours per week" },
+  { id: "8-plus", label: "8+ hours per week" },
 ];
 
 const examIds = new Set<AssessmentProfileExamId>(["tara", "lnat", "ucat"]);

@@ -49,7 +49,7 @@ export function RegisterPage({ services }: RegisterPageProps) {
     setSubmitError(null);
     if (hasRegistrationErrors(validation)) return;
     if (account?.configured !== true || pendingInvite === undefined || inviteCode === null) {
-      setSubmitError("请先验证邀请码，再创建账号");
+      setSubmitError("Verify an invitation code before creating an account.");
       return;
     }
     const botChallengeError = validateBotChallenge(account.botProtection, captchaToken);
@@ -77,7 +77,7 @@ export function RegisterPage({ services }: RegisterPageProps) {
       pendingInvite.clear();
       navigate(requestedReturn ?? "/access/complete");
     } catch (reason) {
-      setSubmitError(reason instanceof Error ? reason.message : "注册失败，请稍后再试");
+      setSubmitError(reason instanceof Error ? reason.message : "Registration failed. Please try again.");
     } finally {
       setSubmitting(false);
       setCaptchaToken(null);
@@ -91,18 +91,18 @@ export function RegisterPage({ services }: RegisterPageProps) {
         <AccountPageHeader />
         <section className="account-message page-shell">
           <MailCheck aria-hidden="true" />
-          <p className="eyebrow">还差一步</p>
-          <h1>请确认你的邮箱</h1>
-          <p>确认邮件已发送至 <strong>{confirmationEmail}</strong>。点击邮件中的链接后，系统会自动解锁邀请码对应的内容。</p>
+          <p className="eyebrow">ONE MORE STEP</p>
+          <h1>Confirm your email<small lang="zh-CN">请确认你的邮箱</small></h1>
+          <p>We sent a confirmation email to <strong>{confirmationEmail}</strong>. Open its link to continue.</p>
           {localConfirmationInbox !== null && (
             <p className="account-message__note">
-              当前是本地预览，确认邮件不会进入你的真实邮箱。
-              <a href={localConfirmationInbox} target="_blank" rel="noreferrer">打开本地确认邮箱</a>
-              ，再点击最新邮件中的确认链接。
+              This is a local preview, so the confirmation email will not reach your real inbox. {" "}
+              <a href={localConfirmationInbox} target="_blank" rel="noreferrer">Open local confirmation inbox</a>
+              {" "}and open the confirmation link in the latest message.
             </p>
           )}
-          <p className="account-message__note">邀请码已暂存在当前浏览器中。若确认链接在另一台设备打开，登录后重新输入同一个邀请码即可完成绑定。</p>
-          <Link className="button button--secondary" to="/login" state={requestedReturn === null ? undefined : { returnTo: requestedReturn }}>已经确认？前往登录</Link>
+          <p className="account-message__note">Your invitation code is stored temporarily in this browser. If you confirm on another device, enter the same code again after signing in.</p>
+          <Link className="button button--secondary" to="/login" state={requestedReturn === null ? undefined : { returnTo: requestedReturn }}>Confirmed? Sign in</Link>
         </section>
       </main>
     );
@@ -114,10 +114,10 @@ export function RegisterPage({ services }: RegisterPageProps) {
         <AccountPageHeader />
         <section className="account-message page-shell">
           <CheckCircle2 aria-hidden="true" />
-          <p className="eyebrow">注册前验证</p>
-          <h1>请先输入邀请码</h1>
-          <p>注册只面向已经获得内容权限的学生。先验证邀请码，再创建账号。</p>
-          <Link className="button button--primary" to="/access">验证邀请码</Link>
+          <p className="eyebrow">VERIFY BEFORE REGISTRATION</p>
+          <h1>Enter an invitation code first<small lang="zh-CN">请先输入邀请码</small></h1>
+          <p>Create an account after verifying the content access you received.</p>
+          <Link className="button button--primary" to="/access">Verify invitation code</Link>
         </section>
       </main>
     );
@@ -128,27 +128,27 @@ export function RegisterPage({ services }: RegisterPageProps) {
       <AccountPageHeader />
       <section className="account-layout page-shell">
         <div className="account-layout__intro">
-          <p className="eyebrow">建立你的学习空间</p>
-          <h1>创建账号，保存完整训练记录</h1>
-          <p>注册完成后，你的已发布资料权限、作答记录和未来的学习分析都会归属于这个账号。</p>
+          <p className="eyebrow">YOUR LEARNER SPACE</p>
+          <h1>Create an account. Keep your complete record.<small lang="zh-CN">创建账号，保存完整训练记录</small></h1>
+          <p>Your published content access, practice record and future learning analysis will belong to this account.</p>
           <p className="account-privacy-note">
-            数据默认仅本人可见。以后如需老师或家长查看，必须由学生逐项授权。<Link to="/privacy">查看学生隐私说明</Link>
+            Your data is private by default. A teacher or parent can only access specific areas you authorise. <Link to="/privacy">Read the learner privacy notice</Link>
           </p>
         </div>
 
         <div className="account-card">
-          <p className="account-card__step">步骤 2 / 2</p>
-          <h2>创建学生账号</h2>
+          <p className="account-card__step">STEP 2 OF 2</p>
+          <h2>Create learner account <small>创建学生账号</small></h2>
           <form onSubmit={handleSubmit} noValidate>
-            <label htmlFor="register-email">邮箱</label>
+            <label htmlFor="register-email">Email</label>
             <input id="register-email" type="email" autoComplete="email" value={email} onChange={(event) => setEmail(event.target.value)} aria-invalid={errors.email !== undefined} aria-describedby={errors.email ? "register-email-error" : undefined} />
             {errors.email && <p className="form-error" id="register-email-error">{errors.email}</p>}
 
-            <label htmlFor="register-password">密码</label>
+            <label htmlFor="register-password">Password</label>
             <input id="register-password" type="password" autoComplete="new-password" value={password} onChange={(event) => setPassword(event.target.value)} aria-invalid={errors.password !== undefined} aria-describedby={errors.password ? "register-password-error" : "register-password-hint"} />
-            {errors.password ? <p className="form-error" id="register-password-error">{errors.password}</p> : <small id="register-password-hint">至少 10 位，包含大写字母、小写字母和数字。</small>}
+            {errors.password ? <p className="form-error" id="register-password-error">{errors.password}</p> : <small id="register-password-hint">At least 10 characters with uppercase, lowercase and a number.</small>}
 
-            <label htmlFor="register-password-confirmation">再次输入密码</label>
+            <label htmlFor="register-password-confirmation">Confirm password</label>
             <input id="register-password-confirmation" type="password" autoComplete="new-password" value={passwordConfirmation} onChange={(event) => setPasswordConfirmation(event.target.value)} aria-invalid={errors.passwordConfirmation !== undefined} aria-describedby={errors.passwordConfirmation ? "register-confirmation-error" : undefined} />
             {errors.passwordConfirmation && <p className="form-error" id="register-confirmation-error">{errors.passwordConfirmation}</p>}
 
@@ -165,10 +165,10 @@ export function RegisterPage({ services }: RegisterPageProps) {
               type="submit"
               disabled={submitting || (account?.botProtection.required === true && account.botProtection.siteKey === null)}
             >
-              {submitting ? "正在创建账号…" : "创建账号并解锁"}
+              {submitting ? "Creating account…" : "Create account and unlock"}
             </button>
           </form>
-          <p className="account-card__alternate">已有账号？ <Link to="/login" state={requestedReturn === null ? undefined : { returnTo: requestedReturn }}>直接登录</Link></p>
+          <p className="account-card__alternate">Already have an account? <Link to="/login" state={requestedReturn === null ? undefined : { returnTo: requestedReturn }}>Sign in</Link></p>
         </div>
       </section>
     </main>

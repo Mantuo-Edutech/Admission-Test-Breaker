@@ -115,8 +115,8 @@ describe("student-controlled collaboration pages", () => {
     const router = createAppRouter(["/account/sharing"], services(collaborationService(), false));
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "登录后管理学习数据授权" })).toBeInTheDocument();
-    expect(screen.getByText(/每项权限都必须由你本人选择/u)).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Sign in to manage data sharing/u })).toBeInTheDocument();
+    expect(screen.getByText(/You choose each permission/u)).toBeInTheDocument();
   });
 
   it("issues a one-time parent code with independently selected scopes", async () => {
@@ -125,10 +125,10 @@ describe("student-controlled collaboration pages", () => {
     const router = createAppRouter(["/account/sharing"], services(collaboration));
     render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { name: "由你决定谁能看到什么" });
-    await user.click(screen.getByRole("button", { name: /家长 · Parent/u }));
-    await user.click(screen.getByRole("checkbox", { name: /查看具体作答/u }));
-    await user.click(screen.getByRole("button", { name: "生成一次性协作码" }));
+    await screen.findByRole("heading", { name: /You decide who can see what/u });
+    await user.click(screen.getByRole("button", { name: /Parent/u }));
+    await user.click(screen.getByRole("checkbox", { name: /View responses/u }));
+    await user.click(screen.getByRole("button", { name: "Generate one-time code" }));
 
     expect(collaboration.issueInvite).toHaveBeenCalledWith({
       subjectKind: "parent",
@@ -137,7 +137,7 @@ describe("student-controlled collaboration pages", () => {
       grantDays: 30,
     });
     expect(await screen.findByText("MTSHARE-1234567890-ABCDEFGHIJ")).toBeInTheDocument();
-    expect(screen.getByText("只显示这一次")).toBeInTheDocument();
+    expect(screen.getByText("Shown once")).toBeInTheDocument();
   });
 
   it("binds a collaboration code to the signed-in recipient account", async () => {
@@ -146,12 +146,12 @@ describe("student-controlled collaboration pages", () => {
     const router = createAppRouter(["/collaboration/redeem"], services(collaboration));
     render(<RouterProvider router={router} />);
 
-    await user.type(await screen.findByLabelText("协作码"), "MTSHARE-1234567890-ABCDEFGHIJ");
-    await user.click(screen.getByRole("button", { name: "核验并接受授权" }));
+    await user.type(await screen.findByLabelText("Collaboration code"), "MTSHARE-1234567890-ABCDEFGHIJ");
+    await user.click(screen.getByRole("button", { name: "Verify and accept access" }));
 
     expect(collaboration.redeemInvite).toHaveBeenCalledWith("MTSHARE-1234567890-ABCDEFGHIJ");
-    expect(await screen.findByRole("heading", { name: "协作授权已经生效" })).toBeInTheDocument();
-    expect(screen.getByText("老师 · Teacher")).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Collaboration access is active/u })).toBeInTheDocument();
+    expect(screen.getByText("Teacher")).toBeInTheDocument();
   });
 
   it("shows progress, keeps exact answers private and permits only the authorised write action", async () => {
@@ -163,14 +163,14 @@ describe("student-controlled collaboration pages", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "TMUA 已保存记录" })).toBeInTheDocument();
-    expect(screen.getByText("12 题")).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "具体作答保持私密" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /TMUA saved records/u })).toBeInTheDocument();
+    expect(screen.getByText("12")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Responses remain private/u })).toBeInTheDocument();
     expect(collaboration.listSharedResponses).not.toHaveBeenCalled();
 
-    await user.type(screen.getByLabelText("标题"), "第一周函数复习");
-    await user.type(screen.getByLabelText("具体内容"), "先完成代数与函数复习，再做一次诊断。");
-    await user.click(screen.getByRole("button", { name: "制定计划" }));
+    await user.type(screen.getByLabelText("Title"), "第一周函数复习");
+    await user.type(screen.getByLabelText("Details"), "先完成代数与函数复习，再做一次诊断。");
+    await user.click(screen.getByRole("button", { name: "Create plan" }));
 
     expect(collaboration.createArtifact).toHaveBeenCalledWith({
       grantId: access.grantId,
@@ -187,7 +187,7 @@ describe("student-controlled collaboration pages", () => {
     const router = createAppRouter(["/collaboration/revoked-grant?exam=tmua"], services(collaboration));
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "当前没有可用授权" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /No active permission/u })).toBeInTheDocument();
     expect(collaboration.getSharedProgress).not.toHaveBeenCalled();
     expect(collaboration.listSharedResponses).not.toHaveBeenCalled();
   });

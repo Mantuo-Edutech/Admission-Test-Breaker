@@ -23,10 +23,10 @@ export function AnswerChoice({
         name={`answer-${questionId}`}
         value={option.label}
         checked={selected}
-        aria-label={`选项 ${option.label}`}
+        aria-label={`Option ${option.label}`}
         onChange={() => onSelect(option.label)}
       />
-      <span className="sr-only">选项 {option.label}</span>
+      <span className="sr-only">Option {option.label}</span>
       <span className="answer-choice__letter" aria-hidden="true">
         {option.label}
       </span>

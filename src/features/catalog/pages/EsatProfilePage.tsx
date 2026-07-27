@@ -43,11 +43,11 @@ export function EsatProfilePage({ services }: { services: AppServices }) {
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (curriculumId === null) {
-      setError("请选择课程体系。");
+      setError("Choose your curriculum.");
       return;
     }
     if (courseIds.length === 0) {
-      setError("请至少选择一门正在学习的课程。");
+      setError("Choose at least one course you are studying or have completed.");
       return;
     }
     const plan = createEsatPreparationPlan({
@@ -71,13 +71,13 @@ export function EsatProfilePage({ services }: { services: AppServices }) {
     <main className="tmua-stage-page esat-stage-page esat-profile-page">
       <SiteHeader examId="esat" />
       <section className="tmua-stage-hero page-shell">
-        <p className="eyebrow">第 2 步 · COURSE PROFILE</p>
-        <h1>填写你的课程信息<span>Tell us what you study</span></h1>
-        <p>系统只对照你需要参加的 {currentPlan.moduleIds.length} 个模块。</p>
+        <p className="eyebrow">COURSE PROFILE</p>
+        <h1>Tell us what you study<span lang="zh-CN">填写你的课程信息</span></h1>
+        <p>We will only compare your courses with the {currentPlan.moduleIds.length} ESAT modules you need.</p>
       </section>
 
-      <section className="esat-profile-summary page-shell" aria-label="已经确定的 ESAT 模块">
-        <div><strong>已确定模块</strong><Link to="/exams/esat">修改专业</Link></div>
+      <section className="esat-profile-summary page-shell" aria-label="Confirmed ESAT modules">
+        <div><strong>CONFIRMED MODULES</strong><Link to="/exams/esat">Change course</Link></div>
         <ul>
           {currentPlan.moduleIds.map((moduleId) => <li key={moduleId}>{ESAT_MODULE_LABELS[moduleId]}</li>)}
         </ul>
@@ -85,7 +85,7 @@ export function EsatProfilePage({ services }: { services: AppServices }) {
 
       <form className="esat-course-form page-shell" onSubmit={submit}>
         <fieldset>
-          <legend><span>01</span>课程体系</legend>
+          <legend><span>01</span>Curriculum <small>课程体系</small></legend>
           <div className="esat-course-form__curricula">
             {ESAT_CURRICULA.map((curriculum) => (
               <label key={curriculum.id}>
@@ -103,7 +103,7 @@ export function EsatProfilePage({ services }: { services: AppServices }) {
 
         {curriculumId !== null && (
           <fieldset>
-            <legend><span>02</span>正在学习或已经完成的课程</legend>
+            <legend><span>02</span>Courses studied or completed <small>正在学习或已经完成的课程</small></legend>
             <div className="esat-course-form__courses">
               {courseOptions.map((course) => (
                 <label key={course.id}>
@@ -121,9 +121,9 @@ export function EsatProfilePage({ services }: { services: AppServices }) {
 
         {error !== null && <p className="form-error" role="alert">{error}</p>}
         <div className="esat-course-form__footer">
-          <p><ShieldCheck aria-hidden="true" />课程信息只保存在当前设备。</p>
+          <p><ShieldCheck aria-hidden="true" />Your course profile stays in your learning space.</p>
           <button className="button button--primary" type="submit">
-            保存并查看知识覆盖
+            Save and view coverage
             <ArrowRight aria-hidden="true" />
           </button>
         </div>

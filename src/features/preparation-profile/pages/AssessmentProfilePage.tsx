@@ -84,7 +84,7 @@ export function AssessmentProfilePage({ examId, services }: { examId: Assessment
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (guestSpaceId === null || curriculumId === null || learningStage === null || experience === null || weeklyTime === null || courseIds.length === 0) {
-      setError("请完成课程体系、年级、学科、练习经历和每周时间后再继续。");
+      setError("Complete your curriculum, stage, courses, practice experience and weekly availability before continuing.");
       return;
     }
     const subjectAreas = subjectAreasForAssessmentCourses(courseIds);
@@ -118,48 +118,48 @@ export function AssessmentProfilePage({ examId, services }: { examId: Assessment
     <main className="tmua-stage-page assessment-profile-page">
       <SiteHeader examId={examId} />
       <section className="tmua-stage-hero page-shell">
-        <p className="eyebrow">第 1 步 · STUDENT PROFILE</p>
-        <h1>填写你的 {name} 背景<span>Tell us where you are starting</span></h1>
-        <p>先记录课程体系、年级、学科背景、做题经历和每周时间；这个阶段使用固定规则，不消耗 AI Token。</p>
+        <p className="eyebrow">STUDENT PROFILE</p>
+        <h1>Tell us where you are starting<span lang="zh-CN">填写你的 {name} 背景</span></h1>
+        <p>Add your curriculum, stage, courses, practice experience and weekly availability. This step uses fixed rules, not live AI.</p>
       </section>
 
-      {loading ? <section className="practice-state-page" aria-live="polite"><p className="eyebrow">正在读取本人档案</p><h2>正在打开…</h2></section> : (
+      {loading ? <section className="practice-state-page" aria-live="polite"><p className="eyebrow">LOADING PROFILE</p><h2>Opening your profile…</h2></section> : (
         <form className="esat-course-form assessment-profile-form page-shell" onSubmit={(event) => void submit(event)}>
           <fieldset>
-            <legend><span>01</span>申请入学年份 · Entry cycle</legend>
+            <legend><span>01</span>Entry cycle <small>申请入学年份</small></legend>
             <div className="esat-course-form__curricula">
               {(["2027", "2028"] as const).map((cycle) => <label key={cycle}><input type="radio" name="entry-cycle" checked={entryCycle === cycle} onChange={() => setEntryCycle(cycle)} /><span><strong>{cycle} Entry</strong><small>计划在 {cycle} 年入学</small></span></label>)}
             </div>
           </fieldset>
           <fieldset>
-            <legend><span>02</span>课程体系 · Curriculum</legend>
+            <legend><span>02</span>Curriculum <small>课程体系</small></legend>
             <div className="esat-course-form__curricula">
               {ASSESSMENT_CURRICULA.map((option) => <label key={option.id}><input type="radio" name="curriculum" checked={curriculumId === option.id} onChange={() => chooseCurriculum(option.id)} /><span><strong>{option.label}</strong><small>{option.detail}</small></span></label>)}
             </div>
           </fieldset>
           <fieldset>
-            <legend><span>03</span>当前年级 · Current stage</legend>
+            <legend><span>03</span>Current stage <small>当前年级</small></legend>
             <div className="esat-course-form__courses assessment-profile-form__compact-options">
               {ASSESSMENT_LEARNING_STAGES.map((option) => <label key={option.id}><input type="radio" name="learning-stage" checked={learningStage === option.id} onChange={() => { setLearningStage(option.id); setError(null); }} /><span>{option.label}</span></label>)}
             </div>
           </fieldset>
           {curriculumId !== null && (
             <fieldset>
-              <legend><span>04</span>正在学习或已经完成的课程 · Courses</legend>
-              <p className="assessment-profile-form__course-note">只显示 {ASSESSMENT_CURRICULA.find((option) => option.id === curriculumId)?.label} 对应课程；可以多选。</p>
+              <legend><span>04</span>Courses studied or completed <small>正在学习或已经完成的课程</small></legend>
+              <p className="assessment-profile-form__course-note">Only courses from {ASSESSMENT_CURRICULA.find((option) => option.id === curriculumId)?.label} are shown. Select all that apply.</p>
               <div className="esat-course-form__courses">
                 {courseOptions.map((option) => <label key={option.id}><input type="checkbox" checked={courseIds.includes(option.id as AssessmentCourseId)} onChange={() => toggleCourse(option.id as AssessmentCourseId)} /><span><strong>{option.labelEn}</strong><small>{option.labelZh}</small></span></label>)}
               </div>
             </fieldset>
           )}
           <fieldset>
-            <legend><span>05</span>目前做题经历 · Practice experience</legend>
+            <legend><span>05</span>Practice experience <small>目前做题经历</small></legend>
             <div className="esat-course-form__courses assessment-profile-form__compact-options">
               {ASSESSMENT_EXPERIENCE_OPTIONS.map((option) => <label key={option.id}><input type="radio" name="experience" checked={experience === option.id} onChange={() => { setExperience(option.id); setError(null); }} /><span>{option.label}</span></label>)}
             </div>
           </fieldset>
           <fieldset>
-            <legend><span>06</span>每周可投入时间 · Weekly availability</legend>
+            <legend><span>06</span>Weekly availability <small>每周可投入时间</small></legend>
             <div className="esat-course-form__courses assessment-profile-form__compact-options">
               {ASSESSMENT_WEEKLY_TIME_OPTIONS.map((option) => <label key={option.id}><input type="radio" name="weekly-time" checked={weeklyTime === option.id} onChange={() => { setWeeklyTime(option.id); setError(null); }} /><span>{option.label}</span></label>)}
             </div>
@@ -167,8 +167,8 @@ export function AssessmentProfilePage({ examId, services }: { examId: Assessment
           {error !== null && <p className="form-error" role="alert">{error}</p>}
           {warning !== null && <p className="calm-notice" role="status">{warning}</p>}
           <div className="esat-course-form__footer">
-            <p><ShieldCheck aria-hidden="true" />不填写姓名或联系方式；数据归学生本人。</p>
-            <button className="button button--primary" type="submit">保存并查看 {name} 起点定位<ArrowRight aria-hidden="true" /></button>
+            <p><ShieldCheck aria-hidden="true" />No name or contact details are required. The learner owns the data.</p>
+            <button className="button button--primary" type="submit">Save and view {name} coverage<ArrowRight aria-hidden="true" /></button>
           </div>
         </form>
       )}

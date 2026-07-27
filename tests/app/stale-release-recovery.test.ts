@@ -51,7 +51,7 @@ describe("stale release recovery", () => {
     expect(reload).not.toHaveBeenCalled();
     const notice = document.getElementById("stale-release-recovery");
     expect(notice).toHaveAttribute("role", "alert");
-    expect(notice).toHaveTextContent("网站刚刚完成更新");
+    expect(notice).toHaveTextContent("A newer version is ready");
     notice!.querySelector("button")!.click();
     expect(globalThis.sessionStorage.getItem(STALE_RELEASE_RECOVERY_SIGNATURE_KEY)).toBeNull();
     expect(reload).toHaveBeenCalledOnce();

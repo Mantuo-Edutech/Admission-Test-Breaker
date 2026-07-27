@@ -8,13 +8,13 @@ export function BrandMark({ compact = false }: BrandMarkProps) {
       <img
         className="brand-mark__image"
         src="/brand/mantou-logo.png"
-        alt="满托"
+        alt="Mantou Education"
         width="44"
         height="44"
       />
       <span className="brand-mark__copy">
-        <strong>满托考试练习场</strong>
-        {!compact && <small>Admission Test Breaker</small>}
+        <strong lang="en">UK Admission Test Prep</strong>
+        {!compact && <small lang="zh-CN">满托考试练习场</small>}
       </span>
     </div>
   );

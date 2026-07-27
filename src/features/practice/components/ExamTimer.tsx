@@ -6,7 +6,7 @@ export function ExamTimer({ remainingMs }: { remainingMs: number }) {
   return (
     <div
       className={`exam-timer${urgent ? " exam-timer--urgent" : ""}`}
-      aria-label={`剩余时间 ${formatRemainingTime(remainingMs)}`}
+      aria-label={`Time remaining ${formatRemainingTime(remainingMs)}`}
     >
       <Clock3 aria-hidden="true" />
       <span>{formatRemainingTime(remainingMs)}</span>

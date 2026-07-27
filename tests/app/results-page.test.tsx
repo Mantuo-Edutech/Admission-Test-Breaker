@@ -171,17 +171,17 @@ describe("evidence-only results page", () => {
     render(<RouterProvider router={router} />);
 
     expect(
-      await screen.findByRole("heading", { name: "本次练习完成" }),
+      await screen.findByRole("heading", { name: /Practice complete/u }),
     ).toBeInTheDocument();
     expect(screen.getByText("1 / 20")).toBeInTheDocument();
     expect(screen.getByText("5%")).toBeInTheDocument();
-    expect(screen.getByText("正确 1")).toBeInTheDocument();
-    expect(screen.getByText("未作答 19")).toBeInTheDocument();
-    expect(screen.getByText("活跃页内用时")).toBeInTheDocument();
-    expect(screen.getByText(/完成更多练习后，趋势会更稳定/u)).toBeInTheDocument();
-    expect(screen.getByLabelText("你的答案 F")).toBeInTheDocument();
-    expect(screen.getAllByLabelText("正确答案 F")).not.toHaveLength(0);
-    expect(screen.getAllByRole("link", { name: /报告这道题的问题/u })[0]).toHaveAttribute(
+    expect(screen.getByText("Correct")).toBeInTheDocument();
+    expect(screen.getByText("Unanswered")).toBeInTheDocument();
+    expect(screen.getByText("Active time")).toBeInTheDocument();
+    expect(screen.getByText(/Trends become more reliable with more papers/u)).toBeInTheDocument();
+    expect(screen.getByLabelText("Your answer F")).toBeInTheDocument();
+    expect(screen.getAllByLabelText("Correct answer F")).not.toHaveLength(0);
+    expect(screen.getAllByRole("link", { name: /Report this question/u })[0]).toHaveAttribute(
       "href",
       "/feedback?exam=tmua&from=%2Fresults%2Fses_result-page&resource=tmua-2023-p1&question=tmua-2023-p1-q01",
     );
@@ -202,7 +202,7 @@ describe("evidence-only results page", () => {
     render(<RouterProvider router={router} />);
 
     await user.click(
-      await screen.findByRole("button", { name: "重新练习这份试卷" }),
+      await screen.findByRole("button", { name: "Practise this paper again" }),
     );
     expect(store.cleared).toBe(true);
     expect(router.state.location.pathname).toBe("/practice/tmua-2023-p1");
@@ -216,11 +216,11 @@ describe("evidence-only results page", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "写作已经保存并提交" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Writing saved and submitted/u })).toBeInTheDocument();
     expect(screen.getByText("Law and protest")).toBeInTheDocument();
     expect(screen.getByText(/Civil disobedience can protect democracy/u)).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "当前不生成自动写作分数" })).toBeInTheDocument();
-    expect(screen.getByText(/正文只保存在当前学生的学习空间/u)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /No automatic writing score/u })).toBeInTheDocument();
+    expect(screen.getByText(/Your response stays in your private learner space/u)).toBeInTheDocument();
     expect(screen.queryByText(/本次得分/u)).not.toBeInTheDocument();
     expect(screen.queryByText(/正确答案/u)).not.toBeInTheDocument();
   });
@@ -233,10 +233,10 @@ describe("evidence-only results page", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "本次练习完成" })).toBeInTheDocument();
-    expect(screen.getByLabelText("得分 1 / 10")).toBeInTheDocument();
-    expect(screen.getByText("错误 0 · 部分 1")).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /第 4 题 · 部分得分/u })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Practice complete/u })).toBeInTheDocument();
+    expect(screen.getByLabelText("Score 1 / 10")).toBeInTheDocument();
+    expect(screen.getByText("0 incorrect · 1 partial")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Question 4 · Partial credit/u })).toBeInTheDocument();
     expect(screen.getByText("1 / 2")).toBeInTheDocument();
     expect(screen.queryByText(/300–900/u)).not.toBeInTheDocument();
   });
@@ -253,14 +253,14 @@ describe("evidence-only results page", () => {
     expect(
       await screen.findByText("TMUA Early Specimen Paper 1 Worked Review is available", undefined, { timeout: 3_000 }),
     ).toBeInTheDocument();
-    expect(screen.getByLabelText("你的答案 D")).toBeInTheDocument();
+    expect(screen.getByLabelText("Your answer D")).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /I have a code.*已有邀请码/u })).toHaveAttribute(
       "href",
       "/access?returnTo=%2Fresults%2Fses_result-page",
     );
     await user.click(screen.getByRole("button", { name: /Get an invitation code.*联系冰冰获取邀请码/u }));
-    expect(screen.getByRole("dialog", { name: /添加冰冰，获取逐题深度解析/u })).toBeInTheDocument();
-    expect(screen.getByAltText("冰冰老师微信二维码")).toBeInTheDocument();
+    expect(screen.getByRole("dialog", { name: /Add Bingbing to access worked explanations/u })).toBeInTheDocument();
+    expect(screen.getByAltText("Bingbing's WeChat QR code")).toBeInTheDocument();
     expect(screen.queryByLabelText(/Question 1 worked explanation/u)).not.toBeInTheDocument();
   });
 
@@ -275,7 +275,7 @@ describe("evidence-only results page", () => {
     expect(
       await screen.findByText("TMUA Early Specimen Paper 1 Worked Review is available"),
     ).toBeInTheDocument();
-    expect(screen.getByText(/解析权限服务尚未连接/u)).toBeInTheDocument();
+    expect(screen.getByText(/worked-explanation access service is not connected/u)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Get an invitation code.*联系冰冰获取邀请码/u })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /I have a code.*已有邀请码/u })).toHaveAttribute(
       "href",
@@ -325,7 +325,7 @@ describe("evidence-only results page", () => {
     render(<RouterProvider router={router} />);
 
     expect(
-      await screen.findByRole("heading", { name: "这份结果暂时不可用" }),
+      await screen.findByRole("heading", { name: /Result unavailable/u }),
     ).toBeInTheDocument();
   });
 });

@@ -19,7 +19,7 @@ export function AssessmentProfileRequiredState({ examId, issue = null }: {
         <p className="eyebrow">PROFILE FIRST · 本人档案优先</p>
         <h1><EnglishFirstText english={`Complete your ${name} profile first`} chinese={`请先填写 ${name} 背景信息`} /></h1>
         <EnglishFirstParagraph
-          english="Your curriculum, year group, subject background and current practice evidence determine the next diagnostic step."
+          english="Your curriculum, year group, subject background and current practice evidence determine the next preparation step."
           chinese="课程体系、年级、学科背景和现有练习经历会决定后续定位方式；填写完成后再进入题目。"
         />
         {issue !== null && (

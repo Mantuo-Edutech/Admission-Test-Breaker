@@ -45,7 +45,7 @@ export function AccountPage({ services }: AccountPageProps) {
   useEffect(() => {
     let active = true;
     if (account?.configured !== true) {
-      setError("账号服务尚未连接");
+      setError("The account service is not connected.");
       return () => { active = false; };
     }
     void account.getAccessState()
@@ -68,7 +68,7 @@ export function AccountPage({ services }: AccountPageProps) {
             .catch(() => undefined);
         }
       })
-      .catch(() => { if (active) setError("暂时无法读取账号状态"); });
+      .catch(() => { if (active) setError("Your account status could not be loaded."); });
     return () => { active = false; };
   }, [account, services.contentReviewOperations, services.inviteOperations, services.productFunnelAnalytics]);
 
@@ -80,14 +80,14 @@ export function AccountPage({ services }: AccountPageProps) {
       await account.signOut();
       navigate("/");
     } catch (reason) {
-      setError(reason instanceof Error ? reason.message : "退出失败，请稍后重试");
+      setError(reason instanceof Error ? reason.message : "Sign-out failed. Please try again.");
       setSigningOut(false);
     }
   }
 
   async function exportData() {
     if (services.dataRights?.configured !== true) {
-      setRightsError("数据权利服务尚未连接");
+      setRightsError("The data-rights service is not connected.");
       return;
     }
     setExporting(true);
@@ -95,7 +95,7 @@ export function AccountPage({ services }: AccountPageProps) {
     try {
       downloadLearningData(await services.dataRights.exportMyLearningData());
     } catch (reason) {
-      setRightsError(reason instanceof Error ? reason.message : "导出失败，请稍后重试");
+      setRightsError(reason instanceof Error ? reason.message : "Export failed. Please try again.");
     } finally {
       setExporting(false);
     }
@@ -103,11 +103,11 @@ export function AccountPage({ services }: AccountPageProps) {
 
   async function deleteAccount() {
     if (services.dataRights?.configured !== true) {
-      setRightsError("数据权利服务尚未连接");
+      setRightsError("The data-rights service is not connected.");
       return;
     }
-    if (deleteConfirmation !== "删除我的账号") {
-      setRightsError("请输入“删除我的账号”完成确认");
+    if (deleteConfirmation !== "DELETE MY ACCOUNT") {
+      setRightsError('Type “DELETE MY ACCOUNT” to confirm');
       return;
     }
     setDeleting(true);
@@ -116,7 +116,7 @@ export function AccountPage({ services }: AccountPageProps) {
       await services.dataRights.deleteMyAccount(deletePassword);
       navigate("/privacy", { replace: true, state: { accountDeleted: true } });
     } catch (reason) {
-      setRightsError(reason instanceof Error ? reason.message : "删除失败，请稍后重试");
+      setRightsError(reason instanceof Error ? reason.message : "Deletion failed. Please try again.");
       setDeleting(false);
     }
   }
@@ -127,19 +127,19 @@ export function AccountPage({ services }: AccountPageProps) {
       {state === null && error === null && (
         <section className="account-message page-shell" aria-live="polite">
           <LoaderCircle className="account-spinner" aria-hidden="true" />
-          <p className="eyebrow">学生账号</p>
-          <h1>正在读取账号…</h1>
+          <p className="eyebrow">LEARNER ACCOUNT</p>
+          <h1>Loading your account…<small lang="zh-CN">正在读取账号</small></h1>
         </section>
       )}
       {(error !== null || state?.session === null) && (
         <section className="account-message page-shell">
           <ShieldCheck aria-hidden="true" />
-          <p className="eyebrow">学生账号</p>
-          <h1>请先登录</h1>
-          <p>{error ?? "登录后可以查看已绑定的内容权限，并继续自己的学习空间。"}</p>
+          <p className="eyebrow">LEARNER ACCOUNT</p>
+          <h1>Sign in to continue<small lang="zh-CN">请先登录</small></h1>
+          <p>{error ?? "Sign in to view content access and continue in your learner space."}</p>
           <div className="account-message__actions">
-            <Link className="button button--primary" to="/login">登录</Link>
-            <Link className="button button--secondary" to="/access">验证邀请码</Link>
+            <Link className="button button--primary" to="/login">Sign in</Link>
+            <Link className="button button--secondary" to="/access">Verify invitation code</Link>
           </div>
         </section>
       )}
@@ -147,20 +147,20 @@ export function AccountPage({ services }: AccountPageProps) {
         <section className="account-overview page-shell">
           <header>
             <div>
-              <p className="eyebrow">你的学习空间 · YOUR LEARNER SPACE</p>
-              <h1>账号与内容权限</h1>
+              <p className="eyebrow">YOUR LEARNER SPACE</p>
+              <h1>Account and content access<small lang="zh-CN">账号与内容权限</small></h1>
               <p>{state.session.email}</p>
             </div>
             <button className="button button--secondary" type="button" onClick={signOut} disabled={signingOut}>
-              <LogOut aria-hidden="true" />{signingOut ? "正在退出…" : "退出登录"}
+              <LogOut aria-hidden="true" />{signingOut ? "Signing out…" : "Sign out"}
             </button>
           </header>
 
           <section className="account-entitlements" aria-labelledby="account-entitlements-title">
             <div>
               <p>CONTENT ACCESS</p>
-              <h2 id="account-entitlements-title">已解锁的资料产品</h2>
-              <span>内容权限与学习数据授权是两件事；冰冰不会因此看到你的作答记录。</span>
+              <h2 id="account-entitlements-title">Unlocked content<small lang="zh-CN">已解锁资料</small></h2>
+              <span>Content access does not grant anyone access to your practice data.</span>
             </div>
             {unlockedProducts.length > 0 ? (
               <ul>
@@ -168,9 +168,9 @@ export function AccountPage({ services }: AccountPageProps) {
                   <li key={product.id}>
                     <CheckCircle2 aria-hidden="true" />
                     <div>
-                      <strong>{product.title.zh}</strong>
-                      <span>{product.title.en}</span>
-                      <Link to={product.route!}>{product.actionLabel ?? "打开已解锁资料"}</Link>
+                      <strong>{product.title.en}</strong>
+                      <span>{product.title.zh}</span>
+                      <Link to={product.route!}>Open content</Link>
                     </div>
                   </li>
                 ))}
@@ -178,46 +178,46 @@ export function AccountPage({ services }: AccountPageProps) {
             ) : state.packageIds.length > 0 ? (
               <div className="account-entitlements__empty">
                 <MessageSquareWarning aria-hidden="true" />
-                <p>权限已经绑定，但暂时没有关联到已发布资料。请联系冰冰核对邀请码内容。</p>
-                <Link to="/feedback">报告权限问题</Link>
+                <p>Access is linked, but no published resource matches it yet. Ask Bingbing to check the invitation package.</p>
+                <Link to="/feedback">Report an access problem</Link>
               </div>
             ) : (
               <div className="account-entitlements__empty">
                 <KeyRound aria-hidden="true" />
-                <p>当前账号还没有绑定资料权限。</p>
-                <Link to="/access">输入邀请码</Link>
+                <p>No content access is linked to this account yet.</p>
+                <Link to="/access">Enter invitation code</Link>
               </div>
             )}
           </section>
 
           <section className="account-data-rights" aria-labelledby="account-data-rights-title">
             <div>
-              <p>YOUR DATA · 你的数据</p>
-              <h2 id="account-data-rights-title">拿走或删除自己的学习记录</h2>
-              <span>导出不会删除数据。删除账号会移除当前活动数据库中的课程、练习、事件、本人反馈和内容权限。</span>
+              <p>YOUR DATA</p>
+              <h2 id="account-data-rights-title">Export or delete your learning record<small lang="zh-CN">拿走或删除自己的学习记录</small></h2>
+              <span>Exporting does not delete data. Account deletion removes courses, practice, events, feedback and content access from the active database.</span>
             </div>
             <div className="account-data-rights__controls">
               <button className="button button--secondary" type="button" onClick={() => void exportData()} disabled={exporting || services.dataRights?.configured !== true}>
-                <Download aria-hidden="true" />{exporting ? "正在整理…" : "导出 JSON 副本"}
+                <Download aria-hidden="true" />{exporting ? "Preparing…" : "Export JSON copy"}
               </button>
-              <Link to="/privacy">阅读学生隐私说明</Link>
+              <Link to="/privacy">Read student privacy notice</Link>
               {!deleteOpen ? (
                 <button className="account-delete-link" type="button" onClick={() => setDeleteOpen(true)}>
-                  <Trash2 aria-hidden="true" />删除账号与学习数据
+                  <Trash2 aria-hidden="true" />Delete account and learning data
                 </button>
               ) : (
                 <div className="account-delete-panel">
-                  <h3>永久删除账号</h3>
-                  <p>先输入当前密码，再输入“删除我的账号”。这个操作不能撤销，内容权限也会一并删除。</p>
-                  <label htmlFor="delete-account-password">当前密码</label>
+                  <h3>Delete account permanently<small lang="zh-CN">永久删除账号</small></h3>
+                  <p>Enter your current password, then type “DELETE MY ACCOUNT”. This cannot be undone and content access will also be removed.</p>
+                  <label htmlFor="delete-account-password">Current password</label>
                   <input id="delete-account-password" type="password" autoComplete="current-password" value={deletePassword} onChange={(event) => setDeletePassword(event.target.value)} />
-                  <label htmlFor="delete-account-confirmation">确认文字</label>
-                  <input id="delete-account-confirmation" value={deleteConfirmation} onChange={(event) => setDeleteConfirmation(event.target.value)} placeholder="删除我的账号" />
+                  <label htmlFor="delete-account-confirmation">Confirmation text</label>
+                  <input id="delete-account-confirmation" value={deleteConfirmation} onChange={(event) => setDeleteConfirmation(event.target.value)} placeholder="DELETE MY ACCOUNT" />
                   <div>
                     <button className="button button--danger" type="button" onClick={() => void deleteAccount()} disabled={deleting}>
-                      {deleting ? "正在删除…" : "确认永久删除"}
+                      {deleting ? "Deleting…" : "Delete permanently"}
                     </button>
-                    <button className="button button--secondary" type="button" onClick={() => { setDeleteOpen(false); setRightsError(null); }} disabled={deleting}>取消</button>
+                    <button className="button button--secondary" type="button" onClick={() => { setDeleteOpen(false); setRightsError(null); }} disabled={deleting}>Cancel</button>
                   </div>
                 </div>
               )}
@@ -227,23 +227,23 @@ export function AccountPage({ services }: AccountPageProps) {
 
           <div className="account-overview__actions">
             {operatorActive && (
-              <Link className="button button--primary" to="/operations/invites"><TicketCheck aria-hidden="true" />邀请码运营</Link>
+              <Link className="button button--primary" to="/operations/invites"><TicketCheck aria-hidden="true" />Invite operations</Link>
             )}
             {funnelViewerActive && (
-              <Link className="button button--primary" to="/operations/funnel"><BarChart3 aria-hidden="true" />转化看板</Link>
+              <Link className="button button--primary" to="/operations/funnel"><BarChart3 aria-hidden="true" />Journey analytics</Link>
             )}
             {contentReviewerActive && (
-              <Link className="button button--primary" to="/operations/content-review"><FileSearch aria-hidden="true" />内容审核台</Link>
+              <Link className="button button--primary" to="/operations/content-review"><FileSearch aria-hidden="true" />Content review</Link>
             )}
             {services.collaboration?.configured === true && (
-              <Link className="button button--primary" to="/account/sharing"><UsersRound aria-hidden="true" />管理数据授权</Link>
+              <Link className="button button--primary" to="/account/sharing"><UsersRound aria-hidden="true" />Manage data sharing</Link>
             )}
             {services.collaboration?.configured === true && (
-              <Link className="button button--secondary" to="/collaboration"><Handshake aria-hidden="true" />老师／家长协作空间</Link>
+              <Link className="button button--secondary" to="/collaboration"><Handshake aria-hidden="true" />Teacher / parent collaboration</Link>
             )}
-            <Link className="button button--primary" to="/library">查看题库与资料</Link>
-            <Link className="button button--secondary" to="/exams/tmua/coverage">查看 TMUA 知识覆盖</Link>
-            <Link className="button button--secondary" to="/feedback"><MessageSquareWarning aria-hidden="true" />纠错与技术反馈</Link>
+            <Link className="button button--primary" to="/">Choose a test</Link>
+            <Link className="button button--secondary" to="/exams/tmua/coverage">TMUA course coverage</Link>
+            <Link className="button button--secondary" to="/feedback"><MessageSquareWarning aria-hidden="true" />Report a problem</Link>
           </div>
           {error !== null && <p className="form-error" role="alert">{error}</p>}
         </section>

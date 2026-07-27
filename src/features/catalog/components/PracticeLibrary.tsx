@@ -1,13 +1,12 @@
 import {
   ArrowUpRight,
   BookOpenText,
-  ClipboardCheck,
   PenLine,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
-export type PracticeEntryKind = "paper" | "diagnostic" | "writing";
+export type PracticeEntryKind = "paper" | "writing";
 
 export interface PracticeEntry {
   readonly id: string;
@@ -15,13 +14,13 @@ export interface PracticeEntry {
   readonly kicker: string;
   readonly title: string;
   readonly subtitle?: string;
+  readonly subtitleZh?: string;
   readonly meta: string;
   readonly kind?: PracticeEntryKind;
   readonly ariaLabel?: string;
 }
 
 function EntryIcon({ kind = "paper" }: { readonly kind?: PracticeEntryKind }) {
-  if (kind === "diagnostic") return <ClipboardCheck aria-hidden="true" />;
   if (kind === "writing") return <PenLine aria-hidden="true" />;
   return <BookOpenText aria-hidden="true" />;
 }
@@ -29,15 +28,17 @@ function EntryIcon({ kind = "paper" }: { readonly kind?: PracticeEntryKind }) {
 export function PracticeLibraryHero({
   exam,
   title,
-  titleEn,
+  titleZh,
   summary,
+  summaryZh,
   facts,
   action,
 }: {
   readonly exam: string;
   readonly title: string;
-  readonly titleEn: string;
+  readonly titleZh: string;
   readonly summary: string;
+  readonly summaryZh?: string;
   readonly facts: readonly string[];
   readonly action?: ReactNode;
 }) {
@@ -45,11 +46,12 @@ export function PracticeLibraryHero({
     <section className="practice-library-hero page-shell">
       <div>
         <p className="eyebrow">{exam} · ONLINE PRACTICE</p>
-        <h1>{title}<span>{titleEn}</span></h1>
+        <h1 lang="en">{title}<span lang="zh-CN">{titleZh}</span></h1>
       </div>
       <div className="practice-library-hero__guide">
-        <p>{summary}</p>
-        <ul aria-label={`${exam} 练习关键信息`}>
+        <p lang="en">{summary}</p>
+        {summaryZh === undefined ? null : <small lang="zh-CN">{summaryZh}</small>}
+        <ul aria-label={`${exam} practice facts`}>
           {facts.map((fact) => <li key={fact}>{fact}</li>)}
         </ul>
         {action}
@@ -61,13 +63,13 @@ export function PracticeLibraryHero({
 export function PracticeEntrySection({
   eyebrow,
   title,
-  titleEn,
+  titleZh,
   summary,
   entries,
 }: {
   readonly eyebrow: string;
   readonly title: string;
-  readonly titleEn: string;
+  readonly titleZh: string;
   readonly summary: string;
   readonly entries: readonly PracticeEntry[];
 }) {
@@ -76,16 +78,16 @@ export function PracticeEntrySection({
       <header>
         <div>
           <p>{eyebrow}</p>
-          <h2 id={`${entries[0]?.id ?? "practice"}-section-title`}>{title}<span>{titleEn}</span></h2>
+          <h2 id={`${entries[0]?.id ?? "practice"}-section-title`} lang="en">{title}<span lang="zh-CN">{titleZh}</span></h2>
         </div>
         <strong>{summary}</strong>
       </header>
-      <ol className="practice-entry-grid" aria-label={`${title} ${titleEn}`}>
+      <ol className="practice-entry-grid" aria-label={title}>
         {entries.map((entry, index) => (
           <li key={entry.id}>
             <Link
               to={entry.to}
-              aria-label={entry.ariaLabel ?? `${entry.title}${entry.subtitle === undefined ? "" : ` ${entry.subtitle}`}，${entry.meta}，开始练习`}
+              aria-label={entry.ariaLabel ?? `${entry.title}, ${entry.meta}. Start.`}
             >
               <header>
                 <EntryIcon kind={entry.kind} />
@@ -94,11 +96,11 @@ export function PracticeEntrySection({
               <div>
                 <small>{entry.kicker}</small>
                 <h3>{entry.title}</h3>
-                {entry.subtitle === undefined ? null : <p>{entry.subtitle}</p>}
+                {entry.subtitle === undefined ? null : <p lang="en">{entry.subtitle}{entry.subtitleZh === undefined ? null : <small lang="zh-CN">{entry.subtitleZh}</small>}</p>}
               </div>
               <footer>
                 <span>{entry.meta}</span>
-                <em>开始<ArrowUpRight aria-hidden="true" /></em>
+                <em><span>Start</span><small>开始</small><ArrowUpRight aria-hidden="true" /></em>
               </footer>
             </Link>
           </li>

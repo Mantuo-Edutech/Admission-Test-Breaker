@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-27T03:28:26.066Z",
+  "generatedAt": "2026-07-27T13:10:07.617Z",
   "papers": [
     {
       "paperId": "esat-biology-full-mock-v1",
@@ -157,6 +157,17 @@
       "publishedAt": "2026-07-27T03:28:26.066Z"
     },
     {
+      "paperId": "esat-nsaa-2021-mathematics-1",
+      "paperRevisionId": "esat-nsaa-2021-mathematics-1-r2",
+      "revision": 2,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "b4b7adf208e9164b7d416c0e4018d20d5c9e0d3d3ec7c3738735ba47f4875f49",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T13:10:07.617Z"
+    },
+    {
       "paperId": "esat-nsaa-2021-physics",
       "paperRevisionId": "esat-nsaa-2021-physics-r1",
       "revision": 1,
@@ -201,6 +212,17 @@
       "publishedAt": "2026-07-27T03:28:26.066Z"
     },
     {
+      "paperId": "esat-nsaa-2022-mathematics-1",
+      "paperRevisionId": "esat-nsaa-2022-mathematics-1-r2",
+      "revision": 2,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "9618c3d64b4cb36b717a6dd28b9e56066cb284d6f4d1f1f7c3ebb31f99d7ca35",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T13:10:07.617Z"
+    },
+    {
       "paperId": "esat-nsaa-2022-physics",
       "paperRevisionId": "esat-nsaa-2022-physics-r1",
       "revision": 1,
@@ -243,6 +265,17 @@
       "questionCount": 20,
       "durationMinutes": 30,
       "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-nsaa-2023-mathematics-1",
+      "paperRevisionId": "esat-nsaa-2023-mathematics-1-r2",
+      "revision": 2,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "9e35fbd6a23af9e4322e155d00099180b900dd9b241be939e82721ca5dd66d48",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T13:10:07.617Z"
     },
     {
       "paperId": "esat-nsaa-2023-physics",

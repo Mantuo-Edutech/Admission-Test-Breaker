@@ -11,29 +11,33 @@ export type WechatAccessTarget =
 interface WechatAccessDialogProps {
   open: boolean;
   target: WechatAccessTarget;
-  examName?: "TMUA" | "ESAT" | "TARA" | "LNAT" | "UCAT" | "英国升学考试";
+  examName?: "TMUA" | "ESAT" | "TARA" | "LNAT" | "UCAT" | "UK admission test";
   onOpenChange(open: boolean): void;
   onOpened?(): void;
 }
 
 const ACCESS_TARGETS: Readonly<
-  Record<WechatAccessTarget, { name: string; requestLabel: string }>
+  Record<WechatAccessTarget, { name: string; nameZh: string; requestLabel: string }>
 > = {
   "published-learning-materials": {
-    name: "已发布复习资料",
-    requestLabel: "六周训练计划或逐题解析",
+    name: "published review resources",
+    nameZh: "已发布复习资料",
+    requestLabel: "six-week plan or worked explanations",
   },
   "review-notes": {
-    name: "完整版复习笔记",
-    requestLabel: "复习笔记",
+    name: "complete review notes",
+    nameZh: "完整版复习笔记",
+    requestLabel: "complete review notes",
   },
   "deep-review": {
-    name: "逐题深度解析",
-    requestLabel: "逐题深度解析邀请码",
+    name: "worked explanations",
+    nameZh: "逐题深度解析",
+    requestLabel: "worked-explanation invitation code",
   },
   "past-paper-library": {
-    name: "历年真题题库",
-    requestLabel: "历年真题题库",
+    name: "historical paper library",
+    nameZh: "历年真题题库",
+    requestLabel: "historical paper library",
   },
 };
 
@@ -65,43 +69,43 @@ export function WechatAccessDialog({
         <Dialog.Content className="dialog-content wechat-access-dialog">
           <div className="dialog-heading">
             <div>
-              <p className="eyebrow">满托资料助手</p>
-              <Dialog.Title>添加冰冰，获取{accessTarget.name}</Dialog.Title>
+              <p className="eyebrow">MANTOU RESOURCE ASSISTANT</p>
+              <Dialog.Title>Add Bingbing to access {accessTarget.name}<small lang="zh-CN">添加冰冰，获取{accessTarget.nameZh}</small></Dialog.Title>
             </div>
-            <Dialog.Close className="icon-button" aria-label="关闭冰冰微信二维码">
+            <Dialog.Close className="icon-button" aria-label="Close Bingbing WeChat QR code">
               <X aria-hidden="true" />
             </Dialog.Close>
           </div>
 
           <Dialog.Description className="wechat-access-dialog__description">
-            使用微信扫码；如果你正在使用手机，可以长按二维码识别或先保存到相册。
+            Scan with WeChat. On mobile, press and hold the QR code or save it to Photos first.
           </Dialog.Description>
 
           <div className="wechat-access-dialog__body">
             <figure className="wechat-access-dialog__qr">
               <img
                 src="/brand/bingbing-wechat-qr.jpg"
-                alt="冰冰老师微信二维码"
+                alt="Bingbing's WeChat QR code"
                 width="618"
                 height="664"
               />
-              <figcaption>冰冰 · 满托升学考试小助手</figcaption>
+              <figcaption>Bingbing · Mantou admission-test assistant</figcaption>
             </figure>
 
             <div className="wechat-access-dialog__steps">
-              <p>添加后这样发送</p>
+              <p>Send these details after adding Bingbing</p>
               <ol>
-                <li><span>01</span><strong>发送关键词「{examName}」</strong></li>
-                <li><span>02</span><strong>说明需要「{accessTarget.requestLabel}」</strong></li>
-                <li><span>03</span><strong>冰冰会确认当前可获取的版本</strong></li>
+                <li><span>01</span><strong>Send “{examName}”</strong></li>
+                <li><span>02</span><strong>Ask for the {accessTarget.requestLabel}</strong></li>
+                <li><span>03</span><strong>Bingbing will confirm the available version</strong></li>
               </ol>
               <a
                 className="button button--secondary wechat-access-dialog__download"
                 href="/brand/bingbing-wechat-qr.jpg"
-                download="冰冰微信二维码.jpg"
+                download="bingbing-wechat-qr.jpg"
               >
                 <Download aria-hidden="true" />
-                保存二维码
+                Save QR code
               </a>
             </div>
           </div>
@@ -109,7 +113,7 @@ export function WechatAccessDialog({
           <p className="wechat-access-dialog__privacy">
             <ShieldCheck aria-hidden="true" />
             <span>
-              本次操作只用于获取资料，不会向冰冰开放你的课程信息、作答记录或训练数据。学习数据授权需要由你另行确认。
+              This only requests a resource. Bingbing cannot see your courses, answers or training data. Sharing learning data always requires separate permission from you.
             </span>
           </p>
         </Dialog.Content>

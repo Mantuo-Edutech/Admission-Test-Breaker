@@ -85,6 +85,14 @@ for (const record of PUBLISHED_PRACTICE_REVISIONS.papers) {
   }
 }
 
+/**
+ * One current immutable revision per paper. The full manifest above remains an
+ * append-only audit ledger, while public catalogues and remote verification
+ * must never mistake superseded revisions for additional papers.
+ */
+export const CURRENT_PUBLISHED_PRACTICE_REVISIONS = [...revisionByPaperId.values()]
+  .sort((left, right) => left.paperId.localeCompare(right.paperId));
+
 export function publishedContentRefForPaperId(paperId: string): PracticePaperContentRef | null {
   const record = revisionByPaperId.get(paperId);
   if (record === undefined) return null;

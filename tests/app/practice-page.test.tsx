@@ -244,7 +244,7 @@ describe("responsive native practice page", () => {
     );
     render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { name: "第 1 题" }, { timeout: 5_000 });
+    await screen.findByRole("heading", { name: /Question 1/u }, { timeout: 5_000 });
     await waitFor(() => expect(track).toHaveBeenCalledWith({
       eventType: "practice_started",
       examId: "tmua",
@@ -263,9 +263,9 @@ describe("responsive native practice page", () => {
     render(<RouterProvider router={router} />);
 
     expect(await screen.findByText(/A car travels 150 km/u)).toBeInTheDocument();
-    expect(screen.getByText("已作答 0 / 10")).toBeInTheDocument();
+    expect(screen.getByText("0 / 10 answered")).toBeInTheDocument();
     expect(screen.queryByTitle(/原卷/u)).not.toBeInTheDocument();
-    await user.click(screen.getByRole("radio", { name: "选项 B" }));
+    await user.click(screen.getByRole("radio", { name: "Option B" }));
     await waitFor(() => {
       expect(store.saves.at(-1)?.answers).toEqual({ "esat-mathematics-1-starter-v1-q01": "B" });
     });
@@ -282,8 +282,8 @@ describe("responsive native practice page", () => {
     render(<RouterProvider router={router} />);
 
     expect(await screen.findByText(/6 Ω resistor and a 3 Ω resistor/u)).toBeInTheDocument();
-    expect(screen.getByText("已作答 0 / 10")).toBeInTheDocument();
-    await user.click(screen.getByRole("radio", { name: "选项 B" }));
+    expect(screen.getByText("0 / 10 answered")).toBeInTheDocument();
+    await user.click(screen.getByRole("radio", { name: "Option B" }));
     await waitFor(() => {
       expect(store.saves.at(-1)?.answers).toEqual({ "esat-physics-starter-v1-q01": "B" });
     });
@@ -299,7 +299,7 @@ describe("responsive native practice page", () => {
     render(<RouterProvider router={router} />);
 
     expect(await screen.findByText(/A town park currently closes at 7 pm/u)).toBeInTheDocument();
-    await user.click(screen.getByRole("radio", { name: "选项 D" }));
+    await user.click(screen.getByRole("radio", { name: "Option D" }));
     await waitFor(() => {
       expect(store.saves.at(-1)?.answers).toEqual({ "tara-reasoning-starter-v1-q01": "D" });
     });
@@ -317,8 +317,8 @@ describe("responsive native practice page", () => {
     expect(await screen.findByRole("heading", { name: "The Right to a Reason" })).toBeInTheDocument();
     expect(screen.getByText(/Public agencies increasingly use automated systems/u)).toBeInTheDocument();
     expect(screen.getByText(/Which option best states the main conclusion/u)).toBeInTheDocument();
-    expect(screen.getByText("已作答 0 / 12")).toBeInTheDocument();
-    await user.click(screen.getByRole("radio", { name: "选项 C" }));
+    expect(screen.getByText("0 / 12 answered")).toBeInTheDocument();
+    await user.click(screen.getByRole("radio", { name: "Option C" }));
     await waitFor(() => {
       expect(store.saves.at(-1)?.answers).toEqual({ "lnat-section-a-starter-v1-q01": "C" });
     });
@@ -335,8 +335,8 @@ describe("responsive native practice page", () => {
 
     expect(await screen.findByRole("heading", { name: "Fog collectors" })).toBeInTheDocument();
     expect(screen.getByText(/On the exposed ridge, the fine mesh captured more water/u)).toBeInTheDocument();
-    expect(screen.getByText("已作答 0 / 12")).toBeInTheDocument();
-    await user.click(screen.getByRole("radio", { name: "选项 A" }));
+    expect(screen.getByText("0 / 12 answered")).toBeInTheDocument();
+    await user.click(screen.getByRole("radio", { name: "Option A" }));
     await waitFor(() => {
       expect(store.saves.at(-1)?.answers).toEqual({ "ucat-verbal-reasoning-starter-v1-q01": "A" });
     });
@@ -353,15 +353,15 @@ describe("responsive native practice page", () => {
 
     expect(await screen.findByRole("heading", { name: "Clinic activity" })).toBeInTheDocument();
     expect(screen.getByRole("table", { name: "Booked appointments and consultation time" })).toBeInTheDocument();
-    expect(screen.getByText("数据材料选择题")).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: /基础计算器/u }));
-    const calculator = screen.getByRole("region", { name: "基础计算器" });
+    expect(screen.getByText("Data set")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: /Basic calculator/u }));
+    const calculator = screen.getByRole("region", { name: "Basic calculator" });
     await user.click(within(calculator).getByRole("button", { name: "7" }));
-    await user.click(within(calculator).getByRole("button", { name: "加上" }));
+    await user.click(within(calculator).getByRole("button", { name: "Add" }));
     await user.click(within(calculator).getByRole("button", { name: "5" }));
-    await user.click(within(calculator).getByRole("button", { name: "等于" }));
+    await user.click(within(calculator).getByRole("button", { name: "Equals" }));
     expect(within(calculator).getByText("12")).toBeInTheDocument();
-    await user.click(screen.getByRole("radio", { name: "选项 B" }));
+    await user.click(screen.getByRole("radio", { name: "Option B" }));
     await waitFor(() => {
       expect(store.saves.at(-1)?.answers).toEqual({ "ucat-quantitative-reasoning-starter-v1-q01": "B" });
     });
@@ -376,8 +376,8 @@ describe("responsive native practice page", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "选择一道题，完成限时论证" })).toBeInTheDocument();
-    const editor = screen.getByLabelText("你的论证 · Your response");
+    expect(await screen.findByRole("heading", { name: /Choose one prompt and build your argument/u })).toBeInTheDocument();
+    const editor = screen.getByLabelText(/Your response/u);
     expect(editor).toBeDisabled();
     expect(editor).toHaveAttribute("maxlength", "20000");
     await user.click(screen.getByRole("radio", { name: /Automated public decisions/u }));
@@ -395,10 +395,10 @@ describe("responsive native practice page", () => {
       });
     }, { timeout: 2_500 });
 
-    await user.click(screen.getByRole("button", { name: "提交写作" }));
-    expect(screen.getByRole("dialog")).toHaveTextContent("准备提交这篇写作？");
-    expect(screen.getByRole("dialog")).toHaveTextContent("已完成");
-    await user.click(screen.getByRole("button", { name: "确认提交" }));
+    await user.click(screen.getByRole("button", { name: "Submit writing" }));
+    expect(screen.getByRole("dialog")).toHaveTextContent("Submit this response?");
+    expect(screen.getByRole("dialog")).toHaveTextContent("Complete");
+    await user.click(screen.getByRole("button", { name: "Submit" }));
     await waitFor(() => expect(router.state.location.pathname).toBe("/results/ses_tara-writing-task-v1"));
     expect(store.saves.at(-1)?.status).toBe("submitted");
   });
@@ -411,9 +411,9 @@ describe("responsive native practice page", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByText("建议 500–600 词")).toBeInTheDocument();
+    expect(await screen.findByText("Recommended: 500–600 words")).toBeInTheDocument();
     expect(screen.getByRole("radio", { name: /Public accountability/u })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "提交写作" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Submit writing" })).toBeInTheDocument();
   });
 
   it("keeps a Decision Making statement set incomplete until all five Yes/No responses exist", async () => {
@@ -425,17 +425,17 @@ describe("responsive native practice page", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByText("多陈述判断题")).toBeInTheDocument();
-    expect(screen.getByText("已作答 0 / 8")).toBeInTheDocument();
+    expect(await screen.findByText("Multiple statements")).toBeInTheDocument();
+    expect(screen.getByText("0 / 8 answered")).toBeInTheDocument();
     const yes = screen.getAllByRole("radio", { name: "Yes" });
     const no = screen.getAllByRole("radio", { name: "No" });
     await user.click(yes[0]!);
-    expect(screen.getByText("已作答 0 / 8")).toBeInTheDocument();
+    expect(screen.getByText("0 / 8 answered")).toBeInTheDocument();
     await user.click(yes[1]!);
     await user.click(no[2]!);
     await user.click(no[3]!);
     await user.click(yes[4]!);
-    expect(screen.getByText("已作答 1 / 8")).toBeInTheDocument();
+    expect(screen.getByText("1 / 8 answered")).toBeInTheDocument();
     await waitFor(() => {
       expect(parseStatementAnswers(store.saves.at(-1)?.answers["ucat-decision-making-starter-v1-q04"]))
         .toEqual({
@@ -459,8 +459,8 @@ describe("responsive native practice page", () => {
 
     expect(await screen.findByRole("heading", { name: "An uncertain observation" })).toBeInTheDocument();
     expect(screen.getByText("SCENARIO")).toBeInTheDocument();
-    expect(screen.getByText("情境判断等级题")).toBeInTheDocument();
-    await user.click(screen.getByRole("radio", { name: "选项 B" }));
+    expect(screen.getByText("Situational judgement")).toBeInTheDocument();
+    await user.click(screen.getByRole("radio", { name: "Option B" }));
     await waitFor(() => {
       expect(store.saves.at(-1)?.answers).toEqual({ "ucat-situational-judgement-starter-v1-q01": "B" });
     });
@@ -481,7 +481,7 @@ describe("responsive native practice page", () => {
       { timeout: 5_000 },
     )).toBeInTheDocument();
     expect(screen.queryByTitle(/原卷/u)).not.toBeInTheDocument();
-    await user.click(screen.getByRole("radio", { name: "选项 B" }));
+    await user.click(screen.getByRole("radio", { name: "Option B" }));
     await waitFor(() => {
       expect(store.saves.at(-1)?.answers).toEqual({ "tmua-2022-p2-q01": "B" });
     });
@@ -495,7 +495,7 @@ describe("responsive native practice page", () => {
       appServices(store),
     );
     render(<RouterProvider router={router} />);
-    await screen.findByRole("heading", { name: "第 1 题" }, { timeout: 5_000 });
+    await screen.findByRole("heading", { name: /Question 1/u }, { timeout: 5_000 });
 
     visibility.mockReturnValue("hidden");
     document.dispatchEvent(new Event("visibilitychange"));
@@ -522,22 +522,22 @@ describe("responsive native practice page", () => {
     render(<RouterProvider router={router} />);
 
     expect(
-      await screen.findByRole("heading", { name: "第 1 题" }),
+      await screen.findByRole("heading", { name: /Question 1/u }),
     ).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /报告这道题的问题/u })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Report this question/u })).toHaveAttribute(
       "href",
       "/feedback?exam=tmua&from=%2Fpractice%2Ftmua-2023-p1&resource=tmua-2023-p1&question=tmua-2023-p1-q01",
     );
-    await user.click(screen.getByRole("radio", { name: /选项 F/ }));
-    expect(screen.getByText("已作答 1 / 20")).toBeInTheDocument();
+    await user.click(screen.getByRole("radio", { name: /Option F/ }));
+    expect(screen.getByText("1 / 20 answered")).toBeInTheDocument();
     expect(screen.queryByText(/正确答案/)).not.toBeInTheDocument();
 
-    await user.click(screen.getByRole("button", { name: "标记本题" }));
-    expect(screen.getByRole("button", { name: "取消标记" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Mark question" }));
+    expect(screen.getByRole("button", { name: "Unmark" })).toBeInTheDocument();
 
-    await user.click(screen.getByRole("button", { name: "下一题" }));
+    await user.click(screen.getByRole("button", { name: "Next" }));
     expect(
-      await screen.findByRole("heading", { name: "第 2 题" }),
+      await screen.findByRole("heading", { name: /Question 2/u }),
     ).toBeInTheDocument();
     await waitFor(() => expect(store.saves.length).toBeGreaterThan(0));
   });
@@ -554,12 +554,12 @@ describe("responsive native practice page", () => {
     );
     render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { name: "第 1 题" });
-    await user.click(screen.getByRole("radio", { name: /选项 F/ }));
-    await user.click(screen.getByRole("button", { name: "提交试卷" }));
+    await screen.findByRole("heading", { name: /Question 1/u });
+    await user.click(screen.getByRole("radio", { name: /Option F/ }));
+    await user.click(screen.getByRole("button", { name: "Submit paper" }));
 
-    expect(screen.getByRole("dialog")).toHaveTextContent("未作答 19 题");
-    await user.click(screen.getByRole("button", { name: "确认提交" }));
+    expect(screen.getByRole("dialog")).toHaveTextContent("19 unanswered");
+    await user.click(screen.getByRole("button", { name: "Submit" }));
 
     await waitFor(() =>
       expect(router.state.location.pathname).toBe(
@@ -583,18 +583,18 @@ describe("responsive native practice page", () => {
     );
     render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { name: "第 1 题" });
+    await screen.findByRole("heading", { name: /Question 1/u });
     store.fail = true;
-    await user.click(screen.getByRole("radio", { name: /选项 F/u }));
+    await user.click(screen.getByRole("radio", { name: /Option F/u }));
 
-    expect(await screen.findByText(/尚未保存：本次练习仍可继续/u)).toBeInTheDocument();
-    expect(screen.getByRole("radio", { name: /选项 F/u })).toBeChecked();
+    expect(await screen.findByText(/Not saved yet.*You may continue/u)).toBeInTheDocument();
+    expect(screen.getByRole("radio", { name: /Option F/u })).toBeChecked();
     expect(router.state.location.pathname).toBe("/practice/tmua-2023-p1");
 
     store.fail = false;
-    await user.click(screen.getByRole("button", { name: "重新保存" }));
+    await user.click(screen.getByRole("button", { name: "Save again" }));
     await waitFor(() => {
-      expect(screen.queryByRole("button", { name: "重新保存" })).not.toBeInTheDocument();
+      expect(screen.queryByRole("button", { name: "Save again" })).not.toBeInTheDocument();
     });
     expect(store.saves.at(-1)?.answers).toEqual({ "tmua-2023-p1-q01": "F" });
   });
@@ -608,19 +608,19 @@ describe("responsive native practice page", () => {
     );
     render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { name: "第 1 题" });
+    await screen.findByRole("heading", { name: /Question 1/u });
     store.defer = true;
-    await user.click(screen.getByRole("radio", { name: /选项 F/u }));
+    await user.click(screen.getByRole("radio", { name: /Option F/u }));
     await waitFor(() => expect(store.saves).toHaveLength(1));
-    await user.click(screen.getByRole("button", { name: "标记本题" }));
+    await user.click(screen.getByRole("button", { name: "Mark question" }));
 
     expect(store.saves).toHaveLength(1);
     store.resolveNext({ persisted: true, durable: true, scope: "account" });
     await waitFor(() => expect(store.saves).toHaveLength(2));
     store.resolveNext({ persisted: false, durable: false, issue: "unavailable", scope: "memory" });
 
-    expect(await screen.findByText(/尚未保存：本次练习仍可继续/u)).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "取消标记" })).toBeInTheDocument();
+    expect(await screen.findByText(/Not saved yet.*You may continue/u)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Unmark" })).toBeInTheDocument();
   });
 
   it("does not enter the result page until the submitted session is durably saved", async () => {
@@ -632,16 +632,16 @@ describe("responsive native practice page", () => {
     );
     render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { name: "第 1 题" });
+    await screen.findByRole("heading", { name: /Question 1/u });
     store.fail = true;
-    await user.click(screen.getByRole("button", { name: "提交试卷" }));
-    await user.click(screen.getByRole("button", { name: "确认提交" }));
+    await user.click(screen.getByRole("button", { name: "Submit paper" }));
+    await user.click(screen.getByRole("button", { name: "Submit" }));
 
     expect(await screen.findByText(/提交尚未保存。答案仍保留在当前页面/u)).toBeInTheDocument();
     expect(router.state.location.pathname).toBe("/practice/tmua-2023-p1");
 
     store.fail = false;
-    await user.click(screen.getByRole("button", { name: "重新保存并提交" }));
+    await user.click(screen.getByRole("button", { name: "Save and submit again" }));
     await waitFor(() => {
       expect(router.state.location.pathname).toBe("/results/ses_practice-test");
     });
@@ -656,7 +656,7 @@ describe("responsive native practice page", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "第 1 题" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Question 1/u })).toBeInTheDocument();
     expect(store.saves[0]).toMatchObject({
       id: "ses_unused",
       paperId: "tmua-2023-p1",
@@ -672,7 +672,7 @@ describe("responsive native practice page", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "第 1 题" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Question 1/u })).toBeInTheDocument();
     expect(router.state.location.pathname).toBe("/practice/tmua-2023-p1");
     expect(screen.queryByText("逐题在线排版")).not.toBeInTheDocument();
   });

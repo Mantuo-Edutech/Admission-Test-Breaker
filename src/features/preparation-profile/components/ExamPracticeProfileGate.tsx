@@ -11,7 +11,7 @@ import { PreparationProfileGate } from "./PreparationProfileGate.js";
 import { AssessmentProfileRequiredState } from "./AssessmentProfileRequiredState.js";
 
 function LoadingProfile() {
-  return <main className="practice-state-page" aria-live="polite"><p className="eyebrow">正在检查本人档案</p><h1>正在准备练习…</h1></main>;
+  return <main className="practice-state-page" aria-live="polite"><p className="eyebrow">CHECKING YOUR PROFILE</p><h1>Preparing your paper…<small lang="zh-CN">正在准备练习</small></h1></main>;
 }
 
 function EsatPracticeGate({ children }: { children: ReactNode }) {
@@ -22,10 +22,10 @@ function EsatPracticeGate({ children }: { children: ReactNode }) {
       <main className="tmua-stage-page esat-stage-page">
         <SiteHeader examId="esat" />
         <section className="tmua-required-state page-shell">
-          <p className="eyebrow">第 2 步 · COURSE PROFILE</p>
-          <h1>请先填写 ESAT 课程信息</h1>
-          <p>专业与模块已经确定；填写课程体系和具体课程后，系统会保存对应的练习记录。</p>
-          <Link className="button button--primary" to="/exams/esat/profile">填写课程信息</Link>
+          <p className="eyebrow">COURSE PROFILE</p>
+          <h1>Complete your ESAT course profile<small lang="zh-CN">请先填写 ESAT 课程信息</small></h1>
+          <p>Your programme and modules are set. Add your curriculum and courses so your practice record is mapped correctly.</p>
+          <Link className="button button--primary" to="/exams/esat/profile">Complete course profile <small lang="zh-CN">填写课程信息</small></Link>
         </section>
       </main>
     );

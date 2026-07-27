@@ -20,12 +20,12 @@ export function ForgotPasswordPage({ services }: { readonly services: AppService
     event.preventDefault();
     setError(null);
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/u.test(email.trim())) {
-      setError("请输入有效的邮箱地址");
+      setError("Enter a valid email address");
       return;
     }
     const account = services.accountAccess;
     if (account?.configured !== true) {
-      setError("账号服务尚未连接，请稍后再试");
+      setError("Account service is unavailable. Please try again.");
       return;
     }
     const botChallengeError = validateBotChallenge(account.botProtection, captchaToken);
@@ -38,7 +38,7 @@ export function ForgotPasswordPage({ services }: { readonly services: AppService
       await account.requestPasswordReset(email, captchaToken ?? undefined);
       setSent(true);
     } catch (reason) {
-      setError(reason instanceof Error ? reason.message : "暂时无法发送重置邮件");
+      setError(reason instanceof Error ? reason.message : "Reset email could not be sent");
     } finally {
       setSubmitting(false);
       setCaptchaToken(null);
@@ -52,22 +52,22 @@ export function ForgotPasswordPage({ services }: { readonly services: AppService
       {sent ? (
         <section className="account-message page-shell">
           <MailCheck aria-hidden="true" />
-          <p className="eyebrow">密码重置</p>
-          <h1>检查你的邮箱</h1>
-          <p>如果这个邮箱已注册，系统会发送一封密码重置邮件。为保护账号隐私，这里不会确认邮箱是否存在。</p>
-          <Link className="button button--secondary" to="/login">返回登录</Link>
+          <p className="eyebrow">PASSWORD RESET</p>
+          <h1>Check your email<small lang="zh-CN">检查你的邮箱</small></h1>
+          <p>If the address is registered, a password reset email will arrive. We do not confirm whether an account exists.</p>
+          <Link className="button button--secondary" to="/login">Back to sign in</Link>
         </section>
       ) : (
         <section className="account-layout account-layout--login page-shell">
           <div className="account-layout__intro">
-            <p className="eyebrow">密码重置</p>
-            <h1>找回你的账号</h1>
-            <p>输入注册邮箱。收到邮件后，从同一设备打开链接并设置新密码。</p>
+            <p className="eyebrow">PASSWORD RESET</p>
+            <h1>Recover your account<small lang="zh-CN">找回你的账号</small></h1>
+            <p>Enter your registered email, then open the reset link on this device.</p>
           </div>
           <div className="account-card">
-            <h2>发送重置邮件</h2>
+            <h2>Send reset email<small lang="zh-CN">发送重置邮件</small></h2>
             <form onSubmit={submit} noValidate>
-              <label htmlFor="recovery-email">邮箱</label>
+              <label htmlFor="recovery-email">Email</label>
               <input id="recovery-email" type="email" autoComplete="email" value={email} onChange={(event) => setEmail(event.target.value)} />
               <AccountBotChallenge
                 key={captchaAttempt}
@@ -80,7 +80,7 @@ export function ForgotPasswordPage({ services }: { readonly services: AppService
                 className="button button--primary"
                 type="submit"
                 disabled={submitting || (services.accountAccess?.botProtection.required === true && services.accountAccess.botProtection.siteKey === null)}
-              >{submitting ? "正在发送…" : "发送重置邮件"}</button>
+              >{submitting ? "Sending…" : "Send reset email"}</button>
             </form>
           </div>
         </section>

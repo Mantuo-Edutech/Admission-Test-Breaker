@@ -1824,6 +1824,119 @@
       }
     },
     {
+      "paperRevisionId": "esat-nsaa-2021-mathematics-1-r2",
+      "answerKeyDigest": "04896dc254ef03d300618e14071edf7f677f03863aebd6f9b78237f1e924ffce",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2021-mathematics-1",
+        "paperRevisionId": "esat-nsaa-2021-mathematics-1-r2",
+        "contentDigest": "b4b7adf208e9164b7d416c0e4018d20d5c9e0d3d3ec7c3738735ba47f4875f49",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q01",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q02",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q03",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q04",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q05",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q06",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q07",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q08",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q09",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q10",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q11",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q12",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q13",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q14",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q15",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q16",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q17",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q18",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q19",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2021-mathematics-1-q20",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
       "paperRevisionId": "esat-nsaa-2021-physics-r1",
       "answerKeyDigest": "42ce4364ebb96856fdf2b9470d23243559fbd5343a636dea3618cecff87f1729",
       "answerKey": {
@@ -2276,6 +2389,119 @@
       }
     },
     {
+      "paperRevisionId": "esat-nsaa-2022-mathematics-1-r2",
+      "answerKeyDigest": "e641747380bf8dce7505fc49dfb3d91fa7aeb5e4accf95f3d11be936a4075f38",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2022-mathematics-1",
+        "paperRevisionId": "esat-nsaa-2022-mathematics-1-r2",
+        "contentDigest": "9618c3d64b4cb36b717a6dd28b9e56066cb284d6f4d1f1f7c3ebb31f99d7ca35",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q01",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q02",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q03",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q04",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q05",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q06",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q07",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q08",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q09",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q10",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q11",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q12",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q13",
+            "correctAnswer": "G",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q14",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q15",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q16",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q17",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q18",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q19",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2022-mathematics-1-q20",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
       "paperRevisionId": "esat-nsaa-2022-physics-r1",
       "answerKeyDigest": "49677ff6efc47b96bda650031a60785ac39d8e180014b6b2aa9dd9d82ce3b09a",
       "answerKey": {
@@ -2622,6 +2848,119 @@
         "paperId": "esat-nsaa-2023-mathematics-1",
         "paperRevisionId": "esat-nsaa-2023-mathematics-1-r1",
         "contentDigest": "85ca716838942e003f90cfce7f2bb135a07e8fb865004409bdc43cb405908e0e",
+        "responseMode": "choice",
+        "questions": [
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q01",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q02",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q03",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q04",
+            "correctAnswer": "A",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q05",
+            "correctAnswer": "F",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q06",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q07",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q08",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q09",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q10",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q11",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q12",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q13",
+            "correctAnswer": "H",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q14",
+            "correctAnswer": "D",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q15",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q16",
+            "correctAnswer": "B",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q17",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q18",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q19",
+            "correctAnswer": "C",
+            "responseMode": "single-choice"
+          },
+          {
+            "questionId": "esat-nsaa-2023-mathematics-1-q20",
+            "correctAnswer": "E",
+            "responseMode": "single-choice"
+          }
+        ]
+      }
+    },
+    {
+      "paperRevisionId": "esat-nsaa-2023-mathematics-1-r2",
+      "answerKeyDigest": "c70fc68946d2112cd48d5933c3037c01ec572666bdf50b9f28a697ce2b5ac71f",
+      "answerKey": {
+        "schemaVersion": 1,
+        "paperId": "esat-nsaa-2023-mathematics-1",
+        "paperRevisionId": "esat-nsaa-2023-mathematics-1-r2",
+        "contentDigest": "9e35fbd6a23af9e4322e155d00099180b900dd9b241be939e82721ca5dd66d48",
         "responseMode": "choice",
         "questions": [
           {

@@ -56,8 +56,8 @@ export function AssessmentPreparationPage({
       <main className="tmua-stage-page assessment-preparation-page">
         <SiteHeader examId={examId} />
         <section className="practice-state-page" aria-live="polite">
-          <p className="eyebrow">正在计算起点定位 · STARTING POINT</p>
-          <h1>正在整理你的 {name} 准备路径…</h1>
+          <p className="eyebrow">BUILDING YOUR STARTING POINT</p>
+          <h1>Mapping your {name} preparation…<small lang="zh-CN">正在整理准备路径</small></h1>
         </section>
       </main>
     );
@@ -72,68 +72,68 @@ export function AssessmentPreparationPage({
       <SiteHeader examId={examId} />
       <section className="assessment-preparation-hero page-shell">
         <div>
-          <p className="eyebrow">第 2 步 · STARTING POINT</p>
-          <h1>你的 {name} 起点定位<span>Your starting point, module by module</span></h1>
-          <p>下面只回答“现有课程可以迁移什么、还要补什么、先花多少时间完成第一轮入门与短诊断”。结果由固定规则生成，不调用 AI。</p>
+          <p className="eyebrow">STARTING POINT</p>
+          <h1>Your {name} starting point<span lang="zh-CN">你的起点定位</span></h1>
+          <p>See what transfers from your current courses, what you still need to learn and how long a first review cycle may take. This uses fixed rules, not live AI.</p>
           <div className="assessment-preparation-hero__actions">
             <Link className="button button--primary" to={plan.nextActionHref}>
               {plan.nextActionLabel}<ArrowRight aria-hidden="true" />
             </Link>
-            <Link className="button button--secondary" to={`/exams/${examId}/profile`}>修改背景信息</Link>
+            <Link className="button button--secondary" to={`/exams/${examId}/profile`}>Edit profile</Link>
           </div>
         </div>
-        <dl aria-label={`${name} 起点定位概览`}>
-          <div><dt>课程体系</dt><dd>{plan.curriculumLabel}<span>{plan.learningStageLabel}</span></dd></div>
-          <div><dt>第一轮建议</dt><dd>{plan.firstCycleHours[0]}–{plan.firstCycleHours[1]} 小时<span>入门、题型熟悉和短诊断，不是总训练时长</span></dd></div>
-          <div><dt>按当前时间</dt><dd>{plan.firstCycleWeeks[0]}–{plan.firstCycleWeeks[1]} 周<span>{plan.weeklyTimeLabel}</span></dd></div>
+        <dl aria-label={`${name} starting point summary`}>
+          <div><dt>CURRICULUM</dt><dd>{plan.curriculumLabel}<span>{plan.learningStageLabel}</span></dd></div>
+          <div><dt>FIRST REVIEW CYCLE</dt><dd>{plan.firstCycleHours[0]}–{plan.firstCycleHours[1]} hours<span>Foundation review and test-format work</span></dd></div>
+          <div><dt>AT YOUR CURRENT PACE</dt><dd>{plan.firstCycleWeeks[0]}–{plan.firstCycleWeeks[1]} weeks<span>{plan.weeklyTimeLabel}</span></dd></div>
         </dl>
       </section>
 
       <section className="assessment-preparation-evidence page-shell" aria-labelledby={`${examId}-evidence-title`}>
         <header>
-          <div><GraduationCap aria-hidden="true" /><p>你的课程背景 · YOUR SUBJECTS</p></div>
-          <h2 id={`${examId}-evidence-title`}>定位参考了这些已学学科</h2>
+          <div><GraduationCap aria-hidden="true" /><p>YOUR SUBJECTS</p></div>
+          <h2 id={`${examId}-evidence-title`}>Courses used for this map<small lang="zh-CN">定位参考的已学课程</small></h2>
         </header>
         <ul>
           {plan.subjectLabels.map((subject) => <li key={subject}>{subject}</li>)}
         </ul>
-        <p><ShieldCheck aria-hidden="true" />课程背景用于判断知识覆盖；完成在线诊断后，系统会加入你的速度、正确率和错误类型。</p>
+        <p><ShieldCheck aria-hidden="true" />Your course background maps knowledge coverage. Full-paper results add accuracy, timing and error patterns.</p>
       </section>
 
       <section className="assessment-preparation-modules page-shell" aria-labelledby={`${examId}-modules-title`}>
         <header className="section-heading">
-          <p>逐模块定位 · MODULE MAP</p>
-          <h2 id={`${examId}-modules-title`}>具体到每个模块：已有什么，还缺什么</h2>
-          <span>“课程未显示覆盖”不等于你不会；它表示系统不能仅凭课程名称得出已掌握结论。</span>
+          <p>MODULE MAP</p>
+          <h2 id={`${examId}-modules-title`}>What transfers and what is missing</h2>
+          <span>Course coverage is not proof of what you personally can or cannot do.<small lang="zh-CN">课程未显示覆盖，并不等于你不会</small></span>
         </header>
         <div className="assessment-preparation-modules__list">
           {plan.modules.map((module, index) => (
             <article key={module.id} data-status={module.status}>
               <header>
                 <span>{String(index + 1).padStart(2, "0")}</span>
-                <div><p>{module.name}</p><h3>{module.nameZh}</h3></div>
+                <div><h3>{module.name}</h3><small lang="zh-CN">{module.nameZh}</small></div>
                 <strong>{module.statusLabel}</strong>
               </header>
               <div className="assessment-preparation-modules__body">
                 <section>
-                  <p>课程覆盖 · Course coverage</p>
+                  <p>COURSE COVERAGE</p>
                   <h4>{module.courseEvidence}</h4>
                   <span>{module.courseConclusion}</span>
                 </section>
                 <section>
-                  <p>需要补充或确认 · What to add or confirm</p>
+                  <p>WHAT TO LEARN OR VERIFY</p>
                   <ul>{module.gaps.map((gap) => <li key={gap}>{gap}</li>)}</ul>
                 </section>
                 <aside>
                   <Clock3 aria-hidden="true" />
-                  <p>第一轮建议</p>
-                  <strong>{module.suggestedHours[0]}–{module.suggestedHours[1]} 小时</strong>
-                  <span>先理解题型与基础，再用短诊断验证</span>
+                  <p>FIRST REVIEW CYCLE</p>
+                  <strong>{module.suggestedHours[0]}–{module.suggestedHours[1]} hours</strong>
+                  <span>Build the foundation, then verify it in a full paper</span>
                 </aside>
               </div>
               <footer>
                 <BookOpenCheck aria-hidden="true" />
-                <span>下一步用在线练习结果更新定位</span>
+                <span>Update this map with full-paper results</span>
                 <Link to={module.practiceHref}>{module.practiceLabel}<ArrowRight aria-hidden="true" /></Link>
               </footer>
             </article>
@@ -143,9 +143,9 @@ export function AssessmentPreparationPage({
 
       <section className="assessment-preparation-next page-shell">
         <div>
-          <p className="eyebrow">第 3 步 · FREE PRACTICE</p>
-          <h2>现在进入免费在线练习</h2>
-          <p>先完成一个模块。提交后系统才使用正确率、每题活跃用时和改答记录形成下一层事实报告。</p>
+          <p className="eyebrow">FREE ONLINE PRACTICE</p>
+          <h2>Continue with a full paper<small lang="zh-CN">进入完整在线练习</small></h2>
+          <p>After submission, your accuracy, active time and answer changes become part of your learning record.</p>
         </div>
         <Link className="button button--primary" to={plan.nextActionHref}>{plan.nextActionLabel}<ArrowRight aria-hidden="true" /></Link>
       </section>

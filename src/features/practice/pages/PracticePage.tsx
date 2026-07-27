@@ -371,7 +371,7 @@ export function PracticePage({ services, paper }: PracticePageProps) {
     return (
       <main className="practice-state-page">
         <p className="eyebrow">PREPARING YOUR DESK</p>
-        <h1>正在铺开试卷…</h1>
+        <h1>Opening your paper…<small lang="zh-CN">正在铺开试卷</small></h1>
       </main>
     );
   }
@@ -380,9 +380,9 @@ export function PracticePage({ services, paper }: PracticePageProps) {
     return (
       <main className="practice-state-page">
         <p className="eyebrow">PAPER NOT FOUND</p>
-        <h1>没有找到这套试卷</h1>
-        <p>请从历年真题目录重新选择一套试卷。</p>
-        <Link className="button button--primary" to={presentation?.backHref ?? "/"}>返回练习目录</Link>
+        <h1>Paper not found<small lang="zh-CN">没有找到这套试卷</small></h1>
+        <p>Choose another paper from the practice library.</p>
+        <Link className="button button--primary" to={presentation?.backHref ?? "/"}>Back to practice <small lang="zh-CN">返回练习目录</small></Link>
       </main>
     );
   }
@@ -416,8 +416,8 @@ export function PracticePage({ services, paper }: PracticePageProps) {
         <div className="persistence-warning" role="alert">
           <span>
             {persistenceIssue === "conflict"
-              ? "云端已有更新的练习记录，请刷新页面确认最新内容。"
-              : "尚未保存：本次练习仍可继续，但刷新或关闭页面后可能无法恢复。"}
+              ? "A newer cloud record is available. Refresh to load the latest version."
+              : "Not saved yet. You may continue, but closing or refreshing could lose this attempt."}
           </span>
           {persistenceIssue !== "conflict" && (
             <button
@@ -425,7 +425,7 @@ export function PracticePage({ services, paper }: PracticePageProps) {
               disabled={saving}
               onClick={() => void persistSession(session)}
             >
-              {saving ? "正在保存…" : "重新保存"}
+              {saving ? "Saving…" : "Save again"}
             </button>
           )}
         </div>
@@ -496,7 +496,7 @@ export function PracticePage({ services, paper }: PracticePageProps) {
                   onClick={toggleMark}
                 >
                   <Bookmark aria-hidden="true" />
-                  {isMarked ? "取消标记" : "标记本题"}
+                  {isMarked ? "Unmark" : "Mark question"}
                 </button>
                 <div className="question-actions__nav">
                   <button
@@ -505,7 +505,7 @@ export function PracticePage({ services, paper }: PracticePageProps) {
                     disabled={session.currentQuestion === 1}
                     onClick={() => goToQuestion(session.currentQuestion - 1)}
                   >
-                    <ChevronLeft aria-hidden="true" />上一题
+                    <ChevronLeft aria-hidden="true" />Previous
                   </button>
                   <button
                     className="button button--primary"
@@ -513,7 +513,7 @@ export function PracticePage({ services, paper }: PracticePageProps) {
                     disabled={session.currentQuestion === totalQuestions}
                     onClick={() => goToQuestion(session.currentQuestion + 1)}
                   >
-                    下一题<ChevronRight aria-hidden="true" />
+                    Next<ChevronRight aria-hidden="true" />
                   </button>
                 </div>
               </div>
@@ -525,24 +525,24 @@ export function PracticePage({ services, paper }: PracticePageProps) {
           <div className="exam-sidebar__heading">
             <div>
               <p>QUESTION MAP</p>
-              <h2>题目导航</h2>
+              <h2>Question map<small lang="zh-CN">题目导航</small></h2>
             </div>
             <span>{answeredCount}/{totalQuestions}</span>
           </div>
           <QuestionMap session={session} totalQuestions={totalQuestions} answeredQuestionIds={answeredQuestionIds} onSelect={goToQuestion} />
           <div className="question-map-legend">
-            <span><i className="legend-current" />当前</span>
-            <span><i className="legend-answered" />已作答</span>
-            <span><i className="legend-marked" />已标记</span>
+            <span><i className="legend-current" />Current</span>
+            <span><i className="legend-answered" />Answered</span>
+            <span><i className="legend-marked" />Marked</span>
           </div>
           <p className="exam-sidebar__privacy">
             {saving
-              ? "正在保存本次学习记录…"
+              ? "Saving this practice record…"
               : persistenceScope === "account"
-              ? "学习事件正在保存到你的私密账号学习空间。"
+              ? "Your learning events are saved to your private account space."
               : persistenceScope === "memory"
-                ? "学习事件暂时只保留在当前页面；请检查网络或浏览器存储。"
-                : "未登录：学习事件只保存在这台设备。"}
+                ? "Learning events are held on this page only. Check your network or browser storage."
+                : "Not signed in: learning events are stored on this device only."}
           </p>
         </aside>}
       </main>

@@ -16,7 +16,7 @@ export function EmailConfirmationPage({ services }: EmailConfirmationPageProps) 
   const [searchParams] = useSearchParams();
   const confirmationCode = searchParams.get("code");
   const [state, setState] = useState<ConfirmationState>("working");
-  const [message, setMessage] = useState("正在确认邮箱并解锁内容…");
+  const [message, setMessage] = useState("Confirming your email and content access…");
   const [returnTo, setReturnTo] = useState<string | null>(null);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export function EmailConfirmationPage({ services }: EmailConfirmationPageProps) 
       if (confirmationCode === null || account?.configured !== true) {
         if (active) {
           setState("error");
-          setMessage("确认链接无效或账号服务尚未连接");
+          setMessage("The confirmation link is invalid or account service is unavailable.");
         }
         return;
       }
@@ -48,18 +48,18 @@ export function EmailConfirmationPage({ services }: EmailConfirmationPageProps) 
           if (active) setReturnTo(pendingReturn);
           if (active) {
             setState("unlocked");
-            setMessage("邮箱确认完成，内容权限已经绑定到你的账号。");
+            setMessage("Email confirmed. Content access is now linked to your account.");
           }
           return;
         }
         if (active) {
           setState("confirmed");
-          setMessage("邮箱已确认。当前浏览器没有待核销的邀请码，请重新输入冰冰提供的原邀请码完成资料绑定。");
+          setMessage("Email confirmed. No pending invitation was found in this browser; enter the original code again to link the content.");
         }
       } catch (reason) {
         if (active) {
           setState("error");
-          setMessage(reason instanceof Error ? reason.message : "邮箱确认失败，请重新登录");
+          setMessage(reason instanceof Error ? reason.message : "Email confirmation failed. Please sign in again.");
         }
       }
     }
@@ -76,12 +76,12 @@ export function EmailConfirmationPage({ services }: EmailConfirmationPageProps) 
         {state === "working" && <LoaderCircle className="account-spinner" aria-hidden="true" />}
         {complete && <CheckCircle2 aria-hidden="true" />}
         {state === "error" && <TriangleAlert aria-hidden="true" />}
-        <p className="eyebrow">邮箱确认</p>
-        <h1>{state === "unlocked" ? "解锁完成" : state === "confirmed" ? "邮箱已确认" : state === "error" ? "未能完成确认" : "正在完成账号设置"}</h1>
+        <p className="eyebrow">EMAIL CONFIRMATION</p>
+        <h1>{state === "unlocked" ? "Access unlocked" : state === "confirmed" ? "Email confirmed" : state === "error" ? "Confirmation failed" : "Finishing account setup…"}</h1>
         <p>{message}</p>
         {state !== "working" && (
           <Link className="button button--primary" to={state === "unlocked" ? returnTo ?? "/access/complete" : state === "confirmed" ? "/access" : "/login"}>
-            {state === "unlocked" ? "查看已解锁内容" : state === "confirmed" ? "重新输入邀请码" : "返回登录"}
+            {state === "unlocked" ? "Open unlocked content" : state === "confirmed" ? "Enter invitation code again" : "Back to sign in"}
           </Link>
         )}
       </section>
