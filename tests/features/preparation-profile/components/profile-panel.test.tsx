@@ -20,10 +20,10 @@ describe("progressive preparation profile panel", () => {
     renderPanel();
 
     expect(
-      screen.getByRole("heading", { name: "告诉我们你正在学什么" }),
+      screen.getByRole("heading", { name: /Tell us what you study/u }),
     ).toBeInTheDocument();
-    expect(screen.queryByRole("link", { name: "先浏览 TMUA 内容" })).not.toBeInTheDocument();
-    expect(screen.getByText(/只保存在这台设备/)).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "Browse TMUA first" })).not.toBeInTheDocument();
+    expect(screen.getByText(/private by default/u)).toBeInTheDocument();
     expect(screen.queryByText(/AI 解读|Token|付费/u)).not.toBeInTheDocument();
   });
 
@@ -36,11 +36,11 @@ describe("progressive preparation profile panel", () => {
       screen.getByRole("checkbox", { name: /Mathematics \(9709\)/u }),
     );
     const moduleGroup = screen.getByLabelText(
-      /Cambridge International AS & A Level Mathematics \(9709\) 模块/u,
+      /Cambridge International AS & A Level Mathematics \(9709\) modules/u,
     );
     await user.click(within(moduleGroup).getByRole("checkbox", { name: /Pure Mathematics 1/u }));
-    await user.click(screen.getByRole("radio", { name: /做过少量题/u }));
-    await user.click(screen.getByRole("button", { name: "保存并查看知识覆盖" }));
+    await user.click(screen.getByRole("radio", { name: /A few questions/u }));
+    await user.click(screen.getByRole("button", { name: "Save and view coverage" }));
 
     expect(onSave).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -57,10 +57,10 @@ describe("progressive preparation profile panel", () => {
       }),
     );
     expect(
-      await screen.findByRole("heading", { name: "你的课程信息" }),
+      await screen.findByRole("heading", { name: /Your course profile/u }),
     ).toBeInTheDocument();
-    expect(screen.getByText("可以查看")).toBeInTheDocument();
-    expect(screen.getByText("完成练习后生成")).toBeInTheDocument();
+    expect(screen.getByText("Ready to view")).toBeInTheDocument();
+    expect(screen.getByText("Generated after a full paper")).toBeInTheDocument();
   });
 
   it("does not infer a profile when a selected qualification has no module", async () => {
@@ -71,10 +71,10 @@ describe("progressive preparation profile panel", () => {
     await user.click(
       screen.getByRole("checkbox", { name: /Mathematics \(9709\)/u }),
     );
-    await user.click(screen.getByRole("radio", { name: /还没有开始/u }));
-    await user.click(screen.getByRole("button", { name: "保存并查看知识覆盖" }));
+    await user.click(screen.getByRole("radio", { name: /Not started/u }));
+    await user.click(screen.getByRole("button", { name: "Save and view coverage" }));
 
-    expect(screen.getByRole("alert")).toHaveTextContent("至少选择一个具体模块");
+    expect(screen.getByRole("alert")).toHaveTextContent("Choose at least one module");
     expect(onSave).not.toHaveBeenCalled();
   });
 
@@ -87,7 +87,7 @@ describe("progressive preparation profile panel", () => {
       screen.getByRole("checkbox", { name: /^Pearson Edexcel International A Level Mathematics/u }),
     );
     const moduleGroup = screen.getByLabelText(
-      /^Pearson Edexcel International A Level Mathematics 模块/u,
+      /^Pearson Edexcel International A Level Mathematics modules/u,
     );
     for (const label of ["P1", "P2", "P3", "P4", "M1", "M2", "S1", "S2", "D1"]) {
       expect(within(moduleGroup).getByRole("checkbox", { name: new RegExp(`^${label}`, "u") })).toBeInTheDocument();
@@ -108,7 +108,7 @@ describe("progressive preparation profile panel", () => {
       expect(screen.getByRole("checkbox", { name: route })).toBeInTheDocument();
     }
     await user.click(screen.getByRole("checkbox", { name: /Analysis & Approaches HL/u }));
-    const modules = screen.getByLabelText(/Analysis & Approaches HL.*模块/u);
+    const modules = screen.getByLabelText(/Analysis & Approaches HL.*modules/u);
     expect(within(modules).getByRole("checkbox", { name: /Functions · 函数/u })).toBeInTheDocument();
     expect(within(modules).getByRole("checkbox", { name: /Calculus · 微积分/u })).toBeInTheDocument();
   });
@@ -119,11 +119,11 @@ describe("progressive preparation profile panel", () => {
 
     await user.click(screen.getByRole("radio", { name: /AP \/ US Curriculum/u }));
     await user.click(screen.getByRole("checkbox", { name: /AP Precalculus/u }));
-    const modules = screen.getByLabelText(/AP Precalculus.*模块/u);
+    const modules = screen.getByLabelText(/AP Precalculus.*modules/u);
     await user.click(within(modules).getByRole("checkbox", { name: /Unit 1.*多项式与有理函数/u }));
     await user.click(within(modules).getByRole("checkbox", { name: /Unit 2.*指数与对数函数/u }));
-    await user.click(screen.getByRole("radio", { name: /做过少量题/u }));
-    await user.click(screen.getByRole("button", { name: "保存并查看知识覆盖" }));
+    await user.click(screen.getByRole("radio", { name: /A few questions/u }));
+    await user.click(screen.getByRole("button", { name: "Save and view coverage" }));
 
     expect(onSave).toHaveBeenCalledWith(expect.objectContaining({
       curriculumSystem: "ap",

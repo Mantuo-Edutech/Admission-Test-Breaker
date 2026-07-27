@@ -284,8 +284,8 @@ export function TmuaSixWeekPlanPage({ services }: TmuaSixWeekPlanPageProps) {
       </aside>
 
       <section className="entitled-plan-next page-shell">
-        <div><p>START WITH YOUR EVIDENCE</p><h2><EnglishFirstText english="Start with your curriculum and diagnostic" chinese="从你的课程和诊断开始" /></h2><EnglishFirstParagraph english="The plan defines the actions; the system preserves evidence from every session." chinese="计划负责安排动作，系统负责保存每一次真实训练。" /></div>
-        <div><Link className="button button--secondary" to="/exams/tmua/coverage"><EnglishFirstText english="View knowledge coverage" chinese="查看知识覆盖" /></Link><Link className="button button--primary" to="/exams/tmua/diagnostic"><EnglishFirstText english="Start the 30-minute diagnostic" chinese="开始 30 分钟诊断" /><ArrowRight aria-hidden="true" /></Link></div>
+        <div><p>START WITH YOUR EVIDENCE</p><h2><EnglishFirstText english="Start with your curriculum and full-paper evidence" chinese="从课程信息与整套试卷记录开始" /></h2><EnglishFirstParagraph english="The plan defines the actions; the system preserves evidence from every session." chinese="计划负责安排动作，系统负责保存每一次真实训练。" /></div>
+        <div><Link className="button button--secondary" to="/exams/tmua/coverage"><EnglishFirstText english="View knowledge coverage" chinese="查看知识覆盖" /></Link><Link className="button button--primary" to="/exams/tmua/past-papers"><EnglishFirstText english="Choose a full paper" chinese="选择完整试卷" /><ArrowRight aria-hidden="true" /></Link></div>
       </section>
 
       <footer className="entitled-plan-provenance page-shell">

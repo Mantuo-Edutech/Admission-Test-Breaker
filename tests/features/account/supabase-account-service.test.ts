@@ -9,13 +9,13 @@ import {
 describe("Supabase account error copy", () => {
   it("explains that an unconfirmed local account is not a password failure", () => {
     expect(readableAuthError("Email not confirmed").message).toBe(
-      "邮箱尚未确认。请先点击确认邮件中的链接，再重新登录",
+      "Your email is not confirmed. Open the confirmation link, then sign in again.",
     );
   });
 
   it("turns CAPTCHA failures into a retryable student-facing message", () => {
     expect(readableAuthError("captcha verification process failed").message).toBe(
-      "安全验证无效或已经过期，请重新完成验证",
+      "The security check is invalid or has expired. Complete it again.",
     );
   });
 });
@@ -28,12 +28,12 @@ describe("account bot protection", () => {
   };
 
   it("requires a solved challenge when production protection is enabled", () => {
-    expect(validateBotChallenge(requiredProtection, null)).toBe("请先完成安全验证");
+    expect(validateBotChallenge(requiredProtection, null)).toBe("Complete the security check first.");
     expect(validateBotChallenge(requiredProtection, "captcha-token")).toBeUndefined();
     expect(validateBotChallenge({
       ...requiredProtection,
       siteKey: null,
-    }, null)).toContain("尚未配置");
+    }, null)).toContain("not configured");
   });
 
   it("passes a fresh CAPTCHA token to sign-up, sign-in and password reset", async () => {
@@ -83,7 +83,7 @@ describe("account bot protection", () => {
     );
 
     await expect(service.register("student@example.com", "SecurePass1")).rejects.toThrow(
-      "请先完成安全验证",
+      "Complete the security check first.",
     );
     expect(signUp).not.toHaveBeenCalled();
   });

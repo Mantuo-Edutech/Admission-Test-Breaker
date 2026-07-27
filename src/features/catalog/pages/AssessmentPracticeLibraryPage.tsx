@@ -1,6 +1,6 @@
 import { SiteHeader } from "../../navigation/components/SiteHeader.js";
 import type { PracticeExamId } from "../../practice/catalog/assessment-registry.js";
-import { historicPracticeForExam } from "../../practice/content/historic-practice-catalog.js";
+import { publicHistoricPracticeForExam } from "../../practice/content/historic-practice-catalog.js";
 import type { ExamId } from "../exams.js";
 import {
   PracticeEntrySection,
@@ -12,166 +12,122 @@ type AssessmentPracticeExamId = Extract<PracticeExamId, "tara" | "lnat" | "ucat"
 
 interface PracticeLibraryConfig {
   readonly facts: readonly string[];
-  readonly fullPractice: readonly PracticeEntry[];
-  readonly startingPractice: readonly PracticeEntry[];
+  readonly fullMocks: readonly PracticeEntry[];
+  readonly historicalPapers: readonly PracticeEntry[];
 }
 
-const taraPastPaperEntries: readonly PracticeEntry[] = historicPracticeForExam("tara").map((entry) => ({
+const taraPastPaperEntries: readonly PracticeEntry[] = publicHistoricPracticeForExam("tara").map((entry) => ({
   id: entry.paperId,
   to: entry.route,
-  kicker: `PAST PAPER PRACTICE · ${entry.year}`,
+  kicker: `HISTORICAL PAPER · ${entry.year}`,
   title: `TSA ${entry.year}`,
-  subtitle: "Critical Thinking + Problem Solving",
-  meta: `${entry.questionCount} 题 · ${entry.durationMinutes} 分钟`,
-  ariaLabel: `TSA ${entry.year} 批判思维与问题解决，${entry.questionCount} 题，${entry.durationMinutes} 分钟，开始练习`,
+  subtitle: "Critical Thinking and Problem Solving",
+  subtitleZh: "批判思维与问题解决",
+  meta: `${entry.questionCount} questions · ${entry.durationMinutes} minutes`,
+  ariaLabel: `TSA ${entry.year}, Critical Thinking and Problem Solving, ${entry.questionCount} questions. Start.`,
 }));
 
 const PRACTICE_LIBRARY_CONFIG: Readonly<Record<AssessmentPracticeExamId, PracticeLibraryConfig>> = {
   tara: {
-    facts: ["7 套主练习", "244 道推理题", "1 套起点练习"],
-    fullPractice: [
+    facts: ["3 full mocks", "4 historical papers", "All online"],
+    fullMocks: [
       {
         id: "tara-critical-thinking-full-mock-v1",
         to: "/practice/tara-critical-thinking-full-mock-v1",
         kicker: "FULL MOCK",
         title: "Critical Thinking",
-        subtitle: "批判思维",
-        meta: "22 题 · 40 分钟",
+        subtitle: "Argument analysis and evaluation",
+        subtitleZh: "批判思维",
+        meta: "22 questions · 40 minutes",
       },
       {
         id: "tara-problem-solving-full-mock-v1",
         to: "/practice/tara-problem-solving-full-mock-v1",
         kicker: "FULL MOCK",
         title: "Problem Solving",
-        subtitle: "问题解决",
-        meta: "22 题 · 40 分钟",
+        subtitle: "Logic, constraints and quantitative reasoning",
+        subtitleZh: "问题解决",
+        meta: "22 questions · 40 minutes",
       },
       {
         id: "tara-writing-task-v1",
         to: "/practice/tara-writing-task-v1",
-        kicker: "WRITING TASK",
+        kicker: "FULL MOCK · WRITING TASK",
         title: "Argumentative Writing",
-        subtitle: "限时论证写作",
-        meta: "三选一 · 40 分钟",
+        subtitle: "Timed argumentative writing",
+        subtitleZh: "限时论证写作",
+        meta: "Choose 1 of 3 · 40 minutes",
         kind: "writing",
       },
-      ...taraPastPaperEntries,
     ],
-    startingPractice: [{
-      id: "tara-reasoning-starter-v1",
-      to: "/practice/tara-reasoning-starter-v1",
-      kicker: "STARTER",
-      title: "Reasoning Starter",
-      subtitle: "批判思维 + 问题解决",
-      meta: "10 题",
-      kind: "diagnostic",
-    }],
+    historicalPapers: taraPastPaperEntries,
   },
   lnat: {
-    facts: ["Section A + B", "42 题完整模考", "1 套起点练习"],
-    fullPractice: [
+    facts: ["Section A and Section B", "2 full mocks", "All online"],
+    fullMocks: [
       {
         id: "lnat-section-a-full-mock-v1",
         to: "/practice/lnat-section-a-full-mock-v1",
         kicker: "SECTION A · FULL MOCK",
         title: "Multiple Choice",
-        subtitle: "12 篇英文材料",
-        meta: "42 题 · 95 分钟",
+        subtitle: "Reading and reasoning in English",
+        subtitleZh: "英文材料阅读与推理",
+        meta: "42 questions · 95 minutes",
       },
       {
         id: "lnat-section-b-writing-v1",
         to: "/practice/lnat-section-b-writing-v1",
-        kicker: "SECTION B · WRITING",
+        kicker: "SECTION B · FULL MOCK",
         title: "Essay",
-        subtitle: "限时论证写作",
-        meta: "三选一 · 40 分钟",
+        subtitle: "Timed argumentative writing",
+        subtitleZh: "限时论证写作",
+        meta: "Choose 1 of 3 · 40 minutes",
         kind: "writing",
       },
     ],
-    startingPractice: [{
-      id: "lnat-section-a-starter-v1",
-      to: "/practice/lnat-section-a-starter-v1",
-      kicker: "SECTION A · STARTER",
-      title: "Reading & Reasoning",
-      subtitle: "文章阅读与论证推理",
-      meta: "3 篇 · 12 题",
-      kind: "diagnostic",
-    }],
+    historicalPapers: [],
   },
   ucat: {
-    facts: ["4 个考试模块", "4 套完整模考", "4 套起点练习"],
-    fullPractice: [
+    facts: ["4 test sections", "4 full mocks", "All online"],
+    fullMocks: [
       {
         id: "ucat-verbal-reasoning-full-mock-v1",
         to: "/practice/ucat-verbal-reasoning-full-mock-v1",
         kicker: "FULL MOCK",
         title: "Verbal Reasoning",
-        subtitle: "文字推理",
-        meta: "44 题 · 22 分钟",
+        subtitle: "Reading and evidence-based inference",
+        subtitleZh: "文字推理",
+        meta: "44 questions · 22 minutes",
       },
       {
         id: "ucat-decision-making-full-mock-v1",
         to: "/practice/ucat-decision-making-full-mock-v1",
         kicker: "FULL MOCK",
         title: "Decision Making",
-        subtitle: "决策判断",
-        meta: "35 题 · 37 分钟",
+        subtitle: "Logic, probability and argument judgement",
+        subtitleZh: "决策判断",
+        meta: "35 questions · 37 minutes",
       },
       {
         id: "ucat-quantitative-reasoning-full-mock-v1",
         to: "/practice/ucat-quantitative-reasoning-full-mock-v1",
         kicker: "FULL MOCK",
         title: "Quantitative Reasoning",
-        subtitle: "数量推理",
-        meta: "36 题 · 26 分钟",
+        subtitle: "Applied numerical reasoning",
+        subtitleZh: "数量推理",
+        meta: "36 questions · 26 minutes",
       },
       {
         id: "ucat-situational-judgement-full-mock-v1",
         to: "/practice/ucat-situational-judgement-full-mock-v1",
         kicker: "FULL MOCK",
         title: "Situational Judgement",
-        subtitle: "情境判断",
-        meta: "69 题 · 26 分钟",
+        subtitle: "Professional judgement in clinical contexts",
+        subtitleZh: "情境判断",
+        meta: "69 questions · 26 minutes",
       },
     ],
-    startingPractice: [
-      {
-        id: "ucat-verbal-reasoning-starter-v1",
-        to: "/practice/ucat-verbal-reasoning-starter-v1",
-        kicker: "STARTER",
-        title: "Verbal Reasoning",
-        subtitle: "文字推理",
-        meta: "3 篇 · 12 题",
-        kind: "diagnostic",
-      },
-      {
-        id: "ucat-decision-making-starter-v1",
-        to: "/practice/ucat-decision-making-starter-v1",
-        kicker: "STARTER",
-        title: "Decision Making",
-        subtitle: "决策判断",
-        meta: "8 题",
-        kind: "diagnostic",
-      },
-      {
-        id: "ucat-quantitative-reasoning-starter-v1",
-        to: "/practice/ucat-quantitative-reasoning-starter-v1",
-        kicker: "STARTER",
-        title: "Quantitative Reasoning",
-        subtitle: "数量推理",
-        meta: "4 组数据 · 10 题",
-        kind: "diagnostic",
-      },
-      {
-        id: "ucat-situational-judgement-starter-v1",
-        to: "/practice/ucat-situational-judgement-starter-v1",
-        kicker: "STARTER",
-        title: "Situational Judgement",
-        subtitle: "情境判断",
-        meta: "3 个情境 · 10 题",
-        kind: "diagnostic",
-      },
-    ],
+    historicalPapers: [],
   },
 };
 
@@ -184,25 +140,28 @@ export function AssessmentPracticeLibraryPage({ examId }: { readonly examId: Ass
       <SiteHeader examId={examId as ExamId} />
       <PracticeLibraryHero
         exam={exam}
-        title="选择一套练习"
-        titleEn="Choose your practice"
-        summary="点击任意卡片，直接进入练习。"
+        title="Choose a full paper"
+        titleZh="选择完整试卷"
+        summary="Open a paper and start from Question 1. Your answers and time are saved online."
+        summaryZh="选择试卷后直接进入第 1 题。"
         facts={config.facts}
       />
       <PracticeEntrySection
-        eyebrow="FULL PRACTICE"
-        title="完整练习"
-        titleEn="Full-length practice"
-        summary={`${config.fullPractice.length} 套`}
-        entries={config.fullPractice}
+        eyebrow="FULL MOCKS"
+        title="Full Mocks"
+        titleZh="完整模考"
+        summary={`${config.fullMocks.length} complete ${config.fullMocks.length === 1 ? "paper" : "papers"}`}
+        entries={config.fullMocks}
       />
-      <PracticeEntrySection
-        eyebrow="START HERE"
-        title="起点练习"
-        titleEn="Short practice"
-        summary={`${config.startingPractice.length} 套`}
-        entries={config.startingPractice}
-      />
+      {config.historicalPapers.length === 0 ? null : (
+        <PracticeEntrySection
+          eyebrow="HISTORICAL PAPERS"
+          title="Historical Papers"
+          titleZh="历年试卷"
+          summary={`${config.historicalPapers.length} complete papers`}
+          entries={config.historicalPapers}
+        />
+      )}
     </main>
   );
 }

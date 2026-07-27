@@ -25,13 +25,13 @@ export function EssayPracticeEditor({ task, value, onChange }: EssayPracticeEdit
       <header>
         <div>
           <p>CHOOSE ONE PROMPT · WRITE IN ENGLISH</p>
-          <h1 id="essay-practice-title">选择一道题，完成限时论证</h1>
+          <h1 id="essay-practice-title">Choose one prompt and build your argument<small lang="zh-CN">选择一道题，完成限时论证</small></h1>
         </div>
-        <span>三选一</span>
+        <span>Choose 1 of 3</span>
       </header>
 
       <fieldset className="essay-prompt-list">
-        <legend>先选择写作题目</legend>
+        <legend>Choose your writing prompt</legend>
         {task.prompts.map((prompt, index) => (
           <label key={prompt.id} className={response.promptId === prompt.id ? "is-selected" : ""}>
             <input
@@ -49,7 +49,7 @@ export function EssayPracticeEditor({ task, value, onChange }: EssayPracticeEdit
 
       <div className="essay-editor">
         <div>
-          <label htmlFor="essay-response">你的论证 · Your response</label>
+          <label htmlFor="essay-response">Your response <small>你的论证</small></label>
           <span className={wordCount >= task.maxWords ? "is-limit" : ""}>{wordCount} / {task.maxWords} words</span>
         </div>
         <textarea
@@ -57,13 +57,13 @@ export function EssayPracticeEditor({ task, value, onChange }: EssayPracticeEdit
           value={response.text}
           maxLength={20_000}
           disabled={response.promptId === ""}
-          placeholder={response.promptId === "" ? "请先选择一道题目" : "Write a clear argument, consider a serious objection, and reach a justified conclusion."}
+          placeholder={response.promptId === "" ? "Choose a prompt first" : "Write a clear argument, consider a serious objection, and reach a justified conclusion."}
           onChange={(event) => update(response.promptId, event.target.value)}
         />
         <footer>
-          <span>草稿会自动保存到当前学习空间</span>
+          <span>Your draft is saved automatically</span>
           {task.recommendedWords !== undefined && (
-            <span>建议 {task.recommendedWords.min}–{task.recommendedWords.max} 词</span>
+            <span>Recommended: {task.recommendedWords.min}–{task.recommendedWords.max} words</span>
           )}
         </footer>
       </div>

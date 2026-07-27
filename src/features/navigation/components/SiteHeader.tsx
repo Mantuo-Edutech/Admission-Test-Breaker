@@ -22,7 +22,8 @@ function ContextNavigationLinks({
       to={item.to}
       aria-current={current === item.id ? "page" : undefined}
     >
-      {item.label}
+      <span lang="en">{item.label}</span>
+      <small lang="zh-CN">{item.labelZh}</small>
     </Link>
   ));
 }
@@ -30,7 +31,7 @@ function ContextNavigationLinks({
 function ExamSwitchLinks({ currentExamId }: { currentExamId: ExamId }) {
   return (
     <>
-      <Link to="/">全部考试</Link>
+      <Link to="/"><strong>All Tests</strong><span>全部考试</span></Link>
       {EXAM_CATALOG.map((exam) => (
         <Link
           key={exam.id}
@@ -38,7 +39,8 @@ function ExamSwitchLinks({ currentExamId }: { currentExamId: ExamId }) {
           aria-current={exam.id === currentExamId ? "page" : undefined}
         >
           <strong>{exam.name}</strong>
-          <span>{exam.purpose}</span>
+          <span lang="en">{exam.purpose}</span>
+          <small lang="zh-CN">{exam.purposeZh}</small>
         </Link>
       ))}
     </>
@@ -48,11 +50,11 @@ function ExamSwitchLinks({ currentExamId }: { currentExamId: ExamId }) {
 function ExamSwitcher({ exam }: { exam: ExamCatalogEntry }) {
   return (
     <details className="exam-switcher">
-      <summary aria-label={`当前考试 ${exam.name}，切换考试`}>
+      <summary aria-label={`Current test: ${exam.name}. Switch test.`}>
         <span>{exam.name}</span>
         <ChevronDown aria-hidden="true" />
       </summary>
-      <nav className="exam-switcher__panel" aria-label="切换考试">
+      <nav className="exam-switcher__panel" aria-label="Switch test">
         <ExamSwitchLinks currentExamId={exam.id} />
       </nav>
     </details>
@@ -69,14 +71,14 @@ export function SiteHeader({ examId }: { examId: ExamId }) {
 
   return (
     <header className="site-header site-navigation-header page-shell">
-      <Link className="site-navigation-header__brand" to="/" aria-label="满托考试练习场首页">
+      <Link className="site-navigation-header__brand" to="/" aria-label="UK Admission Test Prep home">
         <BrandMark />
       </Link>
 
       <div className="site-navigation__exam--desktop">
         <ExamSwitcher exam={exam} />
       </div>
-      <nav className="site-navigation site-navigation--desktop" aria-label="主要导航">
+      <nav className="site-navigation site-navigation--desktop" aria-label="Primary navigation">
         <ContextNavigationLinks exam={exam} pathname={pathname} />
       </nav>
       <Link
@@ -85,20 +87,20 @@ export function SiteHeader({ examId }: { examId: ExamId }) {
         aria-current={accountActive ? "page" : undefined}
       >
         <UserRound aria-hidden="true" />
-        账号
+        <span>Account</span><small>账号</small>
       </Link>
 
       <details className="site-navigation-mobile">
         <summary>
           <Menu aria-hidden="true" />
-          <span>{exam.name} 导航</span>
+          <span>{exam.name} Menu</span>
         </summary>
         <div className="site-navigation-mobile__panel">
           <div className="site-navigation-mobile__exam">
-            <span>切换考试</span>
+            <span>Switch test <small>切换考试</small></span>
             <div><ExamSwitchLinks currentExamId={exam.id} /></div>
           </div>
-          <nav aria-label="移动端主要导航">
+          <nav aria-label="Mobile primary navigation">
             <ContextNavigationLinks exam={exam} pathname={pathname} />
           </nav>
           <Link
@@ -107,7 +109,7 @@ export function SiteHeader({ examId }: { examId: ExamId }) {
             aria-current={accountActive ? "page" : undefined}
           >
             <UserRound aria-hidden="true" />
-            账号
+            <span>Account</span><small>账号</small>
           </Link>
         </div>
       </details>

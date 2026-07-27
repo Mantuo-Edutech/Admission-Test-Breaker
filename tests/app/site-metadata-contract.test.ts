@@ -6,11 +6,11 @@ describe("multi-exam site metadata", () => {
   it("identifies Mantou and every supported exam instead of presenting the site as TMUA-only", async () => {
     const html = await readFile("index.html", "utf8");
 
-    expect(html).toContain("<title>满托｜英国入学考试练习与诊断</title>");
-    expect(html).toContain("不再为升学考试而焦虑");
+    expect(html).toContain("<title>UK Admission Test Prep | Mantuo 满托</title>");
+    expect(html).toContain("Prepare for TMUA, ESAT, TARA, LNAT and UCAT");
     expect(html).toContain('name="description"');
-    expect(html).toContain('property="og:site_name" content="满托 UK Test"');
-    expect(html).toContain('property="og:title" content="满托｜英国入学考试练习与诊断"');
+    expect(html).toContain('property="og:site_name" content="Mantuo UK Test"');
+    expect(html).toContain('property="og:title" content="UK Admission Test Prep | Mantuo 满托"');
     expect(html).not.toContain("<title>TMUA 练习场</title>");
   });
 
@@ -25,20 +25,21 @@ describe("multi-exam site metadata", () => {
     expect(html).toContain('href="/apple-touch-icon.png"');
     expect(html).toContain('href="/site.webmanifest"');
     expect(JSON.parse(manifest)).toMatchObject({
-      name: "满托 UK Test｜英国入学考试练习与诊断",
-      short_name: "满托 UK Test",
+      name: "UK Admission Test Prep | Mantuo 满托",
+      short_name: "Mantuo UK Test",
+      lang: "en-GB",
       theme_color: "#63528c",
     });
   });
 
   it("keeps the current task visible before the Mantou brand on inner pages", () => {
-    expect(siteTitleForPathname("/")).toBe("满托｜英国入学考试练习与诊断");
-    expect(siteTitleForPathname("/exams/tmua")).toBe("TMUA 备考｜满托");
-    expect(siteTitleForPathname("/exams/tmua/past-papers")).toBe("在线练习｜TMUA｜满托");
-    expect(siteTitleForPathname("/exams/esat/coverage")).toBe("知识覆盖｜ESAT｜满托");
-    expect(siteTitleForPathname("/exams/tmua/resources")).toBe("复习笔记｜TMUA｜满托");
-    expect(siteTitleForPathname("/exams/tmua/coaching")).toBe("名师指点｜TMUA｜满托");
-    expect(siteTitleForPathname("/practice/tmua-2023-p1")).toBe("在线练习｜满托");
-    expect(siteTitleForPathname("/login")).toBe("登录｜满托");
+    expect(siteTitleForPathname("/")).toBe("UK Admission Test Prep | Mantuo 满托");
+    expect(siteTitleForPathname("/exams/tmua")).toBe("TMUA Prep | Mantuo 满托");
+    expect(siteTitleForPathname("/exams/tmua/past-papers")).toBe("Online Practice | TMUA | Mantuo 满托");
+    expect(siteTitleForPathname("/exams/esat/coverage")).toBe("Course Coverage | ESAT | Mantuo 满托");
+    expect(siteTitleForPathname("/exams/tmua/resources")).toBe("Review Notes | TMUA | Mantuo 满托");
+    expect(siteTitleForPathname("/exams/tmua/coaching")).toBe("Expert Guidance | TMUA | Mantuo 满托");
+    expect(siteTitleForPathname("/practice/tmua-2023-p1")).toBe("Online Practice | Mantuo 满托");
+    expect(siteTitleForPathname("/login")).toBe("Sign In | Mantuo 满托");
   });
 });

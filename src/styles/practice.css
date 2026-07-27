@@ -2984,16 +2984,17 @@
 }
 
 .brand-mark__copy strong {
-  font-size: 1.05rem;
-  letter-spacing: 0.04em;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 750;
+  letter-spacing: 0.01em;
 }
 
 .brand-mark__copy small {
   color: var(--color-purple);
-  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
-  font-size: 0.66rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: var(--font-sans);
+  font-size: 0.64rem;
+  letter-spacing: 0.03em;
 }
 
 .site-header__descriptor {
@@ -3033,6 +3034,13 @@
   font-weight: 500;
   letter-spacing: -0.055em;
   line-height: 1.02;
+}
+
+.front-door-hero__slogan-zh {
+  margin: 0.65rem 0 0;
+  color: rgba(255, 253, 248, 0.76);
+  font-size: clamp(0.78rem, 1.25vw, 0.94rem);
+  letter-spacing: 0.03em;
 }
 
 .front-door-hero__lead {
@@ -3097,6 +3105,12 @@
   line-height: 1.16;
 }
 
+.exam-selector__heading > p {
+  margin: 0.45rem 0 0;
+  color: var(--color-slate);
+  font-size: 0.78rem;
+}
+
 .exam-entry-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -3147,6 +3161,14 @@
   line-height: 1.55;
 }
 
+.exam-entry > small {
+  max-width: 12rem;
+  margin-top: -1.4rem;
+  color: var(--color-slate);
+  font-size: 0.66rem;
+  line-height: 1.5;
+}
+
 .exam-entry__status {
   margin-top: auto;
   font-size: 0.75rem;
@@ -3162,8 +3184,8 @@
   height: 1.15rem;
 }
 
-.exam-entry:hover :is(.exam-entry__index, p),
-.exam-entry:focus-visible :is(.exam-entry__index, p) {
+.exam-entry:hover :is(.exam-entry__index, p, small),
+.exam-entry:focus-visible :is(.exam-entry__index, p, small) {
   color: rgba(255, 253, 248, 0.76);
 }
 
@@ -3179,6 +3201,12 @@
 .landing-footer {
   padding-block: 2rem 3rem;
   border-top: 1px solid var(--color-line);
+}
+
+.landing-footer p small {
+  margin-left: 0.45rem;
+  color: var(--color-slate);
+  font-size: 0.68rem;
 }
 
 @media (max-width: 55rem) {
@@ -3291,6 +3319,14 @@
 
 .tmua-hub-hero h1 > span {
   display: block;
+}
+
+.tmua-hub-hero h1 > small {
+  margin-top: 0.65rem;
+  display: block;
+  color: var(--color-purple);
+  font: 650 0.86rem / 1.55 var(--font-sans);
+  letter-spacing: 0.02em;
 }
 
 .tmua-hub-hero > div > p:last-child {
@@ -3837,6 +3873,14 @@
   line-height: 1.65;
 }
 
+.practice-library-hero__guide > small {
+  margin-top: 0.4rem;
+  display: block;
+  color: var(--color-slate);
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
 .practice-library-hero__guide ul {
   margin: 1.25rem 0 0;
   padding: 0;
@@ -3872,6 +3916,60 @@
   width: 1rem;
 }
 
+.practice-library-hero__action small {
+  color: var(--color-slate);
+  font-size: 0.62rem;
+  font-weight: 600;
+}
+
+.practice-module-availability {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  padding: 1.25rem 1.4rem;
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.55fr) minmax(18rem, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-paper-raised);
+}
+
+.practice-module-availability p,
+.practice-module-availability small {
+  margin: 0;
+}
+
+.practice-module-availability div > p {
+  color: var(--color-purple);
+  font-size: 0.64rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.practice-module-availability h2 {
+  margin: 0.4rem 0 0;
+  font: 500 clamp(1.55rem, 2.8vw, 2.25rem) / 1.1 var(--font-serif);
+}
+
+.practice-module-availability h2 small {
+  margin-top: 0.35rem;
+  display: block;
+  color: var(--color-purple);
+  font: 600 0.7rem / 1.5 var(--font-sans);
+}
+
+.practice-module-availability > p {
+  color: var(--color-ink);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.practice-module-availability > small {
+  grid-column: 2;
+  margin-top: -1rem;
+  color: var(--color-slate);
+  font-size: 0.68rem;
+}
+
 .practice-resume-strip {
   margin-top: 1.25rem;
   padding: 1rem 1.25rem;
@@ -3893,6 +3991,13 @@
   color: var(--color-purple);
   font-size: 0.68rem;
   font-weight: 750;
+}
+
+.practice-resume-strip span small,
+.practice-resume-strip > a small {
+  margin-left: 0.35rem;
+  color: var(--color-slate);
+  font-size: 0.58rem;
 }
 
 .practice-resume-strip strong {
@@ -4062,6 +4167,12 @@
   font-weight: 750;
 }
 
+.practice-entry-grid a > footer em small {
+  color: var(--color-slate);
+  font-size: 0.58rem;
+  font-weight: 600;
+}
+
 .practice-entry-grid a > footer svg {
   width: 0.9rem;
   height: 0.9rem;
@@ -4139,6 +4250,15 @@
 
   .practice-entry-grid a {
     min-height: 9.5rem;
+  }
+
+  .practice-module-availability {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-module-availability > small {
+    grid-column: 1;
+    margin-top: -0.8rem;
   }
 
   .tmua-hub-page__back {
@@ -4567,6 +4687,16 @@
   font-family: var(--font-serif);
   font-size: clamp(1.55rem, 3vw, 2.1rem);
   font-weight: 600;
+}
+
+.essay-practice-card > header h1 small,
+.question-card__heading h1 small,
+.practice-state-page h1 > small {
+  margin-top: 0.3rem;
+  display: block;
+  color: var(--color-slate);
+  font: 550 0.68rem / 1.5 var(--font-sans);
+  letter-spacing: 0;
 }
 
 .essay-practice-card > header > span {
@@ -6529,6 +6659,11 @@
   font-weight: 500;
 }
 
+.tmua-starting-path li > small {
+  color: var(--color-purple);
+  font-size: 0.66rem;
+}
+
 .tmua-starting-path li p {
   min-height: 4rem;
   margin: 0;
@@ -6564,6 +6699,13 @@
   font-family: var(--font-serif);
   font-size: clamp(1.3rem, 2.5vw, 1.75rem);
   font-weight: 500;
+}
+
+.tmua-public-boundary h2 small {
+  margin-top: 0.35rem;
+  display: block;
+  color: var(--color-slate);
+  font: 550 0.68rem / 1.5 var(--font-sans);
 }
 
 .tmua-public-boundary div > p:last-child {
@@ -8972,6 +9114,15 @@
   text-decoration: none;
 }
 
+.exam-switcher__panel a small,
+.site-navigation-mobile__exam a small {
+  grid-column: 2;
+  margin-top: -0.55rem;
+  color: var(--color-slate);
+  font-size: 0.6rem;
+  line-height: 1.4;
+}
+
 .exam-switcher__panel > a:first-child,
 .site-navigation-mobile__exam div > a:first-child {
   grid-template-columns: 1fr;
@@ -9014,6 +9165,19 @@
   text-decoration: none;
   white-space: nowrap;
   transition: background-color 150ms ease, color 150ms ease;
+}
+
+.site-navigation__link {
+  flex-direction: column;
+  gap: 0.16rem;
+}
+
+.site-navigation__link small,
+.site-navigation__account small {
+  color: currentColor;
+  font-size: 0.56rem;
+  font-weight: 550;
+  opacity: 0.7;
 }
 
 .site-navigation__account {
@@ -9125,6 +9289,13 @@
   letter-spacing: 0.1em;
 }
 
+.site-navigation-mobile__exam > span small {
+  margin-left: 0.35rem;
+  font-size: 0.58rem;
+  letter-spacing: 0.03em;
+  opacity: 0.72;
+}
+
 .site-navigation-mobile__exam div {
   display: grid;
 }
@@ -9196,6 +9367,13 @@
 
 .front-door-navigation__account {
   gap: 0.45rem;
+}
+
+.front-door-navigation__account small {
+  color: currentColor;
+  font-size: 0.62rem;
+  font-weight: 600;
+  opacity: 0.72;
 }
 
 .front-door-navigation__account svg {
@@ -11220,6 +11398,13 @@
   text-underline-offset: 0.2em;
 }
 
+.question-card__feedback a small {
+  margin-left: 0.4rem;
+  color: var(--color-slate);
+  font-size: 0.6rem;
+  font-weight: 550;
+}
+
 @media (max-width: 54rem) {
   .feedback-hero,
   .feedback-access,
@@ -13194,6 +13379,44 @@
   color: var(--color-slate);
   font-size: 0.95rem;
   line-height: 1.9;
+}
+
+.expert-guidance-hero > div > p:not(.eyebrow) {
+  max-width: 46rem;
+  margin: 1.5rem 0 0;
+  color: var(--color-slate);
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+
+.expert-guidance-hero > div > small,
+.expert-guidance-qr figcaption > small,
+.expert-guidance-privacy > small {
+  margin-top: 0.4rem;
+  display: block;
+  color: var(--color-slate);
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+
+/* Public-language hierarchy: English headings carry the visual weight. */
+:where(h1, h2, h3) > small[lang="zh-CN"] {
+  margin-top: 0.42rem;
+  display: block;
+  color: var(--color-slate);
+  font-family: var(--font-sans);
+  font-size: clamp(0.66rem, 0.16em + 0.58rem, 0.88rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.button > small[lang="zh-CN"],
+button > small[lang="zh-CN"],
+a > small[lang="zh-CN"] {
+  font-size: 0.68em;
+  font-weight: 600;
+  opacity: 0.72;
 }
 
 .expert-guidance-qr {

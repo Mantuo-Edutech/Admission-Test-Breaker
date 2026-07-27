@@ -78,21 +78,21 @@ describe("student account lifecycle", () => {
     const router = createAppRouter(["/account"], services(accountService(), dataRightsService()));
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "账号与内容权限" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Account and content access/u })).toBeInTheDocument();
     expect(screen.getByText("student@example.com")).toBeInTheDocument();
-    expect(screen.getByText("TMUA 六周精确训练计划")).toBeInTheDocument();
-    expect(screen.getByText("TMUA Early Specimen Paper 1 逐题深度解析")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "打开已解锁资料" })).toHaveAttribute(
+    expect(screen.getByText("TMUA Six-Week Precision Training Plan")).toBeInTheDocument();
+    expect(screen.getByText("TMUA Early Specimen Paper 1 Worked Review")).toBeInTheDocument();
+    expect(screen.getAllByRole("link", { name: "Open content" })[1]).toHaveAttribute(
       "href",
       "/exams/tmua/notes/six-week-plan",
     );
-    expect(screen.getByRole("link", { name: "完成试卷并打开解析" })).toHaveAttribute(
+    expect(screen.getAllByRole("link", { name: "Open content" })[0]).toHaveAttribute(
       "href",
       "/practice/tmua-specimen-p1",
     );
-    expect(screen.getByRole("button", { name: /退出登录/u })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "导出 JSON 副本" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "阅读学生隐私说明" })).toHaveAttribute("href", "/privacy");
+    expect(screen.getByRole("button", { name: "Sign out" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Export JSON copy" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Read student privacy notice" })).toHaveAttribute("href", "/privacy");
   });
 
   it("shows catalog-resolved invite products as unlocked in the shared learning library", async () => {
@@ -129,7 +129,7 @@ describe("student account lifecycle", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("link", { name: /邀请码运营/u })).toHaveAttribute(
+    expect(await screen.findByRole("link", { name: /Invite operations/u })).toHaveAttribute(
       "href",
       "/operations/invites",
     );
@@ -152,7 +152,7 @@ describe("student account lifecycle", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("link", { name: /转化看板/u })).toHaveAttribute(
+    expect(await screen.findByRole("link", { name: /Journey analytics/u })).toHaveAttribute(
       "href",
       "/operations/funnel",
     );
@@ -169,11 +169,11 @@ describe("student account lifecycle", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("link", { name: /管理数据授权/u })).toHaveAttribute(
+    expect(await screen.findByRole("link", { name: /Manage data sharing/u })).toHaveAttribute(
       "href",
       "/account/sharing",
     );
-    expect(screen.getByRole("link", { name: /老师／家长协作空间/u })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Teacher \/ parent collaboration/u })).toHaveAttribute(
       "href",
       "/collaboration",
     );
@@ -210,7 +210,7 @@ describe("student account lifecycle", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("link", { name: /内容审核台/u })).toHaveAttribute(
+    expect(await screen.findByRole("link", { name: /Content review/u })).toHaveAttribute(
       "href",
       "/operations/content-review",
     );
@@ -226,24 +226,24 @@ describe("student account lifecycle", () => {
     );
     render(<RouterProvider router={router} />);
 
-    await user.click(await screen.findByRole("button", { name: /删除账号与学习数据/u }));
-    await user.type(screen.getByLabelText("当前密码"), "SecurePass1");
-    await user.type(screen.getByLabelText("确认文字"), "删除我的账号");
-    await user.click(screen.getByRole("button", { name: "确认永久删除" }));
+    await user.click(await screen.findByRole("button", { name: /Delete account and learning data/u }));
+    await user.type(screen.getByLabelText("Current password"), "SecurePass1");
+    await user.type(screen.getByLabelText("Confirmation text"), "DELETE MY ACCOUNT");
+    await user.click(screen.getByRole("button", { name: "Delete permanently" }));
 
     expect(dataRights.deleteMyAccount).toHaveBeenCalledWith("SecurePass1");
-    expect(await screen.findByRole("heading", { name: /你的数据属于你/u })).toBeInTheDocument();
-    expect(screen.getByText(/账号和当前数据库中的学习记录已经删除/u)).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Your data belongs to you/u })).toBeInTheDocument();
+    expect(screen.getByText(/active-database learning records have been deleted/u)).toBeInTheDocument();
   });
 
   it("publishes a student-readable bilingual privacy page", async () => {
     const router = createAppRouter(["/privacy"], services(accountService()));
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: /你的数据属于你/u })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "默认只有学生本人可见" })).toBeInTheDocument();
-    expect(screen.getByText(/通过站内反馈提交给满托服务团队/u)).toBeInTheDocument();
-    expect(screen.getByText(/访问日志按日轮转并保留 14 份/u)).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Your data belongs to you/u })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Private by default/u })).toBeInTheDocument();
+    expect(screen.getByText(/Submit access, correction, restriction or objection requests through feedback/u)).toBeInTheDocument();
+    expect(screen.getByText(/rotate daily, retain 14 copies/u)).toBeInTheDocument();
   });
 
   it("requests a reset without revealing whether the email exists", async () => {
@@ -252,15 +252,15 @@ describe("student account lifecycle", () => {
     const router = createAppRouter(["/forgot-password"], services(account));
     render(<RouterProvider router={router} />);
 
-    await user.type(await screen.findByLabelText("邮箱"), "student@example.com");
-    await user.click(screen.getByRole("button", { name: "发送重置邮件" }));
+    await user.type(await screen.findByLabelText("Email"), "student@example.com");
+    await user.click(screen.getByRole("button", { name: "Send reset email" }));
 
     expect(account.requestPasswordReset).toHaveBeenCalledWith(
       "student@example.com",
       undefined,
     );
-    expect(await screen.findByRole("heading", { name: "检查你的邮箱" })).toBeInTheDocument();
-    expect(screen.getByText(/不会确认邮箱是否存在/u)).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Check your email/u })).toBeInTheDocument();
+    expect(screen.getByText(/do not confirm whether an account exists/u)).toBeInTheDocument();
   });
 
   it("verifies a recovery code before accepting and saving a new password", async () => {
@@ -269,10 +269,10 @@ describe("student account lifecycle", () => {
     const router = createAppRouter(["/auth/reset?code=recovery-code"], services(account));
     render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { name: "设置新密码" });
-    await user.type(screen.getByLabelText("新密码"), "NewSecure1");
-    await user.type(screen.getByLabelText("再次输入新密码"), "NewSecure1");
-    await user.click(screen.getByRole("button", { name: "保存新密码" }));
+    await screen.findByRole("heading", { name: /Set a new password/u });
+    await user.type(screen.getByLabelText("New password"), "NewSecure1");
+    await user.type(screen.getByLabelText("Confirm new password"), "NewSecure1");
+    await user.click(screen.getByRole("button", { name: "Save new password" }));
 
     expect(account.completePasswordRecovery).toHaveBeenCalledWith("recovery-code");
     expect(account.updatePassword).toHaveBeenCalledWith("NewSecure1");

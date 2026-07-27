@@ -9,17 +9,17 @@ describe("expert guidance module", () => {
 
     expect(await screen.findByRole("heading", {
       level: 1,
-      name: "高效一对一，10 小时以内解决最后的冲刺问题",
+      name: /High-impact one-to-one coaching for your final 10 hours/u,
     })).toBeInTheDocument();
-    expect(screen.getByRole("img", { name: "冰冰老师微信二维码" })).toBeInTheDocument();
-    expect(screen.getByText("添加冰冰，预约 TMUA 10 小时冲刺")).toBeInTheDocument();
-    expect(screen.getByText(/获取一对一安排/u)).toBeInTheDocument();
-    const value = screen.getByRole("region", { name: "名师指点内容" });
-    for (const heading of ["找准最后卡点", "制定 10 小时方案", "一对一集中解决"]) {
-      expect(within(value).getByRole("heading", { name: heading })).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: "Bingbing's WeChat QR code" })).toBeInTheDocument();
+    expect(screen.getByText("Book your TMUA final-sprint plan")).toBeInTheDocument();
+    expect(screen.getByText(/arrange one-to-one coaching/u)).toBeInTheDocument();
+    const value = screen.getByRole("region", { name: "What expert guidance includes" });
+    for (const heading of ["Find the real bottleneck", "Build a 10-hour plan", "Solve it one to one"]) {
+      expect(within(value).getByRole("heading", { name: new RegExp(heading, "u") })).toBeInTheDocument();
     }
-    expect(screen.getByText(/不会自动开放你的课程信息、作答记录或学习数据/u)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "保存二维码" })).toHaveAttribute(
+    expect(screen.getByText(/Adding WeChat never opens your course profile/u)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /Save QR code/u })).toHaveAttribute(
       "href",
       "/brand/bingbing-wechat-qr.jpg",
     );

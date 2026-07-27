@@ -97,8 +97,8 @@ function esatNsaaSource(year: number): SourceDefinition {
       {
         id: `esat-nsaa-${year}-mathematics-1`,
         moduleId: "mathematics-1",
-        title: `NSAA ${year} · Mathematics`,
-        titleZh: `NSAA ${year} · 数学模块练习`,
+        title: `NSAA ${year} · Mathematics 1`,
+        titleZh: `NSAA ${year} · 数学 1 模块练习`,
         firstQuestion: 1,
         lastQuestion: 20,
         durationMinutes: 30,

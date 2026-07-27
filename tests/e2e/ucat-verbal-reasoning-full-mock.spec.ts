@@ -41,18 +41,18 @@ test("UCAT complete Verbal Reasoning mock opens natively and preserves the first
   const libraryResponse = await page.goto("/exams/ucat/past-papers");
   expect(libraryResponse?.ok()).toBe(true);
   const fullMockLink = page.getByRole("list", {
-    name: "完整练习 Full-length practice",
-  }).getByRole("link", { name: /Verbal Reasoning 文字推理.*44 题.*开始练习/u });
+    name: "Full Mocks",
+  }).getByRole("link", { name: "Verbal Reasoning, 44 questions · 22 minutes. Start." });
   await expect(fullMockLink).toBeVisible();
   await fullMockLink.click();
 
   await expect(page).toHaveURL(/\/practice\/ucat-verbal-reasoning-full-mock-v1$/u);
-  await expect(page.getByRole("heading", { level: 1, name: "第 1 题" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Question 1/u })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Restoring a tidal marsh" })).toBeVisible();
-  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "已作答 0 / 44");
-  await page.getByRole("radio", { name: "选项 A" }).check();
+  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "0 of 44 answered");
+  await page.getByRole("radio", { name: "Option A" }).check();
   await page.reload();
-  await expect(page.getByRole("radio", { name: "选项 A" })).toBeChecked();
-  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "已作答 1 / 44");
+  await expect(page.getByRole("radio", { name: "Option A" })).toBeChecked();
+  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "1 of 44 answered");
   await expectNoDocumentOverflow(page);
 });

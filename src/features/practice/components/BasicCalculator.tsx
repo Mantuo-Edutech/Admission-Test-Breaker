@@ -69,26 +69,26 @@ export function BasicCalculator() {
   return (
     <div className="practice-calculator">
       <button className="practice-tool-button" type="button" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
-        <Calculator aria-hidden="true" />基础计算器
+        <Calculator aria-hidden="true" />Basic calculator
       </button>
       {open && (
-        <section className="calculator-panel" aria-label="基础计算器">
-          <header><strong>Basic calculator</strong><button type="button" aria-label="关闭计算器" onClick={() => setOpen(false)}><X aria-hidden="true" /></button></header>
+        <section className="calculator-panel" aria-label="Basic calculator">
+          <header><strong>Basic calculator</strong><button type="button" aria-label="Close calculator" onClick={() => setOpen(false)}><X aria-hidden="true" /></button></header>
           <output aria-live="polite">{display}</output>
           <div className="calculator-keypad">
             <button type="button" onClick={clear}>AC</button>
-            <button type="button" aria-label="正负号" onClick={() => setDisplay((value) => displayNumber(-Number(value)))}>+/−</button>
-            <button type="button" aria-label="百分比" onClick={() => setDisplay((value) => displayNumber(Number(value) / 100))}>%</button>
-            <button type="button" aria-label="除以" onClick={() => chooseOperation("÷")}>÷</button>
+            <button type="button" aria-label="Toggle sign" onClick={() => setDisplay((value) => displayNumber(-Number(value)))}>+/−</button>
+            <button type="button" aria-label="Percentage" onClick={() => setDisplay((value) => displayNumber(Number(value) / 100))}>%</button>
+            <button type="button" aria-label="Divide" onClick={() => chooseOperation("÷")}>÷</button>
             {["7", "8", "9"].map((digit) => <button key={digit} type="button" onClick={() => inputDigit(digit)}>{digit}</button>)}
-            <button type="button" aria-label="乘以" onClick={() => chooseOperation("×")}>×</button>
+            <button type="button" aria-label="Multiply" onClick={() => chooseOperation("×")}>×</button>
             {["4", "5", "6"].map((digit) => <button key={digit} type="button" onClick={() => inputDigit(digit)}>{digit}</button>)}
-            <button type="button" aria-label="减去" onClick={() => chooseOperation("−")}>−</button>
+            <button type="button" aria-label="Subtract" onClick={() => chooseOperation("−")}>−</button>
             {["1", "2", "3"].map((digit) => <button key={digit} type="button" onClick={() => inputDigit(digit)}>{digit}</button>)}
-            <button type="button" aria-label="加上" onClick={() => chooseOperation("+")}>+</button>
+            <button type="button" aria-label="Add" onClick={() => chooseOperation("+")}>+</button>
             <button className="calculator-key--zero" type="button" onClick={() => inputDigit("0")}>0</button>
-            <button type="button" aria-label="小数点" onClick={inputDecimal}>.</button>
-            <button className="calculator-key--equals" type="button" aria-label="等于" onClick={equals}>=</button>
+            <button type="button" aria-label="Decimal point" onClick={inputDecimal}>.</button>
+            <button className="calculator-key--equals" type="button" aria-label="Equals" onClick={equals}>=</button>
           </div>
         </section>
       )}

@@ -15,14 +15,14 @@ export function AccountBotChallenge({
   if (protection.siteKey === null) {
     return protection.required ? (
       <p className="form-error" role="alert">
-        账号安全验证尚未配置，当前暂不能提交。请联系满托。
+        Account security verification is not configured, so this form cannot be submitted. Please contact Mantou.
       </p>
     ) : null;
   }
 
   return (
     <div className="account-bot-challenge">
-      <p className="account-bot-challenge__label">安全验证</p>
+      <p className="account-bot-challenge__label">Security check <small lang="zh-CN">安全验证</small></p>
       <Turnstile
         siteKey={protection.siteKey}
         onSuccess={(token) => onTokenChange(token)}
@@ -35,7 +35,7 @@ export function AccountBotChallenge({
         options={{
           action,
           appearance: "interaction-only",
-          language: "zh-CN",
+          language: "en",
           refreshExpired: "auto",
           refreshTimeout: "auto",
           size: "flexible",
@@ -43,7 +43,7 @@ export function AccountBotChallenge({
         }}
         scriptOptions={{ crossOrigin: "anonymous" }}
       />
-      <small>由 Cloudflare Turnstile 提供防机器人验证。</small>
+      <small>Bot protection by Cloudflare Turnstile.</small>
     </div>
   );
 }
@@ -53,10 +53,10 @@ export function validateBotChallenge(
   token: string | null,
 ): string | undefined {
   if (protection.required && protection.siteKey === null) {
-    return "账号安全验证尚未配置，当前暂不能提交。请联系满托。";
+    return "Account security verification is not configured. Please contact Mantou.";
   }
   if (protection.required && token === null) {
-    return "请先完成安全验证";
+    return "Complete the security check first.";
   }
   return undefined;
 }

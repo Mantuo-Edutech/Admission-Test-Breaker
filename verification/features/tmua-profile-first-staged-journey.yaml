@@ -6,7 +6,7 @@ feature:
   userOutcome: >-
     A student can read the public TMUA overview, establish a local course
     profile, receive a deterministic course-coverage report, and then choose
-    separate diagnostic, practice, past-paper or resource pages.
+    complete-paper practice, past-paper or resource pages.
 
 run:
   packageScript: verify
@@ -15,8 +15,8 @@ claims:
   - id: separate-staged-pages
     status: verified
     statement: >-
-      Public overview, profile, coverage, dashboard, diagnostic explanation,
-      past-paper archive and resource access use separate routes, and the
+      Public overview, profile, coverage, dashboard, complete-paper archive
+      and resource access use separate routes, and the
       personalised dashboard is not shown without a preparation profile. The
       past-paper archive remains public so students can inspect the corpus
       before sharing course information.
@@ -24,7 +24,7 @@ claims:
       - src/app/routes.tsx
       - src/features/catalog/pages/TmuaHubPage.tsx
       - src/features/catalog/pages/TmuaDashboardPage.tsx
-      - src/features/catalog/pages/TmuaDiagnosticPage.tsx
+      - docs/design/ENGLISH_FIRST_PRODUCT_LANGUAGE_AND_PRACTICE_TAXONOMY.md
       - src/features/catalog/pages/TmuaPastPapersPage.tsx
       - src/features/library/pages/LearningLibraryPage.tsx
       - src/features/preparation-profile/pages/TmuaProfilePage.tsx
@@ -88,12 +88,12 @@ claims:
     status: verified
     statement: >-
       The personalised dashboard links to the complete native paper archive and
-      keeps 2023 Paper 1 as the primary one-click practice; the unreviewed
-      diagnostic and admissions registry remain honest upcoming states and do
-      not create a primary-action dead end.
+      keeps complete historical papers as the primary practice path; the
+      retired short diagnostic route redirects to that library and does not
+      create a dead end.
     artifacts:
       - src/features/catalog/pages/TmuaDashboardPage.tsx
-      - src/features/catalog/pages/TmuaDiagnosticPage.tsx
+      - src/app/routes.tsx
       - tests/app/tmua-hub-page.test.tsx
       - tests/app/front-door-css-contract.test.ts
     automatedChecks:
@@ -105,8 +105,8 @@ boundaries:
   - The current mapping covers the configured CAIE, Pearson IAL, IB Mathematics and AP mathematics units only; a course title or completed unit is curriculum evidence, not proof of mastery.
   - IB AI and calculator-led AP content are conservatively mapped as related where exact non-calculator transfer still needs checking; AP Calculus does not silently imply Algebra II, Geometry or TMUA formal-logic coverage.
   - The AP curriculum PDFs are retained only in the Git-ignored internal research workspace; the IB origin currently blocks automated local retrieval, which remains explicit in the curriculum source registry rather than being represented as a downloaded asset.
-  - Course coverage is not practical readiness and does not replace the 30-minute diagnostic.
-  - The 8-question original diagnostic form is still under independent review and cannot yet be started.
+  - Course coverage is not practical readiness and must be checked with complete-paper evidence.
+  - The 8-question diagnostic data is retained only for historical-session compatibility and is not listed to new users.
   - This is local Guest Space persistence, not production identity, server storage or multi-tenant isolation.
   - Direct practice entry is profile-gated, but the nine-card past-paper catalog is public; result routes remain recoverable from an existing submitted session.
 

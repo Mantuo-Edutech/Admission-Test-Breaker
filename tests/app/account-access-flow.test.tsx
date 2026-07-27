@@ -84,14 +84,14 @@ describe("invite-first account access flow", () => {
     render(<RouterProvider router={router} />);
 
     await user.type(
-      await screen.findByLabelText("邀请码"),
+      await screen.findByLabelText("Invitation code"),
       "MANTUO-TMUA-LOCAL-2026-ACCESS",
     );
-    await user.click(screen.getByRole("button", { name: "验证并继续" }));
+    await user.click(screen.getByRole("button", { name: "Verify and continue" }));
 
     expect(account.previewInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
     expect(pending.load()).toBe("MANTUOTMUALOCAL2026ACCESS");
-    expect(await screen.findByRole("heading", { name: "创建账号，保存完整训练记录" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Create an account\. Keep your complete record/u })).toBeInTheDocument();
   });
 
   it("preserves a deep-review return target through invite validation and registration", async () => {
@@ -107,16 +107,16 @@ describe("invite-first account access flow", () => {
     render(<RouterProvider router={router} />);
 
     await user.type(
-      await screen.findByLabelText("邀请码"),
+      await screen.findByLabelText("Invitation code"),
       "MANTUO-TMUA-LOCAL-2026-ACCESS",
     );
-    await user.click(screen.getByRole("button", { name: "验证并继续" }));
+    await user.click(screen.getByRole("button", { name: "Verify and continue" }));
     expect(pending.loadReturnTo()).toBe("/results/ses_original-result");
 
-    await user.type(await screen.findByLabelText("邮箱"), "student@example.com");
-    await user.type(screen.getByLabelText("密码"), "SecurePass1");
-    await user.type(screen.getByLabelText("再次输入密码"), "SecurePass1");
-    await user.click(screen.getByRole("button", { name: "创建账号并解锁" }));
+    await user.type(await screen.findByLabelText("Email"), "student@example.com");
+    await user.type(screen.getByLabelText("Password"), "SecurePass1");
+    await user.type(screen.getByLabelText("Confirm password"), "SecurePass1");
+    await user.click(screen.getByRole("button", { name: "Create account and unlock" }));
 
     expect(account.redeemInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
     expect(router.state.location.pathname).toBe("/results/ses_original-result");
@@ -133,10 +133,10 @@ describe("invite-first account access flow", () => {
     );
     render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { name: "创建账号，保存完整训练记录" });
-    await user.click(screen.getByRole("button", { name: "创建账号并解锁" }));
+    await screen.findByRole("heading", { name: /Create an account\. Keep your complete record/u });
+    await user.click(screen.getByRole("button", { name: "Create account and unlock" }));
 
-    expect(screen.getByText("请输入有效的邮箱地址")).toBeInTheDocument();
+    expect(screen.getByText("Enter a valid email address.")).toBeInTheDocument();
     expect(account.register).not.toHaveBeenCalled();
   });
 
@@ -150,14 +150,14 @@ describe("invite-first account access flow", () => {
     const router = createAppRouter(["/register"], appServices);
     render(<RouterProvider router={router} />);
 
-    await user.type(await screen.findByLabelText("邮箱"), "student@example.com");
-    await user.type(screen.getByLabelText("密码"), "SecurePass1");
-    await user.type(screen.getByLabelText("再次输入密码"), "SecurePass1");
-    await user.click(screen.getByRole("button", { name: "创建账号并解锁" }));
+    await user.type(await screen.findByLabelText("Email"), "student@example.com");
+    await user.type(screen.getByLabelText("Password"), "SecurePass1");
+    await user.type(screen.getByLabelText("Confirm password"), "SecurePass1");
+    await user.click(screen.getByRole("button", { name: "Create account and unlock" }));
 
     expect(account.redeemInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
     expect(pending.load()).toBeNull();
-    expect(await screen.findByRole("heading", { name: "内容已解锁" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Content unlocked" })).toBeInTheDocument();
     expect(track).toHaveBeenCalledWith({
       eventType: "invite_redeemed",
       examId: "tmua",
@@ -178,9 +178,9 @@ describe("invite-first account access flow", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "内容已解锁" })).toBeInTheDocument();
-    expect(screen.getByText(/1 项已发布资料/u)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "完成试卷并打开解析" })).toHaveAttribute(
+    expect(await screen.findByRole("heading", { name: "Content unlocked" })).toBeInTheDocument();
+    expect(screen.getByText(/1 published resource is/u)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Complete the paper and open the review" })).toHaveAttribute(
       "href",
       "/practice/tmua-specimen-p1",
     );
@@ -198,13 +198,13 @@ describe("invite-first account access flow", () => {
     const router = createAppRouter(["/register"], services(account, pending));
     render(<RouterProvider router={router} />);
 
-    await user.type(await screen.findByLabelText("邮箱"), "student@example.com");
-    await user.type(screen.getByLabelText("密码"), "SecurePass1");
-    await user.type(screen.getByLabelText("再次输入密码"), "SecurePass1");
-    await user.click(screen.getByRole("button", { name: "创建账号并解锁" }));
+    await user.type(await screen.findByLabelText("Email"), "student@example.com");
+    await user.type(screen.getByLabelText("Password"), "SecurePass1");
+    await user.type(screen.getByLabelText("Confirm password"), "SecurePass1");
+    await user.click(screen.getByRole("button", { name: "Create account and unlock" }));
 
-    expect(await screen.findByRole("heading", { name: "请确认你的邮箱" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "打开本地确认邮箱" })).toHaveAttribute(
+    expect(await screen.findByRole("heading", { name: /Confirm your email/u })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Open local confirmation inbox" })).toHaveAttribute(
       "href",
       "http://127.0.0.1:54324",
     );
@@ -219,9 +219,9 @@ describe("invite-first account access flow", () => {
     const router = createAppRouter(["/login"], services(account, pending));
     render(<RouterProvider router={router} />);
 
-    await user.type(await screen.findByLabelText("邮箱"), "student@example.com");
-    await user.type(screen.getByLabelText("密码"), "SecurePass1");
-    await user.click(screen.getByRole("button", { name: "登录" }));
+    await user.type(await screen.findByLabelText("Email"), "student@example.com");
+    await user.type(screen.getByLabelText("Password"), "SecurePass1");
+    await user.click(screen.getByRole("button", { name: "Sign in" }));
 
     expect(account.signIn).toHaveBeenCalledWith(
       "student@example.com",
@@ -229,7 +229,7 @@ describe("invite-first account access flow", () => {
       undefined,
     );
     expect(account.redeemInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
-    expect(await screen.findByRole("heading", { name: "内容已解锁" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Content unlocked" })).toBeInTheDocument();
   });
 
   it("redeems directly when an already signed-in student enters another invite", async () => {
@@ -251,10 +251,10 @@ describe("invite-first account access flow", () => {
     render(<RouterProvider router={router} />);
 
     await user.type(
-      await screen.findByLabelText("邀请码"),
+      await screen.findByLabelText("Invitation code"),
       "MANTUO-TMUA-LOCAL-2026-ACCESS",
     );
-    await user.click(screen.getByRole("button", { name: "验证并继续" }));
+    await user.click(screen.getByRole("button", { name: "Verify and continue" }));
 
     expect(account.previewInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
     expect(account.redeemInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
@@ -277,7 +277,7 @@ describe("invite-first account access flow", () => {
         packageIds: [],
       })),
       redeemInvite: vi.fn(async () => {
-        throw new Error("权限解锁失败，请稍后重试");
+        throw new Error("Access could not be unlocked. Try again later.");
       }),
     });
     const pending = new MemoryPendingInviteStore();
@@ -285,12 +285,12 @@ describe("invite-first account access flow", () => {
     render(<RouterProvider router={router} />);
 
     await user.type(
-      await screen.findByLabelText("邀请码"),
+      await screen.findByLabelText("Invitation code"),
       "MANTUO-TMUA-LOCAL-2026-ACCESS",
     );
-    await user.click(screen.getByRole("button", { name: "验证并继续" }));
+    await user.click(screen.getByRole("button", { name: "Verify and continue" }));
 
-    expect(await screen.findByRole("alert")).toHaveTextContent("权限解锁失败，请稍后重试");
+    expect(await screen.findByRole("alert")).toHaveTextContent("Access could not be unlocked. Try again later.");
     expect(pending.load()).toBeNull();
     expect(router.state.location.pathname).toBe("/access");
   });
@@ -307,11 +307,11 @@ describe("invite-first account access flow", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "解锁完成" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Access unlocked" })).toBeInTheDocument();
     expect(account.completeEmailConfirmation).toHaveBeenCalledWith("confirmation-code");
     expect(account.redeemInvite).toHaveBeenCalledWith("MANTUOTMUALOCAL2026ACCESS");
     expect(pending.load()).toBeNull();
-    expect(screen.getByRole("link", { name: "查看已解锁内容" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Open unlocked content" })).toHaveAttribute(
       "href",
       "/results/ses_email-confirmed",
     );
@@ -325,11 +325,11 @@ describe("invite-first account access flow", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "邮箱已确认" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Email confirmed" })).toBeInTheDocument();
     expect(account.completeEmailConfirmation).toHaveBeenCalledWith("cross-device-code");
     expect(account.redeemInvite).not.toHaveBeenCalled();
-    expect(screen.getByText(/当前浏览器没有待核销的邀请码/u)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "重新输入邀请码" })).toHaveAttribute(
+    expect(screen.getByText(/No pending invitation was found in this browser/u)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Enter invitation code again" })).toHaveAttribute(
       "href",
       "/access",
     );
@@ -346,9 +346,9 @@ describe("invite-first account access flow", () => {
     render(<RouterProvider router={router} />);
 
     expect(await screen.findByRole("alert")).toHaveTextContent(
-      "账号安全验证尚未配置",
+      "Account security verification is not configured",
     );
-    expect(screen.getByRole("button", { name: "登录" })).toBeDisabled();
+    expect(screen.getByRole("button", { name: "Sign in" })).toBeDisabled();
     expect(account.signIn).not.toHaveBeenCalled();
   });
 
@@ -363,9 +363,9 @@ describe("invite-first account access flow", () => {
     render(<RouterProvider router={router} />);
 
     expect(
-      await screen.findByRole("heading", { name: "尚未找到有效权限" }),
+      await screen.findByRole("heading", { name: "No valid access found" }),
     ).toBeInTheDocument();
-    expect(screen.queryByText("邀请码对应的模考与复习资料已经绑定到你的学生账号。")).not.toBeInTheDocument();
+    expect(screen.queryByText(/now linked to your learner account/u)).not.toBeInTheDocument();
   });
 
   it("reflects a real entitlement on the resources page", async () => {

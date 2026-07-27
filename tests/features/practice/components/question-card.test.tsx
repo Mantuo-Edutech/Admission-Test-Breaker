@@ -16,10 +16,10 @@ describe("practice question card", () => {
       />,
     );
 
-    expect(screen.getByRole("heading", { name: "第 1 题" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Question 1/u })).toBeInTheDocument();
     expect(screen.getByText(/Given that/)).toBeInTheDocument();
     expect(screen.getAllByRole("radio")).toHaveLength(7);
-    await user.click(screen.getByRole("radio", { name: /选项 F/ }));
+    await user.click(screen.getByRole("radio", { name: /Option F/ }));
     expect(onAnswer).toHaveBeenCalledWith("F");
     expect(screen.queryByText(/正确答案/)).not.toBeInTheDocument();
   });

@@ -195,8 +195,8 @@ function ProductCard({
 function GlobalLibraryHeader() {
   return (
     <header className="site-header learning-library-global-header page-shell">
-      <Link to="/" aria-label="满托考试练习场首页"><BrandMark /></Link>
-      <nav aria-label="Learning library navigation 资料馆导航">
+      <Link to="/" aria-label="UK Admission Test Prep home"><BrandMark /></Link>
+      <nav aria-label="Learning library navigation">
         <Link to="/"><span lang="en">Choose a test</span><small lang="zh-CN">选择考试</small></Link>
         <Link to="/library" aria-current="page"><span lang="en">Library</span><small lang="zh-CN">题库与资料</small></Link>
         <Link to="/account"><span lang="en">Account</span><small lang="zh-CN">账号</small></Link>
@@ -335,7 +335,7 @@ export function LearningLibraryPage({ examId, services }: LearningLibraryPagePro
       <WechatAccessDialog
         open={dialogOpen}
         target={selectedExamId === "tmua" ? "published-learning-materials" : "review-notes"}
-        examName={selectedExam?.name ?? "英国升学考试"}
+        examName={selectedExam?.name ?? "UK admission test"}
         onOpenChange={setDialogOpen}
         onOpened={selectedExamId === undefined ? undefined : () => void services?.funnel?.track({
           eventType: "bingbing_opened",

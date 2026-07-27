@@ -60,7 +60,7 @@ function formatDuration(timeMs: number): string {
   const totalSeconds = Math.round(timeMs / 1_000);
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 60;
-  return `${minutes}分 ${String(seconds).padStart(2, "0")}秒`;
+  return `${minutes}m ${String(seconds).padStart(2, "0")}s`;
 }
 
 const esatTopicNames = Object.fromEntries(
@@ -68,24 +68,24 @@ const esatTopicNames = Object.fromEntries(
 );
 
 const topicNames: Record<string, string> = {
-  integration: "积分",
-  quadratics: "二次函数",
-  "sequences-series": "数列与级数",
-  "geometry-optimization": "几何优化",
-  "binomial-expansion": "二项式展开",
-  "exponentials-logarithms": "指数与对数",
-  "trigonometry-geometry": "三角与几何",
-  "trigonometric-equations": "三角方程",
-  "numerical-integration": "数值积分",
-  "function-transformations": "函数变换",
-  "coordinate-geometry-circles": "圆与坐标几何",
-  "cubic-functions": "三次函数",
-  "exponentials-range": "指数函数值域",
-  "coordinate-geometry": "坐标几何",
-  "circle-sequences": "圆与数列",
-  "geometric-series-probability": "等比级数与概率",
-  "differential-equations": "微分方程",
-  "function-range": "函数值域",
+  integration: "Integration · 积分",
+  quadratics: "Quadratic functions · 二次函数",
+  "sequences-series": "Sequences and series · 数列与级数",
+  "geometry-optimization": "Geometric optimisation · 几何优化",
+  "binomial-expansion": "Binomial expansion · 二项式展开",
+  "exponentials-logarithms": "Exponentials and logarithms · 指数与对数",
+  "trigonometry-geometry": "Trigonometry and geometry · 三角与几何",
+  "trigonometric-equations": "Trigonometric equations · 三角方程",
+  "numerical-integration": "Numerical integration · 数值积分",
+  "function-transformations": "Function transformations · 函数变换",
+  "coordinate-geometry-circles": "Circles and coordinate geometry · 圆与坐标几何",
+  "cubic-functions": "Cubic functions · 三次函数",
+  "exponentials-range": "Range of exponential functions · 指数函数值域",
+  "coordinate-geometry": "Coordinate geometry · 坐标几何",
+  "circle-sequences": "Circles and sequences · 圆与数列",
+  "geometric-series-probability": "Geometric series and probability · 等比级数与概率",
+  "differential-equations": "Differential equations · 微分方程",
+  "function-range": "Range of functions · 函数值域",
   "tara-critical-main-conclusion": "Main conclusion · 主结论",
   "tara-critical-assumption": "Assumption · 必要假设",
   "tara-critical-flaw": "Flaw · 推理缺陷",
@@ -172,53 +172,53 @@ function EssayResultView({ paper, session, eventCount, restarting, onRestart }: 
       <header className="results-header page-shell">
         <BrandMark />
         <Link to={presentation.backHref} className="results-back-link">
-          <ArrowLeft aria-hidden="true" />返回 {paper.exam} 练习目录
+          <ArrowLeft aria-hidden="true" />Back to {paper.exam} practice
         </Link>
       </header>
       <main>
         <section className="results-hero page-shell">
           <div className="results-hero__copy">
             <p className="eyebrow">WRITING SUBMITTED · YOUR DRAFT</p>
-            <h1>写作已经保存并提交</h1>
-            <p>基础结果只陈述题目、字数与活跃用时，不用未经复核的模型制造分数。人工批改与 AI 解读可以在后续按学生授权接入。</p>
+            <h1>Writing saved and submitted<small lang="zh-CN">写作已经保存并提交</small></h1>
+            <p>This result records your prompt, word count and active time. It does not invent an unvalidated score. Human marking or AI interpretation can be added only with your permission.</p>
           </div>
-          <div className="score-seal" aria-label={`写作字数 ${wordCount}`}>
-            <span>本次字数</span>
+          <div className="score-seal" aria-label={`Word count ${wordCount}`}>
+            <span>Word count</span>
             <strong>{wordCount}</strong>
             <small>words</small>
           </div>
         </section>
 
-        <section className="result-metrics page-shell" aria-label="本次写作摘要">
-          <article><span>选择题目</span><strong>{selectedPrompt?.title ?? "未选择"}</strong></article>
-          <article><span>写作字数</span><strong>{wordCount} 词</strong></article>
-          <article><span>活跃页内用时</span><strong>{formatDuration(totalActiveMs)}</strong></article>
-          <article><span>学习事件</span><strong>{eventCount} 条</strong></article>
+        <section className="result-metrics page-shell" aria-label="Writing summary">
+          <article><span>Selected prompt</span><strong>{selectedPrompt?.title ?? "Not selected"}</strong></article>
+          <article><span>Word count</span><strong>{wordCount} words</strong></article>
+          <article><span>Active time</span><strong>{formatDuration(totalActiveMs)}</strong></article>
+          <article><span>Learning events</span><strong>{eventCount}</strong></article>
         </section>
 
         <section className="essay-submission-review page-shell" aria-labelledby="essay-submission-title">
           <header>
             <p className="eyebrow">SUBMITTED RESPONSE</p>
-            <h2 id="essay-submission-title">{selectedPrompt?.prompt ?? "本次没有选择写作题目"}</h2>
+            <h2 id="essay-submission-title">{selectedPrompt?.prompt ?? "No writing prompt was selected"}</h2>
           </header>
-          <div>{response.text.trim() === "" ? "本次没有写入正文。" : response.text}</div>
-          <p><ShieldCheck aria-hidden="true" />正文只保存在当前学生的学习空间；平台不会把它公开展示或用于未经授权的训练。</p>
+          <div>{response.text.trim() === "" ? "No response was entered." : response.text}</div>
+          <p><ShieldCheck aria-hidden="true" />Your response stays in your private learner space. It is never published or used for training without permission.</p>
         </section>
 
         <section className="benchmark-note page-shell">
           <div><ShieldCheck aria-hidden="true" /></div>
           <div>
             <p className="eyebrow">HONEST FEEDBACK BOUNDARY</p>
-            <h2>当前不生成自动写作分数</h2>
-            <p>正式反馈需要明确 rubric、独立教师标定、版本记录与学生授权。邀请码未来只解锁真实已发布的批改服务，不影响免费写作与正文取回。</p>
+            <h2>No automatic writing score<small lang="zh-CN">当前不生成自动写作分数</small></h2>
+            <p>Valid feedback needs a defined rubric, independent teacher calibration, versioning and your permission. Free writing and access to your response are never affected.</p>
           </div>
         </section>
 
         <section className="result-actions page-shell">
           <button className="button button--primary" type="button" disabled={restarting} onClick={onRestart}>
-            <RefreshCw aria-hidden="true" />{restarting ? "正在重置…" : "重新完成这项写作"}
+            <RefreshCw aria-hidden="true" />{restarting ? "Resetting…" : "Try this writing task again"}
           </button>
-          <p>重新开始会创建新的限时写作；已经提交的正文不会被改写。</p>
+          <p>Restarting creates a new timed response. Your submitted writing remains unchanged.</p>
         </section>
       </main>
     </div>
@@ -304,7 +304,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
       setDeepReview({
         kind: "error",
         reason: "mapping",
-        message: "本卷解析资源映射不完整，请联系满托处理。",
+          message: "The worked-explanation mapping for this paper is incomplete. Please contact Mantou.",
       });
       return;
     }
@@ -313,7 +313,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
       setDeepReview({
         kind: "error",
         reason: "mapping",
-        message: "解析资源与产品目录不一致，请联系满托处理。",
+        message: "The worked-explanation resource does not match the product catalogue. Please contact Mantou.",
       });
       return;
     }
@@ -321,7 +321,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
       setDeepReview({
         kind: "error",
         reason: "service",
-        message: "解析权限服务尚未连接，基础结果不受影响。你仍可先联系冰冰或输入已有邀请码。",
+        message: "The worked-explanation access service is not connected. Your free result is unaffected; contact Bingbing or enter an existing code.",
       });
       return;
     }
@@ -338,7 +338,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
         setDeepReview({
           kind: "error",
           reason: "payload",
-          message: "解析版本与当前试卷不一致，请联系满托处理。",
+          message: "This explanation revision does not match the current paper. Please contact Mantou.",
         });
         return;
       }
@@ -352,7 +352,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
         setDeepReview({
           kind: "error",
           reason: "service",
-          message: reason instanceof Error ? reason.message : "暂时无法读取逐题解析，请稍后重试。",
+          message: reason instanceof Error ? reason.message : "Worked explanations could not be loaded. Please try again.",
         });
       }
     });
@@ -370,7 +370,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
     return (
       <main className="practice-state-page">
         <p className="eyebrow">CALCULATING EVIDENCE</p>
-        <h1>正在整理这次练习…</h1>
+        <h1>Preparing your result…<small lang="zh-CN">正在整理这次练习</small></h1>
       </main>
     );
   }
@@ -379,9 +379,9 @@ export function ResultsPage({ services }: ResultsPageProps) {
     return (
       <main className="practice-state-page">
         <p className="eyebrow">RESULT NOT AVAILABLE</p>
-        <h1>这份结果暂时不可用</h1>
-        <p>只有当前学习空间中已经提交、且与你打开的地址一致的练习可以查看。</p>
-        <Link className="button button--primary" to="/">返回考试首页</Link>
+        <h1>Result unavailable<small lang="zh-CN">这份结果暂时不可用</small></h1>
+        <p>Only a submitted attempt from your current learner space can be opened here.</p>
+        <Link className="button button--primary" to="/">Back to tests <small lang="zh-CN">返回考试首页</small></Link>
       </main>
     );
   }
@@ -420,7 +420,7 @@ export function ResultsPage({ services }: ResultsPageProps) {
       <header className="results-header page-shell">
         <BrandMark />
         <Link to={presentation.backHref} className="results-back-link">
-          <ArrowLeft aria-hidden="true" />返回 {paper.exam} 练习目录
+          <ArrowLeft aria-hidden="true" />Back to {paper.exam} practice
         </Link>
       </header>
 
@@ -428,41 +428,41 @@ export function ResultsPage({ services }: ResultsPageProps) {
         <section className="results-hero page-shell">
           <div className="results-hero__copy">
             <p className="eyebrow">YOUR SESSION · YOUR EVIDENCE</p>
-            <h1>本次练习完成</h1>
-            <p>查看本卷得分、知识表现、做题节奏和逐题答案。</p>
+            <h1>Practice complete<small lang="zh-CN">本次练习完成</small></h1>
+            <p>Review your score, topic evidence, timing and answers.</p>
           </div>
-          <div className="score-seal" aria-label={`得分 ${results.score} / ${results.maxScore}`}>
-            <span>本次得分</span>
+          <div className="score-seal" aria-label={`Score ${results.score} / ${results.maxScore}`}>
+            <span>Score</span>
             <strong>{results.score} / {results.maxScore}</strong>
             <small>{results.percentage}%</small>
           </div>
         </section>
 
-        <section className="result-metrics page-shell" aria-label="本次练习摘要">
-          <article><span>正确</span><strong>正确 {results.correctCount}</strong></article>
-          <article><span>错误{results.partialCount > 0 ? " / 部分得分" : ""}</span><strong>{results.partialCount > 0 ? `错误 ${results.incorrectCount} · 部分 ${results.partialCount}` : `错误 ${results.incorrectCount}`}</strong></article>
-          <article><span>未作答</span><strong>未作答 {results.unansweredCount}</strong></article>
-          <article><span>活跃页内用时</span><strong>{formatDuration(results.totalActiveMs)}</strong></article>
+        <section className="result-metrics page-shell" aria-label="Practice summary">
+          <article><span>Correct</span><strong>{results.correctCount}</strong></article>
+          <article><span>Incorrect{results.partialCount > 0 ? " / partial" : ""}</span><strong>{results.partialCount > 0 ? `${results.incorrectCount} incorrect · ${results.partialCount} partial` : results.incorrectCount}</strong></article>
+          <article><span>Unanswered</span><strong>{results.unansweredCount}</strong></article>
+          <article><span>Active time</span><strong>{formatDuration(results.totalActiveMs)}</strong></article>
         </section>
 
         <section className="result-insights page-shell">
           <article className="insight-card">
             <Clock3 aria-hidden="true" />
-            <p>做题节奏</p>
-            <h2>{attemptedCount > 0 ? `完成 ${attemptedCount} 道作答` : "本次尚未作答"}</h2>
-            <span>仅统计页面可见且练习处于活动状态的时间</span>
+            <p>Pace</p>
+            <h2>{attemptedCount > 0 ? `${attemptedCount} questions attempted` : "No questions attempted"}</h2>
+            <span>Time is counted only while the paper is visible and active.</span>
           </article>
           <article className="insight-card">
             <BarChart3 aria-hidden="true" />
-            <p>知识表现</p>
-            <h2>{attemptedTopics.length > 0 ? topicNames[attemptedTopics[0]!.knowledgeTag] ?? attemptedTopics[0]!.knowledgeTag : "等待更多数据"}</h2>
-            <span>根据本卷已作答题目的知识标签汇总</span>
+            <p>Topic evidence</p>
+            <h2>{attemptedTopics.length > 0 ? topicNames[attemptedTopics[0]!.knowledgeTag] ?? attemptedTopics[0]!.knowledgeTag : "More evidence needed"}</h2>
+            <span>Summarised from the knowledge tags of attempted questions.</span>
           </article>
           <article className="insight-card">
             <DatabaseZap aria-hidden="true" />
-            <p>答题过程</p>
-            <h2>{eventCount} 次有效动作</h2>
-            <span>包括作答、修改、标记、浏览、计时与提交</span>
+            <p>Practice activity</p>
+            <h2>{eventCount} recorded actions</h2>
+            <span>Answers, changes, marks, navigation, timing and submission.</span>
           </article>
         </section>
 
@@ -470,8 +470,8 @@ export function ResultsPage({ services }: ResultsPageProps) {
           <div><ShieldCheck aria-hidden="true" /></div>
           <div>
             <p className="eyebrow">FAIR BENCHMARK</p>
-            <h2>完成更多练习后，趋势会更稳定</h2>
-            <p>当前结果只反映本卷表现；随着练习增加，你会逐步看到更可靠的知识、速度和稳定性变化。</p>
+            <h2>Trends become more reliable with more papers<small lang="zh-CN">完成更多练习后，趋势会更稳定</small></h2>
+            <p>This result describes one paper. More completed papers create better evidence about knowledge, speed and consistency.</p>
           </div>
         </section>
 
@@ -479,9 +479,9 @@ export function ResultsPage({ services }: ResultsPageProps) {
           <div className="section-heading">
             <div>
               <p className="eyebrow">ANSWER REVIEW</p>
-              <h2 id="answer-review-title">逐题回顾</h2>
+              <h2 id="answer-review-title">Answer review<small lang="zh-CN">逐题回顾</small></h2>
             </div>
-            <span>答案仅在提交后显示</span>
+            <span>Answers appear after submission.</span>
           </div>
           {deepReview.kind !== "unavailable" && (
             <aside className={`deep-review-access${deepReview.kind === "available" ? " is-entitled" : ""}`}>
@@ -540,9 +540,9 @@ export function ResultsPage({ services }: ResultsPageProps) {
             onClick={() => void restart()}
           >
             <RefreshCw aria-hidden="true" />
-            {restarting ? "正在重置…" : "重新练习这份试卷"}
+            {restarting ? "Resetting…" : "Practise this paper again"}
           </button>
-          <p>重新开始会创建一份新的练习；已经提交的结果不会被改写。</p>
+          <p>Restarting creates a new practice session. Your submitted result remains unchanged.</p>
         </section>
       </main>
       <WechatAccessDialog

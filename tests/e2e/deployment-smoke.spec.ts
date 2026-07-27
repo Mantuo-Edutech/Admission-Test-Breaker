@@ -12,7 +12,7 @@ async function expectNoDocumentOverflow(page: Page) {
 test("deployed public journey exposes five real exam spaces and account entry", async ({ page }) => {
   const homepage = await page.goto("/");
   expect(homepage?.ok()).toBe(true);
-  await expect(page.getByRole("heading", { level: 1, name: "不再为升学考试而焦虑" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "No more anxiety over admission tests." })).toBeVisible();
   await expect(page.locator("a.exam-entry")).toHaveCount(5);
   await expectNoDocumentOverflow(page);
 
@@ -29,34 +29,34 @@ test("deployed public journey exposes five real exam spaces and account entry", 
   const productRegion = page.getByRole("region", { name: /Available practice and learning resources.*可用题库与学习资料/u });
   await expect(productRegion.getByRole("article")).toHaveCount(publicContentProducts().length);
   await expect(productRegion.getByRole("heading", {
-    name: /TMUA 30 分钟起点能力诊断/u,
+    name: /TMUA 30-Minute Starting Diagnostic/u,
   })).toBeVisible();
   await expect(productRegion.getByRole("heading", {
-    name: /TMUA Early Specimen Paper 1 逐题深度解析/u,
+    name: /TMUA Early Specimen Paper 1 Worked Review/u,
   })).toBeVisible();
   await expect(productRegion.getByRole("heading", { name: /ESAT 中国学生复习笔记/u }))
     .toHaveCount(0);
-  await expect(productRegion.getByRole("heading", { name: /ESAT 数学起点复习笔记/u }))
+  await expect(productRegion.getByRole("heading", { name: /ESAT Mathematics Starting Review Notes/u }))
     .toBeVisible();
-  await expect(productRegion.getByRole("heading", { name: /ESAT 理科模块起点复习笔记/u }))
+  await expect(productRegion.getByRole("heading", { name: /ESAT Science Modules Starting Review Notes/u }))
     .toBeVisible();
-  await expect(productRegion.getByRole("heading", { name: /TARA 推理与写作起点复习笔记/u }))
+  await expect(productRegion.getByRole("heading", { name: /TARA Reasoning and Writing Starting Review Notes/u }))
     .toBeVisible();
-  await expect(productRegion.getByRole("heading", { name: /LNAT .*起点复习笔记/u }))
+  await expect(productRegion.getByRole("heading", { name: /LNAT Argument Reading and Writing Starting Review Notes/u }))
     .toBeVisible();
-  await expect(productRegion.getByRole("heading", { name: /UCAT .*起点复习笔记/u }))
+  await expect(productRegion.getByRole("heading", { name: /UCAT Four-Subtest and High-Speed Pacing Starting Review Notes/u }))
     .toBeVisible();
   await expectNoDocumentOverflow(page);
 
   const login = await page.goto("/login");
   expect(login?.ok()).toBe(true);
-  await expect(page.getByRole("heading", { level: 1, name: "继续你的训练" })).toBeVisible();
-  await expect(page.getByRole("button", { name: "登录" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Continue your preparation/u })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Sign in" })).toBeVisible();
 
   const register = await page.goto("/register");
   expect(register?.ok()).toBe(true);
-  await expect(page.getByRole("heading", { level: 1, name: "请先输入邀请码" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "验证邀请码" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Enter an invitation code first/u })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Verify invitation code" })).toBeVisible();
   await expectNoDocumentOverflow(page);
 });
 
@@ -65,12 +65,12 @@ test("deployed TMUA AP profile produces coverage and opens a native paper", asyn
 
   const archive = await page.goto("/exams/tmua/past-papers");
   expect(archive?.ok()).toBe(true);
-  await expect(page.getByRole("list", { name: "历年真题 18 papers" }).getByRole("listitem"))
+  await expect(page.getByRole("list", { name: "Historical Papers" }).getByRole("listitem"))
     .toHaveCount(18);
-  await expect(page.getByRole("link", { name: "Early specimen Paper 1，20 题，开始练习" }))
+  await expect(page.getByRole("link", { name: "Early specimen, Paper 1, 20 questions. Start." }))
     .toBeVisible();
 
-  await page.getByRole("link", { name: "Early specimen Paper 1，20 题，开始练习" }).click();
+  await page.getByRole("link", { name: "Early specimen, Paper 1, 20 questions. Start." }).click();
   await expect(page.getByRole("heading", { level: 1, name: /Complete your course profile first.*请先填写课程信息/u })).toBeVisible();
   await page.getByRole("link", { name: /填写课程信息/u }).click();
 
@@ -92,9 +92,9 @@ test("deployed TMUA AP profile produces coverage and opens a native paper", asyn
   await expect(page.getByText("AP Precalculus · AP 预备微积分", { exact: false }).first()).toBeVisible();
 
   await page.goto("/exams/tmua/past-papers");
-  await page.getByRole("link", { name: "Early specimen Paper 1，20 题，开始练习" }).click();
+  await page.getByRole("link", { name: "Early specimen, Paper 1, 20 questions. Start." }).click();
   await expect(page).toHaveURL(/\/practice\/tmua-specimen-p1$/u);
-  await expect(page.getByRole("heading", { level: 1, name: "第 1 题" })).toBeVisible();
-  await expect(page.getByLabel("已作答 0 / 20")).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Question 1/u })).toBeVisible();
+  await expect(page.getByLabel("0 of 20 answered")).toBeVisible();
   await expectNoDocumentOverflow(page);
 });

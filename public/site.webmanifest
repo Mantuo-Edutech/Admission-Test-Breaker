@@ -1,8 +1,8 @@
 {
-  "name": "满托 UK Test｜英国入学考试练习与诊断",
-  "short_name": "满托 UK Test",
-  "description": "TMUA、ESAT、TARA、LNAT 与 UCAT 的定位、在线练习和复习资料。",
-  "lang": "zh-CN",
+  "name": "UK Admission Test Prep | Mantuo 满托",
+  "short_name": "Mantuo UK Test",
+  "description": "Course coverage, complete online papers, full mocks and review notes for TMUA, ESAT, TARA, LNAT and UCAT.",
+  "lang": "en-GB",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f6f0e7",

@@ -29,11 +29,11 @@ export function InviteAccessPage({ services }: InviteAccessPageProps) {
     event.preventDefault();
     setError(null);
     if (!inviteCodeLooksValid(code)) {
-      setError("请输入完整的邀请码");
+      setError("Enter the complete invitation code.");
       return;
     }
     if (!available) {
-      setError("账号服务尚未连接，请稍后再试");
+      setError("The account service is not connected. Please try again later.");
       return;
     }
 
@@ -42,7 +42,7 @@ export function InviteAccessPage({ services }: InviteAccessPageProps) {
       const normalized = normalizeInviteCode(code);
       const preview = await account.previewInvite(normalized);
       if (!preview.valid) {
-        setError("邀请码无效、已过期或已被使用");
+        setError("This invitation code is invalid, expired or already used.");
         return;
       }
       const accessState = await account.getAccessState();
@@ -64,7 +64,7 @@ export function InviteAccessPage({ services }: InviteAccessPageProps) {
       if (returnTo !== null) pendingInvite.saveReturnTo(returnTo);
       navigate("/register", { state: returnTo === null ? null : { returnTo } });
     } catch (reason) {
-      setError(reason instanceof Error ? reason.message : "邀请码验证失败，请稍后再试");
+      setError(reason instanceof Error ? reason.message : "The invitation code could not be verified. Please try again.");
     } finally {
       setChecking(false);
     }
@@ -75,23 +75,21 @@ export function InviteAccessPage({ services }: InviteAccessPageProps) {
       <AccountPageHeader />
       <section className="account-layout page-shell">
         <div className="account-layout__intro">
-          <p className="eyebrow">内容权限</p>
-          <h1>使用邀请码解锁已发布内容</h1>
-          <p>
-            输入冰冰提供的邀请码。已登录会直接解锁；未登录则在创建或登录账号后，把邀请码中列明的已发布资料绑定到本人账号。
-          </p>
-          <ul className="account-assurances" aria-label="邀请码说明">
-            <li><KeyRound aria-hidden="true" /><span>一个账号保存一份长期练习记录</span></li>
-            <li><ShieldCheck aria-hidden="true" /><span>邀请码只解锁内容，不开放你的学习数据</span></li>
-            <li><LockKeyhole aria-hidden="true" /><span>学习数据默认只有学生本人可以访问</span></li>
+          <p className="eyebrow">CONTENT ACCESS</p>
+          <h1>Unlock published content<small lang="zh-CN">使用邀请码解锁内容</small></h1>
+          <p>Enter the invitation code provided by Bingbing. The released content will be linked to your learner account.</p>
+          <ul className="account-assurances" aria-label="Invitation code details">
+            <li><KeyRound aria-hidden="true" /><span>One account keeps one continuous learning record</span></li>
+            <li><ShieldCheck aria-hidden="true" /><span>A code unlocks content, not access to your learning data</span></li>
+            <li><LockKeyhole aria-hidden="true" /><span>Your learning data is private by default</span></li>
           </ul>
         </div>
 
         <div className="account-card">
-          <p className="account-card__step">内容权限验证</p>
-          <h2>验证邀请码</h2>
+          <p className="account-card__step">CONTENT ACCESS</p>
+          <h2>Verify invitation code <small>验证邀请码</small></h2>
           <form onSubmit={handleSubmit} noValidate>
-            <label htmlFor="invite-code">邀请码</label>
+            <label htmlFor="invite-code">Invitation code</label>
             <input
               id="invite-code"
               name="invite-code"
@@ -102,19 +100,19 @@ export function InviteAccessPage({ services }: InviteAccessPageProps) {
               onChange={(event) => setCode(event.target.value)}
               aria-describedby={error === null ? "invite-code-hint" : "invite-code-error"}
               aria-invalid={error !== null}
-              placeholder="例如 MANTUO-XXXX-…"
+              placeholder="For example, MANTUO-XXXX-…"
             />
             {error === null ? (
-              <small id="invite-code-hint">短横线和空格不会影响验证。</small>
+              <small id="invite-code-hint">Hyphens and spaces do not affect verification.</small>
             ) : (
               <p className="form-error" id="invite-code-error" role="alert">{error}</p>
             )}
             <button className="button button--primary" type="submit" disabled={checking}>
-              {checking ? "正在验证…" : "验证并继续"}
+              {checking ? "Checking…" : "Verify and continue"}
             </button>
           </form>
           <p className="account-card__alternate">
-            已经注册？ <Link to="/login" state={returnTo === null ? undefined : { returnTo }}>登录并解锁</Link>
+            Already registered? <Link to="/login" state={returnTo === null ? undefined : { returnTo }}>Sign in and unlock</Link>
           </p>
         </div>
       </section>

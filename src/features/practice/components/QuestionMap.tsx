@@ -21,19 +21,19 @@ function questionState(session: PracticeSession, questionNumber: number, answere
 
 export function QuestionMap({ session, totalQuestions, answeredQuestionIds, onSelect }: QuestionMapProps) {
   return (
-    <nav className="question-map" aria-label="题目导航">
+    <nav className="question-map" aria-label="Question navigation">
       {Array.from(
         { length: totalQuestions },
         (_, index) => index + 1,
       ).map((questionNumber) => {
         const state = questionState(session, questionNumber, answeredQuestionIds);
         const stateLabel = [
-          state.current ? "当前" : null,
-          state.answered ? "已作答" : "未作答",
-          state.marked ? "已标记" : null,
+          state.current ? "current" : null,
+          state.answered ? "answered" : "unanswered",
+          state.marked ? "marked" : null,
         ]
           .filter(Boolean)
-          .join("，");
+          .join(", ");
         return (
           <button
             key={questionNumber}
@@ -45,7 +45,7 @@ export function QuestionMap({ session, totalQuestions, answeredQuestionIds, onSe
               state.marked ? "is-marked" : "",
             ].filter(Boolean).join(" ")}
             aria-current={state.current ? "step" : undefined}
-            aria-label={`第 ${questionNumber} 题，${stateLabel}`}
+            aria-label={`Question ${questionNumber}, ${stateLabel}`}
             onClick={() => onSelect(questionNumber)}
           >
             {questionNumber}
@@ -63,7 +63,7 @@ export function MobileQuestionMap({ session, totalQuestions, answeredQuestionIds
       <Dialog.Trigger asChild>
         <button className="exam-map-trigger" type="button">
           <Grid2X2 aria-hidden="true" />
-          题目
+          Questions
         </button>
       </Dialog.Trigger>
       <Dialog.Portal>
@@ -71,12 +71,12 @@ export function MobileQuestionMap({ session, totalQuestions, answeredQuestionIds
         <Dialog.Content className="dialog-content question-map-dialog">
           <div className="dialog-heading">
             <div>
-              <Dialog.Title>题目导航</Dialog.Title>
+              <Dialog.Title>Question navigation</Dialog.Title>
               <Dialog.Description>
-                紫色为已作答，角标代表已标记。
+                Purple means answered. A corner marker means flagged.
               </Dialog.Description>
             </div>
-            <Dialog.Close className="icon-button" aria-label="关闭题目导航">
+            <Dialog.Close className="icon-button" aria-label="Close question navigation">
               <X aria-hidden="true" />
             </Dialog.Close>
           </div>

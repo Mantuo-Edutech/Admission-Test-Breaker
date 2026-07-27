@@ -51,34 +51,34 @@ export function createSupabaseBrowserClient(
 
 function accountSession(email: string | undefined): AccountSession {
   if (email === undefined || email.length === 0) {
-    throw new Error("账号邮箱不可用，请重新登录");
+    throw new Error("Your account email is unavailable. Sign in again.");
   }
   return { email };
 }
 
 export function readableAuthError(message: string): Error {
   if (/invalid login credentials/i.test(message)) {
-    return new Error("邮箱或密码不正确");
+    return new Error("The email or password is incorrect.");
   }
   if (/email not confirmed/i.test(message)) {
-    return new Error("邮箱尚未确认。请先点击确认邮件中的链接，再重新登录");
+    return new Error("Your email is not confirmed. Open the confirmation link, then sign in again.");
   }
   if (/user already registered/i.test(message)) {
-    return new Error("这个邮箱已经注册，请直接登录");
+    return new Error("This email is already registered. Sign in instead.");
   }
   if (/password/i.test(message)) {
-    return new Error("密码未达到安全要求");
+    return new Error("The password does not meet the security requirements.");
   }
   if (/email rate limit/i.test(message)) {
-    return new Error("确认邮件发送过于频繁，请稍后再试");
+    return new Error("Confirmation emails have been requested too frequently. Try again later.");
   }
   if (/captcha/i.test(message)) {
-    return new Error("安全验证无效或已经过期，请重新完成验证");
+    return new Error("The security check is invalid or has expired. Complete it again.");
   }
   if (/rate limit|too many requests/i.test(message)) {
-    return new Error("操作过于频繁，请稍后再试");
+    return new Error("Too many attempts. Try again later.");
   }
-  return new Error("账号服务暂时不可用，请稍后再试");
+  return new Error("The account service is temporarily unavailable. Try again later.");
 }
 
 class UnavailableAccountAccessService implements AccountAccessService {
@@ -86,7 +86,7 @@ class UnavailableAccountAccessService implements AccountAccessService {
   readonly botProtection = DISABLED_BOT_PROTECTION;
 
   private unavailable(): never {
-    throw new Error("账号服务尚未连接，请稍后再试");
+    throw new Error("The account service is not connected yet. Try again later.");
   }
 
   async previewInvite(): Promise<InvitePreview> { return this.unavailable(); }
@@ -114,7 +114,7 @@ export class SupabaseAccountAccessService implements AccountAccessService {
   private captchaToken(token: string | undefined): string | undefined {
     const cleanedToken = token?.trim();
     if (this.botProtection.required && !cleanedToken) {
-      throw new Error("请先完成安全验证");
+      throw new Error("Complete the security check first.");
     }
     return cleanedToken || undefined;
   }
@@ -124,7 +124,7 @@ export class SupabaseAccountAccessService implements AccountAccessService {
       body: { code },
     });
     if (error !== null) {
-      throw new Error("邀请码验证暂时不可用，请稍后再试");
+      throw new Error("Invitation-code verification is temporarily unavailable. Try again later.");
     }
 
     const response = data as InvitePreviewResponse | null;
@@ -194,7 +194,7 @@ export class SupabaseAccountAccessService implements AccountAccessService {
 
   async completePasswordRecovery(code: string): Promise<AccountSession> {
     const { data, error } = await this.client.auth.exchangeCodeForSession(code);
-    if (error !== null) throw new Error("重置链接无效或已经过期，请重新申请");
+    if (error !== null) throw new Error("This reset link is invalid or has expired. Request a new one.");
     return accountSession(data.user.email);
   }
 
@@ -205,16 +205,16 @@ export class SupabaseAccountAccessService implements AccountAccessService {
 
   async signOut(): Promise<void> {
     const { error } = await this.client.auth.signOut();
-    if (error !== null) throw new Error("暂时无法退出登录，请稍后重试");
+    if (error !== null) throw new Error("Sign-out is temporarily unavailable. Try again later.");
   }
 
   async redeemInvite(code: string): Promise<RedeemedAccess> {
     const { data, error } = await this.client.rpc("redeem_invite", { p_code: code });
     if (error !== null) {
       if (/exhausted|invalid/i.test(error.message)) {
-        throw new Error("邀请码无效、已过期或已被使用");
+        throw new Error("This invitation code is invalid, expired or already used.");
       }
-      throw new Error("权限解锁失败，请稍后重试");
+      throw new Error("Access could not be unlocked. Try again later.");
     }
     const rows = (data ?? []) as EntitlementRow[];
     return { packageIds: rows.map((row) => row.package_id) };
@@ -229,7 +229,7 @@ export class SupabaseAccountAccessService implements AccountAccessService {
     const { data, error } = await this.client
       .from("user_entitlements")
       .select("package_id, expires_at, revoked_at");
-    if (error !== null) throw new Error("暂时无法读取账号权限");
+    if (error !== null) throw new Error("Account access cannot be loaded right now.");
 
     const now = Date.now();
     const rows = (data ?? []) as EntitlementRow[];

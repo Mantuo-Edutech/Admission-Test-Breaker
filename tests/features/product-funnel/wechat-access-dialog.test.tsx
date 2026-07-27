@@ -16,7 +16,7 @@ describe("Bingbing access funnel boundary", () => {
       />,
     );
 
-    expect(screen.getByRole("dialog", { name: "添加冰冰，获取完整版复习笔记" })).toBeInTheDocument();
+    expect(screen.getByRole("dialog", { name: /Add Bingbing to access complete review notes/u })).toBeInTheDocument();
     expect(onOpened).toHaveBeenCalledTimes(1);
 
     rerender(

@@ -90,8 +90,8 @@ function BlockContent({ block }: { block: QuestionBlock }) {
       <section className="source-pdf-question" aria-label={block.title}>
         <iframe src={source} title={block.title} loading="lazy" />
         <p>
-          当前定位到原卷第 {block.page} 页。
-          <a href={source} target="_blank" rel="noreferrer">在新窗口打开完整试卷</a>
+          Source page {block.page}.
+          <a href={source} target="_blank" rel="noreferrer">Open source page in a new window</a>
         </p>
       </section>
     );

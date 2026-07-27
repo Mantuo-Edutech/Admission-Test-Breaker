@@ -30,23 +30,23 @@ test("ESAT Mathematics 2 full mock opens natively and persists at the current vi
   expect(libraryResponse?.ok()).toBe(true);
   await expect(page.getByRole("heading", {
     level: 2,
-    name: /完整模考.*Full-length practice/u,
+    name: /Full Mocks/u,
   })).toBeVisible();
-  await expect(page.getByRole("link", { name: /Mathematics 2.*27 题.*开始完整模考/u })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Mathematics 2 full mock, 27 questions, 40 minutes. Start." })).toBeVisible();
 
-  await page.getByRole("link", { name: /Mathematics 2.*开始完整模考/u }).click();
+  await page.getByRole("link", { name: "Mathematics 2 full mock, 27 questions, 40 minutes. Start." }).click();
   await expect(page).toHaveURL(/\/practice\/esat-mathematics-2-full-mock-v1$/u);
-  await expect(page.getByRole("heading", { level: 1, name: "第 1 题" })).toBeVisible();
-  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "已作答 0 / 27");
-  await expect(page.getByText(/MATHEMATICS 2.*ORIGINAL FULL-LENGTH MOCK.*满托原创完整模考/u)).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Question 1/u })).toBeVisible();
+  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "0 of 27 answered");
+  await expect(page.getByText(/MATHEMATICS 2.*ORIGINAL FULL-LENGTH MOCK/u)).toBeVisible();
 
-  await page.getByRole("radio", { name: "选项 B" }).check();
-  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "已作答 1 / 27");
+  await page.getByRole("radio", { name: "Option B" }).check();
+  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "1 of 27 answered");
   await expectNoDocumentOverflow(page);
 
   await page.reload();
-  await expect(page.getByRole("heading", { level: 1, name: "第 1 题" })).toBeVisible();
-  await expect(page.getByRole("radio", { name: "选项 B" })).toBeChecked();
-  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "已作答 1 / 27");
+  await expect(page.getByRole("heading", { level: 1, name: /Question 1/u })).toBeVisible();
+  await expect(page.getByRole("radio", { name: "Option B" })).toBeChecked();
+  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "1 of 27 answered");
   await expectNoDocumentOverflow(page);
 });

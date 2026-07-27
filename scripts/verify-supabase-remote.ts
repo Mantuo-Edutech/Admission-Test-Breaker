@@ -1,7 +1,7 @@
 import { createPracticeSession } from "../src/features/practice/domain/session.js";
 import { parsePracticeResults } from "../src/features/practice/delivery/domain.js";
 import {
-  PUBLISHED_PRACTICE_REVISIONS,
+  CURRENT_PUBLISHED_PRACTICE_REVISIONS,
 } from "../src/features/practice/content/published-revisions.js";
 import { verifyRemotePracticeCatalog } from "../src/platform/remote-practice-catalog-contract.js";
 
@@ -90,7 +90,7 @@ try {
   const secondAuth = { ...publicHeaders, Authorization: `Bearer ${(await createControlledSession(secondEmail)).access_token}` };
 
   const deliveredCatalog = await verifyRemotePracticeCatalog(
-    PUBLISHED_PRACTICE_REVISIONS.papers,
+    CURRENT_PUBLISHED_PRACTICE_REVISIONS,
     (expected) => request<unknown>("/rest/v1/rpc/get_practice_paper", {
       method: "POST",
       headers: publicHeaders,

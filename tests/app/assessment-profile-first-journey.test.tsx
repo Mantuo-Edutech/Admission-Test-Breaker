@@ -49,18 +49,18 @@ describe("exam-aware profile-first practice journey", () => {
     await user.click(await screen.findByRole("radio", { name: /A-Level \/ IAL/u }));
     await user.click(screen.getByRole("radio", { name: "Year 12" }));
     await user.click(screen.getByRole("checkbox", { name: "Mathematics数学" }));
-    await user.click(screen.getByRole("radio", { name: "看过或做过少量样题" }));
-    await user.click(screen.getByRole("radio", { name: "每周 2–4 小时" }));
-    await user.click(screen.getByRole("button", { name: "保存并查看 UCAT 起点定位" }));
+    await user.click(screen.getByRole("radio", { name: "A few sample questions" }));
+    await user.click(screen.getByRole("radio", { name: "2–4 hours per week" }));
+    await user.click(screen.getByRole("button", { name: "Save and view UCAT coverage" }));
 
     expect(router.state.location.pathname).toBe("/exams/ucat/preparation");
-    expect(await screen.findByRole("heading", { name: /你的 UCAT 起点定位/u })).toBeInTheDocument();
-    expect(screen.getByText("12–19 小时")).toBeInTheDocument();
-    expect(screen.getByText("集合、条件与演绎逻辑 · Sets, conditions and deduction")).toBeInTheDocument();
-    expect(screen.getAllByText("已有课程可迁移 · Transferable foundation")).toHaveLength(2);
-    expect(screen.getByText("先检查基础缺口 · Foundation check")).toBeInTheDocument();
-    expect(screen.getByText("课程通常不覆盖 · Exam-specific")).toBeInTheDocument();
-    expect(screen.getAllByRole("link", { name: /进入 UCAT 免费在线练习/u })[0]).toHaveAttribute(
+    expect(await screen.findByRole("heading", { name: /Your UCAT starting point/u })).toBeInTheDocument();
+    expect(screen.getByText("12–19 hours")).toBeInTheDocument();
+    expect(screen.getByText("Sets, conditions and deduction")).toBeInTheDocument();
+    expect(screen.getAllByText("Transferable foundation · 已有课程可迁移")).toHaveLength(2);
+    expect(screen.getByText("Foundation check · 先检查基础缺口")).toBeInTheDocument();
+    expect(screen.getByText("Exam-specific · 课程通常不覆盖")).toBeInTheDocument();
+    expect(screen.getAllByRole("link", { name: /Open UCAT online practice/u })[0]).toHaveAttribute(
       "href",
       "/exams/ucat/past-papers",
     );

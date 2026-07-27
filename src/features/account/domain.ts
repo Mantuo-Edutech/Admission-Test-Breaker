@@ -83,21 +83,21 @@ export function validateRegistration(
   const email = input.email.trim();
 
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    errors.email = "请输入有效的邮箱地址";
+    errors.email = "Enter a valid email address.";
   }
   const passwordError = validatePassword(input.password);
   if (passwordError !== undefined) errors.password = passwordError;
   if (input.passwordConfirmation !== input.password) {
-    errors.passwordConfirmation = "两次输入的密码不一致";
+    errors.passwordConfirmation = "The passwords do not match.";
   }
 
   return errors;
 }
 
 export function validatePassword(password: string): string | undefined {
-  if (password.length < 10) return "密码至少需要 10 个字符";
+  if (password.length < 10) return "Use at least 10 characters.";
   if (!/[a-z]/.test(password) || !/[A-Z]/.test(password) || !/[0-9]/.test(password)) {
-    return "密码需要同时包含大写字母、小写字母和数字";
+    return "Include an uppercase letter, a lowercase letter and a number.";
   }
   return undefined;
 }

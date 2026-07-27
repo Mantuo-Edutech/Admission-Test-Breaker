@@ -31,9 +31,9 @@ export function QuestionCard({
       <div className="question-card__heading">
         <div>
           <p>{examName} · {sectionLabel.toUpperCase()}</p>
-          <h1 id={`question-${question.number}`}>第 {question.number} 题</h1>
+          <h1 id={`question-${question.number}`}>Question {question.number}<small lang="zh-CN">第 {question.number} 题</small></h1>
         </div>
-        <span>{isOrdinal ? "情境判断等级题" : passage === undefined ? "单项选择" : isDataSet ? "数据材料选择题" : "文章组选择题"}</span>
+        <span>{isOrdinal ? "Situational judgement" : passage === undefined ? "Single choice" : isDataSet ? "Data set" : "Passage questions"}</span>
       </div>
 
       <div className="question-card__content">
@@ -50,7 +50,7 @@ export function QuestionCard({
           </div>
 
           <fieldset className={`answer-list${labelsOnly ? " answer-list--labels-only" : ""}`}>
-            <legend className="sr-only">请选择第 {question.number} 题的答案</legend>
+            <legend className="sr-only">Choose an answer for Question {question.number}</legend>
             {question.options.map((option) => (
               <AnswerChoice
                 key={option.label}
@@ -64,7 +64,7 @@ export function QuestionCard({
           </fieldset>
           {feedbackHref !== undefined && (
             <footer className="question-card__feedback">
-              <Link to={feedbackHref}>报告这道题的问题 · Report this question</Link>
+              <Link to={feedbackHref}>Report this question <small>报告题目问题</small></Link>
             </footer>
           )}
         </div>

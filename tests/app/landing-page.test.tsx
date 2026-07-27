@@ -51,18 +51,18 @@ describe("Mantou multi-exam homepage", () => {
     expect(
       await screen.findByRole("heading", {
         level: 1,
-        name: "不再为升学考试而焦虑",
+        name: "No more anxiety over admission tests.",
       }),
     ).toBeInTheDocument();
-    expect(screen.getByText("满托考试练习场")).toBeInTheDocument();
-    expect(screen.getByText("Admission Test Breaker")).toBeInTheDocument();
+    expect(screen.getByText("UK Admission Test Prep")).toBeInTheDocument();
+    expect(screen.getByText("不再为升学考试而焦虑")).toBeInTheDocument();
     expect(
       screen.getByText(
-        "选择考试，填写课程信息，查看需要补充的知识，然后完成诊断与真题练习。",
+        "Choose your test, map your course coverage and practise full papers online.",
       ),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "你正在准备哪一项考试？" }),
+      screen.getByRole("heading", { name: "Which admission test are you preparing for?" }),
     ).toBeInTheDocument();
   });
 
@@ -70,7 +70,7 @@ describe("Mantou multi-exam homepage", () => {
     const router = createAppRouter(["/"], services(new TrackingStore()));
     render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { name: "不再为升学考试而焦虑" });
+    await screen.findByRole("heading", { name: "No more anxiety over admission tests." });
     for (const [name, href] of [
       ["TMUA", "/exams/tmua"],
       ["ESAT", "/exams/esat"],
@@ -84,11 +84,11 @@ describe("Mantou multi-exam homepage", () => {
       );
     }
     for (const description of [
-      "数学、计算机、经济及相关量化专业",
-      "工程、自然科学、化学与生命科学相关专业",
-      "人文、社会科学及部分跨学科专业",
-      "法学及相关本科专业",
-      "医学、牙科及相关临床专业",
+      "Mathematics, Computer Science, Economics and quantitative courses",
+      "Engineering, Natural Sciences, Chemical and Life Sciences",
+      "Humanities, Social Sciences and selected interdisciplinary courses",
+      "Law and related undergraduate courses",
+      "Medicine, Dentistry and related clinical courses",
     ]) {
       expect(screen.getByText(description)).toBeInTheDocument();
     }
@@ -99,10 +99,10 @@ describe("Mantou multi-exam homepage", () => {
     const router = createAppRouter(["/"], services(new TrackingStore()));
     render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { name: "你正在准备哪一项考试？" });
-    const navigation = screen.getByRole("navigation", { name: "首页导航" });
-    expect(navigation).toHaveTextContent("账号");
-    expect(screen.getByRole("link", { name: "账号" })).toHaveAttribute("href", "/account");
+    await screen.findByRole("heading", { name: "Which admission test are you preparing for?" });
+    const navigation = screen.getByRole("navigation", { name: "Home navigation" });
+    expect(navigation).toHaveTextContent("Account");
+    expect(screen.getByRole("link", { name: /Account/u })).toHaveAttribute("href", "/account");
     expect(screen.queryByRole("link", { name: "题库与资料" })).not.toBeInTheDocument();
     expect(screen.queryByText("第一步")).not.toBeInTheDocument();
     expect(screen.queryByText("接下来")).not.toBeInTheDocument();
@@ -112,7 +112,7 @@ describe("Mantou multi-exam homepage", () => {
   it("removes the old abstract and single-paper homepage copy", async () => {
     const router = createAppRouter(["/"], services(new TrackingStore()));
     render(<RouterProvider router={router} />);
-    await screen.findByRole("heading", { name: "不再为升学考试而焦虑" });
+    await screen.findByRole("heading", { name: "No more anxiety over admission tests." });
 
     for (const oldCopy of [
       "把焦虑，拆成每一道题。",
@@ -129,7 +129,7 @@ describe("Mantou multi-exam homepage", () => {
     const store = new TrackingStore();
     const router = createAppRouter(["/"], services(store));
     render(<RouterProvider router={router} />);
-    await screen.findByRole("heading", { name: "不再为升学考试而焦虑" });
+    await screen.findByRole("heading", { name: "No more anxiety over admission tests." });
 
     expect(store.loadCalls).toBe(0);
     expect(store.saveCalls).toBe(0);
@@ -147,11 +147,11 @@ describe("Mantou multi-exam homepage", () => {
     document.body.scrollTop = 640;
 
     await user.click(
-      await screen.findByRole("link", { name: /TMUA.*数学、计算机、经济/u }),
+      await screen.findByRole("link", { name: /TMUA.*Mathematics, Computer Science/u }),
     );
     expect(router.state.location.pathname).toBe("/exams/tmua");
     expect(
-      await screen.findByRole("heading", { name: /先了解起点.*再开始练习/u }),
+      await screen.findByRole("heading", { name: /Know your starting point.*Practise with purpose/u }),
     ).toBeInTheDocument();
     expect(document.documentElement.scrollTop).toBe(0);
     expect(document.body.scrollTop).toBe(0);

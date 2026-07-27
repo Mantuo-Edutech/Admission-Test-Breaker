@@ -63,12 +63,12 @@ describe("student feedback page", () => {
     ], services(true, feedback));
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: /把问题说具体/u })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Tell us exactly what happened/u })).toBeInTheDocument();
     expect(screen.getByText("TMUA · tmua-specimen-p1-q01")).toBeInTheDocument();
-    expect(await screen.findByRole("radio", { name: /题目或讲解有误/u })).toBeChecked();
+    expect(await screen.findByRole("radio", { name: /Content error/u })).toBeChecked();
 
-    await user.type(screen.getByLabelText(/建议写清/u), "这道题的 B 选项公式少了负号，请依据原始资料核对。");
-    await user.click(screen.getByRole("button", { name: "提交站内反馈" }));
+    await user.type(screen.getByLabelText(/Include: what you did/u), "这道题的 B 选项公式少了负号，请依据原始资料核对。");
+    await user.click(screen.getByRole("button", { name: "Submit feedback" }));
 
     expect(feedback.submit).toHaveBeenCalledWith({
       category: "content_error",
@@ -79,16 +79,16 @@ describe("student feedback page", () => {
       message: "这道题的 B 选项公式少了负号，请依据原始资料核对。",
     });
     expect(await screen.findByRole("heading", { name: "FB-12345678" })).toBeInTheDocument();
-    expect(screen.getByText(/重复提交同一问题不会创建多个工单/u)).toBeInTheDocument();
+    expect(screen.getByText(/Repeating the same report will not create duplicate tickets/u)).toBeInTheDocument();
   });
 
   it("requires login for private tracking and keeps Bingbing as an explicit fallback", async () => {
     const router = createAppRouter(["/feedback?exam=esat&from=%2Fexams%2Fesat"], services(false, feedbackService()));
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "登录后提交并追踪处理状态" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "登录并继续" })).toHaveAttribute("href", "/login");
-    expect(screen.getByAltText("冰冰老师微信二维码")).toBeInTheDocument();
-    expect(screen.getByText(/不会被自动附加/u)).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Sign in to submit and track feedback" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Sign in and continue" })).toHaveAttribute("href", "/login");
+    expect(screen.getByAltText("Bingbing's WeChat QR code")).toBeInTheDocument();
+    expect(screen.getByText(/are not attached automatically/u)).toBeInTheDocument();
   });
 });

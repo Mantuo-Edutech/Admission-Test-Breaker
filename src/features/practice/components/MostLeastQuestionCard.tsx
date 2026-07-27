@@ -39,9 +39,9 @@ export function MostLeastQuestionCard({
       <div className="question-card__heading">
         <div>
           <p>{examName} · {sectionLabel.toUpperCase()}</p>
-          <h1 id={`question-${question.number}`}>第 {question.number} 题</h1>
+          <h1 id={`question-${question.number}`}>Question {question.number}<small lang="zh-CN">第 {question.number} 题</small></h1>
         </div>
-        <span>最合适 / 最不合适</span>
+        <span>Most / least appropriate</span>
       </div>
       <div className="question-card__content">
         {passage !== undefined && (
@@ -53,9 +53,9 @@ export function MostLeastQuestionCard({
         )}
         <div className="question-card__response">
           <div className="question-card__prompt"><MathContent blocks={question.prompt} /></div>
-          <div className="most-least-response" role="group" aria-label="选择最合适和最不合适的行动">
+          <div className="most-least-response" role="group" aria-label="Choose the most and least appropriate action">
             <div className="most-least-response__heading" aria-hidden="true">
-              <span>行动</span><span>最合适</span><span>最不合适</span>
+              <span>Action</span><span>Most</span><span>Least</span>
             </div>
             {question.options.map((option) => (
               <div className="most-least-response__row" key={option.label}>
@@ -69,7 +69,7 @@ export function MostLeastQuestionCard({
                       checked={answer[kind] === option.label}
                       onChange={() => choose(kind, option.label)}
                     />
-                    <span>{kind === "most" ? "最合适" : "最不合适"}</span>
+                    <span>{kind === "most" ? "Most" : "Least"}</span>
                   </label>
                 ))}
               </div>
@@ -77,7 +77,7 @@ export function MostLeastQuestionCard({
           </div>
           {feedbackHref !== undefined && (
             <footer className="question-card__feedback">
-              <Link to={feedbackHref}>报告这道题的问题 · Report this question</Link>
+              <Link to={feedbackHref}>Report this question <small>报告题目问题</small></Link>
             </footer>
           )}
         </div>

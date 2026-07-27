@@ -38,7 +38,7 @@ export function PasswordResetPage({ services }: { readonly services: AppServices
       return;
     }
     if (password !== confirmation) {
-      setError("两次输入的密码不一致");
+      setError("The passwords do not match");
       return;
     }
     const account = services.accountAccess;
@@ -49,7 +49,7 @@ export function PasswordResetPage({ services }: { readonly services: AppServices
       await account.updatePassword(password);
       navigate("/account");
     } catch (reason) {
-      setError(reason instanceof Error ? reason.message : "暂时无法更新密码");
+      setError(reason instanceof Error ? reason.message : "Password could not be updated");
       setSubmitting(false);
     }
   }
@@ -58,35 +58,35 @@ export function PasswordResetPage({ services }: { readonly services: AppServices
     <main className="account-page">
       <AccountPageHeader />
       {state === "checking" && (
-        <section className="account-message page-shell"><LoaderCircle className="account-spinner" aria-hidden="true" /><h1>正在验证重置链接…</h1></section>
+        <section className="account-message page-shell"><LoaderCircle className="account-spinner" aria-hidden="true" /><h1>Checking reset link…<small lang="zh-CN">正在验证重置链接</small></h1></section>
       )}
       {state === "invalid" && (
         <section className="account-message page-shell">
           <TriangleAlert aria-hidden="true" />
-          <p className="eyebrow">密码重置</p>
-          <h1>链接无效或已经过期</h1>
-          <p>重新申请一封重置邮件，再使用最新邮件中的链接。</p>
-          <Link className="button button--primary" to="/forgot-password">重新申请</Link>
+          <p className="eyebrow">PASSWORD RESET</p>
+          <h1>Link invalid or expired<small lang="zh-CN">链接无效或已经过期</small></h1>
+          <p>Request a new reset email and use the latest link.</p>
+          <Link className="button button--primary" to="/forgot-password">Request again</Link>
         </section>
       )}
       {state === "ready" && (
         <section className="account-layout account-layout--login page-shell">
           <div className="account-layout__intro">
             <CheckCircle2 aria-hidden="true" />
-            <p className="eyebrow">链接已验证</p>
-            <h1>设置新密码</h1>
-            <p>新密码保存后，当前设备会进入你的账号页面。</p>
+            <p className="eyebrow">LINK VERIFIED</p>
+            <h1>Set a new password<small lang="zh-CN">设置新密码</small></h1>
+            <p>After saving, this device opens your account page.</p>
           </div>
           <div className="account-card">
-            <h2>新密码</h2>
+            <h2>New password<small lang="zh-CN">新密码</small></h2>
             <form onSubmit={submit} noValidate>
-              <label htmlFor="new-password">新密码</label>
+              <label htmlFor="new-password">New password</label>
               <input id="new-password" type="password" autoComplete="new-password" value={password} onChange={(event) => setPassword(event.target.value)} />
-              <small>至少 10 位，包含大写字母、小写字母和数字。</small>
-              <label htmlFor="new-password-confirmation">再次输入新密码</label>
+              <small>At least 10 characters with uppercase, lowercase and a number.</small>
+              <label htmlFor="new-password-confirmation">Confirm new password</label>
               <input id="new-password-confirmation" type="password" autoComplete="new-password" value={confirmation} onChange={(event) => setConfirmation(event.target.value)} />
               {error && <p className="form-error" role="alert">{error}</p>}
-              <button className="button button--primary" type="submit" disabled={submitting}>{submitting ? "正在保存…" : "保存新密码"}</button>
+              <button className="button button--primary" type="submit" disabled={submitting}>{submitting ? "Saving…" : "Save new password"}</button>
             </form>
           </div>
         </section>

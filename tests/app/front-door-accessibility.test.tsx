@@ -50,9 +50,9 @@ describe("public exam front-door accessibility", () => {
     const router = createAppRouter(["/"], services);
     const { container } = render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { name: "不再为升学考试而焦虑" });
+    await screen.findByRole("heading", { name: /No more anxiety over admission tests/u });
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
-    const selector = screen.getByRole("region", { name: "你正在准备哪一项考试？" });
+    const selector = screen.getByRole("region", { name: "Which admission test are you preparing for?" });
     const links = within(selector).getAllByRole("link");
     expect(links).toHaveLength(5);
     links.forEach((link) => {
@@ -68,14 +68,14 @@ describe("public exam front-door accessibility", () => {
 
     await screen.findByRole("heading", {
       level: 1,
-      name: /先选专业.*COURSE-TO-MODULE PLANNER/u,
+      name: /Choose your programme.*Find your modules/u,
     });
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
     expect(screen.queryByText("建设中")).not.toBeInTheDocument();
-    expect(screen.getByLabelText("学校")).toBeInTheDocument();
-    expect(screen.getByLabelText("专业")).toBeInTheDocument();
+    expect(screen.getByLabelText(/University/u)).toBeInTheDocument();
+    expect(screen.getByLabelText(/Course/u)).toBeInTheDocument();
     expect(container.querySelector('a[href^="http"]')).not.toBeInTheDocument();
-    expect(screen.queryByRole("link", { name: /开始|训练/u })).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /Start practice/u })).not.toBeInTheDocument();
     expectNamedControlsAndImages(container);
   });
 
@@ -83,15 +83,15 @@ describe("public exam front-door accessibility", () => {
     const router = createAppRouter(["/exams/tmua"], services);
     const { container } = render(<RouterProvider router={router} />);
 
-    await screen.findByRole("heading", { level: 1, name: /先了解起点.*再开始练习/u });
+    await screen.findByRole("heading", { level: 1, name: /Know your starting point.*Practise with purpose/u });
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
-    const journey = screen.getByRole("list", { name: "TMUA 分阶段准备路径" });
+    const journey = screen.getByRole("list", { name: "Four-step TMUA preparation path" });
     const steps = within(journey).getAllByRole("listitem");
     expect(steps).toHaveLength(4);
     expect(
-      screen.getByRole("link", { name: /填写课程信息/u }),
+      screen.getByRole("link", { name: /Add course profile/u }),
     ).toHaveAttribute("href", "/exams/tmua/profile");
-    expect(screen.queryByRole("table", { name: "TMUA 历年真题资料馆" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("table", { name: /TMUA historical papers/u })).not.toBeInTheDocument();
     expectNamedControlsAndImages(container);
   });
 });

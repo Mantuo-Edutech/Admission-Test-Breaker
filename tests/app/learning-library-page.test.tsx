@@ -40,7 +40,7 @@ describe("task-oriented notes and global product catalogue", () => {
 
     await user.click(screen.getAllByRole("button", { name: /Get advanced notes.*获取深度笔记/u })[0]!);
     expect(await screen.findByRole("dialog")).toBeInTheDocument();
-    expect(screen.getByRole("img", { name: "冰冰老师微信二维码" })).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: "Bingbing's WeChat QR code" })).toBeInTheDocument();
   });
 
   it("shows only ESAT notes on the ESAT notes module", async () => {

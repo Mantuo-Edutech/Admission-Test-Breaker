@@ -18,9 +18,9 @@ describe("published practice revisions", () => {
     expect(new Set(PUBLISHED_PRACTICE_REVISIONS.papers.map((paper) => paper.paperId)).size).toBe(papers.length);
 
     for (const paper of papers) {
-      const record = PUBLISHED_PRACTICE_REVISIONS.papers.find(
-        (candidate) => candidate.paperId === paper.id,
-      );
+      const record = PUBLISHED_PRACTICE_REVISIONS.papers
+        .filter((candidate) => candidate.paperId === paper.id)
+        .sort((left, right) => right.revision - left.revision)[0];
       expect(record, paper.id).toBeDefined();
       expect(record).toMatchObject({
         exam: paper.exam,

@@ -32,21 +32,21 @@ const taraProfile = {
 };
 
 async function expectNativeQuestion(page: Page, total: number) {
-  await expect(page.getByRole("heading", { level: 1, name: "第 1 题" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Question 1/u })).toBeVisible();
   await expect(page.locator(".exam-header__progress")).toHaveAttribute(
     "aria-label",
-    `已作答 0 / ${total}`,
+    `0 of ${total} answered`,
   );
   const image = page.locator(".question-figure img").first();
   await expect(image).toBeVisible();
   await expect(image).toHaveAttribute("src", /\/questions\/.+\/q01\.webp$/u);
   await expect.poll(async () => image.evaluate((element) => (element as HTMLImageElement).naturalWidth))
     .toBeGreaterThan(0);
-  await expect(page.getByRole("radio", { name: "选项 A" })).toBeVisible();
-  await page.getByRole("radio", { name: "选项 A" }).check();
+  await expect(page.getByRole("radio", { name: "Option A" })).toBeVisible();
+  await page.getByRole("radio", { name: "Option A" }).check();
   await expect(page.locator(".exam-header__progress")).toHaveAttribute(
     "aria-label",
-    `已作答 1 / ${total}`,
+    `1 of ${total} answered`,
   );
   const overflow = await page.evaluate(() => ({
     clientWidth: document.documentElement.clientWidth,
@@ -64,9 +64,9 @@ test("ESAT historic module practice opens as a native online question", async ({
   }, esatPlan);
 
   await page.goto("/exams/esat/past-papers");
-  await expect(page.getByText("12 套主练习")).toBeVisible();
+  await expect(page.getByText("6 historical module papers")).toBeVisible();
   const link = page.getByRole("link", {
-    name: /NSAA 2023.*数学模块练习.*20 题.*开始练习/u,
+    name: "NSAA 2023, Mathematics 1, 20 questions. Start.",
   });
   await expect(link).toBeVisible();
   await link.click();
@@ -87,9 +87,9 @@ test("TARA historic reasoning practice opens as a native online question", async
   }, { storedGuestSpace: taraGuestSpace, storedProfile: taraProfile });
 
   await page.goto("/exams/tara/past-papers");
-  await expect(page.getByText("7 套主练习")).toBeVisible();
+  await expect(page.getByText("4 historical papers")).toBeVisible();
   const link = page.getByRole("link", {
-    name: /TSA 2023.*批判思维与问题解决.*50 题.*开始练习/u,
+    name: "TSA 2023, Critical Thinking and Problem Solving, 50 questions. Start.",
   });
   await expect(link).toBeVisible();
   await link.click();

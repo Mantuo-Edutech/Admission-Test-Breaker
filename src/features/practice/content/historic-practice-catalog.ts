@@ -57,3 +57,13 @@ export const HISTORIC_PRACTICE_PAPER_IDS = new Set(
 export function historicPracticeForExam(exam: "esat" | "tara"): readonly HistoricPracticeCatalogEntry[] {
   return HISTORIC_PRACTICE_CATALOG.filter((entry) => entry.exam === exam);
 }
+
+/**
+ * Public libraries only expose historical material that maps cleanly to the
+ * current assessment structure. Deprecated mixed archives remain readable so
+ * that an existing learning record never breaks, but are not offered as a new
+ * practice choice.
+ */
+export function publicHistoricPracticeForExam(exam: "esat" | "tara"): readonly HistoricPracticeCatalogEntry[] {
+  return historicPracticeForExam(exam).filter((entry) => entry.moduleId !== "engineering-mixed");
+}

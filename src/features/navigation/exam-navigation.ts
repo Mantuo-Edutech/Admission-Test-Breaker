@@ -10,6 +10,7 @@ export type ExamPrimaryModuleId =
 export interface ExamPrimaryNavigationItem {
   readonly id: ExamPrimaryModuleId;
   readonly label: string;
+  readonly labelZh: string;
   readonly to: string;
 }
 
@@ -22,11 +23,11 @@ export function primaryNavigationForExam(
   exam: ExamCatalogEntry,
 ): readonly ExamPrimaryNavigationItem[] {
   return [
-    { id: "overview", label: `${exam.name} 概览`, to: exam.href },
-    { id: "coverage", label: "知识覆盖", to: coverageRoute(exam) },
-    { id: "practice", label: "在线练习", to: `${exam.href}/past-papers` },
-    { id: "notes", label: "复习笔记", to: `${exam.href}/resources` },
-    { id: "coaching", label: "名师指点", to: `${exam.href}/coaching` },
+    { id: "overview", label: `${exam.name} Overview`, labelZh: "概览", to: exam.href },
+    { id: "coverage", label: "Course Coverage", labelZh: "知识覆盖", to: coverageRoute(exam) },
+    { id: "practice", label: "Practice", labelZh: "在线练习", to: `${exam.href}/past-papers` },
+    { id: "notes", label: "Review Notes", labelZh: "复习笔记", to: `${exam.href}/resources` },
+    { id: "coaching", label: "Expert Guidance", labelZh: "名师指点", to: `${exam.href}/coaching` },
   ];
 }
 
@@ -43,8 +44,7 @@ export function activePrimaryModule(
     pathname === `${examRoot}/dashboard`
   ) return "coverage";
   if (
-    pathname === `${examRoot}/past-papers` ||
-    pathname === `${examRoot}/diagnostic`
+    pathname === `${examRoot}/past-papers`
   ) return "practice";
   if (
     pathname === `${examRoot}/resources` ||

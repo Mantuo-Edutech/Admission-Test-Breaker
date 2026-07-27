@@ -9,10 +9,10 @@ import { parseMostLeastAnswer } from "../domain/most-least-response.js";
 import { EnglishFirstParagraph, EnglishFirstText } from "../../notes/components/EnglishFirstText.js";
 
 const statusCopy = {
-  correct: "正确",
-  partial: "部分得分",
-  incorrect: "错误",
-  unanswered: "未作答",
+  correct: "Correct",
+  partial: "Partial credit",
+  incorrect: "Incorrect",
+  unanswered: "Unanswered",
 } as const;
 
 function StatusIcon({ status }: { status: QuestionResult["status"] }) {
@@ -25,7 +25,7 @@ function formatQuestionTime(timeMs: number): string {
   const seconds = Math.round(timeMs / 1_000);
   const minutes = Math.floor(seconds / 60);
   const remainder = seconds % 60;
-  return minutes > 0 ? `${minutes}分 ${remainder}秒` : `${remainder}秒`;
+  return minutes > 0 ? `${minutes}m ${remainder}s` : `${remainder}s`;
 }
 
 interface QuestionResultRowProps {
@@ -51,35 +51,35 @@ export function QuestionResultRow({ result, question, explanation, feedbackHref 
         <span><StatusIcon status={result.status} /></span>
         <div>
           <small>QUESTION {String(result.number).padStart(2, "0")}</small>
-          <h3>第 {result.number} 题 · {statusCopy[result.status]}</h3>
+          <h3>Question {result.number} · {statusCopy[result.status]}</h3>
         </div>
       </div>
       <div className="result-row__answers">
         {mostLeastAnswer !== null && mostLeastKey !== null ? (
           <>
-            <span>你的选择 <strong>最合适 {mostLeastAnswer.most ?? "—"} · 最不合适 {mostLeastAnswer.least ?? "—"}</strong></span>
-            <span>参考答案 <strong>最合适 {mostLeastKey.most} · 最不合适 {mostLeastKey.least}</strong></span>
+            <span>Your choice <strong>Most {mostLeastAnswer.most ?? "—"} · Least {mostLeastAnswer.least ?? "—"}</strong></span>
+            <span>Correct answer <strong>Most {mostLeastKey.most} · Least {mostLeastKey.least}</strong></span>
           </>
         ) : statementAnswers === null ? (
           <>
-            <span aria-label={`你的答案 ${result.selectedAnswer ?? "未作答"}`}>
-              你的答案 <strong>{result.selectedAnswer ?? "—"}</strong>
+            <span aria-label={`Your answer ${result.selectedAnswer ?? "unanswered"}`}>
+              Your answer <strong>{result.selectedAnswer ?? "—"}</strong>
             </span>
-            <span aria-label={`正确答案 ${result.correctAnswer}`}>
-              正确答案 <strong>{result.correctAnswer}</strong>
+            <span aria-label={`Correct answer ${result.correctAnswer}`}>
+              Correct answer <strong>{result.correctAnswer}</strong>
             </span>
           </>
         ) : (
           <>
-            <span>陈述完成 <strong>{Object.keys(statementAnswers).length} / {question.statements?.length ?? 0}</strong></span>
-            <span>本题得分 <strong>{result.points} / {result.maxPoints}</strong></span>
+            <span>Statements completed <strong>{Object.keys(statementAnswers).length} / {question.statements?.length ?? 0}</strong></span>
+            <span>Points <strong>{result.points} / {result.maxPoints}</strong></span>
           </>
         )}
-        <span>记录用时 <strong>{formatQuestionTime(result.timeMs)}</strong></span>
-        {result.marked && <span className="result-row__marked"><Bookmark aria-hidden="true" />曾标记</span>}
+        <span>Recorded time <strong>{formatQuestionTime(result.timeMs)}</strong></span>
+        {result.marked && <span className="result-row__marked"><Bookmark aria-hidden="true" />Marked</span>}
       </div>
       <details>
-        <summary>查看题干与选项</summary>
+        <summary>View question and options</summary>
         <div className="result-row__question">
           <MathContent blocks={question.prompt} />
           {statementAnswers === null ? (
@@ -88,8 +88,8 @@ export function QuestionResultRow({ result, question, explanation, feedbackHref 
                 <li key={option.label} className={option.label === result.correctAnswer || option.label === mostLeastKey?.most || option.label === mostLeastKey?.least ? "is-correct" : ""}>
                   <strong>{option.label}</strong>
                   <MathContent blocks={option.content} />
-                  {mostLeastKey?.most === option.label && <span>参考：最合适</span>}
-                  {mostLeastKey?.least === option.label && <span>参考：最不合适</span>}
+                  {mostLeastKey?.most === option.label && <span>Correct: most appropriate</span>}
+                  {mostLeastKey?.least === option.label && <span>Correct: least appropriate</span>}
                 </li>
               ))}
             </ol>
@@ -98,8 +98,8 @@ export function QuestionResultRow({ result, question, explanation, feedbackHref 
               {(question.statements ?? []).map((statement) => (
                 <li key={statement.id} className={statementAnswers[statement.id] === result.statementCorrectAnswers?.[statement.id] ? "is-correct" : ""}>
                   <MathContent blocks={statement.content} />
-                  <span>你的答案 <strong>{statementAnswers[statement.id] === "yes" ? "Yes" : statementAnswers[statement.id] === "no" ? "No" : "—"}</strong></span>
-                  <span>正确答案 <strong>{result.statementCorrectAnswers?.[statement.id] === "yes" ? "Yes" : "No"}</strong></span>
+                  <span>Your answer <strong>{statementAnswers[statement.id] === "yes" ? "Yes" : statementAnswers[statement.id] === "no" ? "No" : "—"}</strong></span>
+                  <span>Correct answer <strong>{result.statementCorrectAnswers?.[statement.id] === "yes" ? "Yes" : "No"}</strong></span>
                 </li>
               ))}
             </ol>
@@ -139,7 +139,7 @@ export function QuestionResultRow({ result, question, explanation, feedbackHref 
       )}
       {feedbackHref !== undefined && (
         <footer className="result-row__feedback">
-          <Link to={feedbackHref}>报告这道题的问题 · Report this question</Link>
+          <Link to={feedbackHref}>Report this question <small lang="zh-CN">报告这道题的问题</small></Link>
         </footer>
       )}
     </article>
