@@ -78,6 +78,11 @@ describe("action-first multi-exam practice libraries", () => {
       "href",
       "/practice/tara-writing-task-v1",
     );
+    expect(screen.getByRole("list", { name: "完整练习 Full-length practice" }).children).toHaveLength(7);
+    expect(screen.getByRole("link", { name: /TSA 2023.*50 题.*90 分钟.*开始练习/u })).toHaveAttribute(
+      "href",
+      "/practice/tara-tsa-2023-mixed-reasoning",
+    );
   });
 
   it("shows only required ESAT modules without an unpublished deep-review promise", async () => {
@@ -109,6 +114,17 @@ describe("action-first multi-exam practice libraries", () => {
       "/practice/esat-physics-full-mock-v1",
     );
     expect(screen.getByRole("list", { name: "短诊断 Check your starting point" }).children).toHaveLength(3);
+    expect(screen.getByRole("list", { name: "历年模块练习 Past-paper module practice" }).children).toHaveLength(6);
+    expect(screen.getByRole("list", { name: "工程综合练习 Engineering practice" }).children).toHaveLength(3);
+    expect(screen.getByRole("list", { name: "ESAT 练习关键信息" })).toHaveTextContent("12 套主练习");
+    expect(screen.getByRole("link", { name: /NSAA 2023.*数学模块练习.*20 题.*开始练习/u })).toHaveAttribute(
+      "href",
+      "/practice/esat-nsaa-2023-mathematics-1",
+    );
+    expect(screen.getByRole("link", { name: /ENGAA 2023.*工程数学与物理综合练习.*40 题.*开始练习/u })).toHaveAttribute(
+      "href",
+      "/practice/esat-engaa-2023-engineering-mixed",
+    );
     expect(screen.getByRole("link", { name: /Mathematics 1.*10 题/u })).toHaveAttribute("href", "/practice/esat-mathematics-1-starter-v1");
     expect(screen.getByRole("link", { name: /Physics.*10 题/u })).toHaveAttribute("href", "/practice/esat-physics-starter-v1");
     expect(screen.getByRole("link", { name: /Mathematics 2.*10 题/u })).toHaveAttribute("href", "/practice/esat-mathematics-2-starter-v1");
@@ -137,6 +153,7 @@ describe("action-first multi-exam practice libraries", () => {
       "href",
       "/practice/esat-chemistry-starter-v1",
     );
+    expect(screen.getByRole("list", { name: "历年模块练习 Past-paper module practice" }).children).toHaveLength(6);
     expect(screen.queryByRole("link", { name: /Physics.*开始完整模考/u })).not.toBeInTheDocument();
     expect(screen.queryByRole("link", { name: /Biology.*10 题/u })).not.toBeInTheDocument();
   });
@@ -161,6 +178,7 @@ describe("action-first multi-exam practice libraries", () => {
       "href",
       "/practice/esat-biology-starter-v1",
     );
+    expect(screen.getByRole("list", { name: "历年模块练习 Past-paper module practice" }).children).toHaveLength(9);
     expect(screen.queryByRole("link", { name: /Physics.*开始完整模考/u })).not.toBeInTheDocument();
     expect(screen.queryByRole("link", { name: /Mathematics 2.*开始完整模考/u })).not.toBeInTheDocument();
   });

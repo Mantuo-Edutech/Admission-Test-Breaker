@@ -33,12 +33,12 @@ $$;
 
 select is(
   (select count(*) from private.practice_paper_payloads),
-  44::bigint,
+  (select count(*) from public.practice_content_revisions where publication_status = 'published'),
   'all published paper revisions have a server-side question payload'
 );
 select is(
   (select count(*) from private.practice_paper_answer_keys),
-  44::bigint,
+  (select count(*) from public.practice_content_revisions where publication_status = 'published'),
   'all published paper revisions have a separate server-side answer key'
 );
 select is(
@@ -49,8 +49,8 @@ select is(
     join private.practice_paper_answer_keys as answer_key using (paper_revision_id)
     where revision.publication_status = 'published'
   ),
-  44::bigint,
-  'revision metadata, question payload and answer key form a complete 44-paper set'
+  (select count(*) from public.practice_content_revisions where publication_status = 'published'),
+  'published revision metadata, question payloads and answer keys form a complete set'
 );
 
 select ok(

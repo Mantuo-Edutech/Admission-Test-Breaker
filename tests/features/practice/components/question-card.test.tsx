@@ -38,4 +38,22 @@ describe("practice question card", () => {
       expect.stringContaining("diagonal reflectional symmetry"),
     );
   });
+
+  it("renders image-based archive questions with compact label-only answers", () => {
+    const question = structuredClone(TMUA_2023_P1.questions[0]!);
+    question.optionDisplay = "labels-only";
+    question.options = question.options.map((option) => ({ ...option, content: [] }));
+
+    render(
+      <QuestionCard
+        question={question}
+        selectedAnswer={null}
+        onAnswer={() => undefined}
+      />,
+    );
+
+    expect(screen.getAllByRole("radio")).toHaveLength(7);
+    expect(document.querySelector(".answer-list--labels-only")).not.toBeNull();
+    expect(document.querySelectorAll(".answer-choice__content")).toHaveLength(0);
+  });
 });

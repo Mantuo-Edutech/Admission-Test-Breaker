@@ -5,6 +5,7 @@ interface AnswerChoiceProps {
   option: PracticeOption;
   questionId: string;
   selected: boolean;
+  labelsOnly?: boolean;
   onSelect(label: string): void;
 }
 
@@ -12,10 +13,11 @@ export function AnswerChoice({
   option,
   questionId,
   selected,
+  labelsOnly = false,
   onSelect,
 }: AnswerChoiceProps) {
   return (
-    <label className={`answer-choice${selected ? " answer-choice--selected" : ""}`}>
+    <label className={`answer-choice${selected ? " answer-choice--selected" : ""}${labelsOnly ? " answer-choice--label-only" : ""}`}>
       <input
         type="radio"
         name={`answer-${questionId}`}
@@ -28,9 +30,11 @@ export function AnswerChoice({
       <span className="answer-choice__letter" aria-hidden="true">
         {option.label}
       </span>
-      <div className="answer-choice__content">
-        <MathContent blocks={option.content} />
-      </div>
+      {labelsOnly ? null : (
+        <div className="answer-choice__content">
+          <MathContent blocks={option.content} />
+        </div>
+      )}
     </label>
   );
 }

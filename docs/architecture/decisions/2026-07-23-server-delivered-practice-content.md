@@ -126,7 +126,7 @@ download buttons are not security controls.
 
 ## Completed V1 boundary
 
-1. All 44 currently published papers use one safe delivery and scoring contract, including 18 TMUA past papers.
+1. All 63 currently published papers use one safe delivery and scoring contract, including 18 TMUA past papers and the first 19-paper ESAT/TARA historic expansion.
 2. The browser build is scanned for protected Notes bodies, all complete answer sequences and all server question payloads.
 3. Session schema v3 stores `paperRevisionId` and `contentDigest`; the database validates the exact published tuple and prevents an existing session moving revisions.
 4. Publication is append-only. A changed paper creates `r2`, retains `r1` payload and answer package, and creates a new additive migration instead of modifying an applied migration.

@@ -12,6 +12,8 @@ describe("manual review release architecture", () => {
     expect(releaseScript).toContain("loadManualReviewLedger");
     expect(releaseScript).toContain("decisionApprovals: ledger.approvals");
     expect(ledger).toContain("verification/reviews/decisions");
+    expect(ledger).toContain("GENERATED_REVIEW_ARTIFACTS");
+    expect(ledger).toContain('"content/products/manual-review-worklist.json"');
     expect(ledger).not.toContain("public/reviews");
     expect(packageJson.scripts.verify).toContain("verify:manual-review-ledger");
     expect(packageJson.scripts["review:prepare"]).toContain("manage-manual-review.ts --prepare");

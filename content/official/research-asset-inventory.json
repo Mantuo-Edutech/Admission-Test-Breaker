@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "syncedAt": "2026-07-19T04:53:45.000Z",
+  "syncedAt": "2026-07-27T03:14:55.168Z",
   "policy": {
     "purpose": "internal_research_only",
     "rawFilesInPublicBundle": false,
@@ -10,17 +10,17 @@
   },
   "summary": {
     "sourcePages": 23,
-    "discoveredDownloads": 184,
-    "downloaded": 184,
+    "discoveredDownloads": 183,
+    "downloaded": 183,
     "failed": 0,
-    "bytes": 146760498,
+    "bytes": 146300642,
     "byExam": {
       "shared": 9,
       "tmua": 48,
       "esat": 36,
       "tara": 75,
       "lnat": 12,
-      "ucat": 4
+      "ucat": 3
     }
   },
   "sourcePages": [
@@ -32,8 +32,8 @@
       "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/uat-prepare.html",
-      "bytes": 105696,
-      "sha256": "6c5d81097981b15a366e2374abb2a735a68e2bf2e816e07f279d2fd557d5304d",
+      "bytes": 110700,
+      "sha256": "0045f2c4b4d5f27ccd32f01eda4d165f728f79e71e7b985efa8ffecd3915a6e7",
       "publishable": false
     },
     {
@@ -44,8 +44,8 @@
       "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/uat-terms.html",
-      "bytes": 91090,
-      "sha256": "2636c270c4b6bbed3e77ffd50bbcf8880e4d2d2c5de9d9d13d12cbfb05368c97",
+      "bytes": 96239,
+      "sha256": "156a5acd37106f9b4b3dc76ae27e6732240a7beada7e7978511e4fc35bd879ba",
       "publishable": false
     },
     {
@@ -56,8 +56,8 @@
       "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/tmua-overview.html",
-      "bytes": 134762,
-      "sha256": "452a74b0bfdfb8a37c7b102fa3dcee6f901365471a343164ded0306dd790807f",
+      "bytes": 139697,
+      "sha256": "c9cbaf3d3430aa4d637d195f5a7f5c69fb2cdfad0cc9633ce8ba9231e53fa349",
       "publishable": false
     },
     {
@@ -68,8 +68,8 @@
       "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/tmua-preparation.html",
-      "bytes": 93607,
-      "sha256": "48b9e3ac1471c5933c360b1fa0924add02bebb32871b995c4953fd8c3cee3060",
+      "bytes": 98756,
+      "sha256": "03a769f534529ddbe8356e1112056747ca45f0995c21900bd6d693e5ebcd047b",
       "publishable": false
     },
     {
@@ -80,8 +80,8 @@
       "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/esat-overview.html",
-      "bytes": 132289,
-      "sha256": "740f4b3a77d89036daa49a6b72ca296b03cffcef5eca0d586978f0566cab043c",
+      "bytes": 137201,
+      "sha256": "479d3ed7028547416d34591131e0aa4cad9ce6cbad872f396db6879446d5de31",
       "publishable": false
     },
     {
@@ -92,8 +92,8 @@
       "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/esat-preparation.html",
-      "bytes": 92336,
-      "sha256": "0a3fd395984259df1b0b474ca104a258b18201632f8259789701187af5d7afce",
+      "bytes": 97485,
+      "sha256": "85fdeafacb6297aaea14badf4a9dd3f9a67f87701308fdc02a4770f806e438cb",
       "publishable": false
     },
     {
@@ -104,8 +104,8 @@
       "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/tara-overview.html",
-      "bytes": 129655,
-      "sha256": "6f09a971e8e6c93669b01d715df6e8d1c41fdc2a7802b84587acaa78ba6cdcca",
+      "bytes": 134589,
+      "sha256": "528fe0b45403e2050391d7f022d4af00538dd788560dd78f6cd6a350b52eea70",
       "publishable": false
     },
     {
@@ -116,8 +116,8 @@
       "rightsStatus": "personal_use_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/tara-preparation.html",
-      "bytes": 101081,
-      "sha256": "77dd47d3325b42bac97984538f0ac246c63c7564905ac334b9962e4dd3216f4d",
+      "bytes": 106306,
+      "sha256": "a04d31146ac68093f857911fee643e2db383b067af322adde8ad233cb3187c5c",
       "publishable": false
     },
     {
@@ -128,8 +128,8 @@
       "rightsStatus": "rights_review_required_before_republication",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/lnat-format.html",
-      "bytes": 39392,
-      "sha256": "99a513fdffed547bc293092783175468909237606d717ebee21d491de2fa01bc",
+      "bytes": 39398,
+      "sha256": "75d389ddbea376de7ae6abbb5ef3e69a96fabf955d3c99a002ee8c1fb73091d1",
       "publishable": false
     },
     {
@@ -140,8 +140,8 @@
       "rightsStatus": "rights_review_required_before_republication",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/lnat-prepare.html",
-      "bytes": 42982,
-      "sha256": "6ee381ec7e624175e6751f11b6892564d7ccacff5a6ecbeb0567b11f1fcc411a",
+      "bytes": 42988,
+      "sha256": "778452370dcfab2a1874ca6d2e5d6bad1db8c9bedaf127a9734e2a370fd697d6",
       "publishable": false
     },
     {
@@ -152,8 +152,8 @@
       "rightsStatus": "rights_review_required_before_republication",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/lnat-guide.html",
-      "bytes": 38929,
-      "sha256": "78e15e2835ae74975ea3fd6b1265dac920cc3c76fba30c0ac0f3c261a1419f5d",
+      "bytes": 38935,
+      "sha256": "26fea9100bd4118b15c5283c79ae1f1f598ccf2c278dd8aad0fda709d2c42a18",
       "publishable": false
     },
     {
@@ -164,8 +164,8 @@
       "rightsStatus": "rights_review_required_before_republication",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/lnat-hints.html",
-      "bytes": 45728,
-      "sha256": "3558fe30ec108d14e9ad2a2d3c6f795472a301869a5fadc39a13362e34348bb5",
+      "bytes": 45734,
+      "sha256": "87bd4c910b929fbb2cd1584ea8441c2bdae3db0babf9c223b4e6751d0ae7ec48",
       "publishable": false
     },
     {
@@ -176,8 +176,8 @@
       "rightsStatus": "rights_review_required_before_republication",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/lnat-practice.html",
-      "bytes": 48346,
-      "sha256": "50cf416dd2e9586eb8a36673247f043680d53ab68cdd38260d75864baf9e9650",
+      "bytes": 48354,
+      "sha256": "ded94238a37137502b352646ea67f4b8fc1cd7f4034dc1b031c75084b34ca1a9",
       "publishable": false
     },
     {
@@ -188,8 +188,8 @@
       "rightsStatus": "rights_review_required_before_republication",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/lnat-essays.html",
-      "bytes": 41541,
-      "sha256": "d01a2593221d9391fb11f867ab5707669db5fea4d575452d493e2dc933c84b7a",
+      "bytes": 41547,
+      "sha256": "34e38153c07ad3700285f008691785a7855c1c3ef438ff7c9b72f4238f0ad453",
       "publishable": false
     },
     {
@@ -200,8 +200,8 @@
       "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/ucat-format.html",
-      "bytes": 25566,
-      "sha256": "9aa4a93bddcc62bf53c6196f2b38ac40240a1f781154590c772c68f179d52dbf",
+      "bytes": 25720,
+      "sha256": "3faac31ae270d5d027e4509a79027e377d0c4d7354587e755745012e3b84a8df",
       "publishable": false
     },
     {
@@ -212,8 +212,8 @@
       "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/ucat-essentials.html",
-      "bytes": 22526,
-      "sha256": "4d51e76e5a109699d32d95c8ecef441ed243e19834fa5a2f0c1c634a3f197a5f",
+      "bytes": 22680,
+      "sha256": "e1dd9c396b870e809d576feae9058e25f3f799c6c1acd303667faac068c61bba",
       "publishable": false
     },
     {
@@ -224,8 +224,8 @@
       "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/ucat-preparation.html",
-      "bytes": 18715,
-      "sha256": "29792ee991393f94331dfbe7852a4a7eac5fb04c3781e70eb5d987c0e67f1963",
+      "bytes": 18869,
+      "sha256": "49d7539248dba34e6713b553cda83d182a75061ce4072d492cdffbef7e56134e",
       "publishable": false
     },
     {
@@ -236,8 +236,8 @@
       "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/ucat-tools.html",
-      "bytes": 28560,
-      "sha256": "a659bedc40b1a603cb755e75121a19a633889d2aab62b66d62378e804f7b8c7c",
+      "bytes": 28714,
+      "sha256": "299fa8c44c6b2d332cc7d9bceff26e292c321c545181762d062c354da7f565a4",
       "publishable": false
     },
     {
@@ -248,8 +248,8 @@
       "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/ucat-tutorials.html",
-      "bytes": 18553,
-      "sha256": "f847c156d8c6f31f77dff7edd761251a656ab29a9ab5f8614ca41594ebd9df7d",
+      "bytes": 18707,
+      "sha256": "4a9aff9ead36ee300886386bc0e83a627fa7affdb89387b847fa4dfa0362ce64",
       "publishable": false
     },
     {
@@ -260,8 +260,8 @@
       "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/ucat-practice.html",
-      "bytes": 23618,
-      "sha256": "f6e5f1a7e3d81887f996b3818e3e5779f47ac66900da1eadc75c6c88b1b7d204",
+      "bytes": 23772,
+      "sha256": "f04fa623d189f95be95103a9cb360e0c6a11334ec46ebcf31cdde9af3e353e68",
       "publishable": false
     },
     {
@@ -272,8 +272,8 @@
       "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/ucat-candidate-advice.html",
-      "bytes": 23863,
-      "sha256": "e21a4585f2b9cb54acd8ce21b719349997543d919d36f4898fc0bb0970cd0303",
+      "bytes": 24017,
+      "sha256": "f5cc43abc9c7885eae6a51450a325f5d535fcce828a8f97e4f9265db37db2efa",
       "publishable": false
     },
     {
@@ -284,8 +284,8 @@
       "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/ucat-teacher-resources.html",
-      "bytes": 18723,
-      "sha256": "8fc3e6f087305d96122013935ca6583cf603640703ace1eed9c3896998e5f909",
+      "bytes": 18877,
+      "sha256": "c9e96c8e4df92aa576280417fb46cd3d219ab2875b682a5d61e7c612f1459d86",
       "publishable": false
     },
     {
@@ -296,8 +296,8 @@
       "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
       "snapshotStatus": "downloaded",
       "localPath": "content/official/raw/pages/ucat-terms.html",
-      "bytes": 27095,
-      "sha256": "08a57d48ba3a091713c3300ba5affec78019e281bfc66deca4a05294c5ce1152",
+      "bytes": 27249,
+      "sha256": "b3dea7c21f876b0b68aec308519521ef7c974e471c5fc014667dd67b95aaeff4",
       "publishable": false
     }
   ],
@@ -3417,23 +3417,6 @@
       "downloadStatus": "downloaded",
       "bytes": 4086782,
       "sha256": "8961443c785df28c54c94149cd81f3cd3da7f1909231f2edf897224b5b913904"
-    },
-    {
-      "id": "ucat-gdc-standards-for-dental-team-77c41da2",
-      "exam": "ucat",
-      "title": "Standards for the Dental Team",
-      "kind": "professional_standards",
-      "url": "https://www.gdc-uk.org/docs/default-source/information-standards-and-guidance/standards-for-the-dental-team/standards-printer-friendly-black-white3e2c002f471e475eac4a4fcc1e4945a2.pdf?sfvrsn=3963b738_5",
-      "discoveredOn": [
-        "ucat-situational-judgement-content-audit"
-      ],
-      "rightsStatus": "internal_noncommercial_only_permission_required_for_commercial_use",
-      "publishable": false,
-      "localPath": "content/official/raw/professional-standards/gdc-standards-for-dental-team.pdf",
-      "mediaType": "application/pdf",
-      "downloadStatus": "downloaded",
-      "bytes": 459856,
-      "sha256": "77c41da22b43e6aa02d16a7d51da4ab1a53e37cb37e7e25b30a386c0b62e267b"
     }
   ],
   "interactiveResources": [

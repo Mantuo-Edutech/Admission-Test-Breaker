@@ -12,6 +12,15 @@ async function tmuaPayload(): Promise<unknown> {
   return artifact.packages.find((item) => item.paperRevisionId === "tmua-2023-p1-r1")?.payload;
 }
 
+async function historicEsatPayload(): Promise<unknown> {
+  const artifact = JSON.parse(
+    await readFile("content/practice/server-delivery/public-paper-payloads.json", "utf8"),
+  ) as { packages: Array<{ paperRevisionId: string; payload: unknown }> };
+  return artifact.packages.find(
+    (item) => item.paperRevisionId === "esat-nsaa-2023-mathematics-1-r1",
+  )?.payload;
+}
+
 function client(handler: (name: string, input: unknown) => unknown): SupabaseClient {
   return {
     rpc: vi.fn(async (name: string, input: unknown) => ({ data: handler(name, input), error: null })),
@@ -75,6 +84,21 @@ describe("Supabase practice delivery", () => {
       p_paper_id: "tmua-2023-p1",
       p_paper_revision_id: "tmua-2023-p1-r1",
     });
+  });
+
+  it("preserves compact native answer controls for historic image questions", async () => {
+    const payload = await historicEsatPayload();
+    const supabase = client(() => payload);
+    const service = new SupabasePracticeDeliveryService(supabase);
+
+    const paper = await service.loadPaper(
+      "esat-nsaa-2023-mathematics-1",
+      "esat-nsaa-2023-mathematics-1-r1",
+    );
+
+    expect(paper?.questions).toHaveLength(20);
+    expect(paper?.questions.every((question) => question.optionDisplay === "labels-only")).toBe(true);
+    expect(JSON.stringify(paper)).not.toContain("correctAnswer");
   });
 
   it("rejects a paper response that crosses the answer-key boundary", async () => {

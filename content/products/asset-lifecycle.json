@@ -33,6 +33,26 @@
       "publicDelivery": true
     },
     {
+      "id": "esat-tara-historic-online-practice",
+      "classification": "published-product-source",
+      "paths": [
+        "content/esat/historic-online-papers.json",
+        "content/practice/historic-practice-catalog.json",
+        "content/tara/historic-online-papers.json"
+      ],
+      "pathPrefixes": [],
+      "productIds": [
+        "esat-mathematics-1-full-mock-v1",
+        "esat-mathematics-2-full-mock-v1",
+        "esat-physics-full-mock-v1",
+        "esat-chemistry-full-mock-v1",
+        "esat-biology-full-mock-v1",
+        "tara-critical-thinking-full-mock-v1",
+        "tara-problem-solving-full-mock-v1"
+      ],
+      "publicDelivery": true
+    },
+    {
       "id": "esat-research-index",
       "classification": "research-source",
       "paths": [

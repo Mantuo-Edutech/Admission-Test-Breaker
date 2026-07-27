@@ -179,11 +179,17 @@ select invite.id, 'tmua-full-access'
 from private.invite_codes as invite
 where invite.code_digest = private.invite_code_digest('MANTUO-TMUA-ONE-USE-2026-ACCESS');
 
+select set_config(
+  'test.expected_published_revision_count',
+  (select count(*)::text from public.practice_content_revisions where publication_status = 'published'),
+  true
+);
+
 set local role anon;
 select is((select count(*) from public.content_resources), 1::bigint, 'anonymous users see only public published content');
 select is(
   (select count(*) from public.practice_content_revisions),
-  44::bigint,
+  current_setting('test.expected_published_revision_count')::bigint,
   'anonymous users can read only immutable published practice revision metadata'
 );
 reset role;

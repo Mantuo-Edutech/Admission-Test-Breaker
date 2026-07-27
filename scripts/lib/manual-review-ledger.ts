@@ -19,6 +19,10 @@ interface ArtifactDigest {
   readonly sha256: string;
 }
 
+const GENERATED_REVIEW_ARTIFACTS = new Set([
+  "content/products/manual-review-worklist.json",
+]);
+
 export interface ManualReviewLedger {
   readonly assessmentsByReviewKey: ReadonlyMap<string, readonly ManualReviewDecisionAssessment[]>;
   readonly approvals: ReadonlyMap<string, ReleaseDecisionApproval>;
@@ -88,7 +92,10 @@ export async function enrichManualReviewWorklist(
       if (claimArtifacts === undefined) {
         throw new Error(`${item.featureManifest} has no claim-artifact source set`);
       }
-      const artifacts = await artifactDigests([...productArtifacts, ...claimArtifacts]);
+      const artifacts = await artifactDigests(
+        [...productArtifacts, ...claimArtifacts]
+          .filter((artifact) => !GENERATED_REVIEW_ARTIFACTS.has(artifact)),
+      );
       if (artifacts.length === 0) throw new Error(`${item.reviewKey} has no reviewable source artifacts`);
       const fingerprintInput = {
         policyVersion: worklist.policyVersion,

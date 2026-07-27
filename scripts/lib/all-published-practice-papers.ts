@@ -1,5 +1,6 @@
 import { ESAT_FULL_MOCKS, ESAT_STARTERS } from "../../src/features/practice/content/esat-starters.js";
 import { LNAT_SECTION_A_FULL_MOCK } from "../../src/features/practice/content/lnat-section-a-full-mock.js";
+import { HISTORIC_ONLINE_PAPERS } from "../../src/features/practice/content/historic-online-papers.js";
 import { LNAT_SECTION_A_STARTER } from "../../src/features/practice/content/lnat-section-a-starter.js";
 import { LNAT_SECTION_B_WRITING } from "../../src/features/practice/content/lnat-section-b-writing.js";
 import {
@@ -40,6 +41,7 @@ export function allPublishedPracticePapers(): readonly PracticePaper[] {
     TMUA_DIAGNOSTIC_V1,
     ...ESAT_STARTERS,
     ...ESAT_FULL_MOCKS,
+    ...HISTORIC_ONLINE_PAPERS,
     TARA_REASONING_STARTER,
     TARA_CRITICAL_THINKING_FULL_MOCK,
     TARA_PROBLEM_SOLVING_FULL_MOCK,

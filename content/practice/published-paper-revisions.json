@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-23T14:04:06.413Z",
+  "generatedAt": "2026-07-27T03:28:26.066Z",
   "papers": [
     {
       "paperId": "esat-biology-full-mock-v1",
@@ -47,6 +47,39 @@
       "publishedAt": "2026-07-23T14:04:06.413Z"
     },
     {
+      "paperId": "esat-engaa-2021-engineering-mixed",
+      "paperRevisionId": "esat-engaa-2021-engineering-mixed-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "8f92af6279b8ab5fb5d725d2568211e86b4503c20ee69dfcd09401de87774bd5",
+      "questionCount": 40,
+      "durationMinutes": 60,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-engaa-2022-engineering-mixed",
+      "paperRevisionId": "esat-engaa-2022-engineering-mixed-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "5c80b9f260ed4690df3b4eb093a2ebaf4d08eb1969e12c1e7bfdd37afa484b27",
+      "questionCount": 40,
+      "durationMinutes": 60,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-engaa-2023-engineering-mixed",
+      "paperRevisionId": "esat-engaa-2023-engineering-mixed-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "62172020f78f720aad6493ea032729f4e226dfcb04732b3f238f782571370a85",
+      "questionCount": 40,
+      "durationMinutes": 60,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
       "paperId": "esat-mathematics-1-full-mock-v1",
       "paperRevisionId": "esat-mathematics-1-full-mock-v1-r1",
       "revision": 1,
@@ -89,6 +122,138 @@
       "questionCount": 10,
       "durationMinutes": 20,
       "publishedAt": "2026-07-23T14:04:06.413Z"
+    },
+    {
+      "paperId": "esat-nsaa-2021-biology",
+      "paperRevisionId": "esat-nsaa-2021-biology-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "ec94731eb9bb48d9fa07ee3a411134992b36cc875b0cecec26a7528f252276b0",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-nsaa-2021-chemistry",
+      "paperRevisionId": "esat-nsaa-2021-chemistry-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "d798e36c5f2f4ee0bdb9c2da3ac389746c03226a89d6ab409e5639692cc79e5e",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-nsaa-2021-mathematics-1",
+      "paperRevisionId": "esat-nsaa-2021-mathematics-1-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "bef213f89f3bfbed7b3ac29030bb218ddd42a0b31c554b1f4c8826c9b46f4151",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-nsaa-2021-physics",
+      "paperRevisionId": "esat-nsaa-2021-physics-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "8c0f45eef95b13e789057eddef15dfddc4008d8ad50deb4e6eec30c5a83c4d90",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-nsaa-2022-biology",
+      "paperRevisionId": "esat-nsaa-2022-biology-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "3147e7fae81fa8ebe246aba7001f598f6832cb3c4eecce89330076c1fdff948b",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-nsaa-2022-chemistry",
+      "paperRevisionId": "esat-nsaa-2022-chemistry-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "188a777308403390ae4ebd751a63e03feb34be1311f9396ad67de316749f2f34",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-nsaa-2022-mathematics-1",
+      "paperRevisionId": "esat-nsaa-2022-mathematics-1-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "af26a6be57a97f1d2a6d4dbbc0ee7ad9fd7fd82b884370a634a69985e5197363",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-nsaa-2022-physics",
+      "paperRevisionId": "esat-nsaa-2022-physics-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "ab0052eea2f83ebcb8785f7b8637af6d91705fee42c52afa54236047d949e06a",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-nsaa-2023-biology",
+      "paperRevisionId": "esat-nsaa-2023-biology-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "fa3800eddc9669e0e4b5afeda6cfdabc3c4120fc248184d79436f2f2849fb13f",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-nsaa-2023-chemistry",
+      "paperRevisionId": "esat-nsaa-2023-chemistry-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "b70a171add2f241f90ddb102796f59bc7fcab1a9d21aed810fb57f80efa0bce7",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-nsaa-2023-mathematics-1",
+      "paperRevisionId": "esat-nsaa-2023-mathematics-1-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "85ca716838942e003f90cfce7f2bb135a07e8fb865004409bdc43cb405908e0e",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "esat-nsaa-2023-physics",
+      "paperRevisionId": "esat-nsaa-2023-physics-r1",
+      "revision": 1,
+      "exam": "ESAT",
+      "schemaVersion": 1,
+      "contentDigest": "9f7eda377515053d150a93230349183fa97628054d914f668b64044291c264a4",
+      "questionCount": 20,
+      "durationMinutes": 30,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
     },
     {
       "paperId": "esat-physics-full-mock-v1",
@@ -177,6 +342,50 @@
       "questionCount": 10,
       "durationMinutes": 20,
       "publishedAt": "2026-07-23T14:04:06.413Z"
+    },
+    {
+      "paperId": "tara-tsa-2020-mixed-reasoning",
+      "paperRevisionId": "tara-tsa-2020-mixed-reasoning-r1",
+      "revision": 1,
+      "exam": "TARA",
+      "schemaVersion": 1,
+      "contentDigest": "10e57329c57c3934d2a8f5cd444a46b0460322a0e0d71537ca27ade519717fd0",
+      "questionCount": 50,
+      "durationMinutes": 90,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "tara-tsa-2021-mixed-reasoning",
+      "paperRevisionId": "tara-tsa-2021-mixed-reasoning-r1",
+      "revision": 1,
+      "exam": "TARA",
+      "schemaVersion": 1,
+      "contentDigest": "3ffbf761dbc3d0c785dfd6697edf82cdd56fd4508aa3549adcb4d5239e7f5a9d",
+      "questionCount": 50,
+      "durationMinutes": 90,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "tara-tsa-2022-mixed-reasoning",
+      "paperRevisionId": "tara-tsa-2022-mixed-reasoning-r1",
+      "revision": 1,
+      "exam": "TARA",
+      "schemaVersion": 1,
+      "contentDigest": "c6f68cfe80473f189fc59dc46e7a3547bdbd60d87a045ed8944e8a93a77529f8",
+      "questionCount": 50,
+      "durationMinutes": 90,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
+    },
+    {
+      "paperId": "tara-tsa-2023-mixed-reasoning",
+      "paperRevisionId": "tara-tsa-2023-mixed-reasoning-r1",
+      "revision": 1,
+      "exam": "TARA",
+      "schemaVersion": 1,
+      "contentDigest": "f075b16b301e32c5ea890e88d63a55c3e970c9b4beebf48f5bfa1bbfb862d82b",
+      "questionCount": 50,
+      "durationMinutes": 90,
+      "publishedAt": "2026-07-27T03:28:26.066Z"
     },
     {
       "paperId": "tara-writing-task-v1",
