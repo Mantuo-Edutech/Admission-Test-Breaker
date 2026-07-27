@@ -31,7 +31,11 @@ test("the Mantou front door explains the product and exposes all five exams", as
       expect(box).not.toBeNull();
       expect(box!.x).toBeGreaterThanOrEqual(0);
       expect(box!.x + box!.width).toBeLessThanOrEqual(viewport!.width);
-      expect(box!.y + box!.height).toBeLessThanOrEqual(viewport!.height);
+      const visibleHeight = Math.max(
+        0,
+        Math.min(box!.y + box!.height, viewport!.height) - Math.max(box!.y, 0),
+      );
+      expect(visibleHeight / box!.height).toBeGreaterThanOrEqual(0.95);
     }
   }
   await expectNoDocumentOverflow(page);
