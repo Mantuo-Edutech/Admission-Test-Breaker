@@ -6,13 +6,13 @@ test("TMUA paper library keeps the next action in view at every supported viewpo
 
   await expect(page.getByRole("heading", {
     level: 1,
-    name: /选择一套真题.*Choose a past paper/u,
+    name: /Choose a past paper/u,
   })).toBeVisible();
 
-  const papers = page.getByRole("list", { name: "历年真题 18 papers" });
+  const papers = page.getByRole("list", { name: "Historical Papers" });
   await expect(papers.getByRole("listitem")).toHaveCount(18);
   await expect(papers.getByRole("link", {
-    name: "Early specimen Paper 1，20 题，开始练习",
+    name: "Early specimen, Paper 1, 20 questions. Start.",
   })).toHaveAttribute("href", "/practice/tmua-specimen-p1");
   await expect(papers.getByRole("heading", { name: "2016 Practice" })).toHaveCount(0);
   await expect(page.getByText(/审核|校验|转换|归档|资料状态/u)).toHaveCount(0);

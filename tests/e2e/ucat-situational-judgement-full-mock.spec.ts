@@ -30,9 +30,9 @@ async function expectNoDocumentOverflow(page: Page) {
 }
 
 async function selectQuestion(page: Page, questionNumber: number) {
-  const visibleQuestionButton = page.locator(`button[aria-label^="第 ${questionNumber} 题"]:visible`);
+  const visibleQuestionButton = page.locator(`button[aria-label^="Question ${questionNumber},"]:visible`);
   if (await visibleQuestionButton.count() === 0) {
-    await page.getByRole("button", { name: "题目", exact: true }).click();
+    await page.getByRole("button", { name: "Questions", exact: true }).click();
   }
   await visibleQuestionButton.click();
 }
@@ -49,32 +49,32 @@ test("UCAT complete Situational Judgement mock supports rating and most/least re
   const libraryResponse = await page.goto("/exams/ucat/past-papers");
   expect(libraryResponse?.ok()).toBe(true);
   const fullMockLink = page.getByRole("list", {
-    name: "完整练习 Full-length practice",
-  }).getByRole("link", { name: /Situational Judgement 情境判断.*69 题.*开始练习/u });
+    name: "Full Mocks",
+  }).getByRole("link", { name: "Situational Judgement, 69 questions · 26 minutes. Start." });
   await expect(fullMockLink).toBeVisible();
   await fullMockLink.click();
 
   await expect(page).toHaveURL(/\/practice\/ucat-situational-judgement-full-mock-v1$/u);
-  await expect(page.getByRole("heading", { level: 1, name: "第 1 题" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Question 1/u })).toBeVisible();
   await expect(page.getByRole("heading", { name: "A mismatched label" })).toBeVisible();
-  await expect(page.getByText("情境判断等级题")).toBeVisible();
-  await page.getByRole("radio", { name: "选项 B" }).check();
+  await expect(page.getByText("Situational judgement", { exact: true })).toBeVisible();
+  await page.getByRole("radio", { name: "Option B" }).check();
 
   await selectQuestion(page, 61);
   await expect(page.getByRole("heading", { name: "A distressed teammate" })).toBeVisible();
-  await expect(page.getByText("最合适 / 最不合适")).toBeVisible();
-  await page.getByRole("radio", { name: "最合适" }).nth(0).check();
-  await page.getByRole("radio", { name: "最不合适" }).nth(2).check();
-  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "已作答 2 / 69");
+  await expect(page.getByText("Most / least appropriate")).toBeVisible();
+  await page.getByRole("radio", { name: "Most" }).nth(0).check();
+  await page.getByRole("radio", { name: "Least" }).nth(2).check();
+  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "2 of 69 answered");
 
   await page.reload();
-  await expect(page.getByRole("heading", { level: 1, name: "第 61 题" })).toBeVisible();
-  await expect(page.getByRole("radio", { name: "最合适" }).nth(0)).toBeChecked();
-  await expect(page.getByRole("radio", { name: "最不合适" }).nth(2)).toBeChecked();
+  await expect(page.getByRole("heading", { level: 1, name: /Question 61/u })).toBeVisible();
+  await expect(page.getByRole("radio", { name: "Most" }).nth(0)).toBeChecked();
+  await expect(page.getByRole("radio", { name: "Least" }).nth(2)).toBeChecked();
 
   await selectQuestion(page, 69);
   await expect(page.getByRole("heading", { name: "A shared revision file" })).toBeVisible();
   await selectQuestion(page, 1);
-  await expect(page.getByRole("radio", { name: "选项 B" })).toBeChecked();
+  await expect(page.getByRole("radio", { name: "Option B" })).toBeChecked();
   await expectNoDocumentOverflow(page);
 });

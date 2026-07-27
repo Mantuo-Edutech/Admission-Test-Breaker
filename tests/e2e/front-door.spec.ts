@@ -12,17 +12,17 @@ async function expectNoDocumentOverflow(page: Page) {
 test("the Mantou front door explains the product and exposes all five exams", async ({ page }, testInfo) => {
   await page.goto("/");
 
-  await expect(page).toHaveTitle("满托｜英国入学考试练习与诊断");
-  await expect(page.getByRole("heading", { level: 1, name: "不再为升学考试而焦虑" })).toBeVisible();
-  await expect(page.getByRole("img", { name: "满托" })).toBeVisible();
+  await expect(page).toHaveTitle("UK Admission Test Prep | Mantuo 满托");
+  await expect(page.getByRole("heading", { level: 1, name: "No more anxiety over admission tests." })).toBeVisible();
+  await expect(page.getByRole("img", { name: "Mantou Education" })).toBeVisible();
   await expect(page.locator(".exam-entry")).toHaveCount(5);
   for (const exam of ["tmua", "esat", "tara", "lnat", "ucat"]) {
     await expect(page.locator(`a.exam-entry[href="/exams/${exam}"]`)).toBeVisible();
   }
-  await expect(page.getByRole("link", { name: "账号" })).toHaveAttribute("href", "/account");
-  await expect(page.getByRole("link", { name: "题库与资料" })).toHaveCount(0);
+  await expect(page.getByRole("link", { name: /Account/u })).toHaveAttribute("href", "/account");
+  await expect(page.getByRole("link", { name: /Library/u })).toHaveCount(0);
   await expect(page.getByText("第一步", { exact: true })).toHaveCount(0);
-  await expect(page.getByRole("list", { name: "完整备考路径" })).toHaveCount(0);
+  await expect(page.getByRole("list", { name: /Preparation path/u })).toHaveCount(0);
   if (testInfo.project.name === "desktop-chromium") {
     const viewport = page.viewportSize();
     expect(viewport).not.toBeNull();

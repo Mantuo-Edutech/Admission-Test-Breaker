@@ -41,18 +41,18 @@ test("LNAT complete Section A mock opens natively and preserves the first respon
   const libraryResponse = await page.goto("/exams/lnat/past-papers");
   expect(libraryResponse?.ok()).toBe(true);
   const fullMockLink = page.getByRole("list", {
-    name: "完整练习 Full-length practice",
-  }).getByRole("link", { name: /Multiple Choice.*42 题.*开始练习/u });
+    name: "Full Mocks",
+  }).getByRole("link", { name: "Multiple Choice, 42 questions · 95 minutes. Start." });
   await expect(fullMockLink).toBeVisible();
   await fullMockLink.click();
 
   await expect(page).toHaveURL(/\/practice\/lnat-section-a-full-mock-v1$/u);
-  await expect(page.getByRole("heading", { level: 1, name: "第 1 题" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Question 1/u })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Quiet Carriages and Public Rules" })).toBeVisible();
-  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "已作答 0 / 42");
-  await page.getByRole("radio", { name: "选项 B" }).check();
+  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "0 of 42 answered");
+  await page.getByRole("radio", { name: "Option B" }).check();
   await page.reload();
-  await expect(page.getByRole("radio", { name: "选项 B" })).toBeChecked();
-  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "已作答 1 / 42");
+  await expect(page.getByRole("radio", { name: "Option B" })).toBeChecked();
+  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "1 of 42 answered");
   await expectNoDocumentOverflow(page);
 });

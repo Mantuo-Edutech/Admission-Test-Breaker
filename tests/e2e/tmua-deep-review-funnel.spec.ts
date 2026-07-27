@@ -42,9 +42,10 @@ test("a locked deep review leads to Bingbing and preserves the result return pat
   }, { storedGuestSpace: guestSpace, storedProfile: profile });
 
   await page.goto("/practice/tmua-specimen-p1");
-  await expect(page.getByRole("heading", { level: 1, name: "第 1 题" })).toBeVisible();
-  await page.getByRole("button", { name: "提交试卷" }).click();
-  await page.getByRole("button", { name: "确认提交" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: /Question 1/u })).toBeVisible();
+  await page.getByRole("button", { name: "Submit paper" }).click();
+  await expect(page.getByRole("dialog", { name: "Submit this paper?" })).toBeVisible();
+  await page.getByRole("button", { name: "Submit", exact: true }).click();
   await expect(page).toHaveURL(/\/results\/ses_/u);
 
   await expect(page.getByText("TMUA Early Specimen Paper 1 Worked Review is available")).toBeVisible();
@@ -56,12 +57,12 @@ test("a locked deep review leads to Bingbing and preserves the result return pat
   );
 
   await page.getByRole("button", { name: /Get an invitation code.*联系冰冰获取邀请码/u }).click();
-  await expect(page.getByRole("dialog", { name: /添加冰冰，获取逐题深度解析/u })).toBeVisible();
-  await expect(page.getByAltText("冰冰老师微信二维码")).toBeVisible();
-  await page.getByRole("button", { name: "关闭冰冰微信二维码" }).click();
+  await expect(page.getByRole("dialog", { name: /Add Bingbing to access worked explanations/u })).toBeVisible();
+  await expect(page.getByAltText("Bingbing's WeChat QR code")).toBeVisible();
+  await page.getByRole("button", { name: "Close Bingbing WeChat QR code" }).click();
 
   await inviteLink.click();
   await expect(page).toHaveURL(new RegExp(`/access\\?returnTo=${encodeURIComponent(resultPath)}`, "u"));
-  await expect(page.getByRole("heading", { level: 1, name: "使用邀请码解锁已发布内容" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Unlock published content/u })).toBeVisible();
   await expectNoDocumentOverflow(page);
 });

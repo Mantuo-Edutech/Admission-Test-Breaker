@@ -31,10 +31,10 @@ async function expectNoDocumentOverflow(page: Page) {
 
 async function selectQuestion(page: Page, questionNumber: number) {
   const visibleQuestionButton = page.locator(
-    `button[aria-label^="第 ${questionNumber} 题"]:visible`,
+    `button[aria-label^="Question ${questionNumber},"]:visible`,
   );
   if (await visibleQuestionButton.count() === 0) {
-    await page.getByRole("button", { name: "题目", exact: true }).click();
+    await page.getByRole("button", { name: "Questions", exact: true }).click();
   }
   await visibleQuestionButton.click();
 }
@@ -51,36 +51,36 @@ test("UCAT complete Decision Making mock supports tables, five statements, calcu
   const libraryResponse = await page.goto("/exams/ucat/past-papers");
   expect(libraryResponse?.ok()).toBe(true);
   const fullMockLink = page.getByRole("list", {
-    name: "完整练习 Full-length practice",
-  }).getByRole("link", { name: /Decision Making 决策判断.*35 题.*开始练习/u });
+    name: "Full Mocks",
+  }).getByRole("link", { name: "Decision Making, 35 questions · 37 minutes. Start." });
   await expect(fullMockLink).toBeVisible();
   await fullMockLink.click();
 
   await expect(page).toHaveURL(/\/practice\/ucat-decision-making-full-mock-v1$/u);
-  await expect(page.getByRole("heading", { level: 1, name: "第 1 题" })).toBeVisible();
-  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "已作答 0 / 35");
+  await expect(page.getByRole("heading", { level: 1, name: /Question 1/u })).toBeVisible();
+  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "0 of 35 answered");
   await selectQuestion(page, 5);
   await expect(page.getByRole("table", { name: "Visits, follow-ups, travel cost and satisfaction" })).toBeVisible();
-  await expect(page.getByText("多陈述判断题")).toBeVisible();
+  await expect(page.getByText("Multiple statements")).toBeVisible();
 
   const statements = page.locator(".statement-response-list fieldset");
   await expect(statements).toHaveCount(5);
   for (const [index, answer] of ["Yes", "Yes", "No", "No", "No"].entries()) {
     await statements.nth(index).getByRole("radio", { name: answer }).check();
   }
-  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "已作答 1 / 35");
+  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "1 of 35 answered");
 
-  await page.getByRole("button", { name: "基础计算器" }).click();
-  const calculator = page.getByRole("region", { name: "基础计算器" });
+  await page.getByRole("button", { name: "Basic calculator" }).click();
+  const calculator = page.getByRole("region", { name: "Basic calculator" });
   await calculator.getByRole("button", { name: "7", exact: true }).click();
-  await calculator.getByRole("button", { name: "加上" }).click();
+  await calculator.getByRole("button", { name: "Add" }).click();
   await calculator.getByRole("button", { name: "5", exact: true }).click();
-  await calculator.getByRole("button", { name: "等于" }).click();
+  await calculator.getByRole("button", { name: "Equals" }).click();
   await expect(calculator.locator("output")).toHaveText("12");
 
   await page.reload();
-  await expect(page.getByRole("heading", { level: 1, name: "第 5 题" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: /Question 5/u })).toBeVisible();
   await expect(statements.nth(0).getByRole("radio", { name: "Yes" })).toBeChecked();
-  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "已作答 1 / 35");
+  await expect(page.locator(".exam-header__progress")).toHaveAttribute("aria-label", "1 of 35 answered");
   await expectNoDocumentOverflow(page);
 });
