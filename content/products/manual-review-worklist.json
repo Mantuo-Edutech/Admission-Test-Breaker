@@ -1480,7 +1480,7 @@
               "route": "/exams/tmua/notes/six-week-plan"
             }
           ],
-          "sourceFingerprint": "sha256:763a6a93e2b0f2d1c247bb4761ac743e4935e538a8fd9a912f8d0ee8aee5fd9a",
+          "sourceFingerprint": "sha256:beeb0d6abc08dbadbc1a546ccde25b04a9dd5d40b35820c40437a7a8f5c7fdf9",
           "sourceArtifactCount": 12
         },
         {
@@ -1532,7 +1532,7 @@
               "route": "/practice/tmua-specimen-p1"
             }
           ],
-          "sourceFingerprint": "sha256:30b9a3db10e3d0012423681dfcb4e14af8bf26c46016187094924e32790c894a",
+          "sourceFingerprint": "sha256:3bb8c237a4bbd9c25895597eb285eb96a2581bf1670fceaf10d82e11159e3370",
           "sourceArtifactCount": 25
         },
         {
